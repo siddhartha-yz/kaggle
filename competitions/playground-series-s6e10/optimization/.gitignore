@@ -6,3 +6,6 @@ data/
 *.npz
 *.cbm
 model.txt
+research_artifacts/
+research_sources/
+external_data/

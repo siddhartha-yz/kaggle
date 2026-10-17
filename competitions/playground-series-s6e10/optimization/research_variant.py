@@ -15,7 +15,7 @@ def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def dump(p,x):Path(p).write_text(json.dumps(x,indent=2)+'\n')
 def now():return datetime.now(timezone.utc).isoformat()
 def main():
- p=argparse.ArgumentParser();p.add_argument('--kind',choices=['lgb','cb','xgb'],required=True);p.add_argument('--external',choices=['none','teacher','lookup','both'],default='none');p.add_argument('--split',choices=['primary','confirm','oof'],required=True);p.add_argument('--trees',type=int,default=2000);p.add_argument('--early-stop',action='store_true');a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--kind',choices=['lgb','cb','xgb'],required=True);p.add_argument('--external',choices=['none','teacher','lookup','both','both_neighbors'],default='none');p.add_argument('--split',choices=['primary','confirm','oof'],required=True);p.add_argument('--trees',type=int,default=2000);p.add_argument('--early-stop',action='store_true');a=p.parse_args()
  assert not a.early_stop or (a.kind=='xgb' and a.split=='primary'), 'Early stopping only on XGBoost development selection'
  protocol=json.loads((ROOT/'research_protocol.json').read_text())
  def stop(s,f):raise TimeoutError('Hard training cutoff')
@@ -28,8 +28,9 @@ def main():
   model_params=dict(n_estimators=a.trees,learning_rate=.04,max_depth=6,min_child_weight=20,reg_lambda=20,subsample=.8,colsample_bytree=.9,max_bin=256,objective='binary:logistic',eval_metric='auc',tree_method='hist',device='cpu',enable_categorical=True,n_jobs=6,random_state=42)
   if a.early_stop:model_params['early_stopping_rounds']=150
  plan={'name':name,'kind':a.kind,'external':a.external,'split':a.split,'params':model_params,'preprocessing_sha256':sha(ROOT/'research_features.py'),'runner_sha256':sha(__file__),'external_sha256':None if ext is None else sha(ROOT/'research_artifacts/original_teacher_v1/train_features.npz'),'frozen_utc':now()}
+ if a.external=='both_neighbors':plan['neighbors_sha256']=sha(ROOT/'research_artifacts/original_neighbors_v1/train_features.npz')
  if (out/'plan.json').exists():
-  old=json.loads((out/'plan.json').read_text());assert all(old[k]==plan[k] for k in ['name','params','preprocessing_sha256','external_sha256'])
+  old=json.loads((out/'plan.json').read_text());assert all(old[k]==plan[k] for k in ['name','params','preprocessing_sha256','external_sha256']);assert old.get('neighbors_sha256')==plan.get('neighbors_sha256')
  else:dump(out/'plan.json',plan)
  if a.split=='oof':
   z=np.load(ROOT/'research_artifacts/oof_v1/folds.npz');assert np.array_equal(z['id'],df.id) and np.array_equal(z['target'],y);fold=z['fold'];splits=[(np.flatnonzero(fold!=k),np.flatnonzero(fold==k)) for k in range(5)]
@@ -67,6 +68,10 @@ def main():
  np.savez_compressed(out/'validation.npz',idx=idx,id=ids,target=target,pred=pred)
  comparison=compare(target,base,pred);result={'status':'complete','name':name,'auc':float(roc_auc_score(target,pred)),'logloss':float(log_loss(target,pred)),'vs_stats':comparison,'byfold':byfold,'completed_utc':now()}
  if a.split=='oof':result['stable_positive_vs_stats']=all(c['delta_auc']>0 for c in byfold) and comparison['conditional_95pct_ci'][0]>0
+ if a.external=='both_neighbors':
+  refpath=ROOT/'research_artifacts'/('lgb_stats_orig_both_oof/oof.npz' if a.split=='oof' else f'e1_original_both_{a.split}/validation.npz');old=np.load(refpath);assert np.array_equal(old['id'],ids) and np.array_equal(old['target'],target);op=old['pred'];c=compare(target,op,pred);result['vs_original_lgb']=c
+  if a.split=='oof':
+   bf=[compare(target[fold==k],op[fold==k],pred[fold==k]) for k in range(5)];result['byfold_vs_original_lgb']=bf;result['promote_neighbors']=all(z['delta_auc']>0 for z in bf) and c['delta_auc']>=.00015 and c['conditional_95pct_ci'][0]>0
  if matched is not None:result['slices']={n:{'rows':int(m.sum()),'comparison':compare(target[m],base[m],pred[m])} for n,m in [('near_match',matched[idx]),('no_near_match',~matched[idx])]}
  dump(out/'result.json',result);print(json.dumps(result,indent=2),flush=True)
 if __name__=='__main__':main()

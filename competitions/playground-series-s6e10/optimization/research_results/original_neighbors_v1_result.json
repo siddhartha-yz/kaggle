@@ -1,0 +1,17 @@
+{
+  "train": {
+    "rows": 699635,
+    "same_distance_source_rows_available": 699631,
+    "zero_distance_matches": 0,
+    "minimum_matched_distance": 0.0004999999999999949
+  },
+  "test": {
+    "rows": 299844,
+    "same_distance_source_rows_available": 299843,
+    "zero_distance_matches": 0,
+    "minimum_matched_distance": 0.0004999999999999976
+  },
+  "status": "complete",
+  "elapsed_seconds": 19.024322041999767,
+  "ended_utc": "2026-10-17T19:57:19.997662+00:00"
+}

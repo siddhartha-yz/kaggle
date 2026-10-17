@@ -1,0 +1,28 @@
+{
+  "name": "xgb_stats_orig_both_primary_t2000_es",
+  "kind": "xgb",
+  "external": "both",
+  "split": "primary",
+  "params": {
+    "n_estimators": 2000,
+    "learning_rate": 0.04,
+    "max_depth": 6,
+    "min_child_weight": 20,
+    "reg_lambda": 20,
+    "subsample": 0.8,
+    "colsample_bytree": 0.9,
+    "max_bin": 256,
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "tree_method": "hist",
+    "device": "cpu",
+    "enable_categorical": true,
+    "n_jobs": 6,
+    "random_state": 42,
+    "early_stopping_rounds": 150
+  },
+  "preprocessing_sha256": "6c029528249d6772a958b29c46f4f095da9f91136c2721eb2a4d268f360fcfe9",
+  "runner_sha256": "15029ec33891a9d422298aa5279b127c7d21c68a945eb21746f2b265a320423d",
+  "external_sha256": "0fc3167103ca04ecaac018c622ccca4d8f7e365b46f032ad11f318e409dbfc55",
+  "frozen_utc": "2026-10-17T19:51:55.526544+00:00"
+}

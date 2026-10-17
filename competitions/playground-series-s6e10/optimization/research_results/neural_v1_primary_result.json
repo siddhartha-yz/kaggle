@@ -1,0 +1,44 @@
+{
+  "status": "complete",
+  "name": "neural_v1_primary",
+  "auc": 0.9579158204275261,
+  "vs_original_lgb": {
+    "baseline_auc": 0.9597883620429111,
+    "candidate_auc": 0.9579158204275261,
+    "delta_auc": -0.0018725416153849705,
+    "paired_se": 0.00021067065867992732,
+    "conditional_95pct_ci": [
+      -0.002285456106397628,
+      -0.001459627124372313
+    ],
+    "candidate_logloss": 0.23172874748706818
+  },
+  "fixed_grid_blends": {
+    "0.25": {
+      "baseline_auc": 0.9597883620429111,
+      "candidate_auc": 0.9598880480802119,
+      "delta_auc": 9.968603730081682e-05,
+      "paired_se": 5.596205700907662e-05,
+      "conditional_95pct_ci": [
+        -9.999594436973356e-06,
+        0.00020937166903860698
+      ],
+      "candidate_logloss": 0.22643376790874625
+    },
+    "0.5": {
+      "baseline_auc": 0.9597883620429111,
+      "candidate_auc": 0.9596244859102834,
+      "delta_auc": -0.00016387613262769385,
+      "paired_se": 0.00010704615086115193,
+      "conditional_95pct_ci": [
+        -0.00037368658831555163,
+        4.593432306016393e-05
+      ],
+      "candidate_logloss": 0.22706493190357055
+    }
+  },
+  "selected_epochs": [
+    8
+  ],
+  "completed_utc": "2026-10-17T19:55:23.680090+00:00"
+}

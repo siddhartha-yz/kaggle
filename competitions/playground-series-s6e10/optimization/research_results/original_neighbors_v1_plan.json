@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-10-17T19:57:02.661033+00:00",
+  "hypothesis": "An original-only local neighborhood may preserve generative similarity missed by a global original teacher. It is a model feature, never a replacement for synthetic labels.",
+  "distance": "Exact Flight Distance group, then average normalized L1 over16 numerical and Hamming over4 string predictors. Age/100, ratings/5, log1p delays/log361; missing=-1. Equal feature weights, no synthetic-label fitting.",
+  "features": [
+    "orig_nn_y1",
+    "orig_nn_y3",
+    "orig_nn_y10",
+    "orig_nn_weighted_y10",
+    "orig_nn_distance1",
+    "orig_nn_mean_distance3",
+    "orig_nn_mean_distance10",
+    "orig_nn_label_std10"
+  ],
+  "top_k": [
+    1,
+    3,
+    10
+  ],
+  "weight_temperature": 0.05,
+  "source_audit": {
+    "source_sha256": "2ad76465f6115f93d16121891a6b1235acb8007a4ab065cae0dc46b60ad116e3",
+    "safe_mask_sha256": "fcc30179ed4f68ddab8323abe86e953dcaf13374dee46bd3c13abb55dfdbfe51",
+    "safe_rows": 129859,
+    "excluded_exact_rows": 21,
+    "near_key_groups": 111199,
+    "near_key_groups_with_conflicting_original_labels": 4475,
+    "original_rows_in_conflicting_near_groups": 10665,
+    "target_provenance": "Only CC0 original labels. No synthetic labels used to fit teacher or lookup. Exact matches to any synthetic train/test vector excluded.",
+    "exact_label_audit": {
+      "checked_utc": "2026-10-17T19:36:06.016304+00:00",
+      "exact_match_pairs_verified_value_by_value": 17,
+      "exact_match_train_label_agreements": 14,
+      "exact_match_train_label_conflicts": 3,
+      "policy": "All 21 original rows matching any train/test feature vector remain excluded, regardless of label agreement."
+    }
+  },
+  "runner_sha256": "6395199ee1465d548a7927286023a282f6773c386b4c6711171a57a6cb1fb3d3",
+  "synthetic_targets_used": false
+}

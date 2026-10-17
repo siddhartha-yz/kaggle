@@ -1,8 +1,8 @@
 {
   "maximum_new_submissions": 4,
-  "reserved_slots": 1,
-  "completed_new_submissions": 1,
-  "remaining_unreserved_slots": 3,
+  "reserved_slots": 2,
+  "completed_new_submissions": 2,
+  "remaining_unreserved_slots": 2,
   "entries": [
     {
       "candidate": "submission_distance_stats_v3.csv",
@@ -11,7 +11,15 @@
       "public_auc": 0.95977,
       "rank": 1047,
       "total_ranked": 2182
+    },
+    {
+      "candidate": "submission_distance_original_v4.csv",
+      "library_file_id": "libfile_a0f39f797ee08191821d362559ac5c47",
+      "status": "complete",
+      "public_auc": 0.96,
+      "rank": 1009,
+      "total_ranked": 2182
     }
   ],
-  "updated_utc": "2026-10-17T19:48:06.155216+00:00"
+  "updated_utc": "2026-10-17T19:54:37.501991+00:00"
 }

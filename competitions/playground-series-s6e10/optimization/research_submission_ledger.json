@@ -1,7 +1,7 @@
 {
   "maximum_new_submissions": 4,
   "reserved_slots": 3,
-  "completed_new_submissions": 2,
+  "completed_new_submissions": 3,
   "remaining_unreserved_slots": 1,
   "entries": [
     {
@@ -23,11 +23,16 @@
     {
       "candidate": "submission_cb_deep_v5.csv",
       "library_file_id": "libfile_ca36559c66908191817867f5880b4635",
-      "status": "ready_for_parent_submission",
+      "status": "complete",
       "sha256": "0f9a978051e4f0fa164928f3b975a71346b60477959ee5cf50abb580a706e872",
       "oof_auc": 0.9608926464364628,
-      "delivered_utc": "2026-10-17T22:07:35.345227+00:00"
+      "delivered_utc": "2026-10-17T22:07:35.345227+00:00",
+      "parent_handoff_confirmed_utc": "2026-10-17T22:11:31.130946+00:00",
+      "public_auc": 0.96033,
+      "rank": 930,
+      "total_ranked": 2194,
+      "parent_verified_utc": "2026-10-17T22:11:00+00:00"
     }
   ],
-  "updated_utc": "2026-10-17T22:07:35.345227+00:00"
+  "updated_utc": "2026-10-17T22:15:00+00:00"
 }

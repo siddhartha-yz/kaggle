@@ -1,0 +1,27 @@
+{
+  "frozen_utc": "2026-10-17T20:01:31.534343+00:00",
+  "neural_v2": {
+    "hypothesis": "The first MLP stopped improving early. A larger network with stronger L2 and lower learning rate may learn smoother interactions and provide stable diversity. One config only.",
+    "hidden": [
+      512,
+      256,
+      128
+    ],
+    "alpha": 0.1,
+    "learning_rate": 0.0003,
+    "batch_size": 2048,
+    "maximum_epochs": 80,
+    "patience": 10,
+    "primary_seconds_cap": 900,
+    "cpu_threads": 6
+  },
+  "residual_prior": {
+    "hypothesis": "Use the independent original teacher as a half-logit prior and learn synthetic corrections, rather than only treating it as an ordinary feature.",
+    "prior_scale": 0.5,
+    "lgb_other_params": "Same63 leaves, lr.04, child150, lambda10, CPU6",
+    "maximum_trees": 2200,
+    "primary_early_stop": 150,
+    "inference": "sigmoid(saved_booster_raw_score + half original teacher logit); assert it matches evaluation and saved-model reload"
+  },
+  "acceptance": "Same primary/confirmation/OOF criteria already frozen; no changes from public scores. Original-neighbor primary failure is retained and not pursued."
+}

@@ -15,18 +15,20 @@ def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def dump(p,x):Path(p).write_text(json.dumps(x,indent=2)+'\n')
 def now():return datetime.now(timezone.utc).isoformat()
 def main():
- p=argparse.ArgumentParser();p.add_argument('--split',choices=['primary','confirm','oof'],default='primary');p.add_argument('--epochs',type=int,default=40);p.add_argument('--fixed',action='store_true');a=p.parse_args();assert a.split=='primary' or a.fixed
+ p=argparse.ArgumentParser();p.add_argument('--split',choices=['primary','confirm','oof'],default='primary');p.add_argument('--epochs',type=int,default=40);p.add_argument('--fixed',action='store_true');p.add_argument('--variant',choices=['v1','v2'],default='v1');a=p.parse_args();assert a.split=='primary' or a.fixed
  protocol=json.loads((ROOT/'research_protocol.json').read_text());deadline=datetime.fromisoformat(protocol['training_hard_cutoff_utc'])
  def stop(s,f):raise TimeoutError('Hard training cutoff')
  signal.signal(signal.SIGALRM,stop);signal.alarm(max(1,int((deadline-datetime.now(timezone.utc)).total_seconds())))
- name=f'neural_v1_{a.split}'+(f'_e{a.epochs}' if a.fixed else '');out=ROOT/'research_artifacts'/name;out.mkdir(exist_ok=True)
+ name=f'neural_{a.variant}_{a.split}'+(f'_e{a.epochs}' if a.fixed else '');out=ROOT/'research_artifacts'/name;out.mkdir(exist_ok=True)
  df=pd.read_csv(ROOT/'data/train.csv');y=df.satisfaction.astype('int8').to_numpy();raw=df.drop(columns=['id','satisfaction']);ext,_=external('both',df.id)
  if a.split=='oof':
   z=np.load(ROOT/'research_artifacts/oof_v1/folds.npz');assert np.array_equal(z['id'],df.id);fold=z['fold'];splits=[(np.flatnonzero(fold!=k),np.flatnonzero(fold==k)) for k in range(5)];ref=np.load(ROOT/'research_artifacts/lgb_stats_orig_both_oof/oof.npz')['pred']
  else:
   z=np.load(ROOT/('artifacts/split_seed42.npz' if a.split=='primary' else 'iteration_artifacts/split_confirm20261017.npz'));splits=[(z['train'],z['valid'])];ref=np.load(ROOT/'research_artifacts'/f'e1_original_both_{a.split}'/'validation.npz')['pred']
  config=dict(hidden_layer_sizes=(256,128,64),activation='relu',solver='adam',alpha=.001,batch_size=2048,learning_rate_init=.001,max_iter=1,shuffle=True,early_stopping=False)
- plan={'name':name,'config':config,'seed':42,'maximum_epochs':a.epochs,'fixed_epochs':a.fixed,'primary_patience':7,'primary_time_cap_seconds':900,'first_epoch_abort_seconds':180,'cpu_threads':6,'preprocessing_sha256':sha(ROOT/'research_neural_features.py'),'runner_sha256':sha(__file__),'external_features_sha256':sha(ROOT/'research_artifacts/original_teacher_v1/train_features.npz'),'frozen_utc':now()}
+ patience=7
+ if a.variant=='v2':config.update(hidden_layer_sizes=(512,256,128),alpha=.1,learning_rate_init=.0003);patience=10
+ plan={'name':name,'config':config,'seed':42,'maximum_epochs':a.epochs,'fixed_epochs':a.fixed,'primary_patience':patience,'primary_time_cap_seconds':900,'first_epoch_abort_seconds':180,'cpu_threads':6,'preprocessing_sha256':sha(ROOT/'research_neural_features.py'),'runner_sha256':sha(__file__),'external_features_sha256':sha(ROOT/'research_artifacts/original_teacher_v1/train_features.npz'),'frozen_utc':now()}
  if not (out/'plan.json').exists():dump(out/'plan.json',plan)
  else:
   old=json.loads((out/'plan.json').read_text());assert old['preprocessing_sha256']==plan['preprocessing_sha256'] and old['maximum_epochs']==a.epochs and old['fixed_epochs']==a.fixed
@@ -47,7 +49,7 @@ def main():
       if auc>best+1e-6:best=auc;bestepoch=epoch;wait=0;joblib.dump(model,run/'model.joblib')
       else:wait+=1
      rec['epochs'].append(row);dump(run/'result.json',rec);print(name,k,row,flush=True)
-     if not a.fixed and ((epoch==1 and seconds>180) or wait>=7 or time.monotonic()-start>900):break
+     if not a.fixed and ((epoch==1 and seconds>180) or wait>=patience or time.monotonic()-start>900):break
     if a.fixed:bestepoch=a.epochs;joblib.dump(model,run/'model.joblib')
     else:model=joblib.load(run/'model.joblib')
     pred=model.predict_proba(V)[:,1]

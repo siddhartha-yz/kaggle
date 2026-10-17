@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-17T22:19:32.057993+00:00",
-  "phase": "completed_no_additional_candidate",
+  "updated_utc": "2026-10-17T22:24:57.358255+00:00",
+  "phase": "realmlp_primary",
   "validation": {
     "driver": "research_stage12_queue.py",
     "state": "research_stage12_queue_state.json",
@@ -59,7 +59,7 @@
     "unreserved_submission_slots": 1
   },
   "recovery": "Inspect original sessions and log timestamps before any restart. Unknown session does not alone prove process death. Reuse completed fold artifacts. Do not start duplicate queues. Local computer never logs into or submits to Kaggle; deliver audited CSV through Library to parent.",
-  "active_training": false,
+  "active_training": true,
   "latest_completed_route": {
     "driver": "research_stage14_queue.py",
     "state": "research_stage14_queue_state.json",
@@ -74,5 +74,12 @@
     "total_ranked": 2194,
     "parent_verified_utc": "2026-10-17T22:11:00+00:00",
     "oof_auc": 0.9608926464364628
+  },
+  "active_route": {
+    "driver": "research_realmlp.py --split primary",
+    "exec_session": 49806,
+    "log": "research_realmlp_primary.log",
+    "plan": "research_realmlp_plan.json",
+    "status": "running"
   }
 }

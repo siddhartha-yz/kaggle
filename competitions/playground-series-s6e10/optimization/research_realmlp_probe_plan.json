@@ -1,0 +1,20 @@
+{
+  "training_rows": 50000,
+  "epochs": 3,
+  "scores_not_used": true,
+  "config": {
+    "device": "cpu",
+    "n_threads": 6,
+    "n_cv": 1,
+    "n_refit": 0,
+    "n_ens": 1,
+    "n_epochs": 3,
+    "batch_size": 1024,
+    "use_ls": false,
+    "val_fraction": 0.0,
+    "use_early_stopping": false,
+    "random_state": 42,
+    "verbosity": 2
+  },
+  "index_sha256": "2f8dbde2afe4f07fc463006eaa2e2795d575412886e2276932e8eaa7233bfc41"
+}

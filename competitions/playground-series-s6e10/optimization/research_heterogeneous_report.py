@@ -6,6 +6,8 @@ ROOT=Path(__file__).resolve().parent
 def main():
  plan=json.loads((ROOT/'research_heterogeneous_finalist_plan.json').read_text());b=np.load(ROOT/'research_artifacts/lgb_stats_orig_both_oof/oof.npz');y,fold,base=b['target'],b['fold'],b['pred'];candidates={};admission={};mixtures={}
  for name,config in plan['families'].items():
+  confirmation=json.loads((ROOT/config['confirmation_file']).read_text())[config['confirmation_field']]
+  if confirmation['conditional_95pct_ci'][0]<=0:admission[name]={'admitted':False,'reason':'Frozen confirmation lower confidence bound was not positive'};continue
   p=ROOT/config['oof_path']
   if not p.exists():admission[name]={'admitted':False,'reason':'Did not pass frozen confirmation or OOF unavailable'};continue
   a=np.load(p);assert np.array_equal(a['id'],b['id']) and np.array_equal(a['target'],y) and np.array_equal(a['fold'],fold);w=config['weight'];pred=(1-w)*base+w*a['pred'];c=compare(y,base,pred);byfold=[compare(y[fold==k],base[fold==k],pred[fold==k]) for k in range(5)];admitted=c['conditional_95pct_ci'][0]>0 and all(z['delta_auc']>0 for z in byfold);admission[name]={'admitted':admitted,'pooled':c,'byfold':byfold}

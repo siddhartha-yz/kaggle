@@ -1,0 +1,44 @@
+{
+  "status": "complete",
+  "name": "residual_prior05_confirm_t581",
+  "auc": 0.9606241127302646,
+  "vs_original_lgb": {
+    "baseline_auc": 0.9605999142343083,
+    "candidate_auc": 0.9606241127302646,
+    "delta_auc": 2.4198495956251342e-05,
+    "paired_se": 9.556990963892794e-05,
+    "conditional_95pct_ci": [
+      -0.00016311852693604741,
+      0.0002115155188485501
+    ],
+    "candidate_logloss": 0.22331170751562746
+  },
+  "fixed_grid_blends": {
+    "0.25": {
+      "baseline_auc": 0.9605999142343083,
+      "candidate_auc": 0.960704443778312,
+      "delta_auc": 0.00010452954400363978,
+      "paired_se": 2.583723973045726e-05,
+      "conditional_95pct_ci": [
+        5.3888554131943554e-05,
+        0.00015517053387533602
+      ],
+      "candidate_logloss": 0.2233774090054541
+    },
+    "0.5": {
+      "baseline_auc": 0.9605999142343083,
+      "candidate_auc": 0.9607368618436827,
+      "delta_auc": 0.00013694760937432715,
+      "paired_se": 5.0184221153956184e-05,
+      "conditional_95pct_ci": [
+        3.8586535912573026e-05,
+        0.0002353086828360813
+      ],
+      "candidate_logloss": 0.22322751051044565
+    }
+  },
+  "selected_trees": [
+    581
+  ],
+  "completed_utc": "2026-10-17T20:09:51.029799+00:00"
+}

@@ -5,17 +5,23 @@
     "neural_v2": {
       "weight": 0.25,
       "epochs": 9,
-      "oof_path": "research_artifacts/neural_v2_oof_e9/oof.npz"
+      "oof_path": "research_artifacts/neural_v2_oof_e9/oof.npz",
+      "confirmation_file": "research_artifacts/neural_v2_confirm_e9/frozen_blend_confirmation.json",
+      "confirmation_field": "comparison"
     },
     "residual_prior05": {
       "weight": 0.5,
       "trees": 581,
-      "oof_path": "research_artifacts/residual_prior05_oof_t581/oof.npz"
+      "oof_path": "research_artifacts/residual_prior05_oof_t581/oof.npz",
+      "confirmation_file": "research_artifacts/residual_prior05_confirm_t581/frozen_blend_confirmation.json",
+      "confirmation_field": "comparison"
     },
     "cb_original": {
       "weight": 0.25,
       "trees": 1308,
-      "oof_path": "research_artifacts/cb_stats_orig_both_oof/oof.npz"
+      "oof_path": "research_artifacts/cb_stats_orig_both_oof/oof.npz",
+      "confirmation_file": "research_cb_confirm_blend.json",
+      "confirmation_field": "frozen_blend"
     }
   },
   "admission": "Primary frozen grid and positive confirmation lower paired bound, followed by every OOF fold positive and pooled lower bound positive. Component effects may be smaller than the final submission threshold.",
@@ -24,5 +30,6 @@
   "submission_gate": "Every fold positive, pooled conditional95% lower bound>0, and pooled delta>=.0002 relative to v4. This tightens the earlier .00015 effect requirement to preserve the final two submission slots.",
   "remaining_submission_limit": 2,
   "public_scores_used_for_weights": false,
-  "limitation": "Features and training settings were selected on reused development splits; conditional intervals do not include selection uncertainty."
+  "limitation": "Features and training settings were selected on reused development splits; conditional intervals do not include selection uncertainty.",
+  "audit_guard_added_utc": "2026-10-17T20:13:58.528560+00:00"
 }

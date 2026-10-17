@@ -75,7 +75,7 @@ def main():
     elif family=='cb_original':
      CX=X.copy();CV=V.copy();cats=CX.select_dtypes('category').columns.tolist()
      for c in cats:CX[c]=CX[c].astype(str);CV[c]=CV[c].astype(str)
-     model=CatBoostClassifier(**params('cb1308'));model.fit(CX,y[inner_train],cat_features=cats);pred=model.predict_proba(CV)[:,1];mf=run/(family+'.cbm');model.save_model(str(mf));del CX,CV,model
+     model=CatBoostClassifier(**params('cb1308'));model.fit(CX,y[inner_train],cat_features=cats);pred=model.predict_proba(CV,thread_count=6)[:,1];mf=run/(family+'.cbm');model.save_model(str(mf));del CX,CV,model
     else:
      config=params('stats639');kwargs={}
      if family=='residual_prior05':config['n_estimators']=581;kwargs['init_score']=.5*logit(np.clip(teacher[inner_train],1e-6,1-1e-6))

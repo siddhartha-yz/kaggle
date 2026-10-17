@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-17T22:26:41.017900+00:00",
-  "phase": "realmlp_primary",
+  "updated_utc": "2026-10-17T22:33:06.037130+00:00",
+  "phase": "completed_realmlp_primary_failed_gate",
   "validation": {
     "driver": "research_stage12_queue.py",
     "state": "research_stage12_queue_state.json",
@@ -59,13 +59,13 @@
     "unreserved_submission_slots": 1
   },
   "recovery": "Inspect original sessions and log timestamps before any restart. Unknown session does not alone prove process death. Reuse completed fold artifacts. Do not start duplicate queues. Local computer never logs into or submits to Kaggle; deliver audited CSV through Library to parent.",
-  "active_training": true,
+  "active_training": false,
   "latest_completed_route": {
-    "driver": "research_stage14_queue.py",
-    "state": "research_stage14_queue_state.json",
-    "status": "complete",
-    "selection": "research_transfer_selection.json",
-    "decision": "Both frozen source-transfer controls fail primary gate vs v5; no confirmation, OOF, full refit, or additional CSV"
+    "driver": "research_stage15_queue.py",
+    "state": "research_stage15_queue_state.json",
+    "selection": "research_realmlp_selection.json",
+    "audit": "research_realmlp_audit.json",
+    "status": "complete"
   },
   "confirmed_best": {
     "candidate": "submission_cb_deep_v5.csv",
@@ -80,9 +80,10 @@
     "exec_session": 49806,
     "log": "research_realmlp_primary.log",
     "plan": "research_realmlp_plan.json",
-    "status": "running",
+    "status": "complete",
     "continuation_driver": "research_stage15_queue.py",
     "continuation_exec_session": 1897,
-    "continuation_state": "research_stage15_queue_state.json"
+    "continuation_state": "research_stage15_queue_state.json",
+    "decision": "Frozen 48-epoch official RealMLP primary failed effect and interval gates; no dependent fits"
   }
 }

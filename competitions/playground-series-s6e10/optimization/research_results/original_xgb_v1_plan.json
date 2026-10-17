@@ -1,0 +1,41 @@
+{
+  "params": {
+    "n_estimators": 600,
+    "learning_rate": 0.05,
+    "max_depth": 8,
+    "min_child_weight": 1,
+    "reg_lambda": 1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.5,
+    "max_bin": 256,
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "tree_method": "hist",
+    "device": "cpu",
+    "n_jobs": 6,
+    "random_state": 20261018
+  },
+  "fixed_iterations": true,
+  "synthetic_targets_used_for_training_or_selection": false,
+  "source_audit": {
+    "source_sha256": "2ad76465f6115f93d16121891a6b1235acb8007a4ab065cae0dc46b60ad116e3",
+    "safe_mask_sha256": "fcc30179ed4f68ddab8323abe86e953dcaf13374dee46bd3c13abb55dfdbfe51",
+    "safe_rows": 129859,
+    "excluded_exact_rows": 21,
+    "near_key_groups": 111199,
+    "near_key_groups_with_conflicting_original_labels": 4475,
+    "original_rows_in_conflicting_near_groups": 10665,
+    "target_provenance": "Only CC0 original labels. No synthetic labels used to fit teacher or lookup. Exact matches to any synthetic train/test vector excluded.",
+    "exact_label_audit": {
+      "checked_utc": "2026-10-17T19:36:06.016304+00:00",
+      "exact_match_pairs_verified_value_by_value": 17,
+      "exact_match_train_label_agreements": 14,
+      "exact_match_train_label_conflicts": 3,
+      "policy": "All 21 original rows matching any train/test feature vector remain excluded, regardless of label agreement."
+    }
+  },
+  "reference": "https://www.kaggle.com/code/goodpjw2008/s6e10-two-view-gbdt-realmlp-stack-lb-0-96125",
+  "reference_handling": "Read-only algorithm inspection. This implementation uses our audited source exclusion and CPU limits; notebook code not executed.",
+  "runner_sha256": "777b9125c82318452e364c0dc93f709226e420c20fdc23cc373dbb9e61bd3505",
+  "frozen_utc": "2026-10-17T20:40:00.127715+00:00"
+}

@@ -1,0 +1,57 @@
+{
+  "frozen_utc": "2026-10-17T20:43:43.213371+00:00",
+  "reason": "Fixed CB/residual blends improve all five folds but remain below final effect gate; four further feature/profile contrasts failed screening. Test learned combination using genuine nested holdout predictions, never fit weights to outer-validation labels.",
+  "outer_splits": "Existing primary, confirmation, then frozen five-fold OOF",
+  "inner_split": {
+    "test_size": 0.2,
+    "stratified": true,
+    "random_state": 20261020
+  },
+  "base_families": {
+    "lgb_original": {
+      "trees": 639
+    },
+    "cb_original": {
+      "trees": 1308
+    },
+    "residual_prior05": {
+      "trees": 581,
+      "prior_scale": 0.5
+    }
+  },
+  "base_training": "For each outer train, fit three inner models on inner-train only using its own category/frequency/group maps. Predict inner holdout to fit meta. Reuse existing corresponding outer models predictions only after checking identical ids, labels and folds. Exact original overlaps stay excluded.",
+  "meta_features": [
+    "logit_lgb",
+    "logit_cb",
+    "logit_residual",
+    "logit_original_teacher"
+  ],
+  "meta_candidates": {
+    "logistic": {
+      "standardize": "Fit StandardScaler on inner-holdout meta features only",
+      "C": 0.01,
+      "max_iter": 1000,
+      "solver": "lbfgs"
+    },
+    "residual_tree": {
+      "n_estimators": 200,
+      "learning_rate": 0.02,
+      "num_leaves": 4,
+      "max_depth": 2,
+      "min_child_samples": 2000,
+      "reg_lambda": 100,
+      "init_score": "Outer/inner base LGB logit as appropriate",
+      "extra_features": [
+        "logit_cb_minus_lgb",
+        "logit_residual_minus_lgb",
+        "logit_teacher_minus_lgb"
+      ]
+    }
+  },
+  "selection": "Primary only: select highest AUC among delta>=.0001 and positive conditional lower bound vs v4. Freeze algorithm; confirmation lower bound must be positive; OOF all folds positive, pooled delta>=.0002 and lower bound>0. No hyperparameter search or leaderboard feedback.",
+  "cpu_threads": 6,
+  "serial": true,
+  "new_dependencies": false,
+  "training_start_cutoff_utc": "2026-10-18T00:40:00+00:00",
+  "training_hard_cutoff_utc": "2026-10-18T00:50:00+00:00"
+}

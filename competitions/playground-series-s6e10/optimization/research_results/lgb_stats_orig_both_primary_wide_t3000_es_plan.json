@@ -1,0 +1,29 @@
+{
+  "name": "lgb_stats_orig_both_primary_wide_t3000_es",
+  "kind": "lgb",
+  "external": "both",
+  "split": "primary",
+  "params": {
+    "n_estimators": 3000,
+    "learning_rate": 0.02,
+    "num_leaves": 127,
+    "max_depth": -1,
+    "min_child_samples": 100,
+    "reg_lambda": 1,
+    "objective": "binary",
+    "n_jobs": 6,
+    "random_state": 42,
+    "verbosity": -1,
+    "colsample_bytree": 0.5,
+    "subsample": 0.8,
+    "max_bin": 255,
+    "deterministic": true,
+    "force_col_wise": true,
+    "subsample_freq": 1,
+    "metric": "auc"
+  },
+  "preprocessing_sha256": "6c029528249d6772a958b29c46f4f095da9f91136c2721eb2a4d268f360fcfe9",
+  "runner_sha256": "59395fb24a5cc733ed331539d2139d2d19329b018d1358c7f6980a576419cbc4",
+  "external_sha256": "0fc3167103ca04ecaac018c622ccca4d8f7e365b46f032ad11f318e409dbfc55",
+  "frozen_utc": "2026-10-17T20:41:51.760164+00:00"
+}

@@ -1,0 +1,79 @@
+{
+  "mode": "teacher",
+  "split": "primary",
+  "status": "complete",
+  "started_utc": "2026-10-17T19:41:06.368712+00:00",
+  "runner_sha256": "4f65acb32e7d28e717b13f81ae157ddf873f40d967eed6c6e7f79c790d49b6c5",
+  "preprocessing_sha256": "6c029528249d6772a958b29c46f4f095da9f91136c2721eb2a4d268f360fcfe9",
+  "source_teacher_result_sha256": "35c20bbd3a2eff503bc64d436dc680cdf66298c807eac521b1d75c0b936be9f2",
+  "fixed_trees": 639,
+  "params": {
+    "n_estimators": 639,
+    "learning_rate": 0.04,
+    "num_leaves": 63,
+    "max_depth": -1,
+    "min_child_samples": 150,
+    "reg_lambda": 10,
+    "objective": "binary",
+    "n_jobs": 6,
+    "random_state": 42,
+    "verbosity": -1,
+    "colsample_bytree": 1.0,
+    "subsample": 1.0,
+    "max_bin": 255,
+    "deterministic": true,
+    "force_col_wise": true
+  },
+  "external_features": [
+    "orig_teacher_lgb"
+  ],
+  "train_rows": 559708,
+  "valid_rows": 139927,
+  "auc": 0.9597236235831228,
+  "vs_stats": {
+    "baseline_auc": 0.9595094577734711,
+    "candidate_auc": 0.9597236235831228,
+    "delta_auc": 0.00021416580965172294,
+    "paired_se": 0.00012850431848229554,
+    "conditional_95pct_ci": [
+      -3.7702654573576304e-05,
+      0.0004660342738770222
+    ],
+    "candidate_logloss": 0.22672234588310464
+  },
+  "near_key_slices": {
+    "near_match": {
+      "rows": 51609,
+      "positive_rate": 0.445581197078029,
+      "comparison": {
+        "baseline_auc": 0.9587046609489681,
+        "candidate_auc": 0.9589403762107799,
+        "delta_auc": 0.00023571526181176417,
+        "paired_se": 0.0002079271357630029,
+        "conditional_95pct_ci": [
+          -0.0001718219242837215,
+          0.0006432524479072499
+        ],
+        "candidate_logloss": 0.22826814518072058
+      }
+    },
+    "no_near_match": {
+      "rows": 88318,
+      "positive_rate": 0.4424013224937159,
+      "comparison": {
+        "baseline_auc": 0.9599123436728904,
+        "candidate_auc": 0.9601256709575152,
+        "delta_auc": 0.0002133272846248646,
+        "paired_se": 0.00016361590456732218,
+        "conditional_95pct_ci": [
+          -0.00010735988832708687,
+          0.000534014457576816
+        ],
+        "candidate_logloss": 0.2258190514702934
+      }
+    }
+  },
+  "model_sha256": "65f601632ee446f187072900e6b0279f7e28722155233be8eb32eff9a6644a57",
+  "elapsed_seconds": 15.073526263000076,
+  "ended_utc": "2026-10-17T19:41:21.442240+00:00"
+}

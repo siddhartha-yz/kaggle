@@ -1,0 +1,83 @@
+{
+  "mode": "both",
+  "split": "confirm",
+  "status": "complete",
+  "started_utc": "2026-10-17T19:42:33.848928+00:00",
+  "runner_sha256": "4f65acb32e7d28e717b13f81ae157ddf873f40d967eed6c6e7f79c790d49b6c5",
+  "preprocessing_sha256": "6c029528249d6772a958b29c46f4f095da9f91136c2721eb2a4d268f360fcfe9",
+  "source_teacher_result_sha256": "35c20bbd3a2eff503bc64d436dc680cdf66298c807eac521b1d75c0b936be9f2",
+  "fixed_trees": 639,
+  "params": {
+    "n_estimators": 639,
+    "learning_rate": 0.04,
+    "num_leaves": 63,
+    "max_depth": -1,
+    "min_child_samples": 150,
+    "reg_lambda": 10,
+    "objective": "binary",
+    "n_jobs": 6,
+    "random_state": 42,
+    "verbosity": -1,
+    "colsample_bytree": 1.0,
+    "subsample": 1.0,
+    "max_bin": 255,
+    "deterministic": true,
+    "force_col_wise": true
+  },
+  "external_features": [
+    "orig_lookup0_mean",
+    "orig_lookup0_logcount",
+    "orig_lookup1_mean",
+    "orig_lookup1_logcount",
+    "orig_teacher_lgb"
+  ],
+  "train_rows": 559708,
+  "valid_rows": 139927,
+  "auc": 0.9605999142343083,
+  "vs_stats": {
+    "baseline_auc": 0.960200259903565,
+    "candidate_auc": 0.9605999142343083,
+    "delta_auc": 0.0003996543307434042,
+    "paired_se": 0.0001347089590152325,
+    "conditional_95pct_ci": [
+      0.00013562477107354848,
+      0.0006636838904132598
+    ],
+    "candidate_logloss": 0.223661338613012
+  },
+  "near_key_slices": {
+    "near_match": {
+      "rows": 51867,
+      "positive_rate": 0.44483004607939536,
+      "comparison": {
+        "baseline_auc": 0.9588227053524616,
+        "candidate_auc": 0.9593092418030368,
+        "delta_auc": 0.00048653645057517014,
+        "paired_se": 0.0002183074074553688,
+        "conditional_95pct_ci": [
+          5.865393196264728e-05,
+          0.000914418969187693
+        ],
+        "candidate_logloss": 0.22691832650151172
+      }
+    },
+    "no_near_match": {
+      "rows": 88060,
+      "positive_rate": 0.4428344310697252,
+      "comparison": {
+        "baseline_auc": 0.9609235148677259,
+        "candidate_auc": 0.9613069879760565,
+        "delta_auc": 0.0003834731083306453,
+        "paired_se": 0.00017200026573680778,
+        "conditional_95pct_ci": [
+          4.635258748650204e-05,
+          0.0007205936291747885
+        ],
+        "candidate_logloss": 0.2217429853219284
+      }
+    }
+  },
+  "model_sha256": "2975f028f56462ce489cd23721d764d7ddbb445bacb69efa38dd5b1e5a7ad9e0",
+  "elapsed_seconds": 20.307653298000332,
+  "ended_utc": "2026-10-17T19:42:54.156580+00:00"
+}

@@ -1,0 +1,56 @@
+{
+  "updated_utc": "2026-10-17T21:38:45.925482+00:00",
+  "phase": "cb_deep_oof",
+  "validation": {
+    "driver": "research_stage12_queue.py",
+    "state": "research_stage12_queue_state.json",
+    "log": "research_cb_deep_oof.log",
+    "exec_session": 70143
+  },
+  "conditional_export": {
+    "driver": "research_stage13_export_queue.py",
+    "state": "research_stage13_export_state.json",
+    "log_if_started": "research_cb_deep_full.log",
+    "exec_session": 14250
+  },
+  "selected_recipe": {
+    "deep_trees": 813,
+    "deep_weight": 0.25,
+    "final_component_weights": {
+      "lgb_original": 0.46875,
+      "cb_original": 0.09375,
+      "residual_prior05": 0.1875,
+      "cb_deep": 0.25
+    },
+    "primary_auc": 0.9600030291404525,
+    "confirmation_auc": 0.960820157784561
+  },
+  "gate": "OOF every fold positive vs v4; pooled delta>=.0002; positive lower conditional interval vs v4; positive pooled point delta vs predeclared fixed core. No parameter or weight adjustment.",
+  "baseline": {
+    "public_auc": 0.96,
+    "oof_auc": 0.9605951395132004,
+    "csv": "submission_distance_original_v4.csv",
+    "library_file_id": "libfile_a0f39f797ee08191821d362559ac5c47",
+    "sha256": "87a7d34b2dd788ba1623283e06e689bd8f33e1bef427bc473bccf26c6e2d6e43"
+  },
+  "candidate_if_eligible": {
+    "csv": "submission_cb_deep_v5.csv",
+    "audit": "submission_cb_deep_v5_audit.json",
+    "created": false
+  },
+  "completed_routes": {
+    "nested_stack": "Complete, OOF .9607592663; delta .0001641268 below gate, no export",
+    "source_context": "Both primary variants failed, no confirmation/OOF/export"
+  },
+  "budget": {
+    "deadline_utc": "2026-10-18T01:02:51+00:00",
+    "training_start_cutoff_utc": "2026-10-18T00:40:00+00:00",
+    "training_hard_cutoff_utc": "2026-10-18T00:50:00+00:00",
+    "completed_submissions": 2,
+    "remaining_submissions": 2,
+    "cpu_training_threads": 6,
+    "serial": true,
+    "paid_resources": false
+  },
+  "recovery": "Inspect original sessions and log timestamps before any restart. Unknown session does not alone prove process death. Reuse completed fold artifacts. Do not start duplicate queues. Local computer never logs into or submits to Kaggle; deliver audited CSV through Library to parent."
+}

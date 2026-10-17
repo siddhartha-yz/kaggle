@@ -2,14 +2,15 @@
 
 This directory preserves the actual cloud experiment code and the subsequent local CPU verification. It differs from the earlier `../baseline.py` preparation scaffold. The historical official baseline achieved public ROC-AUC **0.95816**; the local workflow never logs in to Kaggle or submits files.
 
-## Current research window — snapshot 2026-10-17 21:21 UTC
+## Current research window — snapshot 2026-10-17 22:08 UTC
 
-The current confirmed public best is **0.96000**, rank **1009/2182** at the parent's 19:52 UTC observation. The new window has used **2 of 4** authorized submissions; **2 remain**. The deadline is **2026-10-18 01:02:51 UTC**, with training start cutoff 00:40 and hard training cutoff 00:50. All fits run serially on CPU with at most six training threads and no paid resources. The historical counts and deadlines in the sections below refer to their earlier windows.
+The current confirmed public best is **0.96000**, rank **1009/2182** at the parent's 19:52 UTC observation. The new window has used **2 of 4** authorized formal submissions; **2 remain**, including the v5 candidate now ready for the parent to submit. One further slot is unreserved. The deadline is **2026-10-18 01:02:51 UTC**, with training start cutoff 00:40 and hard training cutoff 00:50. All fits run serially on CPU with at most six training threads and no paid resources. The historical counts and deadlines in the sections below refer to their earlier windows.
 
 | Delivered candidate | Fixed five-fold OOF AUC | Confirmed public AUC | Audit |
 | --- | ---: | ---: | --- |
 | v3: train-fold-only Distance group statistics | 0.9603367815 | 0.95977 | [v3 audit](submission_distance_stats_v3_audit.json) |
 | v4: statistics plus original-only teacher and lookup | 0.9605951395 | **0.96000** | [v4 audit](submission_distance_original_v4_audit.json) |
+| v5: frozen deeper CatBoost blend | **0.9608926464** | Pending parent submission | [v5 audit](submission_cb_deep_v5_audit.json) |
 
 The v4 Library file is `libfile_a0f39f797ee08191821d362559ac5c47`; its CSV SHA-256 is `87a7d34b2dd788ba1623283e06e689bd8f33e1bef427bc473bccf26c6e2d6e43`. Both delivered CSVs have 299844 rows and passed official ID-order, finite-probability, saved-model reload and CSV-readback checks. Models, data and predictions remain outside Git. Only the parent cloud browser submits; there are no local Kaggle credentials or login actions.
 
@@ -19,7 +20,9 @@ Completed follow-ups retained both positive and failed results. The best predecl
 
 Strict nested stacking completed all five folds normally at **21:14 UTC**. Its shallow residual meta-model passed primary and confirmation, but final OOF AUC **0.9607592663** improved only **0.0001641268** over v4 (conditional 95% interval **[0.0001041732, 0.0002240804]**), below the frozen effect gate. All five fold deltas were positive. No full refit or CSV was produced. See [nested results](research_results/nested_stack_oof_result.json). Two source-only context representations then both failed their primary screen; see [context results](research_context_selection.json).
 
-A single deeper CatBoost configuration is now being screened on unchanged validated features: depth10, learning rate .04, L2 10, seed20261018, CPU6, primary maximum2400 trees with150-round patience. Only the primary split selects the iteration count and one of two fixed candidates (deep model alone or25%deep+75%existing fixed core). Confirmation and five-fold OOF retain the existing effect/stability gates; the new candidate must also improve the existing fixed core. See [deeper-model plan](research_cb_deep_plan.json). No third submission file exists at this snapshot.
+The deeper CatBoost route completed all validation and full refits. The frozen candidate uses **46.875% v4 LGB +9.375% original-aware CB8 +18.75% residual-prior LGB +25% CB10**. CB10 has **813** trees, depth10, learning rate .04, L2 10 and seed20261018; its iteration count and blend weight were frozen before confirmation. Primary AUC was **0.9600030291**, confirmation **0.9608201578**, and fixed five-fold OOF **0.9608926464**. The pooled OOF gain over v4 is **0.0002975069**, with conditional 95% interval **[0.0002535770, 0.0003414369]**; every fold improved. It also exceeds the prior fixed core by **0.0001065673**.
+
+Full CPU refits and CSV checks completed at **2026-10-17 22:05:36 UTC**. The existing full v4 model was reused; all three newly fitted models passed reload comparison with zero prediction difference. The independent CSV component-sum comparison differed by at most **1.1102230246251565e-16**. The delivered `submission_cb_deep_v5.csv` has **299844** rows and **7986343 bytes**, Library ID **`libfile_ca36559c66908191817867f5880b4635`**, version **0**, and SHA-256 **`0f9a978051e4f0fa164928f3b975a71346b60477959ee5cf50abb580a706e872`**. Library linkage and the post-upload local checksum were verified. The parent has not yet reported a formal v5 submission or public score. See [Library delivery record](submission_cb_deep_v5_library.json) and [five-fold results](research_results/cb_deep_oof_result.json).
 
 See [research protocol](research_protocol.json), [submission ledger](research_submission_ledger.json), [nested plan](research_nested_stack_plan.json), and [nested checkpoint](research_nested_validation_checkpoint.json). Development and confirmation samples have been reused for feature selection; paired intervals are conditional on chosen models and exclude selection uncertainty. Do not replay completed queues or interpret these scores as an untouched final test.
 

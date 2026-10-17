@@ -1,17 +1,19 @@
 {
-  "updated_utc": "2026-10-17T21:38:45.925482+00:00",
-  "phase": "cb_deep_oof",
+  "updated_utc": "2026-10-17T22:07:35.345227+00:00",
+  "phase": "candidate_ready_in_library",
   "validation": {
     "driver": "research_stage12_queue.py",
     "state": "research_stage12_queue_state.json",
     "log": "research_cb_deep_oof.log",
-    "exec_session": 70143
+    "exec_session": 70143,
+    "status": "complete"
   },
   "conditional_export": {
     "driver": "research_stage13_export_queue.py",
     "state": "research_stage13_export_state.json",
     "log_if_started": "research_cb_deep_full.log",
-    "exec_session": 14250
+    "exec_session": 14250,
+    "status": "complete"
   },
   "selected_recipe": {
     "deep_trees": 813,
@@ -36,7 +38,9 @@
   "candidate_if_eligible": {
     "csv": "submission_cb_deep_v5.csv",
     "audit": "submission_cb_deep_v5_audit.json",
-    "created": false
+    "created": true,
+    "library_file_id": "libfile_ca36559c66908191817867f5880b4635",
+    "sha256": "0f9a978051e4f0fa164928f3b975a71346b60477959ee5cf50abb580a706e872"
   },
   "completed_routes": {
     "nested_stack": "Complete, OOF .9607592663; delta .0001641268 below gate, no export",
@@ -50,7 +54,9 @@
     "remaining_submissions": 2,
     "cpu_training_threads": 6,
     "serial": true,
-    "paid_resources": false
+    "paid_resources": false,
+    "pending_candidates": 1,
+    "unreserved_submission_slots": 1
   },
   "recovery": "Inspect original sessions and log timestamps before any restart. Unknown session does not alone prove process death. Reuse completed fold artifacts. Do not start duplicate queues. Local computer never logs into or submits to Kaggle; deliver audited CSV through Library to parent."
 }

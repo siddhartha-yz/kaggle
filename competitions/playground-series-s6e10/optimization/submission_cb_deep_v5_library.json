@@ -1,0 +1,56 @@
+{
+  "library_file_id": "libfile_ca36559c66908191817867f5880b4635",
+  "file_name": "submission_cb_deep_v5.csv",
+  "file_id": "file_0000000036a88230af20801d269f4281",
+  "version": 0,
+  "uploaded_bytes": 7986343,
+  "local_library_attributes_applied": true,
+  "submission": {
+    "path": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/submission_cb_deep_v5.csv",
+    "sha256": "0f9a978051e4f0fa164928f3b975a71346b60477959ee5cf50abb580a706e872",
+    "bytes": 7986343,
+    "rows": 299844,
+    "columns": [
+      "id",
+      "satisfaction"
+    ],
+    "id_order_matches_official_test": true,
+    "min": 0.006189991350031039,
+    "max": 0.9976142860206069,
+    "mean": 0.4436460175097026,
+    "std": 0.43220098932855394,
+    "csv_readback_verified": true
+  },
+  "comparison": {
+    "baseline_auc": 0.9605951395132004,
+    "candidate_auc": 0.9608926464364628,
+    "delta_auc": 0.0002975069232623584,
+    "paired_se": 2.2413242285690212e-05,
+    "conditional_95pct_ci": [
+      0.00025357696838240555,
+      0.00034143687814231123
+    ],
+    "candidate_logloss": 0.22341836296595668
+  },
+  "vs_core": {
+    "baseline_auc": 0.9607860791046143,
+    "candidate_auc": 0.9608926464364628,
+    "delta_auc": 0.00010656733184843947,
+    "paired_se": 1.2104698986202762e-05,
+    "conditional_95pct_ci": [
+      8.284212183548206e-05,
+      0.00013029254186139688
+    ],
+    "candidate_logloss": 0.22341836296595668
+  },
+  "weights": {
+    "lgb_original": 0.46875,
+    "cb_original": 0.09375,
+    "residual_prior05": 0.1875,
+    "cb_deep": 0.25
+  },
+  "submission_authority": "Parent cloud browser only; no local Kaggle submission",
+  "delivered_utc": "2026-10-17T22:07:35.345227+00:00",
+  "local_library_id_verified": true,
+  "post_upload_sha256_verified": true
+}

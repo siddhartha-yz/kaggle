@@ -24,6 +24,8 @@ def main():
  signal.signal(signal.SIGALRM,stop);signal.alarm(max(1,int((datetime.fromisoformat(protocol['training_hard_cutoff_utc'])-now()).total_seconds())))
  out=ROOT/'research_artifacts/nested_stack_full_v1';out.mkdir(exist_ok=False);start=time.monotonic();rec={'status':'preflight','method':method,'selection':selection,'runner_sha256':sha(__file__),'started_utc':now().isoformat()};dump(out/'result.json',rec)
  try:
+  nested_plan=json.loads((ROOT/'research_artifacts/nested_stack_oof/plan.json').read_text());assert nested_plan['runner_sha256']==sha(ROOT/'research_nested_stack.py') and nested_plan['frozen_plan_sha256']==sha(ROOT/'research_nested_stack_plan.json')
+  rec['nested_plan_sha256']=sha(ROOT/'research_artifacts/nested_stack_oof/plan.json');rec['nested_result_sha256']=sha(ROOT/'research_artifacts/nested_stack_oof/result.json')
   reference=ROOT/'research_artifacts/stats_original639_full_v1';rr=json.loads((reference/'result.json').read_text());assert rr['status']=='complete'
   assert all(sha(ROOT/'data'/n)==v for n,v in rr['data_sha256'].items());assert sha(reference/'model.txt')==rr['model_sha256'] and sha(reference/'transformer.joblib')==rr['transformer_sha256'] and sha(reference/'original_transformers.joblib')==rr['original_transformers_sha256']
   assert sha(ROOT/'research_features.py')==rr['feature_code_sha256']
@@ -33,6 +35,7 @@ def main():
   oof=[];oof_paths=['lgb_stats_orig_both_oof','cb_stats_orig_both_oof','residual_prior05_oof_t581']
   for name in oof_paths:
    z=np.load(ROOT/'research_artifacts'/name/'oof.npz');assert np.array_equal(z['id'],train.id) and np.array_equal(z['target'],y) and np.array_equal(z['fold'],folds['fold']);oof.append(z['pred'])
+  rec['oof_component_sha256']={name:sha(ROOT/'research_artifacts'/name/'oof.npz') for name in oof_paths};rec['nested_oof_sha256']=sha(ROOT/'research_artifacts/nested_stack_oof/residual_tree_oof.npz')
   P=np.column_stack(oof);candidate=np.load(ROOT/'research_artifacts/nested_stack_oof/residual_tree_oof.npz')
   assert np.array_equal(candidate['id'],train.id) and np.array_equal(candidate['target'],y) and np.array_equal(candidate['fold'],folds['fold'])
   c=compare(y,P[:,0],candidate['pred']);bf=[compare(y[folds['fold']==k],P[folds['fold']==k,0],candidate['pred'][folds['fold']==k]) for k in range(5)];assert c['delta_auc']>=.0002 and c['conditional_95pct_ci'][0]>0 and all(v['delta_auc']>0 for v in bf)

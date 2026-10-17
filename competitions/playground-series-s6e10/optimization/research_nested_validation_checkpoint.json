@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-17T20:56:00+00:00",
+  "status": "Nested shallow-residual stacking passed primary and confirmation; frozen5fold OOF running. Conditional export queue waiting, no new CSV yet.",
+  "primary_auc": 0.960004679407086,
+  "primary_delta": 0.00021631736417493386,
+  "confirmation_auc": 0.9607488271562278,
+  "confirmation_delta": 0.00014891292191943073,
+  "confirmation_ci": [
+    1.722790343246995e-05,
+    0.0002805979404063915
+  ],
+  "selection_algorithm": "Shallow residual tree,200trees,leaves4,depth2,minchild2000,lambda100,lr.02. Meta fits inner-holdout predictions only.",
+  "completed_new_submissions": 2,
+  "remaining_new_submissions": 2,
+  "cpu_threads": 6,
+  "paid_resources": false
+}

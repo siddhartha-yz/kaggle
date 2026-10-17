@@ -50,10 +50,21 @@ Both frozen components completed full-data CPU refits on all **699635** training
 - Size: **7984405 bytes**.
 - SHA-256: `e5006e109f93ee8263698fecc64881ad8a4311d94daef1055a12a11e9475769f`.
 - Probability range: **0.0028820971790049325** to **0.9927350678867439**.
-- Local formal submissions: **0**. The parent session coordinates any official upload and scoring within the original total cap of two new submissions. There is no new candidate public score yet.
+- Local formal submissions: **0**. The parent session coordinates any official upload and scoring within the original total cap of two new submissions. At the initial local handoff there was no candidate public score; the later confirmed score is recorded below.
 
 `full_refit_results.json` and `submission_audit.json` provide the compact supporting records. All local training completed before the authorized cutoff. No additional experiment search was performed.
 
 ## Official candidate score reported by parent
 
 The parent cloud browser confirmed **Complete**, public AUC **0.95855**, rank **1209/2177**, for the frozen candidate CSV with SHA-256 `e5006e109f93ee8263698fecc64881ad8a4311d94daef1055a12a11e9475769f`. This improves the historical baseline public AUC 0.95816 by **0.00039**. One of the two authorized new formal submissions has been used; at most one remains. Ranking is a time-specific observation. See `public_result_20261017.json`.
+
+## One bounded continuation test (2026-10-17 18:37 UTC)
+
+After the parent confirmed public AUC **0.95855**, a single fixed complementary blend was evaluated: **40% cb8 / 40% lgb63cats / 20% lgb63allcats**. The added model uses the already-selected **415** trees. Weights and the acceptance criterion were recorded before evaluation in `continuation_plan.json`; no public-score weight search was performed.
+
+| Same validation rows | Submitted 50/50 blend AUC | New fixed blend AUC | Paired difference | Conditional 95% interval |
+| --- | ---: | ---: | ---: | --- |
+| Development seed42 | 0.9581313490780615 | 0.9581626604818705 | +0.0000313114038090 | [-0.0000097812106292, +0.0000724040182471] |
+| Stability seed20261017 | 0.9590578561530560 | 0.9590968889423398 | +0.0000390327892837 | [-0.0000013247608206, +0.0000793903393880] |
+
+**Decision: retain the submitted best.** Both point estimates improved slightly, but the predeclared confirmation criterion required a positive lower paired conditional interval bound. It did not pass. The interval excludes selection uncertainty, and the reused confirmation samples are not an independent test. No new full refit or CSV was generated. The one six-thread CPU confirmation fit completed in **10.56 seconds**. No additional formal submission was made; the total remains **1 used, at most 1 remaining**, coordinated by the parent. All continuation training ended at **18:37:59 UTC**, before the original 18:47:49 UTC cutoff. See `continuation_result.json` and `continuation_model_result.json`.

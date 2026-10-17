@@ -1,0 +1,26 @@
+{
+  "hypothesis": "The existing all-rating-category LightGBM may add complementary nonlinear interactions to the already-submitted targeted-category blend, without new parameter search.",
+  "current_best_csv_sha256": "e5006e109f93ee8263698fecc64881ad8a4311d94daef1055a12a11e9475769f",
+  "candidate": {
+    "cb8": {
+      "trees": 1308,
+      "weight": 0.4
+    },
+    "lgb63cats": {
+      "trees": 639,
+      "weight": 0.4
+    },
+    "lgb63allcats": {
+      "trees": 415,
+      "weight": 0.2
+    }
+  },
+  "decision_rule": "One frozen candidate only. Compare with the current 50/50 blend on the same primary and confirmation rows. Require positive AUC difference in both, and a positive lower conditional paired 95% bound on confirmation, before considering full refit. No public-score weight tuning. Otherwise retain the submitted best and record negative/inconclusive results.",
+  "confirm_split_seed": 20261017,
+  "model_seed": 42,
+  "new_training_limit": "At most one 415-tree CPU confirmation fit; full fit only if the predeclared comparison passes and time permits all verification and Library delivery before deadline.",
+  "deadline_utc": "2026-10-17T18:47:49+00:00",
+  "new_formal_submissions_total": 1,
+  "remaining_formal_submissions_maximum": 1,
+  "frozen_utc": "2026-10-17T18:37:32.635246+00:00"
+}

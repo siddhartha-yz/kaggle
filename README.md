@@ -7,7 +7,7 @@
 - [Predicting Airline Satisfaction — Playground Series S6E10](https://www.kaggle.com/competitions/playground-series-s6e10)
 - 项目目录：[`competitions/playground-series-s6e10/`](competitions/playground-series-s6e10/)
 - 目标：建立航空旅客满意度预测基线，按 ROC-AUC 评估预测概率。
-- 状态：仅初始化目录与计划，尚未下载数据、训练模型或提交比赛；无实验成绩。
+- 状态：已准备 CatBoost 基线、严格 CSV 校验与合成测试；尚未下载真实数据、训练真实模型或提交比赛，无真实实验成绩。用法见比赛目录 README。
 
 ## 目录约定
 

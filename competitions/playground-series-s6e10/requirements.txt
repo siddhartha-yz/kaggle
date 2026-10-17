@@ -1,0 +1,7 @@
+# Training only. No dependencies are required for --validate-only or stdlib unit tests.
+# Use an isolated Python 3.11/3.12 environment. These are compatibility ranges,
+# not an experimentally verified lockfile; exact installed versions are saved per run.
+numpy>=1.26,<3
+pandas>=2.1,<4
+scikit-learn>=1.4,<2
+catboost>=1.2.7,<2

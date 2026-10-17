@@ -1,0 +1,13 @@
+{
+  "seed": 42,
+  "validation_fraction": 0.2,
+  "iterations": 1000,
+  "learning_rate": 0.05,
+  "depth": 6,
+  "early_stopping_rounds": 50,
+  "threads": 4,
+  "device": "CPU",
+  "gpu_devices": "0",
+  "id_column": "id",
+  "positive_label": null
+}

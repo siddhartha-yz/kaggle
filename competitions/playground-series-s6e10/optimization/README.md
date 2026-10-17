@@ -1,6 +1,25 @@
-# Frozen CatBoost + LightGBM optimization
+# Kaggle S6E10 optimization and validation record
 
 This directory preserves the actual cloud experiment code and the subsequent local CPU verification. It differs from the earlier `../baseline.py` preparation scaffold. The historical official baseline achieved public ROC-AUC **0.95816**; the local workflow never logs in to Kaggle or submits files.
+
+## Current research window — snapshot 2026-10-17 20:58 UTC
+
+The current confirmed public best is **0.96000**, rank **1009/2182** at the parent's 19:52 UTC observation. The new window has used **2 of 4** authorized submissions; **2 remain**. The deadline is **2026-10-18 01:02:51 UTC**, with training start cutoff 00:40 and hard training cutoff 00:50. All fits run serially on CPU with at most six training threads and no paid resources. The historical counts and deadlines in the sections below refer to their earlier windows.
+
+| Delivered candidate | Fixed five-fold OOF AUC | Confirmed public AUC | Audit |
+| --- | ---: | ---: | --- |
+| v3: train-fold-only Distance group statistics | 0.9603367815 | 0.95977 | [v3 audit](submission_distance_stats_v3_audit.json) |
+| v4: statistics plus original-only teacher and lookup | 0.9605951395 | **0.96000** | [v4 audit](submission_distance_original_v4_audit.json) |
+
+The v4 Library file is `libfile_a0f39f797ee08191821d362559ac5c47`; its CSV SHA-256 is `87a7d34b2dd788ba1623283e06e689bd8f33e1bef427bc473bccf26c6e2d6e43`. Both delivered CSVs have 299844 rows and passed official ID-order, finite-probability, saved-model reload and CSV-readback checks. Models, data and predictions remain outside Git. Only the parent cloud browser submits; there are no local Kaggle credentials or login actions.
+
+The additional source is the public CC0 aviation satisfaction dataset, with **21 exact feature-overlap rows excluded globally** before any source-only model or lookup fitting. Of 17 exact training overlaps, 3 have conflicting labels. All synthetic frequency, category and group mappings fit outer-train only; target encoding uses inner OOF values for training rows. See [overlap audit](original_overlap_audit.json) and [label-conflict audit](original_exact_label_audit.json).
+
+Completed follow-ups retained both positive and failed results. The best predeclared fixed heterogeneous blend reached OOF **0.9607860791**, a gain of **0.0001909396** over v4 with all five fold directions positive. It did **not** meet the frozen **0.000200** submission effect gate and was not exported. See [fixed-blend report](research_heterogeneous_oof_report.json). Rating-distribution, strict interaction-encoding, second original-teacher and wider sampled LightGBM contrasts all failed their primary screen; see [four-contrast results](research_stage8_selection.json). The neural candidate failed its confirmation interval gate and was excluded from OOF combination.
+
+Strict nested stacking is the active route at this snapshot. Its shallow residual meta-model passed the primary screen (AUC **0.9600046794**, gain **0.0002163174**) and reused confirmation split (AUC **0.9607488272**, gain **0.0001489129**, conditional 95% interval **[0.0000172279, 0.0002805979]**). In each outer split, three new inner base fits generate predictions on an inner holdout used exclusively to train the meta-model; outer-validation labels never train it. Fixed five-fold evaluation is running. Export is guarded by all-positive fold deltas, pooled gain at least 0.000200 versus v4 and a positive conditional lower bound. No third submission file exists at this snapshot.
+
+See [research protocol](research_protocol.json), [submission ledger](research_submission_ledger.json), [nested plan](research_nested_stack_plan.json), and [nested checkpoint](research_nested_validation_checkpoint.json). Development and confirmation samples have been reused for feature selection; paired intervals are conditional on chosen models and exclude selection uncertainty. Do not replay completed queues or interpret these scores as an untouched final test.
 
 ## Evidence and provenance
 

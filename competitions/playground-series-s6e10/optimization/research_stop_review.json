@@ -1,0 +1,80 @@
+{
+  "completed_utc": "2026-10-17T22:19:32.057993+00:00",
+  "decision": "Retain v5; stop this bounded continuation with one submission unused. No active training or queued fit.",
+  "best": {
+    "candidate": "submission_cb_deep_v5.csv",
+    "public_auc": 0.96033,
+    "rank": 930,
+    "total_ranked": 2194,
+    "parent_verified_utc": "2026-10-17T22:11:00+00:00",
+    "oof_auc": 0.9608926464364628
+  },
+  "submission_ledger": "research_submission_ledger.json",
+  "latest_route": "research_transfer_selection.json",
+  "latest_independent_prediction_audit": "research_transfer_audit.json",
+  "evidence": [
+    {
+      "route": "v5 deeper CB blend",
+      "reference": "v4",
+      "stage": "fixed fivefold OOF",
+      "delta_auc": 0.0002975069232623584,
+      "result": "passed; full fit, audited CSV, parent submitted"
+    },
+    {
+      "route": "best earlier fixed heterogeneous core",
+      "reference": "v4",
+      "stage": "fixed fivefold OOF",
+      "delta_auc": 0.00019093959141391892,
+      "result": "below frozen .0002 gate"
+    },
+    {
+      "route": "strict nested residual stack",
+      "reference": "v4",
+      "stage": "fixed fivefold OOF",
+      "delta_auc": 0.00016412681554833775,
+      "result": "below frozen .0002 gate"
+    },
+    {
+      "route": "old synthetic MLP v2",
+      "reference": "v4",
+      "stage": "confirmation",
+      "delta_auc": 0.0001012056,
+      "result": "conditional lower bound negative; no OOF"
+    },
+    {
+      "route": "rating-distribution, strict interaction TE, second source teacher, wider sampled LGB",
+      "stage": "primary",
+      "result": "all four failed promotion"
+    },
+    {
+      "route": "two source-only context feature variants",
+      "stage": "primary",
+      "result": "both negative"
+    },
+    {
+      "route": "no-pretraining MLP without teacher inputs",
+      "reference": "v5",
+      "stage": "primary",
+      "delta_auc": 1.0539978805734762e-05,
+      "result": "below .0001 primary effect gate and conditional interval crosses zero"
+    },
+    {
+      "route": "eight-epoch source-pretrained MLP without teacher inputs",
+      "reference": "v5",
+      "stage": "primary",
+      "delta_auc": -2.1470020634017928e-05,
+      "result": "negative and conditional interval crosses zero"
+    }
+  ],
+  "remaining_most_distinct_hypothesis": "An actual RealMLP-style numerical embedding/activation architecture remains untested; the sklearn ReLU MLP is not RealMLP. Assess one documented CPU-compatible implementation under a separately frozen ablation and measured runtime before any extensive search. Source pretraining by itself did not help the tested architecture.",
+  "validation_next_step": "Predeclare a new assessment protocol before another large search and use genuinely untouched data if available. A new partition of previously searched training rows is stability evidence, not a pristine holdout. Existing primary, confirmation and OOF were reused for selection; conditional intervals exclude selection uncertainty.",
+  "scope_of_conclusion": "Diminishing returns within tested feature families, fixed blends and sklearn MLP controls. This is not evidence of a global AUC ceiling or a prediction of rank.",
+  "resources": {
+    "cpu_training_threads": 6,
+    "serial_fits": true,
+    "paid_resources": false,
+    "new_packages_for_latest_route": false,
+    "remaining_submission_slots": 1
+  },
+  "public_scores_used_for_selection": false
+}

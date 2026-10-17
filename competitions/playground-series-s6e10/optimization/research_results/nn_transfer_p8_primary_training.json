@@ -1,0 +1,216 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-17T22:16:59.129377+00:00",
+  "pretrain_epochs": [
+    {
+      "epoch": 1,
+      "training_seconds": 0.9639572960004443,
+      "training_loss": 0.38146528972025834
+    },
+    {
+      "epoch": 2,
+      "training_seconds": 0.9503497069999867,
+      "training_loss": 0.19220152594957401
+    },
+    {
+      "epoch": 3,
+      "training_seconds": 0.9634480429995165,
+      "training_loss": 0.16329075865774503
+    },
+    {
+      "epoch": 4,
+      "training_seconds": 0.9712301250001474,
+      "training_loss": 0.1488022087493263
+    },
+    {
+      "epoch": 5,
+      "training_seconds": 0.9481285379988549,
+      "training_loss": 0.13724974536835843
+    },
+    {
+      "epoch": 6,
+      "training_seconds": 0.9711446149995027,
+      "training_loss": 0.12962129670622108
+    },
+    {
+      "epoch": 7,
+      "training_seconds": 0.9827339750008832,
+      "training_loss": 0.12354644354798945
+    },
+    {
+      "epoch": 8,
+      "training_seconds": 1.0118613060003554,
+      "training_loss": 0.11859811367619885
+    }
+  ],
+  "epochs": [
+    {
+      "epoch": 1,
+      "training_seconds": 4.3428501170001255,
+      "training_loss": 0.2573278132059193,
+      "validation_auc": 0.9562310532887812,
+      "blend_auc": 0.9598266074636005
+    },
+    {
+      "epoch": 2,
+      "training_seconds": 4.204207433000192,
+      "training_loss": 0.24724588069179473,
+      "validation_auc": 0.9568651678805631,
+      "blend_auc": 0.9599000055294176
+    },
+    {
+      "epoch": 3,
+      "training_seconds": 4.158608669999012,
+      "training_loss": 0.2446710630614047,
+      "validation_auc": 0.9570805648201628,
+      "blend_auc": 0.9599303480870349
+    },
+    {
+      "epoch": 4,
+      "training_seconds": 4.344255517999045,
+      "training_loss": 0.2420993093954641,
+      "validation_auc": 0.956965204560724,
+      "blend_auc": 0.9599509334819811
+    },
+    {
+      "epoch": 5,
+      "training_seconds": 4.258140480998918,
+      "training_loss": 0.24019324474968173,
+      "validation_auc": 0.9570130473941355,
+      "blend_auc": 0.9599379854589356
+    },
+    {
+      "epoch": 6,
+      "training_seconds": 4.234874976998981,
+      "training_loss": 0.23898300744227616,
+      "validation_auc": 0.9574272476612717,
+      "blend_auc": 0.9599815591198185
+    },
+    {
+      "epoch": 7,
+      "training_seconds": 4.176763514999038,
+      "training_loss": 0.23710368273301466,
+      "validation_auc": 0.9572076848072062,
+      "blend_auc": 0.9599535167959188
+    },
+    {
+      "epoch": 8,
+      "training_seconds": 4.329543641000782,
+      "training_loss": 0.23581143251979553,
+      "validation_auc": 0.9570947476978963,
+      "blend_auc": 0.959978495314455
+    },
+    {
+      "epoch": 9,
+      "training_seconds": 4.113052559001517,
+      "training_loss": 0.23462068077990472,
+      "validation_auc": 0.9573448366564761,
+      "blend_auc": 0.9599517384396244
+    },
+    {
+      "epoch": 10,
+      "training_seconds": 4.127172417000111,
+      "training_loss": 0.23327969472127535,
+      "validation_auc": 0.957271878937668,
+      "blend_auc": 0.9599435152489351
+    },
+    {
+      "epoch": 11,
+      "training_seconds": 4.532039337000242,
+      "training_loss": 0.23212661559726658,
+      "validation_auc": 0.9571712431951995,
+      "blend_auc": 0.9598966532636544
+    },
+    {
+      "epoch": 12,
+      "training_seconds": 4.491462939000485,
+      "training_loss": 0.23084288896954697,
+      "validation_auc": 0.9569304197336453,
+      "blend_auc": 0.9599379169651104
+    },
+    {
+      "epoch": 13,
+      "training_seconds": 4.132224667999253,
+      "training_loss": 0.22977504985558397,
+      "validation_auc": 0.9572538774774493,
+      "blend_auc": 0.9599325034697627
+    },
+    {
+      "epoch": 14,
+      "training_seconds": 4.257616519998919,
+      "training_loss": 0.22839558519118536,
+      "validation_auc": 0.9570178385475522,
+      "blend_auc": 0.9599556483816983
+    },
+    {
+      "epoch": 15,
+      "training_seconds": 4.242232263000915,
+      "training_loss": 0.2276495070459773,
+      "validation_auc": 0.9570469261782732,
+      "blend_auc": 0.9599443858033835
+    },
+    {
+      "epoch": 16,
+      "training_seconds": 4.105431398000292,
+      "training_loss": 0.22625192051220097,
+      "validation_auc": 0.9571842458477613,
+      "blend_auc": 0.9599198167992886
+    }
+  ],
+  "feature_width": 131,
+  "preprocessing_seconds": 12.727570335000564,
+  "threadpools": [
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 6,
+      "prefix": "libgomp",
+      "filepath": "/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0",
+      "version": null
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 6,
+      "prefix": "libscipy_openblas",
+      "filepath": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/.venv/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-5f890258.so",
+      "version": "0.3.31.dev",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 6,
+      "prefix": "libscipy_openblas",
+      "filepath": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/.venv/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 6,
+      "prefix": "libgomp",
+      "filepath": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/.venv/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+      "version": null
+    }
+  ],
+  "auc": 0.9574272476612717,
+  "vs_v5": {
+    "baseline_auc": 0.9600030291404525,
+    "candidate_auc": 0.9599815591198185,
+    "delta_auc": -2.1470020634017928e-05,
+    "paired_se": 6.784017830144056e-05,
+    "conditional_95pct_ci": [
+      -0.00015443677010484142,
+      0.00011149672883680557
+    ],
+    "candidate_logloss": 0.22616723322395785
+  },
+  "selected_epochs": 6,
+  "model_sha256": "eda5bd7f12ed9d8f5d7f3c09717a15c399e275c1e23eb6f2e475fc51b772632f",
+  "elapsed_seconds": 96.54763936600102,
+  "ended_utc": "2026-10-17T22:18:35.677020+00:00"
+}

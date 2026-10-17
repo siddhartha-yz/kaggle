@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-17T22:07:35.345227+00:00",
-  "phase": "candidate_ready_in_library",
+  "updated_utc": "2026-10-17T22:19:32.057993+00:00",
+  "phase": "completed_no_additional_candidate",
   "validation": {
     "driver": "research_stage12_queue.py",
     "state": "research_stage12_queue_state.json",
@@ -50,13 +50,29 @@
     "deadline_utc": "2026-10-18T01:02:51+00:00",
     "training_start_cutoff_utc": "2026-10-18T00:40:00+00:00",
     "training_hard_cutoff_utc": "2026-10-18T00:50:00+00:00",
-    "completed_submissions": 2,
-    "remaining_submissions": 2,
+    "completed_submissions": 3,
+    "remaining_submissions": 1,
     "cpu_training_threads": 6,
     "serial": true,
     "paid_resources": false,
-    "pending_candidates": 1,
+    "pending_candidates": 0,
     "unreserved_submission_slots": 1
   },
-  "recovery": "Inspect original sessions and log timestamps before any restart. Unknown session does not alone prove process death. Reuse completed fold artifacts. Do not start duplicate queues. Local computer never logs into or submits to Kaggle; deliver audited CSV through Library to parent."
+  "recovery": "Inspect original sessions and log timestamps before any restart. Unknown session does not alone prove process death. Reuse completed fold artifacts. Do not start duplicate queues. Local computer never logs into or submits to Kaggle; deliver audited CSV through Library to parent.",
+  "active_training": false,
+  "latest_completed_route": {
+    "driver": "research_stage14_queue.py",
+    "state": "research_stage14_queue_state.json",
+    "status": "complete",
+    "selection": "research_transfer_selection.json",
+    "decision": "Both frozen source-transfer controls fail primary gate vs v5; no confirmation, OOF, full refit, or additional CSV"
+  },
+  "confirmed_best": {
+    "candidate": "submission_cb_deep_v5.csv",
+    "public_auc": 0.96033,
+    "rank": 930,
+    "total_ranked": 2194,
+    "parent_verified_utc": "2026-10-17T22:11:00+00:00",
+    "oof_auc": 0.9608926464364628
+  }
 }

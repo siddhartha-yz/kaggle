@@ -1,0 +1,26 @@
+{
+  "fixed_cb_weight": 0.25,
+  "single": {
+    "baseline_auc": 0.9605999142343083,
+    "candidate_auc": 0.9604328678308393,
+    "delta_auc": -0.0001670464034690955,
+    "paired_se": 0.000122899707826667,
+    "conditional_95pct_ci": [
+      -0.00040792983080936284,
+      7.383702387117182e-05
+    ],
+    "candidate_logloss": 0.22352273053577967
+  },
+  "frozen_blend": {
+    "baseline_auc": 0.9605999142343083,
+    "candidate_auc": 0.9607388918268394,
+    "delta_auc": 0.00013897759253100883,
+    "paired_se": 3.3057431846377104e-05,
+    "conditional_95pct_ci": [
+      7.41850261121097e-05,
+      0.00020377015894990796
+    ],
+    "candidate_logloss": 0.22325269942403544
+  },
+  "proceed_to_oof": true
+}

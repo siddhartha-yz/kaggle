@@ -1,0 +1,28 @@
+{
+  "frozen_utc": "2026-10-17T20:08:29.618688+00:00",
+  "reference": "lgb_stats_orig_both_oof",
+  "families": {
+    "neural_v2": {
+      "weight": 0.25,
+      "epochs": 9,
+      "oof_path": "research_artifacts/neural_v2_oof_e9/oof.npz"
+    },
+    "residual_prior05": {
+      "weight": 0.5,
+      "trees": 581,
+      "oof_path": "research_artifacts/residual_prior05_oof_t581/oof.npz"
+    },
+    "cb_original": {
+      "weight": 0.25,
+      "trees": 1308,
+      "oof_path": "research_artifacts/cb_stats_orig_both_oof/oof.npz"
+    }
+  },
+  "admission": "Primary frozen grid and positive confirmation lower paired bound, followed by every OOF fold positive and pooled lower bound positive. Component effects may be smaller than the final submission threshold.",
+  "candidate_set": "Each admitted fixed-weight component blend plus the equal mean of all admitted blends. No numeric weight optimization. Select highest eligible pooled OOF AUC in this predeclared set.",
+  "minimum_pooled_gain": 0.0002,
+  "submission_gate": "Every fold positive, pooled conditional95% lower bound>0, and pooled delta>=.0002 relative to v4. This tightens the earlier .00015 effect requirement to preserve the final two submission slots.",
+  "remaining_submission_limit": 2,
+  "public_scores_used_for_weights": false,
+  "limitation": "Features and training settings were selected on reused development splits; conditional intervals do not include selection uncertainty."
+}

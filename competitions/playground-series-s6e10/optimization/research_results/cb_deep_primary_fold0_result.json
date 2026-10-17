@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "fold": 0,
+  "started_utc": "2026-10-17T21:20:56.193365+00:00",
+  "train_rows": 559708,
+  "valid_rows": 139927,
+  "selected_trees": 813,
+  "model_sha256": "2de60e167f3d62441a1b04a490bb94d98ef1b0e6cfe3c9314b55574212cef606",
+  "reload_maxdiff": 0.0,
+  "elapsed_seconds": 333.5940095770002,
+  "ended_utc": "2026-10-17T21:26:29.787377+00:00"
+}

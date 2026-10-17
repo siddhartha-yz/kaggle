@@ -74,6 +74,6 @@ def main():
   ps={n:np.load(OUT/f'{n}_oof.npz')['pred'] for n in MODELS}; old=.4*ps['cb1308']+.4*ps['base639']+.2*ps['bag639']; new=ps['stats639']
   np.savez_compressed(OUT/'submitted_reference_oof.npz',id=train.id.to_numpy(),target=y,fold=fold,pred=old)
   comparison=compare(y,old,new); byfold=[compare(y[fold==k],old[fold==k],new[fold==k]) for k in range(5)]
-  result={'pooled':comparison,'by_fold':byfold,'promote_stats':all(x['auc_delta']>0 for x in byfold) and comparison['conditional_95pct_ci'][0]>0,'completed_utc':now()}
+  result={'pooled':comparison,'by_fold':byfold,'promote_stats':all(x['delta_auc']>0 for x in byfold) and comparison['conditional_95pct_ci'][0]>0,'completed_utc':now(),'report_runner_sha256':sha(__file__)}
   dump(OUT/'comparison.json',result); print(json.dumps(result,indent=2),flush=True)
 if __name__=='__main__': main()

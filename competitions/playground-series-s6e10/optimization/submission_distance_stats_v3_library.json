@@ -1,0 +1,99 @@
+{
+  "created_utc": "2026-10-17T19:41:54.842342+00:00",
+  "library_file_id": "libfile_2ab21b51764881918616e1ad26ad90a6",
+  "file_name": "submission_distance_stats_v3.csv",
+  "file_id": "file_0000000066c881fbb701a720abe037b2",
+  "version": 0,
+  "submission": {
+    "path": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/submission_distance_stats_v3.csv",
+    "sha256": "d0982be73739a35c45202ccfe49708931c623445b915e00109eee417b1f3a892",
+    "bytes": 7985121,
+    "rows": 299844,
+    "columns": [
+      "id",
+      "satisfaction"
+    ],
+    "id_order_matches_official_test": true,
+    "min": 0.0027784104224977874,
+    "max": 0.9979704784941311,
+    "mean": 0.4436922614918513,
+    "std": 0.4306720279898595,
+    "csv_readback_verified": true
+  },
+  "new_window_submissions_used": 0,
+  "submission_authority": "Parent cloud browser only; eligible candidate for first of at most four new submissions",
+  "model": "Competition data only; LightGBM63, 639 trees, train-only numeric Distance group stats. No original/external features.",
+  "oof_comparison": {
+    "pooled": {
+      "baseline_auc": 0.9591859023751204,
+      "candidate_auc": 0.9603367815297761,
+      "delta_auc": 0.0011508791546557262,
+      "paired_se": 8.296008477686927e-05,
+      "conditional_95pct_ci": [
+        0.0009882773884930625,
+        0.00131348092081839
+      ],
+      "candidate_logloss": 0.22530003644026486
+    },
+    "by_fold": [
+      {
+        "baseline_auc": 0.9584132825464239,
+        "candidate_auc": 0.9596921699064124,
+        "delta_auc": 0.0012788873599884898,
+        "paired_se": 0.00018917085694492467,
+        "conditional_95pct_ci": [
+          0.0009081124803764374,
+          0.0016496622396005422
+        ],
+        "candidate_logloss": 0.227358851730655
+      },
+      {
+        "baseline_auc": 0.9592449482780695,
+        "candidate_auc": 0.960474294800054,
+        "delta_auc": 0.0012293465219844757,
+        "paired_se": 0.0001832027750543642,
+        "conditional_95pct_ci": [
+          0.0008702690828779219,
+          0.0015884239610910295
+        ],
+        "candidate_logloss": 0.22492466895368818
+      },
+      {
+        "baseline_auc": 0.9599949905313101,
+        "candidate_auc": 0.9608633876312733,
+        "delta_auc": 0.0008683970999632251,
+        "paired_se": 0.00018268747283792008,
+        "conditional_95pct_ci": [
+          0.0005103296532009017,
+          0.0012264645467255485
+        ],
+        "candidate_logloss": 0.2234725483902178
+      },
+      {
+        "baseline_auc": 0.9589393455915196,
+        "candidate_auc": 0.9600410366951235,
+        "delta_auc": 0.001101691103603919,
+        "paired_se": 0.0001880324941314895,
+        "conditional_95pct_ci": [
+          0.0007331474151061996,
+          0.0014702347921016384
+        ],
+        "candidate_logloss": 0.22639585750658645
+      },
+      {
+        "baseline_auc": 0.9593674220661509,
+        "candidate_auc": 0.9606398502729783,
+        "delta_auc": 0.0012724282068273807,
+        "paired_se": 0.0001845644027240885,
+        "conditional_95pct_ci": [
+          0.0009106819774881672,
+          0.0016341744361665941
+        ],
+        "candidate_logloss": 0.22434825562017693
+      }
+    ],
+    "promote_stats": true,
+    "completed_utc": "2026-10-17T19:40:24.820283+00:00",
+    "report_runner_sha256": "59d90206b1f10db8df83dff1fd369a6b3ec084b6da26167c5e889d97fecda59b"
+  }
+}

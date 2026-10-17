@@ -1,0 +1,37 @@
+{
+  "params": {
+    "n_estimators": 3000,
+    "learning_rate": 0.04,
+    "num_leaves": 63,
+    "min_child_samples": 100,
+    "reg_lambda": 10,
+    "objective": "binary",
+    "n_jobs": 6,
+    "random_state": 20261018,
+    "verbosity": -1,
+    "deterministic": true,
+    "force_col_wise": true
+  },
+  "early_stopping_original_only": 150,
+  "external_source": {
+    "source_sha256": "2ad76465f6115f93d16121891a6b1235acb8007a4ab065cae0dc46b60ad116e3",
+    "safe_mask_sha256": "fcc30179ed4f68ddab8323abe86e953dcaf13374dee46bd3c13abb55dfdbfe51",
+    "safe_rows": 129859,
+    "excluded_exact_rows": 21,
+    "near_key_groups": 111199,
+    "near_key_groups_with_conflicting_original_labels": 4475,
+    "original_rows_in_conflicting_near_groups": 10665,
+    "target_provenance": "Only CC0 original labels. No synthetic labels used to fit teacher or lookup. Exact matches to any synthetic train/test vector excluded.",
+    "exact_label_audit": {
+      "checked_utc": "2026-10-17T19:36:06.016304+00:00",
+      "exact_match_pairs_verified_value_by_value": 17,
+      "exact_match_train_label_agreements": 14,
+      "exact_match_train_label_conflicts": 3,
+      "policy": "All 21 original rows matching any train/test feature vector remain excluded, regardless of label agreement."
+    }
+  },
+  "synthetic_target_used": false,
+  "feature_code_sha256": "6c029528249d6772a958b29c46f4f095da9f91136c2721eb2a4d268f360fcfe9",
+  "runner_sha256": "be823bb28166f943ca247ece8616c1b11fad15da96978006869b29e359df1e3e",
+  "frozen_utc": "2026-10-17T19:40:52.700559+00:00"
+}

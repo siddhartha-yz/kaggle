@@ -1,0 +1,10 @@
+{
+  "source_sha256": "2ad76465f6115f93d16121891a6b1235acb8007a4ab065cae0dc46b60ad116e3",
+  "safe_mask_sha256": "fcc30179ed4f68ddab8323abe86e953dcaf13374dee46bd3c13abb55dfdbfe51",
+  "safe_rows": 129859,
+  "excluded_exact_rows": 21,
+  "near_key_groups": 111199,
+  "near_key_groups_with_conflicting_original_labels": 4475,
+  "original_rows_in_conflicting_near_groups": 10665,
+  "target_provenance": "Only CC0 original labels. No synthetic labels used to fit teacher or lookup. Exact matches to any synthetic train/test vector excluded."
+}

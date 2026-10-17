@@ -53,3 +53,7 @@ Both frozen components completed full-data CPU refits on all **699635** training
 - Local formal submissions: **0**. The parent session coordinates any official upload and scoring within the original total cap of two new submissions. There is no new candidate public score yet.
 
 `full_refit_results.json` and `submission_audit.json` provide the compact supporting records. All local training completed before the authorized cutoff. No additional experiment search was performed.
+
+## Official candidate score reported by parent
+
+The parent cloud browser confirmed **Complete**, public AUC **0.95855**, rank **1209/2177**, for the frozen candidate CSV with SHA-256 `e5006e109f93ee8263698fecc64881ad8a4311d94daef1055a12a11e9475769f`. This improves the historical baseline public AUC 0.95816 by **0.00039**. One of the two authorized new formal submissions has been used; at most one remains. Ranking is a time-specific observation. See `public_result_20261017.json`.

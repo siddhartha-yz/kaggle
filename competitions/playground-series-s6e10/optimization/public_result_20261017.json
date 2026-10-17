@@ -1,0 +1,17 @@
+{
+  "recorded_utc": "2026-10-17T18:37:06.241721+00:00",
+  "source": "Parent cloud browser confirmed submission completion and reported via delegation",
+  "submission_filename": "submission_cb8_lgb63cats_frozen.csv",
+  "submission_sha256": "e5006e109f93ee8263698fecc64881ad8a4311d94daef1055a12a11e9475769f",
+  "status": "Complete",
+  "public_auc": 0.95855,
+  "rank": 1209,
+  "teams": 2177,
+  "prior_public_auc": 0.95816,
+  "public_auc_improvement": 0.00039,
+  "new_formal_submissions_total": 1,
+  "remaining_new_formal_submissions_maximum": 1,
+  "deadline_utc": "2026-10-17T18:47:49+00:00",
+  "submission_coordinator": "Parent cloud session; no local Kaggle login",
+  "private_score": null
+}

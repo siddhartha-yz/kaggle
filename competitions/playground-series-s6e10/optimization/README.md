@@ -68,3 +68,18 @@ After the parent confirmed public AUC **0.95855**, a single fixed complementary 
 | Stability seed20261017 | 0.9590578561530560 | 0.9590968889423398 | +0.0000390327892837 | [-0.0000013247608206, +0.0000793903393880] |
 
 **Decision: retain the submitted best.** Both point estimates improved slightly, but the predeclared confirmation criterion required a positive lower paired conditional interval bound. It did not pass. The interval excludes selection uncertainty, and the reused confirmation samples are not an independent test. No new full refit or CSV was generated. The one six-thread CPU confirmation fit completed in **10.56 seconds**. No additional formal submission was made; the total remains **1 used, at most 1 remaining**, coordinated by the parent. All continuation training ended at **18:37:59 UTC**, before the original 18:47:49 UTC cutoff. See `continuation_result.json` and `continuation_model_result.json`.
+
+## Fixed stochastic LightGBM continuation (2026-10-17 18:41–18:43 UTC)
+
+A second bounded continuation was explicitly authorized after the previous test. This single model kept the targeted category features, 63 leaves, learning rate 0.04, minimum child rows 150, L2 10, and **639 fixed trees**, but used seed **20261017**, row sampling **0.8** each iteration and feature sampling **0.9**. The proposed blend weights were frozen before evaluation: **0.4 cb8 / 0.4 original lgb63cats / 0.2 new bagged model**. There was no seed, tree-count, parameter-grid, weight or public-score search.
+
+| Same validation rows | Current submitted blend AUC | New frozen blend AUC | Paired difference | Conditional 95% interval |
+| --- | ---: | ---: | ---: | --- |
+| Development seed42 | 0.9581313490780615 | 0.9582112054287225 | +0.0000798563506610 | [0.0000421990005524, 0.0001175137007695] |
+| Stability seed20261017 | 0.9590578561530560 | 0.9591094233123446 | +0.0000515671592886 | [0.0000134199794242, 0.0000897143391529] |
+
+The predeclared criterion passed. Both validation models and the full 699635-row refit completed, using at most six CPU threads. The full model completed at **18:42:26 UTC**. Original full components were reused without retraining. `bagging_ensemble.json` binds all three full-model hashes and tree counts. As before, these are reused training samples and conditional intervals exclude model selection uncertainty.
+
+The new CSV **submission_cb8_lgb63cats_bagged_v2.csv** passed independent exact ID/column/count/range/readback/component-agreement checks at **18:42:59 UTC**, was saved to Library before the requested **18:46 UTC** delivery cutoff, and was handed to the parent for the remaining official submission decision. It has **299844 rows**, **7984326 bytes**, and SHA-256 **49ad4d7e282300289c9c9fc263313c6232a674b3846d48caa7f35ae8f89f4766**. The previous best CSV remains unchanged. No local Kaggle login or formal submission occurred; the parent-reported total is still **1 used, at most 1 remaining** until the parent reports otherwise. No new candidate public score is known.
+
+See `bagging_plan.json`, `bagging_result.json`, `bagging_model_results.json` and `bagging_submission_audit.json` for the small records. The training guard stops children at **18:45 UTC**, reserving time for delivery before the original **18:47:49 UTC** hard cutoff. Model, validation and CSV files remain ignored and local.

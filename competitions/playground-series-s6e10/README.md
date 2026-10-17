@@ -80,3 +80,5 @@ early stopping 使用验证集 AUC，保存最佳轮次模型，并直接用它�
 暂不包含真实数据成绩、交叉验证、调参、全量重训或比赛提交。迁移云端后的最小准备：配置上述依赖，由用户确认规则及正类含义并取得数据，再执行完整合成测试和 `--validate-only`。
 
 实现参考：[CatBoost fit](https://catboost.ai/docs/en/concepts/python-reference_catboostclassifier_fit)、[scikit-learn train_test_split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)。
+
+最新补充：固定采样 LightGBM 对照已通过两个划分的预设配对标准，三组件冻结候选已完成全量训练及 CSV 校验，并于 18:43 UTC 交父会话处理。尚无该候选 public 成绩；正式提交总额仍由父会话协调。详见 optimization 的 bagging 记录。

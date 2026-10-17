@@ -15,7 +15,7 @@ def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def dump(p,x):Path(p).write_text(json.dumps(x,indent=2)+'\n')
 def now():return datetime.now(timezone.utc).isoformat()
 def main():
- p=argparse.ArgumentParser();p.add_argument('--kind',choices=['lgb','cb','xgb'],required=True);p.add_argument('--external',choices=['none','teacher','lookup','both','both_neighbors','both_xgb'],default='none');p.add_argument('--split',choices=['primary','confirm','oof'],required=True);p.add_argument('--trees',type=int,default=2000);p.add_argument('--early-stop',action='store_true');p.add_argument('--representation',choices=['stats','distribution','interactions'],default='stats');p.add_argument('--profile',choices=['base','wide'],default='base');a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--kind',choices=['lgb','cb','xgb'],required=True);p.add_argument('--external',choices=['none','teacher','lookup','both','both_neighbors','both_xgb','both_context_means','both_context_full'],default='none');p.add_argument('--split',choices=['primary','confirm','oof'],required=True);p.add_argument('--trees',type=int,default=2000);p.add_argument('--early-stop',action='store_true');p.add_argument('--representation',choices=['stats','distribution','interactions'],default='stats');p.add_argument('--profile',choices=['base','wide'],default='base');a=p.parse_args()
  assert a.profile!='wide' or a.kind=='lgb'
  assert not a.early_stop or (a.split=='primary' and (a.kind=='xgb' or a.profile=='wide')), 'Early stopping only on designated development selection'
  protocol=json.loads((ROOT/'research_protocol.json').read_text())
@@ -33,9 +33,10 @@ def main():
  if a.representation=='distribution':plan['distribution_preprocessing_sha256']=sha(ROOT/'research_distributions.py')
  if a.representation=='interactions':plan['inner_oof_interactions']={'alpha':20,'keys':[['Flight Distance'],['Age'],['Flight Distance','Age'],['Flight Distance','Class'],['Flight Distance','Type of Travel'],['Age','Class','Type of Travel','Customer Type']]}
  if a.external=='both_xgb':plan['xgb_teacher_sha256']=sha(ROOT/'research_artifacts/original_xgb_v1/train_features.npz')
+ if a.external in ['both_context_means','both_context_full']:plan['context_features_sha256']=sha(ROOT/'research_artifacts/original_context_v1/train_features.npz')
  if a.external=='both_neighbors':plan['neighbors_sha256']=sha(ROOT/'research_artifacts/original_neighbors_v1/train_features.npz')
  if (out/'plan.json').exists():
-  old=json.loads((out/'plan.json').read_text());assert all(old[k]==plan[k] for k in ['name','params','preprocessing_sha256','external_sha256']);assert all(old.get(k)==plan.get(k) for k in ['neighbors_sha256','distribution_preprocessing_sha256','inner_oof_interactions','xgb_teacher_sha256'])
+  old=json.loads((out/'plan.json').read_text());assert all(old[k]==plan[k] for k in ['name','params','preprocessing_sha256','external_sha256']);assert all(old.get(k)==plan.get(k) for k in ['neighbors_sha256','distribution_preprocessing_sha256','inner_oof_interactions','xgb_teacher_sha256','context_features_sha256'])
  else:dump(out/'plan.json',plan)
  if a.split=='oof':
   z=np.load(ROOT/'research_artifacts/oof_v1/folds.npz');assert np.array_equal(z['id'],df.id) and np.array_equal(z['target'],y);fold=z['fold'];splits=[(np.flatnonzero(fold!=k),np.flatnonzero(fold==k)) for k in range(5)]
@@ -80,7 +81,7 @@ def main():
  np.savez_compressed(out/'validation.npz',idx=idx,id=ids,target=target,pred=pred)
  comparison=compare(target,base,pred);result={'status':'complete','name':name,'auc':float(roc_auc_score(target,pred)),'logloss':float(log_loss(target,pred)),'vs_stats':comparison,'byfold':byfold,'completed_utc':now()}
  if a.split=='oof':result['stable_positive_vs_stats']=all(c['delta_auc']>0 for c in byfold) and comparison['conditional_95pct_ci'][0]>0
- if a.external in ['both_neighbors','both_xgb'] or a.representation!='stats' or a.profile=='wide':
+ if a.external in ['both_neighbors','both_xgb','both_context_means','both_context_full'] or a.representation!='stats' or a.profile=='wide':
   refpath=ROOT/'research_artifacts'/('lgb_stats_orig_both_oof/oof.npz' if a.split=='oof' else f'e1_original_both_{a.split}/validation.npz');old=np.load(refpath);assert np.array_equal(old['id'],ids) and np.array_equal(old['target'],target);op=old['pred'];c=compare(target,op,pred);result['vs_original_lgb']=c
   if a.split=='oof':
    bf=[compare(target[fold==k],op[fold==k],pred[fold==k]) for k in range(5)];result['byfold_vs_original_lgb']=bf;result['promote_alternative']=all(z['delta_auc']>0 for z in bf) and c['delta_auc']>=.0002 and c['conditional_95pct_ci'][0]>0

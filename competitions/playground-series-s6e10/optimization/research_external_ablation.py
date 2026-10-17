@@ -19,6 +19,10 @@ def external(mode,ids):
  if mode=='both_xgb':
   nr=ROOT/'research_artifacts/original_xgb_v1';r=json.loads((nr/'result.json').read_text());assert r['status']=='complete' and r['model_sha256']==sha(nr/'model.json');extra=np.load(nr/'train_features.npz');assert np.array_equal(ids,extra['id'])
   for j,c in enumerate(extra['columns']):ext[c]=extra['values'][:,j]
+ if mode in ['both_context_means','both_context_full']:
+  nr=ROOT/'research_artifacts/original_context_v1';r=json.loads((nr/'result.json').read_text());assert r['status']=='complete' and r['transformer_sha256']==sha(nr/'transformer.joblib');extra=np.load(nr/'train_features.npz');assert np.array_equal(ids,extra['id'])
+  for j,c in enumerate(extra['columns']):
+   if mode=='both_context_full' or c.startswith('orig_ctx_mean_'):ext[c]=extra['values'][:,j]
  cols=[c for c in ext if (c.startswith('orig_teacher') if mode=='teacher' else c.startswith('orig_lookup') if mode=='lookup' else True)]
  return ext[cols],ext.orig_lookup1_logcount.to_numpy()>0
 def main():

@@ -34,4 +34,24 @@ class FeatureTests(unittest.TestCase):
   for column in ['id','satisfaction']:
    x=self.frame();x[column]=0
    with self.assertRaises(AssertionError):DistanceFeatures().fit(x)
+ def test_rating_distributions_are_normalized_and_train_only(self):
+  from research_distributions import DistanceDistributions
+  x=self.frame();t=DistanceDistributions().fit(x);v=x.iloc[:2].copy();v['Flight Distance']=[10,999]
+  prior=dict(t.rating_prop_prior);maps={k:m.copy() for k,m in t.rating_prop_maps.items()};out=t.transform(v)
+  for c in RATING_CATS:
+   cols=[t.names[f'distance_rating_prop_{c}_{n}'] for n in range(6)]
+   np.testing.assert_allclose(out[cols].sum(axis=1),1,rtol=0,atol=1e-14)
+   np.testing.assert_allclose(out.iloc[1][cols].to_numpy(dtype=float),[(x[c]==n).mean() for n in range(6)])
+  v['Age']=9999;t.transform(v)
+  self.assertEqual(prior,t.rating_prop_prior)
+  for k,m in maps.items():pd.testing.assert_series_equal(m,t.rating_prop_maps[k])
+ def test_interaction_encoding_excludes_entire_inner_holdout(self):
+  x=self.frame();y=np.array([0,1]*4);a=np.arange(4);b=np.arange(4,8);folds=[(b,a),(a,b)]
+  keys=[['Flight Distance','Class'],['Age','Class']]
+  t=DistanceFeatures('distance_stats_numeric',keys,alpha=20);before=t.fit_transform_te(x,y,folds=folds)
+  changed=y.copy();changed[a]=1-changed[a]
+  u=DistanceFeatures('distance_stats_numeric',keys,alpha=20);after=u.fit_transform_te(x,changed,folds=folds)
+  np.testing.assert_array_equal(before.iloc[a][['te00','te01']],after.iloc[a][['te00','te01']])
+  v=x.iloc[:2].copy();v['Flight Distance']=999;v['Age']=999
+  np.testing.assert_allclose(t.transform_te(v)[['te00','te01']],y.mean())
 if __name__=='__main__':unittest.main()

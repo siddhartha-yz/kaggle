@@ -1,0 +1,13 @@
+{
+  "candidate": "submission_distance_stats_v3.csv",
+  "status": "Complete",
+  "public_auc": 0.95977,
+  "rank": 1047,
+  "total_ranked": 2182,
+  "observed_utc": "2026-10-17T19:46:00+00:00",
+  "evidence": "Parent cloud browser reported Success/Complete and live rank",
+  "total_historical_submissions": 4,
+  "new_window_submissions_used": 1,
+  "remaining_new_submissions": 3,
+  "hyperparameter_changes_from_score": false
+}

@@ -26,11 +26,11 @@ class DistanceFeatures:
  def _raw(self,X):
   out=X[self.columns].copy()
   for c in RATING_CATS:out[c+'_cat']=X[c].astype(str)
-  if self.mode!='base':out['distance_category']=X['Flight Distance'].astype(str)
-  if self.mode in ['distance_frequency','distance_group_stats','distance_te']:
+  if self.mode not in ['base','distance_stats_numeric','distance_te_only']:out['distance_category']=X['Flight Distance'].astype(str)
+  if self.mode in ['distance_frequency','distance_group_stats','distance_te','distance_stats_numeric']:
    count=X['Flight Distance'].map(self.counts).fillna(0)
    out['distance_count']=count;out['distance_log_count']=np.log1p(count)
-  if self.mode in ['distance_group_stats','distance_te']:
+  if self.mode in ['distance_group_stats','distance_te','distance_stats_numeric']:
    for c in self.numeric:out['distance_mean_'+c]=X['Flight Distance'].map(self.group_means[c]).fillna(self.means[c])
    for (c,value),mapping in self.prop_maps.items():out['distance_prop_'+c+'_'+value]=X['Flight Distance'].map(mapping).fillna(self.global_props[(c,value)])
   return out

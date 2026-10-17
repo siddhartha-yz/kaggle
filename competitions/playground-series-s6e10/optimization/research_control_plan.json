@@ -1,0 +1,10 @@
+{
+  "frozen_utc": "2026-10-17T19:11:51.703892+00:00",
+  "reason": "All high-cardinality distance-category variants underperformed; old-model predictions confirm base preprocessing equivalence. Isolate whether category splitting masks useful numeric group statistics or properly cross-fitted target signal.",
+  "variants": [
+    "distance_stats_numeric",
+    "distance_te_only"
+  ],
+  "trees": 639,
+  "no_weight_search": true
+}

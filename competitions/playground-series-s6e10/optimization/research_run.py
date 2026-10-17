@@ -23,7 +23,7 @@ def previous(split):
  return ref,sum(w*v['pred'] for v,w in ps)
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--mode',choices=['distance_category','distance_frequency','distance_group_stats','distance_te'],required=True);p.add_argument('--split',choices=['primary','confirm'],default='primary');p.add_argument('--trees',type=int,default=639);p.add_argument('--early-stop',action='store_true');p.add_argument('--leaves',type=int,default=63);p.add_argument('--tag',default='a1');p.add_argument('--te-interactions',action='store_true');a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--mode',choices=['distance_category','distance_frequency','distance_group_stats','distance_te','distance_stats_numeric','distance_te_only'],required=True);p.add_argument('--split',choices=['primary','confirm'],default='primary');p.add_argument('--trees',type=int,default=639);p.add_argument('--early-stop',action='store_true');p.add_argument('--leaves',type=int,default=63);p.add_argument('--tag',default='a1');p.add_argument('--te-interactions',action='store_true');a=p.parse_args()
  protocol=json.loads((ROOT/'research_protocol.json').read_text());assert datetime.now(timezone.utc)<datetime.fromisoformat(protocol['training_start_cutoff_utc'])
  run=OUT/f'{a.tag}_{a.mode}_{a.split}';run.mkdir(exist_ok=False)
  started=time.monotonic();record={'mode':a.mode,'split':a.split,'status':'loading','started_utc':datetime.now(timezone.utc).isoformat(),'fixed_trees':None if a.early_stop else a.trees,'maximum_trees':a.trees,'early_stopping':a.early_stop,'model_seed':42,'feature_code_sha256':sha(ROOT/'research_features.py'),'runner_sha256':sha(__file__),'cpu_threads':6,'external_data_used':False}
@@ -31,7 +31,7 @@ def main():
  try:
   train=pd.read_csv(ROOT/'data/train.csv');y=train.satisfaction.astype('int8').to_numpy();raw=train.drop(columns=['id','satisfaction'])
   split=np.load(ROOT/('artifacts/split_seed42.npz' if a.split=='primary' else 'iteration_artifacts/split_confirm20261017.npz'));fi,vi=split['train'],split['valid']
-  te=[['Flight Distance']] if a.mode=='distance_te' else []
+  te=[['Flight Distance']] if a.mode in ['distance_te','distance_te_only'] else []
   if a.te_interactions:te += [['Flight Distance','Class'],['Flight Distance','Type of Travel']]
   transformer=DistanceFeatures(a.mode,te_columns=te)
   X=transformer.fit_transform_te(raw.iloc[fi].reset_index(drop=True),y[fi]);V=transformer.transform_te(raw.iloc[vi].reset_index(drop=True))

@@ -1,0 +1,73 @@
+{
+  "created_utc": "2026-10-17T19:12:45.147149+00:00",
+  "source_url": "https://www.kaggle.com/datasets/arseniyshutko/binary-aviation-satisfaction-129k",
+  "license": "CC0: Public Domain",
+  "license_verified_via": "Anonymous official Kaggle /api/v1/datasets/list metadata",
+  "archive_sha256": "8c027a8846e638a931dcbc3572e5ef8a30aaaf538b3f98312853783b8dd3a3b5",
+  "data_sha256": "2ad76465f6115f93d16121891a6b1235acb8007a4ab065cae0dc46b60ad116e3",
+  "rows": 129880,
+  "target_dtype": "bool",
+  "positive_label": true,
+  "positive_rate": 0.43446258084385586,
+  "feature_columns_exactly_match": true,
+  "categories": {
+    "Gender": {
+      "original": [
+        "Female",
+        "Male"
+      ],
+      "synthetic_train": [
+        "Female",
+        "Male"
+      ]
+    },
+    "Customer Type": {
+      "original": [
+        "Loyal Customer",
+        "disloyal Customer"
+      ],
+      "synthetic_train": [
+        "Loyal Customer",
+        "disloyal Customer"
+      ]
+    },
+    "Type of Travel": {
+      "original": [
+        "Business travel",
+        "Personal Travel"
+      ],
+      "synthetic_train": [
+        "Business travel",
+        "Personal Travel"
+      ]
+    },
+    "Class": {
+      "original": [
+        "Business",
+        "Eco",
+        "Eco Plus"
+      ],
+      "synthetic_train": [
+        "Business",
+        "Eco",
+        "Eco Plus"
+      ]
+    }
+  },
+  "original_feature_duplicate_excess": 0,
+  "synthetic_train_rows_exact_match_original": 17,
+  "synthetic_test_rows_exact_match_original": 4,
+  "original_rows_excluded_for_exact_match_to_any_synthetic_train_or_test": 21,
+  "original_safe_rows": 129859,
+  "near_key_columns": [
+    "Flight Distance",
+    "Age",
+    "Gender",
+    "Class",
+    "Customer Type",
+    "Type of Travel"
+  ],
+  "synthetic_train_rows_near_key_match_original": 258766,
+  "synthetic_test_rows_near_key_match_original": 110926,
+  "policy": "Any original row exactly matching any synthetic train/test feature vector is excluded from all teacher training/lookup. Near-key matches are reported, not treated as independent true labels. No raw original append."
+}

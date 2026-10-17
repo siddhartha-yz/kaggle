@@ -29,6 +29,7 @@ def safe_original():
  safe=orig.loc[keep].reset_index(drop=True)
  g=safe.groupby(NEAR,dropna=False).satisfaction.agg(['count','sum','nunique'])
  audit={'source_sha256':sha(source),'safe_mask_sha256':sha(ROOT/'research_sources/original_safe_mask.npy'),'safe_rows':len(safe),'excluded_exact_rows':int((~keep).sum()),'near_key_groups':len(g),'near_key_groups_with_conflicting_original_labels':int((g['nunique']>1).sum()),'original_rows_in_conflicting_near_groups':int(g.loc[g['nunique']>1,'count'].sum()),'target_provenance':'Only CC0 original labels. No synthetic labels used to fit teacher or lookup. Exact matches to any synthetic train/test vector excluded.'}
+ if (ROOT/'original_exact_label_audit.json').exists():audit['exact_label_audit']=json.loads((ROOT/'original_exact_label_audit.json').read_text())
  return safe,train,test,cols,audit
 class OriginalLookup:
  def fit(self,X,y):

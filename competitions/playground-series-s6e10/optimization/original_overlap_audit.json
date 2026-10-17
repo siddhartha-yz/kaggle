@@ -69,5 +69,13 @@
   ],
   "synthetic_train_rows_near_key_match_original": 258766,
   "synthetic_test_rows_near_key_match_original": 110926,
-  "policy": "Any original row exactly matching any synthetic train/test feature vector is excluded from all teacher training/lookup. Near-key matches are reported, not treated as independent true labels. No raw original append."
+  "policy": "Any original row exactly matching any synthetic train/test feature vector is excluded from all teacher training/lookup. Near-key matches are reported, not treated as independent true labels. No raw original append.",
+  "exclusion_count_explanation": "17 original rows match competition train; another 4 match competition test. These are distinct original rows, so 21 original rows are excluded globally.",
+  "exact_train_label_audit": {
+    "checked_utc": "2026-10-17T19:36:06.016304+00:00",
+    "exact_match_pairs_verified_value_by_value": 17,
+    "exact_match_train_label_agreements": 14,
+    "exact_match_train_label_conflicts": 3,
+    "policy": "All 21 original rows matching any train/test feature vector remain excluded, regardless of label agreement."
+  }
 }

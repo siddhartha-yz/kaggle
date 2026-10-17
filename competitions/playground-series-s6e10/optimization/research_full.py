@@ -20,9 +20,9 @@ def main():
  train=pd.read_csv(ROOT/'data/train.csv');test=pd.read_csv(ROOT/'data/test.csv');sample=pd.read_csv(ROOT/'data/sample_submission.csv');assert sample.id.equals(test.id) and list(sample.columns)==['id','satisfaction'] and len(test)==299844
  y=train.satisfaction.astype('int8').to_numpy();raw=train.drop(columns=['id','satisfaction']);rawtest=test.drop(columns='id');assert list(raw)==list(rawtest)
  params=json.loads((ROOT/'research_artifacts/oof_v1/plan.json').read_text())['models']['stats639']
- rec={'status':'training','model':'stats639','params':params,'positive_label':True,'train_rows':len(train),'test_rows':len(test),'data_sha256':expected,'oof_comparison':comparison,'runner_sha256':sha(__file__),'feature_code_sha256':sha(ROOT/'research_features.py'),'started_utc':datetime.now(timezone.utc).isoformat()};dump(out/'result.json',rec)
+ rec={'status':'training','model':'stats639','params':params,'positive_label':True,'external_data_used':False,'train_rows':len(train),'test_rows':len(test),'data_sha256':expected,'oof_comparison':comparison,'runner_sha256':sha(__file__),'feature_code_sha256':sha(ROOT/'research_features.py'),'started_utc':datetime.now(timezone.utc).isoformat()};dump(out/'result.json',rec)
  try:
-  tr=DistanceFeatures('distance_stats_numeric');X=tr.fit_transform_te(raw,y);T=tr.transform_te(rawtest);joblib.dump(tr,out/'transformer.joblib')
+  tr=DistanceFeatures('distance_stats_numeric');X=tr.fit_transform_te(raw,y);T=tr.transform_te(rawtest);joblib.dump(tr,out/'transformer.joblib');rec['source_to_model_feature_names']=tr.names;rec['categorical_features']=list(X.select_dtypes('category').columns)
   model=lgb.LGBMClassifier(**params);model.fit(X,y);assert model.booster_.num_trees()==639;model.booster_.save_model(str(out/'model.txt'));pred=model.predict_proba(T)[:,1]
   assert np.isfinite(pred).all() and ((pred>=0)&(pred<=1)).all() and pred.std()>0
   saved=lgb.Booster(model_file=str(out/'model.txt'));restored=joblib.load(out/'transformer.joblib');again=saved.predict(restored.transform_te(rawtest),num_threads=6);maxdiff=float(np.max(np.abs(pred-again)));assert maxdiff<1e-14

@@ -1,0 +1,7 @@
+{
+  "checked_utc": "2026-10-17T19:36:06.016304+00:00",
+  "exact_match_pairs_verified_value_by_value": 17,
+  "exact_match_train_label_agreements": 14,
+  "exact_match_train_label_conflicts": 3,
+  "policy": "All 21 original rows matching any train/test feature vector remain excluded, regardless of label agreement."
+}

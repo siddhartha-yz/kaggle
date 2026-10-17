@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-17T22:24:57.358255+00:00",
+  "updated_utc": "2026-10-17T22:26:41.017900+00:00",
   "phase": "realmlp_primary",
   "validation": {
     "driver": "research_stage12_queue.py",
@@ -80,6 +80,9 @@
     "exec_session": 49806,
     "log": "research_realmlp_primary.log",
     "plan": "research_realmlp_plan.json",
-    "status": "running"
+    "status": "running",
+    "continuation_driver": "research_stage15_queue.py",
+    "continuation_exec_session": 1897,
+    "continuation_state": "research_stage15_queue_state.json"
   }
 }

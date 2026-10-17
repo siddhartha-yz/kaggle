@@ -1,0 +1,40 @@
+{
+  "deadline_utc": "2026-10-17T18:47:49+00:00",
+  "official_data_only": true,
+  "paid_resources": false,
+  "additional_submission_limit": 2,
+  "primary_split": "reuse exact artifacts/split_seed42.npz",
+  "confirmation_split": {
+    "random_state": 20261017,
+    "stratified": true,
+    "fraction": 0.2,
+    "purpose": "frozen candidate vs baseline robustness; not untouched external test"
+  },
+  "planned_initial_experiments": [
+    "cb8",
+    "lgb31",
+    "lgb63",
+    "cb6cross"
+  ],
+  "candidate_blends": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "selection": "validation supported improvement only; no leaderboard tuning",
+  "max_training_threads": 6,
+  "targeted_followups": {
+    "selected_at_utc": "2026-10-17T17:56:55+00:00",
+    "experiments": [
+      "lgb63cats",
+      "lgb31fe",
+      "cb7"
+    ],
+    "reason": "Raw LightGBM models train in <30 sec. Test nonmonotonic ratings as categories and small label-free summaries; no public score observed for new models. Also compare intermediate CatBoost depth7 at lower learning rate, because depth8 gains are small and depth6 baseline hit its round cap."
+  },
+  "category_followup": {
+    "selected_at_utc": "2026-10-17T18:03:55.611184+00:00",
+    "experiment": "lgb63allcats",
+    "reason": "Targeted categorical rating copies improved LGB63 primary AUC from .9577875 to .9578926 in 24sec. Test all rating copies with same hyperparameters once before freezing candidates."
+  }
+}

@@ -1,5 +1,15 @@
 # Predicting Airline Satisfaction
 
+## 当前实际实验状态（2026-10-17）
+
+官方 CatBoost 基线已提交并完成评分，public ROC-AUC **0.95816**。后续 8 项开发实验已结束，冻结 CatBoost depth8（1308 棵）+ LightGBM lgb63cats（639 棵）的 50/50 融合已在用户电脑 CPU 上通过第二划分稳定性复核：融合 **0.9590578562**，同划分固定基线 **0.9583800203**。此复核复用了官方训练样本，不是独立测试；本机已完成冻结配方全量重训与 299844 行候选 CSV 的独立校验；未登录 Kaggle、未正式提交，候选尚无 public 成绩。
+
+实际云端代码、冻结配置、哈希核验和本机记录见 [`optimization/`](optimization/)。它与本目录早期 `baseline.py` 脚手架不同。依赖仅安装于独立迁移 venv，全局环境与 GPU 驱动未改动。
+
+## 初版基线脚手架历史说明
+
+下文保留提交 `52f8cd1` 的初版说明；其中“未训练／未安装／未提交”描述的是当时的初版交付状态，当前实际进展以本页上节和 optimization 记录为准。
+
 - 比赛：[Kaggle Playground Series S6E10](https://www.kaggle.com/competitions/playground-series-s6e10)
 - 目标：预测航空旅客满意度的正类概率，以 ROC-AUC 评估。
 - 状态：已准备代码与合成测试；未下载真实数据、训练真实模型、报名或提交比赛。没有真实实验成绩。

@@ -1,0 +1,8 @@
+artifacts/
+iteration_artifacts/
+data/
+*.csv
+*.log
+*.npz
+*.cbm
+model.txt

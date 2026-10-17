@@ -2,6 +2,8 @@
 
 This directory preserves the actual cloud experiment code and the subsequent local CPU verification. It differs from the earlier `../baseline.py` preparation scaffold. The historical official baseline achieved public ROC-AUC **0.95816**; the local workflow never logs in to Kaggle or submits files.
 
+Chinese final report: [本轮实验总结](Kaggle_S6E10_中文实验总结.html). The report is saved to Library; [completion record](research_completion.json) confirms 3/4 submissions, zero paid cost, no remaining training/queues, and preserved data. The read-only `verify_v5_saved.py` reproduces the saved CSV and OOF checks without training.
+
 ## Current research window — snapshot 2026-10-17 22:33 UTC
 
 The current confirmed public best is **0.96033**, rank **930/2194** at the parent's 22:11 UTC observation. The new window has used **3 of 4** authorized formal submissions; **1 remains unused**. The parent-authorized official RealMLP feasibility check and fixed primary experiment are complete; the candidate failed promotion. No training or submission is queued. The deadline is **2026-10-18 01:02:51 UTC**, with training start cutoff 00:40 and hard training cutoff 00:50. All fits run serially on CPU with at most six training threads and no paid resources. The historical counts and deadlines in the sections below refer to their earlier windows.

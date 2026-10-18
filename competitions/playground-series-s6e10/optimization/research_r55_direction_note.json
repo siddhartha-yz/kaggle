@@ -1,0 +1,24 @@
+{
+  "status": "draft_not_running",
+  "noted_utc": "2026-10-18T23:13:57.032255+00:00",
+  "conditional_on": "Only consider after R54 finishes and is not qualified; do not interrupt or run alongside R54.",
+  "mechanism": "A separately randomized boosted-tree family: shallow LightGBM with one random split threshold per feature. Earlier W3 ExtraTreesClassifier was an unboosted forest; R41 changed only feature sampling in ordinary boosting. Neither is this published randomized boosting configuration.",
+  "primary_source": "https://www.kaggle.com/code/busyaprime/s6e10-route-or-distance-both-lb-0-96169",
+  "source_file_sha256": "07ee13202fafb5921c89f3a2b6a7f9ba44e56690ad11863647249e5dfb427e81",
+  "source_configuration": {
+    "learning_rate": 0.03,
+    "num_leaves": 31,
+    "extra_trees": true,
+    "colsample_bytree": 0.4,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "min_child_samples": 60,
+    "reg_lambda": 1.0
+  },
+  "source_caveat": "Their outer-fold early stopping is optimistic, and their reported best score includes external public48-member predictions. We import neither code nor predictions. Published parameters motivate one own test, not a transferable performance claim.",
+  "prospective_training": "Same validated84 inputs, context/source generators unchanged. One proper nested80/20 split per outer fold, inner-only map fits and AUC earlystop200/max12000; refit fresh full outer training at selected iteration. No grid or outer-label round selection.",
+  "prospective_blend": "Fixed .875logit(actualv11)+.125logit(newrandomizedLGB84), clipping1e-6. Same paired95% lower and corrected resampled-t lower>0, all5 before quality and onlythen fresh3. No weight/seed/feature rescue.",
+  "resources": "CPU6, RSS8GiB, availableRAM2GiB, serial fits; no extra GPU use.",
+  "quality_evaluated": false,
+  "training_started": false
+}

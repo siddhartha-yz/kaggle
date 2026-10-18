@@ -1,9 +1,9 @@
 {
-  "updated_utc": "2026-10-18T11:19:39.664407+00:00",
+  "updated_utc": "2026-10-18T11:22:44.826300+00:00",
   "task_status": "active_research_until_verified_actual_Top100",
   "active_training": true,
   "current_route": "fresh_complete_baseline3_refit_for_frozen_lean_candidate",
-  "driver": "research_r4_baseline3.py",
+  "driver": "research_r4_driver.py",
   "goal": "actual verified leaderboard Top100; no automatic oldwindow cutoff",
   "plan": "research_r4_plan.json",
   "previous_W3_results": "31 primaryscreens+1trainingonly; threeprimarypasses allfailedconfirmation",
@@ -36,14 +36,17 @@
   "local_browser_blocker": "CUA iab unavailable; web fetchedKagglepagesempty. Do not locallylogin/acceptterms.",
   "child_not_closing_task_after_failedroute": true,
   "state": {
-    "updated_utc": "2026-10-18T11:15:19.470641+00:00",
     "status": "training",
-    "route": "lean_realmlp",
-    "fold": 3,
-    "member": 7,
-    "pid": 474150,
+    "started_utc": "2026-10-18T11:19:56.667140+00:00",
+    "fold": 0,
+    "component": "cb8",
+    "train_rows": 466423,
+    "valid_rows": 233212,
+    "train_indices_sha256": "4dd1983f90191b380757b2cbeeb29ac15979e17b9d84b46a68a23972daaa9587",
+    "no_outer_validation_in_fit": true,
     "active_training": true,
-    "plan": "research_r4_plan.json"
+    "pid": 3,
+    "route": "fresh_baseline_replication3"
   },
   "final_inference_protocol": "frozen5foldCV40membertestmean;noextrafit;onlyafterbothreplicationspass",
   "final_inference_plan": "research_r4_final_inference_plan.json",
@@ -133,5 +136,7 @@
     "oof_sha256": "c5c4c8b1f00688a964540750a79e9206159c81e47aca7efd0712e21093789843"
   },
   "phase": "fivefold_passed_fresh_threefold_refitting",
-  "no_new_formal_submission": true
+  "no_new_formal_submission": true,
+  "active_child_driver": "research_r4_baseline3.py",
+  "driver_state": "research_r4_driver_state.json"
 }

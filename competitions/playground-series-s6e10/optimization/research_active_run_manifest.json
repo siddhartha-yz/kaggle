@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-18T11:19:39.664407+00:00",
+  "updated_utc": "2026-10-18T11:22:44.826300+00:00",
   "phase": "fresh_complete_threefold_refitting",
   "current_window": "research_r4_plan.json",
   "budget": "research_w3_submission_ledger.json",
@@ -12,7 +12,7 @@
     "observed_utc": "2026-10-18T04:00:00+00:00"
   },
   "recovery": "Inspect saved per-route files, logs and live processes before restart. Serial six CPU threads, 1GiB total process GPU ceiling and 778043392 byte allocator cap.",
-  "driver": "research_r4_baseline3.py",
+  "driver": "research_r4_driver.py",
   "state": "research_r4_state.json",
   "resource_override": "research_w3_resource_override.json",
   "status": "active_research_until_verified_actual_Top100",
@@ -28,5 +28,7 @@
   "no_child_user_stop_instruction": true,
   "latest_checkpoint": "research_current_status.json",
   "task_status": "resumed_active_research",
-  "original_deadline_superseded_by_explicit_top100_goal": true
+  "original_deadline_superseded_by_explicit_top100_goal": true,
+  "active_child_driver": "research_r4_baseline3.py",
+  "driver_state": "research_r4_driver_state.json"
 }

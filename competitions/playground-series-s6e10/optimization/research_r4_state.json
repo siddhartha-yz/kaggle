@@ -1,8 +1,13 @@
 {
-  "updated_utc": "2026-10-18T11:18:54.839639+00:00",
-  "status": "route_complete",
-  "route": "lean_realmlp",
-  "active_training": false,
-  "result": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/research_artifacts/r4_lean_gpu_init_oof/result.json",
-  "eligible_for_replication": true
+  "status": "training",
+  "started_utc": "2026-10-18T11:19:56.667140+00:00",
+  "fold": 0,
+  "component": "cb8",
+  "train_rows": 466423,
+  "valid_rows": 233212,
+  "train_indices_sha256": "4dd1983f90191b380757b2cbeeb29ac15979e17b9d84b46a68a23972daaa9587",
+  "no_outer_validation_in_fit": true,
+  "active_training": true,
+  "pid": 3,
+  "route": "fresh_baseline_replication3"
 }

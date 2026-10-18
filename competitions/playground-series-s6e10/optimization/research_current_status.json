@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-18T14:22:24.712923+00:00",
+  "updated_utc": "2026-10-18T14:29:51.231448+00:00",
   "status": "active_r10_nested_duration",
   "confirmed_public_baseline": {
     "recorded_utc": "2026-10-18T12:41:59.978029+00:00",
@@ -67,14 +67,14 @@
   },
   "current_training": {
     "status": "selecting_inner_epoch",
-    "started_utc": "2026-10-18T14:21:30.926433+00:00",
+    "started_utc": "2026-10-18T14:29:49.418888+00:00",
     "stage": "fivefold",
-    "fold": 0,
+    "fold": 4,
     "train_rows": 559708,
     "valid_rows": 139927,
     "runner_sha256": "9df6824e24e77db1798016f5344413ffa926bff5c0dc14cef47024c0951201c9",
     "plan_sha256": "2c9e2f9208e8c29a22de3e3457a6e812ab760ca18e0724d7fa7be875933066e7",
-    "inner_split_sha256": "6272144b1227d663bfcac37f15c1e60437d9290c2139a1d897fe514ffcd9950a",
+    "inner_split_sha256": "ed0af14788b1bd8202b373a57a2f92bacec6827d326fcd4827b920f4dfaffb22",
     "outer_target_used_in_selection": false,
     "inner_validation": [],
     "outer_epochs": [],
@@ -902,5 +902,47 @@
     "backup_sha256": "e277a97762009cd1ebf739f3fa692ce2ee5e4c1cceff5fab225634f74dd98c5b",
     "whole_top100_task_completed": false,
     "original_checkout_preserved": true
-  }
+  },
+  "r10_fold_progress": [
+    {
+      "fold": 0,
+      "status": "complete",
+      "selected_epoch": 4,
+      "completed_utc": "2026-10-18T14:23:23.635117+00:00",
+      "elapsed_seconds": 112.70869981100259,
+      "peak_gpu_process_bytes": 553648128
+    },
+    {
+      "fold": 1,
+      "status": "complete",
+      "selected_epoch": 5,
+      "completed_utc": "2026-10-18T14:25:26.772148+00:00",
+      "elapsed_seconds": 122.21518546801235,
+      "peak_gpu_process_bytes": 553648128
+    },
+    {
+      "fold": 2,
+      "status": "complete",
+      "selected_epoch": 7,
+      "completed_utc": "2026-10-18T14:27:49.837340+00:00",
+      "elapsed_seconds": 142.04135529199266,
+      "peak_gpu_process_bytes": 553648128
+    },
+    {
+      "fold": 3,
+      "status": "complete",
+      "selected_epoch": 4,
+      "completed_utc": "2026-10-18T14:29:48.390148+00:00",
+      "elapsed_seconds": 117.49096886000189,
+      "peak_gpu_process_bytes": 553648128
+    },
+    {
+      "fold": 4,
+      "status": "selecting_inner_epoch",
+      "selected_epoch": null,
+      "completed_utc": null,
+      "elapsed_seconds": null,
+      "peak_gpu_process_bytes": null
+    }
+  ]
 }

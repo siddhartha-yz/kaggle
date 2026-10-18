@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-10-18T16:17:43.623609+00:00",
+  "main_plan_sha256": "2d77a8b3bba51f172d640e82b236bc204d2a7ac7273424e1eebb4b4b410ce657",
+  "code_sha256": {
+    "research_r19_audit.py": "78d6ad5c339ec20b341bb4ce86e68f86410c9abeb5a1ef71ff073fce9e099da3",
+    "research_r19_csv.py": "2589af1433e1702ca0b32827067188d667d4f723efb84bf06ca62a344b7c8f9b"
+  },
+  "gates": "Fivefoldandthreefolddualv9/v7gatesrequired; independentsource13model/outer8modelauditbeforefullfit/CSV. Parentonlysubmits."
+}

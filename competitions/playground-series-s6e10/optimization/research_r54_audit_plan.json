@@ -1,0 +1,26 @@
+{
+  "frozen_utc": "2026-10-18T22:41:56.244301+00:00",
+  "main_plan_sha256": "0279cd1d906c445617e0fe5fe67e6a9f3896d0bbc0596260830725d59b7d196a",
+  "code_sha256": {
+    "research_r54_audit_static.py": "ce42aa5825bb98a88011ab5e023dbc1d89e6fefc5509e4981a636551f6265e18",
+    "research_r54_audit_gpu_worker.py": "07ce245168315fa2508534fa1058f59f51f611225a98510d9177742d2ecb8b53",
+    "research_r54_audit_driver.py": "7b857f821599384723e5d85d855f7ffad54af14e330b89503d926602af27590c",
+    "research_r54_csv_worker.py": "de9eb0d9483f8b1399545b5e28a0ed8ad59733b86e1bfef2cd15a8d257c7e2b3",
+    "research_r54_csv_assemble.py": "f62d05498c2c9efc19f30bc9d507c390d132266bb549e5279e3a91ee7725ba34",
+    "research_r54_csv_driver.py": "0e6a770a18f09f5d802eccb89c387a5740deb843e9515e65af179d6e926711fb",
+    "research_r54_prepare_final.py": "fa5dfe13978a8d24e2df678533293829e1f4ea211d8e81cc693d2e2ef38eb542"
+  },
+  "input_sha256": {
+    "research_r54_pretrained_provenance.json": "0ee6db28bed2c763ae152596ed443bbaeb5678c097840294c8cceb6fa3ef3a48",
+    "research_sources/tabpfn_feasibility/v2_README.md": "269434f5c1db993269af9218ef0a50016da811ae5b323eea73e06ac9e8fef3e9",
+    "research_sources/tabpfn_feasibility/v2_expanded_tree.json": "2f42c3319b4022a664a509792aade451b91064fc717bd14a2ca2047f9a4f2e16",
+    "research_sources/original_cc0/data.csv": "2ad76465f6115f93d16121891a6b1235acb8007a4ab065cae0dc46b60ad116e3",
+    "research_sources/original_safe_mask.npy": "fcc30179ed4f68ddab8323abe86e953dcaf13374dee46bd3c13abb55dfdbfe51"
+  },
+  "execution": "Only after both fivefold and threefold pass their original dual gates. CPU source/maps audit first, then one fresh GPU process per32 context replays. Final inference plan generated only after all audits pass.",
+  "gates_unchanged": true,
+  "model_and_context_recipe_unchanged": true,
+  "GPU_replay_tolerance": 1e-06,
+  "source_teacher_CPU_replay_tolerance": 1e-12,
+  "attribution": "Built with PriorLabs-TabPFN"
+}

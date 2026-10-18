@@ -1,0 +1,7 @@
+{
+  "rows": 1024,
+  "saved_official_predictions_max_abs_diff": 0.0,
+  "torch_rng_preserved": true,
+  "training_mode_preserved": true,
+  "new_training_performed": false
+}

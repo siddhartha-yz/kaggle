@@ -1,9 +1,9 @@
 {
   "status": "training",
-  "started_utc": "2026-10-18T16:07:13.834197+00:00",
+  "started_utc": "2026-10-18T16:08:31.812698+00:00",
   "variant": "numeric57",
   "stage": "fivefold",
-  "fold": 0,
+  "fold": 1,
   "train_rows": 559708,
   "valid_rows": 139927,
   "feature_width": 57,
@@ -17,10 +17,10 @@
     "f023",
     "f024"
   ],
-  "selected_trees": 889,
-  "selection_sha256": "a677dbfa79d1e3a292591a62caf6dfc228cb8253771abdde99a709b3bce1fc9d",
+  "selected_trees": 571,
+  "selection_sha256": "3cdb7b96facf0ada83ec856e4058ed3f4cc484dc7f0a3fdc8ad8a9c90a9ea49d",
   "parameters": {
-    "iterations": 889,
+    "iterations": 571,
     "learning_rate": 0.04,
     "depth": 10,
     "l2_leaf_reg": 10,
@@ -45,7 +45,7 @@
   },
   "runner_sha256": "3fe2b859a7753bf7497a4ee9a8051e44ac86d52967cbaf32b9a472b443c60d07",
   "plan_sha256": "b71eb574f50a9db587580acd5b3263bf6c1f9c5cc94708ed8fa88f953dc0314b",
-  "train_index_sha256": "52f2320fb97ba9fdc017eb964b0e809e1e4575f0813e9e1cc352d4c60bcb2232",
+  "train_index_sha256": "bd9df58319c7fcc98385c88f8e4eddf7e23ca7a27dd7f1e04dbca86fc7e961a0",
   "outer_validation_used_in_fit": false,
   "pid": 587602,
   "active_training": true

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-18T18:14:24.504573+00:00",
+  "updated_utc": "2026-10-18T18:28:17.010269+00:00",
   "status": "R26_NN152_frozen_fivefold",
   "confirmed_public_baseline": {
     "source": "ParentauthenticatedKagglebrowserreport",
@@ -39,8 +39,9 @@
     "public_auc": 0.96114
   },
   "active_driver": {
-    "script": "research_r26_driver.py",
-    "status": "starting_fivefold",
+    "script": "research_r26_recover.py",
+    "unchanged_training_runner": "research_r26_worker.py",
+    "status": "resource_only_freshprocess_recovery",
     "active_training": true,
     "active_work": true
   },
@@ -2292,7 +2293,7 @@
     "rank_observed_utc": "2026-10-18T16:26:00Z"
   },
   "additional_submission_authorized": true,
-  "active_research": "R24entropyandR25posterior LGBfailedvsformalv11. R26NN152fullposteriors, native16hardwarefallback, batch1283epochs; completefivefoldbeforescoring.",
+  "active_research": "R26NN152 frozenmodel/seedunchanged; GPUallocatorfragmentationbetweenmodels requiresfreshprocess retries. Completed4/5fivefoldmodels, noAUCread; strict1GiB/RAM guardsretained.",
   "current_goal": {
     "updated_utc": "2026-10-18T17:14:43.014675+00:00",
     "goal": "Actualpublicleaderboardrank<=500",

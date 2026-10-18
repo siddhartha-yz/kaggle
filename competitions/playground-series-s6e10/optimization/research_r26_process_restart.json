@@ -1,0 +1,12 @@
+{
+  "updated_utc": "2026-10-18T18:19:52.973445+00:00",
+  "stage": "fivefold",
+  "completed_folds_preserved": [
+    0
+  ],
+  "failed_fold": 1,
+  "error_type": "TorchAllocatorOOM",
+  "own_GPU_ceiling_exceeded": false,
+  "quality_scores_computed": false,
+  "action": "Restartunchangedfrozenrunnerinfreshprocess; reuseverifiedcompletefold0. No batch/seed/model/gatechange. Failureoccurredbeforefold1firstepochcompleted."
+}

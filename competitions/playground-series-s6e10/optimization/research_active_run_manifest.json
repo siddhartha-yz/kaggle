@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-18T05:30:28.585545+00:00",
-  "phase": "window3_nested_confirmation",
+  "updated_utc": "2026-10-18T05:32:55.274574+00:00",
+  "phase": "window3_nested_confirmation_resumed",
   "current_window": "research_w3_plan.json",
   "budget": "research_w3_submission_ledger.json",
   "active_training": true,
@@ -15,5 +15,6 @@
   "recovery": "Inspect saved results/logs and host processes before any restart; serial6threads/2GiB cap.",
   "driver": "research_w3_nested_queue.py",
   "state": "research_w3_nested_queue_state.json",
-  "exec_session": 75409
+  "exec_session": 24066,
+  "resource_override": "research_w3_resource_override.json"
 }

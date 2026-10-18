@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "new_model_fits_performed": false,
+  "checks": {
+    "inner_train_and_holdout_disjoint": true,
+    "inner_union_exactly_outer_train": true,
+    "best_epoch_recomputed": 4,
+    "patience_rule_passed": true,
+    "inner_preprocessing": {
+      "training_rows": 503737,
+      "numeric_median_and_constant_mask_match": true,
+      "all21_vocabularies_match_exact_outer_training_values": true,
+      "unseen_values_reserved0": true,
+      "transform_does_not_mutate_fitted_state": true,
+      "quantile_config_verified": true
+    },
+    "outer_labels_not_used_for_epoch_selection": true
+  }
+}

@@ -17,7 +17,10 @@ def start_guard():
  signal.signal(signal.SIGALRM,stop);signal.alarm(max(1,int((datetime.fromisoformat(p['limits']['training_hard_cutoff_utc'])-datetime.now(timezone.utc)).total_seconds())))
 def setup_gpu():
  torch.set_num_threads(6);torch.set_num_interop_threads(1);assert torch.cuda.is_available() and torch.version.cuda=='12.8'
- p=plan();cap=p['gpu_allocator_cap_bytes'];free,_=torch.cuda.mem_get_info();assert free>=cap+int(1.25*1024**3),'Initial GPU headroom guard'
+ p=plan();cap=p['gpu_allocator_cap_bytes'];override=ROOT/'research_w3_resource_override.json'
+ if override.exists():
+  cap=json.loads(override.read_text())['gpu_allocator_cap_bytes'];assert 0<cap<=p['gpu_allocator_cap_bytes']
+ free,_=torch.cuda.mem_get_info();assert free>=cap+int(1.25*1024**3),'Initial GPU headroom guard'
  torch.cuda.set_per_process_memory_fraction(cap/torch.cuda.get_device_properties(0).total_memory);torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False;torch.cuda.reset_peak_memory_stats()
  return {'initial_gpu_free_bytes':free,'gpu_name':torch.cuda.get_device_name(),'cap_bytes':cap}
 def gpu_epoch_guard():

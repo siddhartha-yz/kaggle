@@ -18,6 +18,7 @@ def run(script,args,out,log):
  p=read(ROOT/'research_w3_plan.json');assert datetime.now(timezone.utc)<datetime.fromisoformat(p['limits']['training_start_cutoff_utc']);state.update(active=out,active_log=log,updated_utc=now());dump(ROOT/'research_w3_nested_queue_state.json',state)
  with (ROOT/log).open('x') as f:
   proc=subprocess.Popen([sys.executable,'-u',script,*args],cwd=ROOT,stdout=f,stderr=subprocess.STDOUT);state['child_pid']=proc.pid;dump(ROOT/'research_w3_nested_queue_state.json',state);rc=proc.wait()
+ if not result.exists():raise RuntimeError(f'Child stopped before fitting/output creation: rc={rc}; inspect {log}')
  r=read(result);state['steps'].append({'name':out,'exit_code':rc,'status':r['status'],'ended_utc':now()});dump(ROOT/'research_w3_nested_queue_state.json',state)
  if rc and not ('probe' in out and r.get('hardware_oom')):raise RuntimeError('Child failed: '+out)
  return r

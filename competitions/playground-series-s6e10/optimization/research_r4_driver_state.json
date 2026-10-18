@@ -1,7 +1,7 @@
 {
-  "updated_utc": "2026-10-18T11:41:09.609509+00:00",
+  "updated_utc": "2026-10-18T11:49:17.611661+00:00",
   "status": "running_serial_stage",
   "driver_pid": 482648,
-  "runner": "research_r4_lean_replication3.py",
-  "log": "research_r4_lean_replication3.log"
+  "runner": "research_r4_csv.py",
+  "log": "research_r4_csv.log"
 }

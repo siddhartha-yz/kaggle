@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-10-18T16:06:57.771150+00:00",
+  "main_plan_sha256": "b71eb574f50a9db587580acd5b3263bf6c1f9c5cc94708ed8fa88f953dc0314b",
+  "code_sha256": {
+    "research_r18_audit.py": "4fe733f78263ed2af6bd11462dd9975ec5d67b5b6e8f8a18a2b138703e697241",
+    "research_r18_csv.py": "7cea2021a3bbd7ac81efae03701c1e9bb71f84a08bfe3604b617706badab8445"
+  },
+  "rule": "Only after bothdual5+3gates andaudit; fullinnerselectwithsamealgorithmthenrefitalltrain; no localKagglesubmission."
+}

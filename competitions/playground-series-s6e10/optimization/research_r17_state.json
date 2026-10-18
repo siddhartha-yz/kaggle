@@ -1,9 +1,7 @@
 {
-  "updated_utc": "2026-10-18T15:58:09.748057+00:00",
-  "status": "training",
+  "updated_utc": "2026-10-18T16:04:35.376478+00:00",
+  "status": "stage_complete",
   "variant": "lean",
   "stage": "fivefold",
-  "fold": 0,
-  "pid": 583990,
-  "active_training": true
+  "active_training": false
 }

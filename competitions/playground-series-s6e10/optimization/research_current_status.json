@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-18T15:58:30.989932+00:00",
-  "status": "active_r17_teacher_input_after_r15_r16_rejections",
+  "updated_utc": "2026-10-18T16:07:19.025919+00:00",
+  "status": "active_r18_nested_GPU_treecount_after_r17_rejection",
   "confirmed_public_baseline": {
     "recorded_utc": "2026-10-18T12:41:59.978029+00:00",
     "source": "ParentauthenticatedKagglebrowserreport",
@@ -31,22 +31,66 @@
     "parent_instruction": "Holdlastslot;retainv9backup. Continue grounded experiments."
   },
   "active_driver": {
-    "updated_utc": "2026-10-18T15:58:04.043329+00:00",
+    "updated_utc": "2026-10-18T16:06:03.398779+00:00",
     "status": "training",
-    "driver_pid": 583989,
+    "driver_pid": 587585,
     "formal_used": 1,
     "remaining": 1,
     "whole_top100_task_completed": false,
+    "variant": "numeric57",
     "stage": "fivefold",
     "active_training": true
   },
   "current_training": {
-    "updated_utc": "2026-10-18T15:58:09.748057+00:00",
     "status": "training",
-    "variant": "lean",
+    "started_utc": "2026-10-18T16:07:13.834197+00:00",
+    "variant": "numeric57",
     "stage": "fivefold",
     "fold": 0,
-    "pid": 583990,
+    "train_rows": 559708,
+    "valid_rows": 139927,
+    "feature_width": 57,
+    "category_columns": [
+      "f017",
+      "f018",
+      "f019",
+      "f020",
+      "f021",
+      "f022",
+      "f023",
+      "f024"
+    ],
+    "selected_trees": 889,
+    "selection_sha256": "a677dbfa79d1e3a292591a62caf6dfc228cb8253771abdde99a709b3bce1fc9d",
+    "parameters": {
+      "iterations": 889,
+      "learning_rate": 0.04,
+      "depth": 10,
+      "l2_leaf_reg": 10,
+      "loss_function": "Logloss",
+      "eval_metric": "AUC",
+      "random_seed": 20261018,
+      "task_type": "GPU",
+      "devices": "0",
+      "gpu_ram_part": 0.04,
+      "thread_count": 6,
+      "border_count": 254,
+      "max_ctr_complexity": 1,
+      "one_hot_max_size": 2,
+      "boosting_type": "Plain",
+      "bootstrap_type": "Bayesian",
+      "bagging_temperature": 1,
+      "leaf_estimation_iterations": 10,
+      "score_function": "Cosine",
+      "random_strength": 1,
+      "allow_writing_files": false,
+      "verbose": 200
+    },
+    "runner_sha256": "3fe2b859a7753bf7497a4ee9a8051e44ac86d52967cbaf32b9a472b443c60d07",
+    "plan_sha256": "b71eb574f50a9db587580acd5b3263bf6c1f9c5cc94708ed8fa88f953dc0314b",
+    "train_index_sha256": "52f2320fb97ba9fdc017eb964b0e809e1e4575f0813e9e1cc352d4c60bcb2232",
+    "outer_validation_used_in_fit": false,
+    "pid": 587602,
     "active_training": true
   },
   "completed_r7_neural_members": 40,
@@ -2277,6 +2321,13 @@
     "R16_GPU_CatBoost_nominal58": {
       "status": "fivefold_rejected",
       "delta_vs_v9": -1.0568161299184808e-05,
+      "threefold_run": false,
+      "csv_created": false
+    },
+    "R17_original_teacher_input": {
+      "status": "fivefold_rejected",
+      "delta_vs_v9": -0.00019311530850385505,
+      "candidate_auc": 0.9612856513248295,
       "threefold_run": false,
       "csv_created": false
     }

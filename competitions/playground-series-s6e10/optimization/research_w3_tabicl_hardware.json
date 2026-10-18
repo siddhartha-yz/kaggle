@@ -1,0 +1,50 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-18T06:55:06.381523+00:00",
+  "hardware": {
+    "initial_gpu_free_bytes": 6876102656,
+    "gpu_name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "cap_bytes": 1073741824
+  },
+  "process_initial_gpu_mib": 154,
+  "reduced_allocator_cap_bytes": 778043392,
+  "score_evaluated": false,
+  "query_labels_used": false,
+  "attempts": [
+    {
+      "context_rows": 1024,
+      "kv_cache": true,
+      "n_estimators": 4,
+      "started_utc": "2026-10-18T06:55:07.029259+00:00",
+      "first_fit_seconds": 0.8285874240027624,
+      "predict128_seconds": 0.07217484000284458,
+      "warm_fit_seconds": 0.1815423330044723,
+      "A_B_A_context_isolation_max_abs_diff": 0.0,
+      "peak_allocated_bytes": 323715072,
+      "peak_reserved_bytes": 360710144,
+      "process_gpu_mib": 542,
+      "estimated_primary_seconds": 133.65104062153043,
+      "status": "complete",
+      "ended_utc": "2026-10-18T06:55:08.414010+00:00"
+    }
+  ],
+  "chosen": {
+    "context_rows": 1024,
+    "kv_cache": true,
+    "n_estimators": 4,
+    "started_utc": "2026-10-18T06:55:07.029259+00:00",
+    "first_fit_seconds": 0.8285874240027624,
+    "predict128_seconds": 0.07217484000284458,
+    "warm_fit_seconds": 0.1815423330044723,
+    "A_B_A_context_isolation_max_abs_diff": 0.0,
+    "peak_allocated_bytes": 323715072,
+    "peak_reserved_bytes": 360710144,
+    "process_gpu_mib": 542,
+    "estimated_primary_seconds": 133.65104062153043,
+    "status": "complete",
+    "ended_utc": "2026-10-18T06:55:08.414010+00:00",
+    "fresh_native_vs_reuse_max_abs_diff": 0.0
+  },
+  "model_sha256": "bdc7dbd5e4ff21f8f0456fcf90c6b7cdf72dbea960f2d05b19bec19f9b3d4ed0",
+  "completed_utc": "2026-10-18T06:55:09.256892+00:00"
+}

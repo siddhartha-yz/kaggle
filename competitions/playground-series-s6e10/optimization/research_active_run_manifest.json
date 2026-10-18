@@ -1,9 +1,9 @@
 {
-  "updated_utc": "2026-10-18T06:04:46.775094+00:00",
-  "phase": "window3_semantic_expert_primary",
+  "updated_utc": "2026-10-18T07:01:04.884571+00:00",
+  "phase": "window3_preparing_context_scaling_and_source_catboost",
   "current_window": "research_w3_plan.json",
   "budget": "research_w3_submission_ledger.json",
-  "active_training": true,
+  "active_training": false,
   "confirmed_best": {
     "candidate": "submission_realmlp_value_v6.csv",
     "public_auc": 0.96058,
@@ -11,18 +11,20 @@
     "total_ranked_snapshot": 2208,
     "observed_utc": "2026-10-18T04:00:00+00:00"
   },
-  "recovery": "Inspect saved results/logs and host processes before any restart; serial6threads/2GiB cap.",
-  "driver": "research_w3_experts.py",
-  "state": "research_w3_nested_queue_state.json",
+  "recovery": "Inspect saved per-route files, logs and live processes before restart. Serial six CPU threads, 1GiB total process GPU ceiling and 778043392 byte allocator cap.",
+  "driver": "research_w3_tabicl.py",
+  "state": "research_artifacts/w3_tabicl_primary/fold0/result.json",
   "resource_override": "research_w3_resource_override.json",
   "status": "in_progress",
   "outcome": "nested_confirmation_gate_failed",
   "completion": null,
-  "last_exec_session": 24066,
-  "last_log": "research_w3_tabm_nested_confirm.log",
-  "active_log": "research_w3_experts_class_primary.log",
+  "last_exec_session": 97849,
+  "last_log": "research_w3_tabicl_primary.log",
+  "active_log": null,
   "last_completed_states": [
     "research_w3_phase2_state.json",
     "research_w3_phase3_state.json"
-  ]
+  ],
+  "no_child_user_stop_instruction": true,
+  "latest_checkpoint": "research_w3_checkpoint_0642.json"
 }

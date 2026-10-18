@@ -1,0 +1,10 @@
+{
+  "updated_utc": "2026-10-18T10:58:23.453448+00:00",
+  "status": "training",
+  "route": "lean_realmlp",
+  "fold": 0,
+  "member": 0,
+  "pid": 6,
+  "active_training": true,
+  "plan": "research_r4_plan.json"
+}

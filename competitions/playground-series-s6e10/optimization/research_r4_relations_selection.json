@@ -1,0 +1,837 @@
+{
+  "frozen_utc": "2026-10-18T10:55:30.507891+00:00",
+  "chosen": [
+    {
+      "columns": [
+        "Ease of Online booking",
+        "Inflight wifi service"
+      ],
+      "normalized_mi": 0.4281435292309334,
+      "equality_rate": 0.7288520626217667,
+      "marginal_equality_expectation": 0.19658093294534013
+    },
+    {
+      "columns": [
+        "Cleanliness",
+        "Inflight entertainment"
+      ],
+      "normalized_mi": 0.34669586441191136,
+      "equality_rate": 0.67457781131843,
+      "marginal_equality_expectation": 0.21233666821250707
+    },
+    {
+      "columns": [
+        "Cleanliness",
+        "Food and drink"
+      ],
+      "normalized_mi": 0.3399405706527801,
+      "equality_rate": 0.6732918011073549,
+      "marginal_equality_expectation": 0.2076874700365057
+    },
+    {
+      "columns": [
+        "Food and drink",
+        "Inflight entertainment"
+      ],
+      "normalized_mi": 0.31795373174495395,
+      "equality_rate": 0.6577287673553623,
+      "marginal_equality_expectation": 0.20886236111039677
+    },
+    {
+      "columns": [
+        "Cleanliness",
+        "Seat comfort"
+      ],
+      "normalized_mi": 0.30896070995434843,
+      "equality_rate": 0.6336950076621567,
+      "marginal_equality_expectation": 0.21535410420148407
+    },
+    {
+      "columns": [
+        "Inflight entertainment",
+        "Seat comfort"
+      ],
+      "normalized_mi": 0.2676736451193357,
+      "equality_rate": 0.6137348970806799,
+      "marginal_equality_expectation": 0.21989732047277538
+    },
+    {
+      "columns": [
+        "Food and drink",
+        "Seat comfort"
+      ],
+      "normalized_mi": 0.24818000166316972,
+      "equality_rate": 0.5915030918149685,
+      "marginal_equality_expectation": 0.20987152044282462
+    },
+    {
+      "columns": [
+        "Departure/Arrival time convenient",
+        "Ease of Online booking"
+      ],
+      "normalized_mi": 0.24245216646024786,
+      "equality_rate": 0.5744923339930232,
+      "marginal_equality_expectation": 0.181225062535923
+    },
+    {
+      "columns": [
+        "Inflight wifi service",
+        "Online boarding"
+      ],
+      "normalized_mi": 0.22823829053644043,
+      "equality_rate": 0.5488106330712542,
+      "marginal_equality_expectation": 0.19067826552304604
+    },
+    {
+      "columns": [
+        "Departure/Arrival time convenient",
+        "Gate location"
+      ],
+      "normalized_mi": 0.22623110556361692,
+      "equality_rate": 0.5552945887462556,
+      "marginal_equality_expectation": 0.19017036584822206
+    },
+    {
+      "columns": [
+        "Ease of Online booking",
+        "Online boarding"
+      ],
+      "normalized_mi": 0.20626209003207457,
+      "equality_rate": 0.512779245181312,
+      "marginal_equality_expectation": 0.1887975923817622
+    },
+    {
+      "columns": [
+        "Ease of Online booking",
+        "Gate location"
+      ],
+      "normalized_mi": 0.19210578535083758,
+      "equality_rate": 0.5336711356163223,
+      "marginal_equality_expectation": 0.19829545372910018
+    }
+  ],
+  "all_pairs": [
+    {
+      "columns": [
+        "Ease of Online booking",
+        "Inflight wifi service"
+      ],
+      "normalized_mi": 0.4281435292309334,
+      "equality_rate": 0.7288520626217667,
+      "marginal_equality_expectation": 0.19658093294534013
+    },
+    {
+      "columns": [
+        "Cleanliness",
+        "Inflight entertainment"
+      ],
+      "normalized_mi": 0.34669586441191136,
+      "equality_rate": 0.67457781131843,
+      "marginal_equality_expectation": 0.21233666821250707
+    },
+    {
+      "columns": [
+        "Cleanliness",
+        "Food and drink"
+      ],
+      "normalized_mi": 0.3399405706527801,
+      "equality_rate": 0.6732918011073549,
+      "marginal_equality_expectation": 0.2076874700365057
+    },
+    {
+      "columns": [
+        "Food and drink",
+        "Inflight entertainment"
+      ],
+      "normalized_mi": 0.31795373174495395,
+      "equality_rate": 0.6577287673553623,
+      "marginal_equality_expectation": 0.20886236111039677
+    },
+    {
+      "columns": [
+        "Cleanliness",
+        "Seat comfort"
+      ],
+      "normalized_mi": 0.30896070995434843,
+      "equality_rate": 0.6336950076621567,
+      "marginal_equality_expectation": 0.21535410420148407
+    },
+    {
+      "columns": [
+        "Inflight entertainment",
+        "Seat comfort"
+      ],
+      "normalized_mi": 0.2676736451193357,
+      "equality_rate": 0.6137348970806799,
+      "marginal_equality_expectation": 0.21989732047277538
+    },
+    {
+      "columns": [
+        "Food and drink",
+        "Seat comfort"
+      ],
+      "normalized_mi": 0.24818000166316972,
+      "equality_rate": 0.5915030918149685,
+      "marginal_equality_expectation": 0.20987152044282462
+    },
+    {
+      "columns": [
+        "Departure/Arrival time convenient",
+        "Ease of Online booking"
+      ],
+      "normalized_mi": 0.24245216646024786,
+      "equality_rate": 0.5744923339930232,
+      "marginal_equality_expectation": 0.181225062535923
+    },
+    {
+      "columns": [
+        "Inflight wifi service",
+        "Online boarding"
+      ],
+      "normalized_mi": 0.22823829053644043,
+      "equality_rate": 0.5488106330712542,
+      "marginal_equality_expectation": 0.19067826552304604
+    },
+    {
+      "columns": [
+        "Departure/Arrival time convenient",
+        "Gate location"
+      ],
+      "normalized_mi": 0.22623110556361692,
+      "equality_rate": 0.5552945887462556,
+      "marginal_equality_expectation": 0.19017036584822206
+    },
+    {
+      "columns": [
+        "Ease of Online booking",
+        "Online boarding"
+      ],
+      "normalized_mi": 0.20626209003207457,
+      "equality_rate": 0.512779245181312,
+      "marginal_equality_expectation": 0.1887975923817622
+    },
+    {
+      "columns": [
+        "Ease of Online booking",
+        "Gate location"
+      ],
+      "normalized_mi": 0.19210578535083758,
+      "equality_rate": 0.5336711356163223,
+      "marginal_equality_expectation": 0.19829545372910018
+    },
+    {
+      "columns": [
+        "Baggage handling",
+        "On-board service"
+      ],
+      "normalized_mi": 0.17166033426690774,
+      "equality_rate": 0.5258318637907269,
+      "marginal_equality_expectation": 0.23377687517905377
+    },
+    {
+      "columns": [
+        "Inflight entertainment",
+        "On-board service"
+      ],
+      "normalized_mi": 0.1575229395312255,
+      "equality_rate": 0.52772622613758,
+      "marginal_equality_expectation": 0.21759909169313185
+    },
+    {
+      "columns": [
+        "Departure/Arrival time convenient",
+        "Inflight wifi service"
+      ],
+      "normalized_mi": 0.14298246312727952,
+      "equality_rate": 0.47033320755588753,
+      "marginal_equality_expectation": 0.18184056769463663
+    },
+    {
+      "columns": [
+        "Baggage handling",
+        "Inflight entertainment"
+      ],
+      "normalized_mi": 0.13160008243395035,
+      "equality_rate": 0.503245828167474,
+      "marginal_equality_expectation": 0.22901374585210987
+    },
+    {
+      "columns": [
+        "Gate location",
+        "Inflight wifi service"
+      ],
+      "normalized_mi": 0.10340273121437143,
+      "equality_rate": 0.43820605425885,
+      "marginal_equality_expectation": 0.20336592341031354
+    },
+    {
+      "columns": [
+        "Online boarding",
+        "Seat comfort"
+      ],
+      "normalized_mi": 0.0982008826991106,
+      "equality_rate": 0.4135177384701869,
+      "marginal_equality_expectation": 0.21526374694108327
+    },
+    {
+      "columns": [
+        "Leg room service",
+        "On-board service"
+      ],
+      "normalized_mi": 0.08688068964442965,
+      "equality_rate": 0.43316982265380144,
+      "marginal_equality_expectation": 0.21674815634565298
+    },
+    {
+      "columns": [
+        "Baggage handling",
+        "Leg room service"
+      ],
+      "normalized_mi": 0.08161152415982732,
+      "equality_rate": 0.4253613534679922,
+      "marginal_equality_expectation": 0.22771779278260187
+    },
+    {
+      "columns": [
+        "Inflight entertainment",
+        "Leg room service"
+      ],
+      "normalized_mi": 0.07807821320755666,
+      "equality_rate": 0.42509953102980924,
+      "marginal_equality_expectation": 0.21546291229269177
+    },
+    {
+      "columns": [
+        "Cleanliness",
+        "Online boarding"
+      ],
+      "normalized_mi": 0.0627810892866325,
+      "equality_rate": 0.36685173919404895,
+      "marginal_equality_expectation": 0.2098490534491369
+    },
+    {
+      "columns": [
+        "Inflight entertainment",
+        "Online boarding"
+      ],
+      "normalized_mi": 0.046444316708952396,
+      "equality_rate": 0.3510499849837131,
+      "marginal_equality_expectation": 0.21182705648265943
+    },
+    {
+      "columns": [
+        "Inflight entertainment",
+        "Inflight wifi service"
+      ],
+      "normalized_mi": 0.04316474378060908,
+      "equality_rate": 0.3356409644306517,
+      "marginal_equality_expectation": 0.1892948973114547
+    },
+    {
+      "columns": [
+        "Food and drink",
+        "Online boarding"
+      ],
+      "normalized_mi": 0.03484807224309156,
+      "equality_rate": 0.32847935068035333,
+      "marginal_equality_expectation": 0.20574451037536984
+    },
+    {
+      "columns": [
+        "Baggage handling",
+        "Checkin service"
+      ],
+      "normalized_mi": 0.027767383456728474,
+      "equality_rate": 0.26498740942098736,
+      "marginal_equality_expectation": 0.22934936793691027
+    },
+    {
+      "columns": [
+        "Inflight wifi service",
+        "Leg room service"
+      ],
+      "normalized_mi": 0.027595748414047175,
+      "equality_rate": 0.30262823523976007,
+      "marginal_equality_expectation": 0.1910395735923155
+    },
+    {
+      "columns": [
+        "Checkin service",
+        "On-board service"
+      ],
+      "normalized_mi": 0.02331003350100326,
+      "equality_rate": 0.26440985992499555,
+      "marginal_equality_expectation": 0.22022545051560474
+    },
+    {
+      "columns": [
+        "Checkin service",
+        "Online boarding"
+      ],
+      "normalized_mi": 0.022690274465048257,
+      "equality_rate": 0.2691996704117543,
+      "marginal_equality_expectation": 0.2133634457421445
+    },
+    {
+      "columns": [
+        "Food and drink",
+        "Inflight wifi service"
+      ],
+      "normalized_mi": 0.019562216595688336,
+      "equality_rate": 0.2949660785929354,
+      "marginal_equality_expectation": 0.1954512870660831
+    },
+    {
+      "columns": [
+        "Checkin service",
+        "Seat comfort"
+      ],
+      "normalized_mi": 0.019064501783819496,
+      "equality_rate": 0.2713866578365766,
+      "marginal_equality_expectation": 0.2176412480608437
+    },
+    {
+      "columns": [
+        "Inflight wifi service",
+        "Seat comfort"
+      ],
+      "normalized_mi": 0.018386166228627404,
+      "equality_rate": 0.2755989188273435,
+      "marginal_equality_expectation": 0.18661982957179113
+    },
+    {
+      "columns": [
+        "Cleanliness",
+        "Inflight wifi service"
+      ],
+      "normalized_mi": 0.01769349344401956,
+      "equality_rate": 0.28394643420941174,
+      "marginal_equality_expectation": 0.19321665516200698
+    },
+    {
+      "columns": [
+        "Ease of Online booking",
+        "Leg room service"
+      ],
+      "normalized_mi": 0.017691493253450135,
+      "equality_rate": 0.2552691765684319,
+      "marginal_equality_expectation": 0.18971736353706298
+    },
+    {
+      "columns": [
+        "Baggage handling",
+        "Inflight wifi service"
+      ],
+      "normalized_mi": 0.017177050905516397,
+      "equality_rate": 0.26353968535103456,
+      "marginal_equality_expectation": 0.18630346865453343
+    },
+    {
+      "columns": [
+        "Departure/Arrival time convenient",
+        "Online boarding"
+      ],
+      "normalized_mi": 0.016940403619774596,
+      "equality_rate": 0.2709862235193556,
+      "marginal_equality_expectation": 0.19633200414173146
+    },
+    {
+      "columns": [
+        "On-board service",
+        "Online boarding"
+      ],
+      "normalized_mi": 0.01349720950505828,
+      "equality_rate": 0.25209650467045025,
+      "marginal_equality_expectation": 0.21510627903322038
+    },
+    {
+      "columns": [
+        "Checkin service",
+        "Cleanliness"
+      ],
+      "normalized_mi": 0.01337922393825194,
+      "equality_rate": 0.2731963129240176,
+      "marginal_equality_expectation": 0.21632612372284105
+    },
+    {
+      "columns": [
+        "Inflight wifi service",
+        "On-board service"
+      ],
+      "normalized_mi": 0.011980755244726641,
+      "equality_rate": 0.2596123487782903,
+      "marginal_equality_expectation": 0.19113432938305208
+    },
+    {
+      "columns": [
+        "Baggage handling",
+        "Online boarding"
+      ],
+      "normalized_mi": 0.01129723124017252,
+      "equality_rate": 0.25444520595415027,
+      "marginal_equality_expectation": 0.2262025310447088
+    },
+    {
+      "columns": [
+        "Leg room service",
+        "Online boarding"
+      ],
+      "normalized_mi": 0.010647752516319262,
+      "equality_rate": 0.24542003249678498,
+      "marginal_equality_expectation": 0.2119252183561936
+    },
+    {
+      "columns": [
+        "On-board service",
+        "Seat comfort"
+      ],
+      "normalized_mi": 0.010197305694079648,
+      "equality_rate": 0.2524122317282591,
+      "marginal_equality_expectation": 0.22204482881367266
+    },
+    {
+      "columns": [
+        "Checkin service",
+        "Leg room service"
+      ],
+      "normalized_mi": 0.009985385644333196,
+      "equality_rate": 0.23560169106492426,
+      "marginal_equality_expectation": 0.21310170436728523
+    },
+    {
+      "columns": [
+        "Baggage handling",
+        "Seat comfort"
+      ],
+      "normalized_mi": 0.009075146996718414,
+      "equality_rate": 0.26002048375545783,
+      "marginal_equality_expectation": 0.23639176315577792
+    },
+    {
+      "columns": [
+        "Leg room service",
+        "Seat comfort"
+      ],
+      "normalized_mi": 0.008361290674924112,
+      "equality_rate": 0.2486543096743391,
+      "marginal_equality_expectation": 0.21846365160900166
+    },
+    {
+      "columns": [
+        "Baggage handling",
+        "Departure/Arrival time convenient"
+      ],
+      "normalized_mi": 0.006428447425934181,
+      "equality_rate": 0.22976459082543374,
+      "marginal_equality_expectation": 0.20761433455172074
+    },
+    {
+      "columns": [
+        "Checkin service",
+        "Departure/Arrival time convenient"
+      ],
+      "normalized_mi": 0.0063383144563114524,
+      "equality_rate": 0.21605741612056154,
+      "marginal_equality_expectation": 0.19774439581030015
+    },
+    {
+      "columns": [
+        "Checkin service",
+        "Inflight entertainment"
+      ],
+      "normalized_mi": 0.006127828969305944,
+      "equality_rate": 0.23247522312662194,
+      "marginal_equality_expectation": 0.21377028074112536
+    },
+    {
+      "columns": [
+        "Cleanliness",
+        "On-board service"
+      ],
+      "normalized_mi": 0.0058775056882255945,
+      "equality_rate": 0.23287565744384295,
+      "marginal_equality_expectation": 0.21599606956760292
+    },
+    {
+      "columns": [
+        "Baggage handling",
+        "Cleanliness"
+      ],
+      "normalized_mi": 0.005474149860378988,
+      "equality_rate": 0.24173141638238396,
+      "marginal_equality_expectation": 0.22425596711962856
+    },
+    {
+      "columns": [
+        "Cleanliness",
+        "Leg room service"
+      ],
+      "normalized_mi": 0.004458982848962851,
+      "equality_rate": 0.22840927467483962,
+      "marginal_equality_expectation": 0.21187524183870554
+    },
+    {
+      "columns": [
+        "Baggage handling",
+        "Gate location"
+      ],
+      "normalized_mi": 0.0039760577035617695,
+      "equality_rate": 0.2308580845378449,
+      "marginal_equality_expectation": 0.20661187056356578
+    },
+    {
+      "columns": [
+        "Gate location",
+        "Online boarding"
+      ],
+      "normalized_mi": 0.0038551407017043413,
+      "equality_rate": 0.21055144425877298,
+      "marginal_equality_expectation": 0.20262821757424132
+    },
+    {
+      "columns": [
+        "Departure/Arrival time convenient",
+        "On-board service"
+      ],
+      "normalized_mi": 0.0033866601534795772,
+      "equality_rate": 0.21109819111497855,
+      "marginal_equality_expectation": 0.20039554945438337
+    },
+    {
+      "columns": [
+        "Checkin service",
+        "Food and drink"
+      ],
+      "normalized_mi": 0.00324071992969923,
+      "equality_rate": 0.2309273904773639,
+      "marginal_equality_expectation": 0.20860140475110342
+    },
+    {
+      "columns": [
+        "Checkin service",
+        "Inflight wifi service"
+      ],
+      "normalized_mi": 0.002973645170871895,
+      "equality_rate": 0.21017411192139165,
+      "marginal_equality_expectation": 0.1952070442800034
+    },
+    {
+      "columns": [
+        "Gate location",
+        "On-board service"
+      ],
+      "normalized_mi": 0.0024697013639256612,
+      "equality_rate": 0.2064777951470441,
+      "marginal_equality_expectation": 0.20647874270435848
+    },
+    {
+      "columns": [
+        "Ease of Online booking",
+        "Food and drink"
+      ],
+      "normalized_mi": 0.0022648579734717506,
+      "equality_rate": 0.20795632185678312,
+      "marginal_equality_expectation": 0.19289279366355475
+    },
+    {
+      "columns": [
+        "Checkin service",
+        "Gate location"
+      ],
+      "normalized_mi": 0.002185275544748901,
+      "equality_rate": 0.20763289413902772,
+      "marginal_equality_expectation": 0.21159113001082494
+    },
+    {
+      "columns": [
+        "Departure/Arrival time convenient",
+        "Leg room service"
+      ],
+      "normalized_mi": 0.0019469970943540302,
+      "equality_rate": 0.19642073325684012,
+      "marginal_equality_expectation": 0.1987485812822048
+    },
+    {
+      "columns": [
+        "Baggage handling",
+        "Food and drink"
+      ],
+      "normalized_mi": 0.001878883809568696,
+      "equality_rate": 0.22388898728621043,
+      "marginal_equality_expectation": 0.21536349823690273
+    },
+    {
+      "columns": [
+        "Ease of Online booking",
+        "Inflight entertainment"
+      ],
+      "normalized_mi": 0.0016958000441219569,
+      "equality_rate": 0.19414903857260568,
+      "marginal_equality_expectation": 0.18840770145573105
+    },
+    {
+      "columns": [
+        "Food and drink",
+        "On-board service"
+      ],
+      "normalized_mi": 0.001631285952889647,
+      "equality_rate": 0.2157031857630199,
+      "marginal_equality_expectation": 0.20988339381808394
+    },
+    {
+      "columns": [
+        "Gate location",
+        "Seat comfort"
+      ],
+      "normalized_mi": 0.0014322096294301094,
+      "equality_rate": 0.2057000284924418,
+      "marginal_equality_expectation": 0.20180235854624945
+    },
+    {
+      "columns": [
+        "Gate location",
+        "Inflight entertainment"
+      ],
+      "normalized_mi": 0.0013938405123503522,
+      "equality_rate": 0.20282768233237589,
+      "marginal_equality_expectation": 0.20164893402004247
+    },
+    {
+      "columns": [
+        "Gate location",
+        "Leg room service"
+      ],
+      "normalized_mi": 0.0013777262240743248,
+      "equality_rate": 0.2032974225891159,
+      "marginal_equality_expectation": 0.20191420274653393
+    },
+    {
+      "columns": [
+        "Departure/Arrival time convenient",
+        "Inflight entertainment"
+      ],
+      "normalized_mi": 0.0013723014682680862,
+      "equality_rate": 0.19256270262361486,
+      "marginal_equality_expectation": 0.1996514230116963
+    },
+    {
+      "columns": [
+        "Baggage handling",
+        "Ease of Online booking"
+      ],
+      "normalized_mi": 0.0012899032299999757,
+      "equality_rate": 0.19391801877420894,
+      "marginal_equality_expectation": 0.18663160178097132
+    },
+    {
+      "columns": [
+        "Food and drink",
+        "Leg room service"
+      ],
+      "normalized_mi": 0.0011792857101674663,
+      "equality_rate": 0.21149092477225298,
+      "marginal_equality_expectation": 0.2096279307294468
+    },
+    {
+      "columns": [
+        "Departure/Arrival time convenient",
+        "Seat comfort"
+      ],
+      "normalized_mi": 0.001030011550342338,
+      "equality_rate": 0.20229633679606343,
+      "marginal_equality_expectation": 0.20214861747929747
+    },
+    {
+      "columns": [
+        "Ease of Online booking",
+        "Seat comfort"
+      ],
+      "normalized_mi": 0.001010290184650429,
+      "equality_rate": 0.19227007754564565,
+      "marginal_equality_expectation": 0.18650256177854266
+    },
+    {
+      "columns": [
+        "Cleanliness",
+        "Gate location"
+      ],
+      "normalized_mi": 0.0009209416369302237,
+      "equality_rate": 0.2016879846602854,
+      "marginal_equality_expectation": 0.20633046673695665
+    },
+    {
+      "columns": [
+        "Ease of Online booking",
+        "On-board service"
+      ],
+      "normalized_mi": 0.0008689684167252436,
+      "equality_rate": 0.19672105899475584,
+      "marginal_equality_expectation": 0.18985050794101593
+    },
+    {
+      "columns": [
+        "Food and drink",
+        "Gate location"
+      ],
+      "normalized_mi": 0.0004933361287179645,
+      "equality_rate": 0.2015955767409267,
+      "marginal_equality_expectation": 0.20326523825551748
+    },
+    {
+      "columns": [
+        "Cleanliness",
+        "Ease of Online booking"
+      ],
+      "normalized_mi": 0.0004835184818145072,
+      "equality_rate": 0.19196205114778336,
+      "marginal_equality_expectation": 0.19131980570699178
+    },
+    {
+      "columns": [
+        "Departure/Arrival time convenient",
+        "Food and drink"
+      ],
+      "normalized_mi": 0.00047278096835707097,
+      "equality_rate": 0.19441086101078864,
+      "marginal_equality_expectation": 0.19450820157705678
+    },
+    {
+      "columns": [
+        "Checkin service",
+        "Ease of Online booking"
+      ],
+      "normalized_mi": 0.0004365466523033638,
+      "equality_rate": 0.19691357549341978,
+      "marginal_equality_expectation": 0.19284665357015163
+    },
+    {
+      "columns": [
+        "Cleanliness",
+        "Departure/Arrival time convenient"
+      ],
+      "normalized_mi": 0.00031662516519504787,
+      "equality_rate": 0.1952656342648565,
+      "marginal_equality_expectation": 0.1969345499019894
+    }
+  ],
+  "source": {
+    "source_sha256": "2ad76465f6115f93d16121891a6b1235acb8007a4ab065cae0dc46b60ad116e3",
+    "safe_mask_sha256": "fcc30179ed4f68ddab8323abe86e953dcaf13374dee46bd3c13abb55dfdbfe51",
+    "safe_rows": 129859,
+    "excluded_exact_rows": 21,
+    "near_key_groups": 111199,
+    "near_key_groups_with_conflicting_original_labels": 4475,
+    "original_rows_in_conflicting_near_groups": 10665,
+    "target_provenance": "Only CC0 original labels. No synthetic labels used to fit teacher or lookup. Exact matches to any synthetic train/test vector excluded.",
+    "exact_label_audit": {
+      "checked_utc": "2026-10-17T19:36:06.016304+00:00",
+      "exact_match_pairs_verified_value_by_value": 17,
+      "exact_match_train_label_agreements": 14,
+      "exact_match_train_label_conflicts": 3,
+      "policy": "All 21 original rows matching any train/test feature vector remain excluded, regardless of label agreement."
+    }
+  },
+  "target_used_for_pair_selection": false,
+  "selector_code_sha256": "cfec281efbbaaab45c8d01059ec2f606c61861a1d0f22feab7bf1ec94cea91ea",
+  "plan_sha256": "2b110e16a5ae8a134fda3335591321d393b693feb3037e1a365417e482c05f5f"
+}

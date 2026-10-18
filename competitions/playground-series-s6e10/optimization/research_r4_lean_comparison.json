@@ -1,0 +1,18 @@
+{
+  "read_utc": "2026-10-18T10:58:43.428719+00:00",
+  "reference": "https://raw.githubusercontent.com/alvis1111/s6e10-airline-solution/main/independent_repro/realmlp_repro_lean.py",
+  "external_notebook_or_predictions_executed": false,
+  "new_mechanisms": [
+    "3 cross-feature strict inner target encodings instead of prior large context view",
+    "5 count features and one retained categorical cross",
+    "flat_anneal learning rate, invsqrtp1e-3 dropout schedule,wd.015 vs existing lin_cos_log_15,expm4t,wd.0236",
+    "eight members fitted serially vs current admitted two members"
+  ],
+  "adaptation": [
+    "All counts, raw medians/vocab and preprocessing fitted on outer-train only; numericmissing0 from public prior",
+    "Strict crossfit sklearnTargetEncoder trained on outertrain only, no validation input to fit",
+    "same cached5fold paired baseline and complete results before scoring",
+    "GPU allocationfailedbeforeepoch1 orquality; CPU only fallback keeps model/statistical recipe"
+  ],
+  "historical_validation_caution": "Prior full label analyses mean folds are not untouched independent holdouts."
+}

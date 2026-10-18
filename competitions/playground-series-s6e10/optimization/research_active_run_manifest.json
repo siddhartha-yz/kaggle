@@ -1,9 +1,9 @@
 {
-  "updated_utc": "2026-10-18T08:31:32.743333+00:00",
-  "phase": "window3_audited_no_new_qualified_candidate",
-  "current_window": "research_w3_plan.json",
+  "updated_utc": "2026-10-18T10:58:43.428719+00:00",
+  "phase": "R4 frozen paired validation",
+  "current_window": "research_r4_plan.json",
   "budget": "research_w3_submission_ledger.json",
-  "active_training": false,
+  "active_training": true,
   "confirmed_best": {
     "candidate": "submission_realmlp_value_v6.csv",
     "public_auc": 0.96058,
@@ -12,19 +12,21 @@
     "observed_utc": "2026-10-18T04:00:00+00:00"
   },
   "recovery": "Inspect saved per-route files, logs and live processes before restart. Serial six CPU threads, 1GiB total process GPU ceiling and 778043392 byte allocator cap.",
-  "driver": null,
-  "state": "research_w3_completion.json",
+  "driver": "research_r4_lean_cpu.py",
+  "state": "research_r4_state.json",
   "resource_override": "research_w3_resource_override.json",
-  "status": "completed_evidence_limited",
-  "outcome": "retain_v6_all_new_routes_rejected_by_frozen_gates",
+  "status": "active_research_until_verified_actual_Top100",
+  "outcome": null,
   "completion": null,
   "last_exec_session": null,
   "last_log": "research_w3_tabicl_primary.log",
-  "active_log": null,
+  "active_log": "research_r4_lean_cpu.log",
   "last_completed_states": [
     "research_w3_phase2_state.json",
     "research_w3_phase3_state.json"
   ],
   "no_child_user_stop_instruction": true,
-  "latest_checkpoint": "research_current_status.json"
+  "latest_checkpoint": "research_current_status.json",
+  "task_status": "resumed_active_research",
+  "original_deadline_superseded_by_explicit_top100_goal": true
 }

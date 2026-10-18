@@ -1,0 +1,50 @@
+{
+  "phase": "R4 resumed pursuit of verified actual Top100",
+  "frozen_utc": "2026-10-18T10:55:26.489318+00:00",
+  "goal": "Continue supported research until actual verified leaderboard Top100, or a real blocker requiring user/parent action. A failed candidate or old window deadline is not completion.",
+  "authority": "Parent relayed explicit human correction 2026-10-18 10:48 UTC",
+  "historical_window3": "research_w3_completion.json",
+  "limits": {
+    "cpu_threads": 6,
+    "serial_model_fits": true,
+    "gpu_total_process_ceiling_bytes": 1073741824,
+    "gpu_allocator_cap_bytes": 778043392,
+    "paid_resources": false,
+    "formal_submission_budget_total": 2,
+    "used": 0,
+    "parent_only_submitter": true,
+    "time_cutoff": null
+  },
+  "prespecified_routes": [
+    {
+      "id": "rating_relations",
+      "selection": "top12 rating pairs by normalized mutual information of safe original predictors ONLY; lexical tiebreak; no official or source target used in selection",
+      "features": "pair equality and absolute difference, 24 numeric fields, in addition to unchanged57 field LGB view",
+      "model": "unchanged639-tree63leaf LGB; replace exactly45/128 v6 component mass",
+      "evaluation": "Complete cached five-fold scheme, no interim score based stopping; paired same-fold v6 reference. Only if promising, fresh full-baseline and candidate threefold training seed20261022."
+    },
+    {
+      "id": "lean_realmlp",
+      "source": "https://raw.githubusercontent.com/alvis1111/s6e10-airline-solution/main/independent_repro/realmlp_repro_lean.py",
+      "selection": "External code mechanism comparison, no test prediction copying",
+      "features": "Raw dual representation; 5 train-fold-only counts; 3 strictly inner-OOF TE crosses, retaining only Class x Travel x Gender categorical cross; no teacher or route profiles",
+      "model": "Fixed3epochs eight independent members fitted serially within process GPU ceiling; external flat_anneal/invsqrtp1e-3 schedule and wd.015; replace fixed32/128 neural mass",
+      "evaluation": "Same frozen fivefold protocol, then complete fresh threefold baseline if promising"
+    }
+  ],
+  "statistics": {
+    "multiplicity": "Two prespecified routes: Bonferroni one-sided alpha.025 per route; paired normal lower bound at z1.96; also corrected resampled t bound across paired fold deltas using sqrt((1/K+n_valid/n_train)*sample_variance) and t_.975,K-1. No minimum arbitrary AUC delta and no everyfold positive requirement. Both pooled and corrected lower bounds must exceed zero.",
+    "replication": "A complete new threefold partition requires refitting all baseline components, never cross-reusing old models that trained on its validation labels. Same frozen recipes/weights.",
+    "selection_bias": "All official labels have participated in historical adaptive analysis. New folds are not untouched. Conditional intervals omit adaptive model-selection uncertainty; corrected t is an approximate fit-dependence diagnostic. Frozen external/covariate-only routes and independent refitting reduce but do not erase selection bias. No guaranteed public improvement."
+  },
+  "baseline": {
+    "public_auc": 0.96058,
+    "rank_snapshot": 858,
+    "rank_observed_utc": "2026-10-18T04:00:00Z",
+    "csv_sha256": "36ea4ef80e1dd1911257f240391d9cdb8474b8b5deb5c52733582da80bdd1aaa"
+  },
+  "data_sha256": {
+    "train": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36"
+  },
+  "no_public_score_weight_search": true
+}

@@ -9,6 +9,9 @@ from research_r9_model_features import LinkageFeatures
 from research_oof import params
 
 def main():
+    finalplan=json.loads((ROOT/'research_r9_final_inference_plan.json').read_text())
+    assert finalplan['main_plan_sha256']==sha(ROOT/'research_r9_plan.json')
+    for name,digest in finalplan['code_sha256'].items():assert sha(ROOT/name)==digest
     audit=json.loads((ROOT/'research_r9_pre_inference_audit.json').read_text())
     assert audit['status']=='passed' and audit['verified_new_models']==8
     assert audit['plan_sha256']==sha(ROOT/'research_r9_plan.json')

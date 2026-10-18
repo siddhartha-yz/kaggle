@@ -9,6 +9,9 @@ from research_external_ablation import external
 from research_oof import params
 
 def main():
+    finalplan=json.loads((ROOT/'research_r9_final_inference_plan.json').read_text())
+    assert finalplan['main_plan_sha256']==sha(ROOT/'research_r9_plan.json')
+    for name,digest in finalplan['code_sha256'].items():assert sha(ROOT/name)==digest
     plan=json.loads((ROOT/'research_r9_plan.json').read_text())
     for name,digest in plan['source_sha256'].items():assert sha(ROOT/name)==digest
     source,df,test,cols,sourceaudit=safe_original()

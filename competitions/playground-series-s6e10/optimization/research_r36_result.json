@@ -1,0 +1,176 @@
+{
+  "status": "complete",
+  "stage": "fivefold",
+  "checked_utc": "2026-10-18T20:18:28.366504+00:00",
+  "eligible": false,
+  "vs_formal_v11": {
+    "pooled": {
+      "baseline_auc": 0.9616328660208192,
+      "candidate_auc": 0.9615595736648801,
+      "delta_auc": -7.32923559391141e-05,
+      "paired_se": 1.0534171524148403e-05,
+      "conditional_95pct_ci": [
+        -9.393933212644497e-05,
+        -5.264537975178322e-05
+      ],
+      "candidate_logloss": 0.22145913521161453
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.9608862343189031,
+        "candidate_auc": 0.9608295129691123,
+        "delta_auc": -5.672134979073373e-05,
+        "paired_se": 2.383025849936771e-05,
+        "conditional_95pct_ci": [
+          -0.00010342865644949445,
+          -1.0014043131973019e-05
+        ],
+        "candidate_logloss": 0.22363581577360234
+      },
+      {
+        "baseline_auc": 0.9618421173162851,
+        "candidate_auc": 0.9617290712583377,
+        "delta_auc": -0.00011304605794737466,
+        "paired_se": 2.2700655496993557e-05,
+        "conditional_95pct_ci": [
+          -0.00015753934272148202,
+          -6.855277317326729e-05
+        ],
+        "candidate_logloss": 0.22096630408231657
+      },
+      {
+        "baseline_auc": 0.9622169314611875,
+        "candidate_auc": 0.9621341985767996,
+        "delta_auc": -8.273288438787052e-05,
+        "paired_se": 2.3935876398735447e-05,
+        "conditional_95pct_ci": [
+          -0.000129647202129392,
+          -3.5818566646349046e-05
+        ],
+        "candidate_logloss": 0.2194744281525604
+      },
+      {
+        "baseline_auc": 0.9614621762740646,
+        "candidate_auc": 0.9613991797508932,
+        "delta_auc": -6.299652317143245e-05,
+        "paired_se": 2.3916948373775232e-05,
+        "conditional_95pct_ci": [
+          -0.00010987374198403191,
+          -1.6119304358832997e-05
+        ],
+        "candidate_logloss": 0.22243033473254276
+      },
+      {
+        "baseline_auc": 0.9617929598566762,
+        "candidate_auc": 0.9617429390851684,
+        "delta_auc": -5.0020771507841566e-05,
+        "paired_se": 2.2741031312401532e-05,
+        "conditional_95pct_ci": [
+          -9.459319288014856e-05,
+          -5.448350135534565e-06
+        ],
+        "candidate_logloss": 0.22078879331705034
+      }
+    ],
+    "corrected_resampled_t": {
+      "mean_delta": -7.310351736105059e-05,
+      "se": 1.70745572556871e-05,
+      "test_train_ratio": 0.25,
+      "df": 4,
+      "one_sided_alpha": 0.025,
+      "lower_bound": -0.0001205100882770225
+    },
+    "eligible_for_new_partition_replication": false,
+    "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+  },
+  "vs_prior_v10_diagnostic": {
+    "pooled": {
+      "baseline_auc": 0.9615338914351743,
+      "candidate_auc": 0.9615595736648801,
+      "delta_auc": 2.5682229705781268e-05,
+      "paired_se": 2.0860643233639093e-05,
+      "conditional_95pct_ci": [
+        -1.5204631032151356e-05,
+        6.65690904437139e-05
+      ],
+      "candidate_logloss": 0.22145913521161453
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.960818384445062,
+        "candidate_auc": 0.9608295129691123,
+        "delta_auc": 1.1128524050385558e-05,
+        "paired_se": 4.722249372748648e-05,
+        "conditional_95pct_ci": [
+          -8.142756365548794e-05,
+          0.00010368461175625906
+        ],
+        "candidate_logloss": 0.22363581577360234
+      },
+      {
+        "baseline_auc": 0.9617131397187628,
+        "candidate_auc": 0.9617290712583377,
+        "delta_auc": 1.5931539574909337e-05,
+        "paired_se": 4.474293857017273e-05,
+        "conditional_95pct_ci": [
+          -7.176462002262921e-05,
+          0.00010362769917244789
+        ],
+        "candidate_logloss": 0.22096630408231657
+      },
+      {
+        "baseline_auc": 0.9620715765969017,
+        "candidate_auc": 0.9621341985767996,
+        "delta_auc": 6.26219798979255e-05,
+        "paired_se": 4.567524802762196e-05,
+        "conditional_95pct_ci": [
+          -2.690150623621353e-05,
+          0.00015214546603206454
+        ],
+        "candidate_logloss": 0.2194744281525604
+      },
+      {
+        "baseline_auc": 0.9614292433668903,
+        "candidate_auc": 0.9613991797508932,
+        "delta_auc": -3.006361599711127e-05,
+        "paired_se": 4.8126116550451534e-05,
+        "conditional_95pct_ci": [
+          -0.00012439080443599627,
+          6.426357244177373e-05
+        ],
+        "candidate_logloss": 0.22243033473254276
+      },
+      {
+        "baseline_auc": 0.9616819435749557,
+        "candidate_auc": 0.9617429390851684,
+        "delta_auc": 6.099551021265803e-05,
+        "paired_se": 4.666920790888895e-05,
+        "conditional_95pct_ci": [
+          -3.0476137288764298e-05,
+          0.00015246715771408036
+        ],
+        "candidate_logloss": 0.22078879331705034
+      }
+    ],
+    "corrected_resampled_t": {
+      "mean_delta": 2.4122787547753432e-05,
+      "se": 2.6010837453337078e-05,
+      "test_train_ratio": 0.25,
+      "df": 4,
+      "one_sided_alpha": 0.025,
+      "lower_bound": -4.809487478165974e-05
+    },
+    "eligible_for_new_partition_replication": false,
+    "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+  },
+  "all_folds_before_scoring": true,
+  "oof_sha256": "6c241648138067078f7724dfc857e84e5309969d8a4b38a306b0f40824cc609e",
+  "plan_sha256": "44f4979717c346a54da58c59c58061f3c71ecf276b9d37719b05d16b18bd9d07",
+  "threefold_started": false,
+  "csv_generated": false,
+  "formal_new_submissions": 0,
+  "verified_completed_contexts": 20,
+  "max_gpu_process_bytes": 977272832,
+  "max_repeat_error": 0.0,
+  "reason": "Conditional48 plus4disjoint32kcontexts stilldecreasedfivefoldAUC73.29ppm, pairedCIentirelynegative. StopTabICL; no3/test/CSV. Memoryrepairworked(resourcepeak932MiB, repeats0), qualitydidnot."
+}

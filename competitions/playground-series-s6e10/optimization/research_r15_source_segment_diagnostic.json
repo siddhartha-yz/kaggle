@@ -1,0 +1,49 @@
+{
+  "recorded_utc": "2026-10-18T15:11:27.458904+00:00",
+  "source_rows": 129859,
+  "source_train_rows": 103887,
+  "source_valid_rows": 25972,
+  "split_seed": 20261028,
+  "smoothing": 20,
+  "official_targets_used": false,
+  "same_audited_source": {
+    "source_sha256": "2ad76465f6115f93d16121891a6b1235acb8007a4ab065cae0dc46b60ad116e3",
+    "safe_mask_sha256": "fcc30179ed4f68ddab8323abe86e953dcaf13374dee46bd3c13abb55dfdbfe51",
+    "safe_rows": 129859,
+    "excluded_exact_rows": 21,
+    "near_key_groups": 111199,
+    "near_key_groups_with_conflicting_original_labels": 4475,
+    "original_rows_in_conflicting_near_groups": 10665,
+    "target_provenance": "Only CC0 original labels. No synthetic labels used to fit teacher or lookup. Exact matches to any synthetic train/test vector excluded.",
+    "exact_label_audit": {
+      "checked_utc": "2026-10-17T19:36:06.016304+00:00",
+      "exact_match_pairs_verified_value_by_value": 17,
+      "exact_match_train_label_agreements": 14,
+      "exact_match_train_label_conflicts": 3,
+      "policy": "All 21 original rows matching any train/test feature vector remain excluded, regardless of label agreement."
+    }
+  },
+  "results": {
+    "existing_gender_segment": {
+      "fields": [
+        "Class",
+        "Type of Travel",
+        "Gender"
+      ],
+      "source_holdout_auc": 0.7997513524498322,
+      "source_holdout_logloss": 0.5170779058835385,
+      "source_training_groups": 12
+    },
+    "customer_segment": {
+      "fields": [
+        "Class",
+        "Type of Travel",
+        "Customer Type"
+      ],
+      "source_holdout_auc": 0.8291193348948045,
+      "source_holdout_logloss": 0.48458513565148764,
+      "source_training_groups": 12
+    }
+  },
+  "limitation": "Independent original-source label diagnostic; does not establish utility on official synthetic labels or guarantee neural gain. Raw CustomerType is already present; this only motivates an explicit low-dimensional conditional prior."
+}

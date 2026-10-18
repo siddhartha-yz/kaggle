@@ -1,71 +1,27 @@
 {
-  "checked_utc": "2026-10-18T07:46:26.971761+00:00",
-  "task_status": "in_progress_not_closed",
-  "active_experiment": "ExtraTrees512 fixed primary candidate, CPU6, no validation score until all512 trees complete",
-  "progress": {
-    "status": "training",
-    "started_utc": "2026-10-18T07:38:02.889473+00:00",
-    "plan_sha256": "232775ab9cc5422a668efeb3ff562b1e72f933273eec160e0e56b061a724aa48",
-    "runner_sha256": "07a9e0cfc1f65091d37a9af16d5b3c58caca7aeb9be0357ad90617ce3bdbba52",
-    "split": "primary",
-    "fold": 0,
-    "train_rows": 559708,
-    "valid_rows": 139927,
-    "feature_width": 82,
-    "completed_trees": 352,
-    "last_chunk_seconds": 48.98931346699828,
-    "rss_bytes": 1773146112,
-    "available_ram_bytes": 10686455808,
-    "last_progress_utc": "2026-10-18T07:45:39.454387+00:00",
-    "checkpoint_trees": 256
+  "updated_utc": "2026-10-18T08:31:32.743333+00:00",
+  "task_status": "completed_no_additional_qualified_candidate",
+  "active_training": false,
+  "primary_screens": 31,
+  "primary_passed": 3,
+  "confirmation_passed": 0,
+  "training_only_extra_test": "16dimrawRealMLP vs cachedCPU5:delta-.00015880248,failed;no outermetric",
+  "best": {
+    "candidate": "submission_realmlp_value_v6.csv",
+    "sha256": "36ea4ef80e1dd1911257f240391d9cdb8474b8b5deb5c52733582da80bdd1aaa",
+    "public_auc": 0.96058,
+    "rank_snapshot": 858,
+    "total_ranked_snapshot": 2208,
+    "observed_utc": "2026-10-18T04:00:00+00:00",
+    "oof_auc": 0.961135462544149
   },
-  "continuation_queue": {
-    "status": "running",
-    "stage": "waiting_for_extra_trees_primary",
-    "started_utc": "2026-10-18T07:45:21.549448+00:00",
-    "queue_pid": 421063,
-    "nested_plan_sha256": "ac5d0417f574dc0da5238c8ffe372637e9950a0a6a4f3597c98c00dbdfa823b8",
-    "completed_stages": [],
-    "extra_trees_pids": [
-      418360
-    ],
-    "last_progress_utc": "2026-10-18T07:46:21.711217+00:00"
-  },
-  "nested_neural_scope": "IfExtraTreesrejects, CPU-only innerRealMLP2 resourceprobe then2fixed nested meta methods; existing3innerGBDTand5outerprediction caches reused. Strictprimary/confirm/5foldgates. No concurrentfits.",
-  "completed_primary_screens": 26,
-  "new_formal_submissions_used": 0,
-  "reserved_slots": 0,
-  "remaining_new_formal_submissions": 2,
-  "deadline_utc": "2026-10-18T11:06:00Z",
-  "progress_visibility": "Directhumanpermissionforcross-threadmessagespending; no external message hasbeen sent. Actualcode/statusauditcheckpoints areonGitHub.",
-  "most_recent_completed_route": {
-    "status": "complete",
-    "split": "primary",
-    "vs_v6": {
-      "baseline_auc": 0.9603020930463941,
-      "candidate_auc": 0.9602337997363868,
-      "delta_auc": -6.829331000735017e-05,
-      "paired_se": 3.851134593527257e-05,
-      "conditional_95pct_ci": [
-        -0.00014377554804048442,
-        7.188928025784067e-06
-      ],
-      "candidate_logloss": 0.22535170202045088
-    },
-    "fold_comparisons": [
-      {
-        "baseline_auc": 0.9603020930463941,
-        "candidate_auc": 0.9602337997363868,
-        "delta_auc": -6.829331000735017e-05,
-        "paired_se": 3.851134593527257e-05,
-        "conditional_95pct_ci": [
-          -0.00014377554804048442,
-          7.188928025784067e-06
-        ],
-        "candidate_logloss": 0.22535170202045088
-      }
-    ],
-    "eligible_for_next": false,
-    "completed_utc": "2026-10-18T07:32:47.942571+00:00"
-  }
+  "new_formal_submissions": 0,
+  "remaining_formal_budget": 2,
+  "original_deadline_utc": "2026-10-18T11:06:00Z",
+  "time_budget_not_exhausted": true,
+  "close_reason": "Retain admittedv6. Completed routes cover source teachers/augmentation, local/unlabeled profiles, experts, multiple supervised neural families, pretrainedincontext models, category representations, strict nested stacking, controlled neural component averaging and bounded response-noise models. No frozen candidate passed confirmation; a final matched training-only embedding-capacity test also failed. Further undirected seed/weight/hyperparameter search lacks a supported lead under the present evidence. Time budget is an upper bound and is not exhausted. Preserve all artifacts for a new evidence-based direction within the original deadline.",
+  "audit": "research_w3_final_audit.json",
+  "report": "research_w3_evidence_report.json",
+  "plot": "research_w3_evidence_plot.png",
+  "completion": "research_w3_completion.json"
 }

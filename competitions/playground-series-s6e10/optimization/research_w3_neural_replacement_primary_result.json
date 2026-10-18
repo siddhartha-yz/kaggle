@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-10-18T07:58:24.530136+00:00",
+  "split": "primary",
+  "plan_sha256": "23006ad2b87c7ac46ff205634370e2a3e17580f023655788d12ed40957081251",
+  "source_sha256": {
+    "research_artifacts/w3_tabm_primary_b256/validation.npz": "d198ee3c00f65644ea2e96e4e2f93ef51ab9072035f49ccd651c14cc1dab17e0",
+    "research_artifacts/w3_tabm_nested_primary/validation.npz": "3f5077e19025b6f2545a92e851e9fb41b7f37e8aa60a9dfc8baaffb33c2f3125",
+    "research_artifacts/w3_deepfm_primary_b2048/validation.npz": "1657870e4d92fbdc552868377fc26c9aeb9d158c197a54122efbacc9d1081d86",
+    "research_artifacts/w3_rank_deepfm_primary_b2048/validation.npz": "d2c0a48ba6ce6f59920e52081b9886bcc208d7348a56d046d550dd90c93a99a0",
+    "research_artifacts/w3_prior_deepfm_primary_b2048/validation.npz": "37c8d6ebd8f53fc9a2afb118eb5c99c46474e16d167ecec1272e60929fbee555",
+    "research_artifacts/w3_ftt_primary/validation.npz": "4a2162a46cd17421dcc8d5979a58250fab746ef1a7fd66bba8cc088f39d563cf"
+  },
+  "new_fits": 0,
+  "tree_mass": 0.75,
+  "neural_mass": 0.25,
+  "vs_v6": {
+    "baseline_auc": 0.9603020930463941,
+    "candidate_auc": 0.9602886690843822,
+    "delta_auc": -1.3423962011982482e-05,
+    "paired_se": 2.467241732655741e-05,
+    "conditional_95pct_ci": [
+      -6.1781899972035e-05,
+      3.493397594807004e-05
+    ],
+    "candidate_logloss": 0.22551679771812805
+  },
+  "fold_comparisons": [],
+  "eligible_for_next": false
+}

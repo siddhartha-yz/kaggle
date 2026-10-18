@@ -1,0 +1,83 @@
+{
+  "started_utc": "2026-10-18T13:49:10.985749+00:00",
+  "status": "passed_no_quality_score",
+  "no_quality_score": true,
+  "allocator_cap_bytes": 778043392,
+  "gpu_process_ceiling_bytes": 1073741824,
+  "runner_sha256": "2fd57d3f2dbe29a1490126d2299d57388424e86a45b1f3fcce97a2945ebf7fb9",
+  "adapter_sha256": "4ffac94fcc417fa98ddc8237a6721efde5b098287b9b748ed734fe86396c3d44",
+  "train_rows": 20000,
+  "feature_width": 60,
+  "config": {
+    "device": "cuda:0",
+    "n_threads": 6,
+    "n_cv": 1,
+    "n_refit": 0,
+    "n_repeats": 1,
+    "val_fraction": 0.0,
+    "n_epochs": 1,
+    "batch_size": 256,
+    "use_early_stopping": false,
+    "random_state": 42,
+    "verbosity": 0,
+    "predict_batch_size": 1024,
+    "use_ls": true,
+    "lr": 0.053,
+    "wd": 0.015,
+    "sq_mom": 0.988,
+    "lr_sched": "flat_anneal",
+    "wd_sched": "cos_log_15",
+    "first_layer_lr_factor": 0.25,
+    "embedding_size": 5,
+    "max_one_hot_cat_size": 18,
+    "hidden_sizes": [
+      512,
+      256,
+      128
+    ],
+    "act": "silu",
+    "p_drop": 0.05,
+    "p_drop_sched": "invsqrtp1e-3",
+    "plr_hidden_1": 16,
+    "plr_hidden_2": 8,
+    "plr_act_name": "gelu",
+    "plr_lr_factor": 0.1151,
+    "plr_sigma": 2.33,
+    "ls_eps": 0.01,
+    "ls_eps_sched": "sqrt_cos",
+    "add_front_scale": false,
+    "bias_init_mode": "neg-uniform-dynamic-2",
+    "tfms": [
+      "one_hot",
+      "median_center",
+      "robust_scale",
+      "smooth_clip",
+      "embedding",
+      "l2_normalize"
+    ],
+    "stop_epoch": 1,
+    "n_ens": 2
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "seconds": 0.7420257889898494,
+      "training_parameter_devices": [
+        "cuda:0"
+      ],
+      "backing_data_device": "cpu",
+      "minibatch_devices": [
+        "cuda:0"
+      ]
+    }
+  ],
+  "fit_seconds": 0.746486221003579,
+  "a_b_a_max_error": 0.0,
+  "same_weights_native_static_max_error": 0.0,
+  "reload_max_error": 0.0,
+  "ended_utc": "2026-10-18T13:49:12.883191+00:00",
+  "peak_gpu_process_bytes": 239075328,
+  "peak_allocated_bytes": 45817344,
+  "peak_reserved_bytes": 56623104,
+  "peak_rss_bytes": 2050514944
+}

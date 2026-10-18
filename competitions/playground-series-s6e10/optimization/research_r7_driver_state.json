@@ -1,9 +1,10 @@
 {
-  "updated_utc": "2026-10-18T13:20:03.556519+00:00",
-  "status": "training",
+  "updated_utc": "2026-10-18T13:37:00.493703+00:00",
+  "status": "not_qualified",
   "driver_pid": 513719,
   "whole_top100_task_completed": false,
   "formal_used": 1,
   "remaining": 1,
-  "stage": "fivefold"
+  "stage": "fivefold",
+  "active_training": false
 }

@@ -1,10 +1,8 @@
 {
-  "updated_utc": "2026-10-18T11:15:19.470641+00:00",
-  "status": "training",
+  "updated_utc": "2026-10-18T11:18:54.839639+00:00",
+  "status": "route_complete",
   "route": "lean_realmlp",
-  "fold": 3,
-  "member": 7,
-  "pid": 474150,
-  "active_training": true,
-  "plan": "research_r4_plan.json"
+  "active_training": false,
+  "result": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/research_artifacts/r4_lean_gpu_init_oof/result.json",
+  "eligible_for_replication": true
 }

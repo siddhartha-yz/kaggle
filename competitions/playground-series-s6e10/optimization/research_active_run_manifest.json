@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-18T11:04:12.835360+00:00",
-  "phase": "R4 frozen paired validation",
+  "updated_utc": "2026-10-18T11:19:39.664407+00:00",
+  "phase": "fresh_complete_threefold_refitting",
   "current_window": "research_r4_plan.json",
   "budget": "research_w3_submission_ledger.json",
   "active_training": true,
@@ -12,7 +12,7 @@
     "observed_utc": "2026-10-18T04:00:00+00:00"
   },
   "recovery": "Inspect saved per-route files, logs and live processes before restart. Serial six CPU threads, 1GiB total process GPU ceiling and 778043392 byte allocator cap.",
-  "driver": "research_r4_lean_gpu_init.py",
+  "driver": "research_r4_baseline3.py",
   "state": "research_r4_state.json",
   "resource_override": "research_w3_resource_override.json",
   "status": "active_research_until_verified_actual_Top100",
@@ -20,7 +20,7 @@
   "completion": null,
   "last_exec_session": null,
   "last_log": "research_w3_tabicl_primary.log",
-  "active_log": "research_r4_lean_gpu_init.log",
+  "active_log": "research_r4_baseline3.log",
   "last_completed_states": [
     "research_w3_phase2_state.json",
     "research_w3_phase3_state.json"

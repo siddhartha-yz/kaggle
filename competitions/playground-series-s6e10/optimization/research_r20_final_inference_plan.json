@@ -1,9 +1,19 @@
 {
-  "frozen_utc": "2026-10-18T16:30:27.322978+00:00",
+  "frozen_utc": "2026-10-18T16:37:32.674701+00:00",
   "main_plan_sha256": "8d7ff0410f59f2f38480530c13add578794d4bd45e69f594d175b918842a9599",
   "code_sha256": {
-    "research_r20_audit.py": "34f6df1e82c4839106e6dbcf533ddfd59fe801aef5988e48540690caee5f538a",
-    "research_r20_csv.py": "8d9f2eadcbcec047ed46baabb7b30bbbdc08806c19b65dd7141eff38ff02ce42"
+    "research_r20_audit.py": "22401b05d7657ea7c2d4a756ed8a94c94c149c989c2e66f288927ab1b54236bb",
+    "research_r20_csv.py": "7f493000d546895efdfbdad8e3220f03ff1406128f2081e59e7d6ce4a754b539"
   },
-  "gates": "Twofixedviewsalpha.0125; winnerfivefoldandfreshthreefolddualv9/v7gates; independentGPUauxmembership/modelCPUreplay+outerLGBauditbeforefullfit/CSV. No publicOOF imported; parentonlysubmitter."
+  "gates": "Twofixedviewsalpha.0125; winnerfivefoldandfreshthreefolddualv9/v7gates; independentGPUauxmembership/modelCPUreplay+outerLGBauditbeforefullfit/CSV. No publicOOF imported; parentonlysubmitter.",
+  "inherited_artifact_sha256": {
+    "data/test.csv": "ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6",
+    "data/sample_submission.csv": "6165ecc5769962253534c2d840f26aab55dc3cc091d256bb3641bf6608194a71",
+    "research_artifacts/cb_deep_full_v1/test_components.npz": "21a69d56dd0ecd12d0d18cca80e1fdfbec07b269c2754122d24ceb0e2f397c79",
+    "research_artifacts/r4_lean_cv_final/test_components.npz": "20a7172d5a3e0d5f2ce2fedbe3997377d59b35dd58d20ab5322ebcf054f86409",
+    "submission_lean_half_r6_v8.csv": "e277a97762009cd1ebf739f3fa692ce2ee5e4c1cceff5fab225634f74dd98c5b",
+    "research_r4_delivery_audit.json": "b5c57beb4e997dc1e449ed1688fc171453300b9add3fb38ad73a5f5ff47789cd",
+    "research_r14_delivery_audit.json": "4576e1533f0d33dfafe18354adc9fab57951332a4c02c3a48e7949038ffb4945"
+  },
+  "inference_provenance_addition": "Pin exact previously auditedR14testarrays/data/csv and79-model audit. No learner, feature, gate or quality changes; before R20quality scoring."
 }

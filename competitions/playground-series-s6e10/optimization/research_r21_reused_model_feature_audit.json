@@ -1,0 +1,30 @@
+{
+  "sourcecb": {
+    "auxiliary_models": 13,
+    "source_manifest_sha256": "293aff186e179ccf05402582ef54dbac911a008ddb557603958633fb11faa754",
+    "peak_gpu_process_bytes": 549453824,
+    "source_model_reload_max_error": 0.0,
+    "new_features": 14,
+    "no_new_auxiliary_models_fitted": true,
+    "satisfaction_loaded_in_feature_generation": false,
+    "replayed_model_records": 13,
+    "expected_rating_replay_max_error": 0.0,
+    "train_feature_sha256": "a90f99fdf77958685989a8f7b80535473512b66a34e9189a54efb068ee667bf2",
+    "test_feature_sha256": "595e17e984e154a694203af7268431166721a9f1ddbbe540c3cdbcd4baaf9d99",
+    "transductive": false
+  },
+  "officialcb": {
+    "auxiliary_models": 65,
+    "source_manifest_sha256": "b0b8d914a5d37fcf0fb11a31858daae9db86c277baf3bd6fe7525066fa410e2b",
+    "peak_gpu_process_bytes": 608174080,
+    "source_model_reload_max_error": 0.0,
+    "new_features": 14,
+    "no_new_auxiliary_models_fitted": true,
+    "satisfaction_loaded_in_feature_generation": false,
+    "replayed_model_records": 65,
+    "expected_rating_replay_max_error": 0.0,
+    "train_feature_sha256": "a84aa864037d83224699765a7b6d69beb2861f9fa16c61b67dc324d71f121a95",
+    "test_feature_sha256": "7ecc4ffc7ab935d23194a7b9c18fcfca3fd40c8a34748dfa1ffb55120a7b8bcb",
+    "transductive": true
+  }
+}

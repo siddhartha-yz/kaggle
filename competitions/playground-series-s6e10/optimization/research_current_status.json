@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-18T16:32:05.047273+00:00",
-  "status": "active_r20_auxiliary_domain_control_after_r19_corrected_bound_rejection",
+  "updated_utc": "2026-10-18T16:49:05.572587+00:00",
+  "status": "active_r21_conditional_surprisal_after_r20_confirmation_rejection",
   "confirmed_public_baseline": {
     "recorded_utc": "2026-10-18T12:41:59.978029+00:00",
     "source": "ParentauthenticatedKagglebrowserreport",
@@ -11,15 +11,16 @@
     "public_auc": 0.96076,
     "previous_v6_public_auc": 0.96058,
     "public_delta": 0.00018,
-    "rank": 809,
-    "ranked_teams": 2243,
+    "rank": 814,
+    "ranked_teams": 2271,
     "rank100_public_auc": 0.9619,
     "gap_to_rank100": 0.00114,
     "formal_current_round_used": 1,
     "formal_current_round_limit": 2,
     "remaining": 1,
     "actual_top100_verified": false,
-    "rank_observation_note": "Snapshot supplied by parent; exact separate rank observationtime not supplied."
+    "rank_observation_note": "ActualauthenticatedKagglebrowsersnapshot relayedbyparent; no localKaggleloginorupload.",
+    "rank_observed_utc": "2026-10-18T16:26:00Z"
   },
   "backup_candidate": {
     "csv": "submission_log_odds_pool_r14_v9.csv",
@@ -31,25 +32,51 @@
     "parent_instruction": "Holdlastslot;retainv9backup. Continue grounded experiments."
   },
   "active_driver": {
-    "updated_utc": "2026-10-18T16:31:24.551143+00:00",
-    "status": "auxiliary_training",
-    "driver_pid": 604985,
+    "updated_utc": "2026-10-18T16:47:30.540266+00:00",
+    "status": "training",
+    "driver_pid": 619531,
     "formal_used": 1,
     "remaining": 1,
     "whole_top100_task_completed": false,
-    "variant": "officialcb",
+    "variant": "sourcecb",
+    "stage": "fivefold",
     "active_training": true
   },
   "current_training": {
-    "status": "auxiliary_training",
-    "updated_utc": "2026-10-18T16:32:02.375225+00:00",
-    "variant": "officialcb",
-    "rating": "Departure/Arrival time convenient",
-    "rating_index": 1,
-    "auxiliary_fold": 2,
-    "pid": 606762,
+    "status": "training",
+    "started_utc": "2026-10-18T16:48:46.568691+00:00",
+    "variant": "sourcecb",
+    "stage": "fivefold",
+    "fold": 3,
+    "train_rows": 559708,
+    "valid_rows": 139927,
+    "parameters": {
+      "n_estimators": 639,
+      "learning_rate": 0.04,
+      "num_leaves": 63,
+      "max_depth": -1,
+      "min_child_samples": 150,
+      "reg_lambda": 10,
+      "objective": "binary",
+      "n_jobs": 6,
+      "random_state": 42,
+      "verbosity": -1,
+      "colsample_bytree": 1.0,
+      "subsample": 1.0,
+      "max_bin": 255,
+      "deterministic": true,
+      "force_col_wise": true
+    },
+    "plan_sha256": "bc406af413dadf72fe5f4efd3e445aa59c95a9febe87a3cac9a4bfeb9d85c892",
+    "runner_sha256": "6500cc449bd796b089c03a4f92987484e86f1e4f61596beceed95db45837ac75",
+    "source_manifest_sha256": "293aff186e179ccf05402582ef54dbac911a008ddb557603958633fb11faa754",
+    "aux_features_sha256": "ff1f19902d29f87a855c11257f126ba987171f06e3b63e09be7c447c04b166e0",
+    "probability_features_sha256": "a90f99fdf77958685989a8f7b80535473512b66a34e9189a54efb068ee667bf2",
+    "outer_validation_used_in_fit": false,
+    "pid": 620168,
     "active_training": true,
-    "peak_gpu_process_bytes": 549453824
+    "device": "cpu",
+    "cpu_threads": 6
   },
   "completed_r7_neural_members": 40,
   "total_fivefold_members": 40,
@@ -2314,6 +2341,16 @@
       "corrected_lower": -2.0892511039178506e-05,
       "threefold_run": false,
       "csv_created": false
+    },
+    "R20_CB_rating_expectation_domains": {
+      "source_fivefold_qualified": true,
+      "official_fivefold_qualified": false,
+      "source_threefold_qualified": false,
+      "source_threefold_delta_vs_v9": 3.464818074427889e-05,
+      "source_threefold_corrected_lower_vs_v9": -0.00016723734856312784,
+      "source_threefold_corrected_lower_vs_v7": -0.00012654208891081607,
+      "csv_created": false,
+      "no_new_formal_submissions": true
     }
   },
   "r19_auxiliary_source": {
@@ -2338,5 +2375,40 @@
     "scientific_recipe_and_dual_view_gates_unchanged": true,
     "source_control04_models_preserved": 13,
     "no_R20_SAT_quality_scored": true
+  },
+  "previous_rank_snapshot": {
+    "rank": 809,
+    "ranked_teams": 2243,
+    "recorded_utc": "2026-10-18T12:41:59.978029+00:00"
+  },
+  "r21_feature_generation": {
+    "sourcecb": {
+      "auxiliary_models": 13,
+      "source_manifest_sha256": "293aff186e179ccf05402582ef54dbac911a008ddb557603958633fb11faa754",
+      "peak_gpu_process_bytes": 549453824,
+      "source_model_reload_max_error": 0.0,
+      "new_features": 14,
+      "no_new_auxiliary_models_fitted": true,
+      "satisfaction_loaded_in_feature_generation": false,
+      "replayed_model_records": 13,
+      "expected_rating_replay_max_error": 0.0,
+      "train_feature_sha256": "a90f99fdf77958685989a8f7b80535473512b66a34e9189a54efb068ee667bf2",
+      "test_feature_sha256": "595e17e984e154a694203af7268431166721a9f1ddbbe540c3cdbcd4baaf9d99",
+      "transductive": false
+    },
+    "officialcb": {
+      "auxiliary_models": 65,
+      "source_manifest_sha256": "b0b8d914a5d37fcf0fb11a31858daae9db86c277baf3bd6fe7525066fa410e2b",
+      "peak_gpu_process_bytes": 608174080,
+      "source_model_reload_max_error": 0.0,
+      "new_features": 14,
+      "no_new_auxiliary_models_fitted": true,
+      "satisfaction_loaded_in_feature_generation": false,
+      "replayed_model_records": 65,
+      "expected_rating_replay_max_error": 0.0,
+      "train_feature_sha256": "a84aa864037d83224699765a7b6d69beb2861f9fa16c61b67dc324d71f121a95",
+      "test_feature_sha256": "7ecc4ffc7ab935d23194a7b9c18fcfca3fd40c8a34748dfa1ffb55120a7b8bcb",
+      "transductive": true
+    }
   }
 }

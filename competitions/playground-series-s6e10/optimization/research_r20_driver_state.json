@@ -1,10 +1,11 @@
 {
-  "updated_utc": "2026-10-18T16:31:24.551143+00:00",
-  "status": "auxiliary_training",
+  "updated_utc": "2026-10-18T16:41:20.718569+00:00",
+  "status": "not_qualified",
   "driver_pid": 604985,
   "formal_used": 1,
   "remaining": 1,
   "whole_top100_task_completed": false,
-  "variant": "officialcb",
-  "active_training": true
+  "variant": "sourcecb",
+  "stage": "threefold",
+  "active_training": false
 }

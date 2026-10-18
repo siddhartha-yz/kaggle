@@ -14,6 +14,7 @@ from research_r15_loader import pool
 def main():
     final=json.loads((ROOT/'research_r20_final_inference_plan.json').read_text());assert final['main_plan_sha256']==sha(ROOT/'research_r20_plan.json')
     for n,h in final['code_sha256'].items():assert sha(ROOT/n)==h
+    for n,h in final['inherited_artifact_sha256'].items():assert sha(ROOT/n)==h
     plan=json.loads((ROOT/'research_r20_plan.json').read_text())
     for kind in ('source_sha256','artifact_sha256'):
         for n,h in plan[kind].items():assert sha(ROOT/n)==h

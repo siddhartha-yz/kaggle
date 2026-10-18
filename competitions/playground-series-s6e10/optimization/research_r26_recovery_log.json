@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-18T18:27:21.910485+00:00",
+  "updated_utc": "2026-10-18T18:28:59.983830+00:00",
   "resource_only": true,
   "recovery_source_sha256": "7a68b84d0187d22b01cb9031f48a6aabe06adb4bf1fa7540108ad18c032cb49f",
   "attempts": [
@@ -29,6 +29,22 @@
       ],
       "new_completed_models": [
         "fivefold/fold3"
+      ],
+      "frozen_training_code_and_seed_unchanged": true
+    },
+    {
+      "attempt": 3,
+      "ended_utc": "2026-10-18T18:28:59.983816+00:00",
+      "exit_code": 0,
+      "completed_models": [
+        "fivefold/fold0",
+        "fivefold/fold1",
+        "fivefold/fold2",
+        "fivefold/fold3",
+        "fivefold/fold4"
+      ],
+      "new_completed_models": [
+        "fivefold/fold4"
       ],
       "frozen_training_code_and_seed_unchanged": true
     }

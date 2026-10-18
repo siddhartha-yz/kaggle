@@ -1,35 +1,43 @@
 {
-  "checked_utc": "2026-10-18T07:28:38.765919+00:00",
+  "checked_utc": "2026-10-18T07:32:08.075040+00:00",
   "task_status": "in_progress_not_closed",
-  "processes_verified_alive_utc": "2026-10-18T07:27:47Z",
-  "controller_pid": 412841,
-  "active_child_pid": 414005,
-  "active_command": [
-    "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/.venv-ftt-w3/bin/python",
-    "-u",
-    "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/research_w3_family_components.py",
-    "--component",
-    "ftt",
-    "--split",
-    "confirm",
-    "--fold",
-    "0"
-  ],
-  "active_log": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/research_w3_family_confirm_ftt_fold0.log",
-  "log_mtime_utc": "2026-10-18T07:28:36.058511+00:00",
-  "last_log_lines": [
-    "research_artifacts/w3_ftt_confirm/fold0/member1/outer {'epoch': 2, 'train_loss': 0.22836853563785553, 'seconds': 10.718428372005292, 'gpu_free_bytes': 6286016512, 'process_gpu_mib': 574, 'peak_allocated_bytes': 284718080, 'peak_reserved_bytes': 402653184}",
-    "research_artifacts/w3_ftt_confirm/fold0/member1/outer {'epoch': 3, 'train_loss': 0.2255091518163681, 'seconds': 11.48574284100323, 'gpu_free_bytes': 6285164544, 'process_gpu_mib': 574, 'peak_allocated_bytes': 284718080, 'peak_reserved_bytes': 402653184}"
-  ],
-  "current_stage": "SecondFTTransformer member inner epochselection for confirmation; twoTabM and threeDeepFM views already complete. Familyaverage primary passed; no confirmation AUC until final component completes.",
+  "active_experiment": "strict inner5fold synthetic residual kernel feature + fixed original LGB component replacement",
+  "progress": {
+    "status": "crossfitting_neighborhood_features",
+    "started_utc": "2026-10-18T07:30:58.368094+00:00",
+    "plan_sha256": "82697480925b9665a71e38497b272bc6d76b6687fa27724b5e4ca0fb3c7f8bcd",
+    "runner_sha256": "0c971b2455f615b7bee9c714a5242207b6c7e6d6a40b858da4376b5e7e12dfaa",
+    "kernel_code_sha256": "38cb8f26fe5b7f4d8ffc71ce95e76e0353a502b3656460a54088666377ecd147",
+    "source_teacher_model_sha256": "db538bc2303ee5075be4016e0653424ad885d3cd207001dbddb42441e66588e4",
+    "source_feature_sha256": "0fc3167103ca04ecaac018c622ccca4d8f7e365b46f032ad11f318e409dbfc55",
+    "train_rows": 559708,
+    "valid_rows": 139927,
+    "old_component_reconstruction_max_abs_diff": 3.3306690738754696e-16,
+    "stage": "outer_validation",
+    "groups_complete": 0,
+    "groups_total": 3151,
+    "rss_bytes": 1366155264,
+    "available_ram_bytes": 10843070464,
+    "last_progress_utc": "2026-10-18T07:32:05.749732+00:00"
+  },
+  "latest_completed_experiment": "fixed3familyneuralaverage",
+  "family_confirm_vs_v6": {
+    "baseline_auc": 0.961026158861244,
+    "candidate_auc": 0.9610914543765532,
+    "delta_auc": 6.529551530920497e-05,
+    "paired_se": 5.6888550301479754e-05,
+    "conditional_95pct_ci": [
+      -4.620604328169535e-05,
+      0.0001767970739001053
+    ],
+    "candidate_logloss": 0.2222968278473506
+  },
+  "family_confirmation_eligible": false,
+  "new_oof_or_full_training_started": false,
   "completed_primary_screens": 25,
-  "latest_qualified_primary": "Fixed3familymean:delta+.0001261002360752883, conditionalCI[+.00001145624209179341,+.0002407442300587832]",
-  "current_best_submitted": "v6 public.96058 at04:00UTC snapshot; no new deliverable qualifies yet",
   "new_formal_submissions_used": 0,
   "reserved_slots": 0,
   "remaining_new_formal_submissions": 2,
   "deadline_utc": "2026-10-18T11:06:00Z",
-  "last_git_checkpoint": "fac0aa7",
-  "progress_visibility_blocker": "Parent reports in-progress commentary is not visible. Available cross-thread messaging tool explicitly requires direct human authorization; receiving parent requests does not authorize messaging back. Asked user asynchronously for narrowly scoped authorization; training continues and code/status checkpoints remain on GitHub.",
-  "no_training_stopped_for_status_reply": true
+  "progress_visibility": "Awaiting direct human authorization for cross-thread progress messages; no training is blocked. Current code and checkpoints are pushed to codex/s6e10-local-confirmation."
 }

@@ -1,0 +1,35 @@
+{
+  "frozen_utc": "2026-10-18T07:30:56.209020+00:00",
+  "hypothesis": "Nonparametric local residuals from official training labels can capture smooth conditional response differences missed by global source teachers and axis-aligned trees. Earlier nearest-neighbor features used independent original labels, not strictly cross-fitted synthetic residuals. One fixed residual-neighborhood representation, not a weight/threshold search.",
+  "target_residual": "official_training_y minus independent audited original-only LGB teacher probability",
+  "metric": "ExactFlightDistancegroup, equal-weight mean L1 on16numeric plus Hamming4categorical;Age/100,ratings/5,log1pdelay/log361,missingnumeric-1. FixedsamegeometryasexistingOriginalNeighbors.",
+  "features": [
+    "K16 residual weightedmean with alpha20 shrinkage",
+    "K64 residual weightedmean with alpha20 shrinkage",
+    "minimum normalized distance",
+    "log1p available sameFlightDistance trainingpool count"
+  ],
+  "kernel": "exp(-(distance-nearest_distance)/.05); stableargsortties in source row order. Shrink toward source-only residual mean. UnseenDistance falls back to source residual mean, minimumDistance1,count0.",
+  "leakage": "Five shuffled label-independent KFold innerfolds seed20261018; every official training row feature excludes all its innerfold labels. Validation uses all outertrain only; hardassertquery/source rowindicesdisjoint. No query labels accepted by kernel transform or featurebuilder. Source rowidentity is auditonly, never predictor.",
+  "checks": "10 toy own-target perturbations unchanged, selfqueryrejection, row-identityinvariance and analytic local shrinkage/unseenDistancefallback all PASS before real fit.",
+  "params": {
+    "n_estimators": 639,
+    "learning_rate": 0.04,
+    "num_leaves": 63,
+    "max_depth": -1,
+    "min_child_samples": 150,
+    "reg_lambda": 10,
+    "objective": "binary",
+    "n_jobs": 6,
+    "random_state": 42,
+    "verbosity": -1,
+    "colsample_bytree": 1.0,
+    "subsample": 1.0,
+    "max_bin": 255,
+    "deterministic": true,
+    "force_col_wise": true
+  },
+  "candidate": "v6+(45/128)*(new_LGB-old_LGB); all other fixed components unchanged",
+  "gates": "ExistingW3 primary+.0001/lower>0, confirmationlower>0, OOFallfoldpositivepooled+.0002/lower>0.",
+  "resources": "CPU6serial,noGPU; RSS3GiB and availableRAM2GiB guards; unchanged W3 start10:10 hard10:45 absolute11:06; formalparentonly0/2used; paid0."
+}

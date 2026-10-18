@@ -1,0 +1,42 @@
+{
+  "frozen_utc": "2026-10-18T17:30:39.924866+00:00",
+  "stage": "Hardware-only new74-field RealMLP probe, no validation score. Run serially after R22 GPU work ends.",
+  "hypothesis": "R21 target-free conditional rating means and observed-rating surprisal strengthened the tree and yielded actualpublic+.00028. Existing Lean47 neural family has never received these27 fields. Test whether nativeRealMLP can learn their interactions while preserving raw ratings. This is distinct from failedSAT targetencodings R7/R8, originalSATteacher R17, and numericcounts R13.",
+  "features": "All Lean47 fields plus ALL13 existing R20 official crossfit E[rating|other20], ALL13 R21 -log(P(observedrating|other20)) and unweightedmeansurprisal=74. Fixed no feature selection. Reuse audited65 target-free GPUCB models; no newauxiliarytraining. Explicitly transductive known official train/test covariates, no SAT input/target forpretext; ownauxfold excluded.",
+  "sizing": "Fullfivefold0 outertrain559708 rows, one disposable epoch (notqualitycandidate), query4096 labelsunused; probe n32, fallbackn16 thenn8 ONLY ifallocatorOOM. Never choosemembers byAUC. Same unchangedCPU6/GPU742MiBallocator/ownGPU1GiB/RSS8GiB/RAM2GiB guard.",
+  "quality_protocol_after_resource": "Ifresourceproven, freeze chosenmembers3epochs recipe and .5v10tree+.5newNN logodds. Finish5before scoring, both paired95%lower and correctedresampledtalpha.025lower>0 versuscurrentformalv10 and oldv7; only thenfresh3samegates. No untouchedholdout claim;labels reused. Exactrunner/plan frozenbeforefirstquality fit.",
+  "candidate_final": "Onlyifqualifiedandaudited: mean5savedouterNNmodels thenfixedlogoddspoolwithauditedv10fulltree. No extra fullNNtraining, testCSVhash/schema/IDs/probability checks andLibrarybyteverification, parentonlysubmitter.",
+  "additional_qualified_submissions_authorized": true,
+  "remaining_daily_quota": null,
+  "goal_actual_public_rank_at_most": 500,
+  "limits": {
+    "cpu_threads": 6,
+    "gpu_allocator_cap_bytes": 778043392,
+    "own_GPU_ceiling_bytes": 1073741824,
+    "RSS_ceiling_bytes": 8589934592,
+    "available_RAM_min_bytes": 2147483648,
+    "paid_resources": false,
+    "serial_fits": true
+  },
+  "source_sha256": {
+    "research_r23_probe.py": "42e14cc2406ccbb99bb5d588b8c47bbfc49152f9540d74c38d6e5c0d153652af",
+    "research_r23_features.py": "90eaab4ae13284cb7f097efd865279c51d0d939de7c28883f000be9f39199bd7",
+    "research_r23_loader.py": "b21b6210be0b72350d63942e7c86b1ad872165d55a4e2c66fcdab3a059a8b64a",
+    "research_r23_guard.py": "13e4de70ccb00335a65bd13c1acdd6b00cf38b7c218a4f9506393258e23ed270",
+    "research_r4_lean_features.py": "cfe6f672865f30622ce8e5cf9149f11e2e6f822f9c1b687f7e7c0431c9218303",
+    "research_features.py": "6c029528249d6772a958b29c46f4f095da9f91136c2721eb2a4d268f360fcfe9",
+    "research_r8_probe.py": "2fd57d3f2dbe29a1490126d2299d57388424e86a45b1f3fcce97a2945ebf7fb9",
+    "research_r8_streaming.py": "4ffac94fcc417fa98ddc8237a6721efde5b098287b9b748ed734fe86396c3d44",
+    "research_r15_loader.py": "00f8cf7e231c496aeadb92af0209f7b288ac6093ade109c6bb61b09155efae36",
+    "research_w3_common.py": "283ac69b13f64b32c1a33cbc41acea1ce2d598a4552391bc3f886aaea6f23a4b"
+  },
+  "artifact_sha256": {
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "research_r8_plan.json": "6f5419bf618336ed5d55777f2614172a6e2ea62bc20cb81a223cadcc9121b984",
+    "research_artifacts/r20_aux_officialcb/result.json": "b0b8d914a5d37fcf0fb11a31858daae9db86c277baf3bd6fe7525066fa410e2b",
+    "research_artifacts/r20_aux_officialcb/train_features.npz": "453272cc42fda45ad6708b81460fbee023d58372f6c812bebdd0c829f4136651",
+    "research_artifacts/r21_conditional_officialcb/result.json": "bdffd97687e51e432355afad14f7320ab8175bb0298ba6d0e84992bb39717ee6",
+    "research_artifacts/r21_conditional_officialcb/train_features.npz": "a84aa864037d83224699765a7b6d69beb2861f9fa16c61b67dc324d71f121a95",
+    "research_artifacts/r21_probability_lgb_officialcb_fivefold/oof.npz": "ff911354393ad4f08c3d7ef7448bc6c64ac1ad17129fcd279aa067f8d09d0938"
+  }
+}

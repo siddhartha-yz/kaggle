@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-18T18:48:30.020925+00:00",
+  "updated_utc": "2026-10-18T18:53:23.992764+00:00",
   "status": "R29_NN80_matched32_resource_then_fivefold",
   "confirmed_public_baseline": {
     "source": "ParentauthenticatedKagglebrowserreport",
@@ -2309,15 +2309,16 @@
     "parent_only_submitter": true,
     "resources_unchanged": true,
     "submission_policy": "HumanexplicitlyauthorizesqualifiednewversionswithinactualKaggledailyquota;parentverifiesquota and handlescloudbrowserupload/rank. No per-two-submissionconfirmation.",
-    "remaining_daily_quota": null,
+    "remaining_daily_quota": 6,
     "prior_artificial_round_limit_superseded": true,
     "historical_round_note": "These earlier two-slot fields are historical, superseded by qualified submissions within actual dailyquota.",
     "rank500_public_auc": 0.96169,
-    "gap_to_rank500": 0.00055
+    "gap_to_rank500": 0.00055,
+    "requires_fresh_quota_check_before_upload": true
   },
   "whole_top500_task_completed": false,
   "goal_superseded_previous_top100": true,
-  "remaining_daily_quota": null,
+  "remaining_daily_quota": 6,
   "formal_budget_policy": "HumanexplicitlyauthorizesqualifiednewversionswithinactualKaggledailyquota;parentverifiesquota and handlescloudbrowserupload/rank. No per-two-submissionconfirmation.",
   "prior_round_used": 2,
   "prior_round_limit": 2,
@@ -3592,5 +3593,7 @@
     "csv_generated": false,
     "formal_new_submissions": 0,
     "reason": "Bagfivefold+17.52ppmqualified; freshthreefold+3.10ppm butbothbounds crossed0. No fullrefit/CSV; actualv11 remainsbest."
-  }
+  },
+  "daily_quota_verified_in_UI": true,
+  "daily_quota_verification_record": "research_daily_quota_after_v11_verified.json"
 }

@@ -1,0 +1,18 @@
+{
+  "prepared_utc": "2026-10-18T11:26:42.602277+00:00",
+  "status": "prepared_not_executed",
+  "trigger": "Only if verifiedactualTop100goal stillunmet after currentR4 replication/parentformalreceipt; do not interrupt current pipeline.",
+  "mechanism": "Outertrain-only sklearnTargetEncoder smoothauto onall21rawcolumns plus13 rating x Class/Travel/Customer segment response keys; unchanged57fieldLGB baseline +34TE numericfeatures.",
+  "novelty_vs_history": "Old strict_interaction_te usedsix distance/age-centric keys withfixedalpha20. W3sourceSATprofiles usedindependentoriginalper-fieldresponses, not competitioninnercrossfittedconditionalresponses. No prior trial coveredthis all-column auto-shrinkage/segment response mechanism.",
+  "source_urls": [
+    "https://raw.githubusercontent.com/alvis1111/s6e10-airline-solution/main/README.md",
+    "https://raw.githubusercontent.com/alvis1111/s6e10-airline-solution/main/src/te_proper.py",
+    "https://raw.githubusercontent.com/alvis1111/s6e10-airline-solution/main/independent_repro/xgb_deep_repro.py"
+  ],
+  "source_code_executed": false,
+  "unknown_test_predictions_used": false,
+  "source_caution": "Externalreportedmetrics historical only, notcurrentTop100. Exactxgb_deep_repro.py buildsouterTE beforeinnerselection; copyingthatpath would contaminateinnerselection. Our proposed fixed639treecontrast needsnoearlystop; any futureearlystop must refitfeatureengineeringinsidenestedtraining.",
+  "suggested_model": "UnchangedbaselineLGB639/minchild150/lambda10; fixed45/128componentreplacement, no weightsearch. Freeze actualnext experimentprotocol beforemodelquality.",
+  "validation_caution": "Historicalofficiallabelsreused; anyfutureCV must discloseadaptiveselection. CurrentR4gates andmodels remain unchanged.",
+  "feature_code_sha256": "53c8c9015a11bde7da4570d5b7c79aca21d725ce84ff79e3db77eb939d3031e8"
+}

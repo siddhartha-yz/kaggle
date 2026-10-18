@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-10-18T07:05:30.284879+00:00",
+  "environment": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/.venv-ftt-w3",
+  "inherited_GPU_packages_readonly": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/.venv-gpu/lib/python3.12/site-packages",
+  "new_package": "rtdl-revisiting-models==0.0.2",
+  "wheel_sha256": "12c9cc1fc7a950cececd977ed810ec336fb8354cab96cd858855ce8e8cbe6e0a",
+  "release_utc": "2023-11-30T11:32:54Z",
+  "license": "Apache-2.0",
+  "source": "https://github.com/yandex-research/rtdl-revisiting-models",
+  "global_or_GPU_environment_modified": false
+}

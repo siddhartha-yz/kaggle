@@ -1,0 +1,35 @@
+{
+  "frozen_utc": "2026-10-18T07:08:42.539001+00:00",
+  "hypothesis": "Supervised per-feature attention can learn multiway interactions different from MLP/TabM/DeepFM, using all in-fold labels rather than small in-context subsamples. No FT-Transformer family has been tested. One official default architecture, no hyperparameter search.",
+  "package": "rtdl-revisiting-models==0.0.2 official Apache2 implementation, isolated environment",
+  "reference": "https://github.com/yandex-research/rtdl-revisiting-models",
+  "model": "FTTransformer.get_default_kwargs(2):2blocks128width8heads,attentiondropout.15,ReGLU4/3,FFNdropout.05,residualdropout0,d_out1",
+  "features": "Outer-training median+quantile-normal17 numeric; native21 raw value categories with training-only vocabulary and unknown0; one source-only LGB logit standardized on training. Inner selection fits its own preprocessing on inner training only.",
+  "optimizer": "Official default AdamW lr1e-4, wd1e-5, official no-decay groups, foreachFalse; no schedule",
+  "training_precision": "bfloat16 autocast, float32 parameters and optimizer; inference float32, TF32disabled",
+  "seeds": [
+    42,
+    20261018
+  ],
+  "inner_fraction": 0.1,
+  "inner_split_seed": 20261018,
+  "max_epochs": 12,
+  "patience": 3,
+  "inner_min_delta": 1e-05,
+  "epoch_selection": "Minimum inner-training-heldout BCE, 10% of outer-training only. Discard inner models; fresh all-outer-training refit at independently selected epoch count for each seed. No outer-validation early stopping.",
+  "batch_resource_rule": "No-score64step probe256; on allocatorOOM only try128. Stop if worst-case primary projected>1200seconds. Freeze successful batch before primary metric.",
+  "chosen_batch_rows": 512,
+  "blend": "0.75v6+0.25mean(two FT-Transformer members)",
+  "gates": "Existing W3 primary+.0001/lowerCI>0; confirmation lowerCI>0; OOF everyfoldpositive, pooled+.0002/lowerCI>0. No public/weight tuning.",
+  "resources": "Serial fits, CPU6, reduced allocator778043392bytes plus driver headroom under total1GiB; existing initial+epoch GPUfree guards; W3 start10:10 hard10:45 deadline11:06; paid0; parent-only formal0/2used.",
+  "resource_amendment_frozen_utc": "2026-10-18T07:11:52.356324+00:00",
+  "resource_amendment": "Original3block192-width configuration failed prespecified projected-primary<=1200s guard before any validation score. Use official2block128-width default, testing512 then256 then128 batches only on OOM. Same2seeds12epoch inner selection, blend and effect gates. Exactly one reduced-architecture resource retry before any primary metric.",
+  "n_blocks": 2,
+  "probe_batch_rows": [
+    512,
+    256,
+    128
+  ],
+  "hardware_configuration_frozen_utc": "2026-10-18T07:12:34.130217+00:00",
+  "hardware_probe_sha256": "5bab856da2270461189d2fc0a03f0330c58eddc0a62a8bcaa237c3a6e352aa28"
+}

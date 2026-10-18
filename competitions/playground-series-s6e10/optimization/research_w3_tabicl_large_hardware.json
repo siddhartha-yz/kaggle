@@ -1,0 +1,77 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-18T07:01:39.275140+00:00",
+  "hardware": {
+    "initial_gpu_free_bytes": 6929711104,
+    "gpu_name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "cap_bytes": 1073741824
+  },
+  "process_initial_gpu_mib": 154,
+  "reduced_allocator_cap_bytes": 778043392,
+  "score_evaluated": false,
+  "query_labels_used": false,
+  "attempts": [
+    {
+      "context_rows": 8192,
+      "kv_cache": true,
+      "n_estimators": 4,
+      "started_utc": "2026-10-18T07:01:39.865912+00:00",
+      "status": "failed",
+      "error": "OutOfMemoryError('CUDA out of memory. Tried to allocate 104.00 MiB. GPU 0 has a total capacity of 11.47 GiB of which 5.71 GiB is free. Process 52375 has 23.59 MiB memory in use. Process 61596 has 79.59 MiB memory in use. Process 62137 has 40.09 MiB memory in use. Process 84946 has 33.09 MiB memory in use. Process 94784 has 35.09 MiB memory in use. Process 250191 has 538.86 MiB memory in use. Including non-PyTorch memory, this process has 914.00 MiB memory in use. 742.00 MiB allowed; Of the allocated memory 645.56 MiB is allocated by PyTorch, and 70.44 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)')",
+      "ended_utc": "2026-10-18T07:01:40.637248+00:00"
+    },
+    {
+      "context_rows": 8192,
+      "kv_cache": "repr",
+      "n_estimators": 4,
+      "started_utc": "2026-10-18T07:01:40.845134+00:00",
+      "status": "failed",
+      "error": "OutOfMemoryError('CUDA out of memory. Tried to allocate 104.00 MiB. GPU 0 has a total capacity of 11.47 GiB of which 5.69 GiB is free. Process 52375 has 23.59 MiB memory in use. Process 61596 has 79.59 MiB memory in use. Process 62137 has 40.09 MiB memory in use. Process 84946 has 33.09 MiB memory in use. Process 94784 has 35.09 MiB memory in use. Process 250191 has 538.86 MiB memory in use. Including non-PyTorch memory, this process has 936.00 MiB memory in use. 742.00 MiB allowed; Of the allocated memory 645.43 MiB is allocated by PyTorch, and 92.57 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)')",
+      "ended_utc": "2026-10-18T07:01:41.251631+00:00"
+    },
+    {
+      "context_rows": 4096,
+      "kv_cache": true,
+      "n_estimators": 4,
+      "started_utc": "2026-10-18T07:01:41.431584+00:00",
+      "status": "failed",
+      "error": "OutOfMemoryError('CUDA out of memory. Tried to allocate 52.00 MiB. GPU 0 has a total capacity of 11.47 GiB of which 5.71 GiB is free. Process 52375 has 23.59 MiB memory in use. Process 61596 has 79.59 MiB memory in use. Process 62137 has 40.09 MiB memory in use. Process 84946 has 33.09 MiB memory in use. Process 94784 has 35.09 MiB memory in use. Process 250191 has 538.86 MiB memory in use. Including non-PyTorch memory, this process has 912.00 MiB memory in use. 742.00 MiB allowed; Of the allocated memory 585.35 MiB is allocated by PyTorch, and 128.65 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)')",
+      "ended_utc": "2026-10-18T07:01:41.910372+00:00"
+    },
+    {
+      "context_rows": 4096,
+      "kv_cache": "repr",
+      "n_estimators": 4,
+      "started_utc": "2026-10-18T07:01:42.080925+00:00",
+      "first_fit_seconds": 0.4993676480007707,
+      "predict128_seconds": 0.10096017600153573,
+      "warm_fit_seconds": 0.2688324709961307,
+      "A_B_A_context_isolation_max_abs_diff": 0.0,
+      "peak_allocated_bytes": 530903040,
+      "peak_reserved_bytes": 727711744,
+      "process_gpu_mib": 482,
+      "estimated_primary_seconds": 189.24128696040614,
+      "status": "complete",
+      "ended_utc": "2026-10-18T07:01:43.455738+00:00"
+    }
+  ],
+  "chosen": {
+    "context_rows": 4096,
+    "kv_cache": "repr",
+    "n_estimators": 4,
+    "started_utc": "2026-10-18T07:01:42.080925+00:00",
+    "first_fit_seconds": 0.4993676480007707,
+    "predict128_seconds": 0.10096017600153573,
+    "warm_fit_seconds": 0.2688324709961307,
+    "A_B_A_context_isolation_max_abs_diff": 0.0,
+    "peak_allocated_bytes": 530903040,
+    "peak_reserved_bytes": 727711744,
+    "process_gpu_mib": 482,
+    "estimated_primary_seconds": 189.24128696040614,
+    "status": "complete",
+    "ended_utc": "2026-10-18T07:01:43.455738+00:00",
+    "fresh_native_vs_reuse_max_abs_diff": 0.0
+  },
+  "model_sha256": "bdc7dbd5e4ff21f8f0456fcf90c6b7cdf72dbea960f2d05b19bec19f9b3d4ed0",
+  "completed_utc": "2026-10-18T07:01:44.460885+00:00"
+}

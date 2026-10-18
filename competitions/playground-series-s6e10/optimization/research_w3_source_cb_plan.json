@@ -1,0 +1,26 @@
+{
+  "frozen_utc": "2026-10-18T07:03:11.797626+00:00",
+  "hypothesis": "The original-only LGB/XGB/NN teachers are tested, but native ordered CatBoost value-category statistics on the clean source are not. Source categorical FlightDistance/Age/delays may preserve nonlinear source label patterns blurred by numeric tree splits and source neural models. Add one independent teacher feature to the fixed synthetic LGB component.",
+  "source_params": {
+    "iterations": 2000,
+    "depth": 8,
+    "learning_rate": 0.05,
+    "l2_leaf_reg": 5,
+    "loss_function": "Logloss",
+    "eval_metric": "AUC",
+    "random_seed": 20261018,
+    "thread_count": 6,
+    "task_type": "CPU",
+    "boosting_type": "Ordered",
+    "max_ctr_complexity": 1,
+    "one_hot_max_size": 18,
+    "used_ram_limit": "2gb",
+    "allow_writing_files": false,
+    "verbose": 200
+  },
+  "selection": "Use only preexisting source-only selection split, AUC early stop150; refit audited129859 source rows at chosen tree count. No synthetic labels used in source model fit or selection.",
+  "source_features": "raw21 predictors +17 integer numeric value categories; source-training medians only. No source id/index, no official exact-match source rows.",
+  "synthetic_recipe": "Existing57 feature LGB639 fixed params + original CatBoost probability; replace LGB mass45/128 in v6, preserve other components. No outer validation eval_set.",
+  "gates": "Unchanged W3 primary+.0001 and lowerCI>0; confirmation lower>0; OOF everyfoldpositive,pooled+.0002 and lower>0.",
+  "resources": "CPU6, serial, no GPU; resource callback RSS<=3GiB and host available>=2GiB. Existing W3 cutoffs and parent-only2submission budget unchanged."
+}

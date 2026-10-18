@@ -1,0 +1,15 @@
+{
+  "status": "failed",
+  "started_utc": "2026-10-18T07:10:44.548453+00:00",
+  "hardware": {
+    "initial_gpu_free_bytes": 6664552448,
+    "gpu_name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "cap_bytes": 1073741824,
+    "reduced_allocator_cap_bytes": 778043392
+  },
+  "score_evaluated": false,
+  "outer_validation_labels_used": false,
+  "attempts": [],
+  "error": "Projected primary runtime exceeds20min; assertion occurred before timing detail was persisted.",
+  "ended_utc": "2026-10-18T07:10:45.978236+00:00"
+}

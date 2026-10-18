@@ -1,0 +1,17 @@
+{
+  "frozen_utc": "2026-10-18T23:49:14.961494+00:00",
+  "main_plan_sha256": "8f5bd1a38bde897a720ae3c5eea137dc94ef0c5a9c1bcd8cd15ae9e0938ff5c6",
+  "audit_code_sha256": {
+    "research_r56_audit.py": "584ce736b32869e37465504601d723833b392cfce5670cb9a1e13f308de8e5c1"
+  },
+  "required_quality": "Both frozen5and3paired95%lower>0 and corrected resampled-t lower>0",
+  "CPU_threads": 6,
+  "execute_only_without_other_model_training": true,
+  "checks": [
+    "130 previously audited auxiliary model hashes and target-free input scopes",
+    "Independent5/3fold membership and own full target-encoder/category/count reconstruction",
+    "74width/52numeric/22nominal and61unchanged fields vsR23",
+    "8CPU NN probability replays, trueclass1,32members,3epochs,caps",
+    "Unchanged actualv11 tree and exact equal clipped logit blend, both gates"
+  ]
+}

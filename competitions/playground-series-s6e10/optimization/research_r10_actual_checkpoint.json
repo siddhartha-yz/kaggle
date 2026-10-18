@@ -1,0 +1,38 @@
+{
+  "updated_utc": "2026-10-18T14:22:24.712923+00:00",
+  "status": "active_r10_nested_duration",
+  "R8": {
+    "lean_delta_vs_v8": 8.345839407342126e-06,
+    "append_delta_vs_v8": 4.335235690211547e-06,
+    "fivefold_both_rejected": true,
+    "threefold_started": false
+  },
+  "R9": {
+    "fivefold_auc": 0.9614608544227268,
+    "delta_vs_v8": -4.4062458305349494e-06,
+    "eligible": false,
+    "threefold_started": false
+  },
+  "R10": {
+    "driver_pid": 535467,
+    "worker_pid": 535468,
+    "stage": "fivefold",
+    "fold": 0,
+    "status": "selecting_inner_epoch",
+    "inner_epochs_completed": 6,
+    "outer_quality_not_yet_scored": true,
+    "record_last_modified_utc": "2026-10-18T14:22:20.447618+00:00",
+    "log_last_modified_utc": "2026-10-18T14:22:20.447618+00:00",
+    "log": "research_r10_fivefold.log",
+    "gpu_process_peak_bytes": 553648128,
+    "cpu_threads": 6,
+    "gpu_process_ceiling_bytes": 1073741824
+  },
+  "new_candidate_CSVs_since_v8": 0,
+  "formal_used": 1,
+  "remaining": 1,
+  "backup": "submission_lean_half_r6_v8.csv",
+  "backup_sha256": "e277a97762009cd1ebf739f3fa692ce2ee5e4c1cceff5fab225634f74dd98c5b",
+  "whole_top100_task_completed": false,
+  "original_checkout_preserved": true
+}

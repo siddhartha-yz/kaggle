@@ -1,0 +1,689 @@
+{
+  "status": "passed",
+  "audited_utc": "2026-10-18T16:53:59.794079+00:00",
+  "plan_sha256": "bc406af413dadf72fe5f4efd3e445aa59c95a9febe87a3cac9a4bfeb9d85c892",
+  "variant": "officialcb",
+  "source_rating_models_verified": 65,
+  "auxiliary_transductive": true,
+  "source_prediction_replays": [
+    {
+      "rating": "Inflight wifi service",
+      "auxiliary_fold": 0,
+      "error": 0.0
+    },
+    {
+      "rating": "Inflight wifi service",
+      "auxiliary_fold": 1,
+      "error": 0.0
+    },
+    {
+      "rating": "Inflight wifi service",
+      "auxiliary_fold": 2,
+      "error": 0.0
+    },
+    {
+      "rating": "Inflight wifi service",
+      "auxiliary_fold": 3,
+      "error": 0.0
+    },
+    {
+      "rating": "Inflight wifi service",
+      "auxiliary_fold": 4,
+      "error": 0.0
+    },
+    {
+      "rating": "Departure/Arrival time convenient",
+      "auxiliary_fold": 0,
+      "error": 0.0
+    },
+    {
+      "rating": "Departure/Arrival time convenient",
+      "auxiliary_fold": 1,
+      "error": 0.0
+    },
+    {
+      "rating": "Departure/Arrival time convenient",
+      "auxiliary_fold": 2,
+      "error": 0.0
+    },
+    {
+      "rating": "Departure/Arrival time convenient",
+      "auxiliary_fold": 3,
+      "error": 0.0
+    },
+    {
+      "rating": "Departure/Arrival time convenient",
+      "auxiliary_fold": 4,
+      "error": 0.0
+    },
+    {
+      "rating": "Ease of Online booking",
+      "auxiliary_fold": 0,
+      "error": 0.0
+    },
+    {
+      "rating": "Ease of Online booking",
+      "auxiliary_fold": 1,
+      "error": 0.0
+    },
+    {
+      "rating": "Ease of Online booking",
+      "auxiliary_fold": 2,
+      "error": 0.0
+    },
+    {
+      "rating": "Ease of Online booking",
+      "auxiliary_fold": 3,
+      "error": 0.0
+    },
+    {
+      "rating": "Ease of Online booking",
+      "auxiliary_fold": 4,
+      "error": 0.0
+    },
+    {
+      "rating": "Gate location",
+      "auxiliary_fold": 0,
+      "error": 0.0
+    },
+    {
+      "rating": "Gate location",
+      "auxiliary_fold": 1,
+      "error": 0.0
+    },
+    {
+      "rating": "Gate location",
+      "auxiliary_fold": 2,
+      "error": 0.0
+    },
+    {
+      "rating": "Gate location",
+      "auxiliary_fold": 3,
+      "error": 0.0
+    },
+    {
+      "rating": "Gate location",
+      "auxiliary_fold": 4,
+      "error": 0.0
+    },
+    {
+      "rating": "Food and drink",
+      "auxiliary_fold": 0,
+      "error": 0.0
+    },
+    {
+      "rating": "Food and drink",
+      "auxiliary_fold": 1,
+      "error": 0.0
+    },
+    {
+      "rating": "Food and drink",
+      "auxiliary_fold": 2,
+      "error": 0.0
+    },
+    {
+      "rating": "Food and drink",
+      "auxiliary_fold": 3,
+      "error": 0.0
+    },
+    {
+      "rating": "Food and drink",
+      "auxiliary_fold": 4,
+      "error": 0.0
+    },
+    {
+      "rating": "Online boarding",
+      "auxiliary_fold": 0,
+      "error": 0.0
+    },
+    {
+      "rating": "Online boarding",
+      "auxiliary_fold": 1,
+      "error": 0.0
+    },
+    {
+      "rating": "Online boarding",
+      "auxiliary_fold": 2,
+      "error": 0.0
+    },
+    {
+      "rating": "Online boarding",
+      "auxiliary_fold": 3,
+      "error": 0.0
+    },
+    {
+      "rating": "Online boarding",
+      "auxiliary_fold": 4,
+      "error": 0.0
+    },
+    {
+      "rating": "Seat comfort",
+      "auxiliary_fold": 0,
+      "error": 0.0
+    },
+    {
+      "rating": "Seat comfort",
+      "auxiliary_fold": 1,
+      "error": 0.0
+    },
+    {
+      "rating": "Seat comfort",
+      "auxiliary_fold": 2,
+      "error": 0.0
+    },
+    {
+      "rating": "Seat comfort",
+      "auxiliary_fold": 3,
+      "error": 0.0
+    },
+    {
+      "rating": "Seat comfort",
+      "auxiliary_fold": 4,
+      "error": 0.0
+    },
+    {
+      "rating": "Inflight entertainment",
+      "auxiliary_fold": 0,
+      "error": 0.0
+    },
+    {
+      "rating": "Inflight entertainment",
+      "auxiliary_fold": 1,
+      "error": 0.0
+    },
+    {
+      "rating": "Inflight entertainment",
+      "auxiliary_fold": 2,
+      "error": 0.0
+    },
+    {
+      "rating": "Inflight entertainment",
+      "auxiliary_fold": 3,
+      "error": 0.0
+    },
+    {
+      "rating": "Inflight entertainment",
+      "auxiliary_fold": 4,
+      "error": 0.0
+    },
+    {
+      "rating": "On-board service",
+      "auxiliary_fold": 0,
+      "error": 0.0
+    },
+    {
+      "rating": "On-board service",
+      "auxiliary_fold": 1,
+      "error": 0.0
+    },
+    {
+      "rating": "On-board service",
+      "auxiliary_fold": 2,
+      "error": 0.0
+    },
+    {
+      "rating": "On-board service",
+      "auxiliary_fold": 3,
+      "error": 0.0
+    },
+    {
+      "rating": "On-board service",
+      "auxiliary_fold": 4,
+      "error": 0.0
+    },
+    {
+      "rating": "Leg room service",
+      "auxiliary_fold": 0,
+      "error": 0.0
+    },
+    {
+      "rating": "Leg room service",
+      "auxiliary_fold": 1,
+      "error": 0.0
+    },
+    {
+      "rating": "Leg room service",
+      "auxiliary_fold": 2,
+      "error": 0.0
+    },
+    {
+      "rating": "Leg room service",
+      "auxiliary_fold": 3,
+      "error": 0.0
+    },
+    {
+      "rating": "Leg room service",
+      "auxiliary_fold": 4,
+      "error": 0.0
+    },
+    {
+      "rating": "Baggage handling",
+      "auxiliary_fold": 0,
+      "error": 0.0
+    },
+    {
+      "rating": "Baggage handling",
+      "auxiliary_fold": 1,
+      "error": 0.0
+    },
+    {
+      "rating": "Baggage handling",
+      "auxiliary_fold": 2,
+      "error": 0.0
+    },
+    {
+      "rating": "Baggage handling",
+      "auxiliary_fold": 3,
+      "error": 0.0
+    },
+    {
+      "rating": "Baggage handling",
+      "auxiliary_fold": 4,
+      "error": 0.0
+    },
+    {
+      "rating": "Checkin service",
+      "auxiliary_fold": 0,
+      "error": 0.0
+    },
+    {
+      "rating": "Checkin service",
+      "auxiliary_fold": 1,
+      "error": 0.0
+    },
+    {
+      "rating": "Checkin service",
+      "auxiliary_fold": 2,
+      "error": 0.0
+    },
+    {
+      "rating": "Checkin service",
+      "auxiliary_fold": 3,
+      "error": 0.0
+    },
+    {
+      "rating": "Checkin service",
+      "auxiliary_fold": 4,
+      "error": 0.0
+    },
+    {
+      "rating": "Cleanliness",
+      "auxiliary_fold": 0,
+      "error": 0.0
+    },
+    {
+      "rating": "Cleanliness",
+      "auxiliary_fold": 1,
+      "error": 0.0
+    },
+    {
+      "rating": "Cleanliness",
+      "auxiliary_fold": 2,
+      "error": 0.0
+    },
+    {
+      "rating": "Cleanliness",
+      "auxiliary_fold": 3,
+      "error": 0.0
+    },
+    {
+      "rating": "Cleanliness",
+      "auxiliary_fold": 4,
+      "error": 0.0
+    }
+  ],
+  "verified_new_model_records": 8,
+  "model_records": [
+    {
+      "stage": "fivefold",
+      "fold": 0,
+      "model_sha256": "330ea6a62ac401075a7ea036eee1136a1d51d4e6d5cfc8f46aac9099ceb0d490",
+      "replay_error": 0.0
+    },
+    {
+      "stage": "fivefold",
+      "fold": 1,
+      "model_sha256": "0ef6b037ec0f6c1ff2b2c3f252c30efb5d9675461ff2b7b07e2fd5ea28239117",
+      "replay_error": 0.0
+    },
+    {
+      "stage": "fivefold",
+      "fold": 2,
+      "model_sha256": "8bec2ddc866ce3d9452c767f14767dd93b250953879666f43d302123d879d6cd",
+      "replay_error": 0.0
+    },
+    {
+      "stage": "fivefold",
+      "fold": 3,
+      "model_sha256": "6b25ce4542a7cb0cddfc2bdcfb2d2cc61441d11b981d813da58a63fc2fa46364",
+      "replay_error": 0.0
+    },
+    {
+      "stage": "fivefold",
+      "fold": 4,
+      "model_sha256": "5f651d516a76d8c34ce9e50a5d9de44cd9a8e6d5303763434943adb85e892492",
+      "replay_error": 0.0
+    },
+    {
+      "stage": "threefold",
+      "fold": 0,
+      "model_sha256": "a2b3e0104b3372f784fefb8c5708f3c944c19394033bf5efc166a6b2bf4d54bb",
+      "replay_error": 0.0
+    },
+    {
+      "stage": "threefold",
+      "fold": 1,
+      "model_sha256": "964b6455a472be1d249f547bae7ee47d2205bf0f9970d406e501d98af614034f",
+      "replay_error": 0.0
+    },
+    {
+      "stage": "threefold",
+      "fold": 2,
+      "model_sha256": "1e9ca3bf619b424a9d812afa82be015c1de0f6b6370dec0659267b52baf71868",
+      "replay_error": 0.0
+    }
+  ],
+  "validation": {
+    "fivefold": {
+      "vs_v9": {
+        "pooled": {
+          "baseline_auc": 0.9614787666333333,
+          "candidate_auc": 0.9615338914351743,
+          "delta_auc": 5.512480184099999e-05,
+          "paired_se": 1.4302664167960312e-05,
+          "conditional_95pct_ci": [
+            2.709158007179778e-05,
+            8.31580236102022e-05
+          ],
+          "candidate_logloss": 0.22159475906831758,
+          "conditional_97_5pct_ci": [
+            2.3066771362916214e-05,
+            8.718283231908376e-05
+          ]
+        },
+        "fold_comparisons": [
+          {
+            "baseline_auc": 0.9607490848150055,
+            "candidate_auc": 0.960818384445062,
+            "delta_auc": 6.929963005641859e-05,
+            "paired_se": 3.314082054800037e-05,
+            "conditional_95pct_ci": [
+              4.3436217823378796e-06,
+              0.0001342556383304993
+            ],
+            "candidate_logloss": 0.22369070331749064
+          },
+          {
+            "baseline_auc": 0.9616737803939621,
+            "candidate_auc": 0.9617131397187628,
+            "delta_auc": 3.935932480070292e-05,
+            "paired_se": 3.1627003812155406e-05,
+            "conditional_95pct_ci": [
+              -2.262960267112167e-05,
+              0.00010134825227252751
+            ],
+            "candidate_logloss": 0.22111134532840437
+          },
+          {
+            "baseline_auc": 0.9620193611259688,
+            "candidate_auc": 0.9620715765969017,
+            "delta_auc": 5.221547093292589e-05,
+            "paired_se": 3.135672856949134e-05,
+            "conditional_95pct_ci": [
+              -9.243717063277143e-06,
+              0.00011367465892912892
+            ],
+            "candidate_logloss": 0.21974364050659978
+          },
+          {
+            "baseline_auc": 0.9613877874274774,
+            "candidate_auc": 0.9614292433668903,
+            "delta_auc": 4.1455939412848863e-05,
+            "paired_se": 3.219147173063584e-05,
+            "conditional_95pct_ci": [
+              -2.1639345179197387e-05,
+              0.00010455122400489511
+            ],
+            "candidate_logloss": 0.2224645141338692
+          },
+          {
+            "baseline_auc": 0.961608017009956,
+            "candidate_auc": 0.9616819435749557,
+            "delta_auc": 7.392656499971562e-05,
+            "paired_se": 3.157467459210105e-05,
+            "conditional_95pct_ci": [
+              1.204020279919756e-05,
+              0.00013581292720023366
+            ],
+            "candidate_logloss": 0.22096359205522378
+          }
+        ],
+        "corrected_resampled_t": {
+          "mean_delta": 5.5251386040522374e-05,
+          "se": 1.0597073811683674e-05,
+          "test_train_ratio": 0.25,
+          "df": 4,
+          "one_sided_alpha": 0.0125,
+          "lower_bound": 1.8210311371848637e-05
+        },
+        "eligible_for_new_partition_replication": true,
+        "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+      },
+      "vs_v7": {
+        "pooled": {
+          "baseline_auc": 0.9612963083501996,
+          "candidate_auc": 0.9615338914351743,
+          "delta_auc": 0.00023758308497467961,
+          "paired_se": 2.4994834682604062e-05,
+          "conditional_95pct_ci": [
+            0.00018859320899677564,
+            0.0002865729609525836
+          ],
+          "candidate_logloss": 0.22159475906831758,
+          "conditional_97_5pct_ci": [
+            0.00018155959434105613,
+            0.00029360657560830307
+          ]
+        },
+        "fold_comparisons": [
+          {
+            "baseline_auc": 0.9605549130841352,
+            "candidate_auc": 0.960818384445062,
+            "delta_auc": 0.00026347136092674805,
+            "paired_se": 5.761665018450102e-05,
+            "conditional_95pct_ci": [
+              0.00015054272656512608,
+              0.00037639999528837003
+            ],
+            "candidate_logloss": 0.22369070331749064
+          },
+          {
+            "baseline_auc": 0.961453787125527,
+            "candidate_auc": 0.9617131397187628,
+            "delta_auc": 0.0002593525932358398,
+            "paired_se": 5.4536987922318056e-05,
+            "conditional_95pct_ci": [
+              0.00015246009690809644,
+              0.0003662450895635832
+            ],
+            "candidate_logloss": 0.22111134532840437
+          },
+          {
+            "baseline_auc": 0.9618540373111633,
+            "candidate_auc": 0.9620715765969017,
+            "delta_auc": 0.00021753928573842174,
+            "paired_se": 5.523858453840754e-05,
+            "conditional_95pct_ci": [
+              0.00010927166004314296,
+              0.00032580691143370053
+            ],
+            "candidate_logloss": 0.21974364050659978
+          },
+          {
+            "baseline_auc": 0.9611975606235804,
+            "candidate_auc": 0.9614292433668903,
+            "delta_auc": 0.00023168274330986893,
+            "paired_se": 5.652471302720644e-05,
+            "conditional_95pct_ci": [
+              0.00012089430577654431,
+              0.00034247118084319356
+            ],
+            "candidate_logloss": 0.2224645141338692
+          },
+          {
+            "baseline_auc": 0.9614600858673521,
+            "candidate_auc": 0.9616819435749557,
+            "delta_auc": 0.00022185770760363432,
+            "paired_se": 5.545093449250075e-05,
+            "conditional_95pct_ci": [
+              0.00011317387599833285,
+              0.0003305415392089358
+            ],
+            "candidate_logloss": 0.22096359205522378
+          }
+        ],
+        "corrected_resampled_t": {
+          "mean_delta": 0.00023878073816290256,
+          "se": 1.431222415480122e-05,
+          "test_train_ratio": 0.25,
+          "df": 4,
+          "one_sided_alpha": 0.0125,
+          "lower_bound": 0.00018875370494470526
+        },
+        "eligible_for_new_partition_replication": true,
+        "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+      }
+    },
+    "threefold": {
+      "vs_v9": {
+        "pooled": {
+          "baseline_auc": 0.9613011565408273,
+          "candidate_auc": 0.9613639105085731,
+          "delta_auc": 6.275396774579889e-05,
+          "paired_se": 1.5305852908169607e-05,
+          "conditional_95pct_ci": [
+            3.2754496045786456e-05,
+            9.275343944581132e-05
+          ],
+          "candidate_logloss": 0.221951123473291,
+          "conditional_97_5pct_ci": [
+            2.844738728910742e-05,
+            9.706054820249036e-05
+          ]
+        },
+        "fold_comparisons": [
+          {
+            "baseline_auc": 0.9614992760594552,
+            "candidate_auc": 0.9615539401963736,
+            "delta_auc": 5.466413691845862e-05,
+            "paired_se": 2.6267505217640104e-05,
+            "conditional_95pct_ci": [
+              3.1798266918840135e-06,
+              0.00010614844714503321
+            ],
+            "candidate_logloss": 0.22186361791266426
+          },
+          {
+            "baseline_auc": 0.9623277134868478,
+            "candidate_auc": 0.9623985911074313,
+            "delta_auc": 7.087762058355374e-05,
+            "paired_se": 2.7132875957695045e-05,
+            "conditional_95pct_ci": [
+              1.7697183706471452e-05,
+              0.00012405805746063602
+            ],
+            "candidate_logloss": 0.2191241644848277
+          },
+          {
+            "baseline_auc": 0.9601411186041661,
+            "candidate_auc": 0.960207757979787,
+            "delta_auc": 6.663937562090272e-05,
+            "paired_se": 2.6174234241504147e-05,
+            "conditional_95pct_ci": [
+              1.5337876507554592e-05,
+              0.00011794087473425085
+            ],
+            "candidate_logloss": 0.22486560051949542
+          }
+        ],
+        "corrected_resampled_t": {
+          "mean_delta": 6.406037770763835e-05,
+          "se": 7.676136496591945e-06,
+          "test_train_ratio": 0.5000000000015322,
+          "df": 2,
+          "one_sided_alpha": 0.0125,
+          "lower_bound": 1.6427288534949314e-05
+        },
+        "eligible_for_new_partition_replication": true,
+        "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+      },
+      "vs_v7": {
+        "pooled": {
+          "baseline_auc": 0.9611235237273941,
+          "candidate_auc": 0.9613639105085731,
+          "delta_auc": 0.0002403867811789917,
+          "paired_se": 2.63384803202737e-05,
+          "conditional_95pct_ci": [
+            0.00018876335975125526,
+            0.00029201020260672815
+          ],
+          "candidate_logloss": 0.221951123473291,
+          "conditional_97_5pct_ci": [
+            0.00018135163954816102,
+            0.0002994219228098224
+          ]
+        },
+        "fold_comparisons": [
+          {
+            "baseline_auc": 0.961338709585493,
+            "candidate_auc": 0.9615539401963736,
+            "delta_auc": 0.00021523061088069007,
+            "paired_se": 4.618019078592627e-05,
+            "conditional_95pct_ci": [
+              0.0001247174369402746,
+              0.00030574378482110554
+            ],
+            "candidate_logloss": 0.22186361791266426
+          },
+          {
+            "baseline_auc": 0.9621200950025629,
+            "candidate_auc": 0.9623985911074313,
+            "delta_auc": 0.0002784961048684087,
+            "paired_se": 4.537437763009873e-05,
+            "conditional_95pct_ci": [
+              0.00018956232471341517,
+              0.00036742988502340223
+            ],
+            "candidate_logloss": 0.2191241644848277
+          },
+          {
+            "baseline_auc": 0.9599695864548055,
+            "candidate_auc": 0.960207757979787,
+            "delta_auc": 0.00023817152498151195,
+            "paired_se": 4.531828872902439e-05,
+            "conditional_95pct_ci": [
+              0.00014934767907262415,
+              0.00032699537089039973
+            ],
+            "candidate_logloss": 0.22486560051949542
+          }
+        ],
+        "corrected_resampled_t": {
+          "mean_delta": 0.00024396608024353691,
+          "se": 2.9237722998905853e-05,
+          "test_train_ratio": 0.5000000000015322,
+          "df": 2,
+          "one_sided_alpha": 0.0125,
+          "lower_bound": 6.253586890850036e-05
+        },
+        "eligible_for_new_partition_replication": true,
+        "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+      }
+    }
+  },
+  "independent_tree_reconstruction": true,
+  "outer_maps_trainonly": true,
+  "positive_class": "True=1",
+  "actual_top100_verified": false,
+  "limitation": "Historically reused validation labels; conditional bounds omit adaptive history; no Kaggle score established."
+}

@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-18T16:49:05.572587+00:00",
-  "status": "active_r21_conditional_surprisal_after_r20_confirmation_rejection",
+  "updated_utc": "2026-10-18T16:58:54.135752+00:00",
+  "status": "qualified_audited_Library_delivered_unsubmitted",
   "confirmed_public_baseline": {
     "recorded_utc": "2026-10-18T12:41:59.978029+00:00",
     "source": "ParentauthenticatedKagglebrowserreport",
@@ -23,60 +23,37 @@
     "rank_observed_utc": "2026-10-18T16:26:00Z"
   },
   "backup_candidate": {
-    "csv": "submission_log_odds_pool_r14_v9.csv",
-    "sha256": "55a1cc1805674a4d1419d1c9ff61b64ee35d61f0117782b6c886dd103f9f57c8",
+    "csv": "submission_conditional_probability_r21_v10.csv",
+    "sha256": "15a0a6d7032204ccf1165df5686af6214217b170979356da07a8a19638fc33b6",
     "rows": 299844,
-    "bytes": 8205510,
+    "bytes": 8205100,
     "library_saved_and_exact_byte_verified": true,
     "formal_submitted": false,
-    "parent_instruction": "Holdlastslot;retainv9backup. Continue grounded experiments."
+    "variant": "officialcb",
+    "features": 84,
+    "auxiliary_transductive": true,
+    "fivefold_auc": 0.9615338914351743,
+    "threefold_auc": 0.9613639105085731,
+    "fivefold_delta_vs_v9": 5.512480184099999e-05,
+    "threefold_delta_vs_v9": 6.275396774579889e-05,
+    "parent_instruction": "Retainlastformalslot;actualTop100notachieved."
   },
   "active_driver": {
-    "updated_utc": "2026-10-18T16:47:30.540266+00:00",
-    "status": "training",
+    "updated_utc": "2026-10-18T16:58:54.135752+00:00",
+    "status": "qualified_audited_Library_delivered_unsubmitted",
     "driver_pid": 619531,
     "formal_used": 1,
     "remaining": 1,
     "whole_top100_task_completed": false,
-    "variant": "sourcecb",
-    "stage": "fivefold",
-    "active_training": true
+    "variant": "officialcb",
+    "stage": "threefold",
+    "active_training": false,
+    "active_work": false,
+    "actual_top100_verified": false
   },
   "current_training": {
-    "status": "training",
-    "started_utc": "2026-10-18T16:48:46.568691+00:00",
-    "variant": "sourcecb",
-    "stage": "fivefold",
-    "fold": 3,
-    "train_rows": 559708,
-    "valid_rows": 139927,
-    "parameters": {
-      "n_estimators": 639,
-      "learning_rate": 0.04,
-      "num_leaves": 63,
-      "max_depth": -1,
-      "min_child_samples": 150,
-      "reg_lambda": 10,
-      "objective": "binary",
-      "n_jobs": 6,
-      "random_state": 42,
-      "verbosity": -1,
-      "colsample_bytree": 1.0,
-      "subsample": 1.0,
-      "max_bin": 255,
-      "deterministic": true,
-      "force_col_wise": true
-    },
-    "plan_sha256": "bc406af413dadf72fe5f4efd3e445aa59c95a9febe87a3cac9a4bfeb9d85c892",
-    "runner_sha256": "6500cc449bd796b089c03a4f92987484e86f1e4f61596beceed95db45837ac75",
-    "source_manifest_sha256": "293aff186e179ccf05402582ef54dbac911a008ddb557603958633fb11faa754",
-    "aux_features_sha256": "ff1f19902d29f87a855c11257f126ba987171f06e3b63e09be7c447c04b166e0",
-    "probability_features_sha256": "a90f99fdf77958685989a8f7b80535473512b66a34e9189a54efb068ee667bf2",
-    "outer_validation_used_in_fit": false,
-    "pid": 620168,
-    "active_training": true,
-    "device": "cpu",
-    "cpu_threads": 6
+    "status": "no_active_training",
+    "active_training": false
   },
   "completed_r7_neural_members": 40,
   "total_fivefold_members": 40,
@@ -2351,6 +2328,17 @@
       "source_threefold_corrected_lower_vs_v7": -0.00012654208891081607,
       "csv_created": false,
       "no_new_formal_submissions": true
+    },
+    "R21_conditional_rating_probability": {
+      "status": "qualified_audited_Library_delivered_unsubmitted",
+      "source_only_fivefold_qualified": false,
+      "official_fivefold_qualified": true,
+      "official_threefold_qualified": true,
+      "relative_to_private_v9": {
+        "fivefold_delta": 5.512480184099999e-05,
+        "threefold_delta": 6.275396774579889e-05
+      },
+      "formal_submitted": false
     }
   },
   "r19_auxiliary_source": {
@@ -2410,5 +2398,14 @@
       "test_feature_sha256": "7ecc4ffc7ab935d23194a7b9c18fcfca3fd40c8a34748dfa1ffb55120a7b8bcb",
       "transductive": true
     }
+  },
+  "previous_backup_candidate": {
+    "csv": "submission_log_odds_pool_r14_v9.csv",
+    "sha256": "55a1cc1805674a4d1419d1c9ff61b64ee35d61f0117782b6c886dd103f9f57c8",
+    "rows": 299844,
+    "bytes": 8205510,
+    "library_saved_and_exact_byte_verified": true,
+    "formal_submitted": false,
+    "parent_instruction": "Holdlastslot;retainv9backup. Continue grounded experiments."
   }
 }

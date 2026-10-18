@@ -1,0 +1,132 @@
+{
+  "status": "complete",
+  "checked_utc": "2026-10-18T16:53:00.622334+00:00",
+  "variant": "officialcb",
+  "stage": "threefold",
+  "vs_private_v9": {
+    "pooled": {
+      "baseline_auc": 0.9613011565408273,
+      "candidate_auc": 0.9613639105085731,
+      "delta_auc": 6.275396774579889e-05,
+      "paired_se": 1.5305852908169607e-05,
+      "conditional_95pct_ci": [
+        3.2754496045786456e-05,
+        9.275343944581132e-05
+      ],
+      "candidate_logloss": 0.221951123473291,
+      "conditional_97_5pct_ci": [
+        2.844738728910742e-05,
+        9.706054820249036e-05
+      ]
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.9614992760594552,
+        "candidate_auc": 0.9615539401963736,
+        "delta_auc": 5.466413691845862e-05,
+        "paired_se": 2.6267505217640104e-05,
+        "conditional_95pct_ci": [
+          3.1798266918840135e-06,
+          0.00010614844714503321
+        ],
+        "candidate_logloss": 0.22186361791266426
+      },
+      {
+        "baseline_auc": 0.9623277134868478,
+        "candidate_auc": 0.9623985911074313,
+        "delta_auc": 7.087762058355374e-05,
+        "paired_se": 2.7132875957695045e-05,
+        "conditional_95pct_ci": [
+          1.7697183706471452e-05,
+          0.00012405805746063602
+        ],
+        "candidate_logloss": 0.2191241644848277
+      },
+      {
+        "baseline_auc": 0.9601411186041661,
+        "candidate_auc": 0.960207757979787,
+        "delta_auc": 6.663937562090272e-05,
+        "paired_se": 2.6174234241504147e-05,
+        "conditional_95pct_ci": [
+          1.5337876507554592e-05,
+          0.00011794087473425085
+        ],
+        "candidate_logloss": 0.22486560051949542
+      }
+    ],
+    "corrected_resampled_t": {
+      "mean_delta": 6.406037770763835e-05,
+      "se": 7.676136496591945e-06,
+      "test_train_ratio": 0.5000000000015322,
+      "df": 2,
+      "one_sided_alpha": 0.0125,
+      "lower_bound": 1.6427288534949314e-05
+    },
+    "eligible_for_new_partition_replication": true,
+    "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+  },
+  "vs_official_v7": {
+    "pooled": {
+      "baseline_auc": 0.9611235237273941,
+      "candidate_auc": 0.9613639105085731,
+      "delta_auc": 0.0002403867811789917,
+      "paired_se": 2.63384803202737e-05,
+      "conditional_95pct_ci": [
+        0.00018876335975125526,
+        0.00029201020260672815
+      ],
+      "candidate_logloss": 0.221951123473291,
+      "conditional_97_5pct_ci": [
+        0.00018135163954816102,
+        0.0002994219228098224
+      ]
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.961338709585493,
+        "candidate_auc": 0.9615539401963736,
+        "delta_auc": 0.00021523061088069007,
+        "paired_se": 4.618019078592627e-05,
+        "conditional_95pct_ci": [
+          0.0001247174369402746,
+          0.00030574378482110554
+        ],
+        "candidate_logloss": 0.22186361791266426
+      },
+      {
+        "baseline_auc": 0.9621200950025629,
+        "candidate_auc": 0.9623985911074313,
+        "delta_auc": 0.0002784961048684087,
+        "paired_se": 4.537437763009873e-05,
+        "conditional_95pct_ci": [
+          0.00018956232471341517,
+          0.00036742988502340223
+        ],
+        "candidate_logloss": 0.2191241644848277
+      },
+      {
+        "baseline_auc": 0.9599695864548055,
+        "candidate_auc": 0.960207757979787,
+        "delta_auc": 0.00023817152498151195,
+        "paired_se": 4.531828872902439e-05,
+        "conditional_95pct_ci": [
+          0.00014934767907262415,
+          0.00032699537089039973
+        ],
+        "candidate_logloss": 0.22486560051949542
+      }
+    ],
+    "corrected_resampled_t": {
+      "mean_delta": 0.00024396608024353691,
+      "se": 2.9237722998905853e-05,
+      "test_train_ratio": 0.5000000000015322,
+      "df": 2,
+      "one_sided_alpha": 0.0125,
+      "lower_bound": 6.253586890850036e-05
+    },
+    "eligible_for_new_partition_replication": true,
+    "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+  },
+  "eligible": true,
+  "oof_sha256": "bad7accc330405cf8387f6294a992ac6249b72cebf3003948452159efe49a869"
+}

@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-10-18T16:56:47.156375+00:00",
+  "csv": "submission_conditional_probability_r21_v10.csv",
+  "bytes": 8205100,
+  "sha256": "15a0a6d7032204ccf1165df5686af6214217b170979356da07a8a19638fc33b6",
+  "downloaded_bytes_equal_original": true,
+  "local_identity_persisted": true
+}

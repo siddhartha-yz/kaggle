@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-18T20:51:33.991795+00:00",
-  "status": "R39_not_qualified_R40_propernested_iteration_LGB84",
+  "updated_utc": "2026-10-18T20:56:10.890437+00:00",
+  "status": "R40_not_qualified_R41_featurehalf_LGB84_nested",
   "confirmed_public_baseline": {
     "source": "ParentauthenticatedKagglebrowserreport",
     "reported_utc": "2026-10-18T17:58:48.436175+00:00",
@@ -4271,7 +4271,7 @@
     "formal_new_submissions": 0,
     "reason": "CB84 nested GPU failed fivefold vs v11 (-12.762ppm); matched GPU57 diagnostic also shows no conditional feature gain (-1.024ppm). Do not repeat this route on CPU without new evidence."
   },
-  "active_route": "R40",
+  "active_route": "R41",
   "r32_plan_sha256": "b29a258c179feb3e6a397aa9d3fb4c0a49c342a4e8050c5d10054c979c3906ac",
   "r32_result": {
     "status": "complete",
@@ -4980,5 +4980,13 @@
     "fivefold_delta": 4.0551268017940956e-06,
     "csv_generated": false
   },
-  "r40_plan_sha256": "49c25e667d7064a88ca607f2663c9d0cc1407cb7c4c0bf2df8747653a836930f"
+  "r40_plan_sha256": "49c25e667d7064a88ca607f2663c9d0cc1407cb7c4c0bf2df8747653a836930f",
+  "r40_result": {
+    "file": "research_r40_result.json",
+    "sha256": "351971516d4126562b1dbb9ca32a245ef1a6245efab122f35069d85e01ea4bdb",
+    "status": "not_qualified",
+    "delta": -3.866886609582565e-06,
+    "csv_generated": false
+  },
+  "r41_plan_sha256": "6c3524a5361b9fc4d1f20f5653fcbdbf7301d9b58ac5488c072c4f69fa5415ce"
 }

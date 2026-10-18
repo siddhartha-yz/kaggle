@@ -1,0 +1,209 @@
+{
+  "status": "complete_model_structure_only",
+  "recorded_utc": "2026-10-18T20:55:15.402904+00:00",
+  "new_models_fitted": 0,
+  "new_quality_scores_computed": false,
+  "rows": [
+    {
+      "fold": 0,
+      "feature_count": 84,
+      "top_features": [
+        {
+          "name": "orig_teacher_lgb",
+          "gain_fraction": 0.9398453097184865
+        },
+        {
+          "name": "rating_surprisal_0",
+          "gain_fraction": 0.003428481589217835
+        },
+        {
+          "name": "aux_rating_ev_5",
+          "gain_fraction": 0.0022743736244071064
+        },
+        {
+          "name": "aux_rating_ev_0",
+          "gain_fraction": 0.0018556598183433264
+        },
+        {
+          "name": "f028",
+          "gain_fraction": 0.00184961572398159
+        },
+        {
+          "name": "orig_lookup0_mean",
+          "gain_fraction": 0.0018431626649437116
+        },
+        {
+          "name": "f022",
+          "gain_fraction": 0.0015762054980718043
+        },
+        {
+          "name": "rating_surprisal_3",
+          "gain_fraction": 0.0013341212187168885
+        }
+      ],
+      "top1_fraction": 0.9398453097184865,
+      "top5_fraction": 0.9492534404744363
+    },
+    {
+      "fold": 1,
+      "feature_count": 84,
+      "top_features": [
+        {
+          "name": "orig_teacher_lgb",
+          "gain_fraction": 0.9400414276490331
+        },
+        {
+          "name": "rating_surprisal_0",
+          "gain_fraction": 0.0033120287434368666
+        },
+        {
+          "name": "aux_rating_ev_5",
+          "gain_fraction": 0.002400769725272384
+        },
+        {
+          "name": "aux_rating_ev_0",
+          "gain_fraction": 0.0020495581723527704
+        },
+        {
+          "name": "orig_lookup0_mean",
+          "gain_fraction": 0.0019660382418564184
+        },
+        {
+          "name": "f028",
+          "gain_fraction": 0.0018210111882108512
+        },
+        {
+          "name": "f022",
+          "gain_fraction": 0.0014422658462921961
+        },
+        {
+          "name": "f001",
+          "gain_fraction": 0.0013981261600079222
+        }
+      ],
+      "top1_fraction": 0.9400414276490331,
+      "top5_fraction": 0.9497698225319515
+    },
+    {
+      "fold": 2,
+      "feature_count": 84,
+      "top_features": [
+        {
+          "name": "orig_teacher_lgb",
+          "gain_fraction": 0.9403322747841548
+        },
+        {
+          "name": "rating_surprisal_0",
+          "gain_fraction": 0.003230690570876653
+        },
+        {
+          "name": "aux_rating_ev_5",
+          "gain_fraction": 0.002466216773718833
+        },
+        {
+          "name": "aux_rating_ev_0",
+          "gain_fraction": 0.00188942646608583
+        },
+        {
+          "name": "orig_lookup0_mean",
+          "gain_fraction": 0.0018841420320243653
+        },
+        {
+          "name": "f028",
+          "gain_fraction": 0.001819987234712939
+        },
+        {
+          "name": "f001",
+          "gain_fraction": 0.0014277472740141938
+        },
+        {
+          "name": "f033",
+          "gain_fraction": 0.0014128411672579373
+        }
+      ],
+      "top1_fraction": 0.9403322747841548,
+      "top5_fraction": 0.9498027506268605
+    },
+    {
+      "fold": 3,
+      "feature_count": 84,
+      "top_features": [
+        {
+          "name": "orig_teacher_lgb",
+          "gain_fraction": 0.9400050961056043
+        },
+        {
+          "name": "rating_surprisal_0",
+          "gain_fraction": 0.003330036853852954
+        },
+        {
+          "name": "aux_rating_ev_5",
+          "gain_fraction": 0.00209672600096188
+        },
+        {
+          "name": "aux_rating_ev_0",
+          "gain_fraction": 0.001907883403377402
+        },
+        {
+          "name": "orig_lookup0_mean",
+          "gain_fraction": 0.0018698566616076316
+        },
+        {
+          "name": "f022",
+          "gain_fraction": 0.0017783944089691712
+        },
+        {
+          "name": "f028",
+          "gain_fraction": 0.0017202653499087774
+        },
+        {
+          "name": "rating_surprisal_3",
+          "gain_fraction": 0.0014007805954508415
+        }
+      ],
+      "top1_fraction": 0.9400050961056043,
+      "top5_fraction": 0.9492095990254041
+    },
+    {
+      "fold": 4,
+      "feature_count": 84,
+      "top_features": [
+        {
+          "name": "orig_teacher_lgb",
+          "gain_fraction": 0.9397493137204784
+        },
+        {
+          "name": "rating_surprisal_0",
+          "gain_fraction": 0.003558509387380654
+        },
+        {
+          "name": "aux_rating_ev_5",
+          "gain_fraction": 0.0024759346684855893
+        },
+        {
+          "name": "orig_lookup0_mean",
+          "gain_fraction": 0.0020398810780312693
+        },
+        {
+          "name": "aux_rating_ev_0",
+          "gain_fraction": 0.0018813424993753347
+        },
+        {
+          "name": "f028",
+          "gain_fraction": 0.0017069453994229089
+        },
+        {
+          "name": "f001",
+          "gain_fraction": 0.0013986203472873444
+        },
+        {
+          "name": "aux_rating_ev_11",
+          "gain_fraction": 0.0013834000705570707
+        }
+      ],
+      "top1_fraction": 0.9397493137204784,
+      "top5_fraction": 0.9497049813537513
+    }
+  ],
+  "limitation": "Gainconcentrationisnotcausalevidenceoraguaranteeoffeaturebaggingutility; trainedmodelsalreadyusedofficiallabels."
+}

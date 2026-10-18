@@ -1,0 +1,9 @@
+{
+  "status": "strict_AMP_equivalence_failed_no_quality",
+  "recorded_utc": "2026-10-18T22:21:24.854963+00:00",
+  "reason": "R51 small AMP check exceeded frozen1e-6; original threshold unchanged and route not qualified. R52 independent replication diagnosed CPU exact0, GPUFP32difference1.91e-6 and GPUAMPdifference5.43e-4.",
+  "diagnostic_file": "research_r52_precision_diagnostic.json",
+  "diagnostic_sha256": "f8f716c3483ab118d71d97fcf6e6159741a34522a6f98299fa54c39d7640a20b",
+  "quality_scores_computed": false,
+  "new_formal_submissions": 0
+}

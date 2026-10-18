@@ -1,0 +1,128 @@
+{
+  "recorded_utc": "2026-10-18T22:14:40.289954+00:00",
+  "isolated_venv": "../.venv-tabpfn-w4",
+  "read_only_base_imports": "../.venv-gpu/lib/python3.12/site-packages",
+  "inherited_constraint_sha256": "e6284f9efc9930da3dec6763765793322daab80d28df735160e83cc1902b853f",
+  "installed_packages": [
+    {
+      "name": "tabpfn",
+      "version": "9.2.0",
+      "wheel_sha256": "bf8edb860cf490ab021d0ba6e91a9798f1b549bdb220066599661c8fc6d6089f"
+    },
+    {
+      "name": "einops",
+      "version": "0.8.2",
+      "wheel_sha256": "54058201ac7087911181bfec4af6091bb59380360f069276601256a76af08193"
+    },
+    {
+      "name": "huggingface_hub",
+      "version": "2.2.0",
+      "wheel_sha256": "1667f145dc56dc210d60966069397df9ecfca9607a5d43db88b308c89dae56b3"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.14.1",
+      "wheel_sha256": "9195d967ec791692a04438115466764fb8b9a27b31f14a760437694f40d6b454"
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.50.1",
+      "wheel_sha256": "93ba4e9d8210d941c200431a56b2c0400b131865947903937ed3ec5404307d2e"
+    },
+    {
+      "name": "pydantic-settings",
+      "version": "2.16.0",
+      "wheel_sha256": "7e73acf7f61936a15e5a3b6eedaea29f133357faf7272f2607ba479b049dd7f2"
+    },
+    {
+      "name": "safetensors",
+      "version": "0.8.0",
+      "wheel_sha256": "fd6f3f93c9a0a7cc2788ee63fb763353d4bd2e89b0751bc78fcf7dda00bea774"
+    },
+    {
+      "name": "skrub",
+      "version": "0.10.1",
+      "wheel_sha256": "553c6f9b19a2cb97bba776a28255e7e024e77d4f50d7c6c70b4805f4e668a3cc"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "wheel_sha256": "f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "wheel_sha256": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.7.0",
+      "wheel_sha256": "2814a6e999d13464c4d679b788cc5d784eb5a4edfc638a31f10e9a11ab531ef8"
+    },
+    {
+      "name": "httpx2",
+      "version": "2.14.0",
+      "wheel_sha256": "9d20c13a10bae1773a0be3b0f1e5beeb4bdd549bc3a2ba18efa32897c65403e4"
+    },
+    {
+      "name": "httpcore2",
+      "version": "2.14.0",
+      "wheel_sha256": "4c4f64f4b544afeb778c42c0ffb5941b29e671157e90ed3f6dc787c4bca90cd1"
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.2.4",
+      "wheel_sha256": "42269a8a5b3fd54ffa6f3d84b18abed50064717576b4ecf03dc4a55d8aa04fdc"
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "wheel_sha256": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "wheel_sha256": "65b8397ba37ccbce054456aaccddfc91e6e3083c92824df348d96ca832f3f147"
+    },
+    {
+      "name": "pydot",
+      "version": "4.0.1",
+      "wheel_sha256": "869c0efadd2708c0be1f916eb669f3d664ca684bc57ffb7ecc08e70d5e93fee6"
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1",
+      "wheel_sha256": "6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.10.18",
+      "wheel_sha256": "73191c47aaa79da394e8fee2dbc2ec827432cab56311122c9e47abf79e390f62"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.2",
+      "wheel_sha256": "3d31298449090ab8d47b7b1b2a555ff73cac7ed438a08b7ac160980c7ebed649"
+    },
+    {
+      "name": "truststore",
+      "version": "0.10.5",
+      "wheel_sha256": "9aaaedaefaf06d8b206278cf8b5012bc897f485a874503501e12d776df78951c"
+    },
+    {
+      "name": "urllib3",
+      "version": "2.8.0",
+      "wheel_sha256": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "wheel_sha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86"
+    }
+  ],
+  "pip_check": "No broken requirements found",
+  "global_packages_or_drivers_changed": false,
+  "code_license": "Apache-2.0",
+  "code_license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "cache_locations": "Project-specific HF_HOME, SKB_DATA_DIRECTORY, PIP_CACHE_DIR; no model authentication or credential copies."
+}

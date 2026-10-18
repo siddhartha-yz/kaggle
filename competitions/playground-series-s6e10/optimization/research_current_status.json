@@ -5038,5 +5038,13 @@
     "threefold_delta": -4.124961579088371e-06,
     "csv_generated": false
   },
-  "r47_plan_sha256": "e5c877a1e98908b71600869ae7896427585cacec7898ae5886190e00c9357220"
+  "r47_plan_sha256": "e5c877a1e98908b71600869ae7896427585cacec7898ae5886190e00c9357220",
+  "r47_result": {
+    "file": "research_r47_result.json",
+    "sha256": "b5fb039686df60886b13d7b771f96c08bd10515f8d6dde7ba1cc2c43b10a5bba",
+    "status": "not_qualified",
+    "delta": -8.23590157295051e-07,
+    "csv_generated": false
+  },
+  "r54_plan_sha256": "0279cd1d906c445617e0fe5fe67e6a9f3896d0bbc0596260830725d59b7d196a"
 }

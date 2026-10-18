@@ -1,0 +1,15 @@
+{
+  "status": "hardware_blocked_no_quality",
+  "completed_utc": "2026-10-18T22:04:16.489185+00:00",
+  "model": "TabPFNv2singledefaultcheckpoint",
+  "context_rows": 8192,
+  "features": 49,
+  "query_rows": 512,
+  "peak_gpu_process_bytes": 780140544,
+  "allocator_cap_bytes": 778043392,
+  "failure": "Torch742MiBquota:228MiBrequest when294.67MiBlive+235.33MiBreserved. No SAT loaded or qualitycomputed. GPUphysicalfree6.32GiBdoesnotrelaxowncap.",
+  "CPU_API_proof": "128syntheticcontext/64query/48features passedCPUrepeatandreload0",
+  "csv_generated": false,
+  "new_formal_submissions": 0,
+  "resource_plan_sha256": "c905ec0318306dd8056eff0fabd5008e1154eb629d420d2c56a5e10e960c6319"
+}

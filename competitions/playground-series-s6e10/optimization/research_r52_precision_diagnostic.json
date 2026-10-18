@@ -1,0 +1,39 @@
+{
+  "status": "diagnostic_complete_no_quality",
+  "errors": {
+    "CPU_stock_vs_CPU_stream": {
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "GPU_FP32_stock_vs_GPU_FP32_stream": {
+      "max": 1.9073486328125e-06,
+      "mean": 6.021000444889069e-07
+    },
+    "CPU_stock_vs_GPU_FP32_stock": {
+      "max": 0.005035996437072754,
+      "mean": 0.0010876137530431151
+    },
+    "GPU_AMP_stock_vs_GPU_AMP_stream": {
+      "max": 0.0005425214767456055,
+      "mean": 9.52053815126419e-05
+    },
+    "CPU_stock_vs_GPU_AMP_stock": {
+      "max": 0.004706084728240967,
+      "mean": 0.0010296356631442904
+    },
+    "CPU_stock_vs_GPU_AMP_stream": {
+      "max": 0.004706084728240967,
+      "mean": 0.0010466991225257516
+    }
+  },
+  "peak_gpu_process_bytes": 916455424,
+  "seconds": 18.61677736400452,
+  "context_rows": 1024,
+  "query_rows": 128,
+  "features": 49,
+  "official_SAT_values_parsed": false,
+  "synthetic_labels": true,
+  "quality_scores_computed": false,
+  "thresholds_not_changed": true,
+  "plan_sha256": "7978a14b598ec3818e0f368f578c3d59bc31fa560a14d84100dd423d8bfcfa55"
+}

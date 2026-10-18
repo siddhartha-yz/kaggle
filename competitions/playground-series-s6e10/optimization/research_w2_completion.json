@@ -1,0 +1,53 @@
+{
+  "status": "candidate_delivered_stage_complete",
+  "completed_utc": "2026-10-18T03:53:35.006436+00:00",
+  "window_deadline_utc": "2026-10-18T08:43:36+00:00",
+  "candidate": {
+    "status": "succeeded",
+    "filename": "submission_realmlp_value_v6.csv",
+    "library_file_id": "libfile_cf22a57746e081919f268a40290caf70",
+    "file_id": "file_000000005a7481f8aaf288be2c87b65e",
+    "version": 0,
+    "bytes": 7985563,
+    "sha256": "36ea4ef80e1dd1911257f240391d9cdb8474b8b5deb5c52733582da80bdd1aaa",
+    "original_local_path": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/submission_realmlp_value_v6.csv"
+  },
+  "primary_auc": 0.9603020930463941,
+  "confirmation_auc": 0.961026158861244,
+  "oof_vs_v5": {
+    "baseline_auc": 0.9608926464364628,
+    "candidate_auc": 0.961135462544149,
+    "delta_auc": 0.00024281610768628337,
+    "paired_se": 1.8441473869240873e-05,
+    "conditional_95pct_ci": [
+      0.00020667081890257124,
+      0.0002789613964699955
+    ],
+    "candidate_logloss": 0.2226603101932452
+  },
+  "weights": {
+    "v5": 0.75,
+    "raw_value_embedding_realmlp_ensemble": 0.25
+  },
+  "neural_members": 2,
+  "epochs": 3,
+  "features": "Original21 features +17 numeric category twins; median/vocab training-fold-only. No source-teacher feature inside this new NN; v5 source provenance preserved.",
+  "local_formal_submissions_this_continuation": 0,
+  "previous_window_completed_formal_submissions": 3,
+  "original_window_limit": 4,
+  "last_remaining_slot_reserved_for_this_candidate": true,
+  "paid_cost": 0,
+  "gpu_user_authorized": true,
+  "gpu_allocator_cap_bytes": 2147483648,
+  "full_gpu_peak_reserved_bytes": 2076180480,
+  "model_reload_max_abs_diff": 0.0,
+  "csv_component_max_abs_diff": 1.1102230246251565e-16,
+  "library_identity_and_hash_verified": true,
+  "data_deleted": false,
+  "core_code_commit_before_delivery": "9e4b938",
+  "full_export_manifest_schema_fix_commit": "367d936",
+  "limitation": "Reused validation partitions; paired conditional intervals exclude model-selection uncertainty. No new public score yet.",
+  "shutdown_audit": "research_w2_shutdown_audit.json",
+  "all_project_training_and_queues_exited": true,
+  "cpu_portability_audit": "research_gpu_value_cpu_portability.json"
+}

@@ -1,8 +1,8 @@
 {
   "maximum_new_submissions": 4,
-  "reserved_slots": 3,
+  "reserved_slots": 4,
   "completed_new_submissions": 3,
-  "remaining_unreserved_slots": 1,
+  "remaining_unreserved_slots": 0,
   "entries": [
     {
       "candidate": "submission_distance_stats_v3.csv",
@@ -32,7 +32,18 @@
       "rank": 930,
       "total_ranked": 2194,
       "parent_verified_utc": "2026-10-17T22:11:00+00:00"
+    },
+    {
+      "candidate": "submission_realmlp_value_v6.csv",
+      "status": "ready_for_parent_submission",
+      "library_file_id": "libfile_cf22a57746e081919f268a40290caf70",
+      "sha256": "36ea4ef80e1dd1911257f240391d9cdb8474b8b5deb5c52733582da80bdd1aaa",
+      "oof_auc": 0.961135462544149,
+      "delivered_utc": "2026-10-18T03:53:35.006436+00:00",
+      "formal_submission_performed_locally": false
     }
   ],
-  "updated_utc": "2026-10-17T22:15:00+00:00"
+  "updated_utc": "2026-10-18T03:53:35.006436+00:00",
+  "remaining_formal_submissions": 1,
+  "submission_scope": "This six-hour continuation carries the original unused fourth slot. Quota is not reset;3 completed,1 reserved for v6."
 }

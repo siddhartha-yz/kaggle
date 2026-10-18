@@ -1,0 +1,33 @@
+{
+  "status": "complete",
+  "name": "gpu_value_raw_confirm_n2",
+  "split": "confirm",
+  "variant": "raw",
+  "n_ens": 2,
+  "auc": 0.9603918536869456,
+  "vs_v5": {
+    "baseline_auc": 0.960820157784561,
+    "candidate_auc": 0.961026158861244,
+    "delta_auc": 0.0002060010766830045,
+    "paired_se": 3.8826609716967186e-05,
+    "conditional_95pct_ci": [
+      0.00012990092163774883,
+      0.00028210123172826016
+    ],
+    "candidate_logloss": 0.22232873013102297
+  },
+  "fold_comparisons": [
+    {
+      "baseline_auc": 0.960820157784561,
+      "candidate_auc": 0.961026158861244,
+      "delta_auc": 0.0002060010766830045,
+      "paired_se": 3.8826609716967186e-05,
+      "conditional_95pct_ci": [
+        0.00012990092163774883,
+        0.00028210123172826016
+      ],
+      "candidate_logloss": 0.22232873013102297
+    }
+  ],
+  "completed_utc": "2026-10-18T03:45:32.206732+00:00"
+}

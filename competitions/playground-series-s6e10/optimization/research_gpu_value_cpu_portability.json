@@ -1,0 +1,9 @@
+{
+  "checked_utc": "2026-10-18T03:54:15.130180+00:00",
+  "rows": 1003,
+  "cpu_torch_version": "2.9.1+cpu",
+  "gpu_training_torch_version": "2.9.1+cu128",
+  "cpu_inference_finite": true,
+  "max_abs_diff_vs_gpu_saved_predictions": 1.7881393432617188e-07,
+  "new_training_performed": false
+}

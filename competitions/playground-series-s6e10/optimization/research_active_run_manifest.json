@@ -1,7 +1,7 @@
 {
-  "updated_utc": "2026-10-18T02:57:10.133836+00:00",
-  "phase": "window2_gpu_value_views_primary",
-  "active_training": true,
+  "updated_utc": "2026-10-18T03:53:35.006436+00:00",
+  "phase": "window2_candidate_ready_in_library",
+  "active_training": false,
   "previous_completed_window": "research_window1_final_manifest.json",
   "current_window": "research_w2_manifest.json",
   "validation": {
@@ -9,11 +9,11 @@
     "state": "research_stage17_gpu_value_state.json",
     "exec_session": 22144,
     "log": "research_stage17_gpu_value_queue.log",
-    "status": "running"
+    "status": "complete"
   },
   "conditional_export": {
     "driver": "same serialized validation queue",
-    "status": "not_started_until_gates_pass"
+    "status": "complete"
   },
   "confirmed_best": {
     "candidate": "submission_cb_deep_v5.csv",
@@ -31,5 +31,17 @@
     "paid_resources": false,
     "cpu_training_threads": 6
   },
-  "recovery": "Inspect state, timestamps and original sessions before restart; no duplicate fits. Previous completion records describe the earlier window."
+  "recovery": "Inspect state, timestamps and original sessions before restart; no duplicate fits. Previous completion records describe the earlier window.",
+  "status": "candidate_ready_in_library",
+  "candidate": {
+    "status": "succeeded",
+    "filename": "submission_realmlp_value_v6.csv",
+    "library_file_id": "libfile_cf22a57746e081919f268a40290caf70",
+    "file_id": "file_000000005a7481f8aaf288be2c87b65e",
+    "version": 0,
+    "bytes": 7985563,
+    "sha256": "36ea4ef80e1dd1911257f240391d9cdb8474b8b5deb5c52733582da80bdd1aaa",
+    "original_local_path": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/submission_realmlp_value_v6.csv"
+  },
+  "completed_utc": "2026-10-18T03:53:35.006436+00:00"
 }

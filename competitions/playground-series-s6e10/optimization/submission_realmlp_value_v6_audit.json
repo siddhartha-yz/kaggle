@@ -1,0 +1,235 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-18T03:48:26.365797+00:00",
+  "weights": {
+    "v5": 0.75,
+    "realmlp": 0.25
+  },
+  "plan_sha256": "2689e7db809c05101de6e2bf970fe7d53c08db5a9fee023d2755734ba5ba6175",
+  "runner_sha256": "5f7b20ba71522aba4b088b66c424163447e0a89c7d4fa1e67f682250b9941acd",
+  "epochs": [
+    {
+      "epoch": 1,
+      "seconds": 18.258044360001804,
+      "utc": "2026-10-18T03:48:52.290362+00:00",
+      "gpu_free_bytes": 3276931072
+    },
+    {
+      "epoch": 2,
+      "seconds": 12.257302762001927,
+      "utc": "2026-10-18T03:49:04.547662+00:00",
+      "gpu_free_bytes": 3234660352
+    },
+    {
+      "epoch": 3,
+      "seconds": 12.149512828997103,
+      "utc": "2026-10-18T03:49:16.697211+00:00",
+      "gpu_free_bytes": 3289841664
+    }
+  ],
+  "variant": "raw",
+  "n_ens": 2,
+  "initial_gpu_free_bytes": 3845652480,
+  "data_sha256": {
+    "train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "test.csv": "ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6",
+    "sample_submission.csv": "6165ecc5769962253534c2d840f26aab55dc3cc091d256bb3641bf6608194a71"
+  },
+  "original_source_audit": {
+    "source_sha256": "2ad76465f6115f93d16121891a6b1235acb8007a4ab065cae0dc46b60ad116e3",
+    "safe_mask_sha256": "fcc30179ed4f68ddab8323abe86e953dcaf13374dee46bd3c13abb55dfdbfe51",
+    "safe_rows": 129859,
+    "excluded_exact_rows": 21,
+    "near_key_groups": 111199,
+    "near_key_groups_with_conflicting_original_labels": 4475,
+    "original_rows_in_conflicting_near_groups": 10665,
+    "target_provenance": "Only CC0 original labels. No synthetic labels used to fit teacher or lookup. Exact matches to any synthetic train/test vector excluded.",
+    "exact_label_audit": {
+      "checked_utc": "2026-10-17T19:36:06.016304+00:00",
+      "exact_match_pairs_verified_value_by_value": 17,
+      "exact_match_train_label_agreements": 14,
+      "exact_match_train_label_conflicts": 3,
+      "policy": "All 21 original rows matching any train/test feature vector remain excluded, regardless of label agreement."
+    }
+  },
+  "oof_comparison": {
+    "baseline_auc": 0.9608926464364628,
+    "candidate_auc": 0.961135462544149,
+    "delta_auc": 0.00024281610768628337,
+    "paired_se": 1.8441473869240873e-05,
+    "conditional_95pct_ci": [
+      0.00020667081890257124,
+      0.0002789613964699955
+    ],
+    "candidate_logloss": 0.2226603101932452
+  },
+  "oof_fold_comparisons": [
+    {
+      "baseline_auc": 0.9601501331199431,
+      "candidate_auc": 0.960429938966505,
+      "delta_auc": 0.0002798058465618425,
+      "paired_se": 4.1580190703512096e-05,
+      "conditional_95pct_ci": [
+        0.00019830867278295878,
+        0.00036130302034072617
+      ],
+      "candidate_logloss": 0.22472318827614848
+    },
+    {
+      "baseline_auc": 0.9610011563388294,
+      "candidate_auc": 0.9612778335243019,
+      "delta_auc": 0.00027667718547241815,
+      "paired_se": 4.077149457054361e-05,
+      "conditional_95pct_ci": [
+        0.00019676505611415266,
+        0.00035658931483068364
+      ],
+      "candidate_logloss": 0.22225870478588935
+    },
+    {
+      "baseline_auc": 0.9614598296880302,
+      "candidate_auc": 0.9616849171588457,
+      "delta_auc": 0.0002250874708155104,
+      "paired_se": 4.061441248490047e-05,
+      "conditional_95pct_ci": [
+        0.00014548322234510545,
+        0.00030469171928591533
+      ],
+      "candidate_logloss": 0.22088612639965505
+    },
+    {
+      "baseline_auc": 0.9607949305361823,
+      "candidate_auc": 0.9610229009555541,
+      "delta_auc": 0.00022797041937183682,
+      "paired_se": 4.094443789829698e-05,
+      "conditional_95pct_ci": [
+        0.00014771932109117474,
+        0.0003082215176524989
+      ],
+      "candidate_logloss": 0.22361412252562615
+    },
+    {
+      "baseline_auc": 0.9610921595939435,
+      "candidate_auc": 0.9613048943792812,
+      "delta_auc": 0.000212734785337787,
+      "paired_se": 4.109455356709927e-05,
+      "conditional_95pct_ci": [
+        0.00013218946034627245,
+        0.00029328011032930156
+      ],
+      "candidate_logloss": 0.2218194089789069
+    }
+  ],
+  "oof_sha256": "93cc39780c2a616fd9725babaee86ec608a96f9f4eaf96492111177c8ef0b9fa",
+  "feature_width": 38,
+  "train_rows": 699635,
+  "test_rows": 299844,
+  "config": {
+    "device": "cuda:0",
+    "n_threads": 6,
+    "n_cv": 1,
+    "n_refit": 0,
+    "n_repeats": 1,
+    "val_fraction": 0.0,
+    "n_epochs": 3,
+    "batch_size": 256,
+    "use_early_stopping": false,
+    "random_state": 42,
+    "verbosity": 0,
+    "predict_batch_size": 1024,
+    "use_ls": true,
+    "lr": 0.053,
+    "wd": 0.0236,
+    "sq_mom": 0.988,
+    "lr_sched": "lin_cos_log_15",
+    "wd_sched": "cos_log_15",
+    "first_layer_lr_factor": 0.25,
+    "embedding_size": 5,
+    "max_one_hot_cat_size": 18,
+    "hidden_sizes": [
+      512,
+      256,
+      128
+    ],
+    "act": "silu",
+    "p_drop": 0.05,
+    "p_drop_sched": "expm4t",
+    "plr_hidden_1": 16,
+    "plr_hidden_2": 8,
+    "plr_act_name": "gelu",
+    "plr_lr_factor": 0.1151,
+    "plr_sigma": 2.33,
+    "ls_eps": 0.01,
+    "ls_eps_sched": "sqrt_cos",
+    "add_front_scale": false,
+    "bias_init_mode": "neg-uniform-dynamic-2",
+    "tfms": [
+      "one_hot",
+      "median_center",
+      "robust_scale",
+      "smooth_clip",
+      "embedding",
+      "l2_normalize"
+    ],
+    "n_ens": 2
+  },
+  "threadpools": [
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 6,
+      "prefix": "libgomp",
+      "filepath": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/.venv-gpu/lib/python3.12/site-packages/torch/lib/libgomp.so.1",
+      "version": null
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 6,
+      "prefix": "libscipy_openblas",
+      "filepath": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/.venv-gpu/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 6,
+      "prefix": "libgomp",
+      "filepath": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/.venv-gpu/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+      "version": null
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 6,
+      "prefix": "libscipy_openblas",
+      "filepath": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/.venv-gpu/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-5f890258.so",
+      "version": "0.3.31.dev",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    }
+  ],
+  "fit_seconds": 42.72760341600224,
+  "actual_epochs": 3,
+  "peak_allocated_bytes": 1681804288,
+  "peak_reserved_bytes": 2076180480,
+  "model_sha256": "393a7c6d2c187e0b15a0bbc3623d6c401db1b7656f9e53bbc4a5d9f90299bbc3",
+  "transformer_sha256": "32e63367937e725e0e94430e256989deef70dab416727d66b0fbc5d0060b73ba",
+  "model_reload_max_abs_diff": 0.0,
+  "csv_component_max_abs_diff": 1.1102230246251565e-16,
+  "completed_utc": "2026-10-18T03:49:21.864135+00:00",
+  "elapsed_seconds": 55.49835635999625,
+  "submission": {
+    "path": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/submission_realmlp_value_v6.csv",
+    "sha256": "36ea4ef80e1dd1911257f240391d9cdb8474b8b5deb5c52733582da80bdd1aaa",
+    "bytes": 7985563,
+    "rows": 299844,
+    "columns": [
+      "id",
+      "satisfaction"
+    ],
+    "id_order_matches_official": true
+  }
+}

@@ -4,6 +4,45 @@ This directory preserves the actual cloud experiment code and the subsequent loc
 
 Chinese final report: [本轮实验总结](Kaggle_S6E10_中文实验总结.html). The report is saved to Library; [completion record](research_completion.json) confirms 3/4 submissions, zero paid cost, no remaining training/queues, and preserved data. The read-only `verify_v5_saved.py` reproduces the saved CSV and OOF checks without training.
 
+## Latest candidate — v6 delivered, parent submission pending (2026-10-18 03:55 UTC)
+
+A new capped-GPU numeric-value embedding view passed the frozen primary, confirmation and fivefold gates. The candidate is **75% v5 +25% official RealMLP ensemble**. Its neural branch uses only the original21 predictors and17 categorical copies of numeric values, including Flight Distance; there are **38 input columns**, with imputation and vocabularies fitted strictly on each training fold. The new neural branch has no source-teacher/group-statistic inputs. The v5 branch retains its audited source provenance. Neural configuration: **2 members,3 epochs,batch256,seed42,hidden512/256/128,SiLU**, native numerical embeddings and the fixed schedule in [the frozen plan](research_gpu_value_plan.json). The alternate context/teacher view failed its primary screen; weights and the selected raw view were frozen before confirmation.
+
+| Same validation rows | v5 AUC | v6 AUC | Delta |
+| --- | ---: | ---: | ---: |
+| Primary seed42 | .9600030291 | **.9603020930** | +.0002990639 |
+| Confirmation seed20261017 | .9608201578 | **.9610261589** | +.0002060011 |
+| Fixed pooled fivefold OOF | .9608926464 | **.9611354625** | **+.0002428161** |
+
+Every OOF fold improved: **+.0002798058,+.0002766772,+.0002250875,+.0002279704,+.0002127348**. The pooled conditional95% interval for the delta is **[.0002066708,.0002789614]**. These reused development/confirmation/OOF samples provide stability evidence; the interval excludes model-selection uncertainty and is not an independent unbiased generalization proof. The public notebook recipe is an external prior potentially selected on the same competition. No new public score is known. The last confirmed public result remains **v5 .96033,930/2194 at2026-10-17 22:11UTC**, a historical snapshot.
+
+The earlier default long-schedule CPU RealMLP stopped at the predeclared **192epoch** futility check with delta **-.0000609655**; it did not finish256epochs and was not promoted. After direct user authorization, a separate official CUDA environment was installed. A no-score full-training-fold probe measured about **1.6s/epoch** after initialization versus about10–11s on CPU. Subsequent GPU fits were serial, CPU<=6threads, with a **2GiB PyTorch allocator cap**, initial/per-epoch headroom checks, no driver changes and no other processes terminated. The full candidate's peak reserved allocation was **2076180480bytes**, below the cap. Scoped process/queue checks at03:54UTC found no leftovers; data/models/predictions are preserved. Connection loss required recovery from completed artifacts without duplicate fits. Standard model pickle could not serialize native custom-schedule closures; the failed artifacts were retained and the unchanged raw fit was repeated once using installed `cloudpickle`, before any validation score from that failed run was reported or used.
+
+The full fit and export completed at03:49UTC. All299844test IDs match the official sample in order; probabilities are finite in[0,1]. Native GPU model reload difference is **0.0**, and independent CSV/component agreement differs by at most **1.1102230246251565e-16**. Independent audit recomputed pooled/fold comparisons and checked all five training-only medians and all21category vocabularies against the actual outer training rows. The CPU-portable saved model was additionally checked on1003rows with maximum difference **1.7881393432617188e-7** from saved GPU inference.
+
+- File: **submission_realmlp_value_v6.csv**, **7985563bytes**, **299844rows**.
+- SHA-256: **`36ea4ef80e1dd1911257f240391d9cdb8474b8b5deb5c52733582da80bdd1aaa`**.
+- Library ID: **`libfile_cf22a57746e081919f268a40290caf70`**, version0. File ID: `file_000000005a7481f8aaf288be2c87b65e`.
+- The original window still has **3completed formal submissions out of4**; the final slot is reserved for this candidate, **not consumed**. This continuation did not reset the quota and made no local formal submission. Only the parent cloud browser submits. Paid cost remains0.
+
+Evidence: [full-fit audit](submission_realmlp_value_v6_audit.json), [independent data-map/OOF/CSV audit](submission_realmlp_value_v6_independent_audit.json), [selection](research_gpu_value_selection.json), [Library receipt](submission_realmlp_value_v6_library.json), [CPU portability](research_gpu_value_cpu_portability.json), [shutdown](research_w2_shutdown_audit.json), and [stage completion](research_w2_completion.json).
+
+Reproduction uses an isolated Python3.12venv, `torch==2.9.1+cu128` from the official PyTorch CUDA12.8index, and [the exact GPU dependency lock](requirements-realmlp-gpu-lock.txt). Restore the audited official data, splits, source features and saved v5 components; data/models/per-row predictions are intentionally absent from Git. In the experiment working directory:
+
+```bash
+# Read-only checks; no training or submission:
+../.venv/bin/python verify_v5_saved.py
+../.venv/bin/python audit_gpu_value_v6.py
+
+# Historical training entry points, requiring a NEW authorized budget/output directory:
+../.venv-gpu/bin/python research_gpu_value.py --split primary --variant raw --n-ens 2
+../.venv-gpu/bin/python research_gpu_value.py --split confirm --variant raw --n-ens 2
+../.venv-gpu/bin/python research_gpu_value.py --split oof --variant raw --n-ens 2
+../.venv-gpu/bin/python research_gpu_value_full.py
+```
+
+The completed driver is `research_stage17_gpu_value_queue.py`. Do not delete artifacts to bypass its reuse/hash/deadline guards. The full export independently rechecks the selected view, frozen configuration, source hashes and every validation gate before fitting. New data are never fitted into vocabularies or group maps during evaluation.
+
 ## New six-hour continuation — 2026-10-18 02:46 UTC
 
 The parent authorized continuation until **2026-10-18 08:43:36 UTC**, with zero paid resources, CPU6 serial fits and **only the one unused submission slot carried over**. The previous window's completion and report remain historical records. No public rank refresh or public-score parameter tuning is used. The official RealMLP recipe is now frozen at **256 epochs**, preserving the same features, seed, batch1024, native preprocessing and **75% v5 +25% RealMLP** blend. Because cosine/regularization schedules span total epochs, this is a new full schedule from the same seed, rather than extending an already-ended48epoch schedule.

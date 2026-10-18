@@ -1,0 +1,10 @@
+{
+  "status": "allocator_OOM_no_quality_score",
+  "native_members": 32,
+  "feature_width": 152,
+  "peak_gpu_process_bytes": 985661440,
+  "own_GPU_ceiling_exceeded": false,
+  "raw_log_and_record_retained_locally": true,
+  "raw_record_sha256": "1a379f875574d21c577f3fa8d69780b65c119fdf12e81b3f62190865aadb1dfe",
+  "next": "Prespecifiedhardwarefallback16passed, noAUC-basedchoice."
+}

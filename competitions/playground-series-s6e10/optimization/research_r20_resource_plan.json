@@ -1,0 +1,29 @@
+{
+  "frozen_utc": "2026-10-18T16:21:43.789153+00:00",
+  "reason": "R19source-onlyratingreconstructionpositivepooleddelta butcorrectedfoldboundfailed. Publicoriginal/fullauxcomparison motivatesofficialdomaincrossfit expectations; sameGPUmulticlasssource-onlycontrolwillisolatedomainfromauxlearner. Resourceproofrequiredfirst; noSATreadinprobe.",
+  "runner_sha256": "3453ca7c3cf7152f8b1368d2b848cc77f7f9017ce9dd73548b1b82afcf3e6ce2",
+  "parameters": {
+    "iterations": 300,
+    "learning_rate": 0.1,
+    "depth": 7,
+    "l2_leaf_reg": 5,
+    "loss_function": "MultiClass",
+    "random_seed": 42,
+    "task_type": "GPU",
+    "devices": "0",
+    "gpu_ram_part": 0.04,
+    "thread_count": 6,
+    "border_count": 128,
+    "max_ctr_complexity": 1,
+    "one_hot_max_size": 2,
+    "boosting_type": "Plain",
+    "bootstrap_type": "Bernoulli",
+    "subsample": 0.8,
+    "allow_writing_files": false,
+    "verbose": 100
+  },
+  "data_sha256": {
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "data/test.csv": "ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6"
+  }
+}

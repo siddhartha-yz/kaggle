@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-10-18T16:30:27.322978+00:00",
+  "main_plan_sha256": "8d7ff0410f59f2f38480530c13add578794d4bd45e69f594d175b918842a9599",
+  "code_sha256": {
+    "research_r20_audit.py": "34f6df1e82c4839106e6dbcf533ddfd59fe801aef5988e48540690caee5f538a",
+    "research_r20_csv.py": "8d9f2eadcbcec047ed46baabb7b30bbbdc08806c19b65dd7141eff38ff02ce42"
+  },
+  "gates": "Twofixedviewsalpha.0125; winnerfivefoldandfreshthreefolddualv9/v7gates; independentGPUauxmembership/modelCPUreplay+outerLGBauditbeforefullfit/CSV. No publicOOF imported; parentonlysubmitter."
+}

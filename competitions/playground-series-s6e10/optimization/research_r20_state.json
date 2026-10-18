@@ -1,0 +1,11 @@
+{
+  "status": "auxiliary_training",
+  "updated_utc": "2026-10-18T16:32:02.375225+00:00",
+  "variant": "officialcb",
+  "rating": "Departure/Arrival time convenient",
+  "rating_index": 1,
+  "auxiliary_fold": 2,
+  "pid": 606762,
+  "active_training": true,
+  "peak_gpu_process_bytes": 549453824
+}

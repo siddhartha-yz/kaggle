@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-18T16:19:21.585581+00:00",
-  "status": "active_r19_original_feature_auxiliary_after_r18_rejection",
+  "updated_utc": "2026-10-18T16:32:05.047273+00:00",
+  "status": "active_r20_auxiliary_domain_control_after_r19_corrected_bound_rejection",
   "confirmed_public_baseline": {
     "recorded_utc": "2026-10-18T12:41:59.978029+00:00",
     "source": "ParentauthenticatedKagglebrowserreport",
@@ -31,20 +31,25 @@
     "parent_instruction": "Holdlastslot;retainv9backup. Continue grounded experiments."
   },
   "active_driver": {
-    "updated_utc": "2026-10-18T16:19:14.571900+00:00",
-    "status": "not_qualified",
-    "driver_pid": 597737,
+    "updated_utc": "2026-10-18T16:31:24.551143+00:00",
+    "status": "auxiliary_training",
+    "driver_pid": 604985,
     "formal_used": 1,
     "remaining": 1,
     "whole_top100_task_completed": false,
-    "stage": "fivefold",
-    "active_training": false
+    "variant": "officialcb",
+    "active_training": true
   },
   "current_training": {
-    "status": "stage_complete",
-    "stage": "fivefold",
-    "updated_utc": "2026-10-18T16:19:11.377032+00:00",
-    "active_training": false
+    "status": "auxiliary_training",
+    "updated_utc": "2026-10-18T16:32:02.375225+00:00",
+    "variant": "officialcb",
+    "rating": "Departure/Arrival time convenient",
+    "rating_index": 1,
+    "auxiliary_fold": 2,
+    "pid": 606762,
+    "active_training": true,
+    "peak_gpu_process_bytes": 549453824
   },
   "completed_r7_neural_members": 40,
   "total_fivefold_members": 40,
@@ -2297,6 +2302,18 @@
         722,
         635
       ]
+    },
+    "R19_original_rating_expectations": {
+      "status": "fivefold_rejected_corrected_bound",
+      "candidate_auc": 0.961510220491746,
+      "delta_vs_v9": 3.145385841263337e-05,
+      "paired_CI": [
+        7.331107197144463e-06,
+        5.557660962812229e-05
+      ],
+      "corrected_lower": -2.0892511039178506e-05,
+      "threefold_run": false,
+      "csv_created": false
     }
   },
   "r19_auxiliary_source": {
@@ -2310,5 +2327,16 @@
     "public_recipe": "https://www.kaggle.com/code/koumeimaki/s6e10-feature-ladder-what-helps-lightgbm",
     "public_predictions_imported": false,
     "anonymous_read_only_no_login": true
+  },
+  "r20_resource_repair": {
+    "original_pool04_internal_allocation_failure": true,
+    "GPU_ceiling_exceeded": false,
+    "other_GPU_processes_changed": false,
+    "resource_only06_largest_probe_passed": true,
+    "probe_peak_bytes": 413138944,
+    "NVML_own_process_ceiling_bytes": 1073741824,
+    "scientific_recipe_and_dual_view_gates_unchanged": true,
+    "source_control04_models_preserved": 13,
+    "no_R20_SAT_quality_scored": true
   }
 }

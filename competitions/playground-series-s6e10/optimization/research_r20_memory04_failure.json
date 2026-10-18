@@ -1,0 +1,10 @@
+{
+  "updated_utc": "2026-10-18T16:25:47.107637+00:00",
+  "status": "failed",
+  "driver_pid": 600666,
+  "formal_used": 1,
+  "remaining": 1,
+  "whole_top100_task_completed": false,
+  "error": "CalledProcessError(1, ['/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/../.venv-gpu/bin/python', '/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/research_r20_auxiliary.py', 'officialcb'])",
+  "active_training": false
+}

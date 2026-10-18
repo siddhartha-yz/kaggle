@@ -1,0 +1,45 @@
+{
+  "status": "passed_no_satisfaction_read_or_quality_score",
+  "parameters": {
+    "iterations": 300,
+    "learning_rate": 0.1,
+    "depth": 7,
+    "l2_leaf_reg": 5,
+    "loss_function": "MultiClass",
+    "random_seed": 42,
+    "task_type": "GPU",
+    "devices": "0",
+    "gpu_ram_part": 0.06,
+    "thread_count": 6,
+    "border_count": 128,
+    "max_ctr_complexity": 1,
+    "one_hot_max_size": 2,
+    "boosting_type": "Plain",
+    "bootstrap_type": "Bernoulli",
+    "subsample": 0.8,
+    "allow_writing_files": false,
+    "verbose": 100
+  },
+  "classes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "train_rows": 799584,
+  "features": 20,
+  "categorical_columns": [
+    "Gender",
+    "Customer Type",
+    "Type of Travel",
+    "Class"
+  ],
+  "seconds": 6.455028625001432,
+  "peak_gpu_process_bytes": 413138944,
+  "gpu_process_ceiling_bytes": 1073741824,
+  "reload_prediction_error": 0.0,
+  "peak_rss_bytes": 1319301120,
+  "runner_sha256": "1b9f6464e7940ff4923e19d6b1056d8832a36727c8624c8dc04b5474b6805410"
+}

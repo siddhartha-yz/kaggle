@@ -1,0 +1,14 @@
+{
+  "frozen_utc": "2026-10-18T14:07:04.701593+00:00",
+  "main_plan_sha256": "9c62312ba336c0738b7b6ace2870a8e03f5a4641e6462bc7644a361b0fb4f8fb",
+  "code_sha256": {
+    "research_r9_audit.py": "a2cc27b5d02ed314169672864d67c436334f14b03b60d9ae3507061d0692b704",
+    "research_r9_csv.py": "4666342a68451459a981827c8a5037592199df577c228d809f4a83abcb8ea39e"
+  },
+  "gate": "Do not execute full fit until both fixed fivefold and threefold pass dual baselines, then independent audit passes.",
+  "formula": "(30 newLGB +6 CB8+12 residual +16 CB10+64 leanCV40)/128",
+  "formal_used": 1,
+  "remaining": 1,
+  "parent_only_submitter": true,
+  "current_quality_status": "R9 fivefold pending; no scores inspected; audit/inference never executed."
+}

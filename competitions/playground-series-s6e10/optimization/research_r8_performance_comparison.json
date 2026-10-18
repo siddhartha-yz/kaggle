@@ -1,0 +1,10 @@
+{
+  "recorded_utc": "2026-10-18T14:07:04.701593+00:00",
+  "old_model_records": 40,
+  "new_native8_model_records": 5,
+  "old_total_fit_predict_save_reload_seconds": 928.2731913559983,
+  "new_total_fit_predict_save_reload_seconds": 150.1093653620046,
+  "full_probe_seconds": 13.50856745299825,
+  "full_probe_peak_gpu_process_bytes": 541065216,
+  "note": "Same47-column lean neural task, 5fold x8members x3epochs, serialGPU-init versus batchedCPU-init/GPUcompute. Different RNG and initialization devices; not bitwise-equivalent trained models. Timing sums omit shared feature preparation and process startup."
+}

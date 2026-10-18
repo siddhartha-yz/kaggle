@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-18T14:01:00.180758+00:00",
-  "status": "r8_no_quality_promotion_r9_label_free_linkage_probe",
+  "updated_utc": "2026-10-18T14:06:35.656359+00:00",
+  "status": "active_r9_linkage_fivefold",
   "confirmed_public_baseline": {
     "recorded_utc": "2026-10-18T12:41:59.978029+00:00",
     "source": "ParentauthenticatedKagglebrowserreport",
@@ -56,20 +56,40 @@
     "recommendation": "Holdlastformalopportunity;backuppointgainmuchsmallerthanpublicgap. ContinuecurrentmechanismratherthanassumingTop100."
   },
   "active_driver": {
-    "updated_utc": "2026-10-18T13:58:45.848662+00:00",
-    "status": "not_qualified",
-    "driver_pid": 525997,
-    "whole_top100_task_completed": false,
-    "formal_used": 1,
-    "remaining": 1,
-    "stage": "fivefold",
-    "active_training": false
+    "status": "r9_worker",
+    "namespace_pid": 3,
+    "active_training": true
   },
   "current_training": {
-    "route": "label_free_source_exemplar_EM_resource_probe",
-    "active_training": true,
-    "official_target_used": false,
-    "GPU_used": false
+    "status": "training",
+    "started_utc": "2026-10-18T14:05:17.247661+00:00",
+    "stage": "fivefold",
+    "fold": 1,
+    "train_rows": 559708,
+    "valid_rows": 139927,
+    "params": {
+      "n_estimators": 639,
+      "learning_rate": 0.04,
+      "num_leaves": 63,
+      "max_depth": -1,
+      "min_child_samples": 150,
+      "reg_lambda": 10,
+      "objective": "binary",
+      "n_jobs": 6,
+      "random_state": 42,
+      "verbosity": -1,
+      "colsample_bytree": 1.0,
+      "subsample": 1.0,
+      "max_bin": 255,
+      "deterministic": true,
+      "force_col_wise": true
+    },
+    "train_index_sha256": "bd9df58319c7fcc98385c88f8e4eddf7e23ca7a27dd7f1e04dbca86fc7e961a0",
+    "runner_sha256": "8f94017d4bbe825c2b4b178ddf9e22478aca7f433c795a669da28ad1548c30ac",
+    "plan_sha256": "9c62312ba336c0738b7b6ace2870a8e03f5a4641e6462bc7644a361b0fb4f8fb",
+    "validation_covariates_and_targets_excluded_from_all_fits": true,
+    "pid": 3,
+    "active_training": true
   },
   "completed_r7_neural_members": 40,
   "total_fivefold_members": 40,
@@ -679,5 +699,6 @@
       },
       "eligible": false
     }
-  }
+  },
+  "completed_r9_folds": 1
 }

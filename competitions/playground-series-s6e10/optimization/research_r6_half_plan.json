@@ -1,0 +1,20 @@
+{
+  "frozen_utc": "2026-10-18T13:00:20.204819+00:00",
+  "candidate": "Exactlyoneexternal-priorcontrol .5*v5+.5*currentleanNN8 perheldoutrow; finaltestsameweightswith40CVmembers.",
+  "reference": "v7 .75*v5+.25*leanNN8 fixedpublic.96076",
+  "rationale": "QuarterNNmasswasinheritedfromweakeroldrawNN2. CurrentleanNN8with3TEisbetter across5+3fitreplications. A singleexternal50/50prior checks neuralunderweighting withoutlearningweights onOOF orpublic.",
+  "source": "https://raw.githubusercontent.com/alvis1111/s6e10-airline-solution/main/independent_repro/README.md (explicit50/50leanNNblend; historicalreports only)",
+  "restrictions": "No otherweights, no grid, no globalOOFoptimizer, no publicprobing; no newfits; evaluateonlyaftercurrentserialXGB workends toavoidCPUoverlap.",
+  "multiplicity": "R6hasatmosttwofixedcontrasts (deepXGBreplacement and this50/50prior), eachone-sidedalpha.025 andbothpooledconditional95%lower/correctedfoldlowerpositiveon5and3folds. No globalhistoricalselectionguarantee.",
+  "selection_bias": "Officiallabelsreused extensively; externalpriorandfrozenparameters do notmakeheldoutlabelsuntouched.",
+  "fixed_weights": {
+    "v5": 0.5,
+    "lean_nn": 0.5
+  },
+  "formal_used": 1,
+  "formal_limit": 2,
+  "remaining": 1,
+  "runner_sha256": "826a2aa0eee247b646dab765f7a2274a92137c4add91fd823561d501f4b4db5c",
+  "freeze_before_control_quality": true,
+  "freeze_before_deepXGB_outer_metrics": true
+}

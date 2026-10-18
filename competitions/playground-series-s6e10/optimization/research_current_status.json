@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-18T12:57:13.695685+00:00",
+  "updated_utc": "2026-10-18T13:01:51.539648+00:00",
   "task_status": "active_r5_research_v7_fixed_baseline",
   "active_training": true,
   "current_route": "nested_deep_xgb_conditional_response",
@@ -36,8 +36,13 @@
   "local_browser_blocker": "CUA iab unavailable; web fetchedKagglepagesempty. Do not locallylogin/acceptterms.",
   "child_not_closing_task_after_failedroute": true,
   "state": {
-    "local_stage": "audited_library_csv_ready",
-    "whole_top100_task_completed": false
+    "updated_utc": "2026-10-18T13:01:51.295267+00:00",
+    "phase": "fivefold_fold3_inner",
+    "round": 501,
+    "seconds": 27.888714053988224,
+    "pid": 3,
+    "active_training": true,
+    "CPU_threads": 6
   },
   "final_inference_protocol": "frozen5foldCV40membertestmean;noextrafit;onlyafterbothreplicationspass",
   "final_inference_plan": "research_r4_final_inference_plan.json",
@@ -265,5 +270,6 @@
   },
   "remaining_formal_submissions": 1,
   "last_density_delta": -2.6429197778066182e-06,
-  "last_density_qualified": false
+  "last_density_qualified": false,
+  "additional_frozen_control": "oneexternal50/50prior_notawheightgrid;evaluateaftercurrentfitwork"
 }

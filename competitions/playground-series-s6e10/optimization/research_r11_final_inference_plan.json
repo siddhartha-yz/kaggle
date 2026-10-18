@@ -1,0 +1,16 @@
+{
+  "frozen_utc": "2026-10-18T14:39:56.437929+00:00",
+  "main_plan_sha256": "288cc243a3b88a6775e9b2787d95f45f64fbaa1c3b22d56c98ded9ef950dfb41",
+  "code_sha256": {
+    "research_r11_audit.py": "a1e2e800fd9bb5e7fc965333dd5642a0daaa3027cea28eb7ed1f109718bd73b4",
+    "research_r11_csv.py": "03425eac9e5499f407913ad839d827c705d90abb1fdffe803c1dd7220661561a"
+  },
+  "gates": "Both fixedfivefold/threefold dual-baseline gates then independent maps/splits/class/weights/CPU-replay audit before any test inference.",
+  "formula": ".5v5full+.5mean(five native32 ensembles);160members total",
+  "CPU_replay_tolerance": 2e-06,
+  "CPU_replay_note": "In-memory loaded model and creator are set toCPU consistently; installed files and saved weights unchanged. Allow small FP32 CPU/CUDA arithmetic differences.",
+  "quality_at_freeze": "Fivefold still running; no outer scores inspected.",
+  "formal_used": 1,
+  "remaining": 1,
+  "parent_only_submitter": true
+}

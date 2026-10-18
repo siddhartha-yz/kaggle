@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-18T05:18:12.594059+00:00",
+  "steps": [
+    {
+      "name": "w3_tabm_probe_b256",
+      "exit_code": 0,
+      "status": "complete",
+      "ended_utc": "2026-10-18T05:18:20.935978+00:00"
+    },
+    {
+      "name": "w3_tabm_primary_b256",
+      "exit_code": 0,
+      "status": "complete",
+      "ended_utc": "2026-10-18T05:19:23.293740+00:00"
+    }
+  ],
+  "active": null,
+  "active_log": "research_w3_tabm_primary_b256.log",
+  "updated_utc": "2026-10-18T05:18:20.936676+00:00",
+  "child_pid": 356860,
+  "outcome": "no_qualified_primary",
+  "completed_utc": "2026-10-18T05:19:23.296038+00:00"
+}

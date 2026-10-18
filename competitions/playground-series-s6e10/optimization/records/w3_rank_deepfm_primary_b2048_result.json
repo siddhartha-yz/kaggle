@@ -1,0 +1,42 @@
+{
+  "status": "complete",
+  "variant": "rank_deepfm",
+  "split": "primary",
+  "vs_v6": {
+    "baseline_auc": 0.9603020930463941,
+    "candidate_auc": 0.9603276530381891,
+    "delta_auc": 2.5559991794987802e-05,
+    "paired_se": 4.755053383459184e-05,
+    "conditional_95pct_ci": [
+      -6.76390545208122e-05,
+      0.0001187590381107878
+    ],
+    "candidate_logloss": 0.22528749323052952
+  },
+  "fold_comparisons": [
+    {
+      "baseline_auc": 0.9603020930463941,
+      "candidate_auc": 0.9603276530381891,
+      "delta_auc": 2.5559991794987802e-05,
+      "paired_se": 4.755053383459184e-05,
+      "conditional_95pct_ci": [
+        -6.76390545208122e-05,
+        0.0001187590381107878
+      ],
+      "candidate_logloss": 0.22528749323052952
+    }
+  ],
+  "eligible_for_next": false,
+  "completed_utc": "2026-10-18T05:51:45.889937+00:00",
+  "vs_matched_control": {
+    "baseline_auc": 0.9603403103246053,
+    "candidate_auc": 0.9603276530381891,
+    "delta_auc": -1.2657286416195568e-05,
+    "paired_se": 7.837692193638433e-06,
+    "conditional_95pct_ci": [
+      -2.8019163115726896e-05,
+      2.7045902833357604e-06
+    ],
+    "candidate_logloss": 0.22528749323052952
+  }
+}

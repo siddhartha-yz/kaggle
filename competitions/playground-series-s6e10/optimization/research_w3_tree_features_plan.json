@@ -1,0 +1,38 @@
+{
+  "frozen_utc": "2026-10-18T05:44:15.921892+00:00",
+  "hypotheses": {
+    "digits_counts": "Histogrambasedtreesmaymissirregularnumericvalues. AddFlightDistance%10,%100,//10andAge%10;outertrainingonlylogcountsforAge,DepartureDelay,ArrivalDelay. NotpreviousDistancecategoryorfrequencytest.",
+    "source_profiles": "20nonDistanceoriginalcolumnsgetoriginal-onlysmoothedlabelmean/logcountprofiles. ThisdiffersfromfailedunsupervisedDistanceconditionalfeaturemeansandfromstrongjointteacher;source129859safeonly,alpha20,no syntheticlabels."
+  },
+  "variants": [
+    "digits_counts",
+    "source_profiles"
+  ],
+  "base_features": "ExistingoutertrainDistanceStats+4targetedratingtwins+5auditedoriginalfeatures",
+  "params": {
+    "n_estimators": 639,
+    "learning_rate": 0.04,
+    "num_leaves": 63,
+    "max_depth": -1,
+    "min_child_samples": 150,
+    "reg_lambda": 10,
+    "objective": "binary",
+    "n_jobs": 6,
+    "random_state": 42,
+    "verbosity": -1,
+    "colsample_bytree": 1.0,
+    "subsample": 1.0,
+    "max_bin": 255,
+    "deterministic": true,
+    "force_col_wise": true
+  },
+  "weights": {
+    "v6": 0.75,
+    "new_lgb": 0.25
+  },
+  "matched_control": ".75v6+.25cachedoriginalLGB",
+  "gates": "UnchangedW3primary>=.0001lower>0andpositivepointvscontrol;choosehighesteligibleprimarybeforeconfirmation;confirmationlower>0;OOFallfoldpositiveandpooled>=.0002lower>0",
+  "source_policy": "Recheckoriginalhashandsafe21overlapexclusions;float64canonicalnumericstringkeys;missingreserved;sourcefitonlyglobalindependent129859. ProfilesexcludeDistancealreadycoveredbyoldlookup.",
+  "resources": "CPU6serial,noGPU;initial1GiBGPUcapretainedforotherqueuedfits;nooverlappingtraining,10:10start10:45hard11:06deadline;0of2formal,parentonly",
+  "bias": "TwoexogenouslydefinedfeaturehypotheseschosenafterreusedOOF/primarydiagnostics;no publicscoretuning. Conditionalintervalsexcludeselectionuncertainty."
+}

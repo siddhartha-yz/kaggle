@@ -1,0 +1,16 @@
+{
+  "frozen_utc": "2026-10-18T05:57:14.396020+00:00",
+  "hypothesis": "Distanceconditionalunlabeledgroupstatisticswereavalidatedstrongfeature;source-originalcontextfailedpossiblyduetodomainshift. Officialtestfeaturesprovide299844independentunlabeledtarget-domainobservationswithoutusingouterholdoutfeaturesorlabels. Testonefixedexternalprofileview;no globaltrain+validmaps.",
+  "external_data": "Officialtest.csvSHAff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6;21predictorsonly,no labels",
+  "features": "ExistingoutertrainDistanceStats+5auditedoriginalfeatures;addindependenttest-derivedFDcount/logcount,16numericconditionalmeans,9categoricalproportions,alpha20globaltestprior. Validationrowsneverenterfit;rawtesthasnoGTlabels. Finaltestrowprofilesremoveitsowncontributionfromgroup/globalstatistics;ID+featurehashverified.",
+  "validation_procedure": "Sameprimary/confirmation/fixed5foldandgates. Featurefitterusesoutertrainonlyforbaseandseparateofficialunlabeledtestforexternalprofiles;no outervalidationfeaturefit. Exactsourcepolicyexplicitlydiffersfromoldsingle-datasettrainonlymaps.",
+  "learner": "SamefixedLGB639/63leaves/lr.04/L2=10/seed42/CPU6asoldoriginal-awareLGB;nohyperparamgrid",
+  "combination": {
+    "formula": "v6+(45/128)*(new_lgb-old_original_lgb)",
+    "why": "ReplaceexistingLGBcomponentexactly,preserveoldNN/CB/residualmass;matched-controltestsintheprevioustreephaseexposeddegradationfromshiftingNNweight. Thisnewruleisfrozenbeforethisnewexternal-viewscore;previousfailedfeaturesarenotrescoredwithnewweights.",
+    "new_lgb_weight": 0.3515625
+  },
+  "gates": "Unchangedprimary>=.0001andlower>0;confirmationlower>0;OOFallfoldpositiveandpooled>=.0002lower>0",
+  "resources": "CPU6serial,noGPU;1GiBGPUceilingremainsforotherstages;10:10start10:45hard11:06deadline;0of2formal,parentonly",
+  "bias": "Developmentpartitionsreused/adaptiveselection;conditionalCIsnotindependent. Thisisasemisupevisedtransductiveuseofofficialtestpredictors,disclosedexplicitlyandneverlabels."
+}

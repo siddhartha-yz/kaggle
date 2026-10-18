@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "split": "primary",
+  "vs_v6": {
+    "baseline_auc": 0.9603020930463941,
+    "candidate_auc": 0.9604288982929298,
+    "delta_auc": 0.00012680524653563285,
+    "paired_se": 7.130780984571912e-05,
+    "conditional_95pct_ci": [
+      -1.295806076197662e-05,
+      0.0002665685538332423
+    ],
+    "candidate_logloss": 0.22512493914950626
+  },
+  "vs_matched_control": {
+    "baseline_auc": 0.9603213460191646,
+    "candidate_auc": 0.9604288982929298,
+    "delta_auc": 0.00010755227376513243,
+    "paired_se": 6.675812006756501e-05,
+    "conditional_95pct_ci": [
+      -2.3293641567294972e-05,
+      0.00023839818909755984
+    ],
+    "candidate_logloss": 0.22512493914950626
+  },
+  "eligible_for_next": false,
+  "new_fits_performed": false,
+  "completed_utc": "2026-10-18T05:44:18.207747+00:00"
+}

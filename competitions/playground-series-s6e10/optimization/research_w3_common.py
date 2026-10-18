@@ -3,7 +3,7 @@ from pathlib import Path
 from datetime import datetime,timezone
 import os,json,hashlib,signal
 for key in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS']:os.environ[key]='6'
-os.environ['CUDA_VISIBLE_DEVICES']='0'
+os.environ['CUDA_VISIBLE_DEVICES']='0';os.environ['MPLCONFIGDIR']='/tmp/kaggle-s6e10-mpl'
 import numpy as np,pandas as pd,torch
 from compare_validation import compare
 ROOT=Path(__file__).resolve().parent

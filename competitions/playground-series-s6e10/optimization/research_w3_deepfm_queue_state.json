@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-18T05:26:00.904737+00:00",
+  "steps": [
+    {
+      "name": "w3_deepfm_primary_b2048",
+      "exit_code": 0,
+      "status": "complete",
+      "ended_utc": "2026-10-18T05:26:18.570986+00:00"
+    }
+  ],
+  "active": null,
+  "active_log": "research_w3_deepfm_primary_b2048.log",
+  "updated_utc": "2026-10-18T05:26:00.906566+00:00",
+  "child_pid": 361829,
+  "outcome": "primary_rejected",
+  "completed_utc": "2026-10-18T05:26:18.571454+00:00"
+}

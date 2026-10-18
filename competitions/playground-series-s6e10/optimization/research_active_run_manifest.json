@@ -1,9 +1,9 @@
 {
-  "updated_utc": "2026-10-18T05:39:00.822614+00:00",
-  "phase": "window3_closed_without_qualified_candidate",
+  "updated_utc": "2026-10-18T06:04:46.775094+00:00",
+  "phase": "window3_semantic_expert_primary",
   "current_window": "research_w3_plan.json",
   "budget": "research_w3_submission_ledger.json",
-  "active_training": false,
+  "active_training": true,
   "confirmed_best": {
     "candidate": "submission_realmlp_value_v6.csv",
     "public_auc": 0.96058,
@@ -12,12 +12,17 @@
     "observed_utc": "2026-10-18T04:00:00+00:00"
   },
   "recovery": "Inspect saved results/logs and host processes before any restart; serial6threads/2GiB cap.",
-  "driver": "research_w3_nested_queue.py",
+  "driver": "research_w3_experts.py",
   "state": "research_w3_nested_queue_state.json",
   "resource_override": "research_w3_resource_override.json",
-  "status": "complete_no_candidate",
+  "status": "in_progress",
   "outcome": "nested_confirmation_gate_failed",
-  "completion": "research_w3_completion.json",
+  "completion": null,
   "last_exec_session": 24066,
-  "last_log": "research_w3_tabm_nested_confirm.log"
+  "last_log": "research_w3_tabm_nested_confirm.log",
+  "active_log": "research_w3_experts_class_primary.log",
+  "last_completed_states": [
+    "research_w3_phase2_state.json",
+    "research_w3_phase3_state.json"
+  ]
 }

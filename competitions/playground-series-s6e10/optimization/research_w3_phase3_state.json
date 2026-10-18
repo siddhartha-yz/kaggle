@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-18T05:58:59.084233+00:00",
+  "active": null,
+  "updated_utc": "2026-10-18T05:59:59.087380+00:00",
+  "child_pid": 4,
+  "outcome": "primary_rejected",
+  "completed_utc": "2026-10-18T06:00:32.871390+00:00"
+}

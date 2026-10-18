@@ -1,0 +1,14 @@
+{
+  "frozen_utc": "2026-10-18T05:51:22.284992+00:00",
+  "primary_routes": [
+    "digits_counts",
+    "source_profiles",
+    "rank_deepfm",
+    "cb_values"
+  ],
+  "new_primaries": "OnlyrankDeepFMandCBremaining;treesalreadyfailedunchangedgate. Fusionseparateonecachedtestalsofailed,no weightadjustment.",
+  "rank_rule": "Beforeconfirmation,rankalleligibleprimaryrecipesbycandidateAUC;tryinthatfrozenorder. Eachmustalsopointbeatitsmatchedbaselinecontrol. Ifonefailsconfirmation/OOF,nexteligibleprimarymaytryunchangedrecipe;noneineligiblegetconfirmation.",
+  "budgets": "sameW3max2new,parentonly,0used;CPU6serial/GPU1GiB,11:06UTCdeadline",
+  "gates": "sameunchangedW3primary>=.0001lower>0;confirmlower>0;5foldeverydelta>0andpooled>=.0002lower>0",
+  "all_selection_conditional": "Adaptivehypothesesafterreusedprimarydiagnostics;no publicscoretuning."
+}

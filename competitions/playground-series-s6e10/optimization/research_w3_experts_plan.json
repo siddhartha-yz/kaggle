@@ -1,0 +1,16 @@
+{
+  "frozen_utc": "2026-10-18T06:03:25.260630+00:00",
+  "hypothesis": "v6errorconcordancegapconcentratesinBusiness/EcoandBusiness/PersonalTravel;conditionalresponsepriorsdiffersharply. Fixedsemanticexpertroutingincreasesconditionalcapacitywithoutglobaldepth/seedgrid,notpreviouswide127leaforTErecipe.",
+  "variants": {
+    "class": "BusinessversusallnonBusiness",
+    "travel": "BusinesstravelversusPersonalTravel"
+  },
+  "routing": "rawcategoricalfeatureonly,neverlearnedfromlabels;twoserialmodelsperfit",
+  "preprocessing": "SharedfulloutertrainDistanceStats+5auditedoriginalfeatures;fittedoutertrainonly,expertfitusesitsgrouptrainingrows;nooutervalidationevalset",
+  "learner": "EachusesfixedoldLGB639,63leaves,lr.04,minchild150,L2=10,seed42,CPU6;noearlystop",
+  "combination": "v6+(45/128)*(expert_predictions-old_original_lgb);preserveNN/CB/residualweights;reconstructoldv6componentsandassertIDs",
+  "selection": "RankeligibleprimaryrecipesbyAUCbeforeconfirmation,tryunchangedinthatorder;no group/routing/weight/treenumsearch",
+  "gates": "SameW3primary>=.0001lower>0;confirmationlower>0;OOFall5foldpositivepooled>=.0002lower>0",
+  "resources": "CPU6serial,noGPU;1GiBGPUceilingunchanged;10:10start10:45hard11:06deadline,0of2formal,parentonly",
+  "bias": "ExogenoussemanticpartitionschosenusingreusedOOFdiagnostics;conditionalCIsdonotincludeadaptiveselectionuncertainty."
+}

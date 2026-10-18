@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-10-18T20:29:59.804177+00:00",
+  "alias": "research_artifacts/r39_uniform_lean_fivefold",
+  "canonical": "research_artifacts/r39_uniform_fivefold",
+  "type": "relative_directory_symlink",
+  "reason": "Frozenworker retainedhistoricalleanlabelin3partitiongatepath; aggregate usescanonicaluniformpath. BothpathsresolveEXACTsamefuturefivefoldresult,notcopied/fabricatedeligibility. No source/seed/features/training/gatesmodified. Aliascreatedbeforeanyqualityscore.",
+  "source_worker_unchanged": true,
+  "independent_audit_must_verify_same_result_bytes": true
+}

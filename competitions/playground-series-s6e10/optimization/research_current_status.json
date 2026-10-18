@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-18T20:20:04.988900+00:00",
-  "status": "R36_failed_R37_conditional_ordinal_rank13_LGB97",
+  "updated_utc": "2026-10-18T20:29:18.732823+00:00",
+  "status": "R39_uniform_native32_to128_matched_NN74",
   "confirmed_public_baseline": {
     "source": "ParentauthenticatedKagglebrowserreport",
     "reported_utc": "2026-10-18T17:58:48.436175+00:00",
@@ -4271,7 +4271,7 @@
     "formal_new_submissions": 0,
     "reason": "CB84 nested GPU failed fivefold vs v11 (-12.762ppm); matched GPU57 diagnostic also shows no conditional feature gain (-1.024ppm). Do not repeat this route on CPU without new evidence."
   },
-  "active_route": "R37",
+  "active_route": "R39",
   "r32_plan_sha256": "b29a258c179feb3e6a397aa9d3fb4c0a49c342a4e8050c5d10054c979c3906ac",
   "r32_result": {
     "status": "complete",
@@ -4784,5 +4784,193 @@
     "max_repeat_error": 0.0,
     "reason": "Conditional48 plus4disjoint32kcontexts stilldecreasedfivefoldAUC73.29ppm, pairedCIentirelynegative. StopTabICL; no3/test/CSV. Memoryrepairworked(resourcepeak932MiB, repeats0), qualitydidnot."
   },
-  "r37_plan_sha256": "11a1f1e4b0d1a7877feb7826ba5f279a5541c2b735f4f6301356f4a6cf0fb506"
+  "r37_plan_sha256": "11a1f1e4b0d1a7877feb7826ba5f279a5541c2b735f4f6301356f4a6cf0fb506",
+  "r37_result": {
+    "status": "complete",
+    "stage": "fivefold",
+    "checked_utc": "2026-10-18T20:22:40.853057+00:00",
+    "eligible": false,
+    "vs_formal_v11": {
+      "pooled": {
+        "baseline_auc": 0.9616328660208192,
+        "candidate_auc": 0.9616365704341755,
+        "delta_auc": 3.7044133562869064e-06,
+        "paired_se": 1.0279771054452382e-05,
+        "conditional_95pct_ci": [
+          -1.644393791043976e-05,
+          2.3852764623013574e-05
+        ],
+        "candidate_logloss": 0.2212216854495982
+      },
+      "fold_comparisons": [
+        {
+          "baseline_auc": 0.9608862343189031,
+          "candidate_auc": 0.9608803905970194,
+          "delta_auc": -5.8437218837248395e-06,
+          "paired_se": 2.3256281037594257e-05,
+          "conditional_95pct_ci": [
+            -5.1426032717409584e-05,
+            3.9738588949959905e-05
+          ],
+          "candidate_logloss": 0.22333552916727054
+        },
+        {
+          "baseline_auc": 0.9618421173162851,
+          "candidate_auc": 0.9618514103349988,
+          "delta_auc": 9.29301871366306e-06,
+          "paired_se": 2.2860501699314137e-05,
+          "conditional_95pct_ci": [
+            -3.551356461699265e-05,
+            5.409960204431877e-05
+          ],
+          "candidate_logloss": 0.22074397178033103
+        },
+        {
+          "baseline_auc": 0.9622169314611875,
+          "candidate_auc": 0.9622443641693503,
+          "delta_auc": 2.743270816285559e-05,
+          "paired_se": 2.2795590367274894e-05,
+          "conditional_95pct_ci": [
+            -1.7246648957003204e-05,
+            7.211206528271439e-05
+          ],
+          "candidate_logloss": 0.2192510891624901
+        },
+        {
+          "baseline_auc": 0.9614621762740646,
+          "candidate_auc": 0.9614476052991435,
+          "delta_auc": -1.4570974921079838e-05,
+          "paired_se": 2.3403960161211866e-05,
+          "conditional_95pct_ci": [
+            -6.04427368370551e-05,
+            3.130078699489542e-05
+          ],
+          "candidate_logloss": 0.22222426527864445
+        },
+        {
+          "baseline_auc": 0.9617929598566762,
+          "candidate_auc": 0.9617984497091885,
+          "delta_auc": 5.4898525122526465e-06,
+          "paired_se": 2.2670643425746553e-05,
+          "conditional_95pct_ci": [
+            -3.89446086022106e-05,
+            4.992431362671589e-05
+          ],
+          "candidate_logloss": 0.22055357185925467
+        }
+      ],
+      "corrected_resampled_t": {
+        "mean_delta": 4.3601765167933236e-06,
+        "se": 1.0714551836730259e-05,
+        "test_train_ratio": 0.25,
+        "df": 4,
+        "one_sided_alpha": 0.025,
+        "lower_bound": -2.538818848468443e-05
+      },
+      "eligible_for_new_partition_replication": false,
+      "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+    },
+    "vs_prior_v10_diagnostic": {
+      "pooled": {
+        "baseline_auc": 0.9615338914351743,
+        "candidate_auc": 0.9616365704341755,
+        "delta_auc": 0.00010267899900118227,
+        "paired_se": 2.0922974777898862e-05,
+        "conditional_95pct_ci": [
+          6.16699684365005e-05,
+          0.00014368802956586402
+        ],
+        "candidate_logloss": 0.2212216854495982
+      },
+      "fold_comparisons": [
+        {
+          "baseline_auc": 0.960818384445062,
+          "candidate_auc": 0.9608803905970194,
+          "delta_auc": 6.200615195739445e-05,
+          "paired_se": 4.7738425607255774e-05,
+          "conditional_95pct_ci": [
+            -3.156116223282687e-05,
+            0.00015557346614761578
+          ],
+          "candidate_logloss": 0.22333552916727054
+        },
+        {
+          "baseline_auc": 0.9617131397187628,
+          "candidate_auc": 0.9618514103349988,
+          "delta_auc": 0.00013827061623594705,
+          "paired_se": 4.4948240976552654e-05,
+          "conditional_95pct_ci": [
+            5.0172063921903855e-05,
+            0.00022636916854999024
+          ],
+          "candidate_logloss": 0.22074397178033103
+        },
+        {
+          "baseline_auc": 0.9620715765969017,
+          "candidate_auc": 0.9622443641693503,
+          "delta_auc": 0.00017278757244865162,
+          "paired_se": 4.634905640194194e-05,
+          "conditional_95pct_ci": [
+            8.194342190084541e-05,
+            0.0002636317229964578
+          ],
+          "candidate_logloss": 0.2192510891624901
+        },
+        {
+          "baseline_auc": 0.9614292433668903,
+          "candidate_auc": 0.9614476052991435,
+          "delta_auc": 1.8361932253241342e-05,
+          "paired_se": 4.85032598223669e-05,
+          "conditional_95pct_ci": [
+            -7.670445699859778e-05,
+            0.00011342832150508046
+          ],
+          "candidate_logloss": 0.22222426527864445
+        },
+        {
+          "baseline_auc": 0.9616819435749557,
+          "candidate_auc": 0.9617984497091885,
+          "delta_auc": 0.00011650613423275225,
+          "paired_se": 4.62505793833167e-05,
+          "conditional_95pct_ci": [
+            2.5854998641451515e-05,
+            0.000207157269824053
+          ],
+          "candidate_logloss": 0.22055357185925467
+        }
+      ],
+      "corrected_resampled_t": {
+        "mean_delta": 0.00010158648142559734,
+        "se": 4.125796997818565e-05,
+        "test_train_ratio": 0.25,
+        "df": 4,
+        "one_sided_alpha": 0.025,
+        "lower_bound": -1.2964007370733723e-05
+      },
+      "eligible_for_new_partition_replication": false,
+      "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+    },
+    "oof_sha256": "0e4806e7c101a3fea4d1f1fca60fd57feeb884e2c1a3c80bc2b6bf2003828284",
+    "plan_sha256": "11a1f1e4b0d1a7877feb7826ba5f279a5541c2b735f4f6301356f4a6cf0fb506",
+    "threefold_started": false,
+    "csv_generated": false,
+    "formal_new_submissions": 0,
+    "reason": "LGB97signedrankfields fivefold+3.704ppm butbothboundsnegative. No3/full/test/CSV. R37toyproofnovelinformationremainsvalid;architecturedifferencecanbeassessedoncewithoutwide78nuisanceaxes."
+  },
+  "r38_result": {
+    "status": "hardware_blocked_no_quality_evaluation",
+    "completed_utc": "2026-10-18T20:27:12.235926+00:00",
+    "feature_width": 87,
+    "native_members": 32,
+    "synthetic_labels": true,
+    "official_SAT_column_loaded": false,
+    "quality_scores_computed": false,
+    "new_formal_submissions": 0,
+    "csv_generated": false,
+    "peak_gpu_process_bytes": 987758592,
+    "failure": "742MiBallocatorOOMduringbackward20MiBrequest,720.35MiBallocated17.65reserved;processreported942MiB<1GiB. Stopasprespecified,no16member/batch/epochfallback,noNNqualityfits.",
+    "probe_source_sha256": "0e0f88ee152734026e5ddf802dd439f488405e540cf5c076127b0154cf6f1828",
+    "resource_plan_sha256": "1b109b18ac63d0bd60b020ec1b7f4c1d8d1b5abf9a19dd2df6800490dc30a723"
+  },
+  "r39_plan_sha256": "5534d635adea80272154b2cb3adb813e305c56fc70a27299cdf34cb92689fdef"
 }

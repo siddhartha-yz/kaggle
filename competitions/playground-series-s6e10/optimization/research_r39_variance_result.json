@@ -1,0 +1,63 @@
+{
+  "status": "complete_predictions_only",
+  "completed_utc": "2026-10-18T20:27:19.726674+00:00",
+  "official_targets_read": false,
+  "quality_scores_computed": false,
+  "new_models_fitted": 0,
+  "rows": 81920,
+  "folds": [
+    {
+      "fold": 0,
+      "rows": 16384,
+      "rms_member_SD": 0.020976586267352104,
+      "rms_native32_mean_SE": 0.003708171658217907,
+      "rms_formal_logpool_MC_SE_delta_method": 0.0018465626740802373,
+      "observed_mean_prediction_error": 2.980232238769531e-07,
+      "saved_control_prediction_error": 0.0
+    },
+    {
+      "fold": 1,
+      "rows": 16384,
+      "rms_member_SD": 0.020853864029049873,
+      "rms_native32_mean_SE": 0.0036864771973341703,
+      "rms_formal_logpool_MC_SE_delta_method": 0.0018401223314446252,
+      "observed_mean_prediction_error": 2.980232238769531e-07,
+      "saved_control_prediction_error": 0.0
+    },
+    {
+      "fold": 2,
+      "rows": 16384,
+      "rms_member_SD": 0.021572295576334,
+      "rms_native32_mean_SE": 0.003813479095697403,
+      "rms_formal_logpool_MC_SE_delta_method": 0.001903334126914281,
+      "observed_mean_prediction_error": 2.980232238769531e-07,
+      "saved_control_prediction_error": 0.0
+    },
+    {
+      "fold": 3,
+      "rows": 16384,
+      "rms_member_SD": 0.021135183051228523,
+      "rms_native32_mean_SE": 0.003736207727342844,
+      "rms_formal_logpool_MC_SE_delta_method": 0.001872882469584024,
+      "observed_mean_prediction_error": 2.980232238769531e-07,
+      "saved_control_prediction_error": 0.0
+    },
+    {
+      "fold": 4,
+      "rows": 16384,
+      "rms_member_SD": 0.021557049825787544,
+      "rms_native32_mean_SE": 0.0038107838481664658,
+      "rms_formal_logpool_MC_SE_delta_method": 0.0018877443140103871,
+      "observed_mean_prediction_error": 2.384185791015625e-07,
+      "saved_control_prediction_error": 0.0
+    }
+  ],
+  "rms_native32_mean_SE": 0.0037513889838010073,
+  "rms_formal_logpool_MC_SE_delta_method": 0.0018702829755209668,
+  "hypothetical32_to128_neural_Brier_MC_variance_reduction": 1.0554688742558938e-05,
+  "hypothetical32_to128_formal_Brier_MC_variance_reduction_delta_method": 2.623468806392671e-06,
+  "peak_gpu_process_bytes": 698351616,
+  "peak_rss_bytes": 1942654976,
+  "plan_sha256": "b06f17620d1433bb0760f2df404c7e7e8f0e98938c3ff626a4e84c5dc0736f5f",
+  "assumption": "Conditionallyindependentrandominitializationsforfixeddata; delta-methodformalpoolapproximation. Measuresfinite-ensembleMCuncertainty,notlabelnoiseorAUCgain. No seedselection."
+}

@@ -1,0 +1,46 @@
+{
+  "frozen_utc": "2026-10-18T20:27:12.236079+00:00",
+  "purpose": "Predictions-onlynative32variance measurementonexistingv11NN74,noSATcolumnloading/AUC/newfit",
+  "mechanism": "R38NN87cannotfitmatchednative32under742MiBcapandisclosed. ReturntoactualqualifiedNN74/native32/3epochs. If finiteensembleMCvariationismeaningful, ONEuniform128memberextension viaindependentnative32blocksseeds42(existing),43,44,45 willpreserveexecution/features/batch/epochandkeeponlyoneblockGPUresident. R11raw47serial8->native32changedexecution,notmatcheduniformextensionofthisNN74recipe.",
+  "sampling": "16384outervalidationcovariaterowsfromeach5fold,default_rng(20261040+fold), no SATread. Observe32softmaxoutputsBEFOREexistingnativeaveragewithoutchangingitsoutput;verifymeanandcachedcontrolagreement.",
+  "seed_policy": "Ifqualityroutepursued, allconsecutive42,43,44,45 blocksuniform, no bestseed/seedgrid. Existing42notretrained. Diagnoseuncertaintybeforefreezingquality.",
+  "resource_caps": {
+    "cpu_threads": 6,
+    "allocator_bytes": 778043392,
+    "gpu_process_bytes": 1073741824,
+    "RSS_bytes": 8589934592,
+    "available_RAM_min_bytes": 2147483648,
+    "paid": false
+  },
+  "source_sha256": {
+    "research_r39_variance.py": "24f0eae453264e9b5405c0e14a97bde816eefde2858708bf0a0bf9e98ed40f19",
+    "research_r23_loader.py": "b21b6210be0b72350d63942e7c86b1ad872165d55a4e2c66fcdab3a059a8b64a",
+    "research_r23_guard.py": "13e4de70ccb00335a65bd13c1acdd6b00cf38b7c218a4f9506393258e23ed270",
+    "research_r8_probe.py": "2fd57d3f2dbe29a1490126d2299d57388424e86a45b1f3fcce97a2945ebf7fb9",
+    "research_r8_streaming.py": "4ffac94fcc417fa98ddc8237a6721efde5b098287b9b748ed734fe86396c3d44"
+  },
+  "artifact_sha256": {
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "research_r38_result.json": "733834767a1d8951a3e705ee796989ac4e92b73acd0ab403b880f77404674f31",
+    "research_r37_result.json": "23ccea3b03d8a068e610851c06898d8b6074d93df5b0a4d9aeb8c360b5d01dc7",
+    "research_r36_result.json": "429e4e9336b1e53256c42052cd9520b9c4bdfdf35c50adb0af84df9114c8e8c9",
+    "research_r23_plan.json": "7b8015ad7059d8cc682e9f903ba0ee4185ea0d24b8cbb3a12b360fc9e6c0d437",
+    "research_artifacts/oof_v1/folds.npz": "cc42e77132e65e986651bc09581580d5dd0aaaac394b07c87358dbd0289fa688",
+    "research_artifacts/r23_conditional_lean_fivefold/oof.npz": "26d8a9a89cfaa3a928300fb0f63f361a50b7c7a2e39dc1c820161b6f33960ea3",
+    "research_artifacts/r23_conditional_lean_fivefold/fold0/result.json": "b2022232e42c257456cfebc881298e2ed2b0b56011661125fbe176cf3d670d35",
+    "research_artifacts/r23_conditional_lean_fivefold/fold0/model.pkl": "119693685bbf87e70e3aaf3f3827b6031f8e824b3eeec7ba3eaecd1ada4d088d",
+    "research_artifacts/r23_conditional_lean_fivefold/fold0/transformer.joblib": "33f428a3ee158db035884baf8ac4f074569e46d598dedb36c62da42d436114da",
+    "research_artifacts/r23_conditional_lean_fivefold/fold1/result.json": "acac6b55dd85f5092b11254fc8e5e33ab1f1779158b35ecb6ca69f43ead4eb1e",
+    "research_artifacts/r23_conditional_lean_fivefold/fold1/model.pkl": "ecc6ea49e23a44e27891d52bfbbd89663c88425efd787b4a3351539e86b145f3",
+    "research_artifacts/r23_conditional_lean_fivefold/fold1/transformer.joblib": "4f116842bb97912debe4a4a2541e458587349fc3f8b5fe52597dba85960995f8",
+    "research_artifacts/r23_conditional_lean_fivefold/fold2/result.json": "585319457a1a111766ddf63f9ec6ef4ecff8a239259ed923037527fe4e5e46f7",
+    "research_artifacts/r23_conditional_lean_fivefold/fold2/model.pkl": "4e4064247bdb9de127320e2add2d3b048b1d70f68cd0d74f1daad6e7521b10ff",
+    "research_artifacts/r23_conditional_lean_fivefold/fold2/transformer.joblib": "fbd99cd8749754fdf7a3b1f035f92e131c43e71dd99c43c6553881a9dfe63ae0",
+    "research_artifacts/r23_conditional_lean_fivefold/fold3/result.json": "7798e2537bfca8a699fc281d19177b292f1a3c06b7ec7a5c8119a50883579280",
+    "research_artifacts/r23_conditional_lean_fivefold/fold3/model.pkl": "99b43846e115dc8f0f070f16abd743ec9afb116cb4ab9fb5a9c1d08e937f739b",
+    "research_artifacts/r23_conditional_lean_fivefold/fold3/transformer.joblib": "46339298a6993bc20cea1f7de4a249edafb04a96418d481cab67413ee3d8bc4b",
+    "research_artifacts/r23_conditional_lean_fivefold/fold4/result.json": "d6028400fb6d2d648faeab4da22cf7af0b8bb69d157587dea17a35181285821e",
+    "research_artifacts/r23_conditional_lean_fivefold/fold4/model.pkl": "bc7915381a8fd0e2737c3f549878b629bc764b5b95db74b39adf8a0154c1c9e8",
+    "research_artifacts/r23_conditional_lean_fivefold/fold4/transformer.joblib": "f15b65d072ff58c960360aba63c9cbc4a98c98c36681b1c5fe9e4b8d27b82a52"
+  }
+}

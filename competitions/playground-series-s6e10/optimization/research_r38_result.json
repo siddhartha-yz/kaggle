@@ -1,0 +1,15 @@
+{
+  "status": "hardware_blocked_no_quality_evaluation",
+  "completed_utc": "2026-10-18T20:27:12.235926+00:00",
+  "feature_width": 87,
+  "native_members": 32,
+  "synthetic_labels": true,
+  "official_SAT_column_loaded": false,
+  "quality_scores_computed": false,
+  "new_formal_submissions": 0,
+  "csv_generated": false,
+  "peak_gpu_process_bytes": 987758592,
+  "failure": "742MiBallocatorOOMduringbackward20MiBrequest,720.35MiBallocated17.65reserved;processreported942MiB<1GiB. Stopasprespecified,no16member/batch/epochfallback,noNNqualityfits.",
+  "probe_source_sha256": "0e0f88ee152734026e5ddf802dd439f488405e540cf5c076127b0154cf6f1828",
+  "resource_plan_sha256": "1b109b18ac63d0bd60b020ec1b7f4c1d8d1b5abf9a19dd2df6800490dc30a723"
+}

@@ -1,0 +1,35 @@
+{
+  "checked_utc": "2026-10-18T07:28:38.765919+00:00",
+  "task_status": "in_progress_not_closed",
+  "processes_verified_alive_utc": "2026-10-18T07:27:47Z",
+  "controller_pid": 412841,
+  "active_child_pid": 414005,
+  "active_command": [
+    "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/.venv-ftt-w3/bin/python",
+    "-u",
+    "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/research_w3_family_components.py",
+    "--component",
+    "ftt",
+    "--split",
+    "confirm",
+    "--fold",
+    "0"
+  ],
+  "active_log": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/research_w3_family_confirm_ftt_fold0.log",
+  "log_mtime_utc": "2026-10-18T07:28:36.058511+00:00",
+  "last_log_lines": [
+    "research_artifacts/w3_ftt_confirm/fold0/member1/outer {'epoch': 2, 'train_loss': 0.22836853563785553, 'seconds': 10.718428372005292, 'gpu_free_bytes': 6286016512, 'process_gpu_mib': 574, 'peak_allocated_bytes': 284718080, 'peak_reserved_bytes': 402653184}",
+    "research_artifacts/w3_ftt_confirm/fold0/member1/outer {'epoch': 3, 'train_loss': 0.2255091518163681, 'seconds': 11.48574284100323, 'gpu_free_bytes': 6285164544, 'process_gpu_mib': 574, 'peak_allocated_bytes': 284718080, 'peak_reserved_bytes': 402653184}"
+  ],
+  "current_stage": "SecondFTTransformer member inner epochselection for confirmation; twoTabM and threeDeepFM views already complete. Familyaverage primary passed; no confirmation AUC until final component completes.",
+  "completed_primary_screens": 25,
+  "latest_qualified_primary": "Fixed3familymean:delta+.0001261002360752883, conditionalCI[+.00001145624209179341,+.0002407442300587832]",
+  "current_best_submitted": "v6 public.96058 at04:00UTC snapshot; no new deliverable qualifies yet",
+  "new_formal_submissions_used": 0,
+  "reserved_slots": 0,
+  "remaining_new_formal_submissions": 2,
+  "deadline_utc": "2026-10-18T11:06:00Z",
+  "last_git_checkpoint": "fac0aa7",
+  "progress_visibility_blocker": "Parent reports in-progress commentary is not visible. Available cross-thread messaging tool explicitly requires direct human authorization; receiving parent requests does not authorize messaging back. Asked user asynchronously for narrowly scoped authorization; training continues and code/status checkpoints remain on GitHub.",
+  "no_training_stopped_for_status_reply": true
+}

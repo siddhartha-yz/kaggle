@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-10-18T15:57:48.980166+00:00",
+  "main_plan_sha256": "31e45769cd10dbd4e49006760c5c1c21a7710a95c06fc26aacd3733c9bfd5b82",
+  "code_sha256": {
+    "research_r17_audit.py": "c913c4a1c60af5bf0e366b7f3cff86be8ccda72fb72da33af7a69d61fc17369a",
+    "research_r17_csv.py": "66aa3ed83c1f0a1ff65d5e084da4112624354201580ca6977ca165da693a7089"
+  },
+  "gating": "Bothfivefoldandthreefoldrequired; no inference or delivery beforeauditedqualification."
+}

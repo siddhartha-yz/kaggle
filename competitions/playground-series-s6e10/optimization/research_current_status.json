@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-18T15:39:14.591102+00:00",
-  "status": "R15_rejected_R16_GPU_CatBoost_pair_frozen",
+  "updated_utc": "2026-10-18T15:58:30.989932+00:00",
+  "status": "active_r17_teacher_input_after_r15_r16_rejections",
   "confirmed_public_baseline": {
     "recorded_utc": "2026-10-18T12:41:59.978029+00:00",
     "source": "ParentauthenticatedKagglebrowserreport",
@@ -22,52 +22,32 @@
     "rank_observation_note": "Snapshot supplied by parent; exact separate rank observationtime not supplied."
   },
   "backup_candidate": {
-    "csv": "submission_lean_half_r6_v8.csv",
-    "sha256": "e277a97762009cd1ebf739f3fa692ce2ee5e4c1cceff5fab225634f74dd98c5b",
-    "bytes": 8205243,
+    "csv": "submission_log_odds_pool_r14_v9.csv",
+    "sha256": "55a1cc1805674a4d1419d1c9ff61b64ee35d61f0117782b6c886dd103f9f57c8",
     "rows": 299844,
-    "weights": {
-      "v5_full": 0.5,
-      "lean_cv40": 0.5
-    },
-    "fivefold": {
-      "baseline_auc": 0.9612963083501996,
-      "candidate_auc": 0.9614652606685573,
-      "delta_auc": 0.00016895231835767355,
-      "paired_se": 1.6776492249050196e-05,
-      "conditional_95pct_ci": [
-        0.00013607039354953515,
-        0.00020183424316581194
-      ],
-      "candidate_logloss": 0.22181560273488748
-    },
-    "threefold": {
-      "baseline_auc": 0.9611235237273941,
-      "candidate_auc": 0.9612814192231113,
-      "delta_auc": 0.0001578954957172085,
-      "paired_se": 1.7323792034400075e-05,
-      "conditional_95pct_ci": [
-        0.00012394086332978435,
-        0.00019185012810463267
-      ],
-      "candidate_logloss": 0.2222013842318224
-    },
+    "bytes": 8205510,
     "library_saved_and_exact_byte_verified": true,
-    "recommendation": "Holdlastformalopportunity;backuppointgainmuchsmallerthanpublicgap. ContinuecurrentmechanismratherthanassumingTop100."
+    "formal_submitted": false,
+    "parent_instruction": "Holdlastslot;retainv9backup. Continue grounded experiments."
   },
   "active_driver": {
-    "updated_utc": "2026-10-18T15:22:21.547406+00:00",
-    "status": "not_qualified",
-    "driver_pid": 564262,
+    "updated_utc": "2026-10-18T15:58:04.043329+00:00",
+    "status": "training",
+    "driver_pid": 583989,
     "formal_used": 1,
     "remaining": 1,
     "whole_top100_task_completed": false,
     "stage": "fivefold",
-    "active_training": false
+    "active_training": true
   },
   "current_training": {
-    "active_training": false,
-    "next": "R16GPUCatBoostnumeric57/nominal58"
+    "updated_utc": "2026-10-18T15:58:09.748057+00:00",
+    "status": "training",
+    "variant": "lean",
+    "stage": "fivefold",
+    "fold": 0,
+    "pid": 583990,
+    "active_training": true
   },
   "completed_r7_neural_members": 40,
   "total_fivefold_members": 40,
@@ -2276,5 +2256,29 @@
     }
   },
   "r15_threefold_started": false,
-  "r15_CSV_generated": false
+  "r15_CSV_generated": false,
+  "r16_progress": {
+    "numeric57": 5,
+    "nominal58": 3
+  },
+  "completed_routes_since_v9": {
+    "R15_customer_segment_prior": {
+      "status": "fivefold_rejected",
+      "delta_vs_v9": 9.29595491760926e-06,
+      "threefold_run": false,
+      "csv_created": false
+    },
+    "R16_GPU_CatBoost_numeric57": {
+      "status": "fivefold_rejected",
+      "delta_vs_v9": -1.590744676649436e-05,
+      "threefold_run": false,
+      "csv_created": false
+    },
+    "R16_GPU_CatBoost_nominal58": {
+      "status": "fivefold_rejected",
+      "delta_vs_v9": -1.0568161299184808e-05,
+      "threefold_run": false,
+      "csv_created": false
+    }
+  }
 }

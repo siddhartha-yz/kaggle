@@ -1,0 +1,30 @@
+{
+  "frozen_utc": "2026-10-18T14:47:07.132545+00:00",
+  "mechanism": "Replace existing distance statistics by pooled outer-training + official-test UNLABELLED covariate estimates, retaining smoothing20 and the SAME52base+5source=57fields. Leave-query-out for every pool member: both train and finaltest queries are subtracted; outer validation is not pooled at all.",
+  "novelty": "W3 test-only27extra profiles were added beside train maps and failed. This route estimates one merged population map and replaces exactly the existing fields, avoids duplicated estimators, preserves dimensions/smoothing/model hyperparameters, and aligns query exclusion for train/val/test.",
+  "prior": "Cached read-only public notebook uses train+test value counts/route profiles. This uses ONLY official test covariates already authorized in W3, no outside data or test labels.",
+  "fitting_scope": "Each outer fold: rawtrainfi + actual299844test predictors only for pooled counts/sums/proportions; raw category vocabulary remains outertrain-only. NO outerval covariates or labels fit any map. SAT absent from aggregation API. Main supervised LGB gets only yfi. Existing source5 unchanged and previously audited.",
+  "LOO_equations": "For pool-member query subtract its count, finite numeric value/valid-count, and matching category flag. Recompute global-prior excluding query too; smoothing20 unchanged. Validation query not in pool subtracts nothing. Unseen distance falls back to pooled global prior.",
+  "model": "Existing CPU6 LGB639 lr.04 leaves63 minchild150 lambda10 seed42; no early stopping, no retuning.",
+  "blend": "Qualifiedprivatev8 +30/128*(newLGB-oldLGB); all other coefficients and models unchanged.",
+  "gates": "One predeclared contrast, finish fivefold before scoring; paired conditional95% lower and corrected-resampled-t lower(alpha.025) positive versus both qualifiedprivatev8 and officialv7. Only then freshthreefold fits with matchedcachedbaselines, same gates. No minimum effect or all-foldpositive rule.",
+  "test_protocol": "Deterministic synthetic test passed LOO against physically deleting query and refitting baseline maps for all rows, includingNaN valid counts/global priors/category probabilities; batch permutation invariance and unseen-distance fallback.",
+  "final_inference": "Only if5+3gates and independent audit pass: fit full699635train +299844test covariate pool, supervised LGB on fulltrain using LOO, predict test with included=True/LOO. Verify pool statistics and exact query deletion, reconstruct fullcomponent weights and CSV/IDs/Truepositive/hash; save LibraryCSV forparent. Test fitted covariate statistics MUST be disclosed as transductive, no test targets.",
+  "cpu_threads": 6,
+  "GPU_used": false,
+  "paid_resources": false,
+  "per_fit_timeout_seconds": 900,
+  "peak_rss_ceiling_bytes": 8589934592,
+  "formal_used": 1,
+  "formal_remaining": 1,
+  "parent_only_submitter": true,
+  "actual_top100_verified": false,
+  "limitations": "All official validation labels historically reused, so conditional intervals omit adaptive selection. Test covariates are used in preprocessing; do not claim no test-fitted statistics. Source data/model features unchanged.",
+  "source_sha256": {
+    "research_r12_population_features.py": "fc13f688c3a78b27210a8d878a6b2c4a4517b95558d2c759613855e692e60248",
+    "research_r12_worker.py": "2bb419d5e1993a14e01ae28ad1be5ef0881ec93fb7574281903a5ab1fd047c8f",
+    "test_research_r12_population.py": "d4ef90d38b4e8f86f00dabc2aa0b86eb11a02a1163f7968656242ff86b737994",
+    "research_features.py": "6c029528249d6772a958b29c46f4f095da9f91136c2721eb2a4d268f360fcfe9",
+    "research_r5_auto_te.py": "52485ed151e27f681d0447c0a3d73783b68dfe64c8683c1f33e2656f3fc44285"
+  }
+}

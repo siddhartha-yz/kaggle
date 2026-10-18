@@ -1,172 +1,37 @@
 {
-  "updated_utc": "2026-10-18T11:32:11.382959+00:00",
-  "status": "active_training_not_stopped",
-  "current_processes": {
-    "baseline_cpu_host_pid": 481981,
-    "serial_driver_host_pid": 482648
-  },
-  "current_stage": {
+  "updated_utc": "2026-10-18T11:42:51.546141+00:00",
+  "status": "active_gpu_replication",
+  "current_state": {
+    "updated_utc": "2026-10-18T11:42:33.079516+00:00",
     "status": "training",
-    "started_utc": "2026-10-18T11:30:20.983490+00:00",
-    "fold": 1,
-    "component": "cb10",
-    "train_rows": 466423,
-    "valid_rows": 233212,
-    "train_indices_sha256": "999c27ee51697d5af209094e2016fa4c1f07474ed8b1c450bbc91745f211de2e",
-    "no_outer_validation_in_fit": true,
-    "active_training": true,
-    "pid": 3,
-    "route": "fresh_baseline_replication3"
-  },
-  "baseline_completed_components": [
-    {
-      "fold": 0,
-      "component": "cb10",
-      "seconds": 170.02032820099703
-    },
-    {
-      "fold": 0,
-      "component": "cb8",
-      "seconds": 182.57053737200476
-    },
-    {
-      "fold": 0,
-      "component": "lgb",
-      "seconds": 12.758358071005205
-    },
-    {
-      "fold": 0,
-      "component": "nn",
-      "seconds": 52.72854445899429
-    },
-    {
-      "fold": 0,
-      "component": "residual",
-      "seconds": 11.809104785003
-    },
-    {
-      "fold": 1,
-      "component": "cb8",
-      "seconds": 180.22811732399714
-    },
-    {
-      "fold": 1,
-      "component": "lgb",
-      "seconds": 12.580652117001591
-    },
-    {
-      "fold": 1,
-      "component": "residual",
-      "seconds": 11.564842471998418
-    }
-  ],
-  "baseline_completed_count": 8,
-  "baseline_total_components": 15,
-  "log": "research_r4_baseline3.log",
-  "log_mtime_utc": "2026-10-18T11:30:20.985482+00:00",
-  "driver_state": {
-    "updated_utc": "2026-10-18T11:21:54.574359+00:00",
-    "status": "waiting_for_existing_baseline",
-    "driver_pid": 482648,
-    "baseline_pid": 481981
-  },
-  "next_steps": [
-    "Finishfresh15component3foldbaseline",
-    "Driverautomaticallyrunsfrozen24memberGPU3foldcandidate",
-    "Onlyifconfirmationqualifies,driverautomaticallyproducesaudited40memberCVCSV",
-    "ThenLibraryhandoffandparent-onlyKaggleupload;actualTop100remainsunverified"
-  ],
-  "new_formal_used": 0,
-  "new_formal_limit": 2,
-  "fivefold_result": {
-    "pooled": {
-      "baseline_auc": 0.961135462544149,
-      "candidate_auc": 0.9612963083501996,
-      "delta_auc": 0.0001608458060505802,
-      "paired_se": 1.3340762573528445e-05,
-      "conditional_95pct_ci": [
-        0.00013469791140646443,
-        0.00018699370069469594
-      ],
-      "candidate_logloss": 0.22233584868403355
-    },
-    "fold_comparisons": [
-      {
-        "baseline_auc": 0.960429938966505,
-        "candidate_auc": 0.9605549130841352,
-        "delta_auc": 0.0001249741176302388,
-        "paired_se": 3.0097465931984364e-05,
-        "conditional_95pct_ci": [
-          6.598308440354945e-05,
-          0.00018396515085692815
-        ],
-        "candidate_logloss": 0.22445716315200495
-      },
-      {
-        "baseline_auc": 0.9612778335243019,
-        "candidate_auc": 0.961453787125527,
-        "delta_auc": 0.0001759536012251317,
-        "paired_se": 2.9475642401515702e-05,
-        "conditional_95pct_ci": [
-          0.00011818134211816093,
-          0.0002337258603321025
-        ],
-        "candidate_logloss": 0.22190359095044165
-      },
-      {
-        "baseline_auc": 0.9616849171588457,
-        "candidate_auc": 0.9618540373111633,
-        "delta_auc": 0.00016912015231751454,
-        "paired_se": 2.88165536961483e-05,
-        "conditional_95pct_ci": [
-          0.00011263970707306387,
-          0.0002256005975619652
-        ],
-        "candidate_logloss": 0.2205301562750344
-      },
-      {
-        "baseline_auc": 0.9610229009555541,
-        "candidate_auc": 0.9611975606235804,
-        "delta_auc": 0.00017465966802632238,
-        "paired_se": 2.925805088635565e-05,
-        "conditional_95pct_ci": [
-          0.00011731388828906532,
-          0.00023200544776357944
-        ],
-        "candidate_logloss": 0.22322571173379702
-      },
-      {
-        "baseline_auc": 0.9613048943792812,
-        "candidate_auc": 0.9614600858673521,
-        "delta_auc": 0.00015519148807086047,
-        "paired_se": 2.9678790513811182e-05,
-        "conditional_95pct_ci": [
-          9.702105866379056e-05,
-          0.0002133619174779304
-        ],
-        "candidate_logloss": 0.2215626213088898
-      }
-    ],
-    "corrected_resampled_t": {
-      "mean_delta": 0.00015997980545401358,
-      "se": 1.4240257013909459e-05,
-      "test_train_ratio": 0.25,
-      "df": 4,
-      "one_sided_alpha": 0.025,
-      "lower_bound": 0.00012044251357098612
-    },
-    "eligible_for_new_partition_replication": true,
-    "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim.",
-    "status": "complete",
     "route": "lean_realmlp",
-    "ended_utc": "2026-10-18T11:18:54.831557+00:00",
-    "gpu_process_peak_bytes": 950009856,
-    "oof_sha256": "c5c4c8b1f00688a964540750a79e9206159c81e47aca7efd0712e21093789843"
+    "fold": 0,
+    "member": 4,
+    "pid": 487615,
+    "active_training": true,
+    "plan": "research_r4_plan.json"
   },
-  "browser_inventory": {
-    "enabled_browsers": 0,
-    "iab_unavailable": true,
-    "no_local_login_or_terms_accepted": true
+  "driver_state": {
+    "updated_utc": "2026-10-18T11:41:09.609509+00:00",
+    "status": "running_serial_stage",
+    "driver_pid": 482648,
+    "runner": "research_r4_lean_replication3.py",
+    "log": "research_r4_lean_replication3.log"
   },
-  "next_prepared_mechanism_not_executed": "research_next_mechanism_review.json"
+  "baseline3_status": {
+    "status": "complete",
+    "ended_utc": "2026-10-18T11:41:07.354134+00:00",
+    "oof_sha256": "ad06fa230d83c26e68d423bd4cf84aaaacc286bdd286c7688b85c2c9d0865bc3",
+    "fold_sha256": "4ac2e541a4630e9b66c6f0bb0556ad83410e624cdeca5d3ec61e85e5598350ae",
+    "all_baseline_components_freshly_trained": true,
+    "no_old_predictions_reused": true
+  },
+  "baseline3_components_completed": 15,
+  "neural_replication_completed": 4,
+  "neural_replication_total": 24,
+  "observed_gpu_process_peak_bytes": 815792128,
+  "next": "Frozenconfirmationresult thenconditionalCSVinference andindependentdeliveryaudit;Libraryhandoffafteraudit",
+  "formal_new_used": 0,
+  "formal_new_limit": 2,
+  "actual_top100_verified": false
 }

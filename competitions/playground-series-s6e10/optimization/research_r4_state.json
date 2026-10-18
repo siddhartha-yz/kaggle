@@ -1,13 +1,10 @@
 {
+  "updated_utc": "2026-10-18T11:42:33.079516+00:00",
   "status": "training",
-  "started_utc": "2026-10-18T11:30:20.983490+00:00",
-  "fold": 1,
-  "component": "cb10",
-  "train_rows": 466423,
-  "valid_rows": 233212,
-  "train_indices_sha256": "999c27ee51697d5af209094e2016fa4c1f07474ed8b1c450bbc91745f211de2e",
-  "no_outer_validation_in_fit": true,
+  "route": "lean_realmlp",
+  "fold": 0,
+  "member": 4,
+  "pid": 487615,
   "active_training": true,
-  "pid": 3,
-  "route": "fresh_baseline_replication3"
+  "plan": "research_r4_plan.json"
 }

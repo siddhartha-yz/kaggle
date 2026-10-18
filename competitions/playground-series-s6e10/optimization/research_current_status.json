@@ -1,8 +1,8 @@
 {
-  "updated_utc": "2026-10-18T11:32:11.382959+00:00",
+  "updated_utc": "2026-10-18T11:42:51.546141+00:00",
   "task_status": "active_research_until_verified_actual_Top100",
   "active_training": true,
-  "current_route": "fresh_complete_baseline3_refit_for_frozen_lean_candidate",
+  "current_route": "fresh_threefold_gpu_lean_replication",
   "driver": "research_r4_driver.py",
   "goal": "actual verified leaderboard Top100; no automatic oldwindow cutoff",
   "plan": "research_r4_plan.json",
@@ -36,17 +36,14 @@
   "local_browser_blocker": "CUA iab unavailable; web fetchedKagglepagesempty. Do not locallylogin/acceptterms.",
   "child_not_closing_task_after_failedroute": true,
   "state": {
+    "updated_utc": "2026-10-18T11:42:33.079516+00:00",
     "status": "training",
-    "started_utc": "2026-10-18T11:30:20.983490+00:00",
-    "fold": 1,
-    "component": "cb10",
-    "train_rows": 466423,
-    "valid_rows": 233212,
-    "train_indices_sha256": "999c27ee51697d5af209094e2016fa4c1f07474ed8b1c450bbc91745f211de2e",
-    "no_outer_validation_in_fit": true,
+    "route": "lean_realmlp",
+    "fold": 0,
+    "member": 4,
+    "pid": 487615,
     "active_training": true,
-    "pid": 3,
-    "route": "fresh_baseline_replication3"
+    "plan": "research_r4_plan.json"
   },
   "final_inference_protocol": "frozen5foldCV40membertestmean;noextrafit;onlyafterbothreplicationspass",
   "final_inference_plan": "research_r4_final_inference_plan.json",
@@ -137,9 +134,11 @@
   },
   "phase": "fivefold_passed_fresh_threefold_refitting",
   "no_new_formal_submission": true,
-  "active_child_driver": "research_r4_baseline3.py",
+  "active_child_driver": "research_r4_lean_replication3.py",
   "driver_state": "research_r4_driver_state.json",
   "checkpoint": "research_r4_actual_checkpoint.json",
-  "baseline_components_complete": 8,
-  "baseline_components_total": 15
+  "baseline_components_complete": 15,
+  "baseline_components_total": 15,
+  "neural_replication_complete": 4,
+  "neural_replication_total": 24
 }

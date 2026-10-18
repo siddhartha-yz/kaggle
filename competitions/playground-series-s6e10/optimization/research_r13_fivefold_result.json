@@ -1,0 +1,247 @@
+{
+  "status": "complete",
+  "checked_utc": "2026-10-18T14:59:50.913811+00:00",
+  "stage": "fivefold",
+  "oof_sha256": "b2db16cea9b0f0d66aa886dc4cf8132f3815fb3767672a6943ef68442d290256",
+  "vs_private_half": {
+    "pooled": {
+      "baseline_auc": 0.9614652606685573,
+      "candidate_auc": 0.9614894587292203,
+      "delta_auc": 2.419806066300545e-05,
+      "paired_se": 1.130670723478551e-05,
+      "conditional_95pct_ci": [
+        2.0369144828258484e-06,
+        4.635920684318505e-05
+      ],
+      "candidate_logloss": 0.22175558380105787
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.9607443614157238,
+        "candidate_auc": 0.9607782140303782,
+        "delta_auc": 3.385261465438383e-05,
+        "paired_se": 2.4518182950284677e-05,
+        "conditional_95pct_ci": [
+          -1.4203023928174139e-05,
+          8.19082532369418e-05
+        ],
+        "candidate_logloss": 0.22386701663721592
+      },
+      {
+        "baseline_auc": 0.9616623063332024,
+        "candidate_auc": 0.9617084951752407,
+        "delta_auc": 4.618884203833051e-05,
+        "paired_se": 2.5364286323504348e-05,
+        "conditional_95pct_ci": [
+          -3.5251591557380112e-06,
+          9.590284323239903e-05
+        ],
+        "candidate_logloss": 0.22118387856906818
+      },
+      {
+        "baseline_auc": 0.9620005435338878,
+        "candidate_auc": 0.9620484509294548,
+        "delta_auc": 4.790739556703727e-05,
+        "paired_se": 2.469896309597658e-05,
+        "conditional_95pct_ci": [
+          -5.025721010768221e-07,
+          9.631736323515135e-05
+        ],
+        "candidate_logloss": 0.2198810279256613
+      },
+      {
+        "baseline_auc": 0.9613696255965201,
+        "candidate_auc": 0.9613511287459162,
+        "delta_auc": -1.8496850603844095e-05,
+        "paired_se": 2.589166624113806e-05,
+        "conditional_95pct_ci": [
+          -6.92445164364747e-05,
+          3.225081522878651e-05
+        ],
+        "candidate_logloss": 0.22272827237926277
+      },
+      {
+        "baseline_auc": 0.9615934007173681,
+        "candidate_auc": 0.9616016503950955,
+        "delta_auc": 8.249677727389937e-06,
+        "paired_se": 2.5108158713018386e-05,
+        "conditional_95pct_ci": [
+          -4.09623133501261e-05,
+          5.746166880490597e-05
+        ],
+        "candidate_logloss": 0.22111772349408118
+      }
+    ],
+    "corrected_resampled_t": {
+      "mean_delta": 2.354033587665949e-05,
+      "se": 1.901506875171728e-05,
+      "test_train_ratio": 0.25,
+      "df": 4,
+      "one_sided_alpha": 0.025,
+      "lower_bound": -2.9253958684045468e-05
+    },
+    "eligible_for_new_partition_replication": false,
+    "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+  },
+  "vs_official_v7": {
+    "pooled": {
+      "baseline_auc": 0.9612963083501996,
+      "candidate_auc": 0.9614894587292203,
+      "delta_auc": 0.000193150379020679,
+      "paired_se": 1.7688874696490532e-05,
+      "conditional_95pct_ci": [
+        0.00015848018461555756,
+        0.00022782057342580044
+      ],
+      "candidate_logloss": 0.22175558380105787
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.9605549130841352,
+        "candidate_auc": 0.9607782140303782,
+        "delta_auc": 0.00022330094624301022,
+        "paired_se": 3.980734820388085e-05,
+        "conditional_95pct_ci": [
+          0.00014527854376340376,
+          0.0003013233487226167
+        ],
+        "candidate_logloss": 0.22386701663721592
+      },
+      {
+        "baseline_auc": 0.961453787125527,
+        "candidate_auc": 0.9617084951752407,
+        "delta_auc": 0.0002547080497137255,
+        "paired_se": 3.968154785237628e-05,
+        "conditional_95pct_ci": [
+          0.000176932215923068,
+          0.000332483883504383
+        ],
+        "candidate_logloss": 0.22118387856906818
+      },
+      {
+        "baseline_auc": 0.9618540373111633,
+        "candidate_auc": 0.9620484509294548,
+        "delta_auc": 0.00019441361829153347,
+        "paired_se": 3.8543370748298313e-05,
+        "conditional_95pct_ci": [
+          0.00011886861162486878,
+          0.0002699586249581982
+        ],
+        "candidate_logloss": 0.2198810279256613
+      },
+      {
+        "baseline_auc": 0.9611975606235804,
+        "candidate_auc": 0.9613511287459162,
+        "delta_auc": 0.00015356812233580097,
+        "paired_se": 4.016314944832361e-05,
+        "conditional_95pct_ci": [
+          7.48483494170867e-05,
+          0.00023228789525451524
+        ],
+        "candidate_logloss": 0.22272827237926277
+      },
+      {
+        "baseline_auc": 0.9614600858673521,
+        "candidate_auc": 0.9616016503950955,
+        "delta_auc": 0.00014156452774338746,
+        "paired_se": 3.927787997488677e-05,
+        "conditional_95pct_ci": [
+          6.457988299260939e-05,
+          0.00021854917249416553
+        ],
+        "candidate_logloss": 0.22111772349408118
+      }
+    ],
+    "corrected_resampled_t": {
+      "mean_delta": 0.00019351105286549152,
+      "se": 3.169085745514084e-05,
+      "test_train_ratio": 0.25,
+      "df": 4,
+      "one_sided_alpha": 0.025,
+      "lower_bound": 0.00010552312680464473
+    },
+    "eligible_for_new_partition_replication": true,
+    "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+  },
+  "eligible": false,
+  "matched_CPU_32member_diagnostic": {
+    "pooled": {
+      "baseline_auc": 0.9614795483491114,
+      "candidate_auc": 0.9614894587292203,
+      "delta_auc": 9.91038010889067e-06,
+      "paired_se": 9.180105738781814e-06,
+      "conditional_95pct_ci": [
+        -8.082627139121685e-06,
+        2.7903387356903027e-05
+      ],
+      "candidate_logloss": 0.22175558380105787
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.9607515025928557,
+        "candidate_auc": 0.9607782140303782,
+        "delta_auc": 2.67114375225308e-05,
+        "paired_se": 2.0267300984507724e-05,
+        "conditional_95pct_ci": [
+          -1.3012472407104337e-05,
+          6.643534745216594e-05
+        ],
+        "candidate_logloss": 0.22386701663721592
+      },
+      {
+        "baseline_auc": 0.9616825575362223,
+        "candidate_auc": 0.9617084951752407,
+        "delta_auc": 2.593763901836965e-05,
+        "paired_se": 2.0688463011682518e-05,
+        "conditional_95pct_ci": [
+          -1.461174848452808e-05,
+          6.648702652126739e-05
+        ],
+        "candidate_logloss": 0.22118387856906818
+      },
+      {
+        "baseline_auc": 0.9620404059054827,
+        "candidate_auc": 0.9620484509294548,
+        "delta_auc": 8.045023972114151e-06,
+        "paired_se": 1.991344147243246e-05,
+        "conditional_95pct_ci": [
+          -3.098532131385347e-05,
+          4.707536925808177e-05
+        ],
+        "candidate_logloss": 0.2198810279256613
+      },
+      {
+        "baseline_auc": 0.9613529867702549,
+        "candidate_auc": 0.9613511287459162,
+        "delta_auc": -1.8580243387189554e-06,
+        "paired_se": 2.086968812037771e-05,
+        "conditional_95pct_ci": [
+          -4.2762613054659265e-05,
+          3.9046564377221354e-05
+        ],
+        "candidate_logloss": 0.22272827237926277
+      },
+      {
+        "baseline_auc": 0.9616141568295523,
+        "candidate_auc": 0.9616016503950955,
+        "delta_auc": -1.2506434456827087e-05,
+        "paired_se": 2.0421189078305635e-05,
+        "conditional_95pct_ci": [
+          -5.253196505030613e-05,
+          2.7519096136651955e-05
+        ],
+        "candidate_logloss": 0.22111772349408118
+      }
+    ],
+    "corrected_resampled_t": {
+      "mean_delta": 9.265928343493712e-06,
+      "se": 1.152933430434317e-05,
+      "test_train_ratio": 0.25,
+      "df": 4,
+      "one_sided_alpha": 0.025,
+      "lower_bound": -2.2744635451988885e-05
+    },
+    "eligible_for_new_partition_replication": false,
+    "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+  }
+}

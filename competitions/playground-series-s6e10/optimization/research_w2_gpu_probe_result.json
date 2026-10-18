@@ -1,0 +1,53 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-18T03:34:58.372838+00:00",
+  "allocator_cap_bytes": 2147483648,
+  "initial_free_bytes": 4059889664,
+  "gpu_name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+  "compute_capability": [
+    12,
+    0
+  ],
+  "torch_version": "2.9.1+cu128",
+  "cuda_version": "12.8",
+  "validation_scores_used": false,
+  "epochs": [
+    {
+      "epoch": 1,
+      "seconds": 5.6149658340000315,
+      "free_bytes": 3712483328
+    },
+    {
+      "epoch": 2,
+      "seconds": 1.5849602739981492,
+      "free_bytes": 3687120896
+    },
+    {
+      "epoch": 3,
+      "seconds": 1.607623115000024,
+      "free_bytes": 3695968256
+    }
+  ],
+  "fit_and_inference_seconds": 8.828451445002429,
+  "train_rows": 559708,
+  "feature_width": 58,
+  "peak_allocated_bytes": 980414464,
+  "peak_reserved_bytes": 1180696576,
+  "config": {
+    "device": "cuda:0",
+    "n_threads": 6,
+    "n_cv": 1,
+    "n_refit": 0,
+    "n_ens": 1,
+    "n_epochs": 3,
+    "batch_size": 1024,
+    "use_ls": false,
+    "val_fraction": 0.0,
+    "use_early_stopping": false,
+    "random_state": 42,
+    "verbosity": 0,
+    "predict_batch_size": 2048
+  },
+  "score_evaluated": false,
+  "completed_utc": "2026-10-18T03:35:11.488876+00:00"
+}

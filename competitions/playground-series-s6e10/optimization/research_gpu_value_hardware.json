@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-10-18T03:43:35.759162+00:00",
+  "n_ens": 2,
+  "score_evaluated": false,
+  "probe_name": "gpu_value_context_probe_n2",
+  "peak_allocated_bytes": 1231769088,
+  "peak_reserved_bytes": 1969225728,
+  "cap_bytes": 2147483648
+}

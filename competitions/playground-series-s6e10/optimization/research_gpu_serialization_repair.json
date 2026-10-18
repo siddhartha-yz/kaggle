@@ -1,0 +1,9 @@
+{
+  "repaired_utc": "2026-10-18T03:43:35.699768+00:00",
+  "cause": "Official custom schedules include local lambda closures, unsupported by standard pickle/joblib.",
+  "repair": "Use installed cloudpickle3.1.2 for own native model serialization; preprocessor joblib remains unchanged.",
+  "failed_fit_preserved": "research_artifacts/gpu_value_raw_primary_n2_failed_pickle",
+  "unchanged": "All training parameters, data, seed, GPU cap, feature code and promotion gates unchanged.",
+  "validation_auc_reported_before_retry": false,
+  "retry_reason": "Complete missing model reload/prediction artifact audit after an implementation failure; not a model-selection retry."
+}

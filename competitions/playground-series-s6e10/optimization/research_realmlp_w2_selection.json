@@ -1,0 +1,47 @@
+{
+  "reference": "v5",
+  "weights": {
+    "v5": 0.75,
+    "realmlp": 0.25
+  },
+  "intended_epochs": 256,
+  "primary": {
+    "status": "complete",
+    "split": "primary",
+    "auc": 0.9577858274245656,
+    "vs_v5": {
+      "baseline_auc": 0.9600030291404525,
+      "candidate_auc": 0.9599420636350876,
+      "delta_auc": -6.09655053649405e-05,
+      "paired_se": 4.023259097606435e-05,
+      "conditional_95pct_ci": [
+        -0.00013982138367802662,
+        1.7890372948145626e-05
+      ],
+      "candidate_logloss": 0.2265607366466169
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.9600030291404525,
+        "candidate_auc": 0.9599420636350876,
+        "delta_auc": -6.09655053649405e-05,
+        "paired_se": 4.023259097606435e-05,
+        "conditional_95pct_ci": [
+          -0.00013982138367802662,
+          1.7890372948145626e-05
+        ],
+        "candidate_logloss": 0.2265607366466169
+      }
+    ],
+    "actual_epochs": [
+      192
+    ],
+    "futility_stop": true,
+    "completed_utc": "2026-10-18T03:19:49.579065+00:00"
+  },
+  "public_scores_used": false,
+  "eligible_for_full": false,
+  "full_started": false,
+  "recovery": "Original coordinator absent after transport loss; completed primary artifact verified. Frozen192epoch futility rule rejected this CPU run. No fit rerun.",
+  "completed_utc": "2026-10-18T03:34:34.717139+00:00"
+}

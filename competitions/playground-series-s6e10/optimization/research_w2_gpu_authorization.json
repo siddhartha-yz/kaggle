@@ -1,0 +1,11 @@
+{
+  "authorized_utc": "2026-10-18T02:59:10.302028+00:00",
+  "user_reply": "\u5141\u8bb8\u9650\u663e\u5b58\u6d4b\u8bd5\uff0c\u5408\u9002\u5c31\u5207\u6362\uff08\u63a8\u8350\uff09",
+  "scope": "Independent GPU venv, limited-memory test, then switch suitable subsequent training; no driver changes or interference with existing processes. CPU training paused during GPU training tests.",
+  "proposed_torch_allocator_cap_bytes": 2147483648,
+  "initial_gpu_total_mib": 12227,
+  "initial_gpu_used_mib": 7743,
+  "original_cpu_plan": "research_realmlp_w2_plan.json",
+  "deadline_utc": "2026-10-18T08:43:36+00:00",
+  "remaining_candidate_submission_slots": 1
+}

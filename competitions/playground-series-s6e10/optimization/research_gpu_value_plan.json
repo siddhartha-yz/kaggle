@@ -1,0 +1,88 @@
+{
+  "frozen_utc": "2026-10-18T03:39:07.135142+00:00",
+  "hypothesis": "A numeric-value categorical embedding view (including Distance) and distinct short-schedule RealMLP recipe can complement v5; previous default RealMLP used only four rating twins and a long256epoch schedule. This is not a rerun of that rejected configuration.",
+  "reference": "Frozen v5; no public score used in local parameter or weight selection",
+  "config": {
+    "device": "cuda:0",
+    "n_threads": 6,
+    "n_cv": 1,
+    "n_refit": 0,
+    "n_repeats": 1,
+    "val_fraction": 0.0,
+    "n_epochs": 3,
+    "batch_size": 256,
+    "use_early_stopping": false,
+    "random_state": 42,
+    "verbosity": 0,
+    "predict_batch_size": 1024,
+    "use_ls": true,
+    "lr": 0.053,
+    "wd": 0.0236,
+    "sq_mom": 0.988,
+    "lr_sched": "lin_cos_log_15",
+    "wd_sched": "cos_log_15",
+    "first_layer_lr_factor": 0.25,
+    "embedding_size": 5,
+    "max_one_hot_cat_size": 18,
+    "hidden_sizes": [
+      512,
+      256,
+      128
+    ],
+    "act": "silu",
+    "p_drop": 0.05,
+    "p_drop_sched": "expm4t",
+    "plr_hidden_1": 16,
+    "plr_hidden_2": 8,
+    "plr_act_name": "gelu",
+    "plr_lr_factor": 0.1151,
+    "plr_sigma": 2.33,
+    "ls_eps": 0.01,
+    "ls_eps_sched": "sqrt_cos",
+    "add_front_scale": false,
+    "bias_init_mode": "neg-uniform-dynamic-2",
+    "tfms": [
+      "one_hot",
+      "median_center",
+      "robust_scale",
+      "smooth_clip",
+      "embedding",
+      "l2_normalize"
+    ]
+  },
+  "hardware_selection": {
+    "n_ens_candidates": [
+      2,
+      1
+    ],
+    "rule": "Before any new validation score, one-epoch no-score probe on largest context view. Use2 if it fits2GiB cap; only on allocator OOM try1. Freeze successful ensemble count for both variants and all later fits."
+  },
+  "variants": [
+    "raw",
+    "context"
+  ],
+  "features": {
+    "raw": "Original21 columns; median imputation trained on outer-train; a categorical twin for every original numeric column; vocabulary fitted by model on outer-train only.",
+    "context": "Existing outer-train Distance maps, missing indicator and five audited source-only features plus the same numeric category twins; source label means/teacher probabilities enter as clipped logits. Existing four rating twins are not duplicated."
+  },
+  "gpu_allocator_cap_bytes": 2147483648,
+  "initial_free_guard": "cap+1.25GiB",
+  "per_epoch_free_guard_bytes": 1073741824,
+  "epochs_fixed": 3,
+  "blend_weight": 0.25,
+  "primary_gate": "Exactly two prespecified views. Delta>=.0001 and positive lower conditional bound vs v5; choose highest eligible primary blend AUC. Freeze view before confirmation.",
+  "confirmation_gate": "Fixed3epochs and chosen view; positive conditional lower bound vs v5",
+  "oof_gate": "Fixedfivefold; every fold positive and pooled delta>=.0002 with positive conditional lower bound. Reject immediately after a nonpositive fold.",
+  "limits": {
+    "cpu_threads": 6,
+    "serial": true,
+    "paid_resources": false,
+    "remaining_submission_slots": 1,
+    "training_start_cutoff_utc": "2026-10-18T08:00:00+00:00",
+    "training_hard_cutoff_utc": "2026-10-18T08:30:00+00:00",
+    "deadline_utc": "2026-10-18T08:43:36+00:00"
+  },
+  "design_reference": "Read-only user-provided Kaggle notebook goodpjw2008/s6e10-two-view-gbdt-realmlp-stack-lb-0-96125; selected official RealMLP hyperparameters and numeric-category idea only. Notebook never executed; no provided predictions used. No global train/test counts, vocabularies, or source concatenation adopted. Ensemble8 in reference is reduced by a prespecified hardware-only rule.",
+  "source_teacher_clarification": "The reference trains a separate original-only RealMLP teacher; it is not weight warm-start pretraining. That new source-teacher view is not used in these two tests. Existing five source features are from our audited original-only LGB teacher/lookups.",
+  "limitation": "Public recipe is an external prior likely selected on the same competition. All current validation partitions are reused in prior model selection; conditional intervals exclude selection uncertainty. No untouched holdout or guaranteed leaderboard gain claim."
+}

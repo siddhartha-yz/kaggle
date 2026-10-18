@@ -1,0 +1,30 @@
+{
+  "frozen_utc": "2026-10-18T07:17:10.673189+00:00",
+  "hypothesis": "Raw numeric-value embeddings improved RealMLP, but native LightGBM unordered splits on all17 numeric values have not been tested. The rejected all-value CatBoost uses ordered CTRs and a different split mechanism; native LGB category grouping may capture nonmonotone Distance/Age effects missed by numeric splits and group means. One controlled native-category feature view.",
+  "features": "Same70 field view used by W3CBValueFeatures: existing57 strong DistanceStats+5original-source features, plus13 missing numeric-category twins. All21 category vocabularies outer-training-only; unknowns native missing. No extra sourceCB feature (its confirmation failed).",
+  "params": {
+    "n_estimators": 639,
+    "learning_rate": 0.04,
+    "num_leaves": 63,
+    "max_depth": -1,
+    "min_child_samples": 150,
+    "reg_lambda": 10,
+    "objective": "binary",
+    "n_jobs": 6,
+    "random_state": 42,
+    "verbosity": -1,
+    "colsample_bytree": 1.0,
+    "subsample": 1.0,
+    "max_bin": 255,
+    "deterministic": true,
+    "force_col_wise": true,
+    "max_cat_to_onehot": 4,
+    "max_cat_threshold": 32,
+    "cat_l2": 10,
+    "cat_smooth": 10,
+    "min_data_per_group": 100
+  },
+  "candidate": "v6+(45/128)*(new_native_value_LGB-old_LGB); all other components and weights unchanged",
+  "gates": "ExistingW3 primary+.0001/lower>0; confirmationlower>0; OOFallfoldpositivepooled+.0002/lower>0",
+  "resources": "CPU6serial,noGPU. Existing W3 cutoffs, parent-only formal submission0/2 used, paid0."
+}

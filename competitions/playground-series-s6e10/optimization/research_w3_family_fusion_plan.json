@@ -1,0 +1,26 @@
+{
+  "frozen_utc": "2026-10-18T07:18:47.571545+00:00",
+  "hypothesis": "A single hierarchical equal average across all newly tested supervised neural families absent from v6 may reduce family-specific variance. Previous3viewfusion omitted the new FTTransformer family and included only one DeepFM view. Aggregate prespecified available views within families, then equal weight the3families. No new learner or weight chosen from scores.",
+  "families": {
+    "tabm": [
+      "w3_tabm_primary_b256",
+      "w3_tabm_nested_primary"
+    ],
+    "deepfm": [
+      "w3_deepfm_primary_b2048",
+      "w3_rank_deepfm_primary_b2048",
+      "w3_prior_deepfm_primary_b2048"
+    ],
+    "ft_transformer": [
+      "w3_ftt_primary"
+    ]
+  },
+  "rule": "Equal mean within each family, equal mean of3family means; .5v6+.5new_family_mean. RealMLP family already in v6; in-context TFMs do not train on all outer-training labels, so excluded by the defined family scope.",
+  "matched_control": ".5v6+.5cached_old_RealMLP2",
+  "candidate_weight_search": false,
+  "primary": "Reuse only saved own prediction files, exact idx/id/target alignment. Same primary+.0001/CI lower>0 and point-beat matched control.",
+  "confirmation": "Onlyifprimarypasses; fit missing confirmation views unchanged, aggregate only at frozen family weights, no individual selection.",
+  "oof": "Onlyifconfirmationpasses; same5fixedfolds; everyfoldpositive, pooled+.0002/lower>0. No conditional reweighting or sourceCB integration.",
+  "resources": "No new primary fits; CPU6serial and GPU1GiB ceilings unchanged for gated later fits; sameW3cutoffs,paid0,parentonlysubmission0/2.",
+  "bias": "Family scope chosen after earlier diagnostics; conditionalCI excludes adaptive selection uncertainty and reused validation partitions are not untouched."
+}

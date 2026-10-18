@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-18T07:12:34.130459+00:00",
-  "phase": "window3_fttransformer_primary_inner_selection_then_refits",
+  "updated_utc": "2026-10-18T07:24:05.489314+00:00",
+  "phase": "window3_family_fusion_confirmation",
   "current_window": "research_w3_plan.json",
   "budget": "research_w3_submission_ledger.json",
   "active_training": true,
@@ -12,19 +12,19 @@
     "observed_utc": "2026-10-18T04:00:00+00:00"
   },
   "recovery": "Inspect saved per-route files, logs and live processes before restart. Serial six CPU threads, 1GiB total process GPU ceiling and 778043392 byte allocator cap.",
-  "driver": "research_w3_ftt.py",
-  "state": "research_artifacts/w3_ftt_primary/fold0/result.json",
+  "driver": "research_w3_family_queue.py",
+  "state": "research_w3_family_confirm_queue_state.json",
   "resource_override": "research_w3_resource_override.json",
   "status": "in_progress",
   "outcome": "nested_confirmation_gate_failed",
   "completion": null,
-  "last_exec_session": null,
+  "last_exec_session": 46744,
   "last_log": "research_w3_tabicl_primary.log",
-  "active_log": "research_w3_ftt_primary.log",
+  "active_log": "research_w3_family_confirm_queue.log",
   "last_completed_states": [
     "research_w3_phase2_state.json",
     "research_w3_phase3_state.json"
   ],
   "no_child_user_stop_instruction": true,
-  "latest_checkpoint": "research_w3_checkpoint_0710.json"
+  "latest_checkpoint": "research_w3_checkpoint_0724.json"
 }

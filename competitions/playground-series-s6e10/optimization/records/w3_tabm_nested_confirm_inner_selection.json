@@ -1,0 +1,77 @@
+{
+  "status": "complete",
+  "inner_train_rows": 503737,
+  "inner_valid_rows": 55971,
+  "outer_validation_used": false,
+  "curve": [
+    {
+      "epoch": 1,
+      "seconds": 7.702544551997562,
+      "train_loss": 0.24823446780430827,
+      "inner_validation_auc": 0.9585447848042438,
+      "gpu_free_bytes": 2667315200
+    },
+    {
+      "epoch": 2,
+      "seconds": 7.445657841999491,
+      "train_loss": 0.23039839449919156,
+      "inner_validation_auc": 0.9591290229544368,
+      "gpu_free_bytes": 2667315200
+    },
+    {
+      "epoch": 3,
+      "seconds": 7.547423185002117,
+      "train_loss": 0.22547009829700185,
+      "inner_validation_auc": 0.9594317025214432,
+      "gpu_free_bytes": 2667315200
+    },
+    {
+      "epoch": 4,
+      "seconds": 7.576982766004221,
+      "train_loss": 0.22167371822910087,
+      "inner_validation_auc": 0.9592461977909483,
+      "gpu_free_bytes": 2667446272
+    },
+    {
+      "epoch": 5,
+      "seconds": 7.588459576996684,
+      "train_loss": 0.21823085829877004,
+      "inner_validation_auc": 0.9597245322683058,
+      "gpu_free_bytes": 2665676800
+    },
+    {
+      "epoch": 6,
+      "seconds": 7.548625638999511,
+      "train_loss": 0.21486216622341342,
+      "inner_validation_auc": 0.9590683946989716,
+      "gpu_free_bytes": 2668822528
+    },
+    {
+      "epoch": 7,
+      "seconds": 7.611414903993136,
+      "train_loss": 0.21174708402962716,
+      "inner_validation_auc": 0.9592145777472636,
+      "gpu_free_bytes": 2667970560
+    },
+    {
+      "epoch": 8,
+      "seconds": 7.655628553999122,
+      "train_loss": 0.20830671802415246,
+      "inner_validation_auc": 0.9585552379517379,
+      "gpu_free_bytes": 2666790912
+    },
+    {
+      "epoch": 9,
+      "seconds": 7.725470574005158,
+      "train_loss": 0.20509803034175783,
+      "inner_validation_auc": 0.9585817319762336,
+      "gpu_free_bytes": 2654208000
+    }
+  ],
+  "best_epoch": 5,
+  "best_inner_auc": 0.9597245322683058,
+  "consecutive_nonimproving": 4,
+  "completed_utc": "2026-10-18T05:33:33.891157+00:00",
+  "inner_preprocessing_train_only": true,
+  "inner_model_discarded": true
+}

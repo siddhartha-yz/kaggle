@@ -1,25 +1,34 @@
-# Window3: 2026-10-18 05:06–11:06 UTC
+# Window3 本地优化结果（2026-10-18 UTC）
 
-Parent confirmed v6 Complete, public AUC **0.96058**, rank **858/2208** at04:00 UTC. Historical prior-window quota is exhausted. This independent window permits at most **2 new** formal submissions, parent only; zero used/reserved. No local Kaggle access.
+本轮未产生合格的新候选，保留已正式评分的 **v6：Public AUC 0.96058**，04:00 UTC 排名快照 **858/2208**。Top100 目标尚未达到。新窗口最多6小时（05:06–11:06 UTC），最多2次新提交；本轮实际 **0次提交、0个预留、2个名额未使用**，提交权始终由父会话协调。
 
-Frozen protocol: `research_w3_plan.json`. Training is serial, CPU6threads, GPU PyTorch allocator cap2GiB, startcut10:10/hardcut10:45/deliverytarget10:55 UTC. Preserve all prior models and records.
+最后一次训练于 **05:34:38 UTC** 完成。最后一个定向方案通过主验证，但未达到冻结的确认门槛，因而提前收尾；没有新增竞赛五折训练、全量重训、v7 CSV 或 Library 文件。未降低门槛，也未为使用额度而提交。
 
-Exploratory OOF diagnostics: v6 AUC .961135462544149. Averaging its2 neural members gains .00027957 over the mean member AUC; worst disagreement quartile has AUC .91728. This motivates a distinct shared-weight TabM ensemble; source-only neural teacher separately tests an independent representation, not warm-start transfer.
+| 路线（固定 .75×v6 + .25×新模型） | 主验证 AUC | 较 v6 的变化 | 决策 |
+|---|---:|---:|---|
+| 原始数据神经教师 + 数值类别双视图 RealMLP | .9602750040 | −.0000270890 | 主验证拒绝；亦低于匹配旧NN权重的对照 |
+| 原始21特征 TabM，固定20轮 | .9603922075 | +.0000901145 | 未到 .0001，区间跨零 |
+| 数值类别双视图 TabM，固定20轮 | .9600502307 | −.0002518623 | 主验证拒绝；训练/验证损失差提示过拟合 |
+| DeepFM，4个固定成员各3轮 | .9603403103 | +.0000382173 | 区间跨零，拒绝 |
+| 训练内部选轮数的 TabM | .9604139611 | +.0001118680 | 主验证通过，随后确认拒绝 |
 
-Source-only neural teacher trained on129859 safe original rows after globally excluding21exact predictor matches; no synthetic targets used. Fixed8epochs,2members completed14.88seconds at05:16:39 UTC. Adding its logit to a new raw value-twin NN failed primary: delta vs v6 **−.00002709**, vs matched old-NN weight control **−.00009538**. Do not promote.
+主验证的 v6 AUC 为 **.9603020930**。最后方案严格在外层训练集内部取10%分层留出，最多20轮、耐心4轮，按内部AUC选最早最优轮数，再丢弃内部模型，用全部外层训练行从头拟合。主验证选出4轮；确认划分选出5轮。外层验证标签不参与选轮数。
 
-TabM uses installed core with a custom fixed20epoch loop because PyTabKit wrapper requires validation and restores the best validation epoch. Four raw categorical vocabularies, numeric imputation/quantile/PWL bins are fitted only on outer training. No outer validation targets enter fitting. One full559708row no-score probe:2.95seconds/epoch, peak allocated481897984bytes, reserved538968064bytes. Scores do not select hardware.
+确认划分：v6 **.9610261589**，新融合 **.9611008627**，变化 **+.0000747038**，条件95%区间 **[−.0000259759,+.0001753835]**。正的点估计没有满足预先冻结的正下界要求。因此未启动后续五折；原五折门槛（每折正、总体变化至少 .0002 且区间下界正）保持不变。没有使用 public 分数选择权重。
 
-Advance only with primary delta≥.0001 and positive conditional lower bound vs v6, confirmation positive lower bound, everyOOFfold positive, pooleddelta≥.0002 and positive lower bound. Frozen blend .75v6+.25newmodel. Intervals are conditional and all partitions are reused; they exclude model-selection uncertainty. No leaderboard tuning or guaranteed top100 claim.
+所有主验证、确认、历史OOF数据均被重复用于开发；区间只是在已训练模型下的条件区间，不含自适应模型选择的不确定性，不能作为独立无偏测试或保证榜单提升的依据。
 
-Raw TabM completed20epochs but failed the unchanged primary gate: delta **+.00009011449**, conditional95%CI **[−.0000032792,+.0001835082]**. No weight or gate adjustment. A separately frozen one-feature expansion adds categorical twins for all original numerical values to the same TabM; `research_w3_tabm_values_plan.json` records this adaptive next hypothesis and unchanged gates. No-score probe peak allocated557395456bytes, oneepoch8.385s. An initial missingmodule import failed before any fit and is retained in `research_w3_tabm_values_preflight_repair.json`.
+## 数据与资源核验
 
-A conditional DeepFM fallback is frozen before seeing the TabM-value primary score. It runs only if the value-view path rejects:4fixed independent members,3epochs each, learned value embeddings +linear+pairwiseFM +MLP. The same train-only features are used. It does not choose seeds/members/weights from validation.
+- 原始数据教师仅使用审计后的129859行原始数据，重新核验并全局排除了21条与竞赛训练/测试特征完全重合的记录；未使用竞赛标签训练教师。独立检查了全部21个原生类别词表及中位数。
+- 新模型的中位数、词表、数值分位变换和PWL分箱均只拟合对应训练行。内部训练/留出互斥，其并集恰好等于外层训练集；独立复核了选轮数和耐心规则。
+- 已保存模型回载检查通过；原始神经教师1003行CPU推理最大差 **3.8743e-7**，最后TabM确认模型1003行最大差 **1.1921e-7**。
+- 训练串行，CPU最多6线程。已实际使用 RTX5070Ti Laptop GPU / PyTorch2.9.1+cu128；此前 v6 每轮约7.6–7.8秒。本轮TabM约8–15秒/轮。
+- 显存分配器起初上限2GiB。其他GPU占用增加时，确认启动被余量保护拦在拟合前；保留失败日志后，将上限降到1GiB。相同模型/批大小的无分数探测通过（峰值已分配557395456、保留614465536字节），再恢复确认。未改模型、精度、权重或门槛，也未操作其他GPU进程、驱动、网络或全局环境。
+- 原用户仓库保持干净，HEAD仍为 `52f8cd1f3039f2ecfca77e1dfef60972d76b05f5`。所有数据、模型和逐行预测均未入Git。收尾进程审计确认无本任务残留训练或队列。
 
-Fixed20epochvalueTabM was rejected: delta **−.00025186235**; raw trainingloss .175431 versus validationloss .266053 suggests memorization. DeepFM4member mean also failed: delta **+.00003821728**, conditionalCI crosses0. Both stopped before confirmation/OOF.
+v6 CSV 保持原哈希：`36ea4ef80e1dd1911257f240391d9cdb8474b8b5deb5c52733582da80bdd1aaa`。其既有 Library ID 为 `libfile_cf22a57746e081919f268a40290caf70`，本轮未重复创建或上传。
 
-Last focused follow-up: `research_w3_tabm_nested_plan.json` freezes a strictly training-only10%stratifiedinner split (seed20261018),max20epochs/patience4/earliestbestAUC. Discard inner model, then freshly fit all outertraining rows for selectedepochcount. Outer validation never selects epochs. Primary selected4epochs and passed unchangedgate: delta **+.00011186801**, interval **[+.00001627114,+.00020746488]**. The same algorithm proceeds to confirmation and5fold gates; no publicscore or weight tuning. This fitting method was chosen after reusedprimary diagnostics, so conditionalCIs still exclude selectionbias.
+主要证据：`research_w3_completion.json`、`research_w3_closeout_audit.json`、`research_w3_shutdown_audit.json`、`research_w3_nested_selection.json`，以及 `records/w3_*` 小型训练记录。每次协议扩展均在对应新评分前保存；资源变更单独记录在 `research_w3_resource_override.json`。
 
-Independent read-only checks confirm all21value vocabularies and numeric medians/constant masks match exactly the outertraining rows for the completed fixedvalueTabM andDeepFM; unseenvalues mapreserved0 and transforms do not mutate fittedstate. Original user repository remains clean at52f8cd1f3039f2ecfca77e1dfef60972d76b05f5.
-
-Confirmation startup was blocked by the initialfreeGPUguard before any fit after otherGPUusage rose. Failedlog/state preserved; no duplicate fit. A hardware-only override lowers the processallocatorcap from2GiB to1GiB (same graph,batch,precision,seeds,gates). A fresh unscored1epoch probe passed:8.274s,peakallocated557395456/reserved614465536bytes,freeheadroom2.72GB. Confirmation resumed. The frozen researchplan is unchanged; `research_w3_resource_override.json` records this smallerresourceceiling. Independentprimaryinneraudit verifies disjointinnertrain/holdout,unionexactlyoutertrain,training-onlymedian/vocabulary,earliestbest4epochs andpatience4.
+当前本地技能目录和文件名检索未发现所要求的软件工程技能；未安装替代技能。按现有仓库规则、任务约束和独立核验完成工作。

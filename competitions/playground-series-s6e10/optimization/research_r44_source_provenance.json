@@ -1,0 +1,76 @@
+{
+  "download": {
+    "downloaded_utc": "2026-10-18T21:10:03.319417+00:00",
+    "public_url": "https://www.kaggle.com/api/v1/datasets/download/sjleshrac/airlines-customer-satisfaction?datasetVersionNumber=1",
+    "ref": "sjleshrac/airlines-customer-satisfaction",
+    "dataset_version": 1,
+    "license": "CC0: Public Domain",
+    "credentials_used": false,
+    "cookies_stored": false,
+    "official_competition_labels_downloaded": false,
+    "zip_sha256": "a2cb3436e0e8ddc0b3a111effcda0b29c2fb36fde0fad7da64fa8ddf698f4aa2",
+    "csv": "Invistico_Airline.csv",
+    "csv_bytes": 12612566,
+    "csv_sha256": "584f8e338d189117f1c8f8c2ee8fb0b5d1d6d23ff5df67417272e8ee360da7a2"
+  },
+  "inspection": {
+    "status": "distinct_public_original_variant",
+    "checked_utc": "2026-10-18T21:11:43.365341+00:00",
+    "new_source_rows": 129880,
+    "old_source_rows": 129880,
+    "shared_predictors": 21,
+    "unobserved_new_feature": "Online support",
+    "new_source_target_values": {
+      "satisfied": 71087,
+      "dissatisfied": 58793
+    },
+    "old_source_true_rate": 0.43446258084385586,
+    "new_source_true_rate": 0.5473283030489683,
+    "source21_row_hash_overlap": 2,
+    "source21_multiset_identical": false,
+    "new_source_safe_rows": 129878,
+    "new_source_exact_official_matches_excluded": 2,
+    "new_source_safe_mask_sha256": "715d1b3987844328e330b88e809afb1ffbceb24969835b9b3ab7a54d276b4d77",
+    "official_targets_read": false,
+    "official_rows_covariates_only": 999479,
+    "old_nearkey_official_match_fraction": 0.36988470993387557,
+    "new_nearkey_official_match_fraction": 0.08417885718459317,
+    "normalization": "numericfloat64,textstripcasefold;source-globalexactmatchexclusionagainstALLknownofficialtrain+testcovariates,regardlesssourceSAT",
+    "new_data_license": "CC0: Public Domain",
+    "new_source_ref": "sjleshrac/airlines-customer-satisfaction",
+    "version": 1,
+    "numeric_support": {
+      "Age": {
+        "official_min": 7.0,
+        "official_max": 85.0,
+        "old_min": 7.0,
+        "old_max": 85.0,
+        "new_min": 7.0,
+        "new_max": 85.0,
+        "official_values_in_old": 1.0,
+        "official_values_in_new": 1.0
+      },
+      "Flight Distance": {
+        "official_min": 67.0,
+        "official_max": 4983.0,
+        "old_min": 31.0,
+        "old_max": 4983.0,
+        "new_min": 50.0,
+        "new_max": 6951.0,
+        "official_values_in_old": 0.9999949973936421,
+        "official_values_in_new": 0.9959268779033876
+      }
+    }
+  },
+  "metadata": {
+    "ref": "sjleshrac/airlines-customer-satisfaction",
+    "title": "Airlines Customer satisfaction",
+    "licenseName": "CC0: Public Domain",
+    "currentVersionNumber": 1,
+    "totalBytes": 12612566,
+    "public_metadata_url": "https://www.kaggle.com/api/v1/datasets/view/sjleshrac/airlines-customer-satisfaction",
+    "checked_utc": "2026-10-18T21:09:11.345742+00:00",
+    "credentials_used": false,
+    "cookies_stored": false
+  }
+}

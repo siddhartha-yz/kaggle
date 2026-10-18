@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-18T21:00:36.366243+00:00",
-  "status": "R41_not_qualified_R42_conditional_residual84",
+  "updated_utc": "2026-10-18T21:18:30.314953+00:00",
+  "status": "R44_not_qualified_R45_newsource_NN75_hardware_only",
   "confirmed_public_baseline": {
     "source": "ParentauthenticatedKagglebrowserreport",
     "reported_utc": "2026-10-18T17:58:48.436175+00:00",
@@ -4271,7 +4271,7 @@
     "formal_new_submissions": 0,
     "reason": "CB84 nested GPU failed fivefold vs v11 (-12.762ppm); matched GPU57 diagnostic also shows no conditional feature gain (-1.024ppm). Do not repeat this route on CPU without new evidence."
   },
-  "active_route": "R42",
+  "active_route": "R45_hardware_only",
   "r32_plan_sha256": "b29a258c179feb3e6a397aa9d3fb4c0a49c342a4e8050c5d10054c979c3906ac",
   "r32_result": {
     "status": "complete",
@@ -4996,5 +4996,28 @@
     "delta": 7.174697696732402e-06,
     "csv_generated": false
   },
-  "r42_plan_sha256": "7816a7f55c681ad311a4d6f825005db901d82e5b0f8ec553f9ec34867ab83a69"
+  "r42_plan_sha256": "7816a7f55c681ad311a4d6f825005db901d82e5b0f8ec553f9ec34867ab83a69",
+  "r42_result": {
+    "file": "research_r42_result.json",
+    "sha256": "32f50cd845bb29d1a7e60bfc6a7f48d781cc69da9b537a443886dee98d71f176",
+    "status": "not_qualified",
+    "delta": -3.442497763850305e-06,
+    "csv_generated": false
+  },
+  "r43_plan_sha256": "1037c4361a3391320d096567ccf2c9b6fbdf0e4370ecdb2ec9de37b0dce2f140",
+  "r43_result": {
+    "file": "research_r43_result.json",
+    "sha256": "b124a0ae1ab18a96cb251ccdbea2b056e07d4805bc41de0e173c4db4f8d79c24",
+    "status": "not_qualified",
+    "delta": 5.302460183154167e-07,
+    "csv_generated": false
+  },
+  "r44_plan_sha256": "7d45cb3eead3c2ee032be6ebca4531678bced245ebe08f3c153ccef20e5694ce",
+  "r44_result": {
+    "file": "research_r44_result.json",
+    "sha256": "9a572ee571969707ce2899332cccf94a2aa24ede361ff6f4137550a1de517b6f",
+    "status": "not_qualified",
+    "delta": 5.532632694760231e-06,
+    "csv_generated": false
+  }
 }

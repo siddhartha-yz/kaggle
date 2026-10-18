@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-18T21:06:14.322206+00:00",
+  "official_data_read": false,
+  "new_competition_models_fitted": 0,
+  "tests": [
+    "analyticgradient/Hessianvscentraldifference",
+    "gamma0reducesBCE",
+    "Bayesposterioridentity/monotonicity/symmetry",
+    "extrememarginstability/Hessianfloor",
+    "syntheticcustomobjectiveAPI/rawmargin/classorder/aucmetric/modelreload"
+  ],
+  "test_source_sha256": "a25642e7e3975466002d5322afb4156630c0d323b8298e422ca9ca12526e3923",
+  "implementation_sha256": "bde6f776479cce34f6ea2030bddf3b0cf804286be24fb25e3a1e39da113c3695"
+}

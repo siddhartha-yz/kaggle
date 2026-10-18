@@ -1,47 +1,19 @@
 {
-  "updated_utc": "2026-10-18T03:53:35.006436+00:00",
-  "phase": "window2_candidate_ready_in_library",
-  "active_training": false,
-  "previous_completed_window": "research_window1_final_manifest.json",
-  "current_window": "research_w2_manifest.json",
-  "validation": {
-    "driver": "research_stage17_gpu_value_queue.py",
-    "state": "research_stage17_gpu_value_state.json",
-    "exec_session": 22144,
-    "log": "research_stage17_gpu_value_queue.log",
-    "status": "complete"
-  },
-  "conditional_export": {
-    "driver": "same serialized validation queue",
-    "status": "complete"
-  },
+  "updated_utc": "2026-10-18T05:30:28.585545+00:00",
+  "phase": "window3_nested_confirmation",
+  "current_window": "research_w3_plan.json",
+  "budget": "research_w3_submission_ledger.json",
+  "active_training": true,
+  "active_log": "research_w3_tabm_nested_confirm.log",
   "confirmed_best": {
-    "candidate": "submission_cb_deep_v5.csv",
-    "public_auc": 0.96033,
-    "rank": 930,
-    "total_ranked": 2194,
-    "parent_verified_utc": "2026-10-17T22:11:00+00:00",
-    "oof_auc": 0.9608926464364628
+    "candidate": "submission_realmlp_value_v6.csv",
+    "public_auc": 0.96058,
+    "rank_snapshot": 858,
+    "total_ranked_snapshot": 2208,
+    "observed_utc": "2026-10-18T04:00:00+00:00"
   },
-  "budget": {
-    "deadline_utc": "2026-10-18T08:43:36+00:00",
-    "training_hard_cutoff_utc": "2026-10-18T08:30:00+00:00",
-    "candidate_delivery_target_utc": "2026-10-18T08:38:00+00:00",
-    "remaining_submission_slots": 1,
-    "paid_resources": false,
-    "cpu_training_threads": 6
-  },
-  "recovery": "Inspect state, timestamps and original sessions before restart; no duplicate fits. Previous completion records describe the earlier window.",
-  "status": "candidate_ready_in_library",
-  "candidate": {
-    "status": "succeeded",
-    "filename": "submission_realmlp_value_v6.csv",
-    "library_file_id": "libfile_cf22a57746e081919f268a40290caf70",
-    "file_id": "file_000000005a7481f8aaf288be2c87b65e",
-    "version": 0,
-    "bytes": 7985563,
-    "sha256": "36ea4ef80e1dd1911257f240391d9cdb8474b8b5deb5c52733582da80bdd1aaa",
-    "original_local_path": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/submission_realmlp_value_v6.csv"
-  },
-  "completed_utc": "2026-10-18T03:53:35.006436+00:00"
+  "recovery": "Inspect saved results/logs and host processes before any restart; serial6threads/2GiB cap.",
+  "driver": "research_w3_nested_queue.py",
+  "state": "research_w3_nested_queue_state.json",
+  "exec_session": 75409
 }

@@ -1,0 +1,32 @@
+{
+  "frozen_utc": "2026-10-18T05:27:24.236141+00:00",
+  "evidence": "RawTabM+.0000901missedgate;20epochnumeric-valueTabMtrainloss.17543/outervalidationloss.26605indicatesmemorization;DeepFM+.0000382alsofailed. No successful intermediateouter-validation checkpoint exists and none is retrospectively chosen.",
+  "hypothesis": "Correct the newvalueTabM fittingprocedure through strictly nested training-only earlystopping instead of arbitrary20epochfullfits. This is the last focused architecture follow-up; no weight/seed/width/learningrate grid.",
+  "architecture_config": "SameTabM16,2x256,PWL48d16,.002AdamW/drop.1/float32/batch256; existinghardwareprobeprovescap.",
+  "inner_selection": {
+    "validation_fraction": 0.1,
+    "split_seed": 20261018,
+    "stratified": true,
+    "max_epochs": 20,
+    "patience": 4,
+    "metric": "roc_auc",
+    "tie_rule": "earliest strictbest",
+    "preprocessing": "fittedonlyinnertrain,innerholdouttransformonly",
+    "discard_inner_model": true,
+    "refit": "Freshmodel on entireoutertrain; fitpreprocessingoutertrainonly;epochsselectedbyinnerholdout only. Never pass outervalidationfeaturesortargets to epochselection."
+  },
+  "scope": [
+    "primary",
+    "confirm",
+    "fixedfivefold",
+    "fullonlyifallgatespass"
+  ],
+  "blend": {
+    "v6": 0.75,
+    "tabm_nested": 0.25
+  },
+  "gates": "UnchangedW3primary>=.0001lower>0;confirmationlower>0;everyOOFfoldpositiveandpooled>=.0002lower>0",
+  "limits": "SameCPU6serial/GPU2GiB,trainingstart10:10/hard10:45/deadline11:06UTC;zeroresourcescost;parentonlymax2newformal,0used",
+  "selection_bias": "Method chosen after reusedprimary/OOF diagnostics. Outerlabelsdo notenter fitting; repeatedevaluationstill createsselectionbias. ConditionalCIsarenotunbiasedtestevidence.",
+  "previous_plan_sha256": "93fd72889a584270330d1c7815715afcec40f778b807d5dbdc6544a1a42cb8be"
+}

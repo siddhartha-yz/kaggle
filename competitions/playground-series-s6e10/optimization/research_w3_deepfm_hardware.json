@@ -1,0 +1,45 @@
+{
+  "batch_size": 2048,
+  "probe": {
+    "status": "complete",
+    "seed": 42,
+    "cat_cardinalities": [
+      76,
+      3447,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      6,
+      7,
+      7,
+      159,
+      160,
+      3,
+      3,
+      3,
+      4
+    ],
+    "epochs": [
+      {
+        "epoch": 1,
+        "seconds": 0.85585203699884,
+        "train_loss": 0.2732168658827178,
+        "gpu_free_bytes": 6140854272
+      }
+    ],
+    "fit_seconds": 0.8561058940031216,
+    "peak_allocated_bytes": 194844672,
+    "peak_reserved_bytes": 211812352,
+    "score_evaluated": false,
+    "completed_utc": "2026-10-18T05:25:36.655211+00:00"
+  },
+  "frozen_utc": "2026-10-18T05:26:00.904826+00:00",
+  "scores_used": false
+}

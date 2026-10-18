@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "new_model_fits_performed": false,
+  "checks": {
+    "w3_tabm_values_primary_b256": {
+      "training_rows": 559708,
+      "numeric_median_and_constant_mask_match": true,
+      "all21_vocabularies_match_exact_outer_training_values": true,
+      "unseen_values_reserved0": true,
+      "transform_does_not_mutate_fitted_state": true,
+      "quantile_config_verified": true
+    },
+    "w3_deepfm_primary_b2048": {
+      "training_rows": 559708,
+      "numeric_median_and_constant_mask_match": true,
+      "all21_vocabularies_match_exact_outer_training_values": true,
+      "unseen_values_reserved0": true,
+      "transform_does_not_mutate_fitted_state": true,
+      "quantile_config_verified": true
+    }
+  }
+}

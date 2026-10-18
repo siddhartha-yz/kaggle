@@ -1,0 +1,10 @@
+{
+  "noted_utc": "2026-10-18T23:44:02.735474+00:00",
+  "hypothesis": "Fixed NN74 retains Lean47 and old14 leave-one-rating-out surprisals, replacing only13 conditional expected-rating coordinates by13 cohort expectations from eight nonrating covariates. This separates demographic/class context from rating-consistency evidence at exactly the validated32member/74width geometry. R46 append27fields to LGB passed5 but failed3; neural use of this other conditioning view is untested. This is one new representation, no R46 weight/seed rescue, no new auxiliary fits, no score-based field selection.",
+  "features": "Lean47 +cohortEV13 +oldconditionalSurprisal14 =74 (52numeric22nominal)",
+  "retain": "All raw21 and combinations/counts/targetenc, exact raw rating category identities and14oldS unchanged",
+  "resources": "CPU6, GPU process1GiB/allocator742MiB, serial, no fallback",
+  "protocol": "Synthetic1epoch hardware-only then freeze same3epoch32seed42, actual v11 tree fixed and equal clipped logit pool; finishall5 beforequality, same dualgates5then3; no grid",
+  "quality_evaluated": false,
+  "new_auxiliary_models_fitted": 0
+}

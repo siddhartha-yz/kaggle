@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-18T11:04:12.835360+00:00",
+  "updated_utc": "2026-10-18T11:15:39.190680+00:00",
   "task_status": "active_research_until_verified_actual_Top100",
   "active_training": true,
   "current_route": "lean_realmlp_gpu_native_bounded_initialization",
@@ -34,5 +34,17 @@
     "External-originaldata permission exact current competitionrules. No new externaldata downloaded inR4. Existing safe source predictors only used."
   ],
   "local_browser_blocker": "CUA iab unavailable; web fetchedKagglepagesempty. Do not locallylogin/acceptterms.",
-  "child_not_closing_task_after_failedroute": true
+  "child_not_closing_task_after_failedroute": true,
+  "state": {
+    "updated_utc": "2026-10-18T11:15:19.470641+00:00",
+    "status": "training",
+    "route": "lean_realmlp",
+    "fold": 3,
+    "member": 7,
+    "pid": 474150,
+    "active_training": true,
+    "plan": "research_r4_plan.json"
+  },
+  "final_inference_protocol": "frozen5foldCV40membertestmean;noextrafit;onlyafterbothreplicationspass",
+  "final_inference_plan": "research_r4_final_inference_plan.json"
 }

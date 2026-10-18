@@ -1,0 +1,23 @@
+{
+  "frozen_utc": "2026-10-18T11:03:03.989128+00:00",
+  "no_quality_score_used": true,
+  "selected_runner": "research_r4_lean_gpu_init.py",
+  "gpu_allocator_cap_bytes": 778043392,
+  "gpu_total_process_ceiling_bytes": 1073741824,
+  "native_internal_setting": {
+    "init_ram_limit_gb": 0.0078125
+  },
+  "reason": "Full dataset dependent weight initialization temporary activations causedOOM. Official internal RAM bound uses a subset solely for initialization.8MiB passes full559708row training epoch under ceiling. No installed-library edit; task subclass exposes existing configuration. This changes initialization sample relative to public default and is a resource adaptation selected before any quality evaluation.",
+  "failed_hardware_attempts": [
+    "nativeDefault1GiBinitRam",
+    "128MiBinitRam"
+  ],
+  "probe_result": "research_artifacts/r4_lean_gpu_init_probe/result.json",
+  "epoch_seconds": 9.561788578997948,
+  "gpu_process_peak_bytes": 830472192,
+  "cpu_backup": "research_artifacts/r4_lean_cpu_oof; member0complete predictions unevaluated, member1paused thenterminated; no quality selection",
+  "training_device_evidence": [
+    "cuda:0"
+  ],
+  "postfit_device": "cpu due Lightning teardown; epochCUDAparameterassert correct"
+}

@@ -1,9 +1,9 @@
 {
-  "updated_utc": "2026-10-18T10:58:43.428719+00:00",
+  "updated_utc": "2026-10-18T11:04:12.835360+00:00",
   "task_status": "active_research_until_verified_actual_Top100",
   "active_training": true,
-  "current_route": "lean_realmlp_cpu_fixed8members",
-  "driver": "research_r4_lean_cpu.py",
+  "current_route": "lean_realmlp_gpu_native_bounded_initialization",
+  "driver": "research_r4_lean_gpu_init.py",
   "goal": "actual verified leaderboard Top100; no automatic oldwindow cutoff",
   "plan": "research_r4_plan.json",
   "previous_W3_results": "31 primaryscreens+1trainingonly; threeprimarypasses allfailedconfirmation",
@@ -18,7 +18,7 @@
     "corrected_fold_lower_bound": -5.595739880773364e-05,
     "qualified": false
   },
-  "gpu_attempt": "nativepreprocessingOOM beforefirstepoch orvalidation;totalprocess920MiB<1GiB;CPUfallback withnoauthorityexpansion",
+  "gpu_attempt": "GPU training active; official init_RAM8MiB resource setting; no score used; actualtraining parameterscuda:0; probe9.56sec,peak792MiB; original742MiBallocator and1GiBtotal ceiling unchanged",
   "baseline": {
     "csv": "submission_realmlp_value_v6.csv",
     "public_auc": 0.96058,

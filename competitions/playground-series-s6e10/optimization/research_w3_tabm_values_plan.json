@@ -1,0 +1,16 @@
+{
+  "frozen_utc": "2026-10-18T05:20:06.417593+00:00",
+  "previous_frozen_plan_sha256": "93fd72889a584270330d1c7815715afcec40f778b807d5dbdc6544a1a42cb8be",
+  "motivating_completed_result": "w3_tabm_primary_b256: frozen25%blend delta+.00009011449, conditionalCI crosses0; rejected unchanged",
+  "hypothesis": "TabM raw quantile/PWL numeric view shows complementarity but has no per-exact-value Distance representation. Numeric categorical twins capture this missing representation, proven useful previously in RealMLP but untested in shared-weight TabM. Test one prespecified feature change, no weight/seed/epoch tuning.",
+  "architecture": "identical frozen TabM16/PWL48/2x256blocks/20epochs/lr.002 seed42; raw17numeric + all21raw categorical representations; trainonly categorical vocabularies and median/quantiles",
+  "hardware_rule": "no-score1fullprimaryepoch; fixedbatch256, only hardwareOOM halves to128; k/model/epoch/weight fixed. Fresh training after probe.",
+  "candidate_weights": {
+    "v6": 0.75,
+    "newmodel": 0.25
+  },
+  "gates": "same unchanged primary>=.0001 and conditional lower>0; confirm lower>0; OOFallfoldpositive andpooled>=.0002 lower>0",
+  "training_limits": "same W3deadline11:06,hard10:45,start10:10,serialCPU6/GPUallocator2GiB",
+  "submission_budget": "unchanged0of2newformal,parentonly",
+  "bias": "New feature hypothesis chosen after reused developmentOOF/primary diagnostics; this is adaptive model selection, not unbiased evidence."
+}

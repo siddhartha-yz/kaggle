@@ -1,25 +1,27 @@
 {
-  "updated_utc": "2026-10-18T17:52:32.414859+00:00",
-  "status": "qualified_audited_Library_delivered_unsubmitted",
+  "updated_utc": "2026-10-18T17:58:48.436175+00:00",
+  "status": "continuing_offline_after_v11_official_score",
   "confirmed_public_baseline": {
     "source": "ParentauthenticatedKagglebrowserreport",
-    "reported_utc": "2026-10-18T17:07:06.141228+00:00",
+    "reported_utc": "2026-10-18T17:58:48.436175+00:00",
+    "submitted_utc": "2026-10-18T17:56:01Z",
     "rank_observation_time_separately_supplied": false,
     "status": "Complete",
-    "candidate": "submission_conditional_probability_r21_v10.csv",
-    "sha256": "15a0a6d7032204ccf1165df5686af6214217b170979356da07a8a19638fc33b6",
-    "public_auc": 0.96104,
-    "previous_v7_public_auc": 0.96076,
-    "public_delta": 0.00028,
-    "rank": 715,
-    "ranked_teams": 2274,
-    "rank100_public_auc": 0.9619,
-    "gap_to_rank100": 0.00086,
-    "historical_submissions": 9,
-    "formal_current_round_used": 2,
-    "formal_current_round_limit": 2,
-    "remaining": 0,
-    "actual_top100_verified": false
+    "candidate": "submission_conditional_neural_r23_v11.csv",
+    "sha256": "cc134eb8d9272cd1fd7085fa7f5a5dc84455eb37270c57332f42014a94af75cf",
+    "public_auc": 0.96114,
+    "previous_v10_public_auc": 0.96104,
+    "public_delta": 0.0001,
+    "rank": 681,
+    "ranked_teams": 2279,
+    "rank500_public_auc": 0.96169,
+    "gap_to_rank500": 0.00055,
+    "historical_submissions": 10,
+    "daily_remaining_before_v11": 7,
+    "estimated_daily_remaining_after_v11": 6,
+    "remaining_daily_quota": null,
+    "actual_UI_remaining_after_v11_verified": false,
+    "actual_top500_verified": false
   },
   "backup_candidate": {
     "csv": "submission_conditional_neural_r23_v11.csv",
@@ -27,23 +29,23 @@
     "rows": 299844,
     "bytes": 8205897,
     "library_saved_and_exact_byte_verified": true,
-    "formal_submitted": false,
+    "formal_submitted": true,
     "positive_class": true,
     "auxiliary_transductive": true,
     "fivefold_auc": 0.9616328660208192,
     "threefold_auc": 0.961485641721047,
     "fivefold_delta_vs_v10": 9.897458564489536e-05,
-    "threefold_delta_vs_v10": 0.00012173121247394114
+    "threefold_delta_vs_v10": 0.00012173121247394114,
+    "public_auc": 0.96114
   },
   "active_driver": {
-    "status": "qualified_audited_Library_delivered_unsubmitted",
+    "status": "R24_preparation",
     "active_training": false,
-    "active_work": false
+    "active_work": true
   },
   "current_training": {
     "status": "no_active_training",
-    "active_training": false,
-    "active_work": false
+    "active_training": false
   },
   "completed_r7_neural_members": 40,
   "total_fivefold_members": 40,
@@ -1863,13 +1865,14 @@
     "rows": 299844,
     "bytes": 8205897,
     "library_saved_and_exact_byte_verified": true,
-    "formal_submitted": false,
+    "formal_submitted": true,
     "positive_class": true,
     "auxiliary_transductive": true,
     "fivefold_auc": 0.9616328660208192,
     "threefold_auc": 0.961485641721047,
     "fivefold_delta_vs_v10": 9.897458564489536e-05,
-    "threefold_delta_vs_v10": 0.00012173121247394114
+    "threefold_delta_vs_v10": 0.00012173121247394114,
+    "public_auc": 0.96114
   },
   "r15_result": {
     "status": "complete",
@@ -2287,7 +2290,7 @@
     "rank_observed_utc": "2026-10-18T16:26:00Z"
   },
   "additional_submission_authorized": true,
-  "active_research": "QualifiedR23NN74newcandidate deliveredLibrary with exactbyteverification. Noactivework/training; parentofficialsubmissionandrankverificationrequired.",
+  "active_research": "Preparing one conditional-uncertainty route; rebase tree replacement andgatesonactualformalv11, unchangedNN74. No R24fits/scoresyet.",
   "current_goal": {
     "updated_utc": "2026-10-18T17:14:43.014675+00:00",
     "goal": "Actualpublicleaderboardrank<=500",
@@ -2295,8 +2298,8 @@
     "authority": "Parentrelayedexplicitlatesthumaninstruction:\u76ee\u6807\u5b9a\u4f4e\u4e00\u70b9\uff0c\u524d500\u5c31\u884c\u3002",
     "supersedes_previous_rank_threshold": 100,
     "stop_when": "ActualauthenticatedKagglepublicrank<=500verified, then stop furtheriteration andreport. OfflineAUCdoesnotestablishsuccess.",
-    "latest_confirmed_rank": 715,
-    "latest_confirmed_public_auc": 0.96104,
+    "latest_confirmed_rank": 681,
+    "latest_confirmed_public_auc": 0.96114,
     "actual_top500_verified": false,
     "formal_current_round_used": 2,
     "formal_current_round_limit": 2,
@@ -2307,7 +2310,9 @@
     "submission_policy": "HumanexplicitlyauthorizesqualifiednewversionswithinactualKaggledailyquota;parentverifiesquota and handlescloudbrowserupload/rank. No per-two-submissionconfirmation.",
     "remaining_daily_quota": null,
     "prior_artificial_round_limit_superseded": true,
-    "historical_round_note": "These earlier two-slot fields are historical, superseded by qualified submissions within actual dailyquota."
+    "historical_round_note": "These earlier two-slot fields are historical, superseded by qualified submissions within actual dailyquota.",
+    "rank500_public_auc": 0.96169,
+    "gap_to_rank500": 0.00055
   },
   "whole_top500_task_completed": false,
   "goal_superseded_previous_top100": true,
@@ -2315,7 +2320,7 @@
   "formal_budget_policy": "HumanexplicitlyauthorizesqualifiednewversionswithinactualKaggledailyquota;parentverifiesquota and handlescloudbrowserupload/rank. No per-two-submissionconfirmation.",
   "prior_round_used": 2,
   "prior_round_limit": 2,
-  "historical_total_submissions": 9,
+  "historical_total_submissions": 10,
   "historical_nested_records_note": "Earlier r7-r21 route and round records are historical snapshots. confirmed_public_baseline/current_goal/formal_budget_policy are authoritative; old Top100/two-slot budget language is superseded.",
   "r22_result": {
     "pooled": {
@@ -2746,5 +2751,27 @@
     "threefold_delta_vs_v9": 6.275396774579889e-05,
     "parent_instruction": "v10 now formally submitted; latest human goal actual Top500, qualified additional submissions authorized subject parent actual daily quota check.",
     "public_auc": 0.96104
-  }
+  },
+  "prior_public_v10_baseline": {
+    "source": "ParentauthenticatedKagglebrowserreport",
+    "reported_utc": "2026-10-18T17:07:06.141228+00:00",
+    "rank_observation_time_separately_supplied": false,
+    "status": "Complete",
+    "candidate": "submission_conditional_probability_r21_v10.csv",
+    "sha256": "15a0a6d7032204ccf1165df5686af6214217b170979356da07a8a19638fc33b6",
+    "public_auc": 0.96104,
+    "previous_v7_public_auc": 0.96076,
+    "public_delta": 0.00028,
+    "rank": 715,
+    "ranked_teams": 2274,
+    "rank100_public_auc": 0.9619,
+    "gap_to_rank100": 0.00086,
+    "historical_submissions": 9,
+    "formal_current_round_used": 2,
+    "formal_current_round_limit": 2,
+    "remaining": 0,
+    "actual_top100_verified": false
+  },
+  "estimated_remaining_daily_quota": 6,
+  "actual_daily_UI_quota_verification_required": true
 }

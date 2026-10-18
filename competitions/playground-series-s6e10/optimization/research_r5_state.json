@@ -1,0 +1,33 @@
+{
+  "status": "training",
+  "started_utc": "2026-10-18T12:49:30.229850+00:00",
+  "stage": "fivefold",
+  "fold": 0,
+  "params": {
+    "n_estimators": 639,
+    "learning_rate": 0.04,
+    "num_leaves": 63,
+    "max_depth": -1,
+    "min_child_samples": 150,
+    "reg_lambda": 10,
+    "objective": "binary",
+    "n_jobs": 6,
+    "random_state": 42,
+    "verbosity": -1,
+    "colsample_bytree": 1.0,
+    "subsample": 1.0,
+    "max_bin": 255,
+    "deterministic": true,
+    "force_col_wise": true
+  },
+  "plan_sha256": "78f1121c8f5f24017a2ee001924656f51915df179c7e63ddb2cf7b7c5a05454a",
+  "runner_sha256": "1c8d9587609b24cf81056d91bf621bb06e3042ccb5f03e19550f74d3406e0d24",
+  "features_sha256": "e848dc4d302e68b29ad941fce77f08cdfedf351c341953a98b02948f912711ac",
+  "train_rows": 559708,
+  "valid_rows": 139927,
+  "train_index_sha256": "52f2320fb97ba9fdc017eb964b0e809e1e4575f0813e9e1cc352d4c60bcb2232",
+  "feature_provenance": "Domainonlycrossfit3 +externalcovariatePMI;noSATindomainfits",
+  "validation_features_and_targets_excluded_from_all_fits": true,
+  "active_training": true,
+  "pid": 4
+}

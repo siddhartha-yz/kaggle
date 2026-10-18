@@ -1,0 +1,1295 @@
+{
+  "created_utc": "2026-10-18T12:42:03.478670+00:00",
+  "label_status": "Repeatedlyusedofficiallabels; exploratorydiagnostic only, no untouchedholdout or multiplicity-corrected subgroupclaim",
+  "mechanisms": "source-selected12ratingpaircoherence and fixedClass/Travel/Customersegments. No thresholdsearch.",
+  "slices": [
+    {
+      "slice": "segment:Business|Business travel|Loyal Customer",
+      "rows": 294376,
+      "positive_rate": 0.791752724406881,
+      "mean_v7": 0.7915239488600608,
+      "calibration_residual": 0.00022877554682014636,
+      "descriptive_residual_se": 0.00042119158841969785,
+      "v7_auc": 0.9225236555479546,
+      "v6_auc": 0.9222023944765344,
+      "v7_logloss": 0.2050579292818012,
+      "fold_calibration": [
+        {
+          "n": 58762,
+          "calibration_residual": 0.001060015496288384
+        },
+        {
+          "n": 58928,
+          "calibration_residual": 0.00039478799344796936
+        },
+        {
+          "n": 58992,
+          "calibration_residual": 2.0564913191125272e-05
+        },
+        {
+          "n": 59016,
+          "calibration_residual": -0.001926675239063579
+        },
+        {
+          "n": 58678,
+          "calibration_residual": 0.0016068174349761878
+        }
+      ]
+    },
+    {
+      "slice": "segment:Business|Business travel|disloyal Customer",
+      "rows": 43896,
+      "positive_rate": 0.33479132494988156,
+      "mean_v7": 0.33467654711682454,
+      "calibration_residual": 0.00011477783305698264,
+      "descriptive_residual_se": 0.0013603670113290273,
+      "v7_auc": 0.9345495955473859,
+      "v6_auc": 0.934124468217985,
+      "v7_logloss": 0.2806696150357318,
+      "fold_calibration": [
+        {
+          "n": 8860,
+          "calibration_residual": 0.0033423438168854926
+        },
+        {
+          "n": 8858,
+          "calibration_residual": -0.00861844874741147
+        },
+        {
+          "n": 8768,
+          "calibration_residual": -7.880017211355548e-05
+        },
+        {
+          "n": 8729,
+          "calibration_residual": 0.004953396173280069
+        },
+        {
+          "n": 8681,
+          "calibration_residual": 0.0010620971385053044
+        }
+      ]
+    },
+    {
+      "slice": "segment:Business|Personal Travel|Loyal Customer",
+      "rows": 3939,
+      "positive_rate": 0.11195734958111196,
+      "mean_v7": 0.1151539236194262,
+      "calibration_residual": -0.0031965740383142396,
+      "descriptive_residual_se": 0.004095532222548271,
+      "v7_auc": 0.8310314024599739,
+      "v6_auc": 0.8306742174666704,
+      "v7_logloss": 0.241109794704299,
+      "fold_calibration": [
+        {
+          "n": 766,
+          "calibration_residual": -0.00758983418266252
+        },
+        {
+          "n": 729,
+          "calibration_residual": -0.00163355405106784
+        },
+        {
+          "n": 793,
+          "calibration_residual": -0.005181990010475451
+        },
+        {
+          "n": 856,
+          "calibration_residual": -0.001957172333091842
+        },
+        {
+          "n": 795,
+          "calibration_residual": 0.0002490897429708166
+        }
+      ]
+    },
+    {
+      "slice": "segment:Eco Plus|Business travel|Loyal Customer",
+      "rows": 14983,
+      "positive_rate": 0.3948474938263365,
+      "mean_v7": 0.3956732412028347,
+      "calibration_residual": -0.0008257473764981757,
+      "descriptive_residual_se": 0.0023679755036747985,
+      "v7_auc": 0.9414482621410605,
+      "v6_auc": 0.9410568405454012,
+      "v7_logloss": 0.28879818990825123,
+      "fold_calibration": [
+        {
+          "n": 3019,
+          "calibration_residual": 0.0012684489324030033
+        },
+        {
+          "n": 3028,
+          "calibration_residual": -0.0030581531755902087
+        },
+        {
+          "n": 2978,
+          "calibration_residual": -0.00011453030678106899
+        },
+        {
+          "n": 2995,
+          "calibration_residual": -0.004360844696888694
+        },
+        {
+          "n": 2963,
+          "calibration_residual": 0.002180313421351999
+        }
+      ]
+    },
+    {
+      "slice": "segment:Eco Plus|Business travel|disloyal Customer",
+      "rows": 2574,
+      "positive_rate": 0.0641025641025641,
+      "mean_v7": 0.07109006737741069,
+      "calibration_residual": -0.00698750327484658,
+      "descriptive_residual_se": 0.0036215370385261738,
+      "v7_auc": 0.8647244550108809,
+      "v6_auc": 0.8626790948086092,
+      "v7_logloss": 0.1400065953454266,
+      "fold_calibration": [
+        {
+          "n": 492,
+          "calibration_residual": -0.0049585343150085025
+        },
+        {
+          "n": 509,
+          "calibration_residual": -0.011914039733579282
+        },
+        {
+          "n": 516,
+          "calibration_residual": -0.023354960582120898
+        },
+        {
+          "n": 513,
+          "calibration_residual": 0.00013908064945052098
+        },
+        {
+          "n": 544,
+          "calibration_residual": 0.004591586332954426
+        }
+      ]
+    },
+    {
+      "slice": "segment:Eco Plus|Personal Travel|Loyal Customer",
+      "rows": 12459,
+      "positive_rate": 0.09535275704310137,
+      "mean_v7": 0.09404690358902978,
+      "calibration_residual": 0.0013058534540715968,
+      "descriptive_residual_se": 0.0020833952516442537,
+      "v7_auc": 0.8324048756574708,
+      "v6_auc": 0.8323928517123442,
+      "v7_logloss": 0.20670382961368516,
+      "fold_calibration": [
+        {
+          "n": 2520,
+          "calibration_residual": 0.0020301947834065106
+        },
+        {
+          "n": 2502,
+          "calibration_residual": -0.002637235233115357
+        },
+        {
+          "n": 2447,
+          "calibration_residual": -0.00026668176281616066
+        },
+        {
+          "n": 2426,
+          "calibration_residual": -0.0011370173177621854
+        },
+        {
+          "n": 2564,
+          "calibration_residual": 0.008253851080284884
+        }
+      ]
+    },
+    {
+      "slice": "segment:Eco|Business travel|Loyal Customer",
+      "rows": 65542,
+      "positive_rate": 0.41272771657868235,
+      "mean_v7": 0.41162866764985057,
+      "calibration_residual": 0.0010990489288318496,
+      "descriptive_residual_se": 0.0011612845479789125,
+      "v7_auc": 0.9365517859831513,
+      "v6_auc": 0.9361963539078673,
+      "v7_logloss": 0.30217981636415053,
+      "fold_calibration": [
+        {
+          "n": 13212,
+          "calibration_residual": 0.005414080592318917
+        },
+        {
+          "n": 13196,
+          "calibration_residual": -0.0017761900884104415
+        },
+        {
+          "n": 13043,
+          "calibration_residual": 0.0036069313311211672
+        },
+        {
+          "n": 13002,
+          "calibration_residual": -0.0029443325419138792
+        },
+        {
+          "n": 13089,
+          "calibration_residual": 0.0011596487793257392
+        }
+      ]
+    },
+    {
+      "slice": "segment:Eco|Business travel|disloyal Customer",
+      "rows": 76070,
+      "positive_rate": 0.12846062836860786,
+      "mean_v7": 0.12927393878977686,
+      "calibration_residual": -0.0008133104211689883,
+      "descriptive_residual_se": 0.0008612689276016692,
+      "v7_auc": 0.8967048651947438,
+      "v6_auc": 0.8965391761138235,
+      "v7_logloss": 0.2075660110040521,
+      "fold_calibration": [
+        {
+          "n": 15260,
+          "calibration_residual": -0.0020271459443753203
+        },
+        {
+          "n": 15209,
+          "calibration_residual": 0.0013073407551101406
+        },
+        {
+          "n": 15192,
+          "calibration_residual": -0.0010460520233851653
+        },
+        {
+          "n": 15161,
+          "calibration_residual": -0.0021780415643937456
+        },
+        {
+          "n": 15248,
+          "calibration_residual": -0.00012491550856418162
+        }
+      ]
+    },
+    {
+      "slice": "segment:Eco|Personal Travel|Loyal Customer",
+      "rows": 185691,
+      "positive_rate": 0.09706986337517703,
+      "mean_v7": 0.09724216783471228,
+      "calibration_residual": -0.00017230445953523758,
+      "descriptive_residual_se": 0.0005472481664661834,
+      "v7_auc": 0.8330925903097787,
+      "v6_auc": 0.8325673515139975,
+      "v7_logloss": 0.2102011767883009,
+      "fold_calibration": [
+        {
+          "n": 37020,
+          "calibration_residual": -0.0007317051521587903
+        },
+        {
+          "n": 36944,
+          "calibration_residual": -0.0006830738309299536
+        },
+        {
+          "n": 37178,
+          "calibration_residual": -0.0011678802643547636
+        },
+        {
+          "n": 37207,
+          "calibration_residual": 0.0013180453786850502
+        },
+        {
+          "n": 37342,
+          "calibration_residual": 0.0003938395107568837
+        }
+      ]
+    },
+    {
+      "slice": "coherence:high",
+      "rows": 218117,
+      "positive_rate": 0.3399414075931725,
+      "mean_v7": 0.33959537990112176,
+      "calibration_residual": 0.0003460276920506747,
+      "descriptive_residual_se": 0.0005537906891745379,
+      "v7_auc": 0.950909563260746,
+      "v6_auc": 0.9507468082086606,
+      "v7_logloss": 0.24127040081388226,
+      "fold_calibration": [
+        {
+          "n": 43646,
+          "calibration_residual": 0.0014519605783741923
+        },
+        {
+          "n": 43686,
+          "calibration_residual": -0.0009521575910164122
+        },
+        {
+          "n": 43506,
+          "calibration_residual": 0.0005136370020879187
+        },
+        {
+          "n": 43633,
+          "calibration_residual": -0.0013353152703452908
+        },
+        {
+          "n": 43646,
+          "calibration_residual": 0.0020532403199051237
+        }
+      ]
+    },
+    {
+      "slice": "coherence:low",
+      "rows": 54004,
+      "positive_rate": 0.403784904821865,
+      "mean_v7": 0.40195380075461284,
+      "calibration_residual": 0.001831104067252225,
+      "descriptive_residual_se": 0.0009856161794045606,
+      "v7_auc": 0.9612777998411267,
+      "v6_auc": 0.9611286849425562,
+      "v7_logloss": 0.20461980713861078,
+      "fold_calibration": [
+        {
+          "n": 10645,
+          "calibration_residual": 0.0019184027621055436
+        },
+        {
+          "n": 10777,
+          "calibration_residual": 0.0016552777693555054
+        },
+        {
+          "n": 10842,
+          "calibration_residual": 0.0024946253274368887
+        },
+        {
+          "n": 10813,
+          "calibration_residual": 0.0011429179953804619
+        },
+        {
+          "n": 10927,
+          "calibration_residual": 0.0019421175108274623
+        }
+      ]
+    },
+    {
+      "slice": "coherence:midhigh",
+      "rows": 244746,
+      "positive_rate": 0.41944301439042925,
+      "mean_v7": 0.41935922206074283,
+      "calibration_residual": 8.37923296864537e-05,
+      "descriptive_residual_se": 0.000489214491282704,
+      "v7_auc": 0.9610734718099117,
+      "v6_auc": 0.9609068761507131,
+      "v7_logloss": 0.21921171078714607,
+      "fold_calibration": [
+        {
+          "n": 49090,
+          "calibration_residual": 0.0009376565080036797
+        },
+        {
+          "n": 48939,
+          "calibration_residual": -0.0009929593118621417
+        },
+        {
+          "n": 49008,
+          "calibration_residual": -0.00044496286800003147
+        },
+        {
+          "n": 48791,
+          "calibration_residual": -0.0002660022250016583
+        },
+        {
+          "n": 48918,
+          "calibration_residual": 0.001182754202987918
+        }
+      ]
+    },
+    {
+      "slice": "coherence:midlow",
+      "rows": 182768,
+      "positive_rate": 0.6113159852928303,
+      "mean_v7": 0.6122394185850848,
+      "calibration_residual": -0.000923433292254517,
+      "descriptive_residual_se": 0.0005437927154196297,
+      "v7_auc": 0.9582286897411395,
+      "v6_auc": 0.9580142593475836,
+      "v7_logloss": 0.20915744576024176,
+      "fold_calibration": [
+        {
+          "n": 36546,
+          "calibration_residual": -0.0006598888488918884
+        },
+        {
+          "n": 36525,
+          "calibration_residual": -0.0008938762514235274
+        },
+        {
+          "n": 36571,
+          "calibration_residual": -0.0015491691084052056
+        },
+        {
+          "n": 36690,
+          "calibration_residual": -0.0013857893283966167
+        },
+        {
+          "n": 36436,
+          "calibration_residual": -0.00012376918656185253
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Business|Business travel|Loyal Customer|high",
+      "rows": 50938,
+      "positive_rate": 0.7173622835604068,
+      "mean_v7": 0.7173540844846048,
+      "calibration_residual": 8.199075802061052e-06,
+      "descriptive_residual_se": 0.0010765281856340038,
+      "v7_auc": 0.9411703917856706,
+      "v6_auc": 0.94087367689544,
+      "v7_logloss": 0.22354164203212343,
+      "fold_calibration": [
+        {
+          "n": 10268,
+          "calibration_residual": 0.0018318255843750516
+        },
+        {
+          "n": 10171,
+          "calibration_residual": -0.001468635636953263
+        },
+        {
+          "n": 10159,
+          "calibration_residual": -9.506605461033355e-05
+        },
+        {
+          "n": 10190,
+          "calibration_residual": -0.004722117426984313
+        },
+        {
+          "n": 10150,
+          "calibration_residual": 0.004495576858724189
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Business|Business travel|Loyal Customer|low",
+      "rows": 24465,
+      "positive_rate": 0.7518495810341304,
+      "mean_v7": 0.7479241660109945,
+      "calibration_residual": 0.003925415023135856,
+      "descriptive_residual_se": 0.0014228572033998506,
+      "v7_auc": 0.9381816906306434,
+      "v6_auc": 0.9380742311268023,
+      "v7_logloss": 0.19731177621362433,
+      "fold_calibration": [
+        {
+          "n": 4822,
+          "calibration_residual": 0.002361094717774096
+        },
+        {
+          "n": 4842,
+          "calibration_residual": 0.004202191903211288
+        },
+        {
+          "n": 4941,
+          "calibration_residual": 0.007410560650009808
+        },
+        {
+          "n": 4912,
+          "calibration_residual": -0.00042151184810627234
+        },
+        {
+          "n": 4948,
+          "calibration_residual": 0.006014137559167847
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Business|Business travel|Loyal Customer|midhigh",
+      "rows": 89754,
+      "positive_rate": 0.8540566437150433,
+      "mean_v7": 0.8532967296703814,
+      "calibration_residual": 0.000759914044661783,
+      "descriptive_residual_se": 0.000761008948686677,
+      "v7_auc": 0.8890421538023291,
+      "v6_auc": 0.8886257855132504,
+      "v7_logloss": 0.20404521532920955,
+      "fold_calibration": [
+        {
+          "n": 17940,
+          "calibration_residual": 0.0034558599075858515
+        },
+        {
+          "n": 18109,
+          "calibration_residual": 0.001446509536386285
+        },
+        {
+          "n": 18101,
+          "calibration_residual": -0.0001141890405390865
+        },
+        {
+          "n": 17861,
+          "calibration_residual": -0.00152798691985209
+        },
+        {
+          "n": 17743,
+          "calibration_residual": 0.0005281332033106244
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Business|Business travel|Loyal Customer|midlow",
+      "rows": 129219,
+      "positive_rate": 0.7853566425989986,
+      "mean_v7": 0.7861097223926672,
+      "calibration_residual": -0.0007530797936686583,
+      "descriptive_residual_se": 0.0006233808194244808,
+      "v7_auc": 0.923913267810337,
+      "v6_auc": 0.9235599923199521,
+      "v7_logloss": 0.19994166466775795,
+      "fold_calibration": [
+        {
+          "n": 25732,
+          "calibration_residual": -0.0011621280887090732
+        },
+        {
+          "n": 25806,
+          "calibration_residual": -0.0003231920657372205
+        },
+        {
+          "n": 25791,
+          "calibration_residual": -0.0012550774666024278
+        },
+        {
+          "n": 26053,
+          "calibration_residual": -0.0013904137241096941
+        },
+        {
+          "n": 25837,
+          "calibration_residual": 0.00036870024632810794
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Business|Business travel|disloyal Customer|high",
+      "rows": 26136,
+      "positive_rate": 0.2928527701254974,
+      "mean_v7": 0.2936076771141129,
+      "calibration_residual": -0.0007549069886155081,
+      "descriptive_residual_se": 0.0017806481534792492,
+      "v7_auc": 0.9241453566343988,
+      "v6_auc": 0.9236505072612545,
+      "v7_logloss": 0.28604372966256336,
+      "fold_calibration": [
+        {
+          "n": 5238,
+          "calibration_residual": 0.0019489750952971108
+        },
+        {
+          "n": 5344,
+          "calibration_residual": -0.00507959629877232
+        },
+        {
+          "n": 5202,
+          "calibration_residual": -0.002841030055745142
+        },
+        {
+          "n": 5188,
+          "calibration_residual": 0.002882675635939975
+        },
+        {
+          "n": 5164,
+          "calibration_residual": -0.0005751163501650447
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Business|Business travel|disloyal Customer|midhigh",
+      "rows": 14974,
+      "positive_rate": 0.391278215573661,
+      "mean_v7": 0.39110218409688013,
+      "calibration_residual": 0.00017603147678087338,
+      "descriptive_residual_se": 0.0023065714585675037,
+      "v7_auc": 0.9436311558973602,
+      "v6_auc": 0.9433027770826153,
+      "v7_logloss": 0.2752228600802718,
+      "fold_calibration": [
+        {
+          "n": 3030,
+          "calibration_residual": 0.004294117719239888
+        },
+        {
+          "n": 2927,
+          "calibration_residual": -0.019004317348032925
+        },
+        {
+          "n": 3024,
+          "calibration_residual": 0.0017538506829117282
+        },
+        {
+          "n": 3009,
+          "calibration_residual": 0.008356746263671666
+        },
+        {
+          "n": 2984,
+          "calibration_residual": 0.004960208293967565
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Business|Business travel|disloyal Customer|midlow",
+      "rows": 2631,
+      "positive_rate": 0.43329532497149376,
+      "mean_v7": 0.4257718494439113,
+      "calibration_residual": 0.007523475527582409,
+      "descriptive_residual_se": 0.005300755567142566,
+      "v7_auc": 0.9536376151646722,
+      "v6_auc": 0.9536593831997836,
+      "v7_logloss": 0.25827921135440207,
+      "fold_calibration": [
+        {
+          "n": 565,
+          "calibration_residual": 0.008650426793433034
+        },
+        {
+          "n": 551,
+          "calibration_residual": 0.009474921902221954
+        },
+        {
+          "n": 510,
+          "calibration_residual": 0.016545394638750495
+        },
+        {
+          "n": 501,
+          "calibration_residual": 0.007606836513592435
+        },
+        {
+          "n": 504,
+          "calibration_residual": -0.00508548681035161
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Eco Plus|Business travel|Loyal Customer|high",
+      "rows": 8047,
+      "positive_rate": 0.42711569529017024,
+      "mean_v7": 0.4258925471868523,
+      "calibration_residual": 0.0012231481033178708,
+      "descriptive_residual_se": 0.0032661920253850706,
+      "v7_auc": 0.9409597736006721,
+      "v6_auc": 0.9402825699908549,
+      "v7_logloss": 0.29497393525501375,
+      "fold_calibration": [
+        {
+          "n": 1650,
+          "calibration_residual": 0.004808198558440371
+        },
+        {
+          "n": 1616,
+          "calibration_residual": -0.0019283149250316773
+        },
+        {
+          "n": 1552,
+          "calibration_residual": 0.0004647910654588922
+        },
+        {
+          "n": 1598,
+          "calibration_residual": -0.0050102373236860995
+        },
+        {
+          "n": 1631,
+          "calibration_residual": 0.007547704227150009
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Eco Plus|Business travel|Loyal Customer|midhigh",
+      "rows": 4188,
+      "positive_rate": 0.3638968481375358,
+      "mean_v7": 0.3670632045771818,
+      "calibration_residual": -0.003166356439645942,
+      "descriptive_residual_se": 0.004513626425857525,
+      "v7_auc": 0.938504449331221,
+      "v6_auc": 0.9383280918713991,
+      "v7_logloss": 0.2905500107508125,
+      "fold_calibration": [
+        {
+          "n": 837,
+          "calibration_residual": 0.0027903212606670046
+        },
+        {
+          "n": 859,
+          "calibration_residual": -0.011984633206289985
+        },
+        {
+          "n": 845,
+          "calibration_residual": 0.0010840201988099242
+        },
+        {
+          "n": 825,
+          "calibration_residual": -0.005166106075461297
+        },
+        {
+          "n": 822,
+          "calibration_residual": -0.0023787825984807882
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Eco Plus|Business travel|Loyal Customer|midlow",
+      "rows": 2303,
+      "positive_rate": 0.34433347807207987,
+      "mean_v7": 0.34753950181658844,
+      "calibration_residual": -0.0032060237445085318,
+      "descriptive_residual_se": 0.005768872856451055,
+      "v7_auc": 0.9425945566755467,
+      "v6_auc": 0.9428409176319282,
+      "v7_logloss": 0.2691156152693143,
+      "fold_calibration": [
+        {
+          "n": 443,
+          "calibration_residual": -0.010287862361253414
+        },
+        {
+          "n": 465,
+          "calibration_residual": 0.004498406485006005
+        },
+        {
+          "n": 492,
+          "calibration_residual": -0.0038704744844188462
+        },
+        {
+          "n": 472,
+          "calibration_residual": -0.0010030813273344927
+        },
+        {
+          "n": 431,
+          "calibration_residual": -0.0058932270075631584
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Eco Plus|Business travel|disloyal Customer|high",
+      "rows": 1585,
+      "positive_rate": 0.06876971608832808,
+      "mean_v7": 0.07128223583545698,
+      "calibration_residual": -0.0025125197471289047,
+      "descriptive_residual_se": 0.004571591058808752,
+      "v7_auc": 0.8811255314388006,
+      "v6_auc": 0.8799507719847841,
+      "v7_logloss": 0.13752871229561775,
+      "fold_calibration": [
+        {
+          "n": 288,
+          "calibration_residual": -8.553282777474154e-05
+        },
+        {
+          "n": 311,
+          "calibration_residual": -0.001394254576085416
+        },
+        {
+          "n": 331,
+          "calibration_residual": -0.023994042428290327
+        },
+        {
+          "n": 316,
+          "calibration_residual": 0.009768328600647466
+        },
+        {
+          "n": 339,
+          "calibration_residual": 0.0039266638180586256
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Eco Plus|Personal Travel|Loyal Customer|high",
+      "rows": 3249,
+      "positive_rate": 0.10003077870113881,
+      "mean_v7": 0.09993686245856605,
+      "calibration_residual": 9.391624257277187e-05,
+      "descriptive_residual_se": 0.004237593625330509,
+      "v7_auc": 0.8315626644217615,
+      "v6_auc": 0.8338272124592234,
+      "v7_logloss": 0.21894711461105765,
+      "fold_calibration": [
+        {
+          "n": 617,
+          "calibration_residual": 0.0033050710598014513
+        },
+        {
+          "n": 669,
+          "calibration_residual": -0.00643216497960696
+        },
+        {
+          "n": 649,
+          "calibration_residual": 0.000378943372387354
+        },
+        {
+          "n": 646,
+          "calibration_residual": -0.00922648068980346
+        },
+        {
+          "n": 668,
+          "calibration_residual": 0.012400292928910383
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Eco Plus|Personal Travel|Loyal Customer|low",
+      "rows": 1769,
+      "positive_rate": 0.0791407574901074,
+      "mean_v7": 0.08636413525961276,
+      "calibration_residual": -0.007223377769505351,
+      "descriptive_residual_se": 0.005217643807056305,
+      "v7_auc": 0.8043716565816014,
+      "v6_auc": 0.8065070595457337,
+      "v7_logloss": 0.191066475294743,
+      "fold_calibration": [
+        {
+          "n": 401,
+          "calibration_residual": -0.015241805651369428
+        },
+        {
+          "n": 333,
+          "calibration_residual": -0.009283440323408375
+        },
+        {
+          "n": 341,
+          "calibration_residual": -0.006293361312854998
+        },
+        {
+          "n": 334,
+          "calibration_residual": -0.004942603775429699
+        },
+        {
+          "n": 360,
+          "calibration_residual": 0.0006168341342117788
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Eco Plus|Personal Travel|Loyal Customer|midhigh",
+      "rows": 5518,
+      "positive_rate": 0.09876766944545125,
+      "mean_v7": 0.09374089189014707,
+      "calibration_residual": 0.005026777555304178,
+      "descriptive_residual_se": 0.003154355267587804,
+      "v7_auc": 0.834417782631716,
+      "v6_auc": 0.8330349022335289,
+      "v7_logloss": 0.20886833727297796,
+      "fold_calibration": [
+        {
+          "n": 1082,
+          "calibration_residual": 0.008750445164028226
+        },
+        {
+          "n": 1113,
+          "calibration_residual": 4.288312484327942e-05
+        },
+        {
+          "n": 1066,
+          "calibration_residual": 0.001643478884105188
+        },
+        {
+          "n": 1079,
+          "calibration_residual": 0.006721696768886097
+        },
+        {
+          "n": 1178,
+          "calibration_residual": 0.007824608370674967
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Eco Plus|Personal Travel|Loyal Customer|midlow",
+      "rows": 1923,
+      "positive_rate": 0.09256370254810192,
+      "mean_v7": 0.09204113830668455,
+      "calibration_residual": 0.0005225642414173692,
+      "descriptive_residual_se": 0.005095256980796267,
+      "v7_auc": 0.8460963909726024,
+      "v6_auc": 0.845108013264222,
+      "v7_logloss": 0.19419228180805245,
+      "fold_calibration": [
+        {
+          "n": 420,
+          "calibration_residual": -0.0006646561690297389
+        },
+        {
+          "n": 387,
+          "calibration_residual": 0.0019338825008962724
+        },
+        {
+          "n": 391,
+          "calibration_residual": -0.0012900685551486247
+        },
+        {
+          "n": 367,
+          "calibration_residual": -0.006539451334911732
+        },
+        {
+          "n": 358,
+          "calibration_residual": 0.009609021073650704
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Eco|Business travel|Loyal Customer|high",
+      "rows": 34225,
+      "positive_rate": 0.4461943024105186,
+      "mean_v7": 0.44356599915386286,
+      "calibration_residual": 0.0026283032566557602,
+      "descriptive_residual_se": 0.00162626386231155,
+      "v7_auc": 0.9359991299809449,
+      "v6_auc": 0.9358278859196842,
+      "v7_logloss": 0.30777786808380964,
+      "fold_calibration": [
+        {
+          "n": 6885,
+          "calibration_residual": 0.00440420458855849
+        },
+        {
+          "n": 6901,
+          "calibration_residual": -0.0004980207903251362
+        },
+        {
+          "n": 6858,
+          "calibration_residual": 0.006385805416565271
+        },
+        {
+          "n": 6809,
+          "calibration_residual": -6.220415790519057e-05
+        },
+        {
+          "n": 6772,
+          "calibration_residual": 0.002908633550682776
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Eco|Business travel|Loyal Customer|low",
+      "rows": 2882,
+      "positive_rate": 0.3806384455239417,
+      "mean_v7": 0.37218836227855173,
+      "calibration_residual": 0.00845008324538996,
+      "descriptive_residual_se": 0.005123533701960915,
+      "v7_auc": 0.9460535353612731,
+      "v6_auc": 0.9454519455913633,
+      "v7_logloss": 0.268807905842955,
+      "fold_calibration": [
+        {
+          "n": 551,
+          "calibration_residual": 0.005026123283777473
+        },
+        {
+          "n": 632,
+          "calibration_residual": 0.027116434235592797
+        },
+        {
+          "n": 538,
+          "calibration_residual": 0.0013949405025507147
+        },
+        {
+          "n": 543,
+          "calibration_residual": 0.0056886284319289954
+        },
+        {
+          "n": 618,
+          "calibration_residual": 0.0009818063398836523
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Eco|Business travel|Loyal Customer|midhigh",
+      "rows": 15403,
+      "positive_rate": 0.3895994286827241,
+      "mean_v7": 0.39108387446143045,
+      "calibration_residual": -0.0014844457787062703,
+      "descriptive_residual_se": 0.002457662972706715,
+      "v7_auc": 0.9307507991382419,
+      "v6_auc": 0.9302079554846936,
+      "v7_logloss": 0.3142745191035519,
+      "fold_calibration": [
+        {
+          "n": 3142,
+          "calibration_residual": 0.007118756853230048
+        },
+        {
+          "n": 3081,
+          "calibration_residual": -0.009585355291767406
+        },
+        {
+          "n": 3062,
+          "calibration_residual": 0.0017363802863697745
+        },
+        {
+          "n": 3058,
+          "calibration_residual": -0.009167744475060732
+        },
+        {
+          "n": 3060,
+          "calibration_residual": 0.002293657993315475
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Eco|Business travel|Loyal Customer|midlow",
+      "rows": 13032,
+      "positive_rate": 0.3592694904849601,
+      "mean_v7": 0.3607587504334981,
+      "calibration_residual": -0.0014892599485380215,
+      "descriptive_residual_se": 0.0024793860470564,
+      "v7_auc": 0.9391322353157845,
+      "v6_auc": 0.9384589982785391,
+      "v7_logloss": 0.28056301308926973,
+      "fold_calibration": [
+        {
+          "n": 2634,
+          "calibration_residual": 0.006101501986060034
+        },
+        {
+          "n": 2582,
+          "calibration_residual": -0.0029461153042562717
+        },
+        {
+          "n": 2585,
+          "calibration_residual": -0.0010893317687534936
+        },
+        {
+          "n": 2592,
+          "calibration_residual": -0.004981723083560775
+        },
+        {
+          "n": 2639,
+          "calibration_residual": -0.004601732970906638
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Eco|Business travel|disloyal Customer|high",
+      "rows": 41726,
+      "positive_rate": 0.12342424387671955,
+      "mean_v7": 0.12492624215495834,
+      "calibration_residual": -0.001501998278238775,
+      "descriptive_residual_se": 0.0011249158614740102,
+      "v7_auc": 0.8991747413551462,
+      "v6_auc": 0.8990354330708662,
+      "v7_logloss": 0.19722026274307888,
+      "fold_calibration": [
+        {
+          "n": 8285,
+          "calibration_residual": -0.002212786969987492
+        },
+        {
+          "n": 8373,
+          "calibration_residual": 0.0014887964401392618
+        },
+        {
+          "n": 8324,
+          "calibration_residual": -0.002517758678151459
+        },
+        {
+          "n": 8311,
+          "calibration_residual": -0.0029220933846949154
+        },
+        {
+          "n": 8433,
+          "calibration_residual": -0.0013710175913196503
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Eco|Business travel|disloyal Customer|midhigh",
+      "rows": 28775,
+      "positive_rate": 0.13403996524761078,
+      "mean_v7": 0.13402512955459572,
+      "calibration_residual": 1.483569301506684e-05,
+      "descriptive_residual_se": 0.0014558362388813713,
+      "v7_auc": 0.8927899741382485,
+      "v6_auc": 0.8926059637914668,
+      "v7_logloss": 0.2205481005567726,
+      "fold_calibration": [
+        {
+          "n": 5814,
+          "calibration_residual": -0.002627214715697491
+        },
+        {
+          "n": 5755,
+          "calibration_residual": 0.00017550211258371556
+        },
+        {
+          "n": 5747,
+          "calibration_residual": 0.0009932061698728245
+        },
+        {
+          "n": 5722,
+          "calibration_residual": -0.00044014506005914784
+        },
+        {
+          "n": 5737,
+          "calibration_residual": 0.00200489157069092
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Eco|Business travel|disloyal Customer|midlow",
+      "rows": 5311,
+      "positive_rate": 0.13933345885897194,
+      "mean_v7": 0.13901356098505235,
+      "calibration_residual": 0.0003198978739195922,
+      "descriptive_residual_se": 0.0033588727517839287,
+      "v7_auc": 0.8994980103709047,
+      "v6_auc": 0.8992174519739604,
+      "v7_logloss": 0.21714236012645396,
+      "fold_calibration": [
+        {
+          "n": 1101,
+          "calibration_residual": 0.0021023403285441488
+        },
+        {
+          "n": 1030,
+          "calibration_residual": 0.006241491415134178
+        },
+        {
+          "n": 1074,
+          "calibration_residual": 0.0017198203583797037
+        },
+        {
+          "n": 1082,
+          "calibration_residual": -0.007639142681238371
+        },
+        {
+          "n": 1024,
+          "calibration_residual": -0.0006112987643830553
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Eco|Personal Travel|Loyal Customer|high",
+      "rows": 51609,
+      "positive_rate": 0.1080044178340987,
+      "mean_v7": 0.10691129004953417,
+      "calibration_residual": 0.001093127784564531,
+      "descriptive_residual_se": 0.0010848298804574576,
+      "v7_auc": 0.8442507414971736,
+      "v6_auc": 0.8441696188400356,
+      "v7_logloss": 0.22321721020996943,
+      "fold_calibration": [
+        {
+          "n": 10299,
+          "calibration_residual": 0.0009703248076593826
+        },
+        {
+          "n": 10193,
+          "calibration_residual": -0.0003016582692347432
+        },
+        {
+          "n": 10313,
+          "calibration_residual": 0.0024336746696062912
+        },
+        {
+          "n": 10438,
+          "calibration_residual": 0.0007800127728891606
+        },
+        {
+          "n": 10366,
+          "calibration_residual": 0.001568242252242901
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Eco|Personal Travel|Loyal Customer|low",
+      "rows": 22558,
+      "positive_rate": 0.07979430800602891,
+      "mean_v7": 0.08041501549513905,
+      "calibration_residual": -0.0006207074891101412,
+      "descriptive_residual_se": 0.0015120997593779345,
+      "v7_auc": 0.7930101379923136,
+      "v6_auc": 0.7921539219149779,
+      "v7_logloss": 0.2015735224205087,
+      "fold_calibration": [
+        {
+          "n": 4399,
+          "calibration_residual": 0.0030399741174834474
+        },
+        {
+          "n": 4516,
+          "calibration_residual": -0.0050750699040910275
+        },
+        {
+          "n": 4559,
+          "calibration_residual": -0.0012568281093616707
+        },
+        {
+          "n": 4530,
+          "calibration_residual": 0.0018893994004974748
+        },
+        {
+          "n": 4554,
+          "calibration_residual": -0.0015996596242764346
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Eco|Personal Travel|Loyal Customer|midhigh",
+      "rows": 84253,
+      "positive_rate": 0.09547434512717648,
+      "mean_v7": 0.09576831016131501,
+      "calibration_residual": -0.0002939650341385241,
+      "descriptive_residual_se": 0.0007988849187553049,
+      "v7_auc": 0.8324296478019477,
+      "v6_auc": 0.8317863985479643,
+      "v7_logloss": 0.20517502912640678,
+      "fold_calibration": [
+        {
+          "n": 16883,
+          "calibration_residual": -0.0024705274257285567
+        },
+        {
+          "n": 16744,
+          "calibration_residual": 0.0015932889437000916
+        },
+        {
+          "n": 16799,
+          "calibration_residual": -0.0019823956137526486
+        },
+        {
+          "n": 16827,
+          "calibration_residual": 0.0012049232573535704
+        },
+        {
+          "n": 17000,
+          "calibration_residual": 0.000193615805760592
+        }
+      ]
+    },
+    {
+      "slice": "segment_coherence:Eco|Personal Travel|Loyal Customer|midlow",
+      "rows": 27271,
+      "positive_rate": 0.09559605441677974,
+      "mean_v7": 0.09741634936997283,
+      "calibration_residual": -0.0018202949531931018,
+      "descriptive_residual_se": 0.0014192261103896815,
+      "v7_auc": 0.8348058590229828,
+      "v6_auc": 0.8339094227335995,
+      "v7_logloss": 0.20823374535297867,
+      "fold_calibration": [
+        {
+          "n": 5439,
+          "calibration_residual": -0.0016076542638788075
+        },
+        {
+          "n": 5491,
+          "calibration_residual": -0.004720395421235786
+        },
+        {
+          "n": 5507,
+          "calibration_residual": -0.0053542393444380755
+        },
+        {
+          "n": 5412,
+          "calibration_residual": 0.002229216213151423
+        },
+        {
+          "n": 5422,
+          "calibration_residual": 0.0004507076825817901
+        }
+      ]
+    }
+  ],
+  "next_prepared_route": "34autoTEresponses, raw21 +13rating xsegment; keys preparedbeforev7publicresult."
+}

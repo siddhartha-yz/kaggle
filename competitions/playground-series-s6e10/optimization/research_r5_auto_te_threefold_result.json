@@ -1,0 +1,64 @@
+{
+  "pooled": {
+    "baseline_auc": 0.9611235237273941,
+    "candidate_auc": 0.9611598763253244,
+    "delta_auc": 3.635259793033363e-05,
+    "paired_se": 2.0480287811193925e-05,
+    "conditional_95pct_ci": [
+      -3.788766179606459e-06,
+      7.649396204027371e-05
+    ],
+    "candidate_logloss": 0.22258016819488846
+  },
+  "fold_comparisons": [
+    {
+      "baseline_auc": 0.961338709585493,
+      "candidate_auc": 0.9613371749201627,
+      "delta_auc": -1.5346653302605873e-06,
+      "paired_se": 3.6887355877572184e-05,
+      "conditional_95pct_ci": [
+        -7.383388285030207e-05,
+        7.07645521897809e-05
+      ],
+      "candidate_logloss": 0.2225730463814982
+    },
+    {
+      "baseline_auc": 0.9621200950025629,
+      "candidate_auc": 0.962149032933797,
+      "delta_auc": 2.8937931234152003e-05,
+      "paired_se": 3.523474377634889e-05,
+      "conditional_95pct_ci": [
+        -4.012216656749182e-05,
+        9.799802903579583e-05
+      ],
+      "candidate_logloss": 0.21978573468610482
+    },
+    {
+      "baseline_auc": 0.9599695864548055,
+      "candidate_auc": 0.9600531871380847,
+      "delta_auc": 8.36006832792835e-05,
+      "paired_se": 3.428915179669793e-05,
+      "conditional_95pct_ci": [
+        1.6393945757755548e-05,
+        0.00015080742080081144
+      ],
+      "candidate_logloss": 0.22538173553002633
+    }
+  ],
+  "corrected_resampled_t": {
+    "mean_delta": 3.700131639439164e-05,
+    "se": 3.937819331921276e-05,
+    "test_train_ratio": 0.5000000000015322,
+    "df": 2,
+    "one_sided_alpha": 0.025,
+    "lower_bound": -0.00013242937458312116
+  },
+  "eligible_for_new_partition_replication": false,
+  "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim.",
+  "status": "complete",
+  "ended_utc": "2026-10-18T12:48:12.525980+00:00",
+  "route": "conditional_auto_te",
+  "stage": "threefold",
+  "oof_sha256": "d53946ea946d0c9cab692f8058ffeb693a78e511029cd8d1a68db8488f316965",
+  "plan_sha256": "9d59a6fcb7c94932276bd353bf882c80a0f28896d9ae9494ca30779ce5d8bd87"
+}

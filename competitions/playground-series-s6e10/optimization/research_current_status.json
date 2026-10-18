@@ -1,9 +1,9 @@
 {
-  "updated_utc": "2026-10-18T11:53:29.393603+00:00",
-  "task_status": "candidate_delivered_awaiting_parent_formal_submission_and_rank",
-  "active_training": false,
-  "current_route": "qualified_candidate_final_cv_inference",
-  "driver": null,
+  "updated_utc": "2026-10-18T12:49:54.169017+00:00",
+  "task_status": "active_r5_research_v7_fixed_baseline",
+  "active_training": true,
+  "current_route": "source_synthetic_density",
+  "driver": "research_r5_density.py",
   "goal": "actual verified leaderboard Top100; no automatic oldwindow cutoff",
   "plan": "research_r4_plan.json",
   "previous_W3_results": "31 primaryscreens+1trainingonly; threeprimarypasses allfailedconfirmation",
@@ -199,7 +199,7 @@
     "gpu_process_peak_bytes": 815792128,
     "oof_sha256": "8bc1cecbca39f6cf540c17d0891f8d699a69adeed0afbb3d9dfbd6b5e7f07fc0"
   },
-  "formal_new_used": 0,
+  "formal_new_used": 1,
   "pending_candidate": {
     "status": "complete",
     "completed_utc": "2026-10-18T11:50:25.746505+00:00",
@@ -231,5 +231,37 @@
   "private_library_receipt": "research_r4_csv_library_receipt.json",
   "formal_new_limit": 2,
   "actual_top100_verified": false,
-  "next_action": "Parent-onlyKaggleformaldecision/upload andactualrankreceipt; continueoptimizationifrank>100."
+  "next_action": "Parent-onlyKaggleformaldecision/upload andactualrankreceipt; continueoptimizationifrank>100.",
+  "formal_new_remaining": 1,
+  "confirmed_best": {
+    "recorded_utc": "2026-10-18T12:41:59.978029+00:00",
+    "source": "ParentauthenticatedKagglebrowserreport",
+    "submitted_utc": "2026-10-18T12:38:23+00:00",
+    "status": "Complete",
+    "candidate": "submission_lean_realmlp_r4_cv_v7.csv",
+    "sha256": "0ab4fe851d7677dfb1ddb0714e2c1a2f74b3f7e194d189ca6a92136a7f68c76f",
+    "public_auc": 0.96076,
+    "previous_v6_public_auc": 0.96058,
+    "public_delta": 0.00018,
+    "rank": 809,
+    "ranked_teams": 2243,
+    "rank100_public_auc": 0.9619,
+    "gap_to_rank100": 0.00114,
+    "formal_current_round_used": 1,
+    "formal_current_round_limit": 2,
+    "remaining": 1,
+    "actual_top100_verified": false,
+    "rank_observation_note": "Snapshot supplied by parent; exact separate rank observationtime not supplied."
+  },
+  "last_rejected_route": {
+    "name": "conditional_auto_te",
+    "fivefold_delta": 4.955522798111289e-05,
+    "threefold_delta": 3.635259793033363e-05,
+    "threefold_conditional_CI": [
+      -3.788766179606459e-06,
+      7.649396204027371e-05
+    ],
+    "qualified": false
+  },
+  "remaining_formal_submissions": 1
 }

@@ -2,11 +2,32 @@
   "window_start_utc": "2026-10-18T05:06:00+00:00",
   "window_deadline_utc": "2026-10-18T11:06:00+00:00",
   "maximum_new_submissions": 2,
-  "completed_new_submissions": 0,
+  "completed_new_submissions": 1,
   "reserved_slots": 0,
-  "remaining_unreserved_slots": 2,
+  "remaining_unreserved_slots": 1,
   "parent_is_only_submitter": true,
-  "entries": [],
+  "entries": [
+    {
+      "recorded_utc": "2026-10-18T12:41:59.978029+00:00",
+      "source": "ParentauthenticatedKagglebrowserreport",
+      "submitted_utc": "2026-10-18T12:38:23+00:00",
+      "status": "Complete",
+      "candidate": "submission_lean_realmlp_r4_cv_v7.csv",
+      "sha256": "0ab4fe851d7677dfb1ddb0714e2c1a2f74b3f7e194d189ca6a92136a7f68c76f",
+      "public_auc": 0.96076,
+      "previous_v6_public_auc": 0.96058,
+      "public_delta": 0.00018,
+      "rank": 809,
+      "ranked_teams": 2243,
+      "rank100_public_auc": 0.9619,
+      "gap_to_rank100": 0.00114,
+      "formal_current_round_used": 1,
+      "formal_current_round_limit": 2,
+      "remaining": 1,
+      "actual_top100_verified": false,
+      "rank_observation_note": "Snapshot supplied by parent; exact separate rank observationtime not supplied."
+    }
+  ],
   "previous_completed_window_ledger": "research_submission_ledger.json",
   "baseline": {
     "candidate": "submission_realmlp_value_v6.csv",
@@ -17,5 +38,7 @@
     "observed_utc": "2026-10-18T04:00:00+00:00",
     "oof_auc": 0.961135462544149
   },
-  "paid_resources": false
+  "paid_resources": false,
+  "updated_utc": "2026-10-18T12:41:59.978029+00:00",
+  "old_window_dates_historical_only": true
 }

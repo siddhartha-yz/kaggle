@@ -1,0 +1,10 @@
+{
+  "updated_utc": "2026-10-18T13:23:01.966075+00:00",
+  "status": "training",
+  "route": "conditional_response_numeric",
+  "fold": 0,
+  "member": 7,
+  "pid": 513891,
+  "active_training": true,
+  "plan": "research_r7_plan.json"
+}

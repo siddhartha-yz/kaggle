@@ -1,0 +1,30 @@
+{
+  "frozen_utc": "2026-10-18T13:19:42.109169+00:00",
+  "mechanism": "Conditionalresponse numericrepresentation retainsrawratingcategoricaltwins. Replaceexact13ratingnumericchannelswithstrictinner5foldautoTE ofClass/Travel/Customer/rating. Same47fields25numeric22categorical, networkwidth/3epochs/8serialmembers/seedsunchanged.",
+  "official_baseline": "v7 public.96076 fixed",
+  "private_control": "Frozenexternal50/50v5+leanNN40 controlqualified5+3. Newviewmustbeat boththisprivatecontrol andv7, not justrideitsweightgain.",
+  "novelty": "NotpreviouscontextNNwithFDprofiles/teacherfeatures, notsameLGBautoTE. Isolates conditionalnumericrepresentation for theneurallearner withoutaddinginputdimension orprivateweightsearch.",
+  "hyperparams": "ExactlyR4winningflat_anneal/invsqrtp1e-3 wd.015 recipe, n1serialx8 fixed3epochs, initRAM8MiB. No learnedweights orhyperparametergrid.",
+  "limits": {
+    "cpu_threads": 6,
+    "gpu_allocator_cap_bytes": 778043392,
+    "gpu_process_ceiling_bytes": 1073741824,
+    "paid_resources": false,
+    "serial": true
+  },
+  "probe": "Full559708row1epoch, noqualityscore, toverifydimension-compatibleGPUbudget. No highercapretry.",
+  "admission": "Complete5fold then3fold fixedcachedpartitions. Candidate=.5v5+.5newNN. Bothpooledconditional95%andcorrectedresampledtlowerpositive vsprivatehalfandv7ineachstage.",
+  "validation_bias": "LabelsreusedandprivatecontrolselectedonoldCV; no untoucheddataorunbiasedpostselectionclaim. Newfeaturefamilyfrozenbeforequality.",
+  "final_if_qualified": "Meanown5foldx8models ontest, unchangedv5fullcore. Parentonlyformal submission.",
+  "source": "OfficialdataonlyinnewNN, inheritedauditedCC0v5core. No unknownpredictions,newdeps orlocalKaggleauth.",
+  "formal_used": 1,
+  "formal_limit": 2,
+  "remaining": 1,
+  "code_sha256": {
+    "research_r7_response_features.py": "5933367f13b76674b8f8b87b04e2c1e5c61e8ca689f0d83b257f5320cecb36ed",
+    "research_r7_loader.py": "8571464e8e4202a3a5a6009bf1a64fd745b5dee76ac1667f8421b0378d52e794",
+    "research_r7_worker.py": "18bc5e2c618eb632c3919faf57a731595903df50d3d96a38461979bf64984f0f",
+    "research_r7_check.py": "cd3feadce157314f3ae1c50dbbc8cce883807243ba3368d991d1f75a203d1f87",
+    "research_r7_driver.py": "7df403774c90710a15a3cd0498f6db92be5de0d2c577ce44c5290f2b8e7b0f8a"
+  }
+}

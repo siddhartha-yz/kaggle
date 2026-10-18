@@ -1,0 +1,84 @@
+{
+  "updated_utc": "2026-10-18T13:23:27.565989+00:00",
+  "status": "active_r7_training_qualified_half_backup_delivered",
+  "confirmed_public_baseline": {
+    "recorded_utc": "2026-10-18T12:41:59.978029+00:00",
+    "source": "ParentauthenticatedKagglebrowserreport",
+    "submitted_utc": "2026-10-18T12:38:23+00:00",
+    "status": "Complete",
+    "candidate": "submission_lean_realmlp_r4_cv_v7.csv",
+    "sha256": "0ab4fe851d7677dfb1ddb0714e2c1a2f74b3f7e194d189ca6a92136a7f68c76f",
+    "public_auc": 0.96076,
+    "previous_v6_public_auc": 0.96058,
+    "public_delta": 0.00018,
+    "rank": 809,
+    "ranked_teams": 2243,
+    "rank100_public_auc": 0.9619,
+    "gap_to_rank100": 0.00114,
+    "formal_current_round_used": 1,
+    "formal_current_round_limit": 2,
+    "remaining": 1,
+    "actual_top100_verified": false,
+    "rank_observation_note": "Snapshot supplied by parent; exact separate rank observationtime not supplied."
+  },
+  "backup_candidate": {
+    "csv": "submission_lean_half_r6_v8.csv",
+    "sha256": "e277a97762009cd1ebf739f3fa692ce2ee5e4c1cceff5fab225634f74dd98c5b",
+    "bytes": 8205243,
+    "rows": 299844,
+    "weights": {
+      "v5_full": 0.5,
+      "lean_cv40": 0.5
+    },
+    "fivefold": {
+      "baseline_auc": 0.9612963083501996,
+      "candidate_auc": 0.9614652606685573,
+      "delta_auc": 0.00016895231835767355,
+      "paired_se": 1.6776492249050196e-05,
+      "conditional_95pct_ci": [
+        0.00013607039354953515,
+        0.00020183424316581194
+      ],
+      "candidate_logloss": 0.22181560273488748
+    },
+    "threefold": {
+      "baseline_auc": 0.9611235237273941,
+      "candidate_auc": 0.9612814192231113,
+      "delta_auc": 0.0001578954957172085,
+      "paired_se": 1.7323792034400075e-05,
+      "conditional_95pct_ci": [
+        0.00012394086332978435,
+        0.00019185012810463267
+      ],
+      "candidate_logloss": 0.2222013842318224
+    },
+    "library_saved_and_exact_byte_verified": true,
+    "recommendation": "Holdlastformalopportunity;backuppointgainmuchsmallerthanpublicgap. ContinuecurrentmechanismratherthanassumingTop100."
+  },
+  "active_driver": {
+    "updated_utc": "2026-10-18T13:20:03.556519+00:00",
+    "status": "training",
+    "driver_pid": 513719,
+    "whole_top100_task_completed": false,
+    "formal_used": 1,
+    "remaining": 1,
+    "stage": "fivefold"
+  },
+  "current_training": {
+    "updated_utc": "2026-10-18T13:23:01.966075+00:00",
+    "status": "training",
+    "route": "conditional_response_numeric",
+    "fold": 0,
+    "member": 7,
+    "pid": 513891,
+    "active_training": true,
+    "plan": "research_r7_plan.json"
+  },
+  "completed_r7_neural_members": 8,
+  "total_fivefold_members": 40,
+  "peak_gpu_process_bytes": 830472192,
+  "formal_used": 1,
+  "formal_limit": 2,
+  "remaining": 1,
+  "whole_top100_task_completed": false
+}

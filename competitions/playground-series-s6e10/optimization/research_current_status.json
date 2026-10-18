@@ -1,9 +1,9 @@
 {
-  "updated_utc": "2026-10-18T12:49:54.169017+00:00",
+  "updated_utc": "2026-10-18T12:57:13.695685+00:00",
   "task_status": "active_r5_research_v7_fixed_baseline",
   "active_training": true,
-  "current_route": "source_synthetic_density",
-  "driver": "research_r5_density.py",
+  "current_route": "nested_deep_xgb_conditional_response",
+  "driver": "research_r6_xgb.py",
   "goal": "actual verified leaderboard Top100; no automatic oldwindow cutoff",
   "plan": "research_r4_plan.json",
   "previous_W3_results": "31 primaryscreens+1trainingonly; threeprimarypasses allfailedconfirmation",
@@ -263,5 +263,7 @@
     ],
     "qualified": false
   },
-  "remaining_formal_submissions": 1
+  "remaining_formal_submissions": 1,
+  "last_density_delta": -2.6429197778066182e-06,
+  "last_density_qualified": false
 }

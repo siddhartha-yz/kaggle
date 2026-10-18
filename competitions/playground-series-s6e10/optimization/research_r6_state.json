@@ -1,0 +1,9 @@
+{
+  "updated_utc": "2026-10-18T12:56:05.492866+00:00",
+  "phase": "resource_probe",
+  "round": 1,
+  "seconds": 1.379289816992241,
+  "pid": 6,
+  "active_training": true,
+  "CPU_threads": 6
+}

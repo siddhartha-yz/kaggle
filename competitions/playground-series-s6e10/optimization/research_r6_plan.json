@@ -1,0 +1,42 @@
+{
+  "frozen_utc": "2026-10-18T12:55:51.957184+00:00",
+  "baseline": "v7 fixedpublic.96076, rank809/2243, rank100.96190. No publictuning.",
+  "hypothesis": "The new34conditionalresponseTEs show smallpositivefivefoldsignal but didnotreplicatereliably with LGB639. Test one higher-order interactionlearner withthosesametrain-onlyfeatures; doesnotestablish a noisefloor.",
+  "novelty": "Earlier XGB wasdepth6,child20,lambda20,lr.04,on57fields,selected803roundsonoldprimarysplit. Thisisdepth8,child5,lambda5,alpha.05,rows.9/cols.5,lr.03,91fields,propernestedselection. Not an oldfailedconfigurationrerun.",
+  "params": {
+    "max_rounds": 6000,
+    "lr": 0.03,
+    "depth": 8,
+    "min_child_weight": 5,
+    "reg_lambda": 5,
+    "reg_alpha": 0.05,
+    "subsample": 0.9,
+    "colsample_bytree": 0.5,
+    "max_bin": 256,
+    "max_cat_to_onehot": 8,
+    "seed": 20261024,
+    "CPU": 6,
+    "device": "cpu"
+  },
+  "selection": "Inner80/20stratifiedseed20261024 insideeachoutertrainingpartition. RefitallTEs/counts/vocabs/distancemaps oninnertraining only beforeinnerES200AUC. Thenfreshoutertrainingpreprocessor andmodelwithbest_iteration+1. Noouterholdouttarget/features used forselection.",
+  "source_reference": "https://raw.githubusercontent.com/alvis1111/s6e10-airline-solution/main/independent_repro/xgb_deep_repro.py",
+  "adaptation": "Ownimplementation; currentisolatedofficialxgboost-cpu3.1.3; CPU-onlywheelmeansGPUcannotbeused. Resourceadaptedmax6000lr.03 ratherthanpublic12000lr.02, fixedbeforequality. No newdeps.",
+  "resource_probe": "50treesfullinnertrain447766x91, noqualityscore; freeze modelbeforeprobe. Recordtime/RSS tocheckfeasibility, noquality-basedtuning.",
+  "gates": "Complete5fold then3fold, samev7references, fixed45/128LGBcomponentreplacement. Bothpairedconditional95%lowerandcorrectedresampledtlowerpositive. Noouterinterimscorestopping, noweightsearch.",
+  "bias": "Officiallabelsreusedacrosshistoricalresearch; innerselectiondoesnotrepairhistoricalselectionbias. ConditionalCIsnotunbiasedfinaltestclaims.",
+  "resources": {
+    "CPUthreads": 6,
+    "serial": true,
+    "GPUcap": 1073741824,
+    "paid": false,
+    "perfit_wall_seconds": 1800,
+    "peak_RSS_GiB": 8,
+    "min_available_RAM_GiB": 2
+  },
+  "formal_used": 1,
+  "formal_limit": 2,
+  "remaining": 1,
+  "parent_only_submitter": true,
+  "runner_sha256": "4ab9a32fbd8cec0b7b9e7985b14abf14e2f541c84483b96e403191f1bdb6ce2c",
+  "features_sha256": "53c8c9015a11bde7da4570d5b7c79aca21d725ce84ff79e3db77eb939d3031e8"
+}

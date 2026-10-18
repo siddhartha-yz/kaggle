@@ -1,43 +1,71 @@
 {
-  "checked_utc": "2026-10-18T07:32:08.075040+00:00",
+  "checked_utc": "2026-10-18T07:46:26.971761+00:00",
   "task_status": "in_progress_not_closed",
-  "active_experiment": "strict inner5fold synthetic residual kernel feature + fixed original LGB component replacement",
+  "active_experiment": "ExtraTrees512 fixed primary candidate, CPU6, no validation score until all512 trees complete",
   "progress": {
-    "status": "crossfitting_neighborhood_features",
-    "started_utc": "2026-10-18T07:30:58.368094+00:00",
-    "plan_sha256": "82697480925b9665a71e38497b272bc6d76b6687fa27724b5e4ca0fb3c7f8bcd",
-    "runner_sha256": "0c971b2455f615b7bee9c714a5242207b6c7e6d6a40b858da4376b5e7e12dfaa",
-    "kernel_code_sha256": "38cb8f26fe5b7f4d8ffc71ce95e76e0353a502b3656460a54088666377ecd147",
-    "source_teacher_model_sha256": "db538bc2303ee5075be4016e0653424ad885d3cd207001dbddb42441e66588e4",
-    "source_feature_sha256": "0fc3167103ca04ecaac018c622ccca4d8f7e365b46f032ad11f318e409dbfc55",
+    "status": "training",
+    "started_utc": "2026-10-18T07:38:02.889473+00:00",
+    "plan_sha256": "232775ab9cc5422a668efeb3ff562b1e72f933273eec160e0e56b061a724aa48",
+    "runner_sha256": "07a9e0cfc1f65091d37a9af16d5b3c58caca7aeb9be0357ad90617ce3bdbba52",
+    "split": "primary",
+    "fold": 0,
     "train_rows": 559708,
     "valid_rows": 139927,
-    "old_component_reconstruction_max_abs_diff": 3.3306690738754696e-16,
-    "stage": "outer_validation",
-    "groups_complete": 0,
-    "groups_total": 3151,
-    "rss_bytes": 1366155264,
-    "available_ram_bytes": 10843070464,
-    "last_progress_utc": "2026-10-18T07:32:05.749732+00:00"
+    "feature_width": 82,
+    "completed_trees": 352,
+    "last_chunk_seconds": 48.98931346699828,
+    "rss_bytes": 1773146112,
+    "available_ram_bytes": 10686455808,
+    "last_progress_utc": "2026-10-18T07:45:39.454387+00:00",
+    "checkpoint_trees": 256
   },
-  "latest_completed_experiment": "fixed3familyneuralaverage",
-  "family_confirm_vs_v6": {
-    "baseline_auc": 0.961026158861244,
-    "candidate_auc": 0.9610914543765532,
-    "delta_auc": 6.529551530920497e-05,
-    "paired_se": 5.6888550301479754e-05,
-    "conditional_95pct_ci": [
-      -4.620604328169535e-05,
-      0.0001767970739001053
+  "continuation_queue": {
+    "status": "running",
+    "stage": "waiting_for_extra_trees_primary",
+    "started_utc": "2026-10-18T07:45:21.549448+00:00",
+    "queue_pid": 421063,
+    "nested_plan_sha256": "ac5d0417f574dc0da5238c8ffe372637e9950a0a6a4f3597c98c00dbdfa823b8",
+    "completed_stages": [],
+    "extra_trees_pids": [
+      418360
     ],
-    "candidate_logloss": 0.2222968278473506
+    "last_progress_utc": "2026-10-18T07:46:21.711217+00:00"
   },
-  "family_confirmation_eligible": false,
-  "new_oof_or_full_training_started": false,
-  "completed_primary_screens": 25,
+  "nested_neural_scope": "IfExtraTreesrejects, CPU-only innerRealMLP2 resourceprobe then2fixed nested meta methods; existing3innerGBDTand5outerprediction caches reused. Strictprimary/confirm/5foldgates. No concurrentfits.",
+  "completed_primary_screens": 26,
   "new_formal_submissions_used": 0,
   "reserved_slots": 0,
   "remaining_new_formal_submissions": 2,
   "deadline_utc": "2026-10-18T11:06:00Z",
-  "progress_visibility": "Awaiting direct human authorization for cross-thread progress messages; no training is blocked. Current code and checkpoints are pushed to codex/s6e10-local-confirmation."
+  "progress_visibility": "Directhumanpermissionforcross-threadmessagespending; no external message hasbeen sent. Actualcode/statusauditcheckpoints areonGitHub.",
+  "most_recent_completed_route": {
+    "status": "complete",
+    "split": "primary",
+    "vs_v6": {
+      "baseline_auc": 0.9603020930463941,
+      "candidate_auc": 0.9602337997363868,
+      "delta_auc": -6.829331000735017e-05,
+      "paired_se": 3.851134593527257e-05,
+      "conditional_95pct_ci": [
+        -0.00014377554804048442,
+        7.188928025784067e-06
+      ],
+      "candidate_logloss": 0.22535170202045088
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.9603020930463941,
+        "candidate_auc": 0.9602337997363868,
+        "delta_auc": -6.829331000735017e-05,
+        "paired_se": 3.851134593527257e-05,
+        "conditional_95pct_ci": [
+          -0.00014377554804048442,
+          7.188928025784067e-06
+        ],
+        "candidate_logloss": 0.22535170202045088
+      }
+    ],
+    "eligible_for_next": false,
+    "completed_utc": "2026-10-18T07:32:47.942571+00:00"
+  }
 }

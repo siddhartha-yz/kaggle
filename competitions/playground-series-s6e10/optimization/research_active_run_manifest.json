@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-18T07:32:08.075040+00:00",
-  "phase": "window3_residual_kernel_primary_crossfit",
+  "updated_utc": "2026-10-18T07:38:02.147654+00:00",
+  "phase": "window3_extratrees_primary",
   "current_window": "research_w3_plan.json",
   "budget": "research_w3_submission_ledger.json",
   "active_training": true,
@@ -12,15 +12,15 @@
     "observed_utc": "2026-10-18T04:00:00+00:00"
   },
   "recovery": "Inspect saved per-route files, logs and live processes before restart. Serial six CPU threads, 1GiB total process GPU ceiling and 778043392 byte allocator cap.",
-  "driver": "research_w3_residual_kernel.py",
-  "state": "research_artifacts/w3_residual_kernel_primary/fold0/result.json",
+  "driver": "research_w3_extra_trees.py",
+  "state": "research_artifacts/w3_extra_trees_primary/fold0/result.json",
   "resource_override": "research_w3_resource_override.json",
   "status": "in_progress",
-  "outcome": "family_confirmation_failed_no_oof",
+  "outcome": "residual_kernel_primary_rejected",
   "completion": null,
-  "last_exec_session": 74435,
+  "last_exec_session": null,
   "last_log": "research_w3_tabicl_primary.log",
-  "active_log": "research_w3_residual_kernel_primary.log",
+  "active_log": "research_w3_extra_trees_primary.log",
   "last_completed_states": [
     "research_w3_phase2_state.json",
     "research_w3_phase3_state.json"

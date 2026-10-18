@@ -1,0 +1,21 @@
+{
+  "window_start_utc": "2026-10-18T05:06:00+00:00",
+  "window_deadline_utc": "2026-10-18T11:06:00+00:00",
+  "maximum_new_submissions": 2,
+  "completed_new_submissions": 0,
+  "reserved_slots": 0,
+  "remaining_unreserved_slots": 2,
+  "parent_is_only_submitter": true,
+  "entries": [],
+  "previous_completed_window_ledger": "research_submission_ledger.json",
+  "baseline": {
+    "candidate": "submission_realmlp_value_v6.csv",
+    "sha256": "36ea4ef80e1dd1911257f240391d9cdb8474b8b5deb5c52733582da80bdd1aaa",
+    "public_auc": 0.96058,
+    "rank_snapshot": 858,
+    "total_ranked_snapshot": 2208,
+    "observed_utc": "2026-10-18T04:00:00+00:00",
+    "oof_auc": 0.961135462544149
+  },
+  "paid_resources": false
+}

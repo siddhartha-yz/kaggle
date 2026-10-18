@@ -1,0 +1,17 @@
+{
+  "captured_utc": "2026-10-18T05:19:19.689479+00:00",
+  "files": {
+    "research_w3_common.py": "4c8b0ecc9ed440944e3e18b309e444a59e9cc88918d13c358647e31087fe1ba6",
+    "research_w3_teacher.py": "a63eb7c9e34af7c5de04e072b7c361cbb7e641b3465e3d62824fa683de1c84b0",
+    "research_w3_tabm.py": "d7515abb1246e3f666e778954506bbc1b9267ae6477a174eb79e0aed0099f8ff",
+    "research_w3_tabm_features.py": "f3d95aa66bf9c35ff5bec4d06b3065b5dd2dbc561f085d7fafa4c9bbcee73587",
+    "research_w3_queue.py": "7f16239d2ea397832fbfeb9c43e86f6e5e670267b73d1d4188ef885bdb01502b",
+    "research_w3_plan.json": "93fd72889a584270330d1c7815715afcec40f778b807d5dbdc6544a1a42cb8be",
+    "research_w3_submission_ledger.json": "6b5bc160a625c5a7af9f4c12e94a8b6766166ded81f857d0d13ae02185917966",
+    "research_w3_error_analysis.py": "5e228a74b170ac3167d29f8094793c73e63a018061c3fa96e0214f9e56ebad8d",
+    "research_w3_error_analysis.json": "66450b0348431a3ec0293143a6e242b42817592d942fb94393f464cf1ed4bcc1",
+    "research_submission_ledger.json": "3648fbd4ef1f00340f50dc10ed3481b39dab61685c6533d60a32333d8166f383"
+  },
+  "source_code": "pytabkit1.7.3 embedded TabM core; upstream https://github.com/yandex-research/tabm; no notebook execution; no external predictions",
+  "software_engineering_skill": "Unavailable in advertised local catalog and filename search; workflow continues with current task authorization and repository instructions."
+}

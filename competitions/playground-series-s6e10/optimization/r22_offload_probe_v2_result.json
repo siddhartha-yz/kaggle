@@ -1,0 +1,46 @@
+{
+  "status": "complete_no_quality_score",
+  "pid": 629765,
+  "no_quality_score": true,
+  "query_labels_used": false,
+  "allocator_cap_bytes": 778043392,
+  "gpu_process_ceiling_bytes": 1073741824,
+  "attempts": [
+    {
+      "context_rows": 16384,
+      "status": "passed_no_quality_score",
+      "fit_seconds": 1.0929214850038989,
+      "predict512_seconds": 0.11417118000099435,
+      "CPU_cache_bytes": 407568384,
+      "counters": {
+        "staged_cache_entries": 75,
+        "chunked_ff_calls": 87
+      },
+      "peak_allocated_bytes": 458778624,
+      "peak_reserved_bytes": 480247808,
+      "seconds": 1.207345790011459,
+      "peak_gpu_process_bytes": 675282944,
+      "peak_rss_bytes": 2868064256
+    },
+    {
+      "context_rows": 65536,
+      "status": "allocator_OOM",
+      "error_type": "OutOfMemoryError",
+      "seconds": 2.159227615004056
+    }
+  ],
+  "compatibility": {
+    "same_schedule_native_probability_error": 0.0,
+    "stock_auto_batch_bitwise_equivalence": false,
+    "A_B_A_error": 0.0,
+    "counters": {
+      "staged_cache_entries": 225,
+      "chunked_ff_calls": 261
+    },
+    "cache_devices": [
+      "cpu"
+    ]
+  },
+  "peak_gpu_process_bytes": 746586112,
+  "peak_rss_bytes": 3144880128
+}

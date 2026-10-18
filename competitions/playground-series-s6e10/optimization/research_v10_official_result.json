@@ -1,0 +1,20 @@
+{
+  "source": "ParentauthenticatedKagglebrowserreport",
+  "reported_utc": "2026-10-18T17:07:06.141228+00:00",
+  "rank_observation_time_separately_supplied": false,
+  "status": "Complete",
+  "candidate": "submission_conditional_probability_r21_v10.csv",
+  "sha256": "15a0a6d7032204ccf1165df5686af6214217b170979356da07a8a19638fc33b6",
+  "public_auc": 0.96104,
+  "previous_v7_public_auc": 0.96076,
+  "public_delta": 0.00028,
+  "rank": 715,
+  "ranked_teams": 2274,
+  "rank100_public_auc": 0.9619,
+  "gap_to_rank100": 0.00086,
+  "historical_submissions": 9,
+  "formal_current_round_used": 2,
+  "formal_current_round_limit": 2,
+  "remaining": 0,
+  "actual_top100_verified": false
+}

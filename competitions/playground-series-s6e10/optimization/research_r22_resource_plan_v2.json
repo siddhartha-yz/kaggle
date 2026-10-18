@@ -1,0 +1,37 @@
+{
+  "frozen_utc": "2026-10-18T17:21:33.592419+00:00",
+  "stage": "Hardware-only; no candidate model score, no baseline retraining or new submission",
+  "motivation": "PriorW3TabICL4096routedcontextsfailed;8192memoryfailed withoffloadFalse. Installedofficial2.2 hasCPUoffload, but nativebatchingreadsallfreeGPUmemory instead of742MiBprocessallowance;allKVcachesnormallyGPUresident. TestCPUcache/layerstaging+nativeCPUoutputs+process-cap-awarebatching+pointwiseFFNchunking, preservingattentionmath.",
+  "source": "https://github.com/soda-inria/tabicl",
+  "documentation": "OfficialREADME supportsCPU/diskoffloadbeyond100kcontext; accuracycandegrade. No claimofKaggleutility.",
+  "checkpoint_license": "BSD-3-Clause, locallycachedungatedofficialweights; no download/login/dependencychanges.",
+  "small_parity": "Canonicalfixedcol1,row128,icl1batchingand128rowFFchunk referencewithGPUKVcache vsidenticalexecutionwithCPUlayerstagedKVcache. Requireprobabilities<1e-5andA-B-A<1e-6. StockautobatchparityFAILED and is NOT claimedpassed.",
+  "sizing": "Nativeoneensemble/normnone, sameweights/no finetuning, uniformoutertraincontexts16384then65536;512queryrowsfromoutertrainexcludedfromcontexts. Noquerylabelsusedorscorescomputed. CPU6, allocator742MiB, totalownGPU1GiB,NVMLguard, RSS8GiB and availableRAM>=2GiB.",
+  "fixed_baseline": "Officialv10 .96104,715/2274 asparentreported; candidatev10OOF5+3cachedaudited. Anyfuturequalityroutewillfreezeafterresourceproof andcomparev10plusoldv7diagnostically; no new submissionauthority.",
+  "formal_used": 2,
+  "additional_submission_authorized": true,
+  "source_sha256": {
+    "research_r22_probe_v2.py": "56314f4892c9207be9cae3738e8b304b8f167b62d17039a6e77a2e3bb1f71bf3",
+    "research_r22_tabicl_offload.py": "bf9617de3176a222b8d574f8d815e0281e16a36b8e8549a39c56713788dad8ee",
+    "research_w3_tabicl_model.py": "f65ec3c8666be5966808dc6a59583caf4f21f0e1f55f64c5e89d4df1ac042e28"
+  },
+  "artifact_sha256": {
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "research_sources/tabicl/tabicl-classifier-v2-20260212.ckpt": "bdc7dbd5e4ff21f8f0456fcf90c6b7cdf72dbea960f2d05b19bec19f9b3d4ed0",
+    "research_artifacts/oof_v1/folds.npz": "cc42e77132e65e986651bc09581580d5dd0aaaac394b07c87358dbd0289fa688",
+    "research_artifacts/r22_parity_diagnostic_v2/result.json": "506b1b06ce8730b2d8f98a3b603681219ac0388715caf4f790c065c178dd28cf"
+  },
+  "diagnostic_evidence": {
+    "stock_cpu_outputs_error": 0.0,
+    "cap_only_native_stock_error": 0.0021437406539916992,
+    "fixed_schedule_native_vs_stock_error": 0.01146671175956726,
+    "same_schedule_CPUKV_vs_GPUKV_probability_error": 0.0,
+    "same_schedule_cache_value_error": 0.0,
+    "cause_interpretation": "ChangingAMPmicrobatchschedulechangesfloatingexecutionevenwithoutCPUcaches. CPUcachetransferitselfmatchesnativeGPUcacheexactlyundersameschedule; no stockbitwiseequivalenceclaimed. Futurequalitymustbefreshlyevaluatedunderfrozencanonicalexecution.",
+    "primary_reference": "https://docs.pytorch.org/docs/2.9/notes/numerical_accuracy.html"
+  },
+  "remaining_daily_quota": null,
+  "parent_only_submitter": true,
+  "goal_actual_public_rank_at_most": 500,
+  "actual_top500_verified": false
+}

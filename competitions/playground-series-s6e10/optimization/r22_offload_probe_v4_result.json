@@ -1,0 +1,40 @@
+{
+  "status": "complete_no_quality_score",
+  "pid": 630883,
+  "no_quality_score": true,
+  "query_labels_used": false,
+  "allocator_cap_bytes": 778043392,
+  "gpu_process_ceiling_bytes": 1073741824,
+  "attempts": [
+    {
+      "context_rows": 16384,
+      "status": "passed_no_quality_score",
+      "fit_seconds": 3.8361826420004945,
+      "predict512_seconds": 0.48586321900074836,
+      "CPU_cache_bytes": 1630273536,
+      "counters": {
+        "staged_cache_entries": 300,
+        "chunked_ff_calls": 348
+      },
+      "peak_allocated_bytes": 458778624,
+      "peak_reserved_bytes": 480247808,
+      "seconds": 4.322352065006271,
+      "peak_gpu_process_bytes": 687865856,
+      "peak_rss_bytes": 4546748416
+    }
+  ],
+  "compatibility": {
+    "same_schedule_native_probability_error": 0.0,
+    "stock_auto_batch_bitwise_equivalence": false,
+    "A_B_A_error": 0.0,
+    "counters": {
+      "staged_cache_entries": 900,
+      "chunked_ff_calls": 0
+    },
+    "cache_devices": [
+      "cpu"
+    ]
+  },
+  "peak_gpu_process_bytes": 687865856,
+  "peak_rss_bytes": 4546748416
+}

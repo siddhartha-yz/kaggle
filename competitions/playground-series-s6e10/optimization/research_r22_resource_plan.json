@@ -1,0 +1,25 @@
+{
+  "frozen_utc": "2026-10-18T17:13:51.818310+00:00",
+  "stage": "Hardware-only; no candidate model score, no baseline retraining or new submission",
+  "motivation": "PriorW3TabICL4096routedcontextsfailed;8192memoryfailed withoffloadFalse. Installedofficial2.2 hasCPUoffload, but nativebatchingreadsallfreeGPUmemory instead of742MiBprocessallowance;allKVcachesnormallyGPUresident. TestCPUcache/layerstaging+nativeCPUoutputs+process-cap-awarebatching+pointwiseFFNchunking, preservingattentionmath.",
+  "source": "https://github.com/soda-inria/tabicl",
+  "documentation": "OfficialREADME supportsCPU/diskoffloadbeyond100kcontext; accuracycandegrade. No claimofKaggleutility.",
+  "checkpoint_license": "BSD-3-Clause, locallycachedungatedofficialweights; no download/login/dependencychanges.",
+  "small_parity": "Native1024rowsoneensembleversusCPUoffload/cachestaging forced128rowFFNchunks; maxprobabilitydifference<1e-5, A-B-Acontextisolation<1e-6, allprojectedcachesCPU.",
+  "sizing": "Nativeoneensemble/normnone, sameweights/no finetuning, uniformoutertraincontexts16384then65536;512queryrowsfromoutertrainexcludedfromcontexts. Noquerylabelsusedorscorescomputed. CPU6, allocator742MiB, totalownGPU1GiB,NVMLguard, RSS8GiB and availableRAM>=2GiB.",
+  "fixed_baseline": "Officialv10 .96104,715/2274 asparentreported; candidatev10OOF5+3cachedaudited. Anyfuturequalityroutewillfreezeafterresourceproof andcomparev10plusoldv7diagnostically; no new submissionauthority.",
+  "formal_used": 2,
+  "remaining": 0,
+  "additional_submission_authorized": false,
+  "actual_top100_verified": false,
+  "source_sha256": {
+    "research_r22_probe.py": "288f377403911b256fb4453cf27f30477584a4d53be93b7f693ba8aaab22ecc8",
+    "research_r22_tabicl_offload.py": "79bc20df0d460efb6aced1550dc72ade69229bff608892bdf5959762287b7420",
+    "research_w3_tabicl_model.py": "f65ec3c8666be5966808dc6a59583caf4f21f0e1f55f64c5e89d4df1ac042e28"
+  },
+  "artifact_sha256": {
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "research_sources/tabicl/tabicl-classifier-v2-20260212.ckpt": "bdc7dbd5e4ff21f8f0456fcf90c6b7cdf72dbea960f2d05b19bec19f9b3d4ed0",
+    "research_artifacts/oof_v1/folds.npz": "cc42e77132e65e986651bc09581580d5dd0aaaac394b07c87358dbd0289fa688"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "updated_utc": "2026-10-18T17:14:43.014675+00:00",
+  "goal": "Actualpublicleaderboardrank<=500",
+  "rank_threshold": 500,
+  "authority": "Parentrelayedexplicitlatesthumaninstruction:\u76ee\u6807\u5b9a\u4f4e\u4e00\u70b9\uff0c\u524d500\u5c31\u884c\u3002",
+  "supersedes_previous_rank_threshold": 100,
+  "stop_when": "ActualauthenticatedKagglepublicrank<=500verified, then stop furtheriteration andreport. OfflineAUCdoesnotestablishsuccess.",
+  "latest_confirmed_rank": 715,
+  "latest_confirmed_public_auc": 0.96104,
+  "actual_top500_verified": false,
+  "formal_current_round_used": 2,
+  "formal_current_round_limit": 2,
+  "remaining_current_round": 0,
+  "additional_submission_authorized": true,
+  "parent_only_submitter": true,
+  "resources_unchanged": true,
+  "submission_policy": "HumanexplicitlyauthorizesqualifiednewversionswithinactualKaggledailyquota;parentverifiesquota and handlescloudbrowserupload/rank. No per-two-submissionconfirmation.",
+  "remaining_daily_quota": null,
+  "prior_artificial_round_limit_superseded": true
+}

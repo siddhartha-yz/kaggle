@@ -1,0 +1,16 @@
+{
+  "frozen_utc": "2026-10-18T14:56:30.794559+00:00",
+  "main_plan_sha256": "fa256e01aff12b1e1716b0f47a084d09d7ea8d36459635e169bef23ed3abe0ec",
+  "code_sha256": {
+    "research_r13_audit.py": "92133830d63de63ec24f5c1ef49b8c61ce529260068526e7939de38ddda507c5",
+    "research_r13_csv.py": "6b29c4b8131c026f669d04a637beaf9f63c6800e108f9e51c864d0852bd60123"
+  },
+  "gates": "Only5+3dual-baseline-qualified route may audit; audit checks counts exactly outertrain/dropnaFalse, TE means/categories, split membership, source hashes andCPU replay <=2e-6. Then only audited5native32 ensembles predict test and fixed .5v5+.5meanNN yields160memberCSV.",
+  "feature_width": 51,
+  "new_numeric_frequency_fields": 4,
+  "CPU_replay_tolerance": 2e-06,
+  "quality_at_freeze": "Fivefold still running; no outer scores inspected.",
+  "formal_used": 1,
+  "remaining": 1,
+  "parent_only_submitter": true
+}

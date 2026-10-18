@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-18T14:54:30.915654+00:00",
-  "status": "r12_rejected_r13_frozen_resource_passed",
+  "updated_utc": "2026-10-18T14:56:30.794559+00:00",
+  "status": "active_r13_numeric_frequency_fivefold",
   "confirmed_public_baseline": {
     "recorded_utc": "2026-10-18T12:41:59.978029+00:00",
     "source": "ParentauthenticatedKagglebrowserreport",
@@ -56,18 +56,23 @@
     "recommendation": "Holdlastformalopportunity;backuppointgainmuchsmallerthanpublicgap. ContinuecurrentmechanismratherthanassumingTop100."
   },
   "active_driver": {
-    "updated_utc": "2026-10-18T14:41:25.158312+00:00",
-    "status": "not_qualified",
-    "driver_pid": 543107,
+    "updated_utc": "2026-10-18T14:54:34.749643+00:00",
+    "status": "training",
+    "driver_pid": 552788,
     "formal_used": 1,
     "remaining": 1,
     "whole_top100_task_completed": false,
     "stage": "fivefold",
-    "active_training": false
+    "active_training": true
   },
   "current_training": {
-    "active_training": false,
-    "next_route": "R13four_numeric_frequencies"
+    "updated_utc": "2026-10-18T14:55:37.246745+00:00",
+    "status": "training",
+    "variant": "lean",
+    "stage": "fivefold",
+    "fold": 1,
+    "pid": 552789,
+    "active_training": true
   },
   "completed_r7_neural_members": 40,
   "total_fivefold_members": 40,
@@ -1600,5 +1605,6 @@
     "oof_sha256": "c93690581c33997ccf8dbf8ea63cac0d85f85373c87935e247eaf770ef1d29b5"
   },
   "r12_threefold_started": false,
-  "r12_CSV_generated": false
+  "r12_CSV_generated": false,
+  "r13_completed_folds": 1
 }

@@ -1,7 +1,8 @@
 {
-  "updated_utc": "2026-10-18T11:49:17.611661+00:00",
-  "status": "running_serial_stage",
+  "updated_utc": "2026-10-18T11:50:26.525283+00:00",
+  "status": "candidate_csv_ready_for_library_and_parent",
   "driver_pid": 482648,
-  "runner": "research_r4_csv.py",
-  "log": "research_r4_csv.log"
+  "result": "research_artifacts/r4_lean_cv_final/result.json",
+  "whole_top100_task_completed": false,
+  "new_formal_used": 0
 }

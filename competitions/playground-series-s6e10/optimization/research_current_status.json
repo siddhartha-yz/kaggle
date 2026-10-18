@@ -1,9 +1,9 @@
 {
-  "updated_utc": "2026-10-18T11:49:50.446920+00:00",
-  "task_status": "active_research_until_verified_actual_Top100",
+  "updated_utc": "2026-10-18T11:53:29.393603+00:00",
+  "task_status": "candidate_delivered_awaiting_parent_formal_submission_and_rank",
   "active_training": false,
   "current_route": "qualified_candidate_final_cv_inference",
-  "driver": "research_r4_driver.py",
+  "driver": null,
   "goal": "actual verified leaderboard Top100; no automatic oldwindow cutoff",
   "plan": "research_r4_plan.json",
   "previous_W3_results": "31 primaryscreens+1trainingonly; threeprimarypasses allfailedconfirmation",
@@ -36,14 +36,8 @@
   "local_browser_blocker": "CUA iab unavailable; web fetchedKagglepagesempty. Do not locallylogin/acceptterms.",
   "child_not_closing_task_after_failedroute": true,
   "state": {
-    "updated_utc": "2026-10-18T11:42:33.079516+00:00",
-    "status": "training",
-    "route": "lean_realmlp",
-    "fold": 0,
-    "member": 4,
-    "pid": 487615,
-    "active_training": true,
-    "plan": "research_r4_plan.json"
+    "local_stage": "audited_library_csv_ready",
+    "whole_top100_task_completed": false
   },
   "final_inference_protocol": "frozen5foldCV40membertestmean;noextrafit;onlyafterbothreplicationspass",
   "final_inference_plan": "research_r4_final_inference_plan.json",
@@ -134,14 +128,14 @@
   },
   "phase": "fivefold_passed_fresh_threefold_refitting",
   "no_new_formal_submission": true,
-  "active_child_driver": "research_r4_csv.py",
+  "active_child_driver": null,
   "driver_state": "research_r4_driver_state.json",
   "checkpoint": "research_r4_actual_checkpoint.json",
   "baseline_components_complete": 15,
   "baseline_components_total": 15,
   "neural_replication_complete": 24,
   "neural_replication_total": 24,
-  "active_prediction": true,
+  "active_prediction": false,
   "R4_threefold_result": {
     "pooled": {
       "baseline_auc": 0.9609913470135194,
@@ -205,5 +199,37 @@
     "gpu_process_peak_bytes": 815792128,
     "oof_sha256": "8bc1cecbca39f6cf540c17d0891f8d699a69adeed0afbb3d9dfbd6b5e7f07fc0"
   },
-  "formal_new_used": 0
+  "formal_new_used": 0,
+  "pending_candidate": {
+    "status": "complete",
+    "completed_utc": "2026-10-18T11:50:25.746505+00:00",
+    "csv": "submission_lean_realmlp_r4_cv_v7.csv",
+    "rows": 299844,
+    "columns": [
+      "id",
+      "satisfaction"
+    ],
+    "sha256": "0ab4fe851d7677dfb1ddb0714e2c1a2f74b3f7e194d189ca6a92136a7f68c76f",
+    "bytes": 8205548,
+    "positive_class": true,
+    "members": 40,
+    "formula": ".75*v5_full+.25*mean(5folds x8independent leanNN)",
+    "no_test_labels_used": true,
+    "no_test_fitted_statistics": true,
+    "old_v6_reconstruction_error": 0.0,
+    "csv_roundtrip_max_error": 2.220446049250313e-16,
+    "gpu_process_peak_bytes": 455081984,
+    "new_formal_submissions": 0,
+    "formal_total_limit": 2,
+    "parent_only_submitter": true,
+    "not_actual_leaderboard_confirmation": true,
+    "plan_sha256": "321bf8e63e9a17dfa55214851d7e1a32510904259d1eaaca452f65a2a8cd9f7c"
+  },
+  "library_saved": true,
+  "library_exact_bytes_verified": true,
+  "delivery_audit": "research_r4_delivery_audit.json",
+  "private_library_receipt": "research_r4_csv_library_receipt.json",
+  "formal_new_limit": 2,
+  "actual_top100_verified": false,
+  "next_action": "Parent-onlyKaggleformaldecision/upload andactualrankreceipt; continueoptimizationifrank>100."
 }

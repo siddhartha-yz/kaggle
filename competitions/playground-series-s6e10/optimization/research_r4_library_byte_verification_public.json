@@ -1,0 +1,9 @@
+{
+  "verified_utc": "2026-10-18T11:52:07.348449+00:00",
+  "library_file_name": "submission_lean_realmlp_r4_cv_v7.csv",
+  "local_sha256": "0ab4fe851d7677dfb1ddb0714e2c1a2f74b3f7e194d189ca6a92136a7f68c76f",
+  "library_materialized_sha256": "0ab4fe851d7677dfb1ddb0714e2c1a2f74b3f7e194d189ca6a92136a7f68c76f",
+  "local_bytes": 8205548,
+  "library_materialized_bytes": 8205548,
+  "status": "passed_exact_byte_identity"
+}

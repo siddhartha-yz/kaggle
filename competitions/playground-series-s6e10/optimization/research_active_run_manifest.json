@@ -1,9 +1,9 @@
 {
-  "updated_utc": "2026-10-18T11:42:51.546141+00:00",
-  "phase": "fresh_complete_threefold_refitting",
+  "updated_utc": "2026-10-18T11:53:29.393603+00:00",
+  "phase": "audited_csv_saved_and_byte_verified_in_library",
   "current_window": "research_r4_plan.json",
   "budget": "research_w3_submission_ledger.json",
-  "active_training": true,
+  "active_training": false,
   "confirmed_best": {
     "candidate": "submission_realmlp_value_v6.csv",
     "public_auc": 0.96058,
@@ -12,15 +12,15 @@
     "observed_utc": "2026-10-18T04:00:00+00:00"
   },
   "recovery": "Inspect saved per-route files, logs and live processes before restart. Serial six CPU threads, 1GiB total process GPU ceiling and 778043392 byte allocator cap.",
-  "driver": "research_r4_driver.py",
+  "driver": null,
   "state": "research_r4_state.json",
   "resource_override": "research_w3_resource_override.json",
-  "status": "active_research_until_verified_actual_Top100",
+  "status": "awaiting_parent_submission_and_rank_receipt",
   "outcome": null,
   "completion": null,
   "last_exec_session": null,
   "last_log": "research_w3_tabicl_primary.log",
-  "active_log": "research_r4_lean_replication3.log",
+  "active_log": null,
   "last_completed_states": [
     "research_w3_phase2_state.json",
     "research_w3_phase3_state.json"
@@ -29,6 +29,8 @@
   "latest_checkpoint": "research_current_status.json",
   "task_status": "resumed_active_research",
   "original_deadline_superseded_by_explicit_top100_goal": true,
-  "active_child_driver": "research_r4_lean_replication3.py",
-  "driver_state": "research_r4_driver_state.json"
+  "active_child_driver": null,
+  "driver_state": "research_r4_driver_state.json",
+  "active_prediction": false,
+  "whole_top100_task_completed": false
 }

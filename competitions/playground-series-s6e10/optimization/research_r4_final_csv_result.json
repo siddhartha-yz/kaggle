@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-10-18T11:50:25.746505+00:00",
+  "csv": "submission_lean_realmlp_r4_cv_v7.csv",
+  "rows": 299844,
+  "columns": [
+    "id",
+    "satisfaction"
+  ],
+  "sha256": "0ab4fe851d7677dfb1ddb0714e2c1a2f74b3f7e194d189ca6a92136a7f68c76f",
+  "bytes": 8205548,
+  "positive_class": true,
+  "members": 40,
+  "formula": ".75*v5_full+.25*mean(5folds x8independent leanNN)",
+  "no_test_labels_used": true,
+  "no_test_fitted_statistics": true,
+  "old_v6_reconstruction_error": 0.0,
+  "csv_roundtrip_max_error": 2.220446049250313e-16,
+  "gpu_process_peak_bytes": 455081984,
+  "new_formal_submissions": 0,
+  "formal_total_limit": 2,
+  "parent_only_submitter": true,
+  "not_actual_leaderboard_confirmation": true,
+  "plan_sha256": "321bf8e63e9a17dfa55214851d7e1a32510904259d1eaaca452f65a2a8cd9f7c"
+}

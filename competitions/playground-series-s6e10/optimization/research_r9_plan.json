@@ -1,0 +1,59 @@
+{
+  "frozen_utc": "2026-10-18T14:03:30.322127+00:00",
+  "mechanism": "A probabilistic source-exemplar teacher, weighted by rare exact agreement under a field-copy/null model, addresses observed source joint retention beyond within-segment independent resampling. This is a hypothesis; it does not establish the real synthesis mechanism.",
+  "novelty": "Previous source nearest-neighbor normalized-L1 averages and domain-density/covariate PMI failed. Here the weights are estimated by unsupervised EM with per-field background probabilities, a null component and all same-distance source rows; no nearest-k or uniform label average.",
+  "diagnostic_sha256": "0c5baa27859c5a3c2c7db4b990ab9f49a47328b827337a508aa4340260ff2ade",
+  "source_data_policy": "Same audited CC0 source129859; exclude21 exact matches to any official train/test feature vector regardless of labels. No new data, dependencies or credentials. Source target enters posterior teacher only after matching weights fit on outer-training/source covariates. Official targets only fit main supervised LGB.",
+  "EM": {
+    "sample_rows": 100000,
+    "iterations": 10,
+    "seed": 20261026,
+    "background_conditioning": "FlightDistance; count smoothing20 toward global Laplace.5 probabilities, fitted on outer training only",
+    "initial_field_copy_rate": 0.3,
+    "initial_link_prior": 0.5,
+    "bounds": [
+      0.02,
+      0.98
+    ],
+    "MAP_prior": "independentBeta(2,2) for copy rates and link prior",
+    "source_candidates": "ALL safe original rows at same FlightDistance, no cap/truncation",
+    "inference_batch_rows": 20000
+  },
+  "main_model": "Exactly existing LGB639: lr.04 leaves63 minchild150 lambda10 maxbin255 seed42 CPU6; no early stopping or tuning. Existing57 audited fields plus7 teacher/confidence/evidence fields=64.",
+  "blend": "Frozen private v8 + (30/128)*(newLGB-oldLGB). Leaves all other tree/neural components and their weights unchanged.",
+  "gates": "One prospective contrast. Complete fivefold before scoring; both paired conditional95% lower and corrected-resampled-t lower(alpha.025) must be positive versus privatev8 AND officialv7. Then same fixed recipe on freshly fitted threefold with existing matched baseline3. No interim quality scores, no every-fold-positive rule or arbitrary minimum delta.",
+  "cpu_threads": 6,
+  "GPU_used": false,
+  "paid_resources": false,
+  "peak_rss_ceiling_bytes": 8589934592,
+  "per_fit_timeout_seconds": 900,
+  "probe_summary": {
+    "status": "passed_no_quality_score",
+    "seconds": 54.89598373499757,
+    "peak_rss_bytes": 1620889600,
+    "fit_summary": {
+      "train_rows": 559708,
+      "em_rows": 100000,
+      "source_rows": 129859,
+      "em_pairs": 16038514,
+      "official_target_used": false,
+      "source_target_used_for_EM": false
+    }
+  },
+  "tests": "Synthetic generative recovery, monotonic MAP objective, label-flip complementarity/unchanged matching confidence, batch/permutation invariance and unknown-distance fallback passed.",
+  "final_inference": "Only after dual5+3 gates and independent leakage audit: fit one full officialtrain LGB639 with fulltrain-only EM/backgrounds, predict test, replace only30/128 LGB coefficient in audited v8 CSV; independently reconstruct all existing full component weights, check IDs/order/schema/True-positive/probability range/hash, save Library CSV for parent. No local official submissions.",
+  "limitations": "All official validation labels have historical/adaptive reuse. Conditional bounds do not account for that selection. Current actual public v7.96076 rank809/2243 vs rank100.96190 from parent snapshot; actual Top100 unverified.",
+  "formal_used": 1,
+  "formal_remaining": 1,
+  "parent_only_submitter": true,
+  "source_sha256": {
+    "research_r9_linkage_features.py": "1d50df842ff20c7eac7bdea059f9e25df774c63bfe55ffb5eeac52e8b486ba18",
+    "research_r9_model_features.py": "71ab7db82cc1c824be604a9a87b4d2234c9441d788c0f404314e41a413c4167d",
+    "research_r9_worker.py": "8f94017d4bbe825c2b4b178ddf9e22478aca7f433c795a669da28ad1548c30ac",
+    "research_r9_probe.py": "dc6e30a80722e5c384efb70facee02e7d5dfc4f9625232d8619dcc5746b64f40",
+    "test_research_r9_linkage.py": "14bfa089c70855086aa232b8268def06dd8572c1d63d1b71ebd501a2d522fe0e",
+    "research_r5_auto_te.py": "52485ed151e27f681d0447c0a3d73783b68dfe64c8683c1f33e2656f3fc44285",
+    "research_original.py": "be823bb28166f943ca247ece8616c1b11fad15da96978006869b29e359df1e3e",
+    "research_features.py": "6c029528249d6772a958b29c46f4f095da9f91136c2721eb2a4d268f360fcfe9"
+  }
+}

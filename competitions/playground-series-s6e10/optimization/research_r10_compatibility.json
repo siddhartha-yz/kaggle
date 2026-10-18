@@ -1,0 +1,95 @@
+{
+  "status": "passed_random_label_probe",
+  "started_utc": "2026-10-18T14:17:14.310749+00:00",
+  "official_outer_quality_scored": false,
+  "runner_sha256": "113964e262cbaa7507507598460647b1318a60bd8f473c13901d1109e94c0e5a",
+  "adapter_sha256": "c5f57e24f826dfc0aa2a54e8fb0c1e1fdaba343345857bfb5c033e659ef47a22",
+  "config": {
+    "device": "cuda:0",
+    "n_threads": 6,
+    "n_cv": 1,
+    "n_refit": 0,
+    "n_repeats": 1,
+    "val_fraction": 0.0,
+    "n_epochs": 3,
+    "batch_size": 256,
+    "use_early_stopping": false,
+    "random_state": 42,
+    "verbosity": 0,
+    "predict_batch_size": 1024,
+    "use_ls": true,
+    "lr": 0.053,
+    "wd": 0.015,
+    "sq_mom": 0.988,
+    "lr_sched": "flat_anneal",
+    "wd_sched": "cos_log_15",
+    "first_layer_lr_factor": 0.25,
+    "embedding_size": 5,
+    "max_one_hot_cat_size": 18,
+    "hidden_sizes": [
+      512,
+      256,
+      128
+    ],
+    "act": "silu",
+    "p_drop": 0.05,
+    "p_drop_sched": "invsqrtp1e-3",
+    "plr_hidden_1": 16,
+    "plr_hidden_2": 8,
+    "plr_act_name": "gelu",
+    "plr_lr_factor": 0.1151,
+    "plr_sigma": 2.33,
+    "ls_eps": 0.01,
+    "ls_eps_sched": "sqrt_cos",
+    "add_front_scale": false,
+    "bias_init_mode": "neg-uniform-dynamic-2",
+    "tfms": [
+      "one_hot",
+      "median_center",
+      "robust_scale",
+      "smooth_clip",
+      "embedding",
+      "l2_normalize"
+    ],
+    "n_ens": 2,
+    "val_metric_name": "1-auc_ovr"
+  },
+  "fit_rows": 21600,
+  "validation_rows": 2400,
+  "epochs": [
+    {
+      "epoch": 1,
+      "validation_data_device": "cpu",
+      "validation_labels_device": "cuda:0",
+      "model_devices": [
+        "cuda:0"
+      ]
+    },
+    {
+      "epoch": 2,
+      "validation_data_device": "cpu",
+      "validation_labels_device": "cuda:0",
+      "model_devices": [
+        "cuda:0"
+      ]
+    },
+    {
+      "epoch": 3,
+      "validation_data_device": "cpu",
+      "validation_labels_device": "cuda:0",
+      "model_devices": [
+        "cuda:0"
+      ]
+    }
+  ],
+  "selected_checkpoint_state_max_error": 0.0,
+  "checkpoint_metric_replay_error": 0.0,
+  "CPU_API_vs_CUDA_validation_random_label_AUC_difference": 6.755157196947081e-07,
+  "reload_prediction_max_error": 0.0,
+  "completed_utc": "2026-10-18T14:17:16.408002+00:00",
+  "seconds": 1.5556121209956473,
+  "selected_probe_epoch": 1,
+  "peak_gpu_process_bytes": 297795584,
+  "peak_allocated_bytes": 51819520,
+  "peak_rss_bytes": 2152095744
+}

@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "variant": "softsource",
+  "split": "primary",
+  "vs_v6": {
+    "baseline_auc": 0.9603020930463941,
+    "candidate_auc": 0.9602844677848885,
+    "delta_auc": -1.7625261505616052e-05,
+    "paired_se": 2.97761879259126e-05,
+    "conditional_95pct_ci": [
+      -7.598658984040475e-05,
+      4.0736066829172646e-05
+    ],
+    "candidate_logloss": 0.22530816996770314
+  },
+  "fold_comparisons": [
+    {
+      "baseline_auc": 0.9603020930463941,
+      "candidate_auc": 0.9602844677848885,
+      "delta_auc": -1.7625261505616052e-05,
+      "paired_se": 2.97761879259126e-05,
+      "conditional_95pct_ci": [
+        -7.598658984040475e-05,
+        4.0736066829172646e-05
+      ],
+      "candidate_logloss": 0.22530816996770314
+    }
+  ],
+  "eligible_for_next": false,
+  "completed_utc": "2026-10-18T06:17:08.144396+00:00"
+}

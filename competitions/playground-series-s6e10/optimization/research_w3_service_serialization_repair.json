@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-18T06:41:00.337561+00:00",
+  "reason": "Producer serializedPandasIndexcolumnsasobject;strictnonpickleloaderrefusedbeforeanysyntheticmodeltraining.",
+  "method": "Readonlynumericid/valuesarrayswithallow_pickleFalse;reconstruct11controlledcolumnnamesasUnicode;preserveoriginalarchives;no modelrefit.",
+  "files": {
+    "train": {
+      "old_sha256": "48d322c681b738d89c008fb4275ce2cb0753ecf63bff148a15205c19832be381",
+      "new_sha256": "431f720763294085e10f5d27f756aa3f4e6938aaa7378c4a772dfca7dca1ce89",
+      "numeric_arrays_bitwise_unchanged": true
+    },
+    "test": {
+      "old_sha256": "3d01d1942ef08d1e0201a548038516b421d5c326c72040d7b2a9ef92b53390be",
+      "new_sha256": "623ad95518417db2ba3b40fb810459a40995fc7bfbceb24bc032b3ec986c9be0",
+      "numeric_arrays_bitwise_unchanged": true
+    }
+  }
+}

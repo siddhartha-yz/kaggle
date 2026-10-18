@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "variant": "class",
+  "split": "primary",
+  "vs_v6": {
+    "baseline_auc": 0.9603020930463941,
+    "candidate_auc": 0.9603026761750928,
+    "delta_auc": 5.831286986612838e-07,
+    "paired_se": 4.944802982358007e-05,
+    "conditional_95pct_ci": [
+      -9.633500975555566e-05,
+      9.750126715287823e-05
+    ],
+    "candidate_logloss": 0.22526884510753326
+  },
+  "fold_comparisons": [
+    {
+      "baseline_auc": 0.9603020930463941,
+      "candidate_auc": 0.9603026761750928,
+      "delta_auc": 5.831286986612838e-07,
+      "paired_se": 4.944802982358007e-05,
+      "conditional_95pct_ci": [
+        -9.633500975555566e-05,
+        9.750126715287823e-05
+      ],
+      "candidate_logloss": 0.22526884510753326
+    }
+  ],
+  "eligible_for_next": false,
+  "completed_utc": "2026-10-18T06:03:49.153256+00:00"
+}

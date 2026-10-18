@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "variant": "covshift",
+  "split": "primary",
+  "vs_v6": {
+    "baseline_auc": 0.9603020930463941,
+    "candidate_auc": 0.9602588419893583,
+    "delta_auc": -4.325105703584242e-05,
+    "paired_se": 2.996703029322881e-05,
+    "conditional_95pct_ci": [
+      -0.00010198643641057088,
+      1.5484322338886048e-05
+    ],
+    "candidate_logloss": 0.22531696810494986
+  },
+  "fold_comparisons": [
+    {
+      "baseline_auc": 0.9603020930463941,
+      "candidate_auc": 0.9602588419893583,
+      "delta_auc": -4.325105703584242e-05,
+      "paired_se": 2.996703029322881e-05,
+      "conditional_95pct_ci": [
+        -0.00010198643641057088,
+        1.5484322338886048e-05
+      ],
+      "candidate_logloss": 0.22531696810494986
+    }
+  ],
+  "eligible_for_next": false,
+  "completed_utc": "2026-10-18T06:13:37.044541+00:00"
+}

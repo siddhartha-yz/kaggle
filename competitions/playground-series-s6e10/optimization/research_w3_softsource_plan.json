@@ -1,0 +1,28 @@
+{
+  "frozen_utc": "2026-10-18T06:16:39.437733+00:00",
+  "hypothesis": "Uniform/covariateweightedjointoriginaltrainingbothfailed;conditionaltargetresponsemaydifferfromsourceGT,notjustinputdensity. Adaptonlyoriginalauxiliarytargetsusingtraining-onlyresponseconversionanchoredbyindependentoriginalteacher. Do notmodifyofficialsyntheticlabels.",
+  "anchors": {
+    "original_teacher_probability_low": 0.05,
+    "high": 0.95,
+    "minimum_global_anchor_rows": 500,
+    "global_alpha": "mean(syntheticY | teacher<.05)",
+    "global_beta": "mean(1-syntheticY | teacher>.95)",
+    "groups": [
+      "Class",
+      "Type of Travel"
+    ],
+    "group_shrinkage_to_global_pseudocount": 200,
+    "alpha_beta_bounds": [
+      0.001,
+      0.45
+    ]
+  },
+  "adapted_source_target": "alpha_group+(1-alpha_group-beta_group)*originalTrueLabel;fitconversiononlysyntheticoutertrain,sourceGTindependent;sourceCSVandallofficiallabelsunchanged",
+  "learner": "SameLGB639/63/.04/minchild150/L2=10/seed42exceptobjectivecross_entropywithLGBMRegressorpreservingfractional[0,1]targets;notLGBMClassifierlabelencoding. Synthetictrainingtargetsexactoriginal0/1. Sourceweight.25fixed.",
+  "features": "Sameasuniformaugmentation,sourceaux5cross-fittedinsideoriginalonly;trainonlysyntheticDistanceStats;no newsourcefeaturesorlossweightgrid",
+  "combination": "v6+(45/128)*(new_lgb-old_lgb)",
+  "gates": "Sameprimary>=.0001lower>0;confirmationlower>0;OOFeveryfoldpositivepooled>=.0002lower>0",
+  "resources": "CPU6serial,noGPU;1GiBGPUceilingremains;10:10start10:45hard11:06deadline,parentonly0of2formal",
+  "reference": "https://lightgbm.readthedocs.io/en/v4.6.0/Parameters.html#objective",
+  "caution": "Responseconversionisahypothesis,notproofoflabelnoise. Teachererrorscanbiasanchors. Allpartitionsreused;conditionalCIsdonotremoveselectionbias."
+}

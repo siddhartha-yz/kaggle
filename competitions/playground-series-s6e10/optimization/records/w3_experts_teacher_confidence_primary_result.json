@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "variant": "teacher_confidence",
+  "split": "primary",
+  "vs_v6": {
+    "baseline_auc": 0.9603020930463941,
+    "candidate_auc": 0.9602349140543579,
+    "delta_auc": -6.717899203623201e-05,
+    "paired_se": 6.171853605609789e-05,
+    "conditional_95pct_ci": [
+      -0.00018814732270618388,
+      5.378933863371984e-05
+    ],
+    "candidate_logloss": 0.2253498137001605
+  },
+  "fold_comparisons": [
+    {
+      "baseline_auc": 0.9603020930463941,
+      "candidate_auc": 0.9602349140543579,
+      "delta_auc": -6.717899203623201e-05,
+      "paired_se": 6.171853605609789e-05,
+      "conditional_95pct_ci": [
+        -0.00018814732270618388,
+        5.378933863371984e-05
+      ],
+      "candidate_logloss": 0.2253498137001605
+    }
+  ],
+  "eligible_for_next": false,
+  "completed_utc": "2026-10-18T06:28:47.854136+00:00"
+}

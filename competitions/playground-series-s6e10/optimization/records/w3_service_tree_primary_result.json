@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "variant": "latent_service",
+  "split": "primary",
+  "vs_v6": {
+    "baseline_auc": 0.9603020930463941,
+    "candidate_auc": 0.9603153131823704,
+    "delta_auc": 1.3220135976266256e-05,
+    "paired_se": 4.263184593384592e-05,
+    "conditional_95pct_ci": [
+      -7.033828205407175e-05,
+      9.677855400660426e-05
+    ],
+    "candidate_logloss": 0.22513259237652808
+  },
+  "fold_comparisons": [
+    {
+      "baseline_auc": 0.9603020930463941,
+      "candidate_auc": 0.9603153131823704,
+      "delta_auc": 1.3220135976266256e-05,
+      "paired_se": 4.263184593384592e-05,
+      "conditional_95pct_ci": [
+        -7.033828205407175e-05,
+        9.677855400660426e-05
+      ],
+      "candidate_logloss": 0.22513259237652808
+    }
+  ],
+  "eligible_for_next": false,
+  "completed_utc": "2026-10-18T06:41:26.696273+00:00"
+}

@@ -5029,5 +5029,14 @@
     "csv_generated": false,
     "source_audit_passed": true
   },
-  "r46_plan_sha256": "1ab6671b9307cb66bf149f8cbb330ffdb52e9c64bb3163ffe2153ced5324c650"
+  "r46_plan_sha256": "1ab6671b9307cb66bf149f8cbb330ffdb52e9c64bb3163ffe2153ced5324c650",
+  "r46_result": {
+    "file": "research_r46_result.json",
+    "sha256": "b27ad39f1ac6c78f4e55fd19d4fbdffe5976bead0f56c35b35943f66889966c0",
+    "status": "not_qualified",
+    "fivefold_delta": 3.3316188112308964e-05,
+    "threefold_delta": -4.124961579088371e-06,
+    "csv_generated": false
+  },
+  "r47_plan_sha256": "e5c877a1e98908b71600869ae7896427585cacec7898ae5886190e00c9357220"
 }

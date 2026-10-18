@@ -1,0 +1,49 @@
+{
+  "frozen_utc": "2026-10-18T19:56:05.238326+00:00",
+  "purpose": "One exact-math FFN output allocation repair: parity8192 thenFRESH32k hardwareonly. No officialSATread/qualityevaluation.",
+  "mechanism": "R35provesallocatorchangealoneinsufficient. ReplaceR22allchunkoutputslist+cat withonepreallocatedoutputandcopy SAME4096-rowGEMMs,sameFP16,sameordering;saveonefullsequencecopy. KeepQKV/attention/cache/math unchanged. First requireold/newprobabilityEXACT0andABA0at8192ctx48features, thenfresh32kprobe.",
+  "context_sizes_descending_fresh_process_only": [
+    32768
+  ],
+  "decision": "Ifparityfailsor32kOOM/resourceguard/timingestimate>7200s stopTabICLroute. No16kfallback,no64kprojectionrewrite,noquality-basedchoices.",
+  "resources": {
+    "cpu_threads": 6,
+    "gpu_allocator_bytes": 778043392,
+    "gpu_process_ceiling_bytes": 1073741824,
+    "RSS_ceiling_bytes": 8589934592,
+    "available_RAM_min_bytes": 2147483648,
+    "paid": false,
+    "serial": true
+  },
+  "adapter": "ExistingR22CPUcache/layerstaging,fixedcol1,row128,icl1,FFchunk4096,ampFP16. Stockauto-batchbitwiseequivalenceNOTclaimed. PriorfixedscheduleGPUKVvsCPUKVparity0,ABA0. New48fieldsnewqualityrecipewillbefrozenonlyafterhardwareproof.",
+  "remaining_daily_UI_quota_observed": 6,
+  "parent_only_submitter": true,
+  "actual_top500_verified": false,
+  "source_sha256": {
+    "research_r34_features.py": "c0b1466630927a8c8c51bbec5af6ad1c673e98621f6ad0ceeb862de9d7d70dc4",
+    "research_r22_tabicl_offload.py": "bf9617de3176a222b8d574f8d815e0281e16a36b8e8549a39c56713788dad8ee",
+    "research_w3_tabicl_model.py": "f65ec3c8666be5966808dc6a59583caf4f21f0e1f55f64c5e89d4df1ac042e28",
+    "research_r23_loader.py": "b21b6210be0b72350d63942e7c86b1ad872165d55a4e2c66fcdab3a059a8b64a",
+    "research_r23_guard.py": "13e4de70ccb00335a65bd13c1acdd6b00cf38b7c218a4f9506393258e23ed270",
+    "research_r36_probe.py": "17d18774d7bfb8a3fe8caa03d7f4e282b19e6aa0a9d73f9515c368b7b9c930de",
+    "research_r36_memory.py": "036da15797ce47a5327ee7329c90914817c93c27d4350b18555f36e4c8e363eb",
+    "research_r36_parity.py": "222b73a1c53d470ef722738153a993cffc00b7975d10a63cff966ce3aaa0511d"
+  },
+  "artifact_sha256": {
+    "research_r32_result.json": "49321db8bc8ad0b3cfe2f399b08f1cee9a596550eeec387b63047cd7126d97c0",
+    "research_r33_result.json": "d87a6ce3437550a948cdcb453f4dd1f668b1414cb89b1c63e9915f32e2012400",
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "research_sources/tabicl/tabicl-classifier-v2-20260212.ckpt": "bdc7dbd5e4ff21f8f0456fcf90c6b7cdf72dbea960f2d05b19bec19f9b3d4ed0",
+    "research_artifacts/r22_offload_probe_v4/result.json": "b133698f7157df5377ed91b23a9d802bc606c0afa1437fa71221b2b0d7f22bb6",
+    "research_artifacts/r20_aux_officialcb/train_features.npz": "453272cc42fda45ad6708b81460fbee023d58372f6c812bebdd0c829f4136651",
+    "research_artifacts/r21_conditional_officialcb/train_features.npz": "a84aa864037d83224699765a7b6d69beb2861f9fa16c61b67dc324d71f121a95",
+    "research_r21_pre_inference_audit.json": "9bf51d44df4a0b2cac2ca32ba6818fa5a59d10de1d5a4cdd754f4ccc6a599db9",
+    "research_r34_result.json": "45da52fbddcaac4b138e37d10ab26765750e2f0fd7c263c28fcbdf77b6d1808d",
+    "research_r34_resource_plan.json": "cef16465222091e9857f851890d01c3e50b0bcf5a1f0a4d1a885f5f736fef676",
+    "research_r35_result.json": "1bca099513f811bc0a78c68fecdfe48354f5c835a2701c887a1e4e321e0a81f6",
+    "research_r35_resource_plan.json": "bffd4b9903b9bfda268398834db0e9c60de159b4d1df98c028eb023914b80178"
+  },
+  "allocator_env": {
+    "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True"
+  }
+}

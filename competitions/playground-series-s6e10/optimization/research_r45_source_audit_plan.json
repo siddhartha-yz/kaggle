@@ -1,0 +1,33 @@
+{
+  "frozen_utc": "2026-10-18T21:26:52.969535+00:00",
+  "audit_source_sha256": "31e40b7bc8091380837c64df8bcbf58a8f77fc1993f9e718a851ff8562585836",
+  "input_sha256": {
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "data/test.csv": "ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6",
+    "research_r44_plan.json": "7d45cb3eead3c2ee032be6ebca4531678bced245ebe08f3c153ccef20e5694ce",
+    "research_r44_source.py": "3be9d05d97419099c7b9c8d2389c8b4d22e1e3f69232055ee6a51cc558d1a3ca",
+    "research_r44_teacher.py": "572ec5dd71ce8090c7b63c610a7e492c6fde1b5357af2148ec09c26b7bd91ac4",
+    "research_r44_source_provenance.json": "5f9e182f76a5325574c5af045a44d9263b443b3833ec79adc1552de204cf39a9",
+    "research_r45_plan.json": "897c282ca04bbb993c21dc5134914ba5454cd9bcbcba85fca4fdc9b56c1fe3f5",
+    "research_r45_source_metadata_recheck.json": "8ffcddea990c0586ce4e30c0e43e693b9466e8312e3f5731a4cb6377c7bbed5a",
+    "research_sources/invistico_candidate/public_metadata.json": "6dc47d4ca100e54f44661c4ee1b165472c1b3f94ef95f57cdd9dc56dbc3cf480",
+    "research_sources/invistico_candidate/download.json": "2d2dc10fab06d5b3f6f145ea8a9a572e1e3f63ede829a0d26f651904f5c43b82",
+    "research_sources/invistico_candidate/inspection.json": "7fb042939762f08eebbf7bde4895c47cf563af9d0a89f94df8985590721790b9",
+    "research_sources/invistico_candidate/safe_mask.npy": "715d1b3987844328e330b88e809afb1ffbceb24969835b9b3ab7a54d276b4d77",
+    "research_sources/invistico_candidate/Invistico_Airline.csv": "584f8e338d189117f1c8f8c2ee8fb0b5d1d6d23ff5df67417272e8ee360da7a2",
+    "research_sources/invistico_candidate/official_version1.zip": "a2cb3436e0e8ddc0b3a111effcda0b29c2fb36fde0fad7da64fa8ddf698f4aa2",
+    "research_artifacts/r44_invistico_teacher/result.json": "bc46101e0bf811bc19dace6c0138c786a8fafd420f0d82ead29d197efc230eea",
+    "research_artifacts/r44_invistico_teacher/selection.json": "2c9be619d8ccfe93b5b75a1d88f601202ea770b1e3b3888003ab11f482a20e34",
+    "research_artifacts/r44_invistico_teacher/source_split.npz": "912a0b399a352cd3881325b17d186833ccc56587319fc553a446996ddf5f3514",
+    "research_artifacts/r44_invistico_teacher/selection_transformer.joblib": "642b12ef562c77861a2b48de03cebcdbb51cf88a9d2afa3ff101e40278b2ae10",
+    "research_artifacts/r44_invistico_teacher/selection_model.txt": "83ce11ff944162aa97feb4104b224177dd26f460dc8bcfa721d57b785de10da6",
+    "research_artifacts/r44_invistico_teacher/transformer.joblib": "0f024d37d19125afa68d509a172219732c22fadfa0d98dab964bd074764a2627",
+    "research_artifacts/r44_invistico_teacher/model.txt": "2fa877e0f3402fe0149b8c82179a30b99ef6fbcc98551982a2d785cb8f39089b",
+    "research_artifacts/r44_invistico_teacher/train_features.npz": "5e1b72d000581ba8e6a41bf0b3ef5e5083f98d270718a8c91cc510440eba420d",
+    "research_artifacts/r44_invistico_teacher/test_features.npz": "0f701a09ae67d85835882f789101fe19b0c5dcaa3d3f7f1e6773c3f153246e53"
+  },
+  "official_targets_may_be_parsed": false,
+  "independent_canonicalization_and_value_checks": true,
+  "performance_qualification": false,
+  "execute_only_without_concurrent_model_training": true
+}

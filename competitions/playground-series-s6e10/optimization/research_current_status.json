@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-18T14:06:35.656359+00:00",
+  "updated_utc": "2026-10-18T14:11:11.612109+00:00",
   "status": "active_r9_linkage_fivefold",
   "confirmed_public_baseline": {
     "recorded_utc": "2026-10-18T12:41:59.978029+00:00",
@@ -62,9 +62,9 @@
   },
   "current_training": {
     "status": "training",
-    "started_utc": "2026-10-18T14:05:17.247661+00:00",
+    "started_utc": "2026-10-18T14:10:25.596515+00:00",
     "stage": "fivefold",
-    "fold": 1,
+    "fold": 4,
     "train_rows": 559708,
     "valid_rows": 139927,
     "params": {
@@ -84,7 +84,7 @@
       "deterministic": true,
       "force_col_wise": true
     },
-    "train_index_sha256": "bd9df58319c7fcc98385c88f8e4eddf7e23ca7a27dd7f1e04dbca86fc7e961a0",
+    "train_index_sha256": "6078e6c5ca087dbef227ee5fec1079ac3ef578e8fa125c7e9d3cf4fda7ff9485",
     "runner_sha256": "8f94017d4bbe825c2b4b178ddf9e22478aca7f433c795a669da28ad1548c30ac",
     "plan_sha256": "9c62312ba336c0738b7b6ace2870a8e03f5a4641e6462bc7644a361b0fb4f8fb",
     "validation_covariates_and_targets_excluded_from_all_fits": true,
@@ -700,5 +700,10 @@
       "eligible": false
     }
   },
-  "completed_r9_folds": 1
+  "completed_r9_folds": 4,
+  "preserved_original_checkout": {
+    "head": "52f8cd1f3039f2ecfca77e1dfef60972d76b05f5",
+    "git_status_short_empty": true,
+    "rechecked_utc": "2026-10-18T14:11:11.612109+00:00"
+  }
 }

@@ -1,0 +1,23 @@
+{
+  "frozen_utc": "2026-10-18T13:29:08.704717+00:00",
+  "formula": ".5*frozenv5full+.5*mean5foldx8responseNN",
+  "baseline_and_control": "Officialv7fixed andprivatev8half mustbothbebeaten ineach5+3stage bypooledconditionalandcorrectedfoldlower>0",
+  "members": 40,
+  "no_new_fits": "Use ownR7CVcheckpoints, nonewfullNNtraining",
+  "test_input": "Officialtestpredictors transformedwithownfoldpreprocessors only, nofitontest",
+  "budget": {
+    "used": 1,
+    "limit": 2,
+    "remaining": 1,
+    "parent_only_submitter": true
+  },
+  "resources": {
+    "CPU": 6,
+    "GPU_process_cap": 1073741824,
+    "allocator_cap": 778043392,
+    "paid": false
+  },
+  "no_public_probe": true,
+  "no_achieved_rank_claim": true,
+  "runner_sha256": "4e17b175b3ab5107feb5237752fa174f78a8939122899070f7f7427131927c61"
+}

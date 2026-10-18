@@ -1,0 +1,15 @@
+{
+  "frozen_utc": "2026-10-18T14:27:33.035043+00:00",
+  "main_plan_sha256": "2c9e2f9208e8c29a22de3e3457a6e812ab760ca18e0724d7fa7be875933066e7",
+  "code_sha256": {
+    "research_r10_audit.py": "b49135b6709bb1b3d6fce1dea32f74884cb589f380ed2e5bfe7de448c16eab12",
+    "research_r10_csv.py": "f4956a4f18f2f6a67ed135a5e66f04011aecedaabfec647de0b14cc309eb0f6f"
+  },
+  "gates": "Independent audit only after fixed5+3 dual-baseline gates. Test inference only after audit passes. No local Kaggle upload.",
+  "formula": "(30LGB+6CB8+12residual+16CB10+64newNN_CV40)/128",
+  "final_neural": "Average five saved outer-model8-member ensembles; each has own strictly inner-selected stop and preserves9epoch schedule.",
+  "quality_status_at_freeze": "R10fivefold still training; no outer scores inspected.",
+  "formal_used": 1,
+  "remaining": 1,
+  "parent_only_submitter": true
+}

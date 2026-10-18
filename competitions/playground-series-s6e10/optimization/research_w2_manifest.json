@@ -8,5 +8,11 @@
   "paid_cost": 0,
   "cpu_threads": 6,
   "gpu_requested": false,
-  "started_utc": "2026-10-18T02:46:42.659443+00:00"
+  "started_utc": "2026-10-18T02:46:42.659443+00:00",
+  "updated_utc": "2026-10-18T02:48:34.725229+00:00",
+  "validation_exec_session": 31181,
+  "conditional_export_exec_session": 75100,
+  "conditional_export_driver": "research_w2_conditional_export.py",
+  "conditional_export_state": "research_w2_export_state.json",
+  "recovery": "Inspect state, result files, timestamps, and original sessions before any restart. Do not launch duplicate fits. All training and export are bounded by the frozen window2 deadline."
 }

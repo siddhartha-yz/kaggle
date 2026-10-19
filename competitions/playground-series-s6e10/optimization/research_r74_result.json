@@ -1,0 +1,23 @@
+{
+  "closed_utc": "2026-10-19T08:10:35.163388+00:00",
+  "status": "not_qualified",
+  "stage": "fivefold",
+  "completed_folds": 5,
+  "native_members": 160,
+  "new_classifier_fits": 0,
+  "baseline": "actual v12",
+  "baseline_auc": 0.9616472919389712,
+  "candidate_auc": 0.9616508250638507,
+  "delta_auc": 3.5331248794401304e-06,
+  "paired95_lower": -1.2020306682615066e-06,
+  "corrected_resampled_t_lower": -2.8130886686333716e-06,
+  "positive_folds": 3,
+  "threefold_run": false,
+  "independent_audit_run": false,
+  "CSV_created": false,
+  "formal_submission": false,
+  "plan_sha256": "c9adfb6a877523f39970cdc6380b9c2adffd56681a3d6e3c02c1b579b25b33d9",
+  "oof_sha256": "c7a7564f8d9609f57bb0a50b5605558b2341db13105657a6c324ee3caa3e5839",
+  "all_folds_before_scoring": true,
+  "actual_top500_verified": false
+}

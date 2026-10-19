@@ -1,0 +1,37 @@
+{
+  "checked_utc": "2026-10-19T10:21:41.298170+00:00",
+  "status": "isolated_import_passed_pending_synthetic_resource_probe_after_R76",
+  "prospective_route": "R77 EBM low-order smoothed additive and pairwise family on raw21",
+  "rationale": "No existing ExplainableBoosting/EBM/GAM estimator implementation found in all research root Python files. Different additive/pairwise regularization than current deep GB/NN pool; complementary fusion remains unproven. One fixed pool only after a synthetic resource profile.",
+  "official_sources": [
+    "https://interpret.ml/docs/ebm.html",
+    "https://interpret.ml/docs/python/api/ExplainableBoostingClassifier.html",
+    "https://interpret.ml/docs/hyperparameters.html",
+    "https://pypi.org/project/interpret-core/0.7.8/",
+    "https://github.com/interpretml/interpret"
+  ],
+  "package": "interpret-core==0.7.8",
+  "official_wheel_bytes": 15596047,
+  "official_wheel_sha256": "6644f1498b8d247c5004fe691a9815ff0efc74af243f249f295a5e9f3202b483",
+  "license": "MIT; repository license read, exact wheel license to verify before installing",
+  "compatible_existing_CPU_packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "sklearn": "1.8.0",
+    "joblib": "1.6.0"
+  },
+  "do_not_start_while_R76_running": true,
+  "new_quality_scores": 0,
+  "model_fitted": false,
+  "credentials_or_paid_actions": false,
+  "exact_version_license_url": "https://raw.githubusercontent.com/interpretml/interpret/v0.7.8/LICENSE",
+  "exact_version_license_sha256": "eef953090d9648af300e3b97f51bf7e85a44fdb10fd4590c57171e570f954c6b",
+  "wheel_SHA256_verified": true,
+  "new_venv": ".venv-ebm-r77",
+  "borrowed_CPU_runtime_read_only": true,
+  "installed_new_package_only": "interpret-core==0.7.8",
+  "fit_executed": false,
+  "GPU_actions": false,
+  "CPU_parallelism_design": "Explicit joblib threading backend with8innerbagjobs; no processchildren/hidden memory multiplication. Native owntrain validation only; outerquality labels excluded.",
+  "installed_wheel_members_exactly_verified": 97
+}

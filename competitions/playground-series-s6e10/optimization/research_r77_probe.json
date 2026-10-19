@@ -1,0 +1,42 @@
+{
+  "status": "passed_no_quality_score",
+  "checked_utc": "2026-10-19T10:35:53.930422+00:00",
+  "synthetic_only": true,
+  "official_SAT_loaded": false,
+  "fit_rows": 559708,
+  "features": 21,
+  "outer_bags": 8,
+  "CPU_thread_backend": "ThreadingBackend",
+  "GPU_used": false,
+  "max_rounds": 20,
+  "terms": 84,
+  "seconds": 19.57498850900447,
+  "peak_RSS_bytes": 1297731584,
+  "reload_error": 0.0,
+  "batch_error": 0.0,
+  "independent_additive_formula_error": 2.220446049250313e-16,
+  "unknown_query_category_finite": true,
+  "breakpoint_iteration": [
+    [
+      420,
+      420,
+      420,
+      420,
+      420,
+      420,
+      420,
+      420
+    ],
+    [
+      1260,
+      1260,
+      1260,
+      1260,
+      1260,
+      1260,
+      1260,
+      1260
+    ]
+  ],
+  "limitations": "Short synthetic fullshape capacity test only. Does not predict real full50kround early-stopped fit time or classification gain."
+}

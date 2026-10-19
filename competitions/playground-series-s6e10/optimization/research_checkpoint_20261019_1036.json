@@ -1,0 +1,71 @@
+{
+  "checked_utc": "2026-10-19T10:36:41.957312+00:00",
+  "requested_by": "Parent stagecheckpoint at nextsafe boundary; does not claim complete top500 goal",
+  "Mitra_v2": {
+    "official_download_verified": true,
+    "license": "Apache-2.0",
+    "weight_SHA256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+    "runtime": "Torch2.9.1+cu128,RTX5070TiLaptopCUDA BF16",
+    "status": "all5folds20models completed; fixed12.5percent fusion notqualified",
+    "baseline_auc": 0.9616472919389712,
+    "fusion_auc": 0.9615569065094467,
+    "delta_auc": -9.03854295245532e-05,
+    "positive_folds": 0,
+    "result_file": "research_r76_result.json",
+    "result_sha256": "9662c60ff8896a828299d49d84e2481d9c5efc5c237dac0ed9de7792508bd27f",
+    "all20rawcore_firstlast_cache_max_error": 0.0,
+    "service": "codex-kaggle-r76-validation.service",
+    "active": false,
+    "MainPID": 0,
+    "driver_terminal": "not_qualified at2026-10-19T10:34:07.087075+00:00"
+  },
+  "R75_fusion": {
+    "already_evaluated": true,
+    "formula": "Fixed .875v12/.125TabDPT logitpool",
+    "fusion_auc": 0.9615815658587346,
+    "delta_auc": -6.572608023669435e-05,
+    "positive_folds": 0,
+    "decision": "Originalfixedfusionclosed; no post-resultweightgrid",
+    "decision_file": "research_r75_fusion_decision.json"
+  },
+  "next_EBM": {
+    "package": "interpret-core==0.7.8",
+    "license": "MIT exact v0.7.8 license checked",
+    "isolated_import_and97wheel_members_verified": true,
+    "synthetic_fullshape_probe": "passed559708rows21features8bags20rounds84terms",
+    "probe_seconds": 19.57498850900447,
+    "peak_RSS_bytes": 1297731584,
+    "reload_and_batch_error": 0.0,
+    "probe_file": "research_r77_probe.json",
+    "probe_sha256": "d79bfcddcb814607320ec251c120c61b129b44d8e1acf039995840b5fcadeaa8",
+    "service": "codex-kaggle-r77-probe.service",
+    "active": false,
+    "MainPID": 0,
+    "official_model_fit_started": false,
+    "quality_evaluated": false,
+    "next": "Freeze one low-order EBM/raw21 complementary-fusion recipe and independentaudit spec before officialfivefold; then original conditionalthreefoldgates. No failedMitra/TabDPTweight/contextrescue."
+  },
+  "current_active_model_jobs": 0,
+  "blocking": {
+    "executor": false,
+    "dependencies": false,
+    "new_agreements": false,
+    "credentials": false,
+    "fees": false,
+    "validation": "Mitrafixedfusionfailedbothbounds; noqualifiedcandidate",
+    "resource_limitation": "Mitra512training support chosenunder original3GiBallocator; no claimpublished8bag16krecipe reproduced"
+  },
+  "CSV_created": false,
+  "new_formal_submissions": 0,
+  "actual_top500_verified": false,
+  "last_official_rank_observation": {
+    "rank": 676,
+    "entries": 2302,
+    "public_auc": 0.96118,
+    "verified_by": "Parent authenticatedcloudKaggle at05:28UTC; historicalnotcurrent"
+  },
+  "main_commit": "42d905a29ee3c182a5d0ee34aba2fff9b542fdda",
+  "main_unchanged": true,
+  "research_branch": "codex/s6e10-local-confirmation",
+  "private_data_models_predictions_outside_Git": true
+}

@@ -1,0 +1,11 @@
+artifacts/
+iteration_artifacts/
+data/
+*.csv
+*.log
+*.npz
+*.cbm
+model.txt
+research_artifacts/
+research_sources/
+external_data/

@@ -1,0 +1,29 @@
+{
+  "status": "passed_no_quality_score",
+  "pid": 992511,
+  "started_utc": "2026-10-19T05:48:13.687527+00:00",
+  "context_rows": 131072,
+  "query_rows": 512,
+  "no_quality_score": true,
+  "official_SAT_column_loaded": false,
+  "synthetic_labels": true,
+  "plan_sha256": "6d26cab4b6107b6824cc5aeac755da8ea299a13b26cfd3613318ca94814ef4d0",
+  "fit_seconds": 15.829411509999773,
+  "predict512_seconds": 0.6608716990012908,
+  "CPU_cache_bytes": 3226140672,
+  "cache_devices": [
+    "cpu"
+  ],
+  "repeat_error": 0.0,
+  "counters": {
+    "staged_cache_entries": 150,
+    "chunked_ff_calls": 0,
+    "preallocated_ff_calls": 87
+  },
+  "peak_allocated_bytes": 2462345216,
+  "peak_reserved_bytes": 2489319424,
+  "completed_utc": "2026-10-19T05:48:31.421430+00:00",
+  "peak_gpu_process_bytes": 2696937472,
+  "peak_rss_bytes": 8317566976,
+  "estimated_fivefold_four_context_seconds": 3928.8458171591215
+}

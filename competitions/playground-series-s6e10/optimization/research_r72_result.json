@@ -1,0 +1,21 @@
+{
+  "closed_utc": "2026-10-19T07:47:49.504421+00:00",
+  "status": "not_qualified",
+  "stage": "fivefold",
+  "completed_contexts": 20,
+  "baseline": "actual v12",
+  "baseline_auc": 0.9616472919389712,
+  "candidate_auc": 0.9616043543693563,
+  "delta_auc": -4.293756961493145e-05,
+  "paired95_lower": -6.409340699244478e-05,
+  "corrected_resampled_t_lower": -7.776748494187395e-05,
+  "positive_folds": 0,
+  "threefold_run": false,
+  "CSV_created": false,
+  "formal_submission": false,
+  "plan_sha256": "2e29b158eddf2f564bf2b4da5b4420a42b645b04f1f327068d2c7342e83d0fc3",
+  "oof_sha256": "ca1fb737f50f166c712da333b0af42ddda35d1cc4925265145678d88efea4977",
+  "all_folds_before_scoring": true,
+  "next": "New conditional autoregressive joint density direction, not a change of R72 weights or context views",
+  "actual_top500_verified": false
+}

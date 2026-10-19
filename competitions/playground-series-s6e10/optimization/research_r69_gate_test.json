@@ -1,0 +1,9 @@
+{
+  "status": "passed_synthetic_only",
+  "finite_difference_gradient_error": 5.727365248731076e-10,
+  "finite_difference_hessian_error": 1.8856667338695843e-09,
+  "independent_optimum_error": 9.61106132180145e-10,
+  "v12_zero_gate_identity_error": 2.220446049250313e-16,
+  "KKT_residual": 4.440892098500626e-16,
+  "test_source_sha256": "d88324eb5d020cb2f9b851c0d9d7ebe75d2c91aa9da63c863522f8752be14d6e"
+}

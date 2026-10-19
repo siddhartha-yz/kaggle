@@ -1,0 +1,8 @@
+{
+  "status": "passed_synthetic_only",
+  "cases": 13,
+  "main_worker_sha256": "49737973590a37545f99c051a3593bf32df996be02396410dfdf35e639743fe4",
+  "control_source_sha256": "c379720de080f3056ad38caebf4a3ae096e389add5fc3bfe163dbcb38508cbc1",
+  "official_quality_used": false,
+  "GPU_work_started": false
+}

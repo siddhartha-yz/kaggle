@@ -10,8 +10,10 @@ def main():
  assert json.loads((ROOT/'research_r75_result.json').read_text())['status']=='not_qualified';assert json.loads((ROOT/'research_r76_probe.json').read_text())['status']=='passed_no_quality_score';assert json.loads((ROOT/'research_r76_inference_probe.json').read_text())['status']=='passed'
  for stage,K in [('fivefold',5),('threefold',3)]:
   for k in range(K):
-   state('own_fold_microtuning_and_inference',stage=stage,fold=k)
-   with open(ROOT/f'research_r76_{stage}_fold{k}.log','a') as log:subprocess.run([sys.executable,'-B','-u','research_r76_worker.py',stage,str(k)],cwd=ROOT,stdout=log,stderr=subprocess.STDOUT,check=True)
+   for seed in [42,43,44,45]:
+    for phase in ['train','predict']:
+     state('own_fold_microtuning_and_inference',stage=stage,fold=k,seed=seed,phase=phase)
+     with open(ROOT/f'research_r76_{stage}_fold{k}.log','a') as log:subprocess.run([sys.executable,'-B','-u','research_r76_worker.py',stage,str(k),str(seed),phase],cwd=ROOT,stdout=log,stderr=subprocess.STDOUT,check=True)
   state('all_folds_complete_evaluating',stage=stage)
   with open(ROOT/f'research_r76_{stage}_check.log','a') as log:subprocess.run([str(CPU),'-B','-u','research_r76_check.py',stage],cwd=ROOT,stdout=log,stderr=subprocess.STDOUT,check=True)
   if not json.loads((ROOT/f'research_artifacts/r76_mitra_v2_{stage}/result.json').read_text())['eligible']:state('not_qualified',stage=stage);return

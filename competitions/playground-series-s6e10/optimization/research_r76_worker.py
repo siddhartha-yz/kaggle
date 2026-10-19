@@ -19,7 +19,7 @@ def save_npz(path,**arrays):
  try:os.link(t,path)
  finally:t.unlink(missing_ok=True)
 
-def main(stage,k):
+def main(stage,k,selected_seed=None,phase='all'):
  plan=json.loads((ROOT/'research_r76_plan.json').read_text());ph=sha(ROOT/'research_r76_plan.json')
  for n,h in {**plan['source_sha256'],**plan['artifact_sha256']}.items():assert sha(ROOT/n)==h,n
  if stage=='threefold':assert json.loads((ROOT/'research_artifacts/r76_mitra_v2_fivefold/result.json').read_text())['eligible']
@@ -35,15 +35,22 @@ def main(stage,k):
   ids=frame.id.to_numpy(copy=True);y=frame.satisfaction.to_numpy('int64');raw=frame.drop(columns=['id','satisfaction']);base=np.load(ROOT/f'research_artifacts/r68_pure_ranknet_{stage}/oof.npz');assert np.array_equal(ids,base['id']) and np.array_equal(y,base['target'])
   fi=np.flatnonzero(base['fold']!=k);vi=np.flatnonzero(base['fold']==k);encoder=RawEncoder().fit(raw.iloc[fi]);X=encoder.transform(raw.iloc[fi]);V=encoder.transform(raw.iloc[vi]);dump(run/'encoder.json',encoder.state());save_npz(run/'outer_indices.npz',fi=fi,vi=vi,train_id=ids[fi],valid_id=ids[vi]);del frame,raw,encoder;gc.collect()
   native_predictions=[];hashes={'encoder.json':sha(run/'encoder.json'),'outer_indices.npz':sha(run/'outer_indices.npz')}
-  for seed in plan['training']['seeds']:
+  for seed in ([selected_seed] if selected_seed is not None else plan['training']['seeds']):
    own=run/f'native{seed}';own.mkdir(exist_ok=True);metadata=own/'training.json';ckpt=own/'model.safetensors';torch.manual_seed(seed);np.random.seed(seed)
+   if (own/'result.json').exists():
+    done=json.loads((own/'result.json').read_text())
+    if done['plan_sha256']!=ph:assert sha(own/'result.json')==plan['engineering_recovery']['accepted_native_results'][f'{stage}/fold{k}/native{seed}']['result_sha256']
+    assert done['status']=='complete' and all(sha(own/n)==h for n,h in done['files_sha256'].items())
+    continue
    if metadata.exists():
     fit=json.loads(metadata.read_text())
     if fit['plan_sha256']!=ph:
      legacy=plan['engineering_recovery']['accepted_training'][f'{stage}/fold{k}/native{seed}'];assert fit['plan_sha256']==legacy['plan_sha256'] and sha(metadata)==legacy['training_metadata_sha256'] and fit['files_sha256']==legacy['files_sha256']
     assert fit['seed']==seed and fit['completed_steps']==50 and all(sha(own/n)==h for n,h in fit['files_sha256'].items())
+    if phase=='train':state('reused_completed_training',stage=stage,fold=k,seed=seed);return
     model=make_model(checkpoint=ckpt);assert parameter_digest(model)==fit['parameters_sha256'];state('restored_completed_native',stage=stage,fold=k,seed=seed)
    else:
+    assert phase!='predict','Separate inference requires completed training checkpoint'
     model=make_model();assert parameter_digest(model)==plan['pretrained_parameters_sha256'];optimizer=torch.optim.AdamW(model.parameters(),lr=1e-5,weight_decay=.3,foreach=False);rng=np.random.default_rng(seed);episodes=[];losses=[]
     for step in range(50):
      selected=rng.choice(len(fi),1024,replace=False);s,q=selected[:512],selected[512:];assert len(np.intersect1d(s,q))==0
@@ -57,6 +64,7 @@ def main(stage,k):
     cpu={n:v.detach().cpu().contiguous() for n,v in model.state_dict().items()};temp=own/'.model.safetensors.tmp';save_file(cpu,str(temp));del cpu;os.replace(temp,ckpt)
     ep=np.asarray(episodes);save_npz(own/'episodes.npz',own_positions=ep,global_idx=fi[ep],global_id=ids[fi[ep]],training_loss=np.asarray(losses,dtype='float64'))
     fit=dict(plan_sha256=ph,seed=seed,completed_steps=50,own_training_rows=len(fi),parameters_sha256=trained,initial_parameters_sha256=plan['pretrained_parameters_sha256'],outer_validation_used=False,loss='Official ten-class query crossentropy, labels0/1',files_sha256={n:sha(own/n) for n in ['model.safetensors','episodes.npz']});dump(metadata,fit)
+    if phase=='train':state('native_training_complete',stage=stage,fold=k,seed=seed);return
     # AdamW's last param-group loop variable owns the model parameters, too.
     # Release every training reference before reclaiming fragmented segments.
     del model,group;gc.collect();torch.cuda.empty_cache();model=make_model(checkpoint=ckpt);assert parameter_digest(model)==trained
@@ -75,7 +83,11 @@ def main(stage,k):
     if start%(16*1024)==0 or start+1024>=len(vi):state('query_prediction',stage=stage,fold=k,seed=seed,predicted_rows=min(start+1024,len(vi)),valid_rows=len(vi),peak_GPU_bytes=peak[0],seconds=time.monotonic()-tick)
    repeat=float(np.max(np.abs(first-cache.predict(V[:len(first)]))));first_error=float(np.max(np.abs(first-reference_first)));del cache;gc.collect();torch.cuda.empty_cache();last_error=float(np.max(np.abs(prediction[start:]-predict(model,X[ctx],y[fi[ctx]],V[start:]))));assert max(repeat,first_error,last_error)<1e-6 and parameter_digest(model)==fit['parameters_sha256'];save_npz(own/'validation.npz',idx=vi,id=ids[vi],pred=prediction)
    done=dict(status='complete',seed=seed,plan_sha256=ph,training_metadata_sha256=sha(metadata),repeat_error=repeat,resume_error=resume_error,cache_first1024_error=first_error,cache_last_query_error=last_error,parameters_unchanged_during_inference=True,files_sha256={n:sha(own/n) for n in ['context.npz','validation.npz']});dump(own/'result.json',done);hashes[f'native{seed}/result.json']=sha(own/'result.json');hashes[f'native{seed}/training.json']=sha(metadata);native_predictions.append(prediction);del model;gc.collect();torch.cuda.empty_cache()
+  if not all((run/f'native{seed}/result.json').exists() for seed in plan['training']['seeds']):return
+  native_predictions=[]
+  for seed in plan['training']['seeds']:
+   own=run/f'native{seed}';done=json.loads((own/'result.json').read_text());assert done['status']=='complete' and all(sha(own/n)==h for n,h in done['files_sha256'].items());hashes[f'native{seed}/result.json']=sha(own/'result.json');hashes[f'native{seed}/training.json']=sha(own/'training.json');native_predictions.append(np.load(own/'validation.npz')['pred'])
   pooled=np.mean(native_predictions,axis=0);save_npz(run/'validation.npz',idx=vi,id=ids[vi],target=y[vi],pred=pooled);hashes['validation.npz']=sha(run/'validation.npz')
   result=dict(status='complete',stage=stage,fold=k,plan_sha256=ph,runner_sha256=sha(__file__),native_seeds=plan['training']['seeds'],files_sha256=hashes,peak_GPU_bytes=peak[0],peak_RSS_bytes=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024,seconds=time.monotonic()-tick,outer_quality_scored=False);dump(run/'result.json',result);state('fold_complete',stage=stage,fold=k,seconds=result['seconds'])
  finally:stop.set()
-if __name__=='__main__':main(sys.argv[1],int(sys.argv[2]))
+if __name__=='__main__':main(sys.argv[1],int(sys.argv[2]),int(sys.argv[3]) if len(sys.argv)>3 else None,sys.argv[4] if len(sys.argv)>4 else 'all')

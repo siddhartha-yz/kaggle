@@ -1,5 +1,5 @@
 {
-  "frozen_utc": "2026-10-19T10:03:24.716715+00:00",
+  "frozen_utc": "2026-10-19T10:06:02.149528+00:00",
   "route": "One new Mitra-v2 synthetic-mixed-prior foundation family with fixed full-parameter adaptation on raw21; not more zero-shot/context rescue of R72-R75",
   "model_repository": "autogluon/mitra-classifier-2",
   "model_revision": "edada0d20759c58ada8c8605c25f22f6e98ea5f0",
@@ -67,9 +67,9 @@
   "actual_top500_verified": false,
   "source_sha256": {
     "research_r76_model.py": "7fe9bdbbfa255aa9ac2e6dfdfdc5624091990653281eb15cc3b1e22852206896",
-    "research_r76_worker.py": "047397b2a5bf60e6dc735f62d7794ed136731c71b3cdc4c84fecc51cbd2f1caa",
-    "research_r76_check.py": "23ca84d05b5340c54a84264bc8dcd929aa20f310504ff004ef4452ac23df5998",
-    "research_r76_driver.py": "b514d500e7a850c62e4a465ad1fd4e22f91b2a2d6e05b7e424c7b7f5f035e4da",
+    "research_r76_worker.py": "e2fb9be6ee6af3b897ed023c8366d062e5631857fae0221e24de50c936e8e0d8",
+    "research_r76_check.py": "220123ede0003a11c17c06cb6ade019b056fe964462e85fc23c71b7c847baf30",
+    "research_r76_driver.py": "e1cdc717b6376a921e85ddeeac547c5ab87e4f46d1f19323165e5061d232aa48",
     "research_r76_probe.py": "064686ea92281e8c69afab2a73946cd10690de9632e51edcf27ffc9680baa227",
     "test_research_r76_encoder.py": "ce360559c8bf84a8ba2dc624e13401b11be036224ed17c21e1554a6de36151f5",
     "research_resource_guard_v2.py": "63cf7d694a772fe5f88d1c649517c020e9d4b318db0ea40883dcba0cadba9e7c",
@@ -99,7 +99,7 @@
   },
   "engineering_recovery": {
     "previous_plan_sha256": "8a6ae12650dc7394828608e5590321516931770a48dd96bf38830cfff3dba166",
-    "reason": "Own allocator fragmentation immediately after firstnative microtuning, before firstrealquery or quality. Fully release training model AND last optimizerparamgroup reference then reload exact saved safetensors before inference. No geometry/precision/training/context/formula/gate change.",
+    "reason": "Own allocator fragmentation immediately after firstnative microtuning, before firstrealquery or quality. Fully release training model AND last optimizerparamgroup reference then reload exact saved safetensors before inference. No geometry/precision/training/context/formula/gate change. Fresh process replay succeeds, but same-process reloading still fragments. Run one completed training phase per native process, then one fresh inference phase per native process. Exact unchanged parameters and existing completed native42 predictions reused by SHA. No hyperparameter/quality decision change.",
     "outer_quality_scored": false,
     "previous_plan_file": "research_r76_plan_initial.json",
     "previous_plan_file_sha256": "8a6ae12650dc7394828608e5590321516931770a48dd96bf38830cfff3dba166",
@@ -111,6 +111,22 @@
           "model.safetensors": "64910664ab2d97008300613a0dd1bff65ddcc8314c6a28459fbb2895879cbdc2",
           "episodes.npz": "09bee97a78ab176f2fa34511c7ed1b9d9cb18061f1d793eae7a73712c1672846"
         }
+      },
+      "fivefold/fold0/native43": {
+        "plan_sha256": "9d7bd236d6c7857199ac0d1c00aac3fae48ae3e520fc7418b69f1e8bd49140fb",
+        "training_metadata_sha256": "3f3e5dfecba92d697f2e5de3e6a30fd4d280aa9d096d22331fb702da76445a0f",
+        "files_sha256": {
+          "model.safetensors": "fda059408d3868821cef93e2fcdae147de27175862300cf7ce7bd87eaf526d81",
+          "episodes.npz": "77ca159f03a91e9207474656d2b85e7ce2e1998d0ebdd2548e30499cba9a44b2"
+        }
+      }
+    },
+    "previous_recovery_plan_sha256": "9d7bd236d6c7857199ac0d1c00aac3fae48ae3e520fc7418b69f1e8bd49140fb",
+    "previous_recovery_plan_file": "research_r76_plan_recovery1.json",
+    "accepted_native_results": {
+      "fivefold/fold0/native42": {
+        "plan_sha256": "9d7bd236d6c7857199ac0d1c00aac3fae48ae3e520fc7418b69f1e8bd49140fb",
+        "result_sha256": "a5afb1eb7d665f2ffb7f3083adbb56fdf25f8a220139b4478cbe72cdfeb6bd8f"
       }
     }
   }

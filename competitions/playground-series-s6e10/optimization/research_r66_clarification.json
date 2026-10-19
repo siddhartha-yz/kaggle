@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-10-19T02:23:11.177966+00:00",
+  "main_plan_sha256": "40e21223a19bf1086f7b3d9f0f71cbcac041746755fc513fb9e0738c11f4ddda",
+  "statistical_recipe_changed": false,
+  "frozen_main_plan_untouched": true,
+  "feature_vocabulary": "Inherited R54 feature_view phrase four context-fitted vocabularies refers to four predictors per query, not total fits. Actual R66 worker fits a separate49-field vocabulary on each4096-row leaf context; every query is covered by exactly one leaf of each of four routers.",
+  "final_members": "R66 final_inference explicitly specifies four new routers fit on all699635training rows and four leaf-context probabilities pertestrow. This supersedes the inherited R54 statistics_limitation sentence about test20context averaging. R66 uses OOF4 and test4, with a declared outertrain-to-fulltrain routing/context-selection change.",
+  "no_hidden_rescue": "No changes to router count, features, depth, minleaf, sampling, seeds, classifier, blend, resource caps or either gate. No interim quality computed."
+}

@@ -1,0 +1,14 @@
+{
+  "verified_utc": "2026-10-19T08:37:05.446399+00:00",
+  "official_repository": "Layer6/TabDPT",
+  "revision": "a5ca6e01c0fa09ec68c73e958e5199d1932abb3a",
+  "file": "tabdpt1_3.safetensors",
+  "bytes": 252233296,
+  "sha256": "97dc3b60bfad6b42ec1a07b7e121d86b0fc7c9fd67c8d2eaac3d815da197eacb",
+  "published_SHA256_verified": true,
+  "format": "safetensors",
+  "license": "Apache-2.0",
+  "anonymous_public_download": true,
+  "credentials_or_gate_acceptance": false,
+  "seconds": 20.293285911990097
+}

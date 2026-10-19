@@ -1,0 +1,14 @@
+{
+  "checked_utc": "2026-10-19T09:32:23.835467+00:00",
+  "passed": 4,
+  "failures": 0,
+  "synthetic_only": true,
+  "coverage": [
+    "Own-training-only categorical vocabulary and unknown-query handling",
+    "Numeric missing values and immutable column order",
+    "Reject ID/target even at unchanged21columnwidth",
+    "Reject invalid query numeric values"
+  ],
+  "test_source_sha256": "58a179dcc4a6ea882eaeb370e483e5204088a6f4ee640f10f515c6c8e245fe81",
+  "model_helper_sha256": "e7ecd791e5a8d5d2c5db1a7e326acf60732a932b4a778ae5330b211ab13279fd"
+}

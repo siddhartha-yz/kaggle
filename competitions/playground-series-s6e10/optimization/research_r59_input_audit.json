@@ -1,0 +1,101 @@
+{
+  "status": "passed_no_official_SAT_or_quality",
+  "checked_utc": "2026-10-19T00:34:40.835424+00:00",
+  "profiles": {
+    "train": {
+      "Departure Delay in Minutes": {
+        "missing": 0,
+        "nonzero": 64483,
+        "quantiles": {
+          "min": 0.0,
+          "q25": 0.0,
+          "median": 0.0,
+          "q75": 0.0,
+          "q95": 7.0,
+          "q99": 30.0,
+          "max": 489.0
+        },
+        "IQR": 0.0,
+        "raw_range_fallback_scale": 0.004089979454874992,
+        "raw_preclip_q95": 0.028629856850715747,
+        "log_preclip_q95": 0.6713934301639244
+      },
+      "Arrival Delay in Minutes": {
+        "missing": 292,
+        "nonzero": 58928,
+        "quantiles": {
+          "min": 0.0,
+          "q25": 0.0,
+          "median": 0.0,
+          "q75": 0.0,
+          "q95": 7.0,
+          "q99": 28.0,
+          "max": 491.0
+        },
+        "IQR": 0.0,
+        "raw_range_fallback_scale": 0.004073319956660271,
+        "raw_preclip_q95": 0.028513238289205704,
+        "log_preclip_q95": 0.6709522245021381
+      }
+    },
+    "test": {
+      "Departure Delay in Minutes": {
+        "missing": 0,
+        "nonzero": 27456,
+        "quantiles": {
+          "min": 0.0,
+          "q25": 0.0,
+          "median": 0.0,
+          "q75": 0.0,
+          "q95": 7.0,
+          "q99": 30.0,
+          "max": 480.0
+        },
+        "IQR": 0.0,
+        "raw_range_fallback_scale": 0.004166666883975267,
+        "raw_preclip_q95": 0.029166666666666667,
+        "log_preclip_q95": 0.6734087540207857
+      },
+      "Arrival Delay in Minutes": {
+        "missing": 130,
+        "nonzero": 25274,
+        "quantiles": {
+          "min": 0.0,
+          "q25": 0.0,
+          "median": 0.0,
+          "q75": 0.0,
+          "q95": 7.0,
+          "q99": 28.0,
+          "max": 471.0
+        },
+        "IQR": 0.0,
+        "raw_range_fallback_scale": 0.00424628471955657,
+        "raw_preclip_q95": 0.029723991507430998,
+        "log_preclip_q95": 0.675474626939001
+      }
+    }
+  },
+  "implementation": {
+    "package": "pytabkit1.7.3",
+    "path": ".venv-gpu/lib/python3.12/site-packages/pytabkit/models/nn_models/pipeline.py",
+    "sha256": "0e5d905d43c8410270a87215bcad18c367efdaa0d3266eb2abdce1d90e88d866",
+    "class_name": "RobustScaleFactory",
+    "zero_IQR_fallback": "quant_diff=.5*(max-min); scale=1/(quant_diff+1e-30)",
+    "interpretation": "Both delays have zero interquartile range; the min/max fallback places q95 near.03 before smoothclip. Fixed log1p raises the same q95 near.67, spreading the common nonzero delays while retaining original categorical twins. This is finite-network preconditioning, not a bug correction or a gain claim."
+  },
+  "semantic_proof": {
+    "rows": 2048,
+    "labels": "synthetic alternation only",
+    "official_SAT_values_parsed": false,
+    "changed_numeric_coordinates": 2,
+    "unchanged_fields_exact": 72,
+    "raw_category_identities_unchanged": true,
+    "feature_width": 74,
+    "numeric_fields": 52,
+    "nominal_fields": 22
+  },
+  "source_sha256": {
+    "research_r59_features.py": "ab0d8840a3ba1e43fbeee3176584fcdc961b60eb5b22a30d43585f997f160cdd",
+    "research_r59_input_audit.py": "3d2b67202526f5dfec58131251090b4a11d245bbb91ec9cbb6c360f4ea7df9cd"
+  }
+}

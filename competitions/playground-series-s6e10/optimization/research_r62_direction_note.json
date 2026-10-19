@@ -1,0 +1,14 @@
+{
+  "noted_utc": "2026-10-19T01:16:38.913898+00:00",
+  "status": "source_prerequisites_only_no_official_classification_fit",
+  "route": "ONE original-SAT conditional cohort rating density view",
+  "source_evidence": "Fixed source-only support diagnostic reused full21source teacher:original holdout AUC.9955767900 versus.8689206703 for nonrating8only,25972heldoutsource rows. Ratings carry much of source SAT information. Conditioning on other12ratings may make the wrong SAT hypothesis extrapolate; diagnosticdoesnotprove counterfactual support. A smaller fixed conditioning set yields class-specific rating preferences rather than another rating-consistency score.",
+  "mechanism": "For each13observed rating,fit sourceonly multiclassdensity using exactly8nonrating context variables plus ORIGINAL SAT label. All13rating fields excluded from predictors. Official queries evaluate both class hypotheses0/1; loglikelihood ratio of observed rating. This complements existing14rating-consistency fields and differs from unsupervised official cohort EVs R46 and full20source SAT-conditioned density R60.",
+  "scope": "Same129859CC0source rows with21globalexactofficial-X matches excluded and valueverified. SourceSAT explicitlyallowed external conditioner; officialSATneverparsed by generators. No sourcehyperparameters/field/node/weight grid.",
+  "prospective_primary": "Appendall13new cohort-classLLRs tocertified84,LGB97same639CPU6, replaceonly .46875LGBshare inactualv11tree,preserveNN74,original5then3dualCIgates.",
+  "prospective_neural": "A separate possible74field nonlinear view sourceLLR13+oldS14+Lean47; predeclared before any official R62 score, no failed classifier predictions blended.",
+  "resources": "CPU6, GPUprocess1GiB, RSS8GiB/available2GiB, serial, zero paid",
+  "official_quality_evaluated": false,
+  "actual_top500_verified": false,
+  "parent_only_submitter": true
+}

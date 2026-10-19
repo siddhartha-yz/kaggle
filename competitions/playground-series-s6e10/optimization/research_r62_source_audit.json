@@ -1,0 +1,97 @@
+{
+  "status": "passed_original_SAT_only_no_official_SAT",
+  "audited_utc": "2026-10-19T01:16:42.016001+00:00",
+  "source_plan_sha256": "0497850508d6c272bf58925a4a8b666783fe97fba3bb1a9def4331a32e63e470",
+  "scope": {
+    "source_rows": 129859,
+    "excluded_exact_source_rows": 21,
+    "excluded_pairs_value_verified": true,
+    "official_SAT_values_parsed": false,
+    "source_SAT_values_parsed": true,
+    "source_SAT_used_as_conditioning_input": true,
+    "source_SAT_used_as_rating_target": false,
+    "own_rating_excluded_from_model_inputs": true,
+    "known_covariate_rows": 999479,
+    "guarded_official_reads": [
+      {
+        "file": "train.csv",
+        "header_only": true,
+        "columns": null
+      },
+      {
+        "file": "train.csv",
+        "header_only": false,
+        "columns": [
+          "id",
+          "Age",
+          "Flight Distance",
+          "Inflight wifi service",
+          "Departure/Arrival time convenient",
+          "Ease of Online booking",
+          "Gate location",
+          "Food and drink",
+          "Online boarding",
+          "Seat comfort",
+          "Inflight entertainment",
+          "On-board service",
+          "Leg room service",
+          "Baggage handling",
+          "Checkin service",
+          "Cleanliness",
+          "Departure Delay in Minutes",
+          "Arrival Delay in Minutes",
+          "Gender",
+          "Customer Type",
+          "Type of Travel",
+          "Class"
+        ]
+      },
+      {
+        "file": "test.csv",
+        "header_only": false,
+        "columns": [
+          "id",
+          "Age",
+          "Flight Distance",
+          "Inflight wifi service",
+          "Departure/Arrival time convenient",
+          "Ease of Online booking",
+          "Gate location",
+          "Food and drink",
+          "Online boarding",
+          "Seat comfort",
+          "Inflight entertainment",
+          "On-board service",
+          "Leg room service",
+          "Baggage handling",
+          "Checkin service",
+          "Cleanliness",
+          "Departure Delay in Minutes",
+          "Arrival Delay in Minutes",
+          "Gender",
+          "Customer Type",
+          "Type of Travel",
+          "Class"
+        ]
+      }
+    ],
+    "all_rating_inputs_excluded": true,
+    "nonrating_context_columns": [
+      "Age",
+      "Flight Distance",
+      "Departure Delay in Minutes",
+      "Arrival Delay in Minutes",
+      "Gender",
+      "Customer Type",
+      "Type of Travel",
+      "Class"
+    ],
+    "source_density_conditioning": "8nonrating context covariates plus ORIGINAL SAT hypothesis; all13ratings excluded from model inputs"
+  },
+  "source_positive_rows": 56408,
+  "actual_class_position_and_unseen_class_zero_probability_test_passed": true,
+  "CPU_threads": 6,
+  "peak_RSS_bytes": 1085923328,
+  "quality_evaluated": false,
+  "new_model_fits": 0
+}

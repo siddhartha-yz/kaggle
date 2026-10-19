@@ -1,0 +1,16 @@
+{
+  "frozen_utc": "2026-10-19T01:20:01.054654+00:00",
+  "source_plan_sha256": "0497850508d6c272bf58925a4a8b666783fe97fba3bb1a9def4331a32e63e470",
+  "input_sha256": {
+    "research_r62_generator_audit.py": "1df637ab58dd063f2a10e9ff763cf5f21ad4a4081726d16b3c403930c077a95f",
+    "research_r62_features.py": "4223a63ed649e343ea6f29dfbc841c2b8305a3efb40b115b18053493e5644d7f",
+    "research_r62_loader.py": "568645e2d0c047c5a90f4ba3856eea857efbbe4ec4bc970637055f483b1a5803",
+    "research_r62_source_result.json": "a4fd69619443121793322cc7c629a9a0f04b512a2efc9d3391dd3a02a12f7587",
+    "research_r62_source_build.py": "6c38c93324f5517882d5317174ae5165399719c31f4be2d7ff90898b6d25a393",
+    "research_r62_source_build_plan.json": "da0c79978930b4fd8cd5795f9ba853cc69c97e20b872963f8f3ef9b3982d9665",
+    "research_r62_source_audit.json": "dc0218e4c747183aa6987ac03b3b41f0dc33e461531bdc42575e6e35b393769e"
+  },
+  "required_scope": "OnlyoriginalSATconditioner+8nonratingvariables,all13ratings/id excluded,officialSATnotparsed,21exactsourceoverlapsremoved",
+  "verified_models_required": 13,
+  "CPU_threads": 6
+}

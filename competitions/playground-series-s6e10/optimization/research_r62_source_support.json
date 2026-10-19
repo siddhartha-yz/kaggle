@@ -1,0 +1,100 @@
+{
+  "status": "source_diagnostic_only_no_official_SAT_or_quality",
+  "checked_utc": "2026-10-19T01:13:40.853730+00:00",
+  "plan_sha256": "e7d0933666292316ec3d1e25c272a1e7692cf20c0efb7380ce28f1940582a5f9",
+  "source_scope": {
+    "source_rows": 129859,
+    "excluded_exact_source_rows": 21,
+    "excluded_pairs_value_verified": true,
+    "official_SAT_values_parsed": false,
+    "source_SAT_values_parsed": true,
+    "source_SAT_used_as_conditioning_input": true,
+    "source_SAT_used_as_rating_target": false,
+    "own_rating_excluded_from_model_inputs": true,
+    "known_covariate_rows": 999479,
+    "guarded_official_reads": [
+      {
+        "file": "train.csv",
+        "header_only": true,
+        "columns": null
+      },
+      {
+        "file": "train.csv",
+        "header_only": false,
+        "columns": [
+          "id",
+          "Age",
+          "Flight Distance",
+          "Inflight wifi service",
+          "Departure/Arrival time convenient",
+          "Ease of Online booking",
+          "Gate location",
+          "Food and drink",
+          "Online boarding",
+          "Seat comfort",
+          "Inflight entertainment",
+          "On-board service",
+          "Leg room service",
+          "Baggage handling",
+          "Checkin service",
+          "Cleanliness",
+          "Departure Delay in Minutes",
+          "Arrival Delay in Minutes",
+          "Gender",
+          "Customer Type",
+          "Type of Travel",
+          "Class"
+        ]
+      },
+      {
+        "file": "test.csv",
+        "header_only": false,
+        "columns": [
+          "id",
+          "Age",
+          "Flight Distance",
+          "Inflight wifi service",
+          "Departure/Arrival time convenient",
+          "Ease of Online booking",
+          "Gate location",
+          "Food and drink",
+          "Online boarding",
+          "Seat comfort",
+          "Inflight entertainment",
+          "On-board service",
+          "Leg room service",
+          "Baggage handling",
+          "Checkin service",
+          "Cleanliness",
+          "Departure Delay in Minutes",
+          "Arrival Delay in Minutes",
+          "Gender",
+          "Customer Type",
+          "Type of Travel",
+          "Class"
+        ]
+      }
+    ]
+  },
+  "source_holdout_rows": 25972,
+  "full21_existing_model_AUC": 0.9955767900312661,
+  "metadata8_new_model_AUC": 0.8689206702749694,
+  "full21_logloss": 0.0813994340877689,
+  "metadata8_logloss": 0.44474823814388775,
+  "metadata_features": [
+    "Age",
+    "Flight Distance",
+    "Departure Delay in Minutes",
+    "Arrival Delay in Minutes",
+    "Gender",
+    "Customer Type",
+    "Type of Travel",
+    "Class"
+  ],
+  "new_source_only_diagnostic_model_fits": 1,
+  "no_new_full21_baseline_fit": true,
+  "metadata_model_sha256": "6b05b6000da3c8193a9f49502d67a54e6c09aa00e8dc0734a5d53f420601a8f3",
+  "metadata_vocab_sha256": "539baf51bd261b20f440b40b92a1d84f98e365d9859b563db8549286c57d45ab",
+  "peak_RSS_bytes": 997892096,
+  "interpretation": "Predictability contrast diagnoses the role of rating information in source SAT. It does not measure counterfactual support directly or establish utility on official SAT; any smaller-conditioning density route needs the original full5/3gates."
+}

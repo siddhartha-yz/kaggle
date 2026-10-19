@@ -1,0 +1,62 @@
+{
+  "reviewed_utc": "2026-10-19T11:07:42.947144+00:00",
+  "status": "Prospective mathematical/source review only; deferred until current EBM route closes; not frozen for officialfit",
+  "possible_route": "One fullconditional-state probability input view in orthonormal logratio coordinates",
+  "motivation": "R26testedraw78probabilities withnative16/batch128 because1GiBcap, versusCE74controlnative32/batch256; its significantnegativefailure remainsfailed and feature effectconfoundedbyresourceadaptation. R64baggedonlysix74fieldviews,notthisfullstateview. R71laterprovednative32/batch256/full152underexpanded3GiBcap withoutquality. Newproposal changesprobabilitygeometry,not merelymoreseeds/members.",
+  "old_R26_delta_auc": -0.0001409298828088934,
+  "old_R26_not_qualified": true,
+  "new_transform": "For each of13six-state probabilityvectors, q=max(p,1e-6)/sum(max(p,1e-6)); z=Helmert5x6@log(q). Fixedorthonormalcontrasts, nolearnedprojection or officialSATinput. Reconstructq=softmax(H.T@z).",
+  "hypothesis": "Relative logprobabilities encode state odds without the simplex constantdirection and rawprobabilityscale compression. Preserve all stateinformation up todeclaredfloor; usefulnessunproven. Not a claim of jointlikelihood or causality.",
+  "raw_feature_mapping": "Currentcertified74inputs unchanged plus65fixedstatecoordinates =139fields,117numeric22nominal;13ratingidentities and all0..5stateorderfixedbycachedcolumnschema.",
+  "synthetic_toy_inversion_error": 6.661338147750939e-16,
+  "synthetic_only": true,
+  "new_classifier_fits": 0,
+  "new_quality_scores": 0,
+  "official_SAT_values_loaded": false,
+  "no_other_model_job_while_EBM": true,
+  "resource_basis": "ExistingR71wide152/native32/batch256proof:1.735GBGPUprocess and6.315GBRSS;139hasfewerfixednumericdimensions. Actualruntime/headroommuststillbechecked beforeanyfuturefit.",
+  "possible_training": "SameCE74 native32/batch256/3epochs/seed42/CPU6 recipe;onefixedtransform,nonewloss/seed/member/epoch/weightgrid. Freshfull5/3dualboundgates versusthenactualformalbest required;originalR26failureisnotpromoted.",
+  "decision": "Optional follow-up requiringa concrete frozenplan/auditspec and baselineversionreviewafterR77. No execution or selectedweight now.",
+  "H": [
+    [
+      0.7071067811865475,
+      -0.7071067811865475,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.4082482904638631,
+      0.4082482904638631,
+      -0.8164965809277261,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129,
+      -0.8660254037844387,
+      0.0,
+      0.0
+    ],
+    [
+      0.22360679774997896,
+      0.22360679774997896,
+      0.22360679774997896,
+      0.22360679774997896,
+      -0.8944271909999159,
+      0.0
+    ],
+    [
+      0.18257418583505536,
+      0.18257418583505536,
+      0.18257418583505536,
+      0.18257418583505536,
+      0.18257418583505536,
+      -0.9128709291752769
+    ]
+  ]
+}

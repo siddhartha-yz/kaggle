@@ -1,0 +1,40 @@
+{
+  "checked_utc": "2026-10-19T11:08:10.837790+00:00",
+  "kind": "First completefold execution proof; no outerquality evaluated",
+  "completed_fold": {
+    "status": "complete",
+    "stage": "fivefold",
+    "fold": 0,
+    "plan_sha256": "eace3a82682b9d40deb42e0daeb55aac3f9e3a49802724932d25a2679d5ac367",
+    "runner_sha256": "ebc3c155a2973a634384136a078c4212c7b95d0b5f0799fd397fec8c371f0fd1",
+    "files_sha256": {
+      "model.joblib": "8f051e77ae87ef7015299289c64374260f1a285d479649b542f32a4e6d747b34",
+      "training.json": "fbf81470e5bd4eda7ca5ff34f923a1ffbe4addb299490cfcf14de036350e71d9",
+      "inner_bags.npz": "9dd424d15ca407c45ad841e14f015340b16982c7df1706cfa7a3508e4eaabe27",
+      "outer_indices.npz": "c9795c7e1f87f792d2858b79e746e45e3016e213811781640c5ad6a614078713",
+      "validation.npz": "95d5eb11f166599e39ae5214e2ff9f447aeb303c4054903f769cafcd59c249ee"
+    },
+    "model_reload_error": 0.0,
+    "additive_formula_error": 3.3306690738754696e-16,
+    "query_batch_error": 0.0,
+    "peak_RSS_bytes": 961986560,
+    "seconds": 1239.6589092040085,
+    "outer_quality_scored": false,
+    "GPU_used": false
+  },
+  "current_driver": {
+    "status": "own_training_EBM_fit_and_prediction",
+    "updated_utc": "2026-10-19T11:03:47.389393+00:00",
+    "pid": 1160078,
+    "actual_top500_verified": false,
+    "parent_only_submitter": true,
+    "stage": "fivefold",
+    "fold": 1
+  },
+  "outer_AUC_evaluated": false,
+  "allfive_required_before_score": true,
+  "configuration_unchanged": true,
+  "main_changed": false,
+  "new_CSV": false,
+  "new_formal_submission": false
+}

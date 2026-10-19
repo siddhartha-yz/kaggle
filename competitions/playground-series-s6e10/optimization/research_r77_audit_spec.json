@@ -1,0 +1,15 @@
+{
+  "frozen_utc": "2026-10-19T10:42:37.736902+00:00",
+  "when": "Only after fivefoldANDthreefold originaldualboundgates pass",
+  "independent_code_required": true,
+  "checks": [
+    "Rehash data,officialPyPIwheel,exactversionMITlicense,all97installedmembers,frozenconfiguration and model/checkpointfiles",
+    "Independently reconstruct officialraw21schema andTrue=1,allStratifiedKFold IDs withseeds20261018/20261022; verify8owntrainingbags only indexownoutertrain,15percentheldout, savednativeRNGbefore/after and unmodified originalmake_bag replays. Observertrace is proven prediction-identical onsyntheticdata; verifyseed42 and originalnativebranching fromcore source",
+    "Inspect all8saved EBM models: raw21names/types,learned ownfitbins/categoryvocab,termindices only21rawfields,parameters exactlyfrozen,model.classes=[0,1],nativebag earlystopowntrainonly,noouterdataorlabelsprovided",
+    "Independently reproduce additive termlookup+intercept and expit againstsavedfirst1024+lastquery predictions; query permutation,batching,unknowncategory/missing behavior andimmutablefittedmodel; do not substitute a different feature schema",
+    "Rebuild allfoldOOF IDs, equaldataalignment and exact .9375v12/.0625EBM logitpool, recompute pairedDeLong95lower and correctedresampled-tlower independently",
+    "Onlybothgates+audit:reloadfiveauditedfoldEBMs;eachownbins/model unchanged,meanfivegroup probabilities ontest then samefixedv12logitpool;nofull-datarefit",
+    "CSV id/satisfaction columns,299844rows exactsampleIDorder,True=1,finite[0,1],formula17digitroundtrip,SHA256,Library exactbyte readback; authenticatedparent onlyfreshquota and upload"
+  ],
+  "limitations": "Historical official labels reused;threepartitionisnotuntouchedholdout;conditionalboundsomit researchwideadaptation. No verifiedpublicgain/top500 untilparentauthenticatedresult."
+}

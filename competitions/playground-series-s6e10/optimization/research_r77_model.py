@@ -6,6 +6,7 @@ os.environ['CUDA_VISIBLE_DEVICES']=''
 ROOT=Path(__file__).resolve().parent
 import numpy as np,pandas as pd
 from interpret.glassbox import ExplainableBoostingClassifier
+from contextlib import contextmanager
 
 def parameters(rounds=50000):
  return dict(max_bins=1024,max_interaction_bins=64,interactions='3x',validation_size=.15,outer_bags=8,inner_bags=0,learning_rate=.015,greedy_ratio=10.,cyclic_progress=False,smoothing_rounds=75,interaction_smoothing_rounds=75,max_rounds=rounds,early_stopping_rounds=100,early_stopping_tolerance=1e-5,min_samples_leaf=4,min_hessian=.0001,reg_alpha=0.,reg_lambda=0.,max_delta_step=0.,gain_scale=5.,min_cat_samples=10,cat_smooth=10.,missing='separate',max_leaves=2,objective='log_loss',n_jobs=8,random_state=42)
@@ -18,3 +19,18 @@ def make_model(raw,rounds=50000):
 def reconstruct_probability(model,raw):
  scores=model.eval_terms(raw).sum(axis=1)+float(np.asarray(model.intercept_).reshape(-1)[0])
  return 1./(1.+np.exp(-scores))
+
+@contextmanager
+def trace_inner_bags(expected_y):
+ """Observe original native RNG/splits; return original arrays without changes."""
+ import interpret.glassbox._ebm._ebm as core
+ original=core.make_bag;records=[]
+ def observed(y,n_classes,test_size,rng,is_stratified):
+  assert np.array_equal(y,expected_y) and n_classes==2 and test_size==.15 and is_stratified
+  before=np.array(rng,copy=True);bag=original(y,n_classes,test_size,rng,is_stratified)
+  assert bag.shape==(len(expected_y),) and np.isin(bag,[-1,1]).all() and np.sum(bag<0)==int(np.floor(len(expected_y)*.15))
+  records.append(dict(rng_before=before,rng_after=np.array(rng,copy=True),bag=bag.copy()))
+  return bag
+ core.make_bag=observed
+ try:yield records
+ finally:core.make_bag=original

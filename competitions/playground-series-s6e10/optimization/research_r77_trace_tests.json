@@ -1,0 +1,11 @@
+{
+  "status": "passed_no_quality_score",
+  "checked_utc": "2026-10-19T10:41:40.625141+00:00",
+  "synthetic_only": true,
+  "rows": 2000,
+  "outer_bags": 8,
+  "max_rounds": 2,
+  "traced_vs_original_probability_error": 0.0,
+  "all_eight_native_rng_replays_exact": true,
+  "observed_original_returns_not_replaced": true
+}

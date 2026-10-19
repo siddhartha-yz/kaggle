@@ -38,7 +38,10 @@ def main(stage,k):
   for seed in plan['training']['seeds']:
    own=run/f'native{seed}';own.mkdir(exist_ok=True);metadata=own/'training.json';ckpt=own/'model.safetensors';torch.manual_seed(seed);np.random.seed(seed)
    if metadata.exists():
-    fit=json.loads(metadata.read_text());assert fit['plan_sha256']==ph and fit['seed']==seed and fit['completed_steps']==50 and all(sha(own/n)==h for n,h in fit['files_sha256'].items())
+    fit=json.loads(metadata.read_text())
+    if fit['plan_sha256']!=ph:
+     legacy=plan['engineering_recovery']['accepted_training'][f'{stage}/fold{k}/native{seed}'];assert fit['plan_sha256']==legacy['plan_sha256'] and sha(metadata)==legacy['training_metadata_sha256'] and fit['files_sha256']==legacy['files_sha256']
+    assert fit['seed']==seed and fit['completed_steps']==50 and all(sha(own/n)==h for n,h in fit['files_sha256'].items())
     model=make_model(checkpoint=ckpt);assert parameter_digest(model)==fit['parameters_sha256'];state('restored_completed_native',stage=stage,fold=k,seed=seed)
    else:
     model=make_model();assert parameter_digest(model)==plan['pretrained_parameters_sha256'];optimizer=torch.optim.AdamW(model.parameters(),lr=1e-5,weight_decay=.3,foreach=False);rng=np.random.default_rng(seed);episodes=[];losses=[]
@@ -54,6 +57,9 @@ def main(stage,k):
     cpu={n:v.detach().cpu().contiguous() for n,v in model.state_dict().items()};temp=own/'.model.safetensors.tmp';save_file(cpu,str(temp));del cpu;os.replace(temp,ckpt)
     ep=np.asarray(episodes);save_npz(own/'episodes.npz',own_positions=ep,global_idx=fi[ep],global_id=ids[fi[ep]],training_loss=np.asarray(losses,dtype='float64'))
     fit=dict(plan_sha256=ph,seed=seed,completed_steps=50,own_training_rows=len(fi),parameters_sha256=trained,initial_parameters_sha256=plan['pretrained_parameters_sha256'],outer_validation_used=False,loss='Official ten-class query crossentropy, labels0/1',files_sha256={n:sha(own/n) for n in ['model.safetensors','episodes.npz']});dump(metadata,fit)
+    # AdamW's last param-group loop variable owns the model parameters, too.
+    # Release every training reference before reclaiming fragmented segments.
+    del model,group;gc.collect();torch.cuda.empty_cache();model=make_model(checkpoint=ckpt);assert parameter_digest(model)==trained
    ctx=balanced_context(y[fi],4096,np.random.default_rng(np.random.SeedSequence([seed,7601])));save_npz(own/'context.npz',own_positions=ctx,global_idx=fi[ctx],global_id=ids[fi[ctx]],target=y[fi[ctx]])
    reference_first=predict(model,X[ctx],y[fi[ctx]],V[:1024]);torch.cuda.empty_cache();cache=SupportCache(model,X[ctx],y[fi[ctx]])
    prediction=np.full(len(vi),np.nan);resume_error=None;first=None

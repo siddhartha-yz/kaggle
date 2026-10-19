@@ -1,5 +1,5 @@
 {
-  "frozen_utc": "2026-10-19T10:01:07.698466+00:00",
+  "frozen_utc": "2026-10-19T10:03:24.716715+00:00",
   "route": "One new Mitra-v2 synthetic-mixed-prior foundation family with fixed full-parameter adaptation on raw21; not more zero-shot/context rescue of R72-R75",
   "model_repository": "autogluon/mitra-classifier-2",
   "model_revision": "edada0d20759c58ada8c8605c25f22f6e98ea5f0",
@@ -67,8 +67,8 @@
   "actual_top500_verified": false,
   "source_sha256": {
     "research_r76_model.py": "7fe9bdbbfa255aa9ac2e6dfdfdc5624091990653281eb15cc3b1e22852206896",
-    "research_r76_worker.py": "3539e4676519f8bbf3e232b7ef2a64859e4f6920e83f030c3d755a14136c8a9d",
-    "research_r76_check.py": "10130ecaa9a1556b269796631df1c13338383e7e3d014d5ea3cfc53cb1a61e74",
+    "research_r76_worker.py": "047397b2a5bf60e6dc735f62d7794ed136731c71b3cdc4c84fecc51cbd2f1caa",
+    "research_r76_check.py": "23ca84d05b5340c54a84264bc8dcd929aa20f310504ff004ef4452ac23df5998",
     "research_r76_driver.py": "b514d500e7a850c62e4a465ad1fd4e22f91b2a2d6e05b7e424c7b7f5f035e4da",
     "research_r76_probe.py": "064686ea92281e8c69afab2a73946cd10690de9632e51edcf27ffc9680baa227",
     "test_research_r76_encoder.py": "ce360559c8bf84a8ba2dc624e13401b11be036224ed17c21e1554a6de36151f5",
@@ -96,5 +96,22 @@
     "research_sources/r76_mitra_core/_internal/models/embedding.py": "ef83ba7065a15321f1838fb0890c32e2c3de0d84337b67a423d1f998b52d48b8",
     "research_sources/r76_mitra_core/_internal/models/base.py": "3caa4c3d3e4e4fd2459e660f9e1cc551e64fc1d34cd5efa4f7bfe05bc199ab46",
     "research_sources/r76_mitra_core/_internal/config/enums.py": "865ca18171ef1d92a060ad73dc31d21f112cb821ce13b63601da248ce1bc496b"
+  },
+  "engineering_recovery": {
+    "previous_plan_sha256": "8a6ae12650dc7394828608e5590321516931770a48dd96bf38830cfff3dba166",
+    "reason": "Own allocator fragmentation immediately after firstnative microtuning, before firstrealquery or quality. Fully release training model AND last optimizerparamgroup reference then reload exact saved safetensors before inference. No geometry/precision/training/context/formula/gate change.",
+    "outer_quality_scored": false,
+    "previous_plan_file": "research_r76_plan_initial.json",
+    "previous_plan_file_sha256": "8a6ae12650dc7394828608e5590321516931770a48dd96bf38830cfff3dba166",
+    "accepted_training": {
+      "fivefold/fold0/native42": {
+        "plan_sha256": "8a6ae12650dc7394828608e5590321516931770a48dd96bf38830cfff3dba166",
+        "training_metadata_sha256": "f9e803d2a67ddede54ccac312de54e12b2371fec488099b64b9d4c4a50a4d6fb",
+        "files_sha256": {
+          "model.safetensors": "64910664ab2d97008300613a0dd1bff65ddcc8314c6a28459fbb2895879cbdc2",
+          "episodes.npz": "09bee97a78ab176f2fa34511c7ed1b9d9cb18061f1d793eae7a73712c1672846"
+        }
+      }
+    }
   }
 }

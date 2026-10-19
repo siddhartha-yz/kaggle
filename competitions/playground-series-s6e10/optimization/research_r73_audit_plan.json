@@ -1,9 +1,13 @@
 {
-  "frozen_utc": "2026-10-19T07:53:49.018082+00:00",
+  "frozen_utc": "2026-10-19T07:55:43.935903+00:00",
   "main_plan_sha256": "a8ce5dc007ba83efee9d3202581e0b937a677114913b43a8fae182ea47e1010d",
   "additional_sha256": {
-    "research_r73_audit.py": "9f19604fb218df77ea7cae3ec116fa9dded20415973ebcf83943231928e21f5e"
+    "research_r73_audit.py": "9f19604fb218df77ea7cae3ec116fa9dded20415973ebcf83943231928e21f5e",
+    "research_r73_statistics_audit.py": "1052c8d800b7b4fe60e02658abe64ed1b7deb4c3ec73bfec2a77acf04031c444",
+    "research_r73_audit_driver.py": "f289d425ef38c68895572cdd66a04f7ac94accf85e7f80ae64dd0ab40ee9b2d0"
   },
   "criteria": "Both partitions original dual gates before audit; all8folds/32savedmodels own-training encoder, exact rawfeature/ID/split reconstruction, mean4, savedGPU+independentCPUfirst512replay2e-5; independentBayes2e-6; causalprefix1e-6; GPUrepeatexact0; resourceguards unchanged",
-  "outer_quality_inspected_at_audit_freeze": false
+  "outer_quality_inspected_at_audit_freeze": false,
+  "worker_only_prior_freeze_sha256": "13ee9ef475c7f0d9110f6e555d407fdf520bc59e0178012e00aa50951e2b84e5",
+  "note": "Add independent statistics and serial audit driver before any outer score. Main training recipe unchanged."
 }

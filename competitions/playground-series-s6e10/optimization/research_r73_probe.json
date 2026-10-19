@@ -1,0 +1,18 @@
+{
+  "status": "passed_no_quality_score",
+  "checked_utc": "2026-10-19T07:49:42.289367+00:00",
+  "synthetic_only": true,
+  "official_SAT_loaded": false,
+  "batch_size": 4096,
+  "steps": 32,
+  "mean_step_seconds": 0.021362736900725092,
+  "estimated_fivefold_4members_6epochs_seconds": 351.2033946479205,
+  "parameter_count": 82543,
+  "GPU": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+  "peak_gpu_process_bytes": 939524096,
+  "peak_allocated_bytes": 654676480,
+  "peak_reserved_bytes": 723517440,
+  "peak_RSS_bytes": 1740189696,
+  "repeat_error": 0.0,
+  "model_sha256": "259587feb9e52b3b943bc5ded000ad86acfceafa4b272f65f2897515b1dabc40"
+}

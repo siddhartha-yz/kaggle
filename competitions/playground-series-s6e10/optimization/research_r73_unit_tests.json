@@ -1,0 +1,17 @@
+{
+  "checked_utc": "2026-10-19T07:51:59.326132+00:00",
+  "passed": 7,
+  "failures": 0,
+  "synthetic_only": true,
+  "coverage": [
+    "joint normalization and Bayes posterior",
+    "current/future rating causal masking",
+    "metadata-only prior isolation",
+    "query API rejects target",
+    "finite proper joint likelihood gradients",
+    "prediction batch invariance",
+    "own-training encoder state and unseen category handling"
+  ],
+  "test_source_sha256": "7653bed3070d2838609f376f91665801387f64e6feddad103488c040ce8c2b68",
+  "model_sha256": "259587feb9e52b3b943bc5ded000ad86acfceafa4b272f65f2897515b1dabc40"
+}

@@ -1,0 +1,112 @@
+{
+  "checked_utc": "2026-10-19T07:35:47.041567+00:00",
+  "reason": "Both original host PIDs absent after desktop transport interruption; no terminal failure traceback saved",
+  "no_live_R72_process_verified": true,
+  "completed_contexts": 16,
+  "records": [
+    {
+      "fold": 0,
+      "context": 0,
+      "status": "complete",
+      "cached_rows": 139927
+    },
+    {
+      "fold": 0,
+      "context": 1,
+      "status": "complete",
+      "cached_rows": 139927
+    },
+    {
+      "fold": 0,
+      "context": 2,
+      "status": "complete",
+      "cached_rows": 139927
+    },
+    {
+      "fold": 0,
+      "context": 3,
+      "status": "complete",
+      "cached_rows": 139927
+    },
+    {
+      "fold": 1,
+      "context": 0,
+      "status": "complete",
+      "cached_rows": 139927
+    },
+    {
+      "fold": 1,
+      "context": 1,
+      "status": "complete",
+      "cached_rows": 139927
+    },
+    {
+      "fold": 1,
+      "context": 2,
+      "status": "complete",
+      "cached_rows": 139927
+    },
+    {
+      "fold": 1,
+      "context": 3,
+      "status": "complete",
+      "cached_rows": 139927
+    },
+    {
+      "fold": 2,
+      "context": 0,
+      "status": "complete",
+      "cached_rows": 139927
+    },
+    {
+      "fold": 2,
+      "context": 1,
+      "status": "complete",
+      "cached_rows": 139927
+    },
+    {
+      "fold": 2,
+      "context": 2,
+      "status": "complete",
+      "cached_rows": 139927
+    },
+    {
+      "fold": 2,
+      "context": 3,
+      "status": "complete",
+      "cached_rows": 139927
+    },
+    {
+      "fold": 3,
+      "context": 0,
+      "status": "complete",
+      "cached_rows": 139927
+    },
+    {
+      "fold": 3,
+      "context": 1,
+      "status": "complete",
+      "cached_rows": 139927
+    },
+    {
+      "fold": 3,
+      "context": 2,
+      "status": "complete",
+      "cached_rows": 139927
+    },
+    {
+      "fold": 3,
+      "context": 3,
+      "status": "complete",
+      "cached_rows": 139927
+    },
+    {
+      "fold": 4,
+      "context": 0,
+      "status": "query_prediction",
+      "cached_rows": 45056
+    }
+  ],
+  "main_plan_sha256": "2e29b158eddf2f564bf2b4da5b4420a42b645b04f1f327068d2c7342e83d0fc3",
+  "action": "Resume unchanged frozen worker; partial context first512 replay required by original worker; no quality selection"
+}

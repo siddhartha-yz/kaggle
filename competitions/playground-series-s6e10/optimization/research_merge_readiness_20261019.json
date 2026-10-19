@@ -1,0 +1,85 @@
+{
+  "checked_utc": "2026-10-19T05:43:47.625279+00:00",
+  "branch": "codex/s6e10-local-confirmation",
+  "status": "?? competitions/playground-series-s6e10/optimization/research_r69_result.json\n",
+  "main": "52f8cd1f3039f2ecfca77e1dfef60972d76b05f5",
+  "origin_main_cached": "52f8cd1f3039f2ecfca77e1dfef60972d76b05f5",
+  "HEAD": "9f7a585caed48e59277b29a34ef47e8b872931bf",
+  "ahead_commits": 149,
+  "changed_file_count": 1320,
+  "total_file_bytes": 5438809,
+  "extensions": {
+    ".md": 4,
+    "": 1,
+    ".html": 1,
+    ".py": 584,
+    ".json": 722,
+    ".txt": 6,
+    ".pdf": 1,
+    ".png": 1
+  },
+  "largest_files": [
+    [
+      195861,
+      "competitions/playground-series-s6e10/optimization/research_w3_evidence_plot.png"
+    ],
+    [
+      182297,
+      "competitions/playground-series-s6e10/optimization/research_current_status.json"
+    ],
+    [
+      72742,
+      "competitions/playground-series-s6e10/optimization/research_r60_source_result.json"
+    ],
+    [
+      69104,
+      "competitions/playground-series-s6e10/optimization/research_r62_source_result.json"
+    ],
+    [
+      40631,
+      "competitions/playground-series-s6e10/optimization/research_w3_evidence_plot.pdf"
+    ]
+  ],
+  "forbidden_artifact_paths": [],
+  "signed_URL_files": [],
+  "credential_filename_flags": [],
+  "syntax_or_JSON_errors": [],
+  "diff_check_exitcode": 0,
+  "numstat_additions": 97236,
+  "numstat_deletions": 1,
+  "not_done": [
+    "merge",
+    "PR",
+    "main mutation",
+    "global historical experiment runtime test"
+  ],
+  "remote_main_fresh_read": "52f8cd1f3039f2ecfca77e1dfef60972d76b05f5",
+  "tested": {
+    "python_AST_files": 584,
+    "JSON_parse_files": 722,
+    "diff_whitespace_check": "passed",
+    "R68_v12": "Fivefold+threefolddualbounds, independent8modelaudit andLibraryexactbytes allpassed; actualpublic.96118 rank676 verifiedbyparent",
+    "R69": "Syntheticgradient/Hessian/optimum/identitytestpassed; actual5foldqualitygatesfailed asreported, noCSV",
+    "scope_limit": "No all584historicalscripts runtime test or freshend-to-endv12retraining"
+  },
+  "minimum_merge_boundary": "Validated v12 at c21f43b; follow-up R69 research shouldremainseparate orclearlyarchived. Do not waitforactualtop500 to definev12deliverable.",
+  "organizing_needed": [
+    "Update root/competition/optimization READMEs, currentlyreportingv6 orpublic0.95855 and obsoletequotas",
+    "Documentv12dependencyDAG, immutableinputsSHA, isolatedruntimes, CPU/GPUsettings and commands fromfreshcheckout; remove relianceonunrelatedfailedexperimentstate asproductionentryprerequisite through dedicatedwrapper ifauthorized",
+    "Addone read-only saved-artifactverificationentrypoint and smokevalidation; no fulltrainingforcleanup",
+    "Classify149commits/1320files into supportedv12workflow vsresearcharchive; preferreviewablesquashorselectedscope afteruserauthorization, preserveexperimenthistory",
+    "CommitknownR69failure record beforemergeproposal to avoiduntracked ambiguity"
+  ],
+  "estimated_preparation_time": "30-60minutes forreviewablerelease-scope/docs/verification cleanup, anestimate. No mergeorPRauthorizedbytimingquestion.",
+  "merge_blockers": [
+    "Documentation and freshcheckoutreproductionentrypoint lagfarbehindv12",
+    "Largeexperimentalreviewscope97kaddedlines; runtimecoverageisnotcomplete",
+    "Awaituserdecisionbeforeactualmerge orPRpublication"
+  ],
+  "no_actions_taken": [
+    "merge",
+    "PR",
+    "main modifications",
+    "history rewrite"
+  ]
+}

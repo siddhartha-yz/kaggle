@@ -1,0 +1,55 @@
+{
+  "prepared_utc": "2026-10-19T05:46:32.761856+00:00",
+  "formal_best": {
+    "public_auc": 0.96118,
+    "rank": 676,
+    "entries": 2302,
+    "rank500_auc": 0.96172,
+    "gap": 0.00054,
+    "verified_by": "Parent authenticated Kaggle browser at05:28UTC"
+  },
+  "current_experiment": {
+    "R69": "Allfive complete05:40:09UTC;deltaAUC+1.7908ppm versus v12, pairedlower-4.9756ppm, correctedlower-12.9778ppm; notqualified. No3fold/CSV/submission.",
+    "R70_member_origin": "Draftonly; not executed. Deferred after parent asked for strategic review.",
+    "R71": "No-quality expanded-budget compatibility epoch only:152features/native32/batch256/CPU16/GPU3.5GiB ceiling. No validation quality score, not frozen as next main strategy yet."
+  },
+  "public_sources": [
+    {
+      "url": "https://www.kaggle.com/code/goodpjw2008/s6e10-twin-stacks-family-reg-lb-0-96187",
+      "anonymous_endpoint": "https://www.kaggle.com/api/v1/kernels/pull/goodpjw2008/s6e10-twin-stacks-family-reg-lb-0-96187",
+      "local_snapshot": "research_sources/public_gap_review/goodpjw2008_part8.json",
+      "sha256": "cd51845e607fefc5b54b6740fc83097ad76c72aed607c732208cbf012d5a1cc8",
+      "reported_public_auc": 0.96187,
+      "reproducibility_scope": "Latestsourcev11 narrativeParts11/12. Reproducesfinalstack from245/247 shared prediction artifacts; notallraw-data training in this source; theirscore is authorreported historical, not our liveparentverifiedrank."
+    },
+    {
+      "url": "https://www.kaggle.com/code/busyaprime/s6e10-route-or-distance-both-lb-0-96169",
+      "local_snapshot": "research_sources/public_reference_recheck/busyaprime.json",
+      "sha256": "07ee13202fafb5921c89f3a2b6a7f9ba44e56690ad11863647249e5dfb427e81",
+      "reported_public_auc": 0.96169
+    },
+    {
+      "url": "https://github.com/alvis1111/s6e10-airline-solution/tree/main/independent_repro",
+      "reported_independent_owned_model_public_auc": 0.96126,
+      "reported_public_Busy53_copy_auc": 0.96169,
+      "caution": "Do not confuse publicpredictioncopy with ownretraining success; their lower-contextTabPFNandrankfusion also failed."
+    }
+  ],
+  "comparison": {
+    "data_processing": "Already have ownfoldTE, route/distance statistics, original-only teacher/lookup, target-free65modelratingpretext, probabilitystateidentity, native categorical twins. No evidence we simply omitted a known basic preprocessing block. Publicsources vary21overlap exclusion andtransductive rules; ours audited.",
+    "training_recipe": "Published strongRealMLP also uses3-6epochs withDemidovrecipe; no basis for claiming256epochs would closegap. Own6epochR30 lost167ppm,9epochprior anddefaultlongtraining also unsuccessful.",
+    "capacity": "OurprimaryCEandpureRankNet share74inputarchitecture32members; currenttreefamilies4. Public245mixesmanyindependent GB/NN/TFM representations; membercounts are notcomparableto320nearrelatednativeNNmembers. Full-contextTabPFN3.5 at~560ktrainrows differsmateriallyfromourfrozenv2limitedcontexts andTabICL16k/32k.",
+    "ensemble": "Public245/247sharedpoolandtwinstacks reported0.96187; own-model48reported0.96160-.96164. Mainadvantageevidenceisstructureddiversity/sharedpool, notanother scalarweight. R57/R65/R69learnedgate andR64uniformsixviews havefailedourfixedbounds; norescue.",
+    "validation": "Publicmeta-foldCV on fixedbaseOOF is notourfullynestedrefittingprotocol; latestauthoritselfwarnsstack-of-stacksinflatesCV andtestpseudo-label leak. CannotimporttheirCVasproof orweakenour5/3gates. Allourhistoricalofficiallabelsreusedtoo; reportconditionalbounds honestly."
+  },
+  "eliminated_repeats": [
+    "Scalar/cohort/confidence weight rescues afterR57/R65/R69",
+    "Seed/member-count only expansion afterR39",
+    "Longer sameCEschedule afterR30",
+    "Same small-contextTFM repetitions afterR22/R36/R54/R66",
+    "Another tiny density/entropy/rankprojection withoutclearnewmechanism",
+    "Unknown publictestpredictions imported as ifindependentlygenerated or audited"
+  ],
+  "chosen_breakthrough_direction": "Materially larger-context foundation family under freshly expandedGPU budget, starting with existingfreeungatedTabICL2.2 and CPUcache staging. Probe128k raw21 context (onecoherentcontext, not4x32kaverage), then highestresource-qualifiedpredeclaredgeometry; no quality-basedcontextgrid. Publicfoundationfullcontext gap directly motivates this. If128k cannotretain4GiBRAM/2GiBGPU reserves, recordrealfeasibilitylimit ratherthanrelabelsmallcontextasfull. Formalcandidateprotocol mustbe frozenbeforeouterquality, versus actualv12, originalfive/threefolddualbounds andaudit unchanged. R71posterior32 compatibility is hardwareinformationonly, notautomaticpromotionorstrategy switch.",
+  "goal_claim": "No candidatecurrentlyqualified, no actualtop500claim; parentaloneownsKaggleuploads."
+}

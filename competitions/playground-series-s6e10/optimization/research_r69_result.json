@@ -1,0 +1,94 @@
+{
+  "status": "not_qualified",
+  "checked_utc": "2026-10-19T05:40:09.190594+00:00",
+  "stage": "fivefold",
+  "eligible": false,
+  "vs_formal_v12": {
+    "pooled": {
+      "baseline_auc": 0.9616472919389712,
+      "candidate_auc": 0.9616490827618983,
+      "delta_auc": 1.7908229270613418e-06,
+      "paired_se": 3.452256854435564e-06,
+      "conditional_95pct_ci": [
+        -4.975600507632364e-06,
+        8.557246361755048e-06
+      ],
+      "candidate_logloss": 0.22118871359564346
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.9609020905877792,
+        "candidate_auc": 0.9609050379011922,
+        "delta_auc": 2.9473134129931466e-06,
+        "paired_se": 1.0265118355179326e-05,
+        "conditional_95pct_ci": [
+          -1.7172318563158333e-05,
+          2.3066945389144626e-05
+        ],
+        "candidate_logloss": 0.22325272251198777
+      },
+      {
+        "baseline_auc": 0.9618718198394576,
+        "candidate_auc": 0.9618858242400787,
+        "delta_auc": 1.4004400621159263e-05,
+        "paired_se": 6.236031113428411e-06,
+        "conditional_95pct_ci": [
+          1.781779638839577e-06,
+          2.622702160347895e-05
+        ],
+        "candidate_logloss": 0.22067914125315266
+      },
+      {
+        "baseline_auc": 0.9622391658811874,
+        "candidate_auc": 0.9622403106178664,
+        "delta_auc": 1.1447366790040547e-06,
+        "paired_se": 9.082799622642003e-07,
+        "conditional_95pct_ci": [
+          -6.354920470337777e-07,
+          2.924965405041887e-06
+        ],
+        "candidate_logloss": 0.2192996722147059
+      },
+      {
+        "baseline_auc": 0.9614770425380746,
+        "candidate_auc": 0.9614762297170922,
+        "delta_auc": -8.128209824098676e-07,
+        "paired_se": 8.307444743521658e-06,
+        "conditional_95pct_ci": [
+          -1.7095412679712317e-05,
+          1.5469770714892582e-05
+        ],
+        "candidate_logloss": 0.22215110949694467
+      },
+      {
+        "baseline_auc": 0.9617989521351932,
+        "candidate_auc": 0.9617909441516885,
+        "delta_auc": -8.007983504643157e-06,
+        "paired_se": 9.060726110653232e-06,
+        "conditional_95pct_ci": [
+          -2.576700668152349e-05,
+          9.751039672237177e-06
+        ],
+        "candidate_logloss": 0.22056092250142653
+      }
+    ],
+    "corrected_resampled_t": {
+      "mean_delta": 1.855129245220688e-06,
+      "se": 5.342414521062536e-06,
+      "test_train_ratio": 0.25,
+      "df": 4,
+      "one_sided_alpha": 0.025,
+      "lower_bound": -1.2977791401721003e-05
+    },
+    "eligible_for_new_partition_replication": false,
+    "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+  },
+  "all_folds_before_quality": true,
+  "plan_sha256": "3433ec72094ac71db48dbcf8263f349131ca34dab848ae9aef76bb7676ba2969",
+  "oof_sha256": "3e5d6b39e57895b3e25114982fedd93ccd5594166c5e568cb8ba08a567db46b1",
+  "threefold_started": false,
+  "new_CSV": false,
+  "new_formal_submissions_since_v12": 0,
+  "actual_top500_verified": false,
+  "reason": "Allfive honest nested scalar pairwise gates completed. Versus actualv12 delta+1.7908ppm, paired lower-4.9756ppm and correctedlower-12.9778ppm; both gates fail. No weight/seed/ridge rescue, threefold, audit or CSV. Next priority per parent: public solution gap review; R70 member-origin code remains draft and not executed."
+}

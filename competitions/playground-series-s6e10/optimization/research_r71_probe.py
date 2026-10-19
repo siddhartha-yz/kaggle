@@ -1,0 +1,64 @@
+"""Expanded-budget matched32x152/batch256 proof; no validation quality score."""
+import os
+for key in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS'):os.environ[key]='16'
+os.environ['CUDA_VISIBLE_DEVICES']='0'
+import json,time,gc,threading,subprocess,resource,cloudpickle
+import numpy as np,torch
+for key in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS'):os.environ[key]='16'
+from threadpoolctl import threadpool_limits
+from research_w3_common import ROOT,now,dump,sha
+from research_r26_loader import load_split
+from research_r26_features import PosteriorNeuralFeatures as LeanFeatures
+from research_r8_probe import BoundedRealMLP
+from research_resource_guard_v2 import CAP,CEILING,watch,host_available,MIN_AVAILABLE,MIN_GPU_FREE
+from research_r8_streaming import streaming_backend,StreamingTabNNModule
+
+for key in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS'):os.environ[key]='16'
+
+def main():
+    members=32
+    assert json.loads((ROOT/'research_r69_driver_state.json').read_text())['status']=='not_qualified'
+    path=ROOT/'research_r71_probe_n32.json'
+    rec=dict(status='running',started_utc=now(),members=members,no_quality_score=True,
+             runner_sha256=sha(__file__),allocator_cap_bytes=CAP,gpu_process_ceiling_bytes=CEILING)
+    dump(path,rec)
+    plan=json.loads((ROOT/'research_r71_resource_plan.json').read_text())
+    for name,digest in {**plan['source_sha256'],**plan['artifact_sha256']}.items():assert sha(ROOT/name)==digest,name
+    torch.set_num_threads(16);torch.set_num_interop_threads(1)
+    assert torch.cuda.is_available() and torch.cuda.mem_get_info()[0]>=CAP+MIN_GPU_FREE and host_available()>=MIN_AVAILABLE+2*1024**3
+    torch.cuda.set_per_process_memory_fraction(CAP/torch.cuda.get_device_properties(0).total_memory)
+    torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False
+    peak=[0];stop=threading.Event()
+    def monitor():watch(stop,peak,path)
+    watcher=threading.Thread(target=monitor,daemon=True);watcher.start()
+    try:
+        df,raw,y,splits,reference,tree,fold,aux=load_split('oof');fi,vi=splits[0]
+        tr=LeanFeatures();X=tr.fit_transform(raw.iloc[fi].reset_index(drop=True),y[fi],aux.iloc[fi].reset_index(drop=True));V=tr.transform(raw.iloc[vi[:4096]].reset_index(drop=True),aux.iloc[vi[:4096]].reset_index(drop=True))
+        cfg=dict(json.loads((ROOT/'research_r23_plan.json').read_text())['config']);cfg.update(n_epochs=1,stop_epoch=1,n_ens=32,n_threads=16,batch_size=256,predict_batch_size=1024)
+        rec.update(config=cfg,train_rows=len(fi),features=X.shape[1],epochs=[])
+        assert X.shape[1]==152
+        tick=time.monotonic();original=StreamingTabNNModule.on_train_epoch_end
+        def hook(module):
+            original(module);torch.cuda.synchronize()
+            assert all(p.device.type=='cuda' for p in module.parameters()) and str(module.train_dl.ds.device)=='cpu'
+            rec['epochs'].append(dict(epoch=int(module.current_epoch)+1,seconds=time.monotonic()-tick,
+                peak_allocated_bytes=torch.cuda.max_memory_allocated(),peak_gpu_process_bytes=peak[0]))
+            dump(path,rec)
+        StreamingTabNNModule.on_train_epoch_end=hook
+        try:
+            with streaming_backend(),threadpool_limits(16):model=BoundedRealMLP(**cfg).fit(X,y[fi])
+        finally:StreamingTabNNModule.on_train_epoch_end=original
+        assert len(rec['epochs'])==1 and np.array_equal(model.classes_,[0,1])
+        pred=model.predict_proba(V)[:,1];assert np.isfinite(pred).all()
+        model.to('cpu');payload=cloudpickle.dumps(model);del model;gc.collect();torch.cuda.empty_cache()
+        restored=cloudpickle.loads(payload);restored.to('cuda:0');replay=restored.predict_proba(V.iloc[:2048])[:,1]
+        error=float(np.max(np.abs(pred[:2048]-replay)));assert error<1e-7
+        rec.update(status='passed_no_quality_score',completed_utc=now(),seconds=time.monotonic()-tick,
+            reload_prediction_max_error=error,peak_gpu_process_bytes=peak[0],
+            peak_allocated_bytes=torch.cuda.max_memory_allocated(),peak_rss_bytes=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024)
+        assert 0<peak[0]<=CEILING
+        dump(path,rec);print(json.dumps(rec,indent=2),flush=True)
+    except BaseException as error:
+        rec.update(status='failed',completed_utc=now(),error=repr(error),peak_gpu_process_bytes=peak[0]);dump(path,rec);raise
+    finally:stop.set();watcher.join(timeout=5)
+if __name__=='__main__':main()

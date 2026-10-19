@@ -1,0 +1,30 @@
+{
+  "frozen_utc": "2026-10-19T05:48:03.413786+00:00",
+  "route": "ONE no-quality coherent131072-row raw21 TabICL2.2context compatibility and timing profile under expandedresourcebudget",
+  "context_sizes_descending_fresh_process_only": [
+    131072
+  ],
+  "pretrained_weight_update": false,
+  "official_SAT_column_loaded": false,
+  "synthetic_labels": true,
+  "CPU_threads": 16,
+  "allocator_cap_bytes": 3221225472,
+  "GPU_process_cap_bytes": 3758096384,
+  "RSS_cap_bytes": 8589934592,
+  "host_available_RAM_min_bytes": 4294967296,
+  "GPU_free_reserve_bytes": 2147483648,
+  "source_sha256": {
+    "research_r72_probe.py": "b871ec07f6bf4b42066248e1067d7d9da2b1c26d6b9fc71ff443b977fe930a41",
+    "research_resource_guard_v2.py": "63cf7d694a772fe5f88d1c649517c020e9d4b318db0ea40883dcba0cadba9e7c",
+    "research_r36_memory.py": "036da15797ce47a5327ee7329c90914817c93c27d4350b18555f36e4c8e363eb",
+    "research_r22_tabicl_offload.py": "bf9617de3176a222b8d574f8d815e0281e16a36b8e8549a39c56713788dad8ee",
+    "research_w3_tabicl_model.py": "f65ec3c8666be5966808dc6a59583caf4f21f0e1f55f64c5e89d4df1ac042e28"
+  },
+  "artifact_sha256": {
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "research_sources/tabicl/tabicl-classifier-v2-20260212.ckpt": "bdc7dbd5e4ff21f8f0456fcf90c6b7cdf72dbea960f2d05b19bec19f9b3d4ed0",
+    "research_resource_budget_20261019_0542.json": "f9310ffe53142720e9eac57f853204bd6d6a7f7363d51e288a19ed7b90cf7937",
+    "research_strategy_gap_review_20261019.json": "4dce3795f62432f00398413773bf4efea70f13e3d817017faf9fb51a85f8557b"
+  },
+  "no_quality_grid": "This profile fixes128kcoherentcontext/native1/none normalization, usesalternatingfake labels and noSATvalues. Any formalalgorithm frozenonlyafterhardware/timing evidence and before officialquality. Priorfailedsmallcontexts remainfailed."
+}

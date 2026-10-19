@@ -1,0 +1,46 @@
+{
+  "approved_by": "Human request relayed by parent at2026-10-19 05:40UTC: resource budget too restrictive; inspect actual headroom and increase task budget",
+  "observed_utc": "2026-10-19T05:41:44.683889+00:00",
+  "CPU": {
+    "model": "AMD Ryzen9 8945HX",
+    "physical_cores": 16,
+    "logical_CPUs": 32,
+    "loadavg": [
+      2.04150390625,
+      3.47998046875,
+      3.23583984375
+    ],
+    "new_training_threads": 16,
+    "simultaneous_model_fits": 1
+  },
+  "RAM": {
+    "total_bytes": 32275402752,
+    "available_bytes_at_check": 13756420096,
+    "swap_total_bytes": 8589930496,
+    "swap_free_bytes": 241664,
+    "initial_task_RSS_ceiling_bytes": 8589934592,
+    "minimum_host_available_bytes": 4294967296,
+    "reason": "Host available about12.81GiB but swap already full; reserve4GiB and do not increase RAM fit budget merely because CPU is idle."
+  },
+  "GPU": {
+    "model": "RTX5070TiLaptop",
+    "total_NVML_MiB": 12227,
+    "used_MiB": 5951,
+    "free_MiB": 5799,
+    "utilization_pct": 1,
+    "new_task_process_ceiling_bytes": 3758096384,
+    "new_torch_allocator_cap_bytes": 3221225472,
+    "minimum_free_reserve_bytes": 2147483648,
+    "one_GPU_fit_at_a_time": true,
+    "reason": "Free about5.66GiB, including graphics load absent from compute-app list; use3.5GiB process cap and3GiB allocator initially, leavingabout2GiB headroom. Recheck before each fit; may raise only with fresh headroom evidence."
+  },
+  "no_changes_to": [
+    "drivers",
+    "power settings",
+    "safety settings",
+    "other processes"
+  ],
+  "paid": false,
+  "validation_and_audits": "unchanged",
+  "old_r69": "Completed under old budget; do not modify its frozen recipe or rerun."
+}

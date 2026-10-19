@@ -1,0 +1,81 @@
+{
+  "status": "all_pinned_files_verified_no_model_execution",
+  "checked_utc": "2026-10-19T11:45:42.485664+00:00",
+  "files": [
+    {
+      "repository": "alana89/TabSTAR",
+      "revision": "73560fb23d34307f4b6fa849f38f8299a8980a4a",
+      "filename": "README.md",
+      "bytes": 2734,
+      "sha256": "1857ab0ce9ea7096935d4bca50c067cae911553d29c460ac443db37fbf7479af"
+    },
+    {
+      "repository": "alana89/TabSTAR",
+      "revision": "73560fb23d34307f4b6fa849f38f8299a8980a4a",
+      "filename": "config.json",
+      "bytes": 535,
+      "sha256": "1e992dc8c7aafda0e90b2410b4b136ded8cd9157442e3b5846b794aafa0f1264"
+    },
+    {
+      "repository": "alana89/TabSTAR",
+      "revision": "73560fb23d34307f4b6fa849f38f8299a8980a4a",
+      "filename": "model.safetensors",
+      "bytes": 189091544,
+      "sha256": "455272659647d442117ea31ca274e9b683d47295738957229a4ffb632f6fa465"
+    },
+    {
+      "repository": "intfloat/e5-small-v2",
+      "revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52",
+      "filename": "README.md",
+      "bytes": 67791,
+      "sha256": "0d57eda4766cc7ac045f2bf7e700286ea5a8360bb9b57278f67f9b8ef60b0b24"
+    },
+    {
+      "repository": "intfloat/e5-small-v2",
+      "revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52",
+      "filename": "config.json",
+      "bytes": 615,
+      "sha256": "5dfb0363cd0243be179c03bcaafd1542d0fbb95e8cbcf575fff3e229342adc2f"
+    },
+    {
+      "repository": "intfloat/e5-small-v2",
+      "revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52",
+      "filename": "model.safetensors",
+      "bytes": 133466304,
+      "sha256": "45bfa60070649aae2244fbc9d508537779b93b6f353c17b0f95ceccb1c5116c1"
+    },
+    {
+      "repository": "intfloat/e5-small-v2",
+      "revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52",
+      "filename": "special_tokens_map.json",
+      "bytes": 125,
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+    },
+    {
+      "repository": "intfloat/e5-small-v2",
+      "revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52",
+      "filename": "tokenizer.json",
+      "bytes": 711396,
+      "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66"
+    },
+    {
+      "repository": "intfloat/e5-small-v2",
+      "revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52",
+      "filename": "tokenizer_config.json",
+      "bytes": 314,
+      "sha256": "ae83fa6ca0333117ff12606020af925d648667ef70d92ff7f27d781ba0ca4544"
+    },
+    {
+      "repository": "intfloat/e5-small-v2",
+      "revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52",
+      "filename": "vocab.txt",
+      "bytes": 231508,
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+    }
+  ],
+  "TabSTAR_weight_attribution": "Alan Arazi et al., TabSTAR, https://huggingface.co/alana89/TabSTAR; model card CC-BY-4.0, README says MIT; retain stricter CC-BY attribution and both source records",
+  "E5_attribution": "intfloat/e5-small-v2, https://huggingface.co/intfloat/e5-small-v2, model card MIT",
+  "classifiers_fitted": 0,
+  "GPU_used": false,
+  "credentials_created": false
+}

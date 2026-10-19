@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "checked_utc": "2026-10-19T11:45:34.662206+00:00",
+  "pid": 1181224,
+  "classifier_fits": 0,
+  "model_weights_downloaded": false,
+  "error": "CalledProcessError(1, ['/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/.venv-tabstar-r79/bin/python', '-B', '-c', \"\\nimport importlib.metadata as md,json\\nfrom packaging.requirements import Requirement\\nnames=['tabstar','transformers','peft','accelerate','skrub','tokenizers','regex']\\nbad=[]\\nfor name in names:\\n for raw in md.requires(name) or []:\\n  q=Requirement(raw)\\n  if q.marker and not q.marker.evaluate({'extra':''}):continue\\n  try:v=md.version(q.name)\\n  except md.PackageNotFoundError:bad.append(str(q));continue\\n  if q.specifier and v not in q.specifier:bad.append(str(q)+' actual='+v)\\nassert not bad,bad\\nfrom tabstar.tabstar_model import TabSTARClassifier\\nassert md.version('torch')=='2.9.1+cu128'\\nprint('DEPENDENCY_AND_CLASS_IMPORT_PASSED',json.dumps({n:md.version(n) for n in names+['torch','numpy','pandas','scikit-learn','huggingface-hub','safetensors']}),flush=True)\\n\"])"
+}

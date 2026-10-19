@@ -1,0 +1,17 @@
+{
+  "status": "passed_synthetic_transform_only_no_classifier_fit",
+  "checked_utc": "2026-10-19T11:13:38.521520+00:00",
+  "rows": 101,
+  "original27prefix_unchanged": true,
+  "batching_identical": true,
+  "all13six_state_vectors_reconstructed_max_error": 4.093516003944586e-08,
+  "invalid_non_normalized_vector_rejected": true,
+  "official_SAT_loaded": false,
+  "new_quality_scores": 0,
+  "new_model_fits": 0,
+  "source_sha256": {
+    "research_r78_features.py": "fb9ce33ffd77799e4472a45971ee5b11005344752f88a1cc2f58eb0791c923d8",
+    "research_r78_loader.py": "aa8f539d9903ddf981c5846daa0d562a60e71195e7f56d8059dabc97ec7f8a37"
+  },
+  "deferred_until_current_EBM_route_closes": true
+}

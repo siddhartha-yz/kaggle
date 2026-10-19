@@ -1,0 +1,10 @@
+{
+  "status": "passed_dependency_and_import_only",
+  "checked_utc": "2026-10-19T11:53:23.188396+00:00",
+  "pid": 1183831,
+  "classifier_fits": 0,
+  "model_weights_downloaded": false,
+  "original_Torch_CUDA_unchanged": true,
+  "models_instantiated": 0,
+  "GPU_used": false
+}

@@ -1,0 +1,19 @@
+{
+  "frozen_utc": "2026-10-19T09:34:31.972627+00:00",
+  "main_plan_sha256": "06c8bef97aacfe856aa3a34d7a14d3abbc141e4bc76dd68aa18a90efde5b8f88",
+  "outer_quality_inspected": false,
+  "required_outer_folds": 8,
+  "required_native_contexts": 32,
+  "criteria": [
+    "Original paired95lower>0 and correctedresampled-talpha.025lower>0 versusactualv12 on allfive thenfresh3 before finalinference.",
+    "Independentlyreconstruct raw21 schema, numericTrue=1, StratifiedKFold seeds20261018/20261022, IDs and owntrain/validationdisjointness from hashedofficialtrain.",
+    "Independentlyreconstruct four categorical vocabularies and float32 raw21 order; re-fit owntraining meanimputer and StandardScaler, compare savedstatistics and owntraining model.X_train. No queryfitting or targetencoding.",
+    "Reconstruct np.SeedSequence42 fourinnerseeds and TorchCPUGenerator randperm contexts8192 plusclass/feature permutations; allcontextIDs must be owntraining only.",
+    "CheckpointfileSHA97dc3b60...197eacb, officialPyPIwheelSHA and seveninstalledpythonfiles mustmatchfrozenenvironment. All pretrainedparameters mustequalinitialdigest and entirestate_dict unchangedbeforeafterauditqueries.",
+    "Recreate officialGPU BF16 estimators for all8folds; firstcomplete4096 and lastoriginalquerybatch replay error<1e-6, A-B-A firstbatch repeat<1e-6. No claim of GPU/CPUFP32 bitwiseequivalence; originalsyntheticCPUcompatibility128context error0.00303447 is recorded.",
+    "Check allquerycachetags/indices/IDs/probabilities, reassemble allOOF, independent geometric.875v12/.125TabDPT probabilities within1e-12, independently recompute ROC-AUC/pairedbounds and corrected t formula.",
+    "Only allaudits pass permit frozenpredictionplan forfive ownfold estimators eachnative4, meanfivegroupPROBABILITIES ontest, fixedv12pool; verify originalvalidationbatch before test, ID/order/True1/range/CSV17digits/SHA/Libraryexactbyte readback; parentonlyauthenticatedsubmission freshquota."
+  ],
+  "limits": "Same16CPU/3GiBallocator/3.5GiBprocess/8GiBRSS/4GiBhostreserve/2GiBGPUreserve; serial resourceguard remains.",
+  "limitations": "Historical labels reused; CIs omit adaptivehistory. Realworldpretraining overlap unknown, notclaimedexcluded. No actualranking until officialsubmit/report."
+}

@@ -22,6 +22,7 @@ import numpy as np
 import pandas as pd
 import torch
 from tabstar.tabstar_model import TabSTARClassifier
+from tabstar.arch.arch import TabStarModel
 from tabstar.training.lora import load_pretrained
 from research_resource_guard_v2 import CAP, MIN_GPU_FREE, host_available, watch
 
@@ -95,12 +96,20 @@ def main():
         del large_x,large_y,large,td,vd;gc.collect()
         x,y=synthetic(2048); query=x.iloc[:64].copy()
         state('pretrained_CPU_FP32_GPU_FP16_compatibility')
+        strict,loading=TabStarModel.from_pretrained('alana89/TabSTAR',
+            local_files_only=True,output_loading_info=True)
+        assert all(not loading.get(k) for k in ['missing_keys','unexpected_keys','mismatched_keys','error_msgs']), loading
+        base_parameters=sum(p.numel() for p in strict.parameters())
+        assert base_parameters==47263874, base_parameters
+        del strict;gc.collect()
         model=classifier('cpu'); model._prepare_for_train(x,y,None,None)
         model.model_=load_pretrained('alana89/TabSTAR',lora_r=32,lora_alpha=2,dropout=.1)
         model.model_.eval();assert list(model.classes_)==['False','True']
         trainable=sum(p.numel() for p in model.model_.parameters() if p.requires_grad)
         text_trainable=sum(p.numel() for n,p in model.model_.named_parameters() if p.requires_grad and 'text_encoder' in n)
-        assert trainable>0 and text_trainable==0
+        frozen_text_trainable=sum(p.numel() for n,p in model.model_.named_parameters()
+            if p.requires_grad and any(f'text_encoder.encoder.layer.{i}.' in n for i in range(6)))
+        assert trainable>text_trainable>0 and frozen_text_trainable==0
         model.predict_proba(query)
         t=time.monotonic();cpu=model.predict_proba(query);cpu_seconds=time.monotonic()-t
         model.model_.to('cuda');model.device=torch.device('cuda');model.use_amp=True
@@ -131,7 +140,9 @@ def main():
         result=dict(status='passed_no_official_quality_score',checked_utc=datetime.now(timezone.utc).isoformat(),
             synthetic_only=True,official_SAT_loaded=False,model_version='TabSTAR original 2025 checkpoint',
             source_package='tabstar==1.2.2',preprocessing_capacity=capacity,
+            strict_pretrained_load_information=loading,base_parameters=base_parameters,
             trainable_adapter_parameters=trainable,text_encoder_trainable_parameters=text_trainable,
+            first_six_text_layers_trainable_parameters=frozen_text_trainable,
             CPU_FP32_GPU_FP16_max_error=compatibility,query_isolation_error=isolation,query_batch_error=batch,
             CPU_inference_rows=64,CPU_inference_seconds=cpu_seconds,GPU_inference_seconds=timings,
             synthetic_2048row_native_fit_seconds=fit_seconds,reload_error=reload_error,

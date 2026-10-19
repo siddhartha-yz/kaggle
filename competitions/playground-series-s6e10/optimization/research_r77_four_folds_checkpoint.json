@@ -1,0 +1,49 @@
+{
+  "checked_utc": "2026-10-19T12:00:56.191456+00:00",
+  "status": "fourfolds_saved_fifth_running",
+  "completed_folds": [
+    {
+      "fold": 0,
+      "status": "complete",
+      "fit_seconds": 1239.185436358006,
+      "model_sha256": "8f051e77ae87ef7015299289c64374260f1a285d479649b542f32a4e6d747b34"
+    },
+    {
+      "fold": 1,
+      "status": "complete",
+      "fit_seconds": 1092.7079971519997,
+      "model_sha256": "e1ab3c30a457aac4e11d99a6f8f72ea0fd26d10f10c6bed15d65c5e1d6741d41"
+    },
+    {
+      "fold": 2,
+      "status": "complete",
+      "fit_seconds": 1210.9980817220057,
+      "model_sha256": "c2c356e6969f3fa10dd6c3255cdacc352310cd20804a56b3de8ff220c40cb230"
+    },
+    {
+      "fold": 3,
+      "status": "complete",
+      "fit_seconds": 1004.7067115480022,
+      "model_sha256": "00efbe5b7b281d1311aa54bcad3df779d1456883ffe490422cbde106684de965"
+    }
+  ],
+  "current_state": {
+    "status": "own_training_EBM_fit",
+    "updated_utc": "2026-10-19T12:00:30.384674+00:00",
+    "pid": 1187516,
+    "outer_quality_scored": false,
+    "GPU_used": false,
+    "stage": "fivefold",
+    "fold": 4,
+    "seconds": 90.00349037497654,
+    "process_CPU_seconds": 683.203391848,
+    "peak_RSS_bytes": 617345024,
+    "outer_bags": 8,
+    "max_rounds": 50000
+  },
+  "all_folds_before_quality": true,
+  "new_quality_queries": 0,
+  "final_inference_plan_sha256": "3df96b49fea4d71f31347013249e5508f229e562f63f5342b08660480106aff7",
+  "main_unchanged": "42d905a29ee3c182a5d0ee34aba2fff9b542fdda",
+  "actual_top500_verified": false
+}

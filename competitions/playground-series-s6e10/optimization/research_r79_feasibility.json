@@ -1649,7 +1649,7 @@
   "actual_top500_verified": false,
   "parent_only_submitter": true,
   "source_sha256": {
-    "research_r79_probe.py": "8a5bd4e0351bff1836fee282b35052efdc54a8d1bb521adf85c386c932f4da7a",
+    "research_r79_probe.py": "bf436363ef8df67ce9c144f84ff12b94ff848c02e138081ebcedd780fc76ceff",
     "research_r79_setup.py": "4b334d6c8768079589846f3f5a0c4e4830fe81b01aa8f2ce20c61906e647417b",
     "research_r79_download.py": "643b5331543d053a515521a0d3265a07960fd5d8ea7473cd20f483d6314f4ece",
     "research_resource_guard_v2.py": "63cf7d694a772fe5f88d1c649517c020e9d4b318db0ea40883dcba0cadba9e7c"
@@ -1668,5 +1668,12 @@
     "pandas": "2.2.3",
     "huggingface-hub": "0.36.0",
     "safetensors": "0.6.2"
+  },
+  "probe_strict_weight_loading_required": true,
+  "native_implementation_review": {
+    "E5_hidden_layers": 12,
+    "LoRA_text_layers": "Firstsixfrozen;lastsixquery/key/valueLoRAadaptersactive. Textembeddingscannotbe cachedunchangedduringadaptation. ProbeassertsfirstsixfrozenandtextLoRAtrainable.",
+    "native_optimizer": "Sourcepasseswdkey,buttorchAdamW usesweight_decaydefault0.01;do notclaimlora_wdargumentiseffectiveweightdecay. Preserveupstreamcodeandrecordeffectivegroupsbeforeformaltraining.",
+    "native_scheduler": "OneCycleLRtotal_steps=max_epochs andstepcalledonceperepoch perupstream. Resource-adapted3epochmaxwoulddifferfromdefault50; not paperreproduction. Singleepochsyntheticresourceprobeisnotqualityevidence."
   }
 }

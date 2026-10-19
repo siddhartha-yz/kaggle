@@ -24,6 +24,7 @@ import torch
 from tabstar.tabstar_model import TabSTARClassifier
 from tabstar.arch.arch import TabStarModel
 from tabstar.training.lora import load_pretrained
+from tabstar.training.trainer import TabStarTrainer
 from research_resource_guard_v2 import CAP, MIN_GPU_FREE, host_available, watch
 
 OUT = ROOT/'research_artifacts/r79_synthetic_probe'
@@ -59,13 +60,17 @@ def synthetic(n, seed=79):
     return x,y
 
 def classifier(device, **kw):
-    return TabSTARClassifier(is_paper_version=True, device=device, random_state=42,
+    return TabSTARClassifier(is_paper_version=True, device=torch.device(device), random_state=42,
         max_epochs=1, lora_batch=64, global_batch=128, val_batch_size=64,
         output_dir=str(OUT/'native_checkpoints'), **kw)
 
 def main():
-    assert json.loads((ROOT/'research_r77_driver_state.json').read_text())['status'] in {
+    ebm_status=json.loads((ROOT/'research_r77_driver_state.json').read_text())['status']
+    assert ebm_status in {
         'not_qualified','qualified_requires_independent_audit'}, 'EBM must be terminal'
+    if ebm_status=='qualified_requires_independent_audit':
+        for name in ['research_r77_independent_audit.json','research_r77_final_audit.json']:
+            assert json.loads((ROOT/name).read_text())['status']=='passed', 'Finish qualified EBM audits first'
     unit=subprocess.run(['systemctl','--user','is-active','codex-kaggle-r77-validation.service'],
                         capture_output=True,text=True,check=False)
     assert unit.returncode != 0, 'EBM controller still running'
@@ -77,6 +82,9 @@ def main():
         assert p.stat().st_size==q['bytes'] and hashlib.sha256(p.read_bytes()).hexdigest()==q['sha256']
     OUT.mkdir(exist_ok=True)
     torch.set_num_threads(6); torch.set_num_interop_threads(1)
+    # Fused EncoderLayer inference reads raw Linear.weight, bypassing PEFT's
+    # forward wrappers. Keep the module path on both CPU and AMP CUDA.
+    torch.backends.mha.set_fastpath_enabled(False)
     assert torch.cuda.is_available() and host_available()>=6*2**30
     assert torch.cuda.mem_get_info()[0]>=CAP+MIN_GPU_FREE
     torch.cuda.set_per_process_memory_fraction(CAP/torch.cuda.get_device_properties(0).total_memory)
@@ -104,6 +112,7 @@ def main():
         del strict;gc.collect()
         model=classifier('cpu'); model._prepare_for_train(x,y,None,None)
         model.model_=load_pretrained('alana89/TabSTAR',lora_r=32,lora_alpha=2,dropout=.1)
+        assert model.device.type=='cpu' and next(model.model_.parameters()).device.type=='cpu'
         model.model_.eval();assert list(model.classes_)==['False','True']
         trainable=sum(p.numel() for p in model.model_.parameters() if p.requires_grad)
         text_trainable=sum(p.numel() for n,p in model.model_.named_parameters() if p.requires_grad and 'text_encoder' in n)
@@ -125,13 +134,29 @@ def main():
         del model;gc.collect();torch.cuda.empty_cache()
         state('synthetic_native_single_epoch_GPU_fit',rows=len(x))
         fitted=classifier('cuda')
-        t=time.monotonic();fitted.fit(x,y);torch.cuda.synchronize();fit_seconds=time.monotonic()-t
+        epochs=[];original_epoch=TabStarTrainer._train_epoch
+        def observed_epoch(trainer,loader):
+            torch.cuda.synchronize();begin=time.monotonic()
+            groups=[dict(lr=g['lr'],weight_decay=g['weight_decay'],native_wd_argument=g.get('wd')) for g in trainer.optimizer.param_groups]
+            value=original_epoch(trainer,loader)
+            torch.cuda.synchronize()
+            epochs.append(dict(rows=len(loader.dataset),microbatches=len(loader),
+                seconds=time.monotonic()-begin,optimizer_groups=groups,
+                scaler_scale_after_epoch=trainer.scaler.get_scale()))
+            return value
+        TabStarTrainer._train_epoch=observed_epoch
+        try:
+            t=time.monotonic();fitted.fit(x,y);torch.cuda.synchronize();fit_seconds=time.monotonic()-t
+        finally:TabStarTrainer._train_epoch=original_epoch
         assert list(fitted.classes_)==['False','True']
         adapted=any(bool(torch.count_nonzero(p).item()) for n,p in fitted.model_.named_parameters() if 'lora_B' in n)
         assert adapted
         trained=fitted.predict_proba(query)
         assert np.isfinite(trained).all() and trained.shape==(len(query),2)
         fitted.model_.to('cpu');fitted.device=torch.device('cpu');fitted.use_amp=False
+        trained_cpu=fitted.predict_proba(query)
+        trained_compatibility=float(np.max(np.abs(trained_cpu-trained)))
+        assert trained_compatibility<.02
         saved=OUT/'own_synthetic_model.joblib';fitted.save(str(saved))
         del fitted;gc.collect();torch.cuda.empty_cache()
         loaded=TabSTARClassifier.load(str(saved));loaded.model_.to('cuda');loaded.device=torch.device('cuda');loaded.use_amp=True
@@ -146,6 +171,9 @@ def main():
             CPU_FP32_GPU_FP16_max_error=compatibility,query_isolation_error=isolation,query_batch_error=batch,
             CPU_inference_rows=64,CPU_inference_seconds=cpu_seconds,GPU_inference_seconds=timings,
             synthetic_2048row_native_fit_seconds=fit_seconds,reload_error=reload_error,
+            synthetic_native_epoch_profiles=epochs,
+            trained_CPU_FP32_GPU_FP16_max_error=trained_compatibility,
+            PyTorch_MHA_fastpath_enabled=False,
             native_checkpoint_saved=True,peak_GPU_process_bytes=peak[0],
             peak_RSS_bytes=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024,
             GPU_allocator_cap_bytes=CAP,GPU_process_ceiling_bytes=3758096384,

@@ -1,0 +1,17 @@
+{
+  "status": "passed_CPU_device_override_and_own_checkpoint_FP32",
+  "checked_utc": "2026-10-19T12:22:31.060895+00:00",
+  "CUDA_VISIBLE_DEVICES": "0",
+  "explicit_torch_device_CPU_honored": true,
+  "all_checkpoint_parameters_CPU_FP32": true,
+  "CPU_autocast_enabled": false,
+  "CPU_64row_inference_seconds": 0.6084242749784607,
+  "new_classifier_fits": 0,
+  "official_SAT_loaded": false,
+  "new_GPU_training": false,
+  "peak_GPU_process_bytes": 161480704,
+  "checkpoint_sha256": "f6c6f8c35ec7a998b1c38c0b455ad1184d6ae5d21c6a0d9bc09dc71e3dbf7e05",
+  "first_executed_probe_sha256": "c76a1678ab82c7baae4ed61e21891f59f3a7061bfa10b1a4f074c9a4f1de8e78",
+  "revised_probe_sha256": "b457211e5a51b80a3e41bfd08f497734affc8771d8ee8f2030e7d5640dd974d3",
+  "note": "FirstprobeCPUstageactuallyCPU-loadedFP32tensorsunderCUDAautocastcontextduenativestringdeviceoverride;futurecallsusetorch.deviceobject. Thischeckloadsownalreadyfitcheckpoint anddoesnotrepeatanytraining."
+}

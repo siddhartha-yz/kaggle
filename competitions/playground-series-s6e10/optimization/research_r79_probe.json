@@ -1,0 +1,65 @@
+{
+  "status": "passed_no_official_quality_score",
+  "checked_utc": "2026-10-19T12:20:30.162674+00:00",
+  "synthetic_only": true,
+  "official_SAT_loaded": false,
+  "model_version": "TabSTAR original 2025 checkpoint",
+  "source_package": "tabstar==1.2.2",
+  "preprocessing_capacity": {
+    "rows": 559708,
+    "inner_train_rows": 558706,
+    "inner_validation_rows": 1002,
+    "token_fields": 23,
+    "seconds": 33.36723661099677,
+    "peak_RSS_bytes": 3104731136
+  },
+  "strict_pretrained_load_information": {
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "mismatched_keys": [],
+    "error_msgs": []
+  },
+  "base_parameters": 47263874,
+  "trainable_adapter_parameters": 1597440,
+  "text_encoder_trainable_parameters": 442368,
+  "first_six_text_layers_trainable_parameters": 0,
+  "CPU_FP32_GPU_FP16_max_error": 0.0008091330528259277,
+  "query_isolation_error": 0.0,
+  "query_batch_error": 0.00024071335792541504,
+  "CPU_inference_rows": 64,
+  "CPU_inference_seconds": 0.617995645996416,
+  "GPU_inference_seconds": [
+    0.02603621600428596,
+    0.024906809005187824,
+    0.02496763301314786
+  ],
+  "synthetic_2048row_native_fit_seconds": 2.3060937199916225,
+  "reload_error": 0.0,
+  "synthetic_native_epoch_profiles": [
+    {
+      "rows": 1842,
+      "microbatches": 29,
+      "seconds": 1.0550374280137476,
+      "optimizer_groups": [
+        {
+          "lr": 4e-09,
+          "weight_decay": 0.01,
+          "native_wd_argument": 0.0
+        }
+      ],
+      "scaler_scale_after_epoch": 65536.0
+    }
+  ],
+  "trained_CPU_FP32_GPU_FP16_max_error": 0.000822603702545166,
+  "PyTorch_MHA_fastpath_enabled": false,
+  "native_checkpoint_saved": true,
+  "peak_GPU_process_bytes": 1367343104,
+  "peak_RSS_bytes": 3104731136,
+  "GPU_allocator_cap_bytes": 3221225472,
+  "GPU_process_ceiling_bytes": 3758096384,
+  "CPU_threads": 6,
+  "host_RAM_reserve_bytes": 4294967296,
+  "GPU_free_reserve_bytes": 2147483648,
+  "seconds": 46.65505249600392,
+  "limitations": "Synthetic capacity/timing only, no formal candidate/config/weight selection and no leaderboard claim."
+}

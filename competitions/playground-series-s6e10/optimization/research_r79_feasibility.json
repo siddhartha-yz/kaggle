@@ -1630,7 +1630,7 @@
       "name": "REG_SPORTS_NBA_ALL_STAR"
     }
   ],
-  "probe_prepared_not_executed": true,
+  "probe_prepared_not_executed": false,
   "official_SAT_values_loaded": false,
   "new_classifier_fits": 0,
   "new_quality_queries": 0,
@@ -1649,7 +1649,7 @@
   "actual_top500_verified": false,
   "parent_only_submitter": true,
   "source_sha256": {
-    "research_r79_probe.py": "bf436363ef8df67ce9c144f84ff12b94ff848c02e138081ebcedd780fc76ceff",
+    "research_r79_probe.py": "b457211e5a51b80a3e41bfd08f497734affc8771d8ee8f2030e7d5640dd974d3",
     "research_r79_setup.py": "4b334d6c8768079589846f3f5a0c4e4830fe81b01aa8f2ce20c61906e647417b",
     "research_r79_download.py": "643b5331543d053a515521a0d3265a07960fd5d8ea7473cd20f483d6314f4ece",
     "research_resource_guard_v2.py": "63cf7d694a772fe5f88d1c649517c020e9d4b318db0ea40883dcba0cadba9e7c"
@@ -1674,6 +1674,13 @@
     "E5_hidden_layers": 12,
     "LoRA_text_layers": "Firstsixfrozen;lastsixquery/key/valueLoRAadaptersactive. Textembeddingscannotbe cachedunchangedduringadaptation. ProbeassertsfirstsixfrozenandtextLoRAtrainable.",
     "native_optimizer": "Sourcepasseswdkey,buttorchAdamW usesweight_decaydefault0.01;do notclaimlora_wdargumentiseffectiveweightdecay. Preserveupstreamcodeandrecordeffectivegroupsbeforeformaltraining.",
-    "native_scheduler": "OneCycleLRtotal_steps=max_epochs andstepcalledonceperepoch perupstream. Resource-adapted3epochmaxwoulddifferfromdefault50; not paperreproduction. Singleepochsyntheticresourceprobeisnotqualityevidence."
-  }
+    "native_scheduler": "OneCycleLRtotal_steps=max_epochs andstepcalledonceperepoch perupstream. Resource-adapted3epochmaxwoulddifferfromdefault50; not paperreproduction. Singleepochsyntheticresourceprobeisnotqualityevidence.",
+    "CPU_inference_fastpath": "Installedtorch2.9.1EncoderLayerfastpath passeslinear1/linear2.weightdirectly, bypassingPEFTforward. Disableper-processMHAfastpath forconsistentadapterexecution;CUDAAMPalreadydisablesitsfastpath natively. No package/driver/globalsettingchange. RequiretrainedCPU_FP32vsGPU_FP16comparison too."
+  },
+  "user_GPU_test_authorization": "用户在结构化问题中选择：允许限显存测试，合适就切换（推荐）。沿用3GiBallocator/3.5GiBprocess ceiling和余量保护；不干扰其他GPU进程。",
+  "probe_epoch_observer": "Originalnative_train_epochcalledunchanged;recordtiming/nativeoptimizerlr/effectiveweight_decay/scaler,restorefinally;noRNGorparameterchanges.",
+  "probe_status": "passed_no_official_quality_score",
+  "probe_execution_source_sha256": "c76a1678ab82c7baae4ed61e21891f59f3a7061bfa10b1a4f074c9a4f1de8e78",
+  "probe_result_sha256": "b5e1be1ee38e73c1542f8e09b1ab560bdb457882c4ddd02eba6f2ac59c55b396",
+  "current_probe_revision": "Afterfirstcompletedprobe,passtorch.deviceobjecttohonorCPUdespiteCUDA_VISIBLE_DEVICES=0. CPUowncheckpointnofitcheck recordedseparately;firstexecutedsourcepreserved."
 }

@@ -1,0 +1,10 @@
+{
+  "checked_utc": "2026-10-19T12:20:53.792331+00:00",
+  "PID": 1193263,
+  "service": "codex-kaggle-r79-probe.service",
+  "source_sha256": "c76a1678ab82c7baae4ed61e21891f59f3a7061bfa10b1a4f074c9a4f1de8e78",
+  "feasibility_sha256": "ed50c48fa2dce6fb946e2483ba146c17d197fe914643eb1d57dbe11d381d3362",
+  "synthetic_only": true,
+  "official_SAT_loaded": false,
+  "note": "Nativeget_devicehonorsCUDA_VISIBLE_DEVICESoverstringdevice;pretrainedmodelisexplicitlyCPU-loadeduntil.to(cuda). Formalworkerwillpassatorch.deviceobjectforunambiguousCPU/CUDAselection. No active source mutation."
+}

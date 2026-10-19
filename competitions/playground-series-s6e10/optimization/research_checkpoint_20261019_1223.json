@@ -1,0 +1,79 @@
+{
+  "checked_utc": "2026-10-19T12:23:47.855763+00:00",
+  "status": "Safe boundary: EBM route closed negative; authorized synthetic GPU probe passed; no active model job",
+  "EBM": {
+    "completed_folds": 5,
+    "total_folds": 5,
+    "started_utc": "2026-10-19T10:43:06.728611+00:00",
+    "completed_utc": "2026-10-19T12:18:14.811559+00:00",
+    "wall_seconds": 5708.082948,
+    "controller_PID": 1160078,
+    "last_worker_PID": 1187516,
+    "service": "codex-kaggle-r77-validation.service",
+    "service_state": "inactive/dead/MainPID0/ExecMainStatus0 verified aftercompletion",
+    "blocked_or_stuck": false,
+    "resource_guard_failure": false,
+    "result": "not_qualified",
+    "candidate_auc": 0.9615991283077742,
+    "baseline_v12_auc": 0.9616472919389712,
+    "delta_auc": -4.8163631197084555e-05,
+    "paired95_lower": -6.83762993070725e-05,
+    "corrected_t_lower": -9.307860573939497e-05,
+    "positive_folds": 0,
+    "remaining_R77_stages": 0,
+    "threefold_or_audit_or_test_or_submission_started": false
+  },
+  "GPU_probe": {
+    "status": "passed_no_official_quality_score",
+    "PID": 1193263,
+    "service": "codex-kaggle-r79-probe.service",
+    "service_state": "inactive/dead/MainPID0/ExecMainStatus0 verified",
+    "seconds": 46.65505249600392,
+    "synthetic_only": true,
+    "official_labels_loaded": false,
+    "GPU_allocator_cap_bytes": 3221225472,
+    "GPU_peak_process_bytes": 1367343104,
+    "host_peak_RSS_bytes": 3104731136,
+    "CPU_64row_seconds": 0.617995645996416,
+    "GPU_64row_seconds": [
+      0.02603621600428596,
+      0.024906809005187824,
+      0.02496763301314786
+    ],
+    "CPU_FP32_GPU_FP16_error": 0.0008091330528259277,
+    "trained_reload_error": 0.0,
+    "native_epoch_profile": [
+      {
+        "rows": 1842,
+        "microbatches": 29,
+        "seconds": 1.0550374280137476,
+        "optimizer_groups": [
+          {
+            "lr": 4e-09,
+            "weight_decay": 0.01,
+            "native_wd_argument": 0.0
+          }
+        ],
+        "scaler_scale_after_epoch": 65536.0
+      }
+    ],
+    "explicit_CPU_device_followup": "passed_CPU_device_override_and_own_checkpoint_FP32"
+  },
+  "next_stage": "FreezeoneprospectiveTabSTARraw21LoRArecipeandonefixedfusionversusactualformalbest,thenoriginalwholefive/conditional3dualboundgatesandindependentaudit. Notyetfrozen/started;nofurtherqualityquery orsubmission.",
+  "rough_resource_only_estimate": "Synthetic29microbatches/1.055sec plus559708rawpreprocess33.37sec suggestsroughly15-20minutes per3epochnativeouterfit+validation;five~90min,conditionallythree~45-60min. Extrapolationonly,notactualformalrun oraccuracyforecast.",
+  "known_limitations": [
+    "GPU~25xcomparisonisinferenceonly,notmeasuredCPUtrainingacceleration.",
+    "Single-epochresourceprobenativeOneCycleLRstarts4e-9;thisisnotatrainingqualityprooforofficialrecipe.",
+    "FirstprobeactualCPU-loadedFP32modelranunderCUDAautocastcontextbecauseauthorstringdeviceoverride;subsequentCPUcheckpointcheckandtorch.deviceargumentfixconfirmedCPU/FP32withoutanyrefit.",
+    "Noexplicitairlinesatisfactionnamein400sourcepretrainlist;underlyingrowoverlapnotprovenabsent."
+  ],
+  "current_formal_best": "v12 public.96118 historicalauthenticatedrank676/2302 at05:28UTC;notfreshcurrentrank",
+  "new_formal_submissions": 0,
+  "actual_top500_verified": false,
+  "main_unchanged": "42d905a29ee3c182a5d0ee34aba2fff9b542fdda",
+  "report_files_sha256": {
+    "research_r77_result.json": "684cf43facd9a6dd13c1adb886391450273827004a9e6e28f2d4562e90e5f86f",
+    "research_r79_probe.json": "b5e1be1ee38e73c1542f8e09b1ab560bdb457882c4ddd02eba6f2ac59c55b396",
+    "research_r79_device_check.json": "f89a0ff8f6f70aa72802f8e16f3b55c297e6552b107cfd4aab56eb22670375a3"
+  }
+}

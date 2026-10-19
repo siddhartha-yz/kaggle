@@ -1,0 +1,22 @@
+{
+  "frozen_utc": "2026-10-19T08:07:00.101479+00:00",
+  "main_plan_sha256": "c9adfb6a877523f39970cdc6380b9c2adffd56681a3d6e3c02c1b579b25b33d9",
+  "outer_quality_inspected": false,
+  "required_stages": [
+    "fivefold",
+    "threefold"
+  ],
+  "required_saved_models": 8,
+  "required_native_members": 256,
+  "requirements": [
+    "Both original paired95 and correctedresampled-t lower bounds strictlypositive against actualv12 before any final inference.",
+    "Independent raw IDs/True target/StratifiedKFold seeds20261018/20261022 reconstruction; owntraining/validation disjointness; allfiles and existingR68 savedmodel+transformer hashes.",
+    "Independent owntraining strictOOF TE reconstruction using fresh sklearn TargetEncoder parameters and all owntrainingrows; CPU nativefirst256 and GPU validationfirst512 margins replay maximumerror2e-5; default meanprob restored and agrees within2e-6.",
+    "For every32native model use full cached training margins and ownlabels to solve32intercepts independently by80stepbisection, compare to frozenBrent roots within1e-9 and maximum native prior residual1e-12.",
+    "Owntraining calibration only; fixedslope1/no fits on validation; independent additive score-shift probability invariance1e-12.",
+    "Recompute every validation native32 sigmoidmean and .875v11/.125calibratedRankNet geometric posterior independently, probabilityerror1e-12; no changing formula/thresholds/rows afterscores.",
+    "Existing source R68 classifier weights remainunchanged, zero new classifier fits. Resource budgets remain1.5GiBallocator/2GiBprocess/8GiBRSS/4GiBhostreserve/2GiBGPUreserve/16CPUthreads.",
+    "Only both gated and audited results may generate mean5 existing native32 (160member) test probabilities and same fixedv11pool; independent ID/True/range/formula/CSV17digitroundtrip/SHA and Library exactbyte readback; parentonlysubmission withfreshquota."
+  ],
+  "limitations": "Conditional intervals after adaptive history; reused3partition is not untouchedholdout. Native score origin identification doesnot guarantee rankgain."
+}

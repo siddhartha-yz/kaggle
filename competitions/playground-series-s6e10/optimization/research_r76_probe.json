@@ -1,0 +1,61 @@
+{
+  "status": "passed_no_quality_score",
+  "checked_utc": "2026-10-19T09:56:16.880395+00:00",
+  "synthetic_only": true,
+  "official_SAT_loaded": false,
+  "original_parameters_sha256": "56beb355781a64b555f6adfaaa291c0e616c7043a58070f5c07710b1cb90aa10",
+  "CPU_FP32_GPU_BF16_max_error": 0.00192183256149292,
+  "repeat_error": 0.0,
+  "query_isolation_error": 0.0,
+  "query_batch_error": 0.0,
+  "training_profiles": [
+    {
+      "support": 512,
+      "query": 512,
+      "status": "passed",
+      "seconds_per_step": 0.5857675055012805,
+      "max_allocated_bytes": 2578078208,
+      "max_reserved_bytes": 2902458368,
+      "losses": [
+        0.02632772922515869,
+        0.018698489293456078
+      ]
+    },
+    {
+      "support": 1024,
+      "query": 512,
+      "status": "allocator_OOM"
+    }
+  ],
+  "inference_profiles": [
+    {
+      "support": 1024,
+      "query": 1024,
+      "status": "passed",
+      "seconds": 0.3135914419835899,
+      "max_allocated_bytes": 1259650048,
+      "max_reserved_bytes": 1505755136
+    },
+    {
+      "support": 2048,
+      "query": 1024,
+      "status": "passed",
+      "seconds": 0.4889430229959544,
+      "max_allocated_bytes": 1698050048,
+      "max_reserved_bytes": 1874853888
+    },
+    {
+      "support": 4096,
+      "query": 512,
+      "status": "passed",
+      "seconds": 0.9280742020055186,
+      "max_allocated_bytes": 2410704384,
+      "max_reserved_bytes": 3168796672
+    }
+  ],
+  "peak_gpu_process_bytes": 3412066304,
+  "peak_RSS_bytes": 2416574464,
+  "seconds": 7.1970448110078,
+  "architecture": "Official unmodified AutoGluon1.5 Tab2D, strict Mitra-v2 safetensors state load, torch2.9.1 SDPA, no flash-attn extension",
+  "limitations": "Synthetic resource timing; reduced contexts and own fixed-step adaptation, not reproduction of official eightbag16k-context benchmark."
+}

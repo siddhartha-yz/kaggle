@@ -1,0 +1,54 @@
+{
+  "checked_utc": "2026-10-19T10:01:07.681693+00:00",
+  "status": "passed",
+  "python": "3.12.14",
+  "installed_full_AutoGluon": false,
+  "model_core": "Unmodified four official AutoGluon1.5 PyPI wheel modules, separate private namespace; strict v2 safetensors loading",
+  "core_provenance": {
+    "source_url": "https://files.pythonhosted.org/packages/48/7c/50547d2940e98c8a15b8c92cd4953814385b95f5fc1dec806fa240389417/autogluon_tabular-1.5.0-py3-none-any.whl",
+    "wheel_sha256": "62ba6ee7fc88f60effc5e11ee6f55f86a0917b55f2c2ff881cd9a611267cdceb",
+    "model_core_unmodified": true,
+    "package_namespace_only": "r76_mitra_core",
+    "files": {
+      "_internal/models/tab2d.py": {
+        "official_wheel_member": "autogluon/tabular/models/mitra/_internal/models/tab2d.py",
+        "sha256": "a3f4b9ef6fa72ab870c66105683493bd32c4ecaced3af42601146b73b0887826"
+      },
+      "_internal/models/embedding.py": {
+        "official_wheel_member": "autogluon/tabular/models/mitra/_internal/models/embedding.py",
+        "sha256": "ef83ba7065a15321f1838fb0890c32e2c3de0d84337b67a423d1f998b52d48b8"
+      },
+      "_internal/models/base.py": {
+        "official_wheel_member": "autogluon/tabular/models/mitra/_internal/models/base.py",
+        "sha256": "3caa4c3d3e4e4fd2459e660f9e1cc551e64fc1d34cd5efa4f7bfe05bc199ab46"
+      },
+      "_internal/config/enums.py": {
+        "official_wheel_member": "autogluon/tabular/models/mitra/_internal/config/enums.py",
+        "sha256": "865ca18171ef1d92a060ad73dc31d21f112cb821ce13b63601da248ce1bc496b"
+      }
+    }
+  },
+  "license_url": "https://raw.githubusercontent.com/autogluon/autogluon/v1.5.0/LICENSE",
+  "license_sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+  "packages": {
+    "torch": "2.9.1+cu128",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "sympy": "1.14.0",
+    "safetensors": "0.6.2",
+    "huggingface-hub": "0.36.0",
+    "einops": "0.8.1",
+    "einx": "0.3.0",
+    "frozendict": "2.4.7"
+  },
+  "new_venv": ".venv-mitra-r76",
+  "new_packages": [
+    "einops==0.8.1",
+    "einx==0.3.0",
+    "frozendict==2.4.7"
+  ],
+  "borrowed_site_packages_read_only": true,
+  "original_Torch_CUDA_driver_unchanged": true,
+  "AG_full_distribution_requirements_not_claimed_satisfied": true,
+  "credentials_or_new_terms": false
+}

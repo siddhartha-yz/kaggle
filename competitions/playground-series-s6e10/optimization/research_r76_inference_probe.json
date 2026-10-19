@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "synthetic_only": true,
+  "support": 4096,
+  "query": 1024,
+  "seconds": 1.3751455679885112,
+  "max_allocated_bytes": 2567378944,
+  "max_reserved_bytes": 3080716288,
+  "peak_GPU_process_bytes": 3288334336
+}

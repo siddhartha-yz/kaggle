@@ -1,0 +1,15 @@
+{
+  "checked_utc": "2026-10-19T10:01:07.698189+00:00",
+  "passed": 6,
+  "failures": 0,
+  "synthetic_only": true,
+  "coverage": [
+    "own-training category vocabulary and unseen-query handling",
+    "own-training medians and fixed columns",
+    "ID/target exclusion",
+    "reject invalid numerical data",
+    "balanced context determinism and unique training indices",
+    "disjoint deterministic support/query training episodes"
+  ],
+  "test_sha256": "ce360559c8bf84a8ba2dc624e13401b11be036224ed17c21e1554a6de36151f5"
+}

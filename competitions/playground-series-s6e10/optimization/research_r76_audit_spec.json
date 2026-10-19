@@ -1,0 +1,15 @@
+{
+  "frozen_utc": "2026-10-19T10:01:07.698405+00:00",
+  "when": "Only after both fivefold and threefold dual-bound gates pass",
+  "independent_implementation_required": true,
+  "checks": [
+    "Rehash official data/checkpoint/core/source and frozen plan; reconstruct StratifiedKFold seed20261018 five and seed20261022 three directly from official IDs/True=1 labels",
+    "For all eight folds independently refit own-training category vocabulary/medians; regenerate all four seeds50step support/query episodes and4096 balanced inference contexts, prove no outer row or label in any fit/context",
+    "Check all final safetensors and parameter digests, number of steps, loss and warmup recipe; no outer early stopping or refit/context weight rescue",
+    "Replay at least one independently refitted synthetic/real native with source trace; independently replay saved native raw-core first1024/last query, compare cached and original raw-core; query permutation/isolation with unchanged support/weights",
+    "Reconstruct equal four-native probabilities, fixed .875v12/.125Mitra logit formula, all OOF ID/target/fold ordering; recompute AUC, paired DeLong lower and corrected-t lower independently",
+    "Only after audit passed: reload all five audited fold groups (4 natives each), exact training encoder and fixed balanced context; equal mean five group probabilities on test; fixed v12 pool; no full-data refit",
+    "Verify exact test/sample ID order,299844 rows,True=1,column names,finite[0,1],formula,17digit roundtrip,SHA256; Library readback exact bytes; authenticated parent only fresh quota and upload"
+  ],
+  "limitations": "Reused official labels and adaptive research history; no untouched holdout or verified public gain claim. Reduced512training support/four natives differs published eightbag16k benchmark."
+}

@@ -1,0 +1,14 @@
+{
+  "checked_utc": "2026-10-19T10:01:07.681328+00:00",
+  "original_plan_sha256": "06c8bef97aacfe856aa3a34d7a14d3abbc141e4bc76dd68aa18a90efde5b8f88",
+  "check_source_sha256": "47d8270a1fe31acbfa2657ba174c5f876e95d65adf3aabe85910ce2368cab19c",
+  "original_candidate": "expit(.875logit(actualv12)+.125logit(TabDPT)), clip1e-6",
+  "evaluation": "Already a complementary fusion test, not a stand-alone model rejection",
+  "result_sha256": "03f00a3cf0e8528251ef13f3f21af268f7d1055c9f6cdaccf32b1eb147798486",
+  "delta_auc": -6.572608023669435e-05,
+  "paired95_lower": -9.023861122605473e-05,
+  "corrected_resampled_t_lower": -0.00011901339564027414,
+  "positive_folds": 0,
+  "decision": "Close R75 original fixed12.5percent pool. No post-result weight grid, context rescue, or extra training. Pursue prospectively frozen new-family Mitra-v2 adaptation.",
+  "new_quality_queries": 0
+}

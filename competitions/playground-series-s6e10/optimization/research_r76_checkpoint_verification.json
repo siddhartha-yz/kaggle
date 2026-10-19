@@ -1,0 +1,12 @@
+{
+  "repository": "autogluon/mitra-classifier-2",
+  "revision": "edada0d20759c58ada8c8605c25f22f6e98ea5f0",
+  "file": "model.safetensors",
+  "bytes": 302717904,
+  "sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+  "official_metadata_hash_verified": true,
+  "license": "Apache-2.0",
+  "anonymous_public_download": true,
+  "credentials_or_gate_acceptance": false,
+  "seconds": 13.440566548000788
+}

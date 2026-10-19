@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-10-19T06:26:26.009011+00:00",
+  "wheel_sha256": "c80b8ec2719be26bc0bf1dd758a2361f58019d8f7877038b785529a425789ce4",
+  "python_source_files_verified": 91,
+  "mismatch": [],
+  "installed_sources_unchanged_from_official_wheel": true
+}

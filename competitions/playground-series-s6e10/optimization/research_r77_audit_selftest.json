@@ -1,0 +1,8 @@
+{
+  "status": "passed_synthetic_no_classifier_fit",
+  "checked_utc": "2026-10-19T10:49:44.082920+00:00",
+  "manual_numeric_cut_boundary_missing_unknown_nominal_error": 0.0,
+  "rank_based_auc_and_placements_match_bruteforce_with_ties": true,
+  "official_SAT_loaded": false,
+  "source_sha256": "3eb8417fa8772fe0fb67cb0c9cd1c2d6953602dbeb00a0a1324747221486346b"
+}

@@ -1,0 +1,29 @@
+{
+  "status": "passed_no_quality_score",
+  "checked_utc": "2026-10-19T08:03:06.608840+00:00",
+  "native_margin_shape": [
+    32,
+    2048
+  ],
+  "CPU_GPU_native_margin_error": 2.7418136596679688e-06,
+  "current_meanprob_replay_error": 0.0,
+  "native_meanprob_reconstruction_error": 8.912611149103356e-08,
+  "default_prediction_restored_error": 0.0,
+  "peak_gpu_process_bytes": 304087040,
+  "peak_allocated_bytes": 360100864,
+  "peak_RSS_bytes": 2513567744,
+  "seconds": 5.68981843200163,
+  "allocator_cap_bytes": 1610612736,
+  "GPU_process_ceiling_bytes": 2147483648,
+  "minimum_GPU_free_bytes": 2147483648,
+  "new_classifier_fits": 0,
+  "own_strict_OOF_training_queries_only": true,
+  "official_validation_AUC_computed": false,
+  "source_model_sha256": "101bef5475a545850891779766cdc70d99d139bc5e072776ddcd058f896b48db",
+  "source_sha256": {
+    "research_r74_probe.py": "5d4d5df40b34a9d95b2d84ea615e5b36d67a14727c8de404a26a46a97fcf4b76",
+    "research_r70_member_origin.py": "ac1aa0d5d7f9ba699903fdd767daa61a5fd52cc6fd2bffa71d93ed52d610bdbb",
+    "research_r70_inputs.py": "a1fed4397fa4c46a6c520c4e9a5884c8393b5c4ae351fc4d2b61a833ada8b8ea",
+    "research_resource_guard_v2.py": "63cf7d694a772fe5f88d1c649517c020e9d4b318db0ea40883dcba0cadba9e7c"
+  }
+}

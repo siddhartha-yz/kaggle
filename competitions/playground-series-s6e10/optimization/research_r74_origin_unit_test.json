@@ -1,0 +1,1 @@
+{"status": "passed_synthetic_only", "member_origin_shift_invariance_error": 3.3306690738754696e-16, "intercept_equivariance_error": 3.552713678800501e-15, "training_prior_error": 0.0}

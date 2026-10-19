@@ -1,0 +1,22 @@
+{
+  "closed_utc": "2026-10-19T08:01:16.329873+00:00",
+  "status": "not_qualified",
+  "stage": "fivefold",
+  "completed_folds": 5,
+  "native_models": 20,
+  "baseline": "actual v12",
+  "baseline_auc": 0.9616472919389712,
+  "candidate_auc": 0.9615255949444619,
+  "delta_auc": -0.00012169699450936822,
+  "paired95_lower": -0.0001795905346321292,
+  "corrected_resampled_t_lower": -0.0002021094520600063,
+  "positive_folds": 0,
+  "threefold_run": false,
+  "independent_audit_run": false,
+  "CSV_created": false,
+  "formal_submission": false,
+  "plan_sha256": "a8ce5dc007ba83efee9d3202581e0b937a677114913b43a8fae182ea47e1010d",
+  "oof_sha256": "06c7fec6032af382f9843ee07a9d9eae799d36dff7eea2a5e634068db0ff75bb",
+  "all_folds_before_scoring": true,
+  "actual_top500_verified": false
+}

@@ -2,6 +2,9 @@
   "frozen_utc": "2026-10-19T05:07:26.651899+00:00",
   "main_plan_sha256": "d953c6b974491daf8822409f7b11ddb41316b82f0faa97d69b52fe8ad4a543ac",
   "additional_sha256": {
-    "research_r68_audit.py": "0b810127545d0b36208466c9a86e0400ab42d6aa9942ecd01a9f519229acde10"
+    "research_r68_audit.py": "0b810127545d0b36208466c9a86e0400ab42d6aa9942ecd01a9f519229acde10",
+    "research_r68_csv.py": "be3ae295e22fd2d0b63a79241170baf8293ceec817a3f60dee639209dfcf1031",
+    "research_r68_prepare_final.py": "1f5c3bf4bdc1597f0e3c2287ff4d7382a0bf3019ddd33ac8370e94a44939a308",
+    "research_r68_followthrough.py": "0bc8adbe8e4126b3afab253570b0e50f627fee19ccf0e10f0d6bde7a83be85ec"
   }
 }

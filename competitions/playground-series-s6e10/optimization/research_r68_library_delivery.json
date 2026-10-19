@@ -1,0 +1,17 @@
+{
+  "library_file_id": "libfile_c32bea84dc108191b41308c29dd60da2",
+  "file_id": "file_00000000fc3481fda3d9223c20400a78",
+  "file_name": "submission_pure_ranknet_r68_v12.csv",
+  "current_version_number": 0,
+  "sha256": "f48276b144e8c9297fb9fec27174044a55a7eb3f2af23dde3f13478a38a4e545",
+  "bytes": 8205651,
+  "byte_identical": true,
+  "rows": 299844,
+  "download_url": "https://chatgpt.com/api/library/files/libfile_c32bea84dc108191b41308c29dd60da2/download",
+  "created_utc": "2026-10-19T05:22:39.148025+00:00",
+  "new_formal_submissions_since_v11": 0,
+  "current_daily_quota": null,
+  "parent_only_submitter": true,
+  "quota_recheck_before_upload": true,
+  "actual_top500_verified": false
+}

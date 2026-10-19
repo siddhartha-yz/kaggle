@@ -1,16 +1,13 @@
 # Kaggle
 
-按比赛组织的 Kaggle 学习与实验仓库，记录问题定义、验证方案、可复现代码及实际实验结果。
+按比赛组织的 Kaggle 学习与实验仓库，保留代码、验证方法和实际结果。
 
-## 当前项目
+## Playground Series S6E10
 
-- [Predicting Airline Satisfaction — Playground Series S6E10](https://www.kaggle.com/competitions/playground-series-s6e10)
-- 项目目录：[`competitions/playground-series-s6e10/`](competitions/playground-series-s6e10/)
-- 目标：建立航空旅客满意度预测基线，按 ROC-AUC 评估预测概率。
-- 状态：已准备 CatBoost 基线、严格 CSV 校验与合成测试；尚未下载真实数据、训练真实模型或提交比赛，无真实实验成绩。用法见比赛目录 README。
+已提交 v12，public ROC-AUC **0.96118**。2026-10-19 05:28 UTC 的已核实排名为 **676/2302**，尚未达到前 500；此处为历史快照。
 
-## 目录约定
+- [比赛目录与早期基线](competitions/playground-series-s6e10/)
+- [v12 配方、证据与精确回放](competitions/playground-series-s6e10/optimization/V12.md)
+- [完整训练代码与实验历史](https://github.com/siddhartha-yz/kaggle/tree/codex/s6e10-local-confirmation/competitions/playground-series-s6e10/optimization)
 
-每个比赛使用 `competitions/<competition-slug>/`，在比赛 README 中维护数据说明、验证方法、基线计划和实验记录。后续代码和笔记本在相应比赛目录下添加。
-
-数据集、模型权重、生成的预测文件和本地运行产物留在本机。不要提交密钥、`.env`、`kaggle.json` 或个人凭据。根目录 `.gitignore` 已覆盖常见路径与格式；每次提交仍需检查暂存文件。
+main 提供精简的 v12 产物校验和 CSV 回放入口。数据、模型、预测、本机环境和凭据不入库；完整实验保留在研究分支。

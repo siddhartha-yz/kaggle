@@ -1,0 +1,91 @@
+{
+  "status": "passed_no_official_quality_score",
+  "checked_utc": "2026-10-19T12:30:45.764560+00:00",
+  "synthetic_only": true,
+  "official_SAT_loaded": false,
+  "epochs": 3,
+  "pretrained_base_parameters_sha256": "48b64d4f6c8abbe0fe49d6a053903af5d1b63011abd50cb1225d852dcdcff86b",
+  "observation_prediction_error": 0.0,
+  "observation_parameters_exact": true,
+  "fit_seconds": [
+    4.4385023809736595,
+    3.596540772006847
+  ],
+  "native_trace": {
+    "epochs": [
+      {
+        "rows": 1842,
+        "microbatches": 29,
+        "seconds": 0.8346860899764579,
+        "optimizer_groups": [
+          {
+            "lr": 0.000843121446451091,
+            "weight_decay": 0.01,
+            "wd_argument": 0.0
+          }
+        ],
+        "training_loss": 0.5991725286754024,
+        "updates_called": 15,
+        "updates_executed": 15,
+        "scaler_scale": 65536.0
+      },
+      {
+        "rows": 1842,
+        "microbatches": 29,
+        "seconds": 0.8387592060025781,
+        "optimizer_groups": [
+          {
+            "lr": 0.0003019629091399539,
+            "weight_decay": 0.01,
+            "wd_argument": 0.0
+          }
+        ],
+        "training_loss": 0.5300389974823992,
+        "updates_called": 30,
+        "updates_executed": 30,
+        "scaler_scale": 65536.0
+      },
+      {
+        "rows": 1842,
+        "microbatches": 29,
+        "seconds": 0.9005172640027013,
+        "optimizer_groups": [
+          {
+            "lr": 4e-09,
+            "weight_decay": 0.01,
+            "wd_argument": 0.0
+          }
+        ],
+        "training_loss": 0.5298262688934997,
+        "updates_called": 45,
+        "updates_executed": 45,
+        "scaler_scale": 65536.0
+      }
+    ],
+    "inner_evaluations": [
+      {
+        "rows": 206,
+        "loss": 0.5290672779083252,
+        "metric": 0.818126119332642
+      },
+      {
+        "rows": 206,
+        "loss": 0.5356369614601135,
+        "metric": 0.817701951173532
+      },
+      {
+        "rows": 206,
+        "loss": 0.5355902910232544,
+        "metric": 0.817701951173532
+      }
+    ],
+    "microbatches": 87,
+    "updates_called": 45,
+    "updates_executed": 45,
+    "initial_base_hash": "48b64d4f6c8abbe0fe49d6a053903af5d1b63011abd50cb1225d852dcdcff86b",
+    "trainable_parameters": 1597440,
+    "best_dir": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/research_artifacts/r79_trace_probe/observed/20261019_203042/best_model"
+  },
+  "peak_GPU_bytes": 1386217472,
+  "peak_RSS_bytes": 2227113984
+}

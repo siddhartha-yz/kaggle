@@ -1,0 +1,28 @@
+{
+  "versions": {
+    "tabstar": "1.2.2",
+    "transformers": "4.49.0",
+    "peft": "0.15.1",
+    "accelerate": "1.5.2",
+    "skrub": "0.5.1",
+    "tokenizers": "0.21.0",
+    "regex": "2024.11.6",
+    "scikit-learn": "1.5.2",
+    "torch": "2.9.1+cu128",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0",
+    "huggingface-hub": "0.36.0",
+    "safetensors": "0.6.2"
+  },
+  "isolated": ".venv-tabstar-r79",
+  "original_borrowed_environments_unchanged": true,
+  "model_weights_pinned_offline": true,
+  "CUDA_visible_device": 0,
+  "CPU_threads": 6,
+  "torch_MHA_fastpath": false,
+  "AMP": "CUDAfloat16nativeGradScaler",
+  "TF32": false,
+  "package_sources_unmodified": true
+}

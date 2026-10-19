@@ -1,0 +1,14 @@
+{
+  "requested_by": "Latest explicit user instruction delegated by parent",
+  "training_stop_utc": "2026-10-19T15:15:00+00:00",
+  "hard_stop_utc": "2026-10-19T15:59:00+00:00",
+  "user_timezone": "Asia/Shanghai",
+  "training_stop_local": "2026-10-19 23:15",
+  "hard_stop_local": "2026-10-19 23:59",
+  "only_remaining_route": "R79 TabSTAR",
+  "no_new_directions": true,
+  "automatic_resume": false,
+  "replaces_top500_stop_condition": true,
+  "signal": "SIGTERM first; task service owns only this task's processes",
+  "submission_requires": "Both original five/threefold dual-bound gates and independent audits completed with sufficient time; parent-only authenticated upload with fresh quota"
+}

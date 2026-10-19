@@ -1,0 +1,17 @@
+{
+  "status": "frozen_before_officialfit",
+  "requirements": [
+    "Bothwholefiveandconditionalthreedualboundgatesvsactualv12beforeaudit/test",
+    "RebuildouterStratIDsandnativebinaryinnerseed41split(1002innerholdout) independently;noouterrowsforfit/selection",
+    "RebuildnativeTabSTARVerbalizeronowninnertrainonly;exactscaler/quantiles/classes/date/constant/targetname state;comparequerytransforms withoutfittingquery",
+    "Strictpinnedpretrainedweights/sourcehashes;unchanged47mnon-LoRAbasehash;selectednativebestadapterfilehashes;threecompletedepochs;bestepochfromowninnermetriconly",
+    "Independentlyloadnativebestadapterandownrebuiltpreprocessor;replayfirst/last64rowsandquerychunkstartsagainststoredOOF;FP16native/reloaderror<=1e-6,batch/permutationerror<=.002",
+    "Independenttwo-logitsoftmax probabilitycrosscheck andrank-basedDeLong/correctedtstatistics;frozen1/16logitpoolformula;noalternateweights",
+    "Afteraudit,load5auditedfoldmodelsforordered299844testIDs,meanthe5nativegroupPROBABILITIES,then15/16v12and1/16TabSTARlogitpool;nofullrefit",
+    "IndependentfinalCSVreplayandexactbyteshashbeforeLibrarydelivery;parentauthenticatedquota/upload/rankonly",
+    "Absoluteusercutoffs15:15trainingstop/15:59hardstopUTC;stopnormaltaskprocesses;noautomaticresume;nosubmitifunfinished"
+  ],
+  "historical_labels_reused": true,
+  "untouched_holdout": false,
+  "historywide_multiplicity_adjustment": false
+}

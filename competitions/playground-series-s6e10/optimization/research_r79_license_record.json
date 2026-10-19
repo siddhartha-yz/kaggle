@@ -1,0 +1,31 @@
+{
+  "checked_utc": "2026-10-19T12:34:14.653791+00:00",
+  "status": "within_existing_free_public_model_authorization",
+  "code": {
+    "source": "https://github.com/alanarazi7/TabSTAR",
+    "license": "MIT",
+    "copyright": "Copyright (c) 2025 Alan Arazi",
+    "retained_license_sha256": "606bcb09f4200d32ada38b352e9527543a7d5dd1c3a0ff782e9c8fd80cad2c5a"
+  },
+  "weights": {
+    "source": "https://huggingface.co/alana89/TabSTAR",
+    "revision": "73560fb23d34307f4b6fa849f38f8299a8980a4a",
+    "card_license": "CC-BY-4.0",
+    "body_license": "MIT",
+    "applied_obligations": "Retaincreator/source/licenselinksanddisclaimer;markownLoRAadaptationandresource-adapted3epochschedule;noendorsementclaim",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode.en",
+    "retained_pinned_card_sha256": "1857ab0ce9ea7096935d4bca50c067cae911553d29c460ac443db37fbf7479af"
+  },
+  "E5": {
+    "source": "https://huggingface.co/intfloat/e5-small-v2",
+    "revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52",
+    "license": "MIT"
+  },
+  "fees": false,
+  "authentication": false,
+  "bespoke_or_consumer_status_agreement": false,
+  "source_terms_conflict": "RetainbothMITbodyandCC-BYcard;meetCC-BYconditionsratherthanassertweightsMITonly",
+  "attribution": "TabSTAR by Alan Arazi et al. (2025), https://arxiv.org/abs/2505.18125; E5-small-v2 by intfloat. OwnLoRAadaptationfortabularclassification,notendorsedbyoriginalauthors.",
+  "base_package_unmodified": true,
+  "weights_not_in_git": true
+}

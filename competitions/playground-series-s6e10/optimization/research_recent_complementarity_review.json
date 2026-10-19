@@ -1,0 +1,155 @@
+{
+  "status": "diagnostic_existing_predictions_only",
+  "checked_utc": "2026-10-19T12:25:47.899078+00:00",
+  "reference": "Actualformalv12",
+  "pair_sample": {
+    "seed": 202610191224,
+    "count": 1000000,
+    "positive_negative_independent_with_replacement": true,
+    "baseline_wrong": 38506,
+    "baseline_right": 961494,
+    "baseline_tied": 0
+  },
+  "routes": [
+    {
+      "route": 72,
+      "oof_sha256": "ca1fb737f50f166c712da333b0af42ddda35d1cc4925265145678d88efea4977",
+      "OOF_logit_correlation_with_v12": 0.9879056233237672,
+      "probability_residual_correlation_with_v12": 0.9823272137123276,
+      "native_repairs_of_sampled_v12_wrong_pairs": 8106,
+      "native_ruins_of_sampled_v12_right_pairs": 12357,
+      "frozen_candidate_repairs": 983,
+      "frozen_candidate_ruins": 1003,
+      "native_pair_ties": 0,
+      "no_weight_or_recipe_rescue": true
+    },
+    {
+      "route": 73,
+      "oof_sha256": "06c7fec6032af382f9843ee07a9d9eae799d36dff7eea2a5e634068db0ff75bb",
+      "OOF_logit_correlation_with_v12": 0.9597887645581629,
+      "probability_residual_correlation_with_v12": 0.9730323989546054,
+      "native_repairs_of_sampled_v12_wrong_pairs": 10028,
+      "native_ruins_of_sampled_v12_right_pairs": 15343,
+      "frozen_candidate_repairs": 2189,
+      "frozen_candidate_ruins": 2314,
+      "native_pair_ties": 0,
+      "no_weight_or_recipe_rescue": true
+    },
+    {
+      "route": 74,
+      "oof_sha256": "c7a7564f8d9609f57bb0a50b5605558b2341db13105657a6c324ee3caa3e5839",
+      "OOF_logit_correlation_with_v12": 0.998694235839781,
+      "probability_residual_correlation_with_v12": 0.9977886112056262,
+      "native_repairs_of_sampled_v12_wrong_pairs": 2619,
+      "native_ruins_of_sampled_v12_right_pairs": 2893,
+      "frozen_candidate_repairs": 206,
+      "frozen_candidate_ruins": 206,
+      "native_pair_ties": 0,
+      "no_weight_or_recipe_rescue": true
+    },
+    {
+      "route": 75,
+      "oof_sha256": "5c81451772c23a0ad74bff671d98b2e52428c4501dc12a87160df6f85b3e60f6",
+      "OOF_logit_correlation_with_v12": 0.9837915156382075,
+      "probability_residual_correlation_with_v12": 0.9739384932247463,
+      "native_repairs_of_sampled_v12_wrong_pairs": 8935,
+      "native_ruins_of_sampled_v12_right_pairs": 14503,
+      "frozen_candidate_repairs": 1091,
+      "frozen_candidate_ruins": 1189,
+      "native_pair_ties": 0,
+      "no_weight_or_recipe_rescue": true
+    },
+    {
+      "route": 76,
+      "oof_sha256": "6d99c3d7bdbb62ab988594142ed5a1d6284cf534aaf845c7d85ae9ade1e571c1",
+      "OOF_logit_correlation_with_v12": 0.9812845233955814,
+      "probability_residual_correlation_with_v12": 0.9703494437989644,
+      "native_repairs_of_sampled_v12_wrong_pairs": 10014,
+      "native_ruins_of_sampled_v12_right_pairs": 16804,
+      "frozen_candidate_repairs": 952,
+      "frozen_candidate_ruins": 1049,
+      "native_pair_ties": 0,
+      "no_weight_or_recipe_rescue": true
+    },
+    {
+      "route": 77,
+      "oof_sha256": "345b715bb2df4c045945bdb8c5675a1967c1a65468778f8f4a2da292b3a30c1b",
+      "OOF_logit_correlation_with_v12": 0.9743534411748656,
+      "probability_residual_correlation_with_v12": 0.9657635539784072,
+      "native_repairs_of_sampled_v12_wrong_pairs": 8628,
+      "native_ruins_of_sampled_v12_right_pairs": 13840,
+      "frozen_candidate_repairs": 888,
+      "frozen_candidate_ruins": 934,
+      "native_pair_ties": 0,
+      "no_weight_or_recipe_rescue": true
+    }
+  ],
+  "native_residual_correlations": {
+    "route_order": [
+      72,
+      73,
+      74,
+      75,
+      76,
+      77
+    ],
+    "matrix": [
+      [
+        1.0,
+        0.9779629013510331,
+        0.97977717260634,
+        0.9858123460491031,
+        0.9775023514398159,
+        0.966958219518977
+      ],
+      [
+        0.9779629013510331,
+        1.0,
+        0.9707664270652434,
+        0.9731918025786417,
+        0.9670196730592555,
+        0.9566301156577085
+      ],
+      [
+        0.97977717260634,
+        0.9707664270652434,
+        1.0,
+        0.971281146154897,
+        0.9666993819253751,
+        0.9636745926969328
+      ],
+      [
+        0.9858123460491031,
+        0.9731918025786417,
+        0.9712811461548969,
+        0.9999999999999998,
+        0.9834188447557074,
+        0.9736391499483631
+      ],
+      [
+        0.9775023514398159,
+        0.9670196730592556,
+        0.9666993819253752,
+        0.9834188447557074,
+        1.0,
+        0.9685537029334217
+      ],
+      [
+        0.966958219518977,
+        0.9566301156577085,
+        0.9636745926969327,
+        0.9736391499483632,
+        0.9685537029334217,
+        1.0
+      ]
+    ]
+  },
+  "interpretation": "Correlatederrorsandnativepairrepairsaloneareinsufficient:allfixedrecentcandidatesfailedoriginalgates;repair/ruinratesareconditionedonverydifferentbasepaircounts. Do notreusefailuresasnewcandidates orsearchweights. R74isexistingmodeloriginrepooling,notnewtrainedfamily.",
+  "next_hypothesis": "TabSTAR addsreal-world400dataset semanticfeature/targetpretrainingandLoRAadaptationonallownoutertrainingrows, unlike R75no-updateICL/R72contextICL or R76small-episodeadaptation. It canlearntask-specificsemanticembeddings/ratinginteractions ratherthanonlychangecontext/bagcount. Raw21containslessengineeredinformationthanv12NN74;complementarityandgainarenotestablisheduntilprospectiveOOF.",
+  "prospective_fusion": "ONE small1/16TabSTAR shareagainst15/16actualv12inlogitspace;chosenbeforeanyTabSTARofficialfit/score,notfittofailedOOFs. No extraweights orrescuegrid.",
+  "new_classifier_fits": 0,
+  "new_candidate_quality_tests": 0,
+  "official_SAT_reused_for_diagnostics": true,
+  "untouched_holdout": false,
+  "actual_top500_verified": false
+}

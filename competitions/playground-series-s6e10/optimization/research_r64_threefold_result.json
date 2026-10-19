@@ -1,0 +1,68 @@
+{
+  "status": "complete",
+  "stage": "threefold",
+  "completed_utc": "2026-10-19T01:57:50.871761+00:00",
+  "plan_sha256": "0ad827ca7882ffb0974f7b01cc86d3eebd0e95da7f0a58fd146838bf7c50cf21",
+  "vs_formal_v11": {
+    "pooled": {
+      "baseline_auc": 0.961485641721047,
+      "candidate_auc": 0.9615112849816725,
+      "delta_auc": 2.5643260625485276e-05,
+      "paired_se": 6.574870020826625e-06,
+      "conditional_95pct_ci": [
+        1.2756515384665092e-05,
+        3.853000586630546e-05
+      ],
+      "candidate_logloss": 0.2214721147766397
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.9616926093255227,
+        "candidate_auc": 0.9617295140002761,
+        "delta_auc": 3.690467475336856e-05,
+        "paired_se": 1.1883705896833233e-05,
+        "conditional_95pct_ci": [
+          1.3612611195575424e-05,
+          6.01967383111617e-05
+        ],
+        "candidate_logloss": 0.2213473245723169
+      },
+      {
+        "baseline_auc": 0.9625053714531461,
+        "candidate_auc": 0.9625348362098711,
+        "delta_auc": 2.9464756725050556e-05,
+        "paired_se": 1.1609386651483426e-05,
+        "conditional_95pct_ci": [
+          6.710358888143042e-06,
+          5.221915456195807e-05
+        ],
+        "candidate_logloss": 0.2185980891873224
+      },
+      {
+        "baseline_auc": 0.960310096012572,
+        "candidate_auc": 0.9603217912492531,
+        "delta_auc": 1.1695236681097398e-05,
+        "paired_se": 1.0788646805014666e-05,
+        "conditional_95pct_ci": [
+          -9.450511056731347e-06,
+          3.284098441892614e-05
+        ],
+        "candidate_logloss": 0.22447094342908913
+      }
+    ],
+    "corrected_resampled_t": {
+      "mean_delta": 2.6021556053172173e-05,
+      "se": 1.182408083567686e-05,
+      "test_train_ratio": 0.5000000000015322,
+      "df": 2,
+      "one_sided_alpha": 0.025,
+      "lower_bound": -2.4853357631231172e-05
+    },
+    "eligible_for_new_partition_replication": false,
+    "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+  },
+  "eligible": false,
+  "oof_sha256": "9cb3091d245a3a7bb687e770f9b5069cca9fd1db36c31a7cf0dcd925ebcb9e91",
+  "adaptive_history_acknowledged": true,
+  "no_subset_or_weight_search": true
+}

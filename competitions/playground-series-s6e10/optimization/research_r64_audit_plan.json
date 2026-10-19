@@ -45,6 +45,13 @@
     "research_artifacts/r37_ordinal_ranks/test_features.npz": "06e58d4827f02a105b32d884ff2e9a369a508f09d18c5ed62f038b91d115f3d0",
     "research_artifacts/r25_posterior_officialcb/result.json": "78f63710c7f2862001f12e2ace1e5f931f991a467a0ab9d1cc75b8f636ee6166",
     "research_artifacts/r25_posterior_officialcb/train_features.npz": "b2d7b7310cbcda7e66f971e10cf1fe112e6db11bc6532bd8109c76489c4d333a",
-    "research_artifacts/r25_posterior_officialcb/test_features.npz": "5dedecf5ffadaba49f9d597ecde3bf3d719cb6fbbc8b0d4cc8aa02f53fb84e4f"
-  }
+    "research_artifacts/r25_posterior_officialcb/test_features.npz": "5dedecf5ffadaba49f9d597ecde3bf3d719cb6fbbc8b0d4cc8aa02f53fb84e4f",
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "data/test.csv": "ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6",
+    "data/sample_submission.csv": "6165ecc5769962253534c2d840f26aab55dc3cc091d256bb3641bf6608194a71",
+    "research_artifacts/r21_probability_lgb_officialcb_full/test_components.npz": "dfbde5f8224975da897e6b12d9ed1f837c786c70eaad3e0c48f3934e101af0d6"
+  },
+  "raw_data_hash_recheck_utc": "2026-10-19T01:55:33.846873+00:00",
+  "prior_audit_plan_sha256": "a2acea2b5878142bb86ed3d70255c2db0bc59f0969f15776a3102c54baa88524",
+  "audit_only_revision": "Add explicit expected raw CSV and unchanged fulltree component hashes; no model, membership, recipe, scores or gates changed."
 }

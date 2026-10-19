@@ -1,0 +1,11 @@
+{
+  "frozen_utc": "2026-10-19T05:34:48.787503+00:00",
+  "main_plan_sha256": "3433ec72094ac71db48dbcf8263f349131ca34dab848ae9aef76bb7676ba2969",
+  "additional_sha256": {
+    "research_r69_audit.py": "72589d02469f1791862c1f22706de901ce054a9b60f31459989d64abd6ab0a8e",
+    "research_r69_prepare_final.py": "839c96b2a4c0f6814f4d4de6c038e3cb28eb785b2bf9c533c0adf873cbeaf66f",
+    "research_r69_csv.py": "b6b475a790d716c197b8fcc3cc5455099e699b89b3d000fd01a5097e98ed6919",
+    "research_r69_followthrough.py": "40c7b2e98a56124c4125394b47069b1d04051caaa452ed29dce8117bcd67b749"
+  },
+  "scope": "Independent nested32tree/8CE/8pureRankNet/8pairgate audits; train-only origin; same v12 five/threefold dualbounds; zero new finalclassifier fits. No qualification promised."
+}

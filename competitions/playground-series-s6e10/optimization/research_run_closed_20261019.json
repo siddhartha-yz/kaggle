@@ -1,0 +1,8 @@
+{
+  "status": "closed_actual_GPU_reserve_blocker",
+  "closed_utc": "2026-10-19T12:48:48.419209+00:00",
+  "stop_condition": "Latestuserdeadlineoverridestop500",
+  "automatic_resume": false,
+  "remaining_owned_processes": 0,
+  "other_programs_untouched": true
+}

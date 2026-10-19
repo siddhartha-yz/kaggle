@@ -1,0 +1,36 @@
+{
+  "checked_utc": "2026-10-19T12:48:48.419209+00:00",
+  "processes": [
+    {
+      "PID": 1198689,
+      "expected_script": "research_r79_driver.py",
+      "alive_same_task": false
+    },
+    {
+      "PID": 1198690,
+      "expected_script": "research_r79_worker.py",
+      "alive_same_task": false
+    },
+    {
+      "PID": 1193263,
+      "expected_script": "research_r79_probe.py",
+      "alive_same_task": false
+    },
+    {
+      "PID": 1160078,
+      "expected_script": "research_r77_driver.py",
+      "alive_same_task": false
+    },
+    {
+      "PID": 1187516,
+      "expected_script": "research_r77_worker.py",
+      "alive_same_task": false
+    }
+  ],
+  "running_kaggle_task_units": [],
+  "GPU_used_MiB": 6700,
+  "GPU_free_MiB": 5050,
+  "GPU_utilization_percent": 3,
+  "task_service_stopped": true,
+  "other_programs_untouched": true
+}

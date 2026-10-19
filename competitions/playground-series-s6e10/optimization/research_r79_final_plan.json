@@ -1,0 +1,28 @@
+{
+  "frozen_utc": "2026-10-19T12:44:23.441129+00:00",
+  "status": "conditional_test_scripts_frozen_before_any_outer_TabSTAR_score",
+  "validation_plan_sha256": "3cbfef65149a28a7f35184b18d02b45ae56ee5c72e8c750e60621de5ead437fe",
+  "baseline_CSV": "submission_pure_ranknet_r68_v12.csv",
+  "output_CSV": "submission_tabstar_r79_v13.csv",
+  "requires": "Bothoriginal5/3dualboundgates+independentownsplit/scaler/adapter/statisticsaudit;25minutessufficientfinalizationrunway;no trainingrefit",
+  "formula": "Mean5auditedfoldnativeTruePROBABILITIES,thenexpit(.9375logit(certifiedv12CSVroundtrip)+.0625logit(meanTabSTAR));clipinputs1e-6;float_format%.17g",
+  "schema": "Exactly299844testorderedids;id,satisfaction;Truepositive",
+  "audit": "Independentlyreload5nativebestadaptersandreplayalltestrows,manualtwo-logitsoftmax/pool,andexactCSVbyteshashbeforeLibrarydelivery",
+  "user_hard_stop_utc": "2026-10-19T15:59:00+00:00",
+  "all_helpers_stop_by_utc": "2026-10-19T15:57:00+00:00",
+  "no_automatic_resume": true,
+  "parent_only_submitter": true,
+  "actual_top500_verified": false,
+  "required_sha256": {
+    "research_r79_final.py": "174ed24ea7f549e5c64576bd27c38c405cf28310b6c172f698824da2b30a1fc5",
+    "research_r79_final_audit.py": "f94b04d64fddb25831214a5927dad3b8f3ba488ce6b207bc301e14eed7449976",
+    "research_r79_audit.py": "d7a5af3b3efdda8e19557de59821da3eb7d391d138369ba64c451331795de4d3",
+    "research_r79_model.py": "1f3108eb17c8036932e33572ea97dbc5880bfe29b67c8f21d607712fe4d8a035",
+    "research_r79_plan.json": "3cbfef65149a28a7f35184b18d02b45ae56ee5c72e8c750e60621de5ead437fe",
+    "research_run_deadline.json": "b35df17495d4390efc58b6f9df9018e25f93514c2b33009a036c4c6d4f8d4e0d",
+    "submission_pure_ranknet_r68_v12.csv": "f48276b144e8c9297fb9fec27174044a55a7eb3f2af23dde3f13478a38a4e545",
+    "data/test.csv": "ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6",
+    "data/sample_submission.csv": "6165ecc5769962253534c2d840f26aab55dc3cc091d256bb3641bf6608194a71"
+  },
+  "engineering_note": "Pre-qualityauditset-keycomparisoncorrectedfornativehash-randomizeddictionaryinsertionorder;transformsortscolumns. Originalfinalplanretained;officialrecipe/validationplanunchanged."
+}

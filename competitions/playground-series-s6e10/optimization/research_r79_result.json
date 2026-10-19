@@ -1,0 +1,62 @@
+{
+  "status": "incomplete_resource_blocked_not_qualified_for_submission",
+  "checked_utc": "2026-10-19T12:48:48.428076+00:00",
+  "plan_sha256": "3cbfef65149a28a7f35184b18d02b45ae56ee5c72e8c750e60621de5ead437fe",
+  "completed_outer_folds": 0,
+  "completed_epochs_in_fold0": 1,
+  "planned_epochs_each": 3,
+  "last_recorded_state": {
+    "updated_utc": "2026-10-19T12:41:48.001406+00:00",
+    "PID": 1198690,
+    "outer_quality_scored": false,
+    "status": "native_GPU_training",
+    "stage": "fivefold",
+    "fold": 0,
+    "own_train_rows": 558706,
+    "inner_valid_rows": 1002,
+    "max_epochs": 3,
+    "seconds": 330.0420244509878,
+    "CPU_seconds": 337.319799419,
+    "peak_GPU_bytes": 1302331392,
+    "microbatches": 12032,
+    "epochs_completed": 1,
+    "last_training_loss": 0.220048189163208,
+    "epoch": 1
+  },
+  "failure": {
+    "reason": "desktop GPU free reserve",
+    "own_GPU_bytes": 1302331392,
+    "peak_GPU_bytes": 1302331392,
+    "RSS_bytes": 4086288384,
+    "host_available_bytes": 7664533504,
+    "free_GPU_bytes": 1491075072
+  },
+  "controller_state": {
+    "status": "failed",
+    "updated_utc": "2026-10-19T12:41:48.972422+00:00",
+    "PID": 1198689,
+    "parent_only_submitter": true,
+    "actual_top500_verified": false,
+    "error_type": "AssertionError",
+    "error": "worker exited 86"
+  },
+  "native_partial_checkpoint_files_sha256": {
+    "research_artifacts/r79_tabstar_raw21_fivefold/fold0/native_checkpoints/20261019_203636/best_model/README.md": "ffeb4d90fd2bcf97c14be163777a4164dd5174a8c14cea33752f96f05f01f28a",
+    "research_artifacts/r79_tabstar_raw21_fivefold/fold0/native_checkpoints/20261019_203636/best_model/adapter_config.json": "8b9107b07837e5acace039b344f9ca7f70cbbd15ac3264427d80e0c134889c59",
+    "research_artifacts/r79_tabstar_raw21_fivefold/fold0/native_checkpoints/20261019_203636/best_model/adapter_model.safetensors": "d0f77412c3b1d2de10eeeecaa1b7c94d006b2772bcd681cfccd5a5ff318ef5a3"
+  },
+  "validation_log_sha256": "ee55bdf7c9e7056d3b5e509b92d5224ed0d1ddd61fcb0d00a2410c8bff8666ba",
+  "raw_log_files_sha256": {
+    "research_r79_driver.log": "51df0add257a9fb9cfa31fa3fddf36ddd3f6503f33560e11bbbc51c53e49d9bc",
+    "research_r79_fivefold_fold0.log": "98a38a09467dcb7b7e57bacc831a30ee5d4a00ada4e151e30213264ec7e3f5e5"
+  },
+  "outer_quality_scored": false,
+  "threefold_started": false,
+  "independent_real_audit_run": false,
+  "CSV_created": false,
+  "new_formal_submissions": 0,
+  "automatic_retry": false,
+  "other_GPU_processes_modified": false,
+  "partial_model_not_accepted_as_three_epoch_fit": true,
+  "frozen_recipe_hashes_reverified": true
+}

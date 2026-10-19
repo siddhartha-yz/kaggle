@@ -1,0 +1,212 @@
+{
+  "status": "closed_actual_resource_blocker_no_automatic_resume",
+  "finalized_utc": "2026-10-19T12:50:28.942343+00:00",
+  "user_stop_policy": {
+    "requested_by": "Latest explicit user instruction delegated by parent",
+    "training_stop_utc": "2026-10-19T15:15:00+00:00",
+    "hard_stop_utc": "2026-10-19T15:59:00+00:00",
+    "user_timezone": "Asia/Shanghai",
+    "training_stop_local": "2026-10-19 23:15",
+    "hard_stop_local": "2026-10-19 23:59",
+    "only_remaining_route": "R79 TabSTAR",
+    "no_new_directions": true,
+    "automatic_resume": false,
+    "replaces_top500_stop_condition": true,
+    "signal": "SIGTERM first; task service owns only this task's processes",
+    "submission_requires": "Both original five/threefold dual-bound gates and independent audits completed with sufficient time; parent-only authenticated upload with fresh quota"
+  },
+  "goal": "Userdeadlineandquotasupersedetop500stopcondition;top500notverified",
+  "outcomes": {
+    "R75": "Negativefixedfusion;notqualified",
+    "R76": "Negativefixedfusion;notqualified",
+    "R77": "Completed5folds95.13min;fixedfusionAUC.9615991283vsactualv12.9616472919;bothboundsnegative;no3/test/submission",
+    "R79": "Feasibilitypassed;formalfirstfoldstoppedby2GiBdesktopGPUreserveafteroneepochandpartialsecond;zeroouterfoldscomplete,noOOFqualitytest,no3/noCSV/noformalsubmission"
+  },
+  "actual_blocker": {
+    "time_utc": "2026-10-19T12:41:48+00:00",
+    "guard_exit_code": 86,
+    "reason": "desktop GPU free reserve",
+    "own_GPU_peak_bytes": 1302331392,
+    "GPU_free_at_exit_bytes": 1491075072,
+    "required_GPU_reserve_bytes": 2147483648,
+    "own_RSS_at_exit_bytes": 4086288384,
+    "host_available_at_exit_bytes": 7664533504,
+    "GPU_start_requirement_bytes": 5368709120,
+    "last_observed_GPU_free_MiB": 5050,
+    "other_programs_untouched": true,
+    "no_automatic_retry": true
+  },
+  "current_best_last_authenticated": {
+    "candidate": "v12 R68 PureRankNet",
+    "public_auc": 0.96118,
+    "rank": 676,
+    "entries": 2302,
+    "verified_utc": "2026-10-19T05:28:00+00:00",
+    "source": "Parent authenticated Kaggle cloud browser report",
+    "CSV_sha256": "f48276b144e8c9297fb9fec27174044a55a7eb3f2af23dde3f13478a38a4e545",
+    "current_rank_refreshed": false
+  },
+  "fresh_access_limit": {
+    "leaderboard_url": "https://www.kaggle.com/competitions/playground-series-s6e10/leaderboard",
+    "anonymous_attempt_during_finalization": true,
+    "result": "Pageavailablebutreadertablereturned0textlines;noindividualrank/submissionhistoryreadable",
+    "no_local_login_or_credentials_created": true,
+    "parent_authenticated_cloud_recheck_required_for_fresh_rank": true,
+    "daily_quota_not_freshly_verified": true
+  },
+  "submission_records": {
+    "new_formal_submissions_this_phase": 0,
+    "new_test_CSV_this_phase": false,
+    "recent_authenticated_records": [
+      {
+        "record_file": "research_v10_official_result.json",
+        "record": {
+          "source": "ParentauthenticatedKagglebrowserreport",
+          "reported_utc": "2026-10-18T17:07:06.141228+00:00",
+          "rank_observation_time_separately_supplied": false,
+          "status": "Complete",
+          "candidate": "submission_conditional_probability_r21_v10.csv",
+          "sha256": "15a0a6d7032204ccf1165df5686af6214217b170979356da07a8a19638fc33b6",
+          "public_auc": 0.96104,
+          "previous_v7_public_auc": 0.96076,
+          "public_delta": 0.00028,
+          "rank": 715,
+          "ranked_teams": 2274,
+          "rank100_public_auc": 0.9619,
+          "gap_to_rank100": 0.00086,
+          "historical_submissions": 9,
+          "formal_current_round_used": 2,
+          "formal_current_round_limit": 2,
+          "remaining": 0,
+          "actual_top100_verified": false
+        }
+      },
+      {
+        "record_file": "research_v11_official_result.json",
+        "record": {
+          "source": "ParentauthenticatedKagglebrowserreport",
+          "reported_utc": "2026-10-18T17:58:48.436175+00:00",
+          "submitted_utc": "2026-10-18T17:56:01Z",
+          "rank_observation_time_separately_supplied": false,
+          "status": "Complete",
+          "candidate": "submission_conditional_neural_r23_v11.csv",
+          "sha256": "cc134eb8d9272cd1fd7085fa7f5a5dc84455eb37270c57332f42014a94af75cf",
+          "public_auc": 0.96114,
+          "previous_v10_public_auc": 0.96104,
+          "public_delta": 0.0001,
+          "rank": 681,
+          "ranked_teams": 2279,
+          "rank500_public_auc": 0.96169,
+          "gap_to_rank500": 0.00055,
+          "historical_submissions": 10,
+          "daily_remaining_before_v11": 7,
+          "estimated_daily_remaining_after_v11": 6,
+          "remaining_daily_quota": null,
+          "actual_UI_remaining_after_v11_verified": false,
+          "actual_top500_verified": false
+        }
+      },
+      {
+        "record_file": "research_r68_official_result.json",
+        "record": {
+          "status": "Complete",
+          "source": "Parent authenticated Kaggle cloud browser report",
+          "submitted_utc": "2026-10-19T05:26:14+00:00",
+          "verified_utc": "2026-10-19T05:28:00+00:00",
+          "verified_time_precision": "minute",
+          "candidate": "v12 R68 PureRankNet",
+          "csv_sha256": "f48276b144e8c9297fb9fec27174044a55a7eb3f2af23dde3f13478a38a4e545",
+          "public_auc": 0.96118,
+          "actual_rank": 676,
+          "leaderboard_entries": 2302,
+          "rank_before_submission": 692,
+          "rank500_public_auc": 0.96172,
+          "auc_gap_to500": 0.00054,
+          "remaining_daily_quota_observed": 9,
+          "quota_observation_utc": "2026-10-19T05:28:00+00:00",
+          "actual_top500_verified": false,
+          "do_not_resubmit_same_csv": true,
+          "parent_only_submitter": true,
+          "new_formal_submissions_since_v11": 1,
+          "next": "Evidence-based next iteration under unchanged validation and resource limits. Fresh quota recheck before any next submission."
+        }
+      }
+    ],
+    "total_historical_count_not_reconstructed": true
+  },
+  "remaining_processes": {
+    "checked_utc": "2026-10-19T12:48:48.419209+00:00",
+    "processes": [
+      {
+        "PID": 1198689,
+        "expected_script": "research_r79_driver.py",
+        "alive_same_task": false
+      },
+      {
+        "PID": 1198690,
+        "expected_script": "research_r79_worker.py",
+        "alive_same_task": false
+      },
+      {
+        "PID": 1193263,
+        "expected_script": "research_r79_probe.py",
+        "alive_same_task": false
+      },
+      {
+        "PID": 1160078,
+        "expected_script": "research_r77_driver.py",
+        "alive_same_task": false
+      },
+      {
+        "PID": 1187516,
+        "expected_script": "research_r77_worker.py",
+        "alive_same_task": false
+      }
+    ],
+    "running_kaggle_task_units": [],
+    "GPU_used_MiB": 6700,
+    "GPU_free_MiB": 5050,
+    "GPU_utilization_percent": 3,
+    "task_service_stopped": true,
+    "other_programs_untouched": true
+  },
+  "remaining_items": [
+    "R79fold0epochs2/3incomplete;folds1-4unstarted",
+    "Threefoldconfirmation,independentrealmodelauditandfinalCSVreplaynotrun",
+    "Partialbestadapterisown-innerselectedepoch1only;notafinished3epochouterfitandnotasubmittablecandidate",
+    "FreshactualKagglerankandcompletepersonalhistoryrequireparentauthenticatedbrowser;do notpresent05:28rankascurrent"
+  ],
+  "reproducibility": {
+    "research_branch": "codex/s6e10-local-confirmation",
+    "frozen_validation_plan_sha256": "3cbfef65149a28a7f35184b18d02b45ae56ee5c72e8c750e60621de5ead437fe",
+    "frozen_final_plan_sha256": "2034d9d2524e61b7ac3f7141a4f8de92f6456126893d333c409f6359bb78c173",
+    "environment_record": "research_r79_environment.json",
+    "dependency_setup": "research_r79_setup.py",
+    "pinned_model_preparation": "research_r79_download.py and research_r79_download_receipt.json",
+    "full_original_logs_local": [
+      "research_r79_driver.log",
+      "research_r79_fivefold_fold0.log"
+    ],
+    "branch_validation_log": "research_r79_validation_log.jsonl",
+    "partial_checkpoint_location": "research_artifacts/r79_tabstar_raw21_fivefold/fold0/native_checkpoints/*/best_model",
+    "partial_checkpoint_hashes": {
+      "research_artifacts/r79_tabstar_raw21_fivefold/fold0/native_checkpoints/20261019_203636/best_model/README.md": "ffeb4d90fd2bcf97c14be163777a4164dd5174a8c14cea33752f96f05f01f28a",
+      "research_artifacts/r79_tabstar_raw21_fivefold/fold0/native_checkpoints/20261019_203636/best_model/adapter_config.json": "8b9107b07837e5acace039b344f9ca7f70cbbd15ac3264427d80e0c134889c59",
+      "research_artifacts/r79_tabstar_raw21_fivefold/fold0/native_checkpoints/20261019_203636/best_model/adapter_model.safetensors": "d0f77412c3b1d2de10eeeecaa1b7c94d006b2772bcd681cfccd5a5ff318ef5a3"
+    },
+    "original_model_sources_unmodified": true,
+    "recipe_hashes_reverified": true,
+    "original_fullfit_entrypoint": "research_r79_driver.py",
+    "entrypoint_constraints": "Expiredabsolutedeadlinewillrefusetraining;noautomaticresume. Anyfutureuser-requestedroundmustfreezeanewexplicitdeadline. Incompleteepochhasnooptimizerstate;cannotmislabelpartialcheckpointascompletedfit.",
+    "unchanged_original_checkout": "/home/yang-zhi/Documents/Codex/2026-10-18/task/kaggle",
+    "main_unchanged": "42d905a29ee3c182a5d0ee34aba2fff9b542fdda",
+    "data_models_predictions_not_in_git": true
+  },
+  "supporting_sha256": {
+    "research_r77_result.json": "684cf43facd9a6dd13c1adb886391450273827004a9e6e28f2d4562e90e5f86f",
+    "research_r79_result.json": "1abed5a25279099e09322cd0803162daef7a45069152034f98cb9c73e92188bb",
+    "research_r79_validation_log.jsonl": "ee55bdf7c9e7056d3b5e509b92d5224ed0d1ddd61fcb0d00a2410c8bff8666ba",
+    "research_run_process_exit_check.json": "e41061dfc8352c0ad01e30a761e72ce77f1b1c42650dd130012bfc875afbdbb3",
+    "research_run_closed_20261019.json": "5f203790cbf964260a2750f88c98add400ea639672b0d32bdde97eb20a44f08f"
+  }
+}

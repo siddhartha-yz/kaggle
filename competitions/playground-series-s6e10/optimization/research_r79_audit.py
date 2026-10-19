@@ -36,7 +36,9 @@ def compare(y,a,b):
  old,u,v=influence(a);new,x,z=influence(b);se=np.sqrt(np.var(x-u,ddof=1)/len(u)+np.var(z-v,ddof=1)/len(v));return float(old),float(new),float(new-old),float(new-old-1.96*se)
 def verify_preprocessor(rebuilt,saved,raw,ti):
  assert rebuilt.y_name==saved.y_name=='satisfaction' and rebuilt.y_values==saved.y_values==['False','True'] and rebuilt.d_output==saved.d_output==2 and rebuilt.constant_columns==saved.constant_columns==[] and not rebuilt.date_transformers and not saved.date_transformers
- assert list(rebuilt.numerical_transformers)==list(saved.numerical_transformers) and list(rebuilt.semantic_transformers)==list(saved.semantic_transformers)
+ # Native fit iterates a set; hash-randomized dict insertion order has no
+ # semantic effect because transform explicitly sorts numerical columns.
+ assert set(rebuilt.numerical_transformers)==set(saved.numerical_transformers) and set(rebuilt.semantic_transformers)==set(saved.semantic_transformers)
  normalized={c.replace('_',' ').replace('-',' ').replace('.',' ').replace(':',' ') if ' ' in c else c:c for c in raw}
  for name,a in rebuilt.numerical_transformers.items():
   b=saved.numerical_transformers[name]

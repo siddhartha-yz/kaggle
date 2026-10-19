@@ -1,0 +1,9 @@
+{
+  "status": "passed_synthetic_preprocessor_order_and_mismatch_checks",
+  "checked_utc": "2026-10-19T12:44:23.440822+00:00",
+  "dictionary_order_has_no_effect": true,
+  "numeric_and_text_transform_exact": true,
+  "bad_scaler_rejected": true,
+  "new_classifier_fits": 0,
+  "official_labels_loaded": false
+}

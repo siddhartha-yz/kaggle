@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "source_rows": 129859,
+  "original_validation_auc": 0.9954341626733864,
+  "model_sha256": "47460574d011fa6b1294b3a3ab55a64e27c8779bdc6f1bbb6299aa9f835a2c3b",
+  "vocabulary_sha256": "bf63c96545cbc5a38a4c683eae4ed24cb947e6772c24714ac51b3196cec3f685",
+  "elapsed_seconds": 8.369353778000004,
+  "ended_utc": "2026-10-17T20:40:06.517675+00:00"
+}

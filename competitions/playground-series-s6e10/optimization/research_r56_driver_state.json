@@ -1,0 +1,11 @@
+{
+  "updated_utc": "2026-10-18T23:53:10.624983+00:00",
+  "status": "not_qualified",
+  "driver_pid": 816290,
+  "remaining_daily_UI_quota_observed": 6,
+  "quota_recheck_before_upload": true,
+  "additional_qualified_submissions_authorized": true,
+  "actual_top500_verified": false,
+  "stage": "fivefold",
+  "active_training": false
+}

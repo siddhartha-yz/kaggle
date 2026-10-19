@@ -1,0 +1,19 @@
+{
+  "status": "completed",
+  "completed_utc": "2026-10-17T22:37:38.966278+00:00",
+  "formal_submissions_used": 3,
+  "formal_submissions_limit": 4,
+  "unused_submission_slots": 1,
+  "paid_cost": 0,
+  "training_active": false,
+  "queue_active": false,
+  "data_deleted": false,
+  "best_public_auc": 0.96033,
+  "report_filename": "Kaggle_S6E10_\u4e2d\u6587\u5b9e\u9a8c\u603b\u7ed3.html",
+  "report_sha256": "fbf8e91a9ec5bdd0131acdcdd453c7db83324d6ee60d360a618622abdc7b24f7",
+  "report_bytes": 10605,
+  "shutdown_audit": "research_shutdown_audit.json",
+  "report_library_file_id": "libfile_296c04b32dac8191a27d4c254e9858ff",
+  "report_library_version": 0,
+  "report_library_verified": true
+}

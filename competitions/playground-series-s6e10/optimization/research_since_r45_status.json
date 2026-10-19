@@ -1,0 +1,81 @@
+{
+  "updated_utc": "2026-10-18T22:21:24.854963+00:00",
+  "actual_top500_verified": false,
+  "last_official": {
+    "version": "v11",
+    "public_AUC": 0.96114,
+    "last_observed_rank": 681,
+    "last_observed_participants": 2279
+  },
+  "new_formal_submissions_since_v11": 0,
+  "new_CSVs_generated": false,
+  "remaining_daily_quota_last_UI_observed": 6,
+  "fresh_UI_recheck_required": true,
+  "parent_only_submitter": true,
+  "R45": {
+    "status": "not_qualified",
+    "fivefold_delta": -1.5010288812566941e-05,
+    "interruption": "Host controller/worker absent at21:32; completed folds0-3 hash-verified/reused; incomplete fold4 archived/refit unchanged before any quality scoring.",
+    "source_audit": "passed; 129878safe rows,2exact matches removed, no independent-population claim"
+  },
+  "R46": {
+    "status": "not_qualified",
+    "fivefold_delta": 3.3316188112308964e-05,
+    "threefold_delta": -4.124961579088371e-06
+  },
+  "R47": {
+    "status": "not_qualified",
+    "fivefold_delta": -8.23590157295051e-07
+  },
+  "new_family": "TabPFN v2 new FP32/4096-context configuration passed resource/repeat/recreation, no CV score yet",
+  "current_diagnostic": {
+    "status": "complete",
+    "file": "research_r52_precision_diagnostic.json",
+    "sha256": "f8f716c3483ab118d71d97fcf6e6159741a34522a6f98299fa54c39d7640a20b"
+  },
+  "next": "Continue existing serial R54 driver. Four disjoint4096 contexts per outer fold; complete20contexts before ANY quality, same5+3gates. No repeats of R45-47, no newCSV/submission.",
+  "R53_resource_proof": {
+    "status": "passed_no_official_SAT_or_quality",
+    "features": 49,
+    "context_rows": 4096,
+    "query_rows": 512,
+    "n_estimators": 1,
+    "official_SAT_values_parsed": false,
+    "synthetic_labels": true,
+    "quality_scores_computed": false,
+    "prior_CPU_reference_max_error": 0.0,
+    "inference_precision": "float32",
+    "cross_backend_equivalence_claim": false,
+    "model_context_reload_error": 0.0,
+    "repeat_error": 0.0,
+    "cache_build_seconds": 3.5608743549964856,
+    "first_query_seconds": 0.7639675120008178,
+    "warm_query_seconds": 0.7546792299981462,
+    "CPU_KV_cache_bytes": 905969664,
+    "adapter_counters": {
+      "build_column_chunks": 1728,
+      "query_column_chunks": 2592,
+      "CPU_cache_moves": 1728
+    },
+    "peak_gpu_process_bytes": 954204160,
+    "peak_allocated_bytes": 722717184,
+    "peak_RSS_bytes": 4045266944,
+    "seconds": 9.300130490999436,
+    "model_version": "v2",
+    "checkpoint_sha256": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49",
+    "plan_sha256": "523c4277568c929f762ea6bea0e2b556a3b1ec4f017b3761588ad3c6c99e8a9c",
+    "attribution": "Built with PriorLabs-TabPFN"
+  },
+  "current_execution": {
+    "status": "running_context",
+    "updated_utc": "2026-10-18T22:20:35.921030+00:00",
+    "pid": 762869,
+    "actual_top500_verified": false,
+    "parent_only_submitter": true,
+    "stage": "fivefold",
+    "fold": 0,
+    "context": 0,
+    "active_training": true,
+    "plan_sha256": "0279cd1d906c445617e0fe5fe67e6a9f3896d0bbc0596260830725d59b7d196a"
+  }
+}

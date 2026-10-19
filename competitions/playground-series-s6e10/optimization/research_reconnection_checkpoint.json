@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-17T21:21:37.293943+00:00",
+  "connection_recovery": "Original training session7736 and conditional export26335 both exited0 after normal completion; no resumed or duplicated fits.",
+  "nested_completion_utc": "2026-10-17T21:14:42+00:00",
+  "nested_oof_auc": 0.9607592663287488,
+  "nested_delta": 0.00016412681554833775,
+  "nested_eligible": false,
+  "context_route": "Both primary representations failed; session40571 exited0.",
+  "active_stage": "cb_deep_primary",
+  "active_exec_session": 70143,
+  "cpu_threads": 6,
+  "completed_new_submissions": 2,
+  "remaining_new_submissions": 2,
+  "new_csv_created": false
+}

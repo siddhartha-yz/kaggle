@@ -1,0 +1,23 @@
+{
+  "frozen_utc": "2026-10-18T22:00:33.440461+00:00",
+  "source_sha256": "d9376810d87b6f7dbf7d8480440575c0897c95ded4301df90a821d1a159f5165",
+  "input_sha256": {
+    "research_sources/tabpfn_feasibility/v2_download.json": "82a52c0d168cb679a753306b2e50abfc756c2488996e424c781dd4983b54ca2b",
+    "research_sources/tabpfn_feasibility/v2_LICENSE.txt": "08b1851b4b6136b5fb0cb124d3258e0d91e3e1623f1be5904b77e4d270d112d8",
+    "research_sources/tabpfn_feasibility/tabpfn-v2-classifier-finetuned-zk73skhh.ckpt": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49"
+  },
+  "checkpoint": "research_sources/tabpfn_feasibility/tabpfn-v2-classifier-finetuned-zk73skhh.ckpt",
+  "CPU_threads": 6,
+  "preprocessing_jobs": 1,
+  "RSS_ceiling_bytes": 8589934592,
+  "available_RAM_min_bytes": 2147483648,
+  "official_data_read": false,
+  "quality_evaluation": false,
+  "new_family_basis": "R31-47internalfeature/objective/seed/iterationvariantsmostlyfailed. Publicprimarybusyaprimenotebook says ownfive-modelLB.96115andstackwithpublic48members.96169; foundation-modeldiversitymotivatesnewfamily. No publicOOF/testpredictionsimported. v2 isnotv3.5, no transferable scoreclaim.",
+  "version_choice": "Useonlypublicungatedofficialv2defaultcheckpointwithPriorLabs1.1license. v3.5hasbrowserlicenseacceptance/professional-statusconditions;notused,noweightsdownloaded,nocredentials/termsaccepted.",
+  "attribution": "Built with PriorLabs-TabPFN",
+  "cache_path_fix": {
+    "recorded_utc": "2026-10-18T22:01:15.871824+00:00",
+    "reason": "skrub import tried home/skrub_data and failed read-only before any model fit. Set official SKB_DATA_DIRECTORY to project isolated cache; no global writes."
+  }
+}

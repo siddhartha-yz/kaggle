@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "audited_utc": "2026-10-18T18:44:54.176961+00:00",
+  "source_provenance": {
+    "source_raw_csv_sha256": {
+      "original_train.csv": "a15fab6d36a6123dedb035e1bc11b31f27b547671ce8d27762e74d96527c364f",
+      "original_test.csv": "2b58518af6e6c94334bf0f69160e29c5a5a082e340cf30f517473ede2bb1d898"
+    },
+    "source_projection_and_SAT_multiset_match_known_CC0": true,
+    "rows": 129859,
+    "excluded_exact_matches_to_official21_predictors": 21,
+    "official_labels_read": false,
+    "extra_observed_source_only_feature": "Inflight service",
+    "source_url": "https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction",
+    "license": "Other(specifieddescription),attributionTeejMahal20/JohnD,privateanalysis,no rawredistribution"
+  },
+  "source_model_sha256": "3aa9c7480b0c003ce5756e3b8f1ad1b783a779b4be45afa6db2b8e2e793636f6",
+  "source_transformer_sha256": "03aa41cb3b13d2d1912a8ba1324b49e00129b0b9ff122246bbc39dc4e46727d9",
+  "source_manifest_sha256": "bff23691e854d472cdf4acc851dcbcfe8da61c595dfc026b25d6fe62788878b1",
+  "service_only_multiclass_model": true,
+  "source_SAT22_model_loaded": false,
+  "official_SAT_labels_loaded": false,
+  "actual_missing_feature_never_used_for_official_rows": true,
+  "selected_fields": [
+    "svc_p0",
+    "svc_p1",
+    "svc_p2",
+    "svc_p3",
+    "svc_p4",
+    "svc_p5"
+  ],
+  "excluded_fields": "SourceSATmarginal,lookupmeans,expectedservice,entropy",
+  "model_feature_columns": [
+    "f000",
+    "f001",
+    "f002",
+    "f003",
+    "f004",
+    "f005",
+    "f006",
+    "f007",
+    "f008",
+    "f009",
+    "f010",
+    "f011",
+    "f012",
+    "f013",
+    "f014",
+    "f015",
+    "f016",
+    "f017",
+    "f018",
+    "f019",
+    "f020",
+    "f021",
+    "f022",
+    "f023",
+    "f024"
+  ],
+  "replays": [
+    {
+      "split": "train",
+      "rows_replayed": 2048,
+      "six_class_probability_replay_error": 0.0
+    },
+    {
+      "split": "test",
+      "rows_replayed": 2048,
+      "six_class_probability_replay_error": 0.0
+    }
+  ]
+}

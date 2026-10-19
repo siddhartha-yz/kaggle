@@ -1,0 +1,16 @@
+{
+  "frozen_utc": "2026-10-18T06:28:27.453244+00:00",
+  "hypothesis": "OriginalsurveycontainsInflightserviceomittedfromofficial21predictors;fullsourceprojectionandTrueSATlabelsmultisetexactlymatchtheCC0source. Auxiliaryservice supervisioncanimprovefinite-samplelatentrepresentationwithoutgivingunobservedservicegroundtruth tocompetitionrows.",
+  "source": "PublicTeejMahal20/JohnDoriginalsurvey129880rows;all21predictor+SATprojectionverifiedidentical;globallyexclude21matchingofficialtrain/testpredictorvectors,remain129859. Other(specifieddescription)licensemetadataretained,privateanalysisandattribution,norawredistribution. No unknownOOF/predictions.",
+  "teachers": {
+    "service_classifier": "Source-onlyLGB475/63/.04/minchild100/L2=10/seed20261018,multiclassforInflightservicelevels0..5",
+    "satisfaction_with_service": "SamefixedsourcebinaryLGBwithobservedserviceasnumeric+categoricaladditionalfeatures;originalSATtargetonly",
+    "marginalization": "ForcompetitionX,computeP(service=k|X),then sum_k P(SAT=True|X,service=k)*P(service=k|X). Neveruseactualservicevaluesforcompetitionrows."
+  },
+  "features": "Fixed11:6serviceprobabilities,expectedservice,entropy,sourceDistanceandnear6service means(alpha100/20sameoldlookup),marginalSATprobability. Allfitonlysafeoriginalsource.",
+  "synthetic_learner": "SameLGB639/63/.04/minchild150/L2=10/seed42,oldoutertrainDistanceStats+5sourcefeatures+all11newfeatures,noneindividuallyselected",
+  "combination": "v6+(45/128)*(new_lgb-old_lgb)",
+  "gates": "Sameprimary>=.0001lower>0;confirmationlower>0;OOFallfoldpositivepooled>=.0002lower>0",
+  "resources": "CPU6serial,noGPU;1GiBGPUceilingunchanged;10:10start10:45hard11:06deadline,parentonly0of2formal",
+  "bias": "Newauxiliaryhypothesischosenafterreuseddevelopmentdiagnostics;sourceoriginalonlytargetsusedinteachers;conditionalCIsnotindependent."
+}

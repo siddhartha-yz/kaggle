@@ -1,0 +1,23 @@
+{
+  "frozen_utc": "2026-10-18T11:15:24.892101+00:00",
+  "selected_protocol": "fivefold_cv_ensemble",
+  "model_members": 40,
+  "models": "existing frozen5fold8membersperfold; no additional neural full-data training",
+  "weights": {
+    "frozen_v5_full": 0.75,
+    "new_lean_cv_ensemble": 0.25
+  },
+  "preprocessing": "Own fold-specific train-only vocab,count,strictinnerTE; transform test without fitting",
+  "resource_caps": {
+    "cpu_threads": 6,
+    "gpu_allocator_bytes": 778043392,
+    "gpu_process_bytes": 1073741824
+  },
+  "source_reference": "https://raw.githubusercontent.com/alvis1111/s6e10-airline-solution/main/independent_repro/realmlp_full.py",
+  "reason": "Public fullpipeline averages per-fold testpredictions. Reuse own verified checkpoints matchingOOFprocedure, supports morediversity andavoids forcing699635rowGPUfits beyond1GiB. Select beforeanynewNNquality, not bytest/publicscore.",
+  "difference_from_reference": "Own5folds vs10; eightserialindependentseedmembers rather thanbatched8; allpreprocessingoutertrainonly; nativebounded8MiBinitialization; fixedprobabilityblend withourownv5, noexternalpredictions",
+  "limitation": "OOFpredictionuses8modelsforheldoutrow, finaltestaverages40members acrossfolds; standardCVensemble changes inferencevariance. No guaranteed public improvement orTop100claim.",
+  "admission": "Both5fold andfreshcomplete3fold pairedreplications must qualify underfrozengates",
+  "unused_draft": "research_r4_full.py is unexecuted all-data-refit alternative, not the selected final protocol",
+  "runner_sha256": "550b104814e83bbd0e28c0d6f4861bea730885acf0de1b0fac80ba341f1d627a"
+}

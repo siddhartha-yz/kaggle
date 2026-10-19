@@ -1,0 +1,85 @@
+{
+  "primary": {
+    "source_nn": {
+      "status": "complete",
+      "variant": "source_nn",
+      "split": "primary",
+      "vs_v6": {
+        "baseline_auc": 0.9603020930463941,
+        "candidate_auc": 0.960275004048937,
+        "delta_auc": -2.7088997457180852e-05,
+        "paired_se": 3.3965810990074904e-05,
+        "conditional_95pct_ci": [
+          -9.366198699772766e-05,
+          3.948399208336595e-05
+        ],
+        "candidate_logloss": 0.22520712728030173
+      },
+      "vs_matched_control": {
+        "baseline_auc": 0.9603703880118413,
+        "candidate_auc": 0.960275004048937,
+        "delta_auc": -9.538396290431628e-05,
+        "paired_se": 3.075216213744434e-05,
+        "conditional_95pct_ci": [
+          -0.00015565820069370718,
+          -3.510972511492537e-05
+        ],
+        "candidate_logloss": 0.22520712728030173
+      },
+      "fold_comparisons": [
+        {
+          "baseline_auc": 0.9603020930463941,
+          "candidate_auc": 0.960275004048937,
+          "delta_auc": -2.7088997457180852e-05,
+          "paired_se": 3.3965810990074904e-05,
+          "conditional_95pct_ci": [
+            -9.366198699772766e-05,
+            3.948399208336595e-05
+          ],
+          "candidate_logloss": 0.22520712728030173
+        }
+      ],
+      "eligible_for_next": false,
+      "completed_utc": "2026-10-18T05:17:48.152870+00:00"
+    },
+    "tabm": {
+      "status": "complete",
+      "variant": "tabm",
+      "split": "primary",
+      "vs_v6": {
+        "baseline_auc": 0.9603020930463941,
+        "candidate_auc": 0.9603922075372205,
+        "delta_auc": 9.011449082640954e-05,
+        "paired_se": 4.764984407195353e-05,
+        "conditional_95pct_ci": [
+          -3.279203554619375e-06,
+          0.00018350818520743845
+        ],
+        "candidate_logloss": 0.2250953393520685
+      },
+      "fold_comparisons": [
+        {
+          "baseline_auc": 0.9603020930463941,
+          "candidate_auc": 0.9603922075372205,
+          "delta_auc": 9.011449082640954e-05,
+          "paired_se": 4.764984407195353e-05,
+          "conditional_95pct_ci": [
+            -3.279203554619375e-06,
+            0.00018350818520743845
+          ],
+          "candidate_logloss": 0.2250953393520685
+        }
+      ],
+      "eligible_for_next": false,
+      "completed_utc": "2026-10-18T05:19:22.412304+00:00"
+    }
+  },
+  "eligible_for_full": false,
+  "weights": {
+    "v6": 0.75,
+    "new_model": 0.25
+  },
+  "plan_sha256": "93fd72889a584270330d1c7815715afcec40f778b807d5dbdc6544a1a42cb8be",
+  "updated_utc": "2026-10-18T05:19:23.295831+00:00",
+  "status": "both_primary_rejected"
+}

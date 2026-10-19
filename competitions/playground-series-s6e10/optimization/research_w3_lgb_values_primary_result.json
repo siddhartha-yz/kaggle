@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "variant": "native_lgb_values",
+  "split": "primary",
+  "vs_v6": {
+    "baseline_auc": 0.9603020930463941,
+    "candidate_auc": 0.9599447915930849,
+    "delta_auc": -0.00035730145330925556,
+    "paired_se": 9.915193636936583e-05,
+    "conditional_95pct_ci": [
+      -0.0005516392485932126,
+      -0.00016296365802529852
+    ],
+    "candidate_logloss": 0.22606590278294683
+  },
+  "fold_comparisons": [
+    {
+      "baseline_auc": 0.9603020930463941,
+      "candidate_auc": 0.9599447915930849,
+      "delta_auc": -0.00035730145330925556,
+      "paired_se": 9.915193636936583e-05,
+      "conditional_95pct_ci": [
+        -0.0005516392485932126,
+        -0.00016296365802529852
+      ],
+      "candidate_logloss": 0.22606590278294683
+    }
+  ],
+  "eligible_for_next": false,
+  "completed_utc": "2026-10-18T07:17:42.737565+00:00"
+}

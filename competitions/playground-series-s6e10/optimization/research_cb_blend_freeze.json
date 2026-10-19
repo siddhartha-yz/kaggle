@@ -1,0 +1,9 @@
+{
+  "family": "cb",
+  "candidate_weight": 0.25,
+  "fixed_trees": 1308,
+  "primary_delta": 0.0001088925592807044,
+  "confirmation_pending": true,
+  "public_score_used_for_selection": false,
+  "frozen_utc": "2026-10-17T19:54:37.502166+00:00"
+}

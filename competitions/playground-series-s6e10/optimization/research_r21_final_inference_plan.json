@@ -1,0 +1,19 @@
+{
+  "frozen_utc": "2026-10-18T16:47:45.439556+00:00",
+  "main_plan_sha256": "bc406af413dadf72fe5f4efd3e445aa59c95a9febe87a3cac9a4bfeb9d85c892",
+  "code_sha256": {
+    "research_r21_audit.py": "06375c5b964b593fb791fb6954dc73a75b7a910581bf462351e35c73444ed750",
+    "research_r21_csv.py": "2c828fc16108c7c4cb7510f9bd56344112f9e43fc71da0a8782e31f36676c60f"
+  },
+  "gates": "Twofixedviewsalpha.0125; fivefoldandfreshthreefolddualv9/v7required; verifyactualclasses/unknownobservedclass->EPS/selfsurprisal/mean, reusedauxmembershipandmodelCPUreplay, outerLGBmaps/algebra and inheritedtesthashes. Parentonlysubmitter.",
+  "inherited_artifact_sha256": {
+    "data/test.csv": "ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6",
+    "data/sample_submission.csv": "6165ecc5769962253534c2d840f26aab55dc3cc091d256bb3641bf6608194a71",
+    "research_artifacts/cb_deep_full_v1/test_components.npz": "21a69d56dd0ecd12d0d18cca80e1fdfbec07b269c2754122d24ceb0e2f397c79",
+    "research_artifacts/r4_lean_cv_final/test_components.npz": "20a7172d5a3e0d5f2ce2fedbe3997377d59b35dd58d20ab5322ebcf054f86409",
+    "submission_lean_half_r6_v8.csv": "e277a97762009cd1ebf739f3fa692ce2ee5e4c1cceff5fab225634f74dd98c5b",
+    "research_r4_delivery_audit.json": "b5c57beb4e997dc1e449ed1688fc171453300b9add3fb38ad73a5f5ff47789cd",
+    "research_r14_delivery_audit.json": "4576e1533f0d33dfafe18354adc9fab57951332a4c02c3a48e7949038ffb4945"
+  },
+  "inference_provenance_addition": "Pin exact previously auditedR14testarrays/data/csv and79-model audit. No learner, feature, gate or quality changes; before R20quality scoring."
+}

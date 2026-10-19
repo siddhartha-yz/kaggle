@@ -1,0 +1,59 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kaggle S6E10 中文实验总结</title><style>body{font-family:"Noto Sans CJK SC","Microsoft YaHei",sans-serif;max-width:960px;margin:40px auto;padding:0 24px;color:#202b38;line-height:1.75;font-size:15px}h1{font-size:28px;margin-bottom:8px}h2{font-size:20px;margin-top:30px;border-bottom:1px solid #d7e1e8;padding-bottom:6px}.lead{background:#edf5f5;border-left:4px solid #257b79;padding:16px 20px}.small{font-size:13px;color:#536475}table{border-collapse:collapse;width:100%;font-size:14px;margin:12px 0}th,td{border-bottom:1px solid #dce4eb;padding:9px;text-align:left}th{background:#f2f5f8}pre{background:#f3f5f7;padding:14px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;line-height:1.65}code{overflow-wrap:anywhere}a{color:#236f9d}.tag{font-weight:bold;color:#257b79}@media print{body{margin:10mm auto;font-size:11px}h1{font-size:22px}h2{font-size:16px;break-after:avoid}table,pre,.lead{break-inside:avoid}a{color:inherit}th,td{padding:5px}}</style>
+<h1>Kaggle S6E10：本轮实验总结</h1><p class="small">截至 2026-10-17 22:35 UTC 的核验记录 · 本轮已完成 · 排名均为当时快照</p>
+<div class="lead"><strong>保留 v5：Public ROC-AUC 0.96033，22:11 UTC 排名 930/2194。</strong><br>从首次正式基线 0.95816 累计提升 <strong>0.00217 AUC</strong>。当前授权窗口已用 <strong>3/4 次提交</strong>，最后一次保留；<strong>零付费</strong>。没有遗留训练进程或队列，数据、模型与预测全部保留。</div>
+<h2>1. 比赛、指标与正式提交</h2>
+<p><a href="https://www.kaggle.com/competitions/playground-series-s6e10">Kaggle Playground Series S6E10</a>：航空旅客满意度二分类，提交满意（True）的预测概率，以 ROC-AUC 评价排序能力。官方训练集 699,635 行，测试集 299,844 行，21 个原始特征；ID 不作模型输入。</p>
+<table><thead><tr><th>提交</th><th>主要变化</th><th>Public AUC</th><th>当时排名</th></tr></thead><tbody>
+<tr><td>首次基线（此前）</td><td>真实提交的 CatBoost 基线</td><td>0.95816</td><td>1579/2172</td></tr>
+<tr><td>冻结融合（此前）</td><td>50% CatBoost8＋50% LightGBM</td><td>0.95855</td><td>1209/2177</td></tr>
+<tr><td>bagged v2（此前）</td><td>40% CB＋40% LGB＋20% 随机采样 LGB</td><td>0.95857</td><td>1193/2179</td></tr>
+<tr><td>v3（本窗口第1次）</td><td>训练折内 Flight Distance 分组统计</td><td>0.95977</td><td>1047/2182</td></tr>
+<tr><td>v4（本窗口第2次）</td><td>加入原始数据教师与平滑查表特征</td><td>0.96000</td><td>1009/2182</td></tr>
+<tr><td><strong>v5（本窗口第3次）</strong></td><td><strong>四模型固定概率融合</strong></td><td><strong>0.96033</strong></td><td><strong>930/2194</strong></td></tr>
+</tbody></table>
+<p class="small">上述六次为历史合计；本窗口限额单独计为 3/4。完成状态和 Public 分数由父会话在 Kaggle 核实，本机未登录或上传提交。早期仓库的准备脚本不同于实际云端基线，复现应使用 optimization 目录保存的真实实验代码。</p>
+<h2>2. v5 实际是什么</h2>
+<table><thead><tr><th>组件</th><th>概率权重</th><th>固定关键参数</th></tr></thead><tbody>
+<tr><td>原始数据增强 LightGBM（v4）</td><td>46.875%</td><td>639 棵；63 叶；学习率 .04</td></tr>
+<tr><td>原始数据增强 CatBoost8</td><td>9.375%</td><td>1308 棵；深度8；学习率 .07；L2=5</td></tr>
+<tr><td>教师先验残差 LightGBM</td><td>18.75%</td><td>581 棵；63 叶；学习率 .04</td></tr>
+<tr><td>更深 CatBoost10</td><td>25%</td><td>813 棵；深度10；学习率 .04；L2=10；seed20261018</td></tr>
+</tbody></table>
+<p>各组件使用原始特征、四项评分的类别副本、Flight Distance 的频次/对数频次、平滑数值分组均值和类别条件比例，以及五个原始数据特征。残差模型以 <code>0.5 × logit(原始数据教师概率)</code> 为初始分数，预测时加回该先验再转成概率；最终按上表加权，<strong>不是用公开榜训练的元模型</strong>。</p>
+<p>额外来源是公开 <a href="https://www.kaggle.com/datasets/arseniyshutko/binary-aviation-satisfaction-129k">CC0 原始航空满意度数据</a>。从 129,880 行中，全局排除与官方训练/测试特征精确重合的 21 行，保留 129,859 行。17 个训练精确重合中有 3 个标签冲突，全部排除，不用原始标签覆盖官方标签。仅用保留原始数据训练 475 棵 LightGBM 教师，并构建 Distance 与六字段近似键的平滑标签均值/对数计数，合计五项特征；近似键冲突已记录。v5 没有把原始行直接拼入官方训练集。</p>
+<p>最终 CSV：<code>submission_cb_deep_v5.csv</code>，299,844 行。模型重载差异为 0；CSV 与保存组件加权结果的最大差异为 1.11×10⁻¹⁶。<br>SHA-256：<code>0f9a978051e4f0fa164928f3b975a71346b60477959ee5cf50abb580a706e872</code></p>
+<h2>3. 验证结果与适用边界</h2>
+<table><thead><tr><th>同一批验证样本</th><th>v4 AUC</th><th>v5 AUC</th><th>变化</th></tr></thead><tbody>
+<tr><td>主划分：seed42，分层80/20</td><td>0.95978836</td><td>0.96000303</td><td>+0.00021467</td></tr>
+<tr><td>确认划分：seed20261017</td><td>0.96059991</td><td>0.96082016</td><td>+0.00022024</td></tr>
+<tr><td>固定五折：seed20261018，合并 OOF</td><td>0.96059514</td><td>0.96089265</td><td>+0.00029751</td></tr>
+</tbody></table>
+<p>五折各折均提升；合并增益的条件 95% 区间为 [0.00025358, 0.00034144]。树数与最终权重在确认前冻结，确认与 OOF 不做早停。类别词表、频次、分组统计只在训练折拟合；实验中的目标编码使用训练折内部 OOF。未采用全训练＋测试共同拟合统计，也未使用来源不明的预测文件；公开榜仅记账，不据其调权重。</p>
+<p><strong>这些是稳定性证据，不是独立无偏的泛化证明。</strong>主划分与确认集有 27,914 行重叠，多轮方案选择复用了验证数据，OOF 也参与过模型比较；条件区间不包含模型选择不确定性。冻结的 0.0001/0.0002 晋级门槛是控制预算与提交的操作规则，不是统计保证。Public AUC 与 OOF AUC 来自不同数据，不能直接互相替代；Private 成绩未知。</p>
+<h2>4. 哪些路线没有继续</h2>
+<ul>
+<li>较早固定异质融合 OOF 相对 v4 提升 0.00019094，严格嵌套残差堆叠提升 0.00016413：均低于当时冻结的 0.0002 门槛，未生成提交。</li>
+<li>评分分布、严格交互目标编码、第二个原始数据教师、更宽采样 LightGBM、近邻与原始数据上下文特征：未通过各自主划分筛选。</li>
+<li>早期 sklearn MLP 在确认划分的条件区间跨零。后续不预训练/原始数据预训练对照，相对 v5 分别仅 +0.00001054 / −0.00002147，均被淘汰。</li>
+<li><strong>实际官方 RealMLP 已测：</strong>PyTabKit 1.7.3＋PyTorch 2.9.1 CPU，默认架构、关闭标签平滑、固定48轮、batch1024。主划分训练 453秒；25% RealMLP＋75% v5 的 AUC 为 0.96002455，增益 +0.00002152，条件区间 [−0.00008313, +0.00012617]，未进入确认/五折/全量。它与 sklearn MLP 是不同实现。</li>
+</ul>
+<h2>5. 与前100的差距、下一步估算</h2>
+<p><span class="tag">已知事实：</span>最后核实排名为 930/2194。此前观察到前100附近显示分数线为 0.96190，同分延至第109名；这是历史快照，本次未刷新。以该快照比较，v5 还差约 0.00157 AUC，尚未达到前100，也不能承诺后续一定达到。</p>
+<p><span class="tag">估算而非实测：</span>按48轮耗时线性推算，RealMLP 默认256轮约需每折40分钟，主划分＋确认＋五折＋全量约5.5小时，尚未计入额外调试；超出本轮剩余时间。256轮与原始数据预训练版 RealMLP 均未验证。下一轮若有新预算，可先冻结一套长训练方案、实测耗时，再按同样的验证标准决定是否继续；不能假设多训练必然提分，也不能把已用数据重新划分后称为全新独立测试集。</p>
+<h2>6. 代码、复现与收尾</h2>
+<p>仓库：<a href="https://github.com/siddhartha-yz/kaggle">siddhartha-yz/kaggle</a>；分支 <code>codex/s6e10-local-confirmation</code>；核心结果快照 <a href="https://github.com/siddhartha-yz/kaggle/commit/46ba727">46ba727</a>。目录 <code>competitions/playground-series-s6e10/optimization/</code> 保存脚本、冻结配方、成功/失败记录和依赖版本。本报告与只读核验脚本随分支后续提交保存。</p>
+<p>本地实验目录：<code>/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment</code>。使用同级隔离 venv；官方数据、原始数据、划分、模型和逐行预测未入 Git，已保留本地。仅克隆代码不足以恢复全部实验，需恢复相应产物及哈希；完整依赖顺序见 README。</p>
+<pre># 可直接只读复核已保存 v5，不训练、不提交：
+cd /home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment
+../.venv/bin/python verify_v5_saved.py
+
+# 以下为历史复现实验入口，本轮不再执行。
+# 需先恢复教师、基础组件及划分产物；新预算下使用独立输出目录与截止配置。
+python research_cb_deep.py --split confirm --trees 813 --weight 0.25
+python research_cb_deep.py --split oof --trees 813 --weight 0.25
+python research_cb_deep_full.py
+python research_realmlp.py --split primary</pre>
+<p>常规模型版本见 <code>requirements.txt</code>；RealMLP 完整版本见 <code>requirements-realmlp-lock.txt</code>，先从 PyTorch 官方 CPU 源安装 <code>torch==2.9.1+cpu</code>，其余从官方 PyPI 安装。脚本含截止及已有产物保护，请勿删除旧成果来强行重跑。</p>
+<p><strong>最终状态：</strong>本轮完成，3/4 次正式提交，零付费。22:35 UTC 主机进程核验无匹配训练或队列，14份队列状态均 complete。全部本机训练串行、CPU最多6线程；没有使用GPU、改驱动或创建Kaggle凭据。用户原仓库与数据保留，不为用尽额度继续训练。</p>
+<p class="small">证据文件：research_submission_ledger.json、submission_cb_deep_v5_audit.json、research_cb_deep_selection.json、research_realmlp_audit.json、research_stop_review.json、research_shutdown_audit.json。报告内实测分数来自保存记录；排名由父会话核实后转交。</p>
+</html>

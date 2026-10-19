@@ -1,0 +1,45 @@
+{
+  "frozen_utc": "2026-10-18T05:23:24.800209+00:00",
+  "execution_condition": "Run only if TabM value-view validation path rejects; no overlapping GPUtraining. This plan is frozen before seeing its primaryresult.",
+  "hypothesis": "A factorization-machine pairwise interaction term with learned per-value embeddings and4fully independent short-schedule networks is a distinct inductive bias from RealMLP and shared-weightTabM; native2memberRealMLP diagnostic showed meaningful averaging gains and highdisagreement errors.",
+  "architecture": {
+    "embedding_dim": 16,
+    "hidden": [
+      512,
+      256,
+      128
+    ],
+    "activation": "SiLU",
+    "batchnorm": true,
+    "dropout": 0.1,
+    "linear_and_FM_pairwise_terms": true,
+    "embedding_init_std": 0.01,
+    "reservedunknown_embeddings_zero": true
+  },
+  "features": "Same outertrainonly17numeric median/normalquantile andall21original-value categories asTabMvalueview; no targets/statistics/sourcefeatures added. No globaltrain/test vocabulary.",
+  "training": {
+    "seeds": [
+      42,
+      20261018,
+      17,
+      20261017
+    ],
+    "members": 4,
+    "epochs": 3,
+    "batch_size": 2048,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "optimizer": "AdamW",
+    "scheduler": "OneCycleLR,pct_start.2,ceilbatches; eachfrozenmember includesalldata each epoch"
+  },
+  "member_aggregation": "Equal mean probabilities; no per-member validation scores or selection",
+  "probe": "One fullprimary epoch with firstmember; no validation scores; onlyallocatorOOM batch2048->1024. Discard probe model.",
+  "reference": "Read-only userprovidedgoodpjw2008notebook DeepFM architecturalprior only, rewritten fold-only preprocessing; notebook never executed and no external predictions",
+  "blend": {
+    "v6": 0.75,
+    "deepfm": 0.25
+  },
+  "gates": "UnchangedW3primarydelta>=.0001withpositiveconditionallower;confirmlower>0;OOFall5foldpositiveandpooleddelta>=.0002lower>0",
+  "limits": "SameW3CPU6serial/GPUallocator2GiB,start10:10/hard10:45/deadline11:06UTC,zeroresourcescost,parentonlymax2newformal",
+  "limitation": "Adaptive development with reusedlabels; conditional intervals exclude selectionuncertainty and do not guarantee leaderboard gain."
+}

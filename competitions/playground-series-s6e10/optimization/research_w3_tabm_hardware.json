@@ -1,0 +1,56 @@
+{
+  "batch_size": 256,
+  "probe": {
+    "status": "complete",
+    "started_utc": "2026-10-18T05:18:15.643223+00:00",
+    "hardware": {
+      "initial_gpu_free_bytes": 6648496128,
+      "gpu_name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+      "cap_bytes": 2147483648
+    },
+    "config": {
+      "seed": 42,
+      "k": 16,
+      "epochs": 20,
+      "batch_size": 256,
+      "d_block": 256,
+      "n_blocks": 2,
+      "dropout": 0.1,
+      "d_embedding": 16,
+      "num_bins": 48,
+      "lr": 0.002,
+      "weight_decay": 0,
+      "share_training_batches": true,
+      "allow_amp": false,
+      "compile_model": false,
+      "numerical_transform": "train-only median impute, QuantileTransformer1000normal random_state42; PWL bins train only; constant numerical columns excluded",
+      "categoricals": "raw four string categorical features; outer-train vocab plus reservedunknown0"
+    },
+    "plan_sha256": "93fd72889a584270330d1c7815715afcec40f778b807d5dbdc6544a1a42cb8be",
+    "runner_sha256": "d7515abb1246e3f666e778954506bbc1b9267ae6477a174eb79e0aed0099f8ff",
+    "train_rows": 559708,
+    "valid_rows": 139927,
+    "validation_used_in_fit": false,
+    "cat_cardinalities": [
+      3,
+      3,
+      3,
+      4
+    ],
+    "epochs": [
+      {
+        "epoch": 1,
+        "seconds": 2.9462636549942545,
+        "train_loss": 0.25301514260492536,
+        "gpu_free_bytes": 6054936576
+      }
+    ],
+    "fit_seconds": 2.9465705289985635,
+    "peak_allocated_bytes": 481897984,
+    "peak_reserved_bytes": 538968064,
+    "score_evaluated": false,
+    "completed_utc": "2026-10-18T05:18:20.086659+00:00"
+  },
+  "frozen_utc": "2026-10-18T05:18:20.936282+00:00",
+  "scores_used": false
+}

@@ -1,0 +1,24 @@
+{
+  "frozen_utc": "2026-10-18T22:12:46.200893+00:00",
+  "purpose": "R51smallGPUAMPcolumnchunkproofexceeded1e-6 beforelargeexecution. DiagnosewithindependentCPUFP32/GPUFP32references;recordallerrorswithoutchangingR51thresholdorlookingatSATquality.",
+  "source_sha256": {
+    "research_r52_precision_diagnostic.py": "0fc29ab777c17b651813fd1dea7936413ad407e94e0a70d29d8f21e60eb259a1",
+    "research_r51_cache_offload.py": "af6d3fe2479553bcbfbf9da1620a8eb960e8df93d9290d9c2725b396e72cf453",
+    "research_r48_features.py": "5dc638e20b968459c2e25ae98e340791efada15319f314f7d869c4766d33659a"
+  },
+  "input_sha256": {
+    "research_r51_resource_plan.json": "bf656a5171850e9b9e2b8ff115066c3972bfb927cbffaa07e832caee9aaf2cf2",
+    "research_r51_gpu_probe.json": "fa3b372911fb6ebc012e60919098931359a90f97ae1e66112f3f7e7858a0fe27",
+    "research_r50_resource_plan.json": "c7a5d9b81c33037b1064d0b74c5c10996b650dc057afa5e1123bf597eee2d52b",
+    "research_sources/tabpfn_feasibility/tabpfn-v2-classifier-finetuned-zk73skhh.ckpt": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49"
+  },
+  "CPU_threads": 6,
+  "allocator_bytes": 778043392,
+  "gpu_process_ceiling_bytes": 1073741824,
+  "RSS_ceiling_bytes": 8589934592,
+  "quality_scores_computed": false,
+  "documented_CPU_speed_guard_override": {
+    "utc": "2026-10-18T22:13:54.844534+00:00",
+    "reason": "Library refusesCPU>1000 bydefault forspeed. 1024-rowdiagnosticiswithin6threads/8GiBmonitor; enabledocumentedTABPFN_ALLOW_CPU_LARGE_DATASET locally. No numericalthresholdorqualityselectionchanged."
+  }
+}

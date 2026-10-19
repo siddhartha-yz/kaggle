@@ -1,0 +1,17 @@
+{
+  "frozen_utc": "2026-10-18T21:50:31.562655+00:00",
+  "main_plan_sha256": "e5c877a1e98908b71600869ae7896427585cacec7898ae5886190e00c9357220",
+  "audit_source_sha256": {
+    "research_r47_audit.py": "c5fe10246a578b4d2c976943bc7237365f25130516931ed11b520ac7e18e99fa",
+    "research_r47_rank_audit.py": "bbe6a72311e97379ebfdb7847cc1fb48d558cee65715b9d7ae837f73f90849fe",
+    "research_r47_csv.py": "860d40d779acbffab01ff4a8f840e5566cc4ced8e816367ccf2da6186cb888db"
+  },
+  "execution": "Onlyafterboth5and3gates; sourcecodefrozenbefore5foldscores. Finalplanwillpinall8newmodelrecordsandallinheritedfulltestcontrols beforeaudit/inference.",
+  "checks": [
+    "full999479rankrecomputeand65originalauxposteriorCPUreplays",
+    "all13rawratingidentitiesandother61fieldsexact",
+    "eightNNmodelownmaps/classes/32members/3epochs/CPUreplay",
+    "independenttree/v11reference/algebra"
+  ],
+  "no_performance_claim": true
+}

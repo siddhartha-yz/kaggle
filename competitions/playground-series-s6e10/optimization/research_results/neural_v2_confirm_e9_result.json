@@ -1,0 +1,44 @@
+{
+  "status": "complete",
+  "name": "neural_v2_confirm_e9",
+  "auc": 0.9588128186658144,
+  "vs_original_lgb": {
+    "baseline_auc": 0.9605999142343083,
+    "candidate_auc": 0.9588128186658144,
+    "delta_auc": -0.0017870955684939904,
+    "paired_se": 0.00020425734352885974,
+    "conditional_95pct_ci": [
+      -0.0021874399618105555,
+      -0.0013867511751774254
+    ],
+    "candidate_logloss": 0.22773268818855286
+  },
+  "fixed_grid_blends": {
+    "0.25": {
+      "baseline_auc": 0.9605999142343083,
+      "candidate_auc": 0.9607011198619566,
+      "delta_auc": 0.0001012056276482598,
+      "paired_se": 5.298460226253858e-05,
+      "conditional_95pct_ci": [
+        -2.644192786315812e-06,
+        0.00020505544808283542
+      ],
+      "candidate_logloss": 0.2232707860249291
+    },
+    "0.5": {
+      "baseline_auc": 0.9605999142343083,
+      "candidate_auc": 0.9604668391126805,
+      "delta_auc": -0.00013307512162785695,
+      "paired_se": 0.00010166036706546484,
+      "conditional_95pct_ci": [
+        -0.000332329441076168,
+        6.617919782045414e-05
+      ],
+      "candidate_logloss": 0.2237989639811889
+    }
+  },
+  "selected_epochs": [
+    9
+  ],
+  "completed_utc": "2026-10-17T20:09:27.114977+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "updated_utc": "2026-10-18T16:04:43.383714+00:00",
+  "status": "not_qualified",
+  "driver_pid": 584528,
+  "formal_used": 1,
+  "remaining": 1,
+  "whole_top100_task_completed": false,
+  "stage": "fivefold",
+  "active_training": false
+}

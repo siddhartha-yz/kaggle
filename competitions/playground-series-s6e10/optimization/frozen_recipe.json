@@ -1,0 +1,24 @@
+{
+  "frozen_utc": "2026-10-17T18:11:56.996819+00:00",
+  "deadline_utc": "2026-10-17T18:47:49+00:00",
+  "positive_class": "True",
+  "model_seed": 42,
+  "confirm_split_seed": 20261017,
+  "confirm_baseline": {
+    "experiment": "cbbase",
+    "trees": 956
+  },
+  "components": [
+    {
+      "experiment": "cb8",
+      "trees": 1308,
+      "weight": 0.5
+    },
+    {
+      "experiment": "lgb63cats",
+      "trees": 639,
+      "weight": 0.5
+    }
+  ],
+  "decision_rule": "Proceed to full only if frozen 50/50 confirm blend paired AUC difference has positive lower conditional 95% bound; no tuning on confirm. This reused-data stability split is not an independent test."
+}

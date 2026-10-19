@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-17T21:18:09.021796+00:00",
+  "status": "Nested route completed normally, all five folds positive but pooled effect below .0002; no full refit or CSV. Both original sessions exited0.",
+  "pooled": {
+    "baseline_auc": 0.9605951395132004,
+    "candidate_auc": 0.9607592663287488,
+    "delta_auc": 0.00016412681554833775,
+    "paired_se": 3.058857552089739e-05,
+    "conditional_95pct_ci": [
+      0.00010417320752737886,
+      0.00022408042356929664
+    ],
+    "candidate_logloss": 0.2235387384689681
+  },
+  "fold_deltas": [
+    8.351918086468846e-05,
+    0.00013190896769521565,
+    0.0002181513846351013,
+    0.0002147242102172875,
+    0.00025840723359749074
+  ],
+  "eligible": false,
+  "new_submissions_used": 2,
+  "remaining_submissions": 2,
+  "next_route": "Original-only source context: two frozen primary representations, serial CPU6."
+}

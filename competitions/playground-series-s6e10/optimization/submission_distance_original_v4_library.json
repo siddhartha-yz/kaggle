@@ -1,0 +1,132 @@
+{
+  "library_file_id": "libfile_a0f39f797ee08191821d362559ac5c47",
+  "file_name": "submission_distance_original_v4.csv",
+  "file_id": "file_000000004c0081f481dd6e956ca70ed2",
+  "version": 0,
+  "submission": {
+    "path": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/submission_distance_original_v4.csv",
+    "sha256": "87a7d34b2dd788ba1623283e06e689bd8f33e1bef427bc473bccf26c6e2d6e43",
+    "bytes": 7987164,
+    "rows": 299844,
+    "columns": [
+      "id",
+      "satisfaction"
+    ],
+    "id_order_matches_official_test": true,
+    "min": 0.006068143837913798,
+    "max": 0.9983949747763781,
+    "mean": 0.4436405612362201,
+    "std": 0.43240528878283274,
+    "csv_readback_verified": true
+  },
+  "external_data": "CC0 original data,129859 rows after excluding17 train matches and4 test matches; teacher475 trees original-only; smoothed lookup features",
+  "comparison": {
+    "status": "complete",
+    "name": "lgb_stats_orig_both_oof",
+    "auc": 0.9605951395132004,
+    "logloss": 0.22405380452220247,
+    "vs_stats": {
+      "baseline_auc": 0.9603367815297761,
+      "candidate_auc": 0.9605951395132004,
+      "delta_auc": 0.0002583579834243288,
+      "paired_se": 6.018706284019439e-05,
+      "conditional_95pct_ci": [
+        0.0001403913402575478,
+        0.0003763246265911098
+      ],
+      "candidate_logloss": 0.22405380452220247
+    },
+    "byfold": [
+      {
+        "baseline_auc": 0.9596921699064124,
+        "candidate_auc": 0.9598799093011321,
+        "delta_auc": 0.00018773939471972145,
+        "paired_se": 0.00013859856794647292,
+        "conditional_95pct_ci": [
+          -8.391379845536549e-05,
+          0.0004593925878948084
+        ],
+        "candidate_logloss": 0.22622722200716822
+      },
+      {
+        "baseline_auc": 0.960474294800054,
+        "candidate_auc": 0.9607348943533817,
+        "delta_auc": 0.00026059955332768947,
+        "paired_se": 0.0001342111026133032,
+        "conditional_95pct_ci": [
+          -2.4542077943848217e-06,
+          0.0005236533144497638
+        ],
+        "candidate_logloss": 0.22358218273313496
+      },
+      {
+        "baseline_auc": 0.9608633876312733,
+        "candidate_auc": 0.9611549903661967,
+        "delta_auc": 0.0002916027349233463,
+        "paired_se": 0.00013240458411005506,
+        "conditional_95pct_ci": [
+          3.2089750067638436e-05,
+          0.0005511157197790542
+        ],
+        "candidate_logloss": 0.22233369263426364
+      },
+      {
+        "baseline_auc": 0.9600410366951235,
+        "candidate_auc": 0.9605211783060533,
+        "delta_auc": 0.00048014161092979624,
+        "paired_se": 0.00013178952635067268,
+        "conditional_95pct_ci": [
+          0.00022183413928247777,
+          0.0007384490825771147
+        ],
+        "candidate_logloss": 0.22500856911696532
+      },
+      {
+        "baseline_auc": 0.9606398502729783,
+        "candidate_auc": 0.9607174371190246,
+        "delta_auc": 7.758684604630695e-05,
+        "paired_se": 0.0001357927502940837,
+        "conditional_95pct_ci": [
+          -0.00018856694453009713,
+          0.000343740636622711
+        ],
+        "candidate_logloss": 0.22311735611948022
+      }
+    ],
+    "completed_utc": "2026-10-17T19:44:28.584460+00:00",
+    "stable_positive_vs_stats": true,
+    "slices": {
+      "near_match": {
+        "rows": 258696,
+        "comparison": {
+          "baseline_auc": 0.9593887634227227,
+          "candidate_auc": 0.9595513714151283,
+          "delta_auc": 0.00016260799240552792,
+          "paired_se": 0.00010090092710645244,
+          "conditional_95pct_ci": [
+            -3.515782472311886e-05,
+            0.0003603738095341747
+          ],
+          "candidate_logloss": 0.22593396717903577
+        }
+      },
+      "no_near_match": {
+        "rows": 440939,
+        "comparison": {
+          "baseline_auc": 0.960839426592213,
+          "candidate_auc": 0.9611571657018749,
+          "delta_auc": 0.00031773910966192975,
+          "paired_se": 7.541732167360782e-05,
+          "conditional_95pct_ci": [
+            0.00016992115918165843,
+            0.0004655570601422011
+          ],
+          "candidate_logloss": 0.2229507255052134
+        }
+      }
+    }
+  },
+  "frozen_before_v3_public_feedback": true,
+  "submission_authority": "Parent cloud browser only; second candidate, not yet submitted locally",
+  "delivered_utc": "2026-10-17T19:48:06.155548+00:00"
+}

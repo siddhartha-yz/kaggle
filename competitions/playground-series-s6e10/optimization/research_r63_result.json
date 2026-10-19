@@ -1,0 +1,174 @@
+{
+  "status": "not_qualified",
+  "fivefold": {
+    "status": "complete",
+    "stage": "fivefold",
+    "checked_utc": "2026-10-19T01:34:24.364189+00:00",
+    "vs_formal_v11": {
+      "pooled": {
+        "baseline_auc": 0.9616328660208192,
+        "candidate_auc": 0.9616161645500713,
+        "delta_auc": -1.6701470747948477e-05,
+        "paired_se": 1.436851976763109e-05,
+        "conditional_95pct_ci": [
+          -4.486376949250541e-05,
+          1.1460827996608457e-05
+        ],
+        "candidate_logloss": 0.2212536595988443
+      },
+      "fold_comparisons": [
+        {
+          "baseline_auc": 0.9608862343189031,
+          "candidate_auc": 0.9609085451689758,
+          "delta_auc": 2.231085007275979e-05,
+          "paired_se": 3.2143720847789913e-05,
+          "conditional_95pct_ci": [
+            -4.069084278890844e-05,
+            8.531254293442802e-05
+          ],
+          "candidate_logloss": 0.22328648674344065
+        },
+        {
+          "baseline_auc": 0.9618421173162851,
+          "candidate_auc": 0.9617861771056152,
+          "delta_auc": -5.594021066990251e-05,
+          "paired_se": 3.23007357501273e-05,
+          "conditional_95pct_ci": [
+            -0.00011924965274015202,
+            7.369231400346994e-06
+          ],
+          "candidate_logloss": 0.22085369082505713
+        },
+        {
+          "baseline_auc": 0.9622169314611875,
+          "candidate_auc": 0.9622081042418709,
+          "delta_auc": -8.827219316609458e-06,
+          "paired_se": 3.1258131705272134e-05,
+          "conditional_95pct_ci": [
+            -7.009315745894284e-05,
+            5.243871882572392e-05
+          ],
+          "candidate_logloss": 0.21934969546796618
+        },
+        {
+          "baseline_auc": 0.9614621762740646,
+          "candidate_auc": 0.9614312149957909,
+          "delta_auc": -3.0961278273733406e-05,
+          "paired_se": 3.3152009113488234e-05,
+          "conditional_95pct_ci": [
+            -9.593921613617034e-05,
+            3.401665958870353e-05
+          ],
+          "candidate_logloss": 0.2222277255215296
+        },
+        {
+          "baseline_auc": 0.9617929598566762,
+          "candidate_auc": 0.9617839079113955,
+          "delta_auc": -9.051945280780238e-06,
+          "paired_se": 3.1789671568196334e-05,
+          "conditional_95pct_ci": [
+            -7.135970155444505e-05,
+            5.3255810992884574e-05
+          ],
+          "candidate_logloss": 0.22055069943622782
+        }
+      ],
+      "corrected_resampled_t": {
+        "mean_delta": -1.6493960693653165e-05,
+        "se": 1.951524145848897e-05,
+        "test_train_ratio": 0.25,
+        "df": 4,
+        "one_sided_alpha": 0.025,
+        "lower_bound": -7.067695731782791e-05
+      },
+      "eligible_for_new_partition_replication": false,
+      "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+    },
+    "vs_prior_v10_diagnostic": {
+      "pooled": {
+        "baseline_auc": 0.9615338914351743,
+        "candidate_auc": 0.9616161645500713,
+        "delta_auc": 8.227311489694689e-05,
+        "paired_se": 1.9207604311300403e-05,
+        "conditional_95pct_ci": [
+          4.46262104467981e-05,
+          0.00011992001934709568
+        ],
+        "candidate_logloss": 0.2212536595988443
+      },
+      "fold_comparisons": [
+        {
+          "baseline_auc": 0.960818384445062,
+          "candidate_auc": 0.9609085451689758,
+          "delta_auc": 9.016072391387908e-05,
+          "paired_se": 4.449423545849519e-05,
+          "conditional_95pct_ci": [
+            2.9520224152285087e-06,
+            0.00017736942541252967
+          ],
+          "candidate_logloss": 0.22328648674344065
+        },
+        {
+          "baseline_auc": 0.9617131397187628,
+          "candidate_auc": 0.9617861771056152,
+          "delta_auc": 7.303738685238148e-05,
+          "paired_se": 4.052555550063453e-05,
+          "conditional_95pct_ci": [
+            -6.3927019288621915e-06,
+            0.00015246747563362514
+          ],
+          "candidate_logloss": 0.22085369082505713
+        },
+        {
+          "baseline_auc": 0.9620715765969017,
+          "candidate_auc": 0.9622081042418709,
+          "delta_auc": 0.00013652764496918657,
+          "paired_se": 4.2437784025752605e-05,
+          "conditional_95pct_ci": [
+            5.3349588278711464e-05,
+            0.00021970570165966169
+          ],
+          "candidate_logloss": 0.21934969546796618
+        },
+        {
+          "baseline_auc": 0.9614292433668903,
+          "candidate_auc": 0.9614312149957909,
+          "delta_auc": 1.971628900587774e-06,
+          "paired_se": 4.378333359201983e-05,
+          "conditional_95pct_ci": [
+            -8.384370493977108e-05,
+            8.778696274094663e-05
+          ],
+          "candidate_logloss": 0.2222277255215296
+        },
+        {
+          "baseline_auc": 0.9616819435749557,
+          "candidate_auc": 0.9617839079113955,
+          "delta_auc": 0.00010196433643971936,
+          "paired_se": 4.303621330929504e-05,
+          "conditional_95pct_ci": [
+            1.7613358353501084e-05,
+            0.00018631531452593762
+          ],
+          "candidate_logloss": 0.22055069943622782
+        }
+      ],
+      "corrected_resampled_t": {
+        "mean_delta": 8.073234421515085e-05,
+        "se": 3.339862097177364e-05,
+        "test_train_ratio": 0.25,
+        "df": 4,
+        "one_sided_alpha": 0.025,
+        "lower_bound": -1.1997093502286453e-05
+      },
+      "eligible_for_new_partition_replication": false,
+      "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+    },
+    "eligible": false,
+    "oof_sha256": "1b6f99d53a69aaf99e385018833a0fa47681620383d51042dae8aa1907d40fa9",
+    "plan_sha256": "a22705566214cc3a77d93777943025c0d449788bfe4d6ed7783b01d951b66eff"
+  },
+  "threefold_started": false,
+  "new_CSV": false,
+  "actual_top500_verified": false
+}

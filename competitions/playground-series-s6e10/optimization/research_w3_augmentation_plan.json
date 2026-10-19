@@ -1,0 +1,40 @@
+{
+  "frozen_utc": "2026-10-18T06:07:19.617178+00:00",
+  "hypothesis": "v6compressesindependentoriginalsupervisionintoateacherandlookups;directsafeoriginalexamplesmayregularizetarget-domainboundaries. PreviousNNwarmstartandteacher-onlyfeaturetestsarenotjointweightedGBDTtraining. Testconservativemeansourceweight.25andadensity-ratiovarianttocorrectinputdistributionmismatch.",
+  "variants": [
+    "uniform",
+    "covshift"
+  ],
+  "original_rows": 129859,
+  "excluded_exact_rows": 21,
+  "source_aux_features": "5foldstratifiedsource-onlyOOF(seed20261018):existingfixedsourceLGBtreesandOriginalLookup4features;sourcevalidationrowneverentersitsownteacher/lookups. Syntheticfeaturesreuseexistingfullsafesource5features.",
+  "source_teacher_fixed_trees": 475,
+  "source_model_sha256": "db538bc2303ee5075be4016e0653424ad885d3cd207001dbddb42441e66588e4",
+  "uniform_source_weight": 0.25,
+  "covshift": {
+    "domain_labels": "1syntheticoutertrain,0safeoriginal;no competition/originalGTlabelsusedinweights",
+    "source_holdout": "5foldKFoldshuffle20261018;eachsourceholdoutpredictedbydomainmodelonallsyntheticoutertrain+other4/5source",
+    "preprocessing": "raw21+4ratingtwins,fitoutertrainpredictorsonly;nooutervalidationpredictors/labels",
+    "params": {
+      "n_estimators": 200,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "min_child_samples": 200,
+      "reg_lambda": 10,
+      "objective": "binary",
+      "n_jobs": 6,
+      "random_state": 42,
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true
+    },
+    "ratio": "p_syn/(1-p_syn)*(n_source_domain_train/n_synthetic_train);pclip[1e-4,1-1e-4];ratioclip[.05,20];normalize sourceweights to mean.25",
+    "assumption": "Covariateshiftisahypothesis;conditionaltargetdistributionsmaydiffer,whichcanmakeaugmentationharmful."
+  },
+  "synthetic_learner": "fixedoldLGB639/63/.04/L2=10/seed42;featuresDistanceStatsfittedsyntheticoutertrainonly+5safeoriginalfeatures;sourcefeaturestransformusingthatfixedpreprocessorandOOFsourceaux",
+  "combination": "replaceoldv6LGBcomponentexactly: v6+(45/128)*(new_aug_lgb-old_lgb)",
+  "selection": "RankeligibleprimariesbyAUCbeforeconfirmation;tryinthatorder;no weight/tree/domain-paramgrid",
+  "gates": "unchangedW3primary>=.0001lower>0;confirmationlower>0;OOFeveryfoldpositivepooled>=.0002lower>0",
+  "resources": "CPU6serial,noGPU;1GiBGPUceilingremainsforlaterfits;10:10start10:45hard11:06deadline;0of2formal,parentonly",
+  "bias": "ChosenafterreusedOOFandprimarydiagnostics;conditionalintervalsexcludeselectionuncertainty;no publicscoreorunknownpredictions."
+}

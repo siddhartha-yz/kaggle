@@ -1,0 +1,27 @@
+{
+  "status": "passed_synthetic_only",
+  "official_CSVs_loaded": false,
+  "official_SAT_values_parsed": false,
+  "quality_scores_computed": false,
+  "model_family": "TabPFN-v2",
+  "checkpoint_sha256": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49",
+  "library_version": "9.2.0",
+  "CPU_threads": 6,
+  "preprocessing_jobs": 1,
+  "training_context_rows": 128,
+  "query_rows": 64,
+  "features": 48,
+  "categorical_features_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "repeat_error": 0.0,
+  "reload_error": 0.0,
+  "peak_RSS_bytes": 852361216,
+  "seconds": 1.6156306019984186,
+  "plan_sha256": "7e7644e9bda6f1e65449a28c1e9d050d5c8e5134a96b26d9592c1df2f420d8cf",
+  "attribution": "Built with PriorLabs-TabPFN",
+  "no_network_model_loading": true
+}

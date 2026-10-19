@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-10-17T19:56:59.999441+00:00",
+  "hypothesis": "Public original same-distance neighbors preserve local feature similarity missed by the global teacher. Add independently computed neighbor statistics to the current LGB639; do not substitute original labels for predictions.",
+  "all_original_exact_overlap_rows_excluded": 21,
+  "metric": "Prespecified normalized L1 numerical + Hamming string mean; top1/3/10, weight temperature0.05; no synthetic labels used in feature construction",
+  "primary": "Require >=0.0001 paired AUC improvement vs original-teacher LGB on same primary rows before confirmation",
+  "promotion": "Positive confirmation lower conditional95% bound, then same five-fold OOF all positive, pooled delta>=0.00015 and lower bound>0 before candidate export",
+  "public_scores_used_for_parameter_selection": false
+}

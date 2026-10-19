@@ -1,0 +1,21 @@
+{
+  "frozen_utc": "2026-10-19T00:02:09.201537+00:00",
+  "main_plan_sha256": "f60a872603514e3d9bcdaae6ceb207da86edb96902ab33c5af665974da68f33f",
+  "audit_code_sha256": {
+    "research_r57_audit.py": "4c23899f4eee65fb94de65a37a1ccce374ed8af0424789ff051b8ae2b907ebac"
+  },
+  "required_quality": "Both frozen5and3dualCIgates vs actualv11",
+  "CPU_threads": 6,
+  "execute_only_without_other_model_training": true,
+  "checks": [
+    "Independent outerKfold and inner80/20seed20261020 memberships",
+    "65 unchanged target-free auxiliary source model hashes and prior replay audit",
+    "32 inner tree models replay and own57/84 maps",
+    "8 inner NN32 CPU replays and own encoders/counts,trainindices/classes/epochs/caps",
+    "8 bounded ridge100 gates independently solved as scalar convex roots tolerance1e-5",
+    "Exact outer sealed expert predictions and gate formula,bothgates"
+  ],
+  "CPU_NN_probability_replay_tolerance": 2e-06,
+  "CPU_tree_probability_replay_tolerance": 1e-12,
+  "scalar_optimum_theta_tolerance": 1e-05
+}

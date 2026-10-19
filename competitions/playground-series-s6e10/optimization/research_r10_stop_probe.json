@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-10-18T14:21:24.935672+00:00",
+  "observed_epochs": [
+    1,
+    2
+  ],
+  "schedule_max_epochs": 9,
+  "official_data_used": false,
+  "actual_cuda_parameters_during_fit": true
+}

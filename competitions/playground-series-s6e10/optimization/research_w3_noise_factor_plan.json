@@ -1,0 +1,49 @@
+{
+  "frozen_utc": "2026-10-18T08:03:19.343180+00:00",
+  "hypothesis": "V6 and source teacher agree on99.996% of highconfidence mistakes; a distinct constrained model may learn instance-dependent response corruption rather than relearn a clean decision boundary. This does not prove labelnoise. Fix audited independent source clean-probabilityq and learn2bounded rates a(x),b(x), p=a+(1-a-b)*q. This differs structurally from unconstrained logit residuals and constant-group source-response augmentation.",
+  "architecture": {
+    "embedding_dim": 16,
+    "hidden": [
+      512,
+      256,
+      128
+    ],
+    "activation": "SiLU",
+    "batchnorm": true,
+    "dropout": 0.1,
+    "linear_and_FM_pairwise_terms": true,
+    "embedding_init_std": 0.01,
+    "reservedunknown_embeddings_zero": true,
+    "max_noise_rate": 0.25,
+    "heads": 2,
+    "last_head_zero_initialization": true,
+    "pair_head_scales_zero_initialization": true
+  },
+  "training": {
+    "seeds": [
+      42,
+      20261018,
+      17,
+      20261017
+    ],
+    "members": 4,
+    "epochs": 3,
+    "batch_size": 2048,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "optimizer": "AdamW",
+    "scheduler": "OneCycleLR,pct_start.2,ceilbatches; eachfrozenmember includesalldata each epoch"
+  },
+  "features": "ExactPriorFeatures view:17train-onlyquantile numerics+21valuecategories+teacherlogitstandardizedontraining; rawteacherlogit supplies immutableq via sigmoid.",
+  "rate_initialization": "Onlyoutertrain anchors q<.01 and q>.99: Laplace1 posterior rates of y=1 and y=0 respectively; clipinitial rates1e-4...2499. LastMLPhead, firstorderhead and FMhead initializedzero, so initial prediction is constant-rate corrected teacher.",
+  "link": "a=.25sigmoid(head0+anchor0),b=.25sigmoid(head1+anchor1); probability a+(1-a-b)*sigmoid(raw_teacher_logit); training returnsclampedlogitp for BCEWithLogits.",
+  "blend": {
+    "v6": 0.75,
+    "noise_model": 0.25
+  },
+  "control": ".75v6+.25constant_rate_corrected_teacher using same training-only anchors. Require pointbeat this control in addition to absolutev6gates.",
+  "probe": "One fullprimary training epoch, firstmember, no score; discardmodel. OnlyallocatorOOM batch2048->1024. GPU reducedallocator778043392bytes leavesdriverroom under1GiB.",
+  "gates": "Unchanged W3primary+.0001/lower>0;confirm lower>0;OOFallfoldpositivepooled+.0002/lower>0, andmatchedcontrolpoint>0.",
+  "resources": "CPU6serial,GPU1GiBprocessceil withfreeguards,existing10:10start10:45hard11:06deadline;paid0,parentonlyformal0/2used.",
+  "limitation": "Clean-teacher assumption and boundedcorruption may underfit genuine boundary changes; reuseddevelopmentpartitions and conditionalCIs exclude adaptive-selectionuncertainty."
+}

@@ -1,0 +1,10 @@
+{
+  "frozen_utc": "2026-10-18T06:28:26.077948+00:00",
+  "hypothesis": "Training-onlyresponseconversionfoundoriginalteacherconfidentregionsstillhave3.7%/5.8%responseinconsistency;sourceaugmentationdidnothelp. AllocateconditionalmodelcapacitytoindependentlydefinedsourceconfidencebandsratherthanClass/Travelgates. A singlefixedthreebandpartition,notthresholdsearch.",
+  "bands": "teacherp<.05;[.05,.95];>.95. Sourceclassifiertrainedonly129859safeoriginalrows;bandassignmentdoesnotusecompetitionlabels.",
+  "learner": "3serialoldLGB639/63/.04/minchild150/L2=10/seed42;sharedoutertrainDistanceStats+5sourcefeatures;hardofficialtargetsunchanged,noeval_set",
+  "combination": "replaceexistingLGBcomponent45/128,remainingv6weightsunchanged",
+  "gates": "SameW3primary>=.0001lower>0;confirmationlower>0;OOFallfoldpositivepooled>=.0002lower>0",
+  "resources": "CPU6serial,noGPU;1GiBGPUcapunchanged;10:10start10:45hard11:06deadline,parentonly0of2formal",
+  "bias": "Chosenafterreusedtraining/OOF/primarydiagnostics;confidencecutoffsreusethepreviousfixedanchorsofresponseconversion,noretrospectivegateoptimization. ConditionalCIsnotindependent."
+}

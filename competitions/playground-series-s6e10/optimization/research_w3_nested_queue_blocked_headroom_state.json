@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "started_utc": "2026-10-18T05:29:57.634684+00:00",
+  "steps": [],
+  "active": "w3_tabm_nested_confirm",
+  "active_log": "research_w3_tabm_nested_confirm.log",
+  "updated_utc": "2026-10-18T05:29:57.636130+00:00",
+  "child_pid": 363692,
+  "error": "FileNotFoundError(2, 'No such file or directory')",
+  "ended_utc": "2026-10-18T05:30:01.257512+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "status": "input_audit_passed_not_frozen_or_running",
+  "noted_utc": "2026-10-19T00:35:26.338050+00:00",
+  "route": "Proposed same74 two-delay log1p preconditioning under original supervised CE",
+  "evidence": "Officialcovariate-only train/test profiles show q25=q50=q75=0 for both delays, q95=7 and maxima480-491. Installed PyTabKit1.7.3 RobustScaleFactory uses half-minmax-range when IQR=0, making rawq95 approximately.029; fixed log1p makes q95 approximately.67. This spreads common positive values under finite-network preprocessing; no softwarebug or performance claim.",
+  "features": "Change only the two delay numeric fields after raw categorical twins are created. Exact raw category identities and other72 fields retained, same74=52numeric22nominal. Original imputation of292missingtrain arrival values retained. No new auxiliary fits, data or predictions imported.",
+  "proof": "research_r59_input_audit.json:2048syntheticlabelrows, no officialSAT values parsed, all72other fields bitwise identical, exact log1p formula, no new numeric ties in proof sample.",
+  "next_step": "Freeze complete R59 same current R23 config32/native3epochs/seed42,b256/predict1024 and old CE (discard failed R58 objective), actualv11tree equal clipped logitpool; serial original5then3dualCIgates. Reuse exact same categorical/parameter memory geometry resource qualification plus live caps; no grid or failed-route blend rescue.",
+  "CPU_threads": 6,
+  "GPU_process_ceiling_bytes": 1073741824,
+  "allocator_cap_bytes": 778043392,
+  "paid": false,
+  "quality_evaluated": false,
+  "training_started": false,
+  "parent_only_submitter": true,
+  "actual_top500_verified": false
+}

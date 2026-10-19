@@ -1,0 +1,101 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-18T05:27:31.808173+00:00",
+  "hardware": {
+    "initial_gpu_free_bytes": 6418989056,
+    "gpu_name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "cap_bytes": 2147483648
+  },
+  "plan_sha256": "74eddd70b9eeae10bb7d4590281fdeb3a1bab576a6cc1d20e9480f7aac776218",
+  "runner_sha256": "1272e95f51f6c05aba855d3e3df3339d659e7f60aa97c31a10a4563fce7a9621",
+  "feature_code_sha256": "fce41f55c33e6e9ad23fd318efc811a916aa208a9f7b896b68c605376c9fa445",
+  "train_rows": 559708,
+  "valid_rows": 139927,
+  "outer_validation_used_in_fit": false,
+  "cat_cardinalities": [
+    76,
+    3447,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    6,
+    7,
+    7,
+    159,
+    160,
+    3,
+    3,
+    3,
+    4
+  ],
+  "config": {
+    "seed": 42,
+    "k": 16,
+    "epochs": 4,
+    "batch_size": 256,
+    "d_block": 256,
+    "n_blocks": 2,
+    "dropout": 0.1,
+    "d_embedding": 16,
+    "num_bins": 48,
+    "lr": 0.002,
+    "weight_decay": 0,
+    "share_training_batches": true,
+    "allow_amp": false,
+    "compile_model": false,
+    "numerical_transform": "train-only median impute, QuantileTransformer1000normal random_state42; PWL bins train only; constant numerical columns excluded",
+    "categoricals": "raw four string categorical features; outer-train vocab plus reservedunknown0"
+  },
+  "selected_epochs": 4,
+  "epochs": [
+    {
+      "epoch": 1,
+      "seconds": 8.440227434999542,
+      "train_loss": 0.24817471654957798,
+      "gpu_free_bytes": 5746655232
+    },
+    {
+      "epoch": 2,
+      "seconds": 8.542955703996995,
+      "train_loss": 0.23047513086812146,
+      "gpu_free_bytes": 5747638272
+    },
+    {
+      "epoch": 3,
+      "seconds": 8.558169714000542,
+      "train_loss": 0.22528518838467365,
+      "gpu_free_bytes": 5748031488
+    },
+    {
+      "epoch": 4,
+      "seconds": 10.710400696996658,
+      "train_loss": 0.2214470163022958,
+      "gpu_free_bytes": 5747441664
+    }
+  ],
+  "fit_seconds": 36.25348092099739,
+  "peak_allocated_bytes": 574541312,
+  "peak_reserved_bytes": 694157312,
+  "completed_utc": "2026-10-18T05:29:34.881059+00:00",
+  "raw_auc": 0.9593384548686816,
+  "vs_v6": {
+    "baseline_auc": 0.9603020930463941,
+    "candidate_auc": 0.9604139610519344,
+    "delta_auc": 0.0001118680055403054,
+    "paired_se": 4.8773913404413874e-05,
+    "conditional_95pct_ci": [
+      1.627113526765421e-05,
+      0.00020746487581295659
+    ],
+    "candidate_logloss": 0.22518027001602486
+  },
+  "model_reload_max_abs_diff": 0.0,
+  "model_sha256": "7dee1c9772482feee71d746b4ade20a07396078eda411ff8dcccc02d2d1ace25"
+}

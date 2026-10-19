@@ -1,0 +1,217 @@
+{
+  "frozen_utc": "2026-10-18T16:30:27.322656+00:00",
+  "hypothesis": "R19original-onlyratingexpectationfeatures improvepooledAUCvsprivatev9butfailedcorrectedfoldbound. Publicladder also reportscompetition-domainlabel-freeauxiliarycrossfit; testdomainmatchwithaGPUauxiliarylearnerthatfitsresourcecap. Source-onlyCBcontrolisolatesauxlearnerchangefrompopulationchange. No individualratingselection, mainlearner/weightsunchanged.",
+  "variants": [
+    "sourcecb",
+    "officialcb"
+  ],
+  "auxiliary_parameters": {
+    "iterations": 300,
+    "learning_rate": 0.1,
+    "depth": 7,
+    "l2_leaf_reg": 5,
+    "loss_function": "MultiClass",
+    "random_seed": 42,
+    "task_type": "GPU",
+    "devices": "0",
+    "gpu_ram_part": 0.06,
+    "thread_count": 6,
+    "border_count": 128,
+    "max_ctr_complexity": 1,
+    "one_hot_max_size": 2,
+    "boosting_type": "Plain",
+    "bootstrap_type": "Bernoulli",
+    "subsample": 0.8,
+    "allow_writing_files": false,
+    "verbose": 100
+  },
+  "resource_evidence": {
+    "status": "passed_no_satisfaction_read_or_quality_score",
+    "parameters": {
+      "iterations": 300,
+      "learning_rate": 0.1,
+      "depth": 7,
+      "l2_leaf_reg": 5,
+      "loss_function": "MultiClass",
+      "random_seed": 42,
+      "task_type": "GPU",
+      "devices": "0",
+      "gpu_ram_part": 0.06,
+      "thread_count": 6,
+      "border_count": 128,
+      "max_ctr_complexity": 1,
+      "one_hot_max_size": 2,
+      "boosting_type": "Plain",
+      "bootstrap_type": "Bernoulli",
+      "subsample": 0.8,
+      "allow_writing_files": false,
+      "verbose": 100
+    },
+    "classes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "train_rows": 799584,
+    "features": 20,
+    "categorical_columns": [
+      "Gender",
+      "Customer Type",
+      "Type of Travel",
+      "Class"
+    ],
+    "seconds": 6.455028625001432,
+    "peak_gpu_process_bytes": 413138944,
+    "gpu_process_ceiling_bytes": 1073741824,
+    "reload_prediction_error": 0.0,
+    "peak_rss_bytes": 1319301120,
+    "runner_sha256": "1b9f6464e7940ff4923e19d6b1056d8832a36727c8624c8dc04b5474b6805410"
+  },
+  "sourcecb": "13original-safe129859-onlyGPUCBmulticlassfits; eachratingpredictedfromremaining20rawfields; noSATcolumnloaded, all21exactofficialrowsoverlapexcluded. Expectedratingappliedtoofficialtrain/test.",
+  "officialcb": "13ratings*5target-independentKFold5shuffle42 over999479officialtrain+testcovariaterows. Eachheldrowexpectationfrommodeltrainedonotherrows, ownratingexcludedfrom20inputs. NoSATcolumnload. Deliberatetransductivepreprocessing: outervalidationandtestcovariates, includingobservedratingasauxiliarytargetforOTHERrows, permitted; officialSATneverusedinauxiliaryfit.",
+  "learner": "SameoldLGB639 parameters and57validatedfeatures plus ALL13aux expectations=70fields. Noindividualfeatureselection. Outertrain-only DistanceStats/categorymaps; independentoriginalauxcache sharedlegallyacrossouterfolds.",
+  "formula": "ReplaceonlyLGB .46875 shareinv5tree thenequalv9logoddspoolwitholdleanNN. Geometry/weightsunchanged.",
+  "gates": "Twofixedviews, completeBOTHfivefoldruns beforeanyscoring. Per-viewpaired97.5%lowerandcorrectedresampledtalpha.0125lower>0 vsBOTHprivatev9andofficialv7; selecthighesteligibleAUC. Onlyonewinnerfreshthreefoldsamegates. No weight/seed/config grid.",
+  "final_inference": "Onlyifbothstagesandauditpass: sameLGB639fulltrain70featureswithselectedauxcache; auxcacheisSATindependentanddoesnotrefit; existingv5tree/NNfullcomponentsreconstructed; parentonlysubmits.",
+  "public_evidence": {
+    "author": "Koumei Maki; ideas credited to goodpjw2008",
+    "notebook": "https://www.kaggle.com/code/koumeimaki/s6e10-feature-ladder-what-helps-lightgbm",
+    "discussion": "https://www.kaggle.com/competitions/playground-series-s6e10/discussion/747358",
+    "read_anonymously": true,
+    "notebook_license": "Apache2.0",
+    "claimed_delta_33aux": 0.000139,
+    "claimed_final13ev_auc": 0.961174,
+    "caveats": "Theirroundcounts/featureselectionreuseouterlabels and original exactoverlapnotaudited. Publishedgain motivatesonly; notourvalidation. No publicOOF or predictions imported; oursusesstrictsafeoriginal129859 and frozenfixedrounds."
+  },
+  "r19_evidence": {
+    "pooled": {
+      "baseline_auc": 0.9614787666333333,
+      "candidate_auc": 0.961510220491746,
+      "delta_auc": 3.145385841263337e-05,
+      "paired_se": 1.2307526130351486e-05,
+      "conditional_95pct_ci": [
+        7.331107197144463e-06,
+        5.557660962812229e-05
+      ],
+      "candidate_logloss": 0.22167212172734402
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.9607490848150055,
+        "candidate_auc": 0.9608067129349555,
+        "delta_auc": 5.7628119949915124e-05,
+        "paired_se": 2.822828310151119e-05,
+        "conditional_95pct_ci": [
+          2.3006850709531942e-06,
+          0.00011295555482887705
+        ],
+        "candidate_logloss": 0.22377605519970575
+      },
+      {
+        "baseline_auc": 0.9616737803939621,
+        "candidate_auc": 0.9617120314017611,
+        "delta_auc": 3.8251007798972836e-05,
+        "paired_se": 2.8294029086104667e-05,
+        "conditional_95pct_ci": [
+          -1.7205289209792307e-05,
+          9.370730480773797e-05
+        ],
+        "candidate_logloss": 0.22116895437250303
+      },
+      {
+        "baseline_auc": 0.9620193611259688,
+        "candidate_auc": 0.9620673883339976,
+        "delta_auc": 4.8027208028877943e-05,
+        "paired_se": 2.597309258070625e-05,
+        "conditional_95pct_ci": [
+          -2.8800534293063076e-06,
+          9.89344694870622e-05
+        ],
+        "candidate_logloss": 0.21981462393174925
+      },
+      {
+        "baseline_auc": 0.9613877874274774,
+        "candidate_auc": 0.9613731580983006,
+        "delta_auc": -1.4629329176840677e-05,
+        "paired_se": 2.791232361545104e-05,
+        "conditional_95pct_ci": [
+          -6.933748346312472e-05,
+          4.007882510944336e-05
+        ],
+        "candidate_logloss": 0.22255225466045328
+      },
+      {
+        "baseline_auc": 0.961608017009956,
+        "candidate_auc": 0.9616354358538098,
+        "delta_auc": 2.741884385382143e-05,
+        "paired_se": 2.7131733904995046e-05,
+        "conditional_95pct_ci": [
+          -2.5759354599968863e-05,
+          8.059704230761172e-05
+        ],
+        "candidate_logloss": 0.22104872047230897
+      }
+    ],
+    "corrected_resampled_t": {
+      "mean_delta": 3.1339170090949334e-05,
+      "se": 1.88124306986458e-05,
+      "test_train_ratio": 0.25,
+      "df": 4,
+      "one_sided_alpha": 0.025,
+      "lower_bound": -2.0892511039178506e-05
+    },
+    "eligible_for_new_partition_replication": false,
+    "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+  },
+  "cpu_threads": 6,
+  "gpu_process_ceiling_bytes": 1073741824,
+  "paid_resources": false,
+  "formal_used": 1,
+  "formal_remaining": 1,
+  "parent_only_submitter": true,
+  "actual_top100_verified": false,
+  "limitations": "Historically reusedSATvalidationlabels; conditionalboundsomitadaptivehistory. Officialauxisexplicitlytransductive andnotfullyinductive. Publicrecipeevidencehasitsownselectionbiasanddoesnotguaranteeourquality/Top100.",
+  "source_sha256": {
+    "research_r20_auxiliary.py": "f8cc7efa685b4e86c6ed2d71a6a881ed27b2c66a0115def563757192cd5f0d80",
+    "research_r20_worker.py": "3e468b1ce59bd39922df6bd513c17b65a5a20e1e53b90ef7fc8ecdc959929a41",
+    "research_r20_driver.py": "66aa4a8a982c5018339a1ec34911bb164cc44bf9474a6192ca8d64444ce262a5",
+    "research_r20_check.py": "dedf4f53ce736ded180ddc198dcdc8575e23c3fd5da16588540dbf2805600e1e",
+    "research_r19_features.py": "7376d55e120b308a496af8d3747cf4115291f5322c30fbc763954efacc0a969e",
+    "research_r19_aux_source.py": "0d920e2c8b88ca07a444e7bc72407c19e67ae2d28835768ec43a50a7e4946f56",
+    "research_features.py": "6c029528249d6772a958b29c46f4f095da9f91136c2721eb2a4d268f360fcfe9",
+    "research_r4_common.py": "53eedffd572f6a82b9c3dba70e3315ab1df51dd9242396ab22da7f8dabc52e81",
+    "research_oof.py": "59d90206b1f10db8df83dff1fd369a6b3ec084b6da26167c5e889d97fecda59b",
+    "research_r5_auto_te.py": "52485ed151e27f681d0447c0a3d73783b68dfe64c8683c1f33e2656f3fc44285",
+    "research_external_ablation.py": "08520e678e0886ef2fca3a2658d9df377c9a43896d0305840757fe387b01b9e3",
+    "research_r15_loader.py": "00f8cf7e231c496aeadb92af0209f7b288ac6093ade109c6bb61b09155efae36"
+  },
+  "artifact_sha256": {
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "research_r14_plan.json": "89d714531458be66ca3452892809a9feebefbde0a8c94c36431b4ec9f4256a91",
+    "research_r14_result.json": "9336d86ad9784e2b04eb1d9e93f7e6a9bf15bef6d4c57a1c694b90ffb66bc80a",
+    "research_artifacts/r14_log_pool_fivefold/oof.npz": "4a939963f091962dcc7241791da9f3b3dc5fdfe1e234595d49ffd00363e234a3",
+    "research_artifacts/r14_log_pool_threefold/oof.npz": "ba8c22cdf0feff72b66069f2b5f744875c78ec07dbdc10d26c06990ab936fccf",
+    "research_sources/original_safe_mask.npy": "fcc30179ed4f68ddab8323abe86e953dcaf13374dee46bd3c13abb55dfdbfe51",
+    "research_artifacts/original_teacher_v1/model.txt": "db538bc2303ee5075be4016e0653424ad885d3cd207001dbddb42441e66588e4",
+    "research_artifacts/original_teacher_v1/result.json": "35c20bbd3a2eff503bc64d436dc680cdf66298c807eac521b1d75c0b936be9f2",
+    "research_artifacts/original_teacher_v1/train_features.npz": "0fc3167103ca04ecaac018c622ccca4d8f7e365b46f032ad11f318e409dbfc55",
+    "research_artifacts/original_teacher_v1/test_features.npz": "ad01c903f7a1ef371c164c9e7e2d850e00825c2e1b7c1d18e683ccc888822d50",
+    "research_r15_probe_n32.json": "b755eaac2f7c1dd727ee75a4eb9582629a48cd667f3f20022cc01442e8437834",
+    "data/test.csv": "ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6",
+    "research_sources/original_cc0/data.csv": "2ad76465f6115f93d16121891a6b1235acb8007a4ab065cae0dc46b60ad116e3",
+    "research_artifacts/r20_multiclass_gpu_probe/result.json": "6d9e79749f8ecada192beb3c1e9e99bb7b29fd420c1f6f99c76d35b06732b1e3",
+    "research_artifacts/r20_multiclass_gpu_probe06/result.json": "16a2608f56ce0513bf58881d1baecffded12af3c0e9f207d8d981e5ba0da0008",
+    "research_r20_plan_memory04_v1.json": "4282cf43273057fd531698011122061d0e4365960295c3b78ca2df87b544bad9"
+  },
+  "execution_repair": {
+    "prior_plan_sha256": "4282cf43273057fd531698011122061d0e4365960295c3b78ca2df87b544bad9",
+    "prior_plan": "research_r20_plan_memory04_v1.json",
+    "reason": "AvailableGPUmemorychangedfrom~7.2GiBto~3.8GiB. Initial04officialfitfailedinternalpoolallocation; no1GiBprocessceilingfailureandnoR20SATqualityscoresread.",
+    "primary_source": "https://raw.githubusercontent.com/catboost/catboost/v1.2.8/catboost/cuda/cuda_lib/devices_provider.h",
+    "change": "Onlygpu_ram_part.04to.06; modelstructure/rounds/lr/seeds/featureviews/blend/gates unchanged. Largest799584row300treemulticlass06probe passed peak394MiB/reload0. All13sourcecontrolfits preserved and recomputed under same06memoryrecipe for bothviews. Otherprocessesunchanged.",
+    "preserved_runtime": "research_artifacts/r20_aux_sourcecb_memory04_v1; research_artifacts/r20_aux_officialcb_memory04_v1; research_r20_memory04_execution"
+  }
+}

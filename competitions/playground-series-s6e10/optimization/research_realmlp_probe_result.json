@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "rows": 50000,
+  "feature_width": 58,
+  "fit_seconds": 3.8401978879992384,
+  "config": {
+    "device": "cpu",
+    "n_threads": 6,
+    "n_cv": 1,
+    "n_refit": 0,
+    "n_ens": 1,
+    "n_epochs": 3,
+    "batch_size": 1024,
+    "use_ls": false,
+    "val_fraction": 0.0,
+    "use_early_stopping": false,
+    "random_state": 42,
+    "verbosity": 2
+  },
+  "cuda_build": null,
+  "torch_version": "2.9.1+cpu",
+  "torch_threads": 6,
+  "torch_interop_threads": 1,
+  "fit_params": [
+    {
+      "stop_epoch": {
+        "class_error": 0
+      },
+      "best_indiv_stop_epochs": {
+        "class_error": [
+          0
+        ]
+      }
+    }
+  ],
+  "score_evaluated": false
+}

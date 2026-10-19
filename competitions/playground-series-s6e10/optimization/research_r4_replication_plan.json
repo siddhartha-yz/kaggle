@@ -1,0 +1,26 @@
+{
+  "frozen_utc": "2026-10-18T11:06:25.924732+00:00",
+  "freeze_before_any_new_lean_validation_auc": true,
+  "trigger": "Only fivefold pooled paired lower and correctedfoldlower bothpositive underR4plan",
+  "folds": 3,
+  "seed": 20261022,
+  "baseline_components": [
+    "freshLGB639 distance57",
+    "freshCB8_1308 distance57",
+    "freshresid581 sourceprior05 distance57",
+    "freshCB10_813 distance57",
+    "freshCPUrawRealMLP2 fixed3epoch"
+  ],
+  "candidate": "same baseline fixed weights; replace rawNN32/128 with frozenGPUlean8, no refit recipe selection",
+  "reuse_old_predictions": false,
+  "selector_metric": "Same both positive lowerbounds R4 common evidence; threefold correctedvariance ratio1/2 anddf2",
+  "labels_reused_limitation": "Alllabels previously exposed; fitting replication only, not untouchedholdout",
+  "runner_sha256": {
+    "research_r4_baseline3.py": "bea42e6c08071f1a3ac5530b0934419edc51216f1e76764fe90974ccfb553b31",
+    "research_r4_lean_replication3.py": "96abcd15322704a39256c32975cf0211edf8d24b161bf4891c351c9f8390e644",
+    "research_r4_replication_loader.py": "41f0dfee1bea0967583c6b275b88fc59306951e7a12c7e1ef05a8f2c60133c0d",
+    "research_r4_lean_features.py": "cfe6f672865f30622ce8e5cf9149f11e2e6f822f9c1b687f7e7c0431c9218303",
+    "research_r4_common.py": "53eedffd572f6a82b9c3dba70e3315ab1df51dd9242396ab22da7f8dabc52e81"
+  },
+  "formal_budget_remaining": 2
+}

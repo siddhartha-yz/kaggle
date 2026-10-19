@@ -1,0 +1,35 @@
+{
+  "status": "complete",
+  "split": "primary",
+  "methods": {
+    "logistic": {
+      "comparison": {
+        "baseline_auc": 0.9597883620429111,
+        "candidate_auc": 0.959939140749044,
+        "delta_auc": 0.00015077870613289246,
+        "paired_se": 6.756498695582046e-05,
+        "conditional_95pct_ci": [
+          1.8351331699484368e-05,
+          0.0002832060805663005
+        ],
+        "candidate_logloss": 0.22623603114995544
+      },
+      "byfold": []
+    },
+    "residual_tree": {
+      "comparison": {
+        "baseline_auc": 0.9597883620429111,
+        "candidate_auc": 0.960004679407086,
+        "delta_auc": 0.00021631736417493386,
+        "paired_se": 5.689681772218269e-05,
+        "conditional_95pct_ci": [
+          0.00010479960143945579,
+          0.00032783512691041193
+        ],
+        "candidate_logloss": 0.22619639316916018
+      },
+      "byfold": []
+    }
+  },
+  "completed_utc": "2026-10-17T20:49:18.333353+00:00"
+}

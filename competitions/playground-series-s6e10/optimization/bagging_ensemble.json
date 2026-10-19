@@ -1,0 +1,30 @@
+{
+  "frozen_utc": "2026-10-17T18:41:18.728543+00:00",
+  "created_utc": "2026-10-17T18:42:50.386968+00:00",
+  "data_sha256": {
+    "train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "test.csv": "ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6",
+    "sample_submission.csv": "6165ecc5769962253534c2d840f26aab55dc3cc091d256bb3641bf6608194a71"
+  },
+  "positive_class": "True",
+  "components": [
+    {
+      "directory": "iteration_artifacts/cb8_full_s42",
+      "weight": 0.4,
+      "trees": 1308,
+      "model_sha256": "09161246ecf7e73003dde539fcfd989239a9c63f88a7aae6264b0126dcbb5816"
+    },
+    {
+      "directory": "iteration_artifacts/lgb63cats_full_s42",
+      "weight": 0.4,
+      "trees": 639,
+      "model_sha256": "acaf63ab78abe54e8ff773e99d2302a297e1a6965e2d74a31ee31b3bf094419c"
+    },
+    {
+      "directory": "iteration_artifacts/lgb63cats_bagging_full_s20261017",
+      "weight": 0.2,
+      "trees": 639,
+      "model_sha256": "8a073a828f28194433228371ea84b27bfd289524fe59247ae024ea1e4003f9c0"
+    }
+  ]
+}

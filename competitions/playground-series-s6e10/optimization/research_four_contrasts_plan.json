@@ -1,0 +1,38 @@
+{
+  "frozen_utc": "2026-10-17T20:22:52.128882+00:00",
+  "reference": "v4 lgb original-only teacher + lookup,639 trees",
+  "variants": [
+    {
+      "name": "rating_distribution",
+      "external": "both",
+      "representation": "distribution",
+      "profile": "base"
+    },
+    {
+      "name": "strict_interaction_te",
+      "external": "both",
+      "representation": "interactions",
+      "profile": "base"
+    },
+    {
+      "name": "second_original_teacher",
+      "external": "both_xgb",
+      "representation": "stats",
+      "profile": "base"
+    },
+    {
+      "name": "wide_sampled_lgb",
+      "external": "both",
+      "representation": "stats",
+      "profile": "wide"
+    }
+  ],
+  "training": "Serial CPU6. First three fixed639 trees; wide profile primary max3000 lr.02 leaves127 child100 lambda1 row.8 col.5, AUC earlystop150. Freeze selected iteration before confirmation/OOF.",
+  "feature_rules": "All synthetic vocabulary, frequency and group mappings outer-train only. Six interaction target encodings inner5foldOOF,alpha20. New original XGB teacher uses only129859 safe original rows and600 fixed trees.",
+  "promotion": "Screen each once; only the highest primary AUC among delta>=.0001 and positive conditional95% lower bound proceeds. Confirmation lower bound must be positive, then same frozen5fold OOF. Third-candidate gate remains delta>=.0002, allfold positive, pooled lower bound>0 vs v4.",
+  "source_reference": "https://www.kaggle.com/code/goodpjw2008/s6e10-two-view-gbdt-realmlp-stack-lb-0-96125",
+  "downloaded_reference_sha256": "1805d9b9ef084601d66da5096b10f2170aa9fb3ab2d55192798f119b73d0a42b",
+  "reference_code_executed": false,
+  "implementation": "Our own code, current isolated official packages; retain stricter overlap exclusion and fold boundaries.",
+  "public_score_used_for_parameters": false
+}

@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-10-17T18:23:15.725029+00:00",
+  "filename": "submission_cb8_lgb63cats_frozen.csv",
+  "sha256": "e5006e109f93ee8263698fecc64881ad8a4311d94daef1055a12a11e9475769f",
+  "bytes": 7984405,
+  "rows": 299844,
+  "columns": [
+    "id",
+    "satisfaction"
+  ],
+  "id_order_exact_match": true,
+  "id_unique": true,
+  "finite_and_in_range": true,
+  "minimum": 0.0028820971790049325,
+  "maximum": 0.9927350678867439,
+  "mean": 0.44365912745970243,
+  "max_difference_from_saved_full_components": 2.220446049250313e-16,
+  "readback_verified": true,
+  "full_models_only": true,
+  "manifest_sha256": "7456576cb8d7332a88c7391b8ed7550c80efd7bda34a09cb12982fdc0c1ade45",
+  "local_new_formal_submissions": 0,
+  "transfer_instruction": "Parent coordinates at most 2 total new formal submissions. No local Kaggle login, upload, or submission was performed."
+}

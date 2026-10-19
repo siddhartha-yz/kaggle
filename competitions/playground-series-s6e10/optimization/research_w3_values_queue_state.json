@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-18T05:21:05.866819+00:00",
+  "steps": [
+    {
+      "name": "w3_tabm_values_primary_b256",
+      "exit_code": 0,
+      "status": "complete",
+      "ended_utc": "2026-10-18T05:24:55.571331+00:00"
+    }
+  ],
+  "active": null,
+  "active_log": "research_w3_tabm_values_primary_b256.log",
+  "updated_utc": "2026-10-18T05:21:05.868713+00:00",
+  "child_pid": 357792,
+  "outcome": "primary_rejected",
+  "completed_utc": "2026-10-18T05:24:55.571905+00:00"
+}

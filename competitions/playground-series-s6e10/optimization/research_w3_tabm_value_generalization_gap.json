@@ -1,0 +1,8 @@
+{
+  "train_final_logloss": 0.17543132160532854,
+  "validation_raw_logloss": 0.2660525379854059,
+  "validation_raw_auc": 0.9557793173708056,
+  "primary_used_for_diagnostic": true,
+  "not_independent": true,
+  "conclusion": "Large train/validation loss gap suggests memorization in20epochvalueview; no intermediate validation epochs were evaluated or retained."
+}

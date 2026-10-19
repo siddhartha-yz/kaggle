@@ -1,5 +1,21 @@
 # Predicting Airline Satisfaction
 
+## 当前稳定版本：v12（2026-10-19）
+
+已提交 v12：public ROC-AUC **0.96118**，05:28 UTC 实际排名 **676/2302**，尚未达到前 500。见 [配方、证据与回放说明](optimization/V12.md) 和 [支持的入口](optimization/v12.py)。回放需要本机保留的产物；仓库不包含数据、模型和预测。
+
+以下为早期基线与实验历史，日期和额度仅对应当时记录。
+
+## 当前实际实验状态（2026-10-17）
+
+官方 CatBoost 基线已提交并完成评分，public ROC-AUC **0.95816**。后续 8 项开发实验已结束，冻结 CatBoost depth8（1308 棵）+ LightGBM lgb63cats（639 棵）的 50/50 融合已在用户电脑 CPU 上通过第二划分稳定性复核：融合 **0.9590578562**，同划分固定基线 **0.9583800203**。此复核复用了官方训练样本，不是独立测试；本机已完成冻结配方全量重训与 299844 行候选 CSV 的独立校验；本机未登录 Kaggle、未正式提交；父云会话已提交并确认 public AUC **0.95855**（1209/2177，当时排名）。后续固定三组件融合未通过预设稳定性标准，保留已提交候选。
+
+实际云端代码、冻结配置、哈希核验和本机记录见 [`optimization/`](optimization/)。它与本目录早期 `baseline.py` 脚手架不同。依赖仅安装于独立迁移 venv，全局环境与 GPU 驱动未改动。
+
+## 初版基线脚手架历史说明
+
+下文保留提交 `52f8cd1` 的初版说明；其中“未训练／未安装／未提交”描述的是当时的初版交付状态，当前实际进展以本页上节和 optimization 记录为准。
+
 - 比赛：[Kaggle Playground Series S6E10](https://www.kaggle.com/competitions/playground-series-s6e10)
 - 目标：预测航空旅客满意度的正类概率，以 ROC-AUC 评估。
 - 状态：已准备代码与合成测试；未下载真实数据、训练真实模型、报名或提交比赛。没有真实实验成绩。
@@ -70,3 +86,5 @@ early stopping 使用验证集 AUC，保存最佳轮次模型，并直接用它�
 暂不包含真实数据成绩、交叉验证、调参、全量重训或比赛提交。迁移云端后的最小准备：配置上述依赖，由用户确认规则及正类含义并取得数据，再执行完整合成测试和 `--validate-only`。
 
 实现参考：[CatBoost fit](https://catboost.ai/docs/en/concepts/python-reference_catboostclassifier_fit)、[scikit-learn train_test_split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)。
+
+最新补充：固定采样 LightGBM 对照已通过两个划分的预设配对标准，三组件冻结候选已完成全量训练及 CSV 校验，并于 18:43 UTC 交父会话处理。尚无该候选 public 成绩；正式提交总额仍由父会话协调。详见 optimization 的 bagging 记录。

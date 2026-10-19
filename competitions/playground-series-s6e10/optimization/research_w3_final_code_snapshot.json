@@ -1,0 +1,25 @@
+{
+  "captured_utc": "2026-10-18T05:39:00.822614+00:00",
+  "sha256": {
+    "research_w3_error_analysis.py": "5e228a74b170ac3167d29f8094793c73e63a018061c3fa96e0214f9e56ebad8d",
+    "research_w3_tabm_values_features.py": "fce41f55c33e6e9ad23fd318efc811a916aa208a9f7b896b68c605376c9fa445",
+    "audit_w3_tabm_v7.py": "3d7f5a06df8323d03ab84478a704ed2f8ae287a7753104798dbd1d55979b0605",
+    "research_w3_tabm_nested.py": "1272e95f51f6c05aba855d3e3df3339d659e7f60aa97c31a10a4563fce7a9621",
+    "research_w3_deepfm.py": "2922154c7ce5bbfb6c42055a302373bf5f49a682bdc618dea6538b21d7f66f44",
+    "research_w3_tabm.py": "d7515abb1246e3f666e778954506bbc1b9267ae6477a174eb79e0aed0099f8ff",
+    "audit_w3_tabm_nested_v7.py": "2b4130a944bae1ad841341ea7c4c9ec160996bd56f985b017ea82ec91716efe8",
+    "audit_w3_finish.py": "3c48353eb20e76c522335b64ab346316f0e3cdd879101d6911d396d84c902448",
+    "research_w3_values_queue.py": "7e4992f05e6b33220c86697a42a4db04a3a999f5d0727444b3a849d8f851c0bd",
+    "research_w3_tabm_full.py": "68fceddd5b6ea3c46cb27868df3f49d5fc55c55c4b20fd34b256fb55cb48a59e",
+    "research_w3_tabm_values.py": "6b0114984429b99aca5a0e91a1db7f30ce06679dc56b9d6115ac1be17429aa76",
+    "research_w3_queue.py": "7f16239d2ea397832fbfeb9c43e86f6e5e670267b73d1d4188ef885bdb01502b",
+    "research_w3_tabm_nested_full.py": "7e0dcaf7e468b6f93b71178266394574bde42cfa188ae49a6994173b49740db0",
+    "research_w3_nested_queue.py": "96adc5913ab467262c8dedff6998a7eaa0257f13f9df9a81602a5b283a70f271",
+    "research_w3_tabm_features.py": "f3d95aa66bf9c35ff5bec4d06b3065b5dd2dbc561f085d7fafa4c9bbcee73587",
+    "research_w3_teacher.py": "a63eb7c9e34af7c5de04e072b7c361cbb7e641b3465e3d62824fa683de1c84b0",
+    "research_w3_common.py": "da693079a0a37dee9b995fca4a45456f98dc7994d94d1f0d8b77e328f9e2afa8",
+    "research_w3_deepfm_queue.py": "781d70181e4dcf0c9eeccc314f5b416db55fb80576b42a6e8dbed0f492e3851a",
+    "research_w3_resource_probe.py": "91d1ef81c6e5965ff3e435c31ccb77109756e1877ec39b4606253d8670667d92"
+  },
+  "runtime_data_models_predictions_excluded_from_git": true
+}

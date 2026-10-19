@@ -1,0 +1,30 @@
+{
+  "frozen_utc": "2026-10-18T15:03:06.468379+00:00",
+  "one_fixed_formula": "sigmoid(.5logit(clip(v5,1e-6,1-1e-6))+.5logit(clip(leanNN,1e-6,1-1e-6)))",
+  "motivation": "Compare equal arithmetic probability pooling with equal logarithmic opinion pooling between tree and neural families, not a learned nonlinear stack or weight search. Uses same qualified50/50familyprior, models, data and folds. Changes only aggregation geometry. No independence/Bayesian-optimality or calibration claim.",
+  "baseline": "Officialv7 and qualified privatev8; no public score selection.",
+  "clip_epsilon": 1e-06,
+  "tests": "Closed-form normalizedgeometric probability expression matches; symmetry, equal-opinion identity, opposing opinions.5, finite0/1boundary tests.",
+  "gates": "One prospectively fixed formula; positive paired conditional95% lower and corrected-resampled-t lower(alpha.025) versus BOTH privatev8 andofficialv7 onfivefold. Only then reuse separately freshly fitted cachedthreefold components, same gates. Labels historically reused; no untouchedholdout claim.",
+  "new_models_fitted": 0,
+  "CPU_threads": 6,
+  "GPU_used": false,
+  "paid_resources": false,
+  "final_order": "If both stages qualify: first average existing40NN predictions ontest then equal logodds pool withfullv5tree. Do NOT average separate nonlinear pools; final order fixed before scoring.",
+  "final_audit": "Independent4treecomponent andv7/v8 reconstruction, both closedform andlogit implementations, data/artifacthashes, sample/testIDs andTrueclass CSV/range/roundtrip/hash. No model/test-statistic fitting or newdata. Parentonlysubmitter.",
+  "prediction_sources_sha256": {
+    "research_artifacts/r4_lean_gpu_init_oof/oof.npz": "c5c4c8b1f00688a964540750a79e9206159c81e47aca7efd0712e21093789843",
+    "research_artifacts/r4_lean_gpu_init_replication3/oof.npz": "8bc1cecbca39f6cf540c17d0891f8d699a69adeed0afbb3d9dfbd6b5e7f07fc0"
+  },
+  "test_sources_sha256": {
+    "data/test.csv": "ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6",
+    "data/sample_submission.csv": "6165ecc5769962253534c2d840f26aab55dc3cc091d256bb3641bf6608194a71",
+    "research_artifacts/cb_deep_full_v1/test_components.npz": "21a69d56dd0ecd12d0d18cca80e1fdfbec07b269c2754122d24ceb0e2f397c79",
+    "research_artifacts/r4_lean_cv_final/test_components.npz": "20a7172d5a3e0d5f2ce2fedbe3997377d59b35dd58d20ab5322ebcf054f86409",
+    "submission_lean_half_r6_v8.csv": "e277a97762009cd1ebf739f3fa692ce2ee5e4c1cceff5fab225634f74dd98c5b"
+  },
+  "source_sha256": "2dc8f38bf4f62496a597a6faf57b4fd848dddd41e794f2a0effe1235660d345d",
+  "formal_used": 1,
+  "remaining": 1,
+  "actual_top100_verified": false
+}

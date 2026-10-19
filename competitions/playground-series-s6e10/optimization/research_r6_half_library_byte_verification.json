@@ -1,0 +1,7 @@
+{
+  "status": "passed_exact_byte_identity",
+  "verified_utc": "2026-10-18T13:22:02.627710+00:00",
+  "csv": "submission_lean_half_r6_v8.csv",
+  "sha256": "e277a97762009cd1ebf739f3fa692ce2ee5e4c1cceff5fab225634f74dd98c5b",
+  "bytes": 8205243
+}

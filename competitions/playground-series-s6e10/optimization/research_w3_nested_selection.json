@@ -1,0 +1,80 @@
+{
+  "eligible_for_full": false,
+  "chosen_variant": "tabm_nested",
+  "weights": {
+    "v6": 0.75,
+    "new_model": 0.25
+  },
+  "batch_size": 256,
+  "plan_sha256": "74eddd70b9eeae10bb7d4590281fdeb3a1bab576a6cc1d20e9480f7aac776218",
+  "updated_utc": "2026-10-18T05:32:16.224565+00:00",
+  "primary": {
+    "status": "complete",
+    "variant": "tabm_nested",
+    "split": "primary",
+    "vs_v6": {
+      "baseline_auc": 0.9603020930463941,
+      "candidate_auc": 0.9604139610519344,
+      "delta_auc": 0.0001118680055403054,
+      "paired_se": 4.8773913404413874e-05,
+      "conditional_95pct_ci": [
+        1.627113526765421e-05,
+        0.00020746487581295659
+      ],
+      "candidate_logloss": 0.22518027001602486
+    },
+    "selected_epochs": [
+      4
+    ],
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.9603020930463941,
+        "candidate_auc": 0.9604139610519344,
+        "delta_auc": 0.0001118680055403054,
+        "paired_se": 4.8773913404413874e-05,
+        "conditional_95pct_ci": [
+          1.627113526765421e-05,
+          0.00020746487581295659
+        ],
+        "candidate_logloss": 0.22518027001602486
+      }
+    ],
+    "eligible_for_next": true,
+    "completed_utc": "2026-10-18T05:29:35.443986+00:00"
+  },
+  "confirm": {
+    "status": "complete",
+    "variant": "tabm_nested",
+    "split": "confirm",
+    "vs_v6": {
+      "baseline_auc": 0.961026158861244,
+      "candidate_auc": 0.9611008626552688,
+      "delta_auc": 7.470379402485516e-05,
+      "paired_se": 5.136719842332798e-05,
+      "conditional_95pct_ci": [
+        -2.5975914884867674e-05,
+        0.000175383502934578
+      ],
+      "candidate_logloss": 0.22237879504108643
+    },
+    "selected_epochs": [
+      5
+    ],
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.961026158861244,
+        "candidate_auc": 0.9611008626552688,
+        "delta_auc": 7.470379402485516e-05,
+        "paired_se": 5.136719842332798e-05,
+        "conditional_95pct_ci": [
+          -2.5975914884867674e-05,
+          0.000175383502934578
+        ],
+        "candidate_logloss": 0.22237879504108643
+      }
+    ],
+    "eligible_for_next": false,
+    "completed_utc": "2026-10-18T05:34:39.283741+00:00"
+  },
+  "status": "confirm_rejected"
+}

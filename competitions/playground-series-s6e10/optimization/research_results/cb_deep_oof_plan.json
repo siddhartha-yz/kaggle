@@ -1,0 +1,23 @@
+{
+  "split": "oof",
+  "params": {
+    "iterations": 813,
+    "learning_rate": 0.04,
+    "depth": 10,
+    "l2_leaf_reg": 10,
+    "loss_function": "Logloss",
+    "eval_metric": "AUC",
+    "random_seed": 20261018,
+    "task_type": "CPU",
+    "thread_count": 6,
+    "allow_writing_files": false,
+    "verbose": 200
+  },
+  "weight": 0.25,
+  "early_stopping": false,
+  "frozen_plan_sha256": "7fea385bfcc3aa52e8d914b20db2bf12d87528b000bab4f8708a978d3b258b99",
+  "preprocessing_sha256": "6c029528249d6772a958b29c46f4f095da9f91136c2721eb2a4d268f360fcfe9",
+  "source_features_sha256": "0fc3167103ca04ecaac018c622ccca4d8f7e365b46f032ad11f318e409dbfc55",
+  "runner_sha256": "10e2fb2efbbaaba5170657ae6c54c89a0bf81b9bc5356abbd1498381b0323022",
+  "created_utc": "2026-10-17T21:30:54.427397+00:00"
+}

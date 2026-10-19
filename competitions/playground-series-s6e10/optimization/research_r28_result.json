@@ -1,0 +1,129 @@
+{
+  "status": "complete",
+  "stage": "threefold",
+  "checked_utc": "2026-10-18T18:43:16.208332+00:00",
+  "eligible": false,
+  "vs_formal_v11": {
+    "pooled": {
+      "baseline_auc": 0.961485641721047,
+      "candidate_auc": 0.961488738711727,
+      "delta_auc": 3.09699068001823e-06,
+      "paired_se": 5.7661303410909514e-06,
+      "conditional_95pct_ci": [
+        -8.204624788520035e-06,
+        1.4398606148556495e-05
+      ],
+      "candidate_logloss": 0.22153956345787834
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.9616926093255227,
+        "candidate_auc": 0.9616926492546823,
+        "delta_auc": 3.99291596453466e-08,
+        "paired_se": 1.0064597438059447e-05,
+        "conditional_95pct_ci": [
+          -1.968668181895117e-05,
+          1.9766540138241863e-05
+        ],
+        "candidate_logloss": 0.22145018160890553
+      },
+      {
+        "baseline_auc": 0.9625053714531461,
+        "candidate_auc": 0.9625027141578855,
+        "delta_auc": -2.657295260610759e-06,
+        "paired_se": 1.002024322180408e-05,
+        "conditional_95pct_ci": [
+          -2.2296971975346757e-05,
+          1.698238145412524e-05
+        ],
+        "candidate_logloss": 0.2186441142669433
+      },
+      {
+        "baseline_auc": 0.960310096012572,
+        "candidate_auc": 0.9603179319470453,
+        "delta_auc": 7.83593447328812e-06,
+        "paired_se": 9.894041483947925e-06,
+        "conditional_95pct_ci": [
+          -1.1556386835249813e-05,
+          2.7228255781826052e-05
+        ],
+        "candidate_logloss": 0.22452440729662948
+      }
+    ],
+    "corrected_resampled_t": {
+      "mean_delta": 1.7395227907742357e-06,
+      "se": 4.974387017963444e-06,
+      "test_train_ratio": 0.5000000000015322,
+      "df": 2,
+      "one_sided_alpha": 0.025,
+      "lower_bound": -1.9663537090896464e-05
+    },
+    "eligible_for_new_partition_replication": false,
+    "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+  },
+  "vs_prior_v10_diagnostic": {
+    "pooled": {
+      "baseline_auc": 0.9613639105085731,
+      "candidate_auc": 0.961488738711727,
+      "delta_auc": 0.00012482820315395937,
+      "paired_se": 1.9958339607090856e-05,
+      "conditional_95pct_ci": [
+        8.57098575240613e-05,
+        0.00016394654878385743
+      ],
+      "candidate_logloss": 0.22153956345787834
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.9615539401963736,
+        "candidate_auc": 0.9616926492546823,
+        "delta_auc": 0.00013870905830870583,
+        "paired_se": 3.525439629847965e-05,
+        "conditional_95pct_ci": [
+          6.961044156368573e-05,
+          0.00020780767505372593
+        ],
+        "candidate_logloss": 0.22145018160890553
+      },
+      {
+        "baseline_auc": 0.9623985911074313,
+        "candidate_auc": 0.9625027141578855,
+        "delta_auc": 0.00010412305045415238,
+        "paired_se": 3.4933708462091996e-05,
+        "conditional_95pct_ci": [
+          3.5652981868452066e-05,
+          0.0001725931190398527
+        ],
+        "candidate_logloss": 0.2186441142669433
+      },
+      {
+        "baseline_auc": 0.960207757979787,
+        "candidate_auc": 0.9603179319470453,
+        "delta_auc": 0.00011017396725832018,
+        "paired_se": 3.335443491164094e-05,
+        "conditional_95pct_ci": [
+          4.479927483150394e-05,
+          0.0001755486596851364
+        ],
+        "candidate_logloss": 0.22452440729662948
+      }
+    ],
+    "corrected_resampled_t": {
+      "mean_delta": 0.00011766869200705947,
+      "se": 1.6861597372035454e-05,
+      "test_train_ratio": 0.5000000000015322,
+      "df": 2,
+      "one_sided_alpha": 0.025,
+      "lower_bound": 4.5119094046334766e-05
+    },
+    "eligible_for_new_partition_replication": true,
+    "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+  },
+  "oof_sha256": "cef97b7a8d5919f6762e18baddc14a88be48bc8d9e95545ad75961a77a0aa382",
+  "plan_sha256": "dcdc5638f4d679c15a54ed5ffdcf7549d9f066ebace1ae1ddf761319190db80f",
+  "qualified": false,
+  "fivefold_qualified": true,
+  "csv_generated": false,
+  "formal_new_submissions": 0,
+  "reason": "Bagfivefold+17.52ppmqualified; freshthreefold+3.10ppm butbothbounds crossed0. No fullrefit/CSV; actualv11 remainsbest."
+}

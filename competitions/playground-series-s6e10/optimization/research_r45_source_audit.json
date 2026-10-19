@@ -1,0 +1,104 @@
+{
+  "status": "passed_source_provenance_and_exactmatch_scope_only",
+  "audited_utc": "2026-10-18T21:32:50.132375+00:00",
+  "source_ref": "sjleshrac/airlines-customer-satisfaction",
+  "source_page": "https://www.kaggle.com/datasets/sjleshrac/airlines-customer-satisfaction",
+  "public_metadata_url": "https://www.kaggle.com/api/v1/datasets/view/sjleshrac/airlines-customer-satisfaction",
+  "first_party_license": "CC0: Public Domain",
+  "source_version": 1,
+  "first_party_last_updated": "2020-03-19T15:33:25.94Z",
+  "source_predates_competition": true,
+  "source_csv_sha256": "584f8e338d189117f1c8f8c2ee8fb0b5d1d6d23ff5df67417272e8ee360da7a2",
+  "source_rows": 129880,
+  "safe_source_rows": 129878,
+  "globally_excluded_source_rows": 2,
+  "excluded_match_pairs_value_verified": 2,
+  "remaining_exact_official_covariate_matches": 0,
+  "official_covariate_rows": 999479,
+  "match_features": [
+    "Age",
+    "Flight Distance",
+    "Inflight wifi service",
+    "Departure/Arrival time convenient",
+    "Ease of Online booking",
+    "Gate location",
+    "Food and drink",
+    "Online boarding",
+    "Seat comfort",
+    "Inflight entertainment",
+    "On-board service",
+    "Leg room service",
+    "Baggage handling",
+    "Checkin service",
+    "Cleanliness",
+    "Departure Delay in Minutes",
+    "Arrival Delay in Minutes",
+    "Gender",
+    "Customer Type",
+    "Type of Travel",
+    "Class"
+  ],
+  "match_normalization": "numericfloat64/textstripcasefold;all21availablepredictors;id/targetsnotincluded",
+  "official_target_values_parsed": false,
+  "official_targets_used_for_source_fit_or_selection": false,
+  "actual_guarded_official_reads": [
+    {
+      "file": "train.csv",
+      "kind": "header_only"
+    },
+    {
+      "file": "train.csv",
+      "kind": "explicit_covariates_only",
+      "column_count": 22
+    },
+    {
+      "file": "test.csv",
+      "kind": "explicit_covariates_only",
+      "column_count": 22
+    },
+    {
+      "file": "train.csv",
+      "kind": "header_only"
+    },
+    {
+      "file": "train.csv",
+      "kind": "explicit_covariates_only",
+      "column_count": 22
+    },
+    {
+      "file": "test.csv",
+      "kind": "explicit_covariates_only",
+      "column_count": 22
+    }
+  ],
+  "source_only_selection_split_verified": true,
+  "source_only_transformer_training_row_counts_verified": true,
+  "source_only_selected_trees": 773,
+  "source_class_mapping": "satisfied=1, dissatisfied=0",
+  "source_selection_AUC_replay_error": 0.0,
+  "teacher_feature_replays": {
+    "train": {
+      "rows": 4096,
+      "CPU_replay_error": 0.0
+    },
+    "test": {
+      "rows": 4096,
+      "CPU_replay_error": 0.0
+    }
+  },
+  "Online_support_excluded_from_teacher_inputs": true,
+  "source_choice_basis": "PublicCC0versionedrelatedsatisfactiontask,21sharedpredictorsanddistinctpubliclabelledtable;chosenandfrozenbeforeanyR44officialCVevaluation,notbyrankingdatasetsontheofficialvalidationlabels.",
+  "source_choice_chronology": {
+    "metadata_checked": "2026-10-18T21:09:11.345742+00:00",
+    "covariates_inspected": "2026-10-18T21:11:43.365341+00:00",
+    "R44_plan_frozen": "2026-10-18T21:14:14.421654+00:00",
+    "source_teacher_completed": "2026-10-18T21:14:44.967019+00:00"
+  },
+  "important_limitations": [
+    "Two21-featuretableshavingonly2exactsharedrowsdoesNOTproveindependentrespondentsorgenerationprocess;theycanberelated/modifiedversions.Noindependent-samplingclaim.",
+    "Newsourcecovariatealignmentisweaker(nearkey8.4%vsold37%);notassertedtruegenerator.",
+    "R44officialfivefoldfailedconfidencegates;R45neuralfollow-upwaschosenafterthatresult,soofficialvalidationhistoryisreusedandCIsremainconditional.",
+    "Thisauditdoesnotqualifyapredictionorclaimrank;5+3qualitygatesandstudentmodelauditsarestillrequired."
+  ],
+  "audit_plan_sha256": "b9f7b2ecec73ecc60bac191863b88965cd58f00987b20f5ffff28b606317aa6b"
+}

@@ -1,0 +1,10 @@
+"""Source importance weights from predictor-only domain discrimination, cross-fitted on source."""
+from research_w3_common import *
+import gc,joblib,lightgbm as lgb
+from sklearn.model_selection import KFold
+from research_features import DistanceFeatures
+def fit_weights(synthetic,source,out,cfg):
+ assert list(synthetic)==list(source) and 'id' not in synthetic and 'satisfaction' not in synthetic;out.mkdir();tr=DistanceFeatures('base');X=tr.fit_transform_te(synthetic,np.zeros(len(synthetic),dtype='int8'));S=tr.transform_te(source);assert not tr.te_maps;joblib.dump(tr,out/'transformer.joblib');prob=np.full(len(source),np.nan);ratio=np.full(len(source),np.nan);fold=np.full(len(source),-1,dtype='int8');rows=[]
+ for k,(fi,vi) in enumerate(KFold(5,shuffle=True,random_state=20261018).split(source)):
+  start_guard();p=out/f'fold{k}';p.mkdir();np.savez_compressed(p/'split.npz',source_train=fi,source_valid=vi);train=pd.concat([X,S.iloc[fi]],ignore_index=True);label=np.r_[np.ones(len(X),dtype='int8'),np.zeros(len(fi),dtype='int8')];m=lgb.LGBMClassifier(**cfg['params']);m.fit(train,label);assert np.array_equal(m.classes_,[0,1]);pred=np.clip(m.predict_proba(S.iloc[vi])[:,1],1e-4,1-1e-4);prob[vi]=pred;ratio[vi]=pred/(1-pred)*(len(fi)/len(X));fold[vi]=k;m.booster_.save_model(str(p/'model.txt'));rows.append({'fold':k,'source_train_rows':len(fi),'source_valid_rows':len(vi),'synthetic_train_rows':len(X),'model_sha256':sha(p/'model.txt')});dump(out/'result.json',{'status':'running','folds':rows,'competition_or_source_GT_labels_used':False});print('DOMAIN_WEIGHT',rows[-1],flush=True);del m,train;gc.collect()
+ assert np.isfinite(ratio).all() and (fold>=0).all();ratio=np.clip(ratio,.05,20);weights=.25*ratio/ratio.mean();assert np.isfinite(weights).all() and (weights>0).all() and abs(weights.mean()-.25)<1e-12;np.savez_compressed(out/'weights.npz',source_fold=fold,p_synthetic=prob,density_ratio=ratio,weights=weights);dump(out/'result.json',{'status':'complete','folds':rows,'competition_or_source_GT_labels_used':False,'weight_quantiles':np.quantile(weights,[0,.01,.5,.99,1]).tolist(),'weight_mean':float(weights.mean()),'completed_utc':now()});return weights

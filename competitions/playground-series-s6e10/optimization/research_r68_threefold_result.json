@@ -1,0 +1,66 @@
+{
+  "status": "complete",
+  "checked_utc": "2026-10-19T05:17:23.311186+00:00",
+  "stage": "threefold",
+  "vs_formal_v11": {
+    "pooled": {
+      "baseline_auc": 0.961485641721047,
+      "candidate_auc": 0.9614977277809985,
+      "delta_auc": 1.2086059951510464e-05,
+      "paired_se": 4.7076151662280016e-06,
+      "conditional_95pct_ci": [
+        2.8591342257035814e-06,
+        2.1312985677317346e-05
+      ],
+      "candidate_logloss": 0.2215589349455825
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.9616926093255227,
+        "candidate_auc": 0.961705203176148,
+        "delta_auc": 1.259385062535312e-05,
+        "paired_se": 7.856978694303887e-06,
+        "conditional_95pct_ci": [
+          -2.805827615482498e-06,
+          2.799352886618874e-05
+        ],
+        "candidate_logloss": 0.2214710788239418
+      },
+      {
+        "baseline_auc": 0.9625053714531461,
+        "candidate_auc": 0.9625167125041532,
+        "delta_auc": 1.134105100708549e-05,
+        "paired_se": 7.635716155859157e-06,
+        "conditional_95pct_ci": [
+          -3.624952658398458e-06,
+          2.6307054672569437e-05
+        ],
+        "candidate_logloss": 0.2186805432595719
+      },
+      {
+        "baseline_auc": 0.960310096012572,
+        "candidate_auc": 0.9603189259374972,
+        "delta_auc": 8.829924925235488e-06,
+        "paired_se": 7.680338322506465e-06,
+        "conditional_95pct_ci": [
+          -6.223538186877184e-06,
+          2.388338803734816e-05
+        ],
+        "candidate_logloss": 0.22452519547239286
+      }
+    ],
+    "corrected_resampled_t": {
+      "mean_delta": 1.0921608852558032e-05,
+      "se": 1.7496982977440789e-06,
+      "test_train_ratio": 0.5000000000015322,
+      "df": 2,
+      "one_sided_alpha": 0.025,
+      "lower_bound": 3.393264695531485e-06
+    },
+    "eligible_for_new_partition_replication": true,
+    "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+  },
+  "eligible": true,
+  "oof_sha256": "b344a27fcc1ee5952a99746de47093fbc9ab00a810935a965706eca0d2810d5c",
+  "plan_sha256": "d953c6b974491daf8822409f7b11ddb41316b82f0faa97d69b52fe8ad4a543ac"
+}

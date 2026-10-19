@@ -1,0 +1,11 @@
+{
+  "split": "oof",
+  "methods": [
+    "residual_tree"
+  ],
+  "frozen_plan_sha256": "63273e89ead44185d3b94b19ce9c1ac38292787ba14685a70f3b8f0d969e374e",
+  "runner_sha256": "9d5bc2c8f755ae12afae7ea1aa8853d587f9d2514eb582a3f47f9897183d34b6",
+  "preprocessing_sha256": "6c029528249d6772a958b29c46f4f095da9f91136c2721eb2a4d268f360fcfe9",
+  "source_features_sha256": "0fc3167103ca04ecaac018c622ccca4d8f7e365b46f032ad11f318e409dbfc55",
+  "frozen_utc": "2026-10-17T20:53:35.020491+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "split": "confirm",
+  "methods": {
+    "residual_tree": {
+      "comparison": {
+        "baseline_auc": 0.9605999142343083,
+        "candidate_auc": 0.9607488271562278,
+        "delta_auc": 0.00014891292191943073,
+        "paired_se": 6.718623392191877e-05,
+        "conditional_95pct_ci": [
+          1.722790343246995e-05,
+          0.0002805979404063915
+        ],
+        "candidate_logloss": 0.22308382938081514
+      },
+      "byfold": []
+    }
+  },
+  "completed_utc": "2026-10-17T20:53:33.211417+00:00"
+}

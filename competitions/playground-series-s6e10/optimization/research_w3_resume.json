@@ -1,0 +1,10 @@
+{
+  "resumed_utc": "2026-10-18T05:44:15.921892+00:00",
+  "trigger": "Parentdelegation requests continue before11:06UTC; no childuserstop or scopechange exists. Earliercloseoutwaspremature.",
+  "latest_human_steering": "LimitedGPUtestallowed,switchifappropriate",
+  "budget_unchanged": "0of2newformal,parentonly",
+  "gpu_allocator_cap_bytes": 1073741824,
+  "training_threads_max": 6,
+  "plan": "research_w3_plan.json",
+  "phase1_snapshot": "research_w3_phase1_snapshot.json"
+}

@@ -1,0 +1,58 @@
+{
+  "plan": {
+    "hypothesis": "The existing all-rating-category LightGBM may add complementary nonlinear interactions to the already-submitted targeted-category blend, without new parameter search.",
+    "current_best_csv_sha256": "e5006e109f93ee8263698fecc64881ad8a4311d94daef1055a12a11e9475769f",
+    "candidate": {
+      "cb8": {
+        "trees": 1308,
+        "weight": 0.4
+      },
+      "lgb63cats": {
+        "trees": 639,
+        "weight": 0.4
+      },
+      "lgb63allcats": {
+        "trees": 415,
+        "weight": 0.2
+      }
+    },
+    "decision_rule": "One frozen candidate only. Compare with the current 50/50 blend on the same primary and confirmation rows. Require positive AUC difference in both, and a positive lower conditional paired 95% bound on confirmation, before considering full refit. No public-score weight tuning. Otherwise retain the submitted best and record negative/inconclusive results.",
+    "confirm_split_seed": 20261017,
+    "model_seed": 42,
+    "new_training_limit": "At most one 415-tree CPU confirmation fit; full fit only if the predeclared comparison passes and time permits all verification and Library delivery before deadline.",
+    "deadline_utc": "2026-10-17T18:47:49+00:00",
+    "new_formal_submissions_total": 1,
+    "remaining_formal_submissions_maximum": 1,
+    "frozen_utc": "2026-10-17T18:37:32.635246+00:00"
+  },
+  "started_utc": "2026-10-17T18:37:48.123588+00:00",
+  "comparisons": {
+    "primary": {
+      "baseline_auc": 0.9581313490780615,
+      "candidate_auc": 0.9581626604818705,
+      "delta_auc": 3.131140380896458e-05,
+      "paired_se": 2.0965619611316594e-05,
+      "conditional_95pct_ci": [
+        -9.781210629215946e-06,
+        7.24040182471451e-05
+      ],
+      "candidate_logloss": 0.22885304279492777,
+      "comparison": "Incremental change relative to submitted frozen 50/50 blend, not historical single-model baseline"
+    },
+    "confirm": {
+      "baseline_auc": 0.959057856153056,
+      "candidate_auc": 0.9590968889423398,
+      "delta_auc": 3.9032789283743874e-05,
+      "paired_se": 2.059058678790623e-05,
+      "conditional_95pct_ci": [
+        -1.3247608205523343e-06,
+        7.939033938804009e-05
+      ],
+      "candidate_logloss": 0.22575732265909126,
+      "comparison": "Incremental change relative to submitted frozen 50/50 blend, not historical single-model baseline"
+    }
+  },
+  "decision": "retain_submitted_best",
+  "ended_utc": "2026-10-17T18:37:59.836042+00:00",
+  "caveat": "Development model selection and reused confirmation samples limit independent interpretation; conditional intervals exclude selection uncertainty."
+}

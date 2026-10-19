@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-10-17T19:28:36.146474+00:00",
+  "source": "CC0 original, previously verified hashes and excluded exact matches",
+  "teacher": "Original-only LightGBM63; select iteration on original-only seed20261018 80/20; fixed full-original refit. No synthetic labels used.",
+  "lookup": "Distance target mean alpha100, six-column near-key mean alpha20 and logcounts; safe-original labels only; never overwrite model predictions.",
+  "initial_ablations": [
+    "stats639 + teacher probability",
+    "stats639 + original lookup",
+    "stats639 + teacher and lookup"
+  ],
+  "trees": 639,
+  "validation": "Existing primary first, then strongest materially improved family on existing confirmation, then the same frozen five folds; inspect near-key matched/unmatched slices. Existing development/confirmation reused and not independent.",
+  "no_public_score_tuning": true,
+  "heterogeneity_if_external_features_help": "One CatBoost depth8 lr0.07 l2=5 fixed1308 with best features; same primary then confirmation and OOF only if valuable. No broad grid."
+}

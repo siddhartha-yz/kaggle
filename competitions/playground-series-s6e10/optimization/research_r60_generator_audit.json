@@ -1,0 +1,211 @@
+{
+  "status": "passed_no_official_SAT_or_quality",
+  "audited_utc": "2026-10-19T00:54:31.660562+00:00",
+  "audit_plan_sha256": "53933526eb6a6d23d5fb04a88c2af70344fd219c52ffa053c8547ea2d48d922a",
+  "source_plan_sha256": "880d43fafd425adecaf01728f14fab700b8cbfab72cad06e052e32547a46104f",
+  "source_manifest_sha256": "70c0424aad46792b969e40ce50e3e183838659de0118d0944e45281385aad58b",
+  "scope": {
+    "source_rows": 129859,
+    "excluded_exact_source_rows": 21,
+    "excluded_pairs_value_verified": true,
+    "official_SAT_values_parsed": false,
+    "source_SAT_values_parsed": true,
+    "source_SAT_used_as_conditioning_input": true,
+    "source_SAT_used_as_rating_target": false,
+    "own_rating_excluded_from_model_inputs": true,
+    "known_covariate_rows": 999479,
+    "guarded_official_reads": [
+      {
+        "file": "train.csv",
+        "header_only": true,
+        "columns": null
+      },
+      {
+        "file": "train.csv",
+        "header_only": false,
+        "columns": [
+          "id",
+          "Age",
+          "Flight Distance",
+          "Inflight wifi service",
+          "Departure/Arrival time convenient",
+          "Ease of Online booking",
+          "Gate location",
+          "Food and drink",
+          "Online boarding",
+          "Seat comfort",
+          "Inflight entertainment",
+          "On-board service",
+          "Leg room service",
+          "Baggage handling",
+          "Checkin service",
+          "Cleanliness",
+          "Departure Delay in Minutes",
+          "Arrival Delay in Minutes",
+          "Gender",
+          "Customer Type",
+          "Type of Travel",
+          "Class"
+        ]
+      },
+      {
+        "file": "test.csv",
+        "header_only": false,
+        "columns": [
+          "id",
+          "Age",
+          "Flight Distance",
+          "Inflight wifi service",
+          "Departure/Arrival time convenient",
+          "Ease of Online booking",
+          "Gate location",
+          "Food and drink",
+          "Online boarding",
+          "Seat comfort",
+          "Inflight entertainment",
+          "On-board service",
+          "Leg room service",
+          "Baggage handling",
+          "Checkin service",
+          "Cleanliness",
+          "Departure Delay in Minutes",
+          "Arrival Delay in Minutes",
+          "Gender",
+          "Customer Type",
+          "Type of Travel",
+          "Class"
+        ]
+      }
+    ]
+  },
+  "verified_source_models": 13,
+  "CPU_replays": [
+    {
+      "rating_index": 0,
+      "CPU_hypothesis_replay_errors": [
+        0.0,
+        0.0
+      ],
+      "actual_class_position_mapping_verified": true,
+      "model_sha256": "71fde0341caba1f8483dbe33dbcdb3850e39e2fbbad6da555efe6cf2a1e8a2d9"
+    },
+    {
+      "rating_index": 1,
+      "CPU_hypothesis_replay_errors": [
+        0.0,
+        0.0
+      ],
+      "actual_class_position_mapping_verified": true,
+      "model_sha256": "8eba80b4b7bb26fb15fef0d66f57cb4d7ce3f40cb1524ad23a96b0230a269bbf"
+    },
+    {
+      "rating_index": 2,
+      "CPU_hypothesis_replay_errors": [
+        0.0,
+        0.0
+      ],
+      "actual_class_position_mapping_verified": true,
+      "model_sha256": "a09f1bfc8a644a51c4a77204ed9ccbff044eec44f605299b79ce82a300e8ea17"
+    },
+    {
+      "rating_index": 3,
+      "CPU_hypothesis_replay_errors": [
+        0.0,
+        0.0
+      ],
+      "actual_class_position_mapping_verified": true,
+      "model_sha256": "a705076f0aa3fe320a6ca8ba639bff1e70689e9315f1eb55ad754639a5d99ba7"
+    },
+    {
+      "rating_index": 4,
+      "CPU_hypothesis_replay_errors": [
+        0.0,
+        0.0
+      ],
+      "actual_class_position_mapping_verified": true,
+      "model_sha256": "10196d679c319aff0f1e2e578b46f5d88c38cc87c8a2e3f1d765c22ad9daa345"
+    },
+    {
+      "rating_index": 5,
+      "CPU_hypothesis_replay_errors": [
+        0.0,
+        0.0
+      ],
+      "actual_class_position_mapping_verified": true,
+      "model_sha256": "29315d2839e18858e64bb6c1123f7d46d51a50d0889d09bcc246c5c48a4c5f4e"
+    },
+    {
+      "rating_index": 6,
+      "CPU_hypothesis_replay_errors": [
+        0.0,
+        0.0
+      ],
+      "actual_class_position_mapping_verified": true,
+      "model_sha256": "a5f095df430d1cc7aff35fac92dc68de9681021c3a2a4ba3d373acd21f52ba2a"
+    },
+    {
+      "rating_index": 7,
+      "CPU_hypothesis_replay_errors": [
+        0.0,
+        0.0
+      ],
+      "actual_class_position_mapping_verified": true,
+      "model_sha256": "1d937138d22b197f1fcf5f55b1bb92e12d3fd86f00ae64add65f20b6ca8da191"
+    },
+    {
+      "rating_index": 8,
+      "CPU_hypothesis_replay_errors": [
+        0.0,
+        0.0
+      ],
+      "actual_class_position_mapping_verified": true,
+      "model_sha256": "0dad6f53abcb8db24aec6e95ad79ca8b7aa13a1d99ccb7fffa316d1d9e43f582"
+    },
+    {
+      "rating_index": 9,
+      "CPU_hypothesis_replay_errors": [
+        0.0,
+        0.0
+      ],
+      "actual_class_position_mapping_verified": true,
+      "model_sha256": "a80e32d4439b4424e21b5e46f6c0dc0c4ad5ebeea4e87c53eece8e2ffb265dfb"
+    },
+    {
+      "rating_index": 10,
+      "CPU_hypothesis_replay_errors": [
+        0.0,
+        0.0
+      ],
+      "actual_class_position_mapping_verified": true,
+      "model_sha256": "d7f5cf3dc4f325d606e17ee2c50ab0a4ca91782694e38a4f8845241b7c6d1888"
+    },
+    {
+      "rating_index": 11,
+      "CPU_hypothesis_replay_errors": [
+        0.0,
+        0.0
+      ],
+      "actual_class_position_mapping_verified": true,
+      "model_sha256": "24d8c56bd1a4b386d54a797ec05077ec1ef9a075b816e12b67a9da10074d563e"
+    },
+    {
+      "rating_index": 12,
+      "CPU_hypothesis_replay_errors": [
+        0.0,
+        0.0
+      ],
+      "actual_class_position_mapping_verified": true,
+      "model_sha256": "11268f7c6556d558ad885709836d89d6cca326ddf0eef3da1358bf60aa3c04a7"
+    }
+  ],
+  "semantic_proof": {
+    "rows": 2048,
+    "labels": "synthetic alternation only",
+    "prefix84_exact": true,
+    "appended13_LLRS_exact": true,
+    "feature_width": 97
+  },
+  "peak_RSS_bytes": 1072140288,
+  "new_model_fits": 0,
+  "official_quality_evaluated": false
+}

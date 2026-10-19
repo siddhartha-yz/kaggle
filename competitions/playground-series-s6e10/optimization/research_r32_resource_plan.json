@@ -1,0 +1,37 @@
+{
+  "frozen_utc": "2026-10-18T19:37:07.887824+00:00",
+  "purpose": "One full699635-row,1epoch synthetic-label hardware test TabM16 neural74 before any qualityfit. Same old TabM16 architecture but CPU backing and CPU bins to fit 742MiB allocator. No official SAT loading/AUC.",
+  "hypothesis": "Validated E/S27 improved neural74; old W3 nested TabM used raw numeric twins without27conditional fields, and confirmation CI crossed0. Test architecture diversity onvalidated74 once, withoutwidth/weight/seed/epochgrid.",
+  "config": {
+    "seed": 42,
+    "k": 16,
+    "epochs": 20,
+    "batch_size": 256,
+    "d_block": 256,
+    "n_blocks": 2,
+    "dropout": 0.1,
+    "d_embedding": 16,
+    "num_bins": 48,
+    "lr": 0.002,
+    "weight_decay": 0,
+    "share_training_batches": true,
+    "allow_amp": false,
+    "compile_model": false
+  },
+  "allocator_cap_bytes": 778043392,
+  "gpu_process_ceiling_bytes": 1073741824,
+  "cpu_threads": 6,
+  "RSS_ceiling_bytes": 8589934592,
+  "available_RAM_min_bytes": 2147483648,
+  "fallback": "If OOM, one prespecified batch128 test only; same architecture k16. If unsafe stoproute; no score-based fallback.",
+  "source_sha256": {
+    "research_r32_features.py": "0eace9314f1829279c526a14af1723f1cc924c38c6b433fff0e2fc0b705a2653",
+    "research_r32_engine.py": "3efb0eddc877727410c67639e7c187b7e66c7dbf1207bb37379ef3051ef9a88d",
+    "research_r32_probe.py": "0f0d7ec85e6e1838dac97c68b7e54fe3d793c3da58f83ff08ae10b567f8577ce",
+    "research_r23_features.py": "90eaab4ae13284cb7f097efd865279c51d0d939de7c28883f000be9f39199bd7",
+    "research_r4_lean_features.py": "cfe6f672865f30622ce8e5cf9149f11e2e6f822f9c1b687f7e7c0431c9218303",
+    "research_w3_tabm_features.py": "f3d95aa66bf9c35ff5bec4d06b3065b5dd2dbc561f085d7fafa4c9bbcee73587",
+    "research_r23_loader.py": "b21b6210be0b72350d63942e7c86b1ad872165d55a4e2c66fcdab3a059a8b64a",
+    "research_r23_guard.py": "13e4de70ccb00335a65bd13c1acdd6b00cf38b7c218a4f9506393258e23ed270"
+  }
+}

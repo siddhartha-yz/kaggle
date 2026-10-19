@@ -1,0 +1,70 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-18T05:20:30.811506+00:00",
+  "hardware": {
+    "initial_gpu_free_bytes": 6548094976,
+    "gpu_name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "cap_bytes": 2147483648
+  },
+  "config": {
+    "seed": 42,
+    "k": 16,
+    "epochs": 20,
+    "batch_size": 256,
+    "d_block": 256,
+    "n_blocks": 2,
+    "dropout": 0.1,
+    "d_embedding": 16,
+    "num_bins": 48,
+    "lr": 0.002,
+    "weight_decay": 0,
+    "share_training_batches": true,
+    "allow_amp": false,
+    "compile_model": false,
+    "numerical_transform": "train-only median impute, QuantileTransformer1000normal random_state42; PWL bins train only; constant numerical columns excluded",
+    "categoricals": "raw four string categorical features; outer-train vocab plus reservedunknown0"
+  },
+  "plan_sha256": "93fd72889a584270330d1c7815715afcec40f778b807d5dbdc6544a1a42cb8be",
+  "feature_expansion_plan_sha256": "9a1d45fda15a01c8354eac4f3fcb3428a3e8a5c7e4deb796ea3b451f87231b29",
+  "feature_code_sha256": "fce41f55c33e6e9ad23fd318efc811a916aa208a9f7b896b68c605376c9fa445",
+  "runner_sha256": "6b0114984429b99aca5a0e91a1db7f30ce06679dc56b9d6115ac1be17429aa76",
+  "train_rows": 559708,
+  "valid_rows": 139927,
+  "validation_used_in_fit": false,
+  "cat_cardinalities": [
+    76,
+    3447,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    6,
+    7,
+    7,
+    159,
+    160,
+    3,
+    3,
+    3,
+    4
+  ],
+  "epochs": [
+    {
+      "epoch": 1,
+      "seconds": 8.38527365399932,
+      "train_loss": 0.24817471654957798,
+      "gpu_free_bytes": 5901320192
+    }
+  ],
+  "fit_seconds": 8.385635283004376,
+  "peak_allocated_bytes": 557395456,
+  "peak_reserved_bytes": 614465536,
+  "score_evaluated": false,
+  "completed_utc": "2026-10-18T05:20:45.655999+00:00"
+}

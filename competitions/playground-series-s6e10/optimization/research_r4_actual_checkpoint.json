@@ -1,0 +1,72 @@
+{
+  "updated_utc": "2026-10-18T11:53:29.393603+00:00",
+  "status": "qualified_csv_delivered_awaiting_parent_only_submission",
+  "active_training": false,
+  "whole_top100_task_completed": false,
+  "csv": {
+    "status": "complete",
+    "completed_utc": "2026-10-18T11:50:25.746505+00:00",
+    "csv": "submission_lean_realmlp_r4_cv_v7.csv",
+    "rows": 299844,
+    "columns": [
+      "id",
+      "satisfaction"
+    ],
+    "sha256": "0ab4fe851d7677dfb1ddb0714e2c1a2f74b3f7e194d189ca6a92136a7f68c76f",
+    "bytes": 8205548,
+    "positive_class": true,
+    "members": 40,
+    "formula": ".75*v5_full+.25*mean(5folds x8independent leanNN)",
+    "no_test_labels_used": true,
+    "no_test_fitted_statistics": true,
+    "old_v6_reconstruction_error": 0.0,
+    "csv_roundtrip_max_error": 2.220446049250313e-16,
+    "gpu_process_peak_bytes": 455081984,
+    "new_formal_submissions": 0,
+    "formal_total_limit": 2,
+    "parent_only_submitter": true,
+    "not_actual_leaderboard_confirmation": true,
+    "plan_sha256": "321bf8e63e9a17dfa55214851d7e1a32510904259d1eaaca452f65a2a8cd9f7c"
+  },
+  "validation": {
+    "r4_lean_gpu_init_oof": {
+      "candidate_reconstruction_max_error": 0.0,
+      "auc": 0.9612963083501996,
+      "delta_auc": 0.0001608458060505802,
+      "conditional_95pct_ci": [
+        0.00013469791140646443,
+        0.00018699370069469594
+      ],
+      "corrected_fold_lower": 0.00012044251357098612
+    },
+    "r4_lean_gpu_init_replication3": {
+      "candidate_reconstruction_max_error": 0.0,
+      "auc": 0.9611235237273941,
+      "delta_auc": 0.00013217671387466545,
+      "conditional_95pct_ci": [
+        0.00010452445127263237,
+        0.00015982897647669853
+      ],
+      "corrected_fold_lower": 4.3104450296855046e-05
+    }
+  },
+  "fixed_weights": {
+    "frozen_v5_full": 0.75,
+    "new_lean_fivefold_mean": 0.25
+  },
+  "expanded_weights": {
+    "LGB_original": 0.3515625,
+    "CB8": 0.0703125,
+    "residual_prior05": 0.140625,
+    "CB10": 0.1875,
+    "lean_cv40": 0.25
+  },
+  "library_saved": true,
+  "library_byte_verification": "passed_exact_byte_identity",
+  "source_implementation": "Publicrecipeparameter/mechanismreference only; our own models and predictions, officialpackages; no externalnotebookexecution",
+  "source_original_teacher": "Existingv5core uses previouslyaudited safeCC0 originaldata teacher/lookups, excludes21exactofficialoverlaps. No new externaldata inR4.",
+  "new_formal_used": 0,
+  "new_formal_limit": 2,
+  "parent_only_submitter": true,
+  "next_prepared_route_if_still_belowTop100": "research_next_mechanism_review.json"
+}

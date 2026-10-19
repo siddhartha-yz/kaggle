@@ -1,0 +1,181 @@
+{
+  "status": "not_qualified",
+  "stage": "fivefold",
+  "checked_utc": "2026-10-19T01:10:50.817108+00:00",
+  "vs_formal_v11": {
+    "pooled": {
+      "baseline_auc": 0.9616328660208192,
+      "candidate_auc": 0.9616322645742851,
+      "delta_auc": -6.014465341319664e-07,
+      "paired_se": 1.6488067771668576e-05,
+      "conditional_95pct_ci": [
+        -3.291805936660237e-05,
+        3.171516629833844e-05
+      ],
+      "candidate_logloss": 0.22122844145234158
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.9608862343189031,
+        "candidate_auc": 0.9608898131846956,
+        "delta_auc": 3.578865792497332e-06,
+        "paired_se": 3.7051928992957513e-05,
+        "conditional_95pct_ci": [
+          -6.90429150336994e-05,
+          7.620064661869406e-05
+        ],
+        "candidate_logloss": 0.22327193181462351
+      },
+      {
+        "baseline_auc": 0.9618421173162851,
+        "candidate_auc": 0.9618385488086869,
+        "delta_auc": -3.5685075981950476e-06,
+        "paired_se": 3.621625636915752e-05,
+        "conditional_95pct_ci": [
+          -7.455237008174379e-05,
+          6.741535488535369e-05
+        ],
+        "candidate_logloss": 0.2207659963005878
+      },
+      {
+        "baseline_auc": 0.9622169314611875,
+        "candidate_auc": 0.9621612021121727,
+        "delta_auc": -5.5729349014765894e-05,
+        "paired_se": 3.674809102917687e-05,
+        "conditional_95pct_ci": [
+          -0.00012775560743195257,
+          1.629690940242078e-05
+        ],
+        "candidate_logloss": 0.21943127742416585
+      },
+      {
+        "baseline_auc": 0.9614621762740646,
+        "candidate_auc": 0.9614776575339914,
+        "delta_auc": 1.5481259926786173e-05,
+        "paired_se": 3.7687853195037014e-05,
+        "conditional_95pct_ci": [
+          -5.838693233548637e-05,
+          8.934945218905871e-05
+        ],
+        "candidate_logloss": 0.2221768138942823
+      },
+      {
+        "baseline_auc": 0.9617929598566762,
+        "candidate_auc": 0.9618277363030905,
+        "delta_auc": 3.477644641425304e-05,
+        "paired_se": 3.66983276786267e-05,
+        "conditional_95pct_ci": [
+          -3.7152275835855295e-05,
+          0.00010670516866436137
+        ],
+        "candidate_logloss": 0.22049618782804858
+      }
+    ],
+    "corrected_resampled_t": {
+      "mean_delta": -1.09225689588488e-06,
+      "se": 2.268525826182552e-05,
+      "test_train_ratio": 0.25,
+      "df": 4,
+      "one_sided_alpha": 0.025,
+      "lower_bound": -6.407663115707814e-05
+    },
+    "eligible_for_new_partition_replication": false,
+    "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+  },
+  "vs_prior_v10_diagnostic": {
+    "pooled": {
+      "baseline_auc": 0.9615338914351743,
+      "candidate_auc": 0.9616322645742851,
+      "delta_auc": 9.83731391107634e-05,
+      "paired_se": 2.101461908451629e-05,
+      "conditional_95pct_ci": [
+        5.718448570511147e-05,
+        0.00013956179251641533
+      ],
+      "candidate_logloss": 0.22122844145234158
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.960818384445062,
+        "candidate_auc": 0.9608898131846956,
+        "delta_auc": 7.142873963361662e-05,
+        "paired_se": 4.752136085075435e-05,
+        "conditional_95pct_ci": [
+          -2.1713127633861894e-05,
+          0.00016457060690109514
+        ],
+        "candidate_logloss": 0.22327193181462351
+      },
+      {
+        "baseline_auc": 0.9617131397187628,
+        "candidate_auc": 0.9618385488086869,
+        "delta_auc": 0.00012540908992408895,
+        "paired_se": 4.4779694288091895e-05,
+        "conditional_95pct_ci": [
+          3.764088911942884e-05,
+          0.00021317729072874907
+        ],
+        "candidate_logloss": 0.2207659963005878
+      },
+      {
+        "baseline_auc": 0.9620715765969017,
+        "candidate_auc": 0.9621612021121727,
+        "delta_auc": 8.962551527103013e-05,
+        "paired_se": 4.618576819589664e-05,
+        "conditional_95pct_ci": [
+          -8.985903929272724e-07,
+          0.00018014962093498754
+        ],
+        "candidate_logloss": 0.21943127742416585
+      },
+      {
+        "baseline_auc": 0.9614292433668903,
+        "candidate_auc": 0.9614776575339914,
+        "delta_auc": 4.841416710110735e-05,
+        "paired_se": 4.850319088179016e-05,
+        "conditional_95pct_ci": [
+          -4.665208702720135e-05,
+          0.00014348042122941607
+        ],
+        "candidate_logloss": 0.2221768138942823
+      },
+      {
+        "baseline_auc": 0.9616819435749557,
+        "candidate_auc": 0.9618277363030905,
+        "delta_auc": 0.00014579272813475264,
+        "paired_se": 4.75346933410886e-05,
+        "conditional_95pct_ci": [
+          5.262472918621898e-05,
+          0.0002389607270832863
+        ],
+        "candidate_logloss": 0.22049618782804858
+      }
+    ],
+    "corrected_resampled_t": {
+      "mean_delta": 9.613404801291913e-05,
+      "se": 2.652268273722173e-05,
+      "test_train_ratio": 0.25,
+      "df": 4,
+      "one_sided_alpha": 0.025,
+      "lower_bound": 2.2495275350445848e-05
+    },
+    "eligible_for_new_partition_replication": true,
+    "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+  },
+  "eligible": false,
+  "oof_sha256": "51bbc0161d0c73fdd76dc8762651508f3a63f6acbde8c381b3a677df87d1de36",
+  "plan_sha256": "6060e16529111bba1a26f29d366c4181d9006046a2b605f717f95e5122f5fe6b",
+  "complete_outer_folds": 5,
+  "complete_native_members": 160,
+  "threefold_started": false,
+  "independent_student_audit_executed": false,
+  "test_inference_started": false,
+  "CSV_created": false,
+  "new_formal_submissions": 0,
+  "no_feature_seed_epoch_or_blend_rescue": true,
+  "peak_GPU_process_bytes": 964689920,
+  "peak_RSS_bytes": 4248047616,
+  "max_model_reload_error": 0.0,
+  "actual_top500_verified": false,
+  "parent_only_submitter": true
+}

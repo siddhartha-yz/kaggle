@@ -1,0 +1,50 @@
+{
+  "primary_scores": {
+    "rating_distribution": {
+      "baseline_auc": 0.9597883620429111,
+      "candidate_auc": 0.9595953262679275,
+      "delta_auc": -0.00019303577498352986,
+      "paired_se": 0.00010520673509462239,
+      "conditional_95pct_ci": [
+        -0.00039924097576898973,
+        1.3169425801930006e-05
+      ],
+      "candidate_logloss": 0.22709264528083717
+    },
+    "strict_interaction_te": {
+      "baseline_auc": 0.9597883620429111,
+      "candidate_auc": 0.9597683239777761,
+      "delta_auc": -2.0038065134952987e-05,
+      "paired_se": 0.00011338397499029516,
+      "conditional_95pct_ci": [
+        -0.0002422706561159315,
+        0.00020219452584602552
+      ],
+      "candidate_logloss": 0.22668267404998652
+    },
+    "second_original_teacher": {
+      "baseline_auc": 0.9597883620429111,
+      "candidate_auc": 0.9597571485169853,
+      "delta_auc": -3.12135259257218e-05,
+      "paired_se": 0.00010689380173093362,
+      "conditional_95pct_ci": [
+        -0.00024072537731835168,
+        0.00017829832546690808
+      ],
+      "candidate_logloss": 0.22626205003561678
+    },
+    "wide_sampled_lgb": {
+      "baseline_auc": 0.9597883620429111,
+      "candidate_auc": 0.9598688737408358,
+      "delta_auc": 8.051169792477886e-05,
+      "paired_se": 9.806380833896811e-05,
+      "conditional_95pct_ci": [
+        -0.00011169336641959863,
+        0.0002727167622691563
+      ],
+      "candidate_logloss": 0.2263138927977892
+    }
+  },
+  "chosen": null,
+  "public_scores_used": false
+}

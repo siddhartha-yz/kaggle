@@ -1,0 +1,44 @@
+{
+  "status": "complete",
+  "name": "residual_prior05_primary_t2200_es",
+  "auc": 0.9597638331832334,
+  "vs_original_lgb": {
+    "baseline_auc": 0.9597883620429111,
+    "candidate_auc": 0.9597638331832334,
+    "delta_auc": -2.452885967763052e-05,
+    "paired_se": 9.923618344540686e-05,
+    "conditional_95pct_ci": [
+      -0.00021903177923062798,
+      0.00016997405987536694
+    ],
+    "candidate_logloss": 0.2266747797766023
+  },
+  "fixed_grid_blends": {
+    "0.25": {
+      "baseline_auc": 0.9597883620429111,
+      "candidate_auc": 0.9598944929146068,
+      "delta_auc": 0.00010613087169575319,
+      "paired_se": 2.6280413679226832e-05,
+      "conditional_95pct_ci": [
+        5.46212608844686e-05,
+        0.00015764048250703778
+      ],
+      "candidate_logloss": 0.22652845458264884
+    },
+    "0.5": {
+      "baseline_auc": 0.9597883620429111,
+      "candidate_auc": 0.9599220783370987,
+      "delta_auc": 0.00013371629418768016,
+      "paired_se": 5.1472466641438684e-05,
+      "conditional_95pct_ci": [
+        3.283025957046035e-05,
+        0.00023460232880489996
+      ],
+      "candidate_logloss": 0.226438474388573
+    }
+  },
+  "selected_trees": [
+    581
+  ],
+  "completed_utc": "2026-10-17T20:06:27.892428+00:00"
+}

@@ -1,0 +1,42 @@
+{
+  "baseline_auc": 0.9583800202558467,
+  "candidate_auc": 0.959057856153056,
+  "delta_auc": 0.0006778358972093779,
+  "paired_se": 0.00011095684361830904,
+  "conditional_95pct_ci": [
+    0.00046036048371749216,
+    0.0008953113107012635
+  ],
+  "candidate_logloss": 0.22581460867165568,
+  "timestamp_utc": "2026-10-17T18:17:05.305140+00:00",
+  "components": {
+    "cb8": {
+      "baseline_auc": 0.9583800202558467,
+      "candidate_auc": 0.9586330831087114,
+      "delta_auc": 0.0002530628528647494,
+      "paired_se": 0.0001050582811307288,
+      "conditional_95pct_ci": [
+        4.714862184852095e-05,
+        0.00045897708388097785
+      ],
+      "candidate_logloss": 0.22679143904509402
+    },
+    "lgb63cats": {
+      "baseline_auc": 0.9583800202558467,
+      "candidate_auc": 0.9588281823895095,
+      "delta_auc": 0.00044816213366283275,
+      "paired_se": 0.00015956999157993847,
+      "conditional_95pct_ci": [
+        0.00013540495016615338,
+        0.0007609193171595121
+      ],
+      "candidate_logloss": 0.2266167889606045
+    }
+  },
+  "split_seed": 20261017,
+  "model_seed": 42,
+  "weights_frozen_before_confirm": true,
+  "decision": "proceed_full_frozen",
+  "caveat": "Repeated official samples overlap development; this is a stability check, not an independent test. Conditional interval excludes selection uncertainty.",
+  "confirm_primary_validation_overlap_rows": 27914
+}

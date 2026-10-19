@@ -1,0 +1,38 @@
+{
+  "frozen_utc": "2026-10-17T21:20:06.731542+00:00",
+  "reason": "CB8 complements original-aware LGB on all five folds, while added representations and nested stacking failed the final effect gate. Test one deeper interaction model on unchanged validated features; no public-score tuning.",
+  "cb_params": {
+    "iterations": 2400,
+    "learning_rate": 0.04,
+    "depth": 10,
+    "l2_leaf_reg": 10,
+    "loss_function": "Logloss",
+    "eval_metric": "AUC",
+    "random_seed": 20261018,
+    "task_type": "CPU",
+    "thread_count": 6,
+    "allow_writing_files": false,
+    "verbose": 200
+  },
+  "primary_early_stopping_rounds": 150,
+  "primary_time_cap_seconds": 1500,
+  "core_weights": {
+    "lgb_original": 0.625,
+    "residual_prior05": 0.25,
+    "cb_original": 0.125
+  },
+  "core_provenance": "Predeclared equal mean of admitted fixed blends; OOF .9607860791046143, retained but not submitted.",
+  "candidate_deep_weights": [
+    0.25,
+    1.0
+  ],
+  "primary_selection": "Highest AUC among these two fixed candidates with gain>=.0001 and positive lower conditional bound vs v4, plus positive point gain vs existing fixed core. Freeze model tree count and candidate weight.",
+  "confirmation": "Unchanged selected tree count/weight; positive lower conditional bound vs v4 and positive point gain vs fixed core.",
+  "oof_gate": "Every fold gain vs v4 positive, pooled gain>=.0002, pooled conditional lower bound>0, and positive pooled point gain vs fixed core. No weight optimization.",
+  "features": "Same outer-train-only Distance stats plus five audited original teacher/lookup features. All21 exact source overlaps excluded.",
+  "cpu_threads": 6,
+  "serial": true,
+  "new_dependencies": false,
+  "training_start_cutoff_utc": "2026-10-18T00:40:00+00:00",
+  "training_hard_cutoff_utc": "2026-10-18T00:50:00+00:00"
+}

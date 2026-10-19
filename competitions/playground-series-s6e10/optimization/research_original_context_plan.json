@@ -1,0 +1,17 @@
+{
+  "frozen_utc": "2026-10-17T21:15:58.660578+00:00",
+  "reason": "Distance group statistics and independent licensed-original features were both validated improvements. Test their source-only combination after nested stacking failed the final effect gate. No public-score parameter choice.",
+  "source": "Same129859 safe CC0 source rows; all21 exact synthetic train/test overlaps excluded globally.",
+  "source_mapping": "Unsupervised Distance numeric means shrunk20 to source-global means; no original or synthetic targets used.",
+  "variants": [
+    "both_context_means",
+    "both_context_full"
+  ],
+  "variant_meaning": {
+    "both_context_means": "Existing v4 features +16 source Distance numeric means",
+    "both_context_full": "Existing v4 features +16 source means +16 raw-minus-source-mean deviations"
+  },
+  "model": "Unchanged LGB63,639trees,lr.04,child150,lambda10,seed42,CPU6.",
+  "promotion": "Screen both once. Only highest primary AUC among delta>=.0001 and positive conditional lower bound vs v4 proceeds. Confirmation lower bound must be positive. Final five-fold gate: all deltas positive, pooled delta>=.0002 and conditional lower bound>0.",
+  "training": "Serial CPU6, no new dependencies, same00:40 start/00:50 hard cutoffs."
+}

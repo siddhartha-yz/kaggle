@@ -1,0 +1,56 @@
+{
+  "frozen_utc": "2026-10-19T00:48:15.471863+00:00",
+  "parameters": {
+    "iterations": 300,
+    "learning_rate": 0.1,
+    "depth": 7,
+    "l2_leaf_reg": 5,
+    "loss_function": "MultiClass",
+    "random_seed": 42,
+    "task_type": "GPU",
+    "devices": "0",
+    "gpu_ram_part": 0.06,
+    "thread_count": 6,
+    "border_count": 128,
+    "max_ctr_complexity": 1,
+    "one_hot_max_size": 2,
+    "boosting_type": "Plain",
+    "bootstrap_type": "Bernoulli",
+    "subsample": 0.8,
+    "allow_writing_files": false,
+    "verbose": 100
+  },
+  "model_count": 13,
+  "observed_probability_floor": 1e-06,
+  "likelihood_ratio": "float32(log(clip(Pobs_SAT1,1e-6,1))-log(clip(Pobs_SAT0,1e-6,1)))",
+  "unseen_source_rating_class": "Pobs=0 for both hypotheses, so floored likelihood-ratio0",
+  "official_query_CPU_batch_rows": 65536,
+  "training_scope": "Only129859 audited originalCC0 rows after all21 exact covariate matches against all known official train/testX are removed. OriginalSAT conditioning is explicitly supervised by external source labels, not described as target-free. Own rating,id,officialSAT excluded from predictor inputs.",
+  "official_SAT_values_parsed": false,
+  "original_SAT_conditioner_allowed": true,
+  "resources": {
+    "CPU_threads": 6,
+    "GPU_process_ceiling_bytes": 1073741824,
+    "RSS_ceiling_bytes": 8589934592,
+    "available_RAM_min_bytes": 2147483648,
+    "paid": false,
+    "serial": true
+  },
+  "source_sha256": {
+    "research_r60_source_data.py": "ca53eb1198caf76f70162f39b61e57e0a765fc718bf8cb2dccb8546724501734",
+    "research_r60_source_audit.py": "e8eae486299516e52fc1e3ac831452b279417a972efea1442bb7d1457a14a9b1",
+    "research_r23_guard.py": "13e4de70ccb00335a65bd13c1acdd6b00cf38b7c218a4f9506393258e23ed270",
+    "research_r40_worker.py": "64c5ec6fa341341b5a03e087a65bf8a79751730c1c97847d583a5aa24402cf5c",
+    "research_r4_common.py": "53eedffd572f6a82b9c3dba70e3315ab1df51dd9242396ab22da7f8dabc52e81"
+  },
+  "artifact_sha256": {
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "data/test.csv": "ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6",
+    "research_sources/original_cc0/data.csv": "2ad76465f6115f93d16121891a6b1235acb8007a4ab065cae0dc46b60ad116e3",
+    "research_sources/original_safe_mask.npy": "fcc30179ed4f68ddab8323abe86e953dcaf13374dee46bd3c13abb55dfdbfe51",
+    "research_artifacts/original_teacher_v1/audit.json": "60c1c53f8dc6a3169d8f07c6f4075cd570f39d7fcd729bb1534b0fc342e24aa8",
+    "research_r21_pre_inference_audit.json": "9bf51d44df4a0b2cac2ca32ba6818fa5a59d10de1d5a4cdd754f4ccc6a599db9",
+    "research_r59_result.json": "a563ab55d66de3527f5aeb4d79942971832272c76d068493570fc224e21921f9",
+    "research_r60_direction_note.json": "05480774481cade402f395b7b9d29367d42c41ec4baff8eebce335888b81abdb"
+  }
+}

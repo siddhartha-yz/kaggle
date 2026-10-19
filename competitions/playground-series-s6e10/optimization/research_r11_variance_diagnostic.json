@@ -1,0 +1,61 @@
+{
+  "recorded_utc": "2026-10-18T14:32:53.344166+00:00",
+  "official_targets_read": false,
+  "predictions_only": true,
+  "source": "Existing qualified R4 lean serial8 fixed members across fivefold; no new training or label-based seed selection.",
+  "rows": 699635,
+  "rms_member_SD": 0.01927508289837176,
+  "rms_8member_mean_SE": 0.006814770912685763,
+  "rms_half_blend_MC_SE": 0.0034073854563428816,
+  "fraction_mean_SE_over_01": 0.08389803254554161,
+  "fraction_mean_SE_over_02": 0.02733282354370493,
+  "hypothetical_8_to32_Brier_MC_variance_reduction": 8.70770673607274e-06,
+  "assumption": "Conditional independent random initializations for a fixed training dataset; estimates only MonteCarlo variability, not label noise or guaranteed AUC/generalization gain. New batched seeds/execution need their own full paired evaluation.",
+  "folds": [
+    {
+      "fold": 0,
+      "rows": 139927,
+      "rms_member_SD": 0.019201628863811493,
+      "rms_8member_mean_SE": 0.006788801401853561,
+      "mean_SE_median": 0.0020267413929104805,
+      "mean_SE_p90": 0.008659172803163528,
+      "mean_SE_between_p25_p75": 0.020947696641087532
+    },
+    {
+      "fold": 1,
+      "rows": 139927,
+      "rms_member_SD": 0.01953970454633236,
+      "rms_8member_mean_SE": 0.006908329203724861,
+      "mean_SE_median": 0.0019845236092805862,
+      "mean_SE_p90": 0.008986773900687695,
+      "mean_SE_between_p25_p75": 0.02120586857199669
+    },
+    {
+      "fold": 2,
+      "rows": 139927,
+      "rms_member_SD": 0.01958087645471096,
+      "rms_8member_mean_SE": 0.0069228848442435265,
+      "mean_SE_median": 0.0020776460878551006,
+      "mean_SE_p90": 0.00857146829366684,
+      "mean_SE_between_p25_p75": 0.021294359117746353
+    },
+    {
+      "fold": 3,
+      "rows": 139927,
+      "rms_member_SD": 0.019004762172698975,
+      "rms_8member_mean_SE": 0.006719198543578386,
+      "mean_SE_median": 0.00198564026504755,
+      "mean_SE_p90": 0.008539577946066856,
+      "mean_SE_between_p25_p75": 0.020668230950832367
+    },
+    {
+      "fold": 4,
+      "rows": 139927,
+      "rms_member_SD": 0.01904073916375637,
+      "rms_8member_mean_SE": 0.006731918081641197,
+      "mean_SE_median": 0.0019943348597735167,
+      "mean_SE_p90": 0.008514937944710255,
+      "mean_SE_between_p25_p75": 0.020683418959379196
+    }
+  ]
+}

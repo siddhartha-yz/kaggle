@@ -1,0 +1,18 @@
+{
+  "frozen_utc": "2026-10-17T19:50:57.954960+00:00",
+  "reference": "lgb_stats_orig_both",
+  "families": [
+    "cb fixed1308 depth8",
+    "xgb depth6 selected trees from primary only",
+    "optional sklearn CPU MLP"
+  ],
+  "candidate_weight_grid": [
+    0.25,
+    0.5
+  ],
+  "selection": "Choose at most one weight per family on primary; freeze before confirmation. No public score input.",
+  "primary_screen": "Require best fixed-grid blend AUC delta >=0.0001 versus lgb_stats_orig_both to spend confirmation/OOF fits. Retain failures.",
+  "confirmation": "Require positive delta and positive lower paired conditional95% bound versus same family baseline.",
+  "final_candidate": "Same five-fold OOF, every fold positive and pooled delta>=0.00015 with positive lower conditional95% bound; subsequent candidate may use a predeclared equal blend of independently accepted complementary families. Maximum two remaining submission slots coordinated by parent.",
+  "neural_trial": "Existing sklearn MLPClassifier, CPU6, no new packages or GPU work; train-only imputation/quantiles/categories, all rating onehots, distance group features and original-only external features. Primary max40 epochs, patience7, max900 seconds; abandon if first epoch>180s. Train/validate on same saved primary split. Fixed selected epoch count for later confirmation/OOF."
+}

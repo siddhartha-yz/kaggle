@@ -1,0 +1,13 @@
+{
+  "original_repository_commit": "52f8cd1f3039f2ecfca77e1dfef60972d76b05f5",
+  "experiment_archive_sha256": "f77689759f0994ec6866a6c9386b3ff37ff7dffb0d979a1034089894e4da86d1",
+  "official_archive_sha256": "5227297a3cd4608c7e5f995624cc3526ae49352042772329f4da199b367cf253",
+  "handoff_note_sha256": "11254bcd9a85d619e5a13fe058f4a658d011ee8bbbd7c7b51724ec3836563dcb",
+  "verified_handoff_file_count": 62,
+  "verified_official_csv_count": 3,
+  "development_experiment_count": 8,
+  "historical_public_baseline_auc": 0.95816,
+  "local_training_device": "CPU",
+  "kaggle_credentials_migrated": false,
+  "formal_submissions_by_local_session": 0
+}

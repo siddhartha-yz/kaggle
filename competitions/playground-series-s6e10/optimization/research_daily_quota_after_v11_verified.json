@@ -1,0 +1,10 @@
+{
+  "reported_utc": "2026-10-18T18:53:23.992764+00:00",
+  "source": "ParentactualKaggleUIverificationafterv11",
+  "remaining_daily_quota": 6,
+  "verified_in_UI": true,
+  "verification_time_separately_supplied": false,
+  "requires_fresh_UI_check_before_next_upload": true,
+  "historical_submissions": 10,
+  "parent_only_submitter": true
+}

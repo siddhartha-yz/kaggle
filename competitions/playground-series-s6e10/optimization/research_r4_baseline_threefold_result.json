@@ -1,0 +1,8 @@
+{
+  "status": "complete",
+  "ended_utc": "2026-10-18T11:41:07.354134+00:00",
+  "oof_sha256": "ad06fa230d83c26e68d423bd4cf84aaaacc286bdd286c7688b85c2c9d0865bc3",
+  "fold_sha256": "4ac2e541a4630e9b66c6f0bb0556ad83410e624cdeca5d3ec61e85e5598350ae",
+  "all_baseline_components_freshly_trained": true,
+  "no_old_predictions_reused": true
+}

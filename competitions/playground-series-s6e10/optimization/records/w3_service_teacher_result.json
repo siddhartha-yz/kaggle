@@ -1,0 +1,55 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-18T06:30:47.714228+00:00",
+  "source_audit": {
+    "source_raw_csv_sha256": {
+      "original_train.csv": "a15fab6d36a6123dedb035e1bc11b31f27b547671ce8d27762e74d96527c364f",
+      "original_test.csv": "2b58518af6e6c94334bf0f69160e29c5a5a082e340cf30f517473ede2bb1d898"
+    },
+    "source_projection_and_SAT_multiset_match_known_CC0": true,
+    "rows": 129859,
+    "excluded_exact_matches_to_official21_predictors": 21,
+    "official_labels_read": false,
+    "extra_observed_source_only_feature": "Inflight service",
+    "source_url": "https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction",
+    "license": "Other(specifieddescription),attributionTeejMahal20/JohnD,privateanalysis,no rawredistribution"
+  },
+  "plan_sha256": "680483f3eefb8ba2e59a9086591fb14ce7606e206567f129cc6ebeb2c4a907ea",
+  "runner_sha256": "e04e485d0048ef33709a061c39ca4629bfbc7e322185985fcedfe01f3e3d9163",
+  "source_helper_sha256": "7891537b46c7f1cf7fb4a033985403d5cc6b203b9de0b8d9bba9ebb626710a46",
+  "service_classes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "competition_targets_used_or_read": false,
+  "service_model_reload_max_abs_diff": 0.0,
+  "SAT22_model_reload_max_abs_diff": 0.0,
+  "train_features_sha256": "431f720763294085e10f5d27f756aa3f4e6938aaa7378c4a772dfca7dca1ce89",
+  "test_features_sha256": "623ad95518417db2ba3b40fb810459a40995fc7bfbceb24bc032b3ec986c9be0",
+  "completed_utc": "2026-10-18T06:32:03.945667+00:00",
+  "service_model_sha256": "3aa9c7480b0c003ce5756e3b8f1ad1b783a779b4be45afa6db2b8e2e793636f6",
+  "sat22_model_sha256": "fa2bd180a28d86b269d1470116f5d28db7f6d228c9e6407638c8b65522f6e689",
+  "transformer_sha256": "03aa41cb3b13d2d1912a8ba1324b49e00129b0b9ff122246bbc39dc4e46727d9",
+  "lookup_sha256": "14d1a5407d08e89a751e85020936511fde89df09700124b2964708e9e2a50b13",
+  "serialization_metadata_repair": {
+    "utc": "2026-10-18T06:41:00.337561+00:00",
+    "reason": "Producer serializedPandasIndexcolumnsasobject;strictnonpickleloaderrefusedbeforeanysyntheticmodeltraining.",
+    "method": "Readonlynumericid/valuesarrayswithallow_pickleFalse;reconstruct11controlledcolumnnamesasUnicode;preserveoriginalarchives;no modelrefit.",
+    "files": {
+      "train": {
+        "old_sha256": "48d322c681b738d89c008fb4275ce2cb0753ecf63bff148a15205c19832be381",
+        "new_sha256": "431f720763294085e10f5d27f756aa3f4e6938aaa7378c4a772dfca7dca1ce89",
+        "numeric_arrays_bitwise_unchanged": true
+      },
+      "test": {
+        "old_sha256": "3d01d1942ef08d1e0201a548038516b421d5c326c72040d7b2a9ef92b53390be",
+        "new_sha256": "623ad95518417db2ba3b40fb810459a40995fc7bfbceb24bc032b3ec986c9be0",
+        "numeric_arrays_bitwise_unchanged": true
+      }
+    }
+  }
+}

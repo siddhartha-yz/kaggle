@@ -1,0 +1,60 @@
+{
+  "status": "complete",
+  "name": "lgb_stats_orig_both_primary_wide_t3000_es",
+  "auc": 0.9598688737408358,
+  "logloss": 0.2263138927977892,
+  "vs_stats": {
+    "baseline_auc": 0.9595094577734711,
+    "candidate_auc": 0.9598688737408358,
+    "delta_auc": 0.00035941596736477344,
+    "paired_se": 0.00012219685705554321,
+    "conditional_95pct_ci": [
+      0.00011991012753590874,
+      0.0005989218071936382
+    ],
+    "candidate_logloss": 0.2263138927977892
+  },
+  "byfold": [],
+  "completed_utc": "2026-10-17T20:42:20.947153+00:00",
+  "vs_original_lgb": {
+    "baseline_auc": 0.9597883620429111,
+    "candidate_auc": 0.9598688737408358,
+    "delta_auc": 8.051169792477886e-05,
+    "paired_se": 9.806380833896811e-05,
+    "conditional_95pct_ci": [
+      -0.00011169336641959863,
+      0.0002727167622691563
+    ],
+    "candidate_logloss": 0.2263138927977892
+  },
+  "slices": {
+    "near_match": {
+      "rows": 51609,
+      "comparison": {
+        "baseline_auc": 0.9587046609489681,
+        "candidate_auc": 0.9589114074453919,
+        "delta_auc": 0.00020674649642382636,
+        "paired_se": 0.00019622019483915315,
+        "conditional_95pct_ci": [
+          -0.00017784508546091383,
+          0.0005913380783085665
+        ],
+        "candidate_logloss": 0.2279124416774041
+      }
+    },
+    "no_near_match": {
+      "rows": 88318,
+      "comparison": {
+        "baseline_auc": 0.9599123436728904,
+        "candidate_auc": 0.9603682650878108,
+        "delta_auc": 0.0004559214149204571,
+        "paired_se": 0.00015611657998380855,
+        "conditional_95pct_ci": [
+          0.00014993291815219238,
+          0.0007619099116887219
+        ],
+        "candidate_logloss": 0.22537977394174574
+      }
+    }
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "no_quality_score": true,
+  "query_labels_used": false,
+  "results": [
+    {
+      "label": "native_cpu_outputs",
+      "max_probability_error": 0.0,
+      "mean_probability_error": 0.0,
+      "max_cache_value_error": 0.0,
+      "cache_key_errors": [],
+      "counters": {}
+    },
+    {
+      "label": "cpu_cache_no_ff_chunk",
+      "max_probability_error": 0.002122163772583008,
+      "mean_probability_error": 0.0001459500490454957,
+      "max_cache_value_error": 0.123046875,
+      "cache_key_errors": [
+        {
+          "key": "('none', 'icl_cache', 0, 'key')",
+          "error": 0.004150390625
+        },
+        {
+          "key": "('none', 'icl_cache', 0, 'value')",
+          "error": 0.00396728515625
+        },
+        {
+          "key": "('none', 'icl_cache', 1, 'key')",
+          "error": 0.0087890625
+        },
+        {
+          "key": "('none', 'icl_cache', 1, 'value')",
+          "error": 0.0111083984375
+        },
+        {
+          "key": "('none', 'icl_cache', 2, 'key')",
+          "error": 0.006591796875
+        },
+        {
+          "key": "('none', 'icl_cache', 2, 'value')",
+          "error": 0.009033203125
+        },
+        {
+          "key": "('none', 'icl_cache', 3, 'key')",
+          "error": 0.010986328125
+        },
+        {
+          "key": "('none', 'icl_cache', 3, 'value')",
+          "error": 0.015625
+        },
+        {
+          "key": "('none', 'icl_cache', 4, 'key')",
+          "error": 0.030029296875
+        },
+        {
+          "key": "('none', 'icl_cache', 4, 'value')",
+          "error": 0.04296875
+        },
+        {
+          "key": "('none', 'icl_cache', 5, 'key')",
+          "error": 0.0322265625
+        },
+        {
+          "key": "('none', 'icl_cache', 5, 'value')",
+          "error": 0.0439453125
+        },
+        {
+          "key": "('none', 'icl_cache', 6, 'key')",
+          "error": 0.0556640625
+        },
+        {
+          "key": "('none', 'icl_cache', 6, 'value')",
+          "error": 0.09423828125
+        },
+        {
+          "key": "('none', 'icl_cache', 7, 'key')",
+          "error": 0.0595703125
+        },
+        {
+          "key": "('none', 'icl_cache', 7, 'value')",
+          "error": 0.078155517578125
+        },
+        {
+          "key": "('none', 'icl_cache', 8, 'key')",
+          "error": 0.123046875
+        },
+        {
+          "key": "('none', 'icl_cache', 8, 'value')",
+          "error": 0.072265625
+        },
+        {
+          "key": "('none', 'icl_cache', 9, 'key')",
+          "error": 0.08935546875
+        },
+        {
+          "key": "('none', 'icl_cache', 9, 'value')",
+          "error": 0.0308837890625
+        },
+        {
+          "key": "('none', 'icl_cache', 10, 'key')",
+          "error": 0.1005859375
+        },
+        {
+          "key": "('none', 'icl_cache', 10, 'value')",
+          "error": 0.0302734375
+        },
+        {
+          "key": "('none', 'icl_cache', 11, 'key')",
+          "error": 0.046600341796875
+        },
+        {
+          "key": "('none', 'icl_cache', 11, 'value')",
+          "error": 0.0185546875
+        }
+      ],
+      "counters": {
+        "staged_cache_entries": 15,
+        "chunked_ff_calls": 0
+      }
+    },
+    {
+      "label": "cpu_cache_ff128",
+      "max_probability_error": 0.0021224021911621094,
+      "mean_probability_error": 0.0001442124048480764,
+      "max_cache_value_error": 0.12255859375,
+      "cache_key_errors": [
+        {
+          "key": "('none', 'icl_cache', 0, 'key')",
+          "error": 0.004150390625
+        },
+        {
+          "key": "('none', 'icl_cache', 0, 'value')",
+          "error": 0.00396728515625
+        },
+        {
+          "key": "('none', 'icl_cache', 1, 'key')",
+          "error": 0.0087890625
+        },
+        {
+          "key": "('none', 'icl_cache', 1, 'value')",
+          "error": 0.0107421875
+        },
+        {
+          "key": "('none', 'icl_cache', 2, 'key')",
+          "error": 0.00665283203125
+        },
+        {
+          "key": "('none', 'icl_cache', 2, 'value')",
+          "error": 0.00927734375
+        },
+        {
+          "key": "('none', 'icl_cache', 3, 'key')",
+          "error": 0.011474609375
+        },
+        {
+          "key": "('none', 'icl_cache', 3, 'value')",
+          "error": 0.014404296875
+        },
+        {
+          "key": "('none', 'icl_cache', 4, 'key')",
+          "error": 0.0302734375
+        },
+        {
+          "key": "('none', 'icl_cache', 4, 'value')",
+          "error": 0.04248046875
+        },
+        {
+          "key": "('none', 'icl_cache', 5, 'key')",
+          "error": 0.02978515625
+        },
+        {
+          "key": "('none', 'icl_cache', 5, 'value')",
+          "error": 0.0439453125
+        },
+        {
+          "key": "('none', 'icl_cache', 6, 'key')",
+          "error": 0.056640625
+        },
+        {
+          "key": "('none', 'icl_cache', 6, 'value')",
+          "error": 0.08935546875
+        },
+        {
+          "key": "('none', 'icl_cache', 7, 'key')",
+          "error": 0.061767578125
+        },
+        {
+          "key": "('none', 'icl_cache', 7, 'value')",
+          "error": 0.080780029296875
+        },
+        {
+          "key": "('none', 'icl_cache', 8, 'key')",
+          "error": 0.12255859375
+        },
+        {
+          "key": "('none', 'icl_cache', 8, 'value')",
+          "error": 0.07421875
+        },
+        {
+          "key": "('none', 'icl_cache', 9, 'key')",
+          "error": 0.0869140625
+        },
+        {
+          "key": "('none', 'icl_cache', 9, 'value')",
+          "error": 0.03125
+        },
+        {
+          "key": "('none', 'icl_cache', 10, 'key')",
+          "error": 0.1044921875
+        },
+        {
+          "key": "('none', 'icl_cache', 10, 'value')",
+          "error": 0.03125
+        },
+        {
+          "key": "('none', 'icl_cache', 11, 'key')",
+          "error": 0.048492431640625
+        },
+        {
+          "key": "('none', 'icl_cache', 11, 'value')",
+          "error": 0.017578125
+        }
+      ],
+      "counters": {
+        "staged_cache_entries": 15,
+        "chunked_ff_calls": 15
+      }
+    }
+  ],
+  "native_repeat_error": 0.0,
+  "cache_dtypes": [
+    "torch.float16"
+  ],
+  "native_contiguous_cache_error": 0.0,
+  "status": "complete_no_quality_score"
+}

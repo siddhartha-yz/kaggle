@@ -1,0 +1,17 @@
+{
+  "frozen_utc": "2026-10-19T01:27:38.846137+00:00",
+  "main_plan_sha256": "a22705566214cc3a77d93777943025c0d449788bfe4d6ed7783b01d951b66eff",
+  "audit_code_sha256": {
+    "research_r63_audit.py": "5789b3deffdc5092e2e030d2d8a7c2a8239b4c496e48c9b52655b9467b09a71c"
+  },
+  "required_quality": "Originalboth5and3dualCIgates vsactualv11",
+  "CPU_threads": 6,
+  "execute_only_without_other_model_training": true,
+  "checks": [
+    "13sourcecohort-class density hashes/independentCPU scope,dedup,classhypothesisreplays",
+    "65oldauxiliary hashes/prioraudit",
+    "Ownencoders/counts/categories and61same inputfields+13cohortLLRs",
+    "8NN32CPUreplays,3epochs,originalCE/classes/caps",
+    "Unchangedv11tree andsamefixedlogitpool,bothgates"
+  ]
+}

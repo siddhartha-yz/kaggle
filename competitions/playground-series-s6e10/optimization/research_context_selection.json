@@ -1,0 +1,28 @@
+{
+  "primary_scores": {
+    "both_context_means": {
+      "baseline_auc": 0.9597883620429111,
+      "candidate_auc": 0.9597091529692446,
+      "delta_auc": -7.920907366643082e-05,
+      "paired_se": 8.977957224892976e-05,
+      "conditional_95pct_ci": [
+        -0.00025517703527433314,
+        9.67588879414715e-05
+      ],
+      "candidate_logloss": 0.22682653943722994
+    },
+    "both_context_full": {
+      "baseline_auc": 0.9597883620429111,
+      "candidate_auc": 0.9596089597465498,
+      "delta_auc": -0.00017940229636126404,
+      "paired_se": 0.0001060810467534553,
+      "conditional_95pct_ci": [
+        -0.0003873211479980364,
+        2.851655527550835e-05
+      ],
+      "candidate_logloss": 0.22703289763947873
+    }
+  },
+  "chosen": null,
+  "public_scores_used": false
+}

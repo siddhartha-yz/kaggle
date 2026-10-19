@@ -1,0 +1,13 @@
+{
+  "candidate": "submission_distance_original_v4.csv",
+  "status": "Complete",
+  "public_auc": 0.96,
+  "delta_vs_v3": 0.00023,
+  "rank": 1009,
+  "total_ranked": 2182,
+  "observed_utc": "2026-10-17T19:52:00+00:00",
+  "total_historical_submissions": 5,
+  "new_window_submissions_used": 2,
+  "remaining_new_submissions": 2,
+  "evidence": "Reported by parent cloud browser; recorded only, no parameter or blend-weight changes from public feedback"
+}

@@ -1,0 +1,22 @@
+{
+  "status": "passed_no_official_SAT_or_quality",
+  "features": 49,
+  "context_rows": 8192,
+  "query_rows": 512,
+  "n_estimators": 1,
+  "official_SAT_values_parsed": false,
+  "synthetic_labels": true,
+  "quality_scores_computed": false,
+  "model_version": "v2",
+  "checkpoint_sha256": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49",
+  "first_query_seconds": 1.8653074530011509,
+  "warm_query_seconds": 1.5666676649998408,
+  "repeat_error": 0.0,
+  "model_reload_error": 0.0,
+  "peak_gpu_process_bytes": 801112064,
+  "peak_allocated_bytes": 546285568,
+  "peak_RSS_bytes": 2304856064,
+  "seconds": 5.707134499985841,
+  "plan_sha256": "c8fe0f43d87ac7ce26d3ff1f8b7e483f664b71fd91356064ab035bac6838cbc1",
+  "attribution": "Built with PriorLabs-TabPFN"
+}

@@ -1,0 +1,33 @@
+{
+  "status": "complete",
+  "name": "gpu_value_context_primary_n2",
+  "split": "primary",
+  "variant": "context",
+  "n_ens": 2,
+  "auc": 0.9593802098219231,
+  "vs_v5": {
+    "baseline_auc": 0.9600030291404525,
+    "candidate_auc": 0.9600396594726058,
+    "delta_auc": 3.6630332153286815e-05,
+    "paired_se": 3.220272290011965e-05,
+    "conditional_95pct_ci": [
+      -2.6487004730947695e-05,
+      9.974766903752133e-05
+    ],
+    "candidate_logloss": 0.22610789232524403
+  },
+  "fold_comparisons": [
+    {
+      "baseline_auc": 0.9600030291404525,
+      "candidate_auc": 0.9600396594726058,
+      "delta_auc": 3.6630332153286815e-05,
+      "paired_se": 3.220272290011965e-05,
+      "conditional_95pct_ci": [
+        -2.6487004730947695e-05,
+        9.974766903752133e-05
+      ],
+      "candidate_logloss": 0.22610789232524403
+    }
+  ],
+  "completed_utc": "2026-10-18T03:44:54.255348+00:00"
+}

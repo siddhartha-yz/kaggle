@@ -1,0 +1,23 @@
+{
+  "name": "cb_stats_orig_both_oof",
+  "kind": "cb",
+  "external": "both",
+  "split": "oof",
+  "params": {
+    "iterations": 1308,
+    "learning_rate": 0.07,
+    "depth": 8,
+    "l2_leaf_reg": 5,
+    "loss_function": "Logloss",
+    "eval_metric": "AUC",
+    "random_seed": 42,
+    "task_type": "CPU",
+    "thread_count": 6,
+    "allow_writing_files": false,
+    "verbose": 200
+  },
+  "preprocessing_sha256": "6c029528249d6772a958b29c46f4f095da9f91136c2721eb2a4d268f360fcfe9",
+  "runner_sha256": "bf6d1bab2b714adb3f0abbe0277af35baca8de17082f35012db2e24dd63df4dc",
+  "external_sha256": "0fc3167103ca04ecaac018c622ccca4d8f7e365b46f032ad11f318e409dbfc55",
+  "frozen_utc": "2026-10-17T20:11:42.877800+00:00"
+}

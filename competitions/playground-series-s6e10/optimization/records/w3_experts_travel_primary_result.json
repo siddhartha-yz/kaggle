@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "variant": "travel",
+  "split": "primary",
+  "vs_v6": {
+    "baseline_auc": 0.9603020930463941,
+    "candidate_auc": 0.9602737560541951,
+    "delta_auc": -2.8336992199062827e-05,
+    "paired_se": 5.345442729483076e-05,
+    "conditional_95pct_ci": [
+      -0.00013310766969693111,
+      7.643368529880546e-05
+    ],
+    "candidate_logloss": 0.2252118646276986
+  },
+  "fold_comparisons": [
+    {
+      "baseline_auc": 0.9603020930463941,
+      "candidate_auc": 0.9602737560541951,
+      "delta_auc": -2.8336992199062827e-05,
+      "paired_se": 5.345442729483076e-05,
+      "conditional_95pct_ci": [
+        -0.00013310766969693111,
+        7.643368529880546e-05
+      ],
+      "candidate_logloss": 0.2252118646276986
+    }
+  ],
+  "eligible_for_next": false,
+  "completed_utc": "2026-10-18T06:05:19.393855+00:00"
+}

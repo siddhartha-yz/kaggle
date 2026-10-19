@@ -1,0 +1,44 @@
+{
+  "frozen_utc": "2026-10-18T12:43:22.799438+00:00",
+  "baseline": "v7 fixed; formalpublic.96076 rank809/2243 asparentreport",
+  "reference_files": [
+    "research_artifacts/r4_lean_gpu_init_oof/oof.npz",
+    "research_artifacts/r4_lean_gpu_init_replication3/oof.npz"
+  ],
+  "formal_budget": {
+    "used": 1,
+    "total": 2,
+    "remaining": 1,
+    "parent_only_submitter": true
+  },
+  "goal": "actualTop100 verified, currentpublicgap.00114; no publicweightprobing",
+  "routes": [
+    {
+      "id": "conditional_auto_te",
+      "model": "unchangedLGB639,minchild150,lambda10,CPU6",
+      "features": "unchanged57 base+source features plus21raw autoTE and13rating xClass/Travel/Customer autoTE; strictinner5fold targetencoding",
+      "fixed_replacement_mass": 0.3515625,
+      "novelty": "Notoldsixdistance/agefixedalpha20TE; not sourceSATper-fieldprofiles. Preparedbeforev7officialscore."
+    },
+    {
+      "id": "source_synthetic_density",
+      "status": "conditional_next_route_not_started",
+      "rationale": "Smallcrossfoldcoherencecalibrationresiduals do not establishcausality; considerunlabelleddomain-densityscore tocompresssource-vs-synthrelationlikelihood, differentfromfailedsourceimportanceweightaugmentation. Freeze detailedcrossfitdesignbeforeanyquality."
+    }
+  ],
+  "validation": "Completefivefoldv7matchedreferences; onlyifbothpooledconditional95%lowerandcorrectedresampledtlowerpositive, complete3fold withmatchedfreshlyfittedv7cachedbaseline. Nointerimfoldscorestopping, noearlystop orweightsearch.",
+  "multiplicity": "Atmosttwofullyfrozencontrasts inthiswave, one-sidedalpha.025each; conditionalcomparisons donotcorrecthistoricaladaptiveselection.",
+  "selection_bias": "Allofficiallabelsreused includingexploratoryslices andR4validation; no untouchedholdout claim. Replicationtestsfitstability only.",
+  "resources": {
+    "CPU_threads": 6,
+    "GPU_process_bytes": 1073741824,
+    "paid": false,
+    "serial": true
+  },
+  "data_provenance": "Officialdata plusunchangedauditedoriginalCC0features; no unknownpredictions, no newdeps or localKagglelogin",
+  "diagnostic_conclusion": "Broadsegmentmeanbias mostlynearzero; sourcepairlowcoherencepositivebias~.00183 andmidlownegative~-.000923 consistentfoldsigns butexploratoryandnotstrongproof ofdominanterror.",
+  "code_sha256": {
+    "research_r5_auto_te.py": "52485ed151e27f681d0447c0a3d73783b68dfe64c8683c1f33e2656f3fc44285",
+    "research_next_auto_te_features.py": "53c8c9015a11bde7da4570d5b7c79aca21d725ce84ff79e3db77eb939d3031e8"
+  }
+}

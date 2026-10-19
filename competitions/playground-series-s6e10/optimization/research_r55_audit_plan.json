@@ -1,0 +1,18 @@
+{
+  "frozen_utc": "2026-10-18T23:39:13.469026+00:00",
+  "main_plan_sha256": "5206e2f1dbb488be4b4f58d59edc3583fb5644c447f9c35b04d58f878d46d1a0",
+  "audit_code_sha256": {
+    "research_r55_audit.py": "1c1b8801d6815da4718a959efe1b8175224362a9290d1d0cc8d628539e079254"
+  },
+  "required_quality": "Original frozen both5and3dualCIgates passed",
+  "CPU_threads": 6,
+  "execute_only_without_other_model_training": true,
+  "checks": [
+    "65 unchanged auxiliary model hashes against previously replayed source audit",
+    "Independent outer fold and proper inner-only split reconstruction",
+    "Own inner/outer target-free map reconstruction",
+    "Inner selected model fullvalidation AUC replay matches stored best curve",
+    "8 saved outer model CPU probability replays",
+    "Exact fixed v11 logit blend and both confidence gates"
+  ]
+}

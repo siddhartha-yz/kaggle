@@ -1,0 +1,16 @@
+{
+  "frozen_utc": "2026-10-18T21:39:55.515787+00:00",
+  "main_plan_sha256": "1ab6671b9307cb66bf149f8cbb330ffdb52e9c64bb3163ffe2153ced5324c650",
+  "audit_source_sha256": "83e311a49056e7c282e8ff49b556adeae2d56c1eb8b2adf5c817f076b335872e",
+  "required_quality": "both5and3originalgatespassed",
+  "CPU_threads": 6,
+  "execute_only_without_other_model_training": true,
+  "auxiliary_scope": "Guarded fresh loader execution may parse only id+21covariates/header; separately student audit reads officialSATfororiginalsplit/algebra comparisons.",
+  "checks": [
+    "IndependentKFold5seed42",
+    "Exactly8nonratinginputs,all13ratinginputs/id/SATexcluded",
+    "65modelmetadata/hash/actualclassmapping/CPUreplays/EV/Ssummaryverification",
+    "8studentowntrainingmaps/prefix84/LGB111CPUreplay/blend/gateverification"
+  ],
+  "performance_limitation": "Reusedvalidationhistory,conditionalboundsnotindependenttest"
+}

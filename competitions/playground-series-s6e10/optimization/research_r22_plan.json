@@ -1,0 +1,45 @@
+{
+  "frozen_utc": "2026-10-18T17:27:00.832111+00:00",
+  "hypothesis": "Global16k label context provides broader conditional examples than historical1024/4096local routing. Native2.2CPU output+layerKVoffload permits16k under authorized1GiB GPU ceiling;32k/65k hardware failed. No newSATquality has been evaluated for new execution.",
+  "route": "ONE raw21 global TabICL, fixed pretrained weights,16384 uniform outer-training rows chosen seed20261030+fold (+10000threefold). Native4 feature-permutation estimators normnone/power seed42. No teacher/external/testfeatures, ID excluded. All preprocessfits ONLYcontext.",
+  "execution": "Fixed col1,row128,icl1;FF4096; CPUoutput and CPUKV; exactsame-schedule CPUvsGPUKV smallpredictionparity0 and ABA0. Stockautomaticbatching differs inFP16 and is NOT claimed equivalent. Newly evaluate recipe underfixedexecution.",
+  "candidate": "sigmoid(.875logit(clip(currentformalv10,1e-6,1-1e-6))+.125logit(clip(TabICLprob,1e-6,1-1e-6))). No blendweight/context/seed/featuregrid.",
+  "validation": "Complete all5fold predictions beforequality scoring, comparev10paired95%lower>0 and correctedresampled-talpha.025lower>0. Onlyifpassed fresh3partition, independentcontexts+preprocessing samefixedrecipe+samegates. SATlabels reusedthroughhistoricalroutes; conditionalbounds doNOTundo adaptivehistory; no untouchedholdoutclaim.",
+  "final_inference": "Onlyifbothgates/auditpass: average5TabICLprobabilities from exact5fold16384contexts/native4 estimators, poolfixed.875/.125logoddswithauditedfullv10testcandidate. No trainingweights updated. Querybatches512 forvalidationandtest.",
+  "limits": {
+    "cpu_threads": 6,
+    "gpu_allocator_cap_bytes": 778043392,
+    "total_own_GPU_ceiling_bytes": 1073741824,
+    "own_RSS_ceiling_bytes": 8589934592,
+    "available_RAM_min_bytes": 2147483648,
+    "serial_fits": true,
+    "paid_resources": false
+  },
+  "formal_baseline": {
+    "public_auc": 0.96104,
+    "rank": 715,
+    "ranked_teams": 2274,
+    "candidate": "v10"
+  },
+  "goal_actual_rank_at_most": 500,
+  "parent_only_submitter": true,
+  "additional_qualified_submissions_authorized": true,
+  "remaining_daily_quota": null,
+  "submission_policy": "Parentchecksactualdailyquota thenuploadsqualifiedCSV; no per-two-submissionconfirmation.",
+  "source_sha256": {
+    "research_r22_worker.py": "8d5aed3cf591ecbcd446b8727b50e56087d04d67d78868634979d589b88c8e25",
+    "research_r22_check.py": "0516d99ac55d48e75d18cf3db3076740fb199d1519559655b0fe936b233d4eae",
+    "research_r22_driver.py": "f2273ae68f465fbb4704f61f9e1eaeb2f2e5ef463c2e08e6ec5a23264d524f9c",
+    "research_r22_tabicl_offload.py": "bf9617de3176a222b8d574f8d815e0281e16a36b8e8549a39c56713788dad8ee",
+    "research_w3_tabicl_model.py": "f65ec3c8666be5966808dc6a59583caf4f21f0e1f55f64c5e89d4df1ac042e28",
+    "research_r4_common.py": "53eedffd572f6a82b9c3dba70e3315ab1df51dd9242396ab22da7f8dabc52e81",
+    "compare_validation.py": "dddede1ed1f65645a7ac2a912a4ddd1c16f67ec6f73c38663b69532ee8ca838f"
+  },
+  "artifact_sha256": {
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "research_sources/tabicl/tabicl-classifier-v2-20260212.ckpt": "bdc7dbd5e4ff21f8f0456fcf90c6b7cdf72dbea960f2d05b19bec19f9b3d4ed0",
+    "research_artifacts/r22_offload_probe_v4/result.json": "b133698f7157df5377ed91b23a9d802bc606c0afa1437fa71221b2b0d7f22bb6",
+    "research_artifacts/r21_probability_lgb_officialcb_fivefold/oof.npz": "ff911354393ad4f08c3d7ef7448bc6c64ac1ad17129fcd279aa067f8d09d0938",
+    "research_artifacts/r21_probability_lgb_officialcb_threefold/oof.npz": "bad7accc330405cf8387f6294a992ac6249b72cebf3003948452159efe49a869"
+  }
+}

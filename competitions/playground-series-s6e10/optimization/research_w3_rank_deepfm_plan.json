@@ -1,0 +1,53 @@
+{
+  "frozen_utc": "2026-10-18T05:46:13.948713+00:00",
+  "execution_condition": "Afterserialtreeprimaryfits;nootherconcurrenttraining.",
+  "hypothesis": "PreviousDeepFMmixtureimprovedloglossbutAUCdelta+.000038didnotpass;testmetric-alignedpairwiserankingregularizationratherthanmoreseeds/widths. Samearchitecture/features/4seeds3epochs,onlylosschanges. Probabilitycomponentretainscalibration forfixedfusion.",
+  "architecture": {
+    "embedding_dim": 16,
+    "hidden": [
+      512,
+      256,
+      128
+    ],
+    "activation": "SiLU",
+    "batchnorm": true,
+    "dropout": 0.1,
+    "linear_and_FM_pairwise_terms": true,
+    "embedding_init_std": 0.01,
+    "reservedunknown_embeddings_zero": true
+  },
+  "features": "Same outertrainonly17numeric median/normalquantile andall21original-value categories asTabMvalueview; no targets/statistics/sourcefeatures added. No globaltrain/test vocabulary.",
+  "training": {
+    "seeds": [
+      42,
+      20261018,
+      17,
+      20261017
+    ],
+    "members": 4,
+    "epochs": 3,
+    "batch_size": 2048,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "optimizer": "AdamW",
+    "scheduler": "OneCycleLR,pct_start.2,ceilbatches; eachfrozenmember includesalldata each epoch"
+  },
+  "member_aggregation": "Equal mean probabilities; no per-member validation scores or selection",
+  "probe": "One fullprimary epoch with firstmember; no validation scores; onlyallocatorOOM batch2048->1024. Discard probe model.",
+  "reference": "Read-only userprovidedgoodpjw2008notebook DeepFM architecturalprior only, rewritten fold-only preprocessing; notebook never executed and no external predictions",
+  "blend": {
+    "v6": 0.75,
+    "deepfm": 0.25
+  },
+  "gates": "UnchangedW3primarydelta>=.0001withpositiveconditionallower;confirmlower>0;OOFall5foldpositiveandpooleddelta>=.0002lower>0",
+  "limits": "CPU6serial/GPUallocator1GiB,start10:10/hard10:45/deadline11:06UTC,parentonly0of2formal",
+  "limitation": "Adaptivehypothesisafterreusedprimarydiagnostics;conditionalintervalsexcludeselectionuncertainty. No publicscoreorweight/lossmixgrid.",
+  "loss": {
+    "pointwise_bce_weight": 0.5,
+    "pairwise_logistic_weight": 0.5,
+    "formula": ".5*BCEWithLogits(logits,y)+.5*mean(softplus(-(positive_logits[:,None]-negative_logits[None,:])))",
+    "pairs": "allpositive-negativepairswithinshuffledtrainingbatch;nooutervalidationlabels,checkbothclassespresent",
+    "weights_fixed_before_score": true
+  },
+  "matched_primary_control": ".75v6+.25cachedoldBCEDeepFM;requirepositivepointincrement"
+}

@@ -1,0 +1,32 @@
+{
+  "frozen_utc": "2026-10-18T07:01:37.308143+00:00",
+  "hypothesis": "One controlled context-capacity test: 1024-label contexts were weaker than v6; test the largest label context allowed by the same 1GiB hardware-only guard. No architecture, router, ensemble or blend-weight search.",
+  "pretrained_model_sha256": "bdc7dbd5e4ff21f8f0456fcf90c6b7cdf72dbea960f2d05b19bec19f9b3d4ed0",
+  "hardware_probe": "research_w3_tabicl_large_hardware.json",
+  "clusters": 128,
+  "router": "MiniBatchKMeans, n_init=1, batch_size=8192, max_iter=100, max_no_improvement=20, random_state=20261018",
+  "router_inputs": "17 train-only median/quantile-normal numeric features, four train-only one-hot categorical features, train-only standardized source-teacher logit; no id, target or heldout fit",
+  "model_inputs": "raw 21 predictors plus independently trained original-source teacher logit",
+  "context_rows": "Chosen without scores: first successful context among8192,4096,2048 under process VRAM<=1GiB and projected primary<=20min",
+  "context_selection": "Same128 train-only routes. Up to context_rows/2 local training samples, remainder outside route, deterministic uniform label-blind selection.",
+  "random_seed": 20261018,
+  "n_estimators": 4,
+  "norm_methods": [
+    "none",
+    "power"
+  ],
+  "query_batch_rows": 128,
+  "kv_cache": true,
+  "immutable_weights_reuse": "Probe A-B-A and native reload comparisons both exactly zero; fit resets native encoders, ensemble and KV context each route",
+  "candidate": "0.75 * frozen v6 + 0.25 * routed TabICL",
+  "selection": "Existing W3 primary/confirmation/OOF gates unchanged. No weight search, heldout early stopping or validation-based route/context selection.",
+  "cutoffs": "Existing W3 start 10:10 UTC, hard stop 10:45 UTC, absolute end 11:06 UTC",
+  "no_formal_submission_without_parent": true,
+  "predecessor": "research_w3_tabicl_plan.json",
+  "maximum_new_context_capacity_variants": 1,
+  "resource_configuration_frozen_utc": "2026-10-18T07:02:21.348822+00:00",
+  "chosen_context_rows": 4096,
+  "chosen_kv_cache": "repr",
+  "hardware_probe_sha256": "e6ea33647a82426534d2c28bf49306784ae2fe83e1c62d90a738a9e56c7fe682",
+  "source_reference": "https://arxiv.org/abs/2602.11139"
+}

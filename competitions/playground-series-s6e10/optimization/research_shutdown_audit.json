@@ -1,0 +1,66 @@
+{
+  "checked_utc": "2026-10-17T22:35:29.426445+00:00",
+  "matching_training_or_queue_processes": [],
+  "queue_states": {
+    "research_stage10_export_state.json": {
+      "status": "complete",
+      "stage": "no_eligible_candidate"
+    },
+    "research_stage11_queue_state.json": {
+      "status": "complete",
+      "stage": "complete"
+    },
+    "research_stage12_queue_state.json": {
+      "status": "complete",
+      "stage": "complete"
+    },
+    "research_stage13_export_state.json": {
+      "status": "complete",
+      "stage": "verified_csv_ready"
+    },
+    "research_stage14_queue_state.json": {
+      "status": "complete",
+      "stage": "complete"
+    },
+    "research_stage15_queue_state.json": {
+      "status": "complete",
+      "stage": "complete"
+    },
+    "research_stage2_queue_state.json": {
+      "status": "complete",
+      "stage": "complete"
+    },
+    "research_stage3_queue_state.json": {
+      "status": "complete",
+      "stage": null
+    },
+    "research_stage4_queue_state.json": {
+      "status": "complete",
+      "stage": null
+    },
+    "research_stage5_queue_state.json": {
+      "status": "complete",
+      "stage": null
+    },
+    "research_stage6_queue_state.json": {
+      "status": "complete",
+      "stage": null
+    },
+    "research_stage7_queue_state.json": {
+      "status": "complete",
+      "stage": null
+    },
+    "research_stage8_queue_state.json": {
+      "status": "complete",
+      "stage": "complete"
+    },
+    "research_stage9_queue_state.json": {
+      "status": "complete",
+      "stage": "complete"
+    }
+  },
+  "latest_primary_exec_exit_code": 0,
+  "latest_queue_exec_exit_code": 0,
+  "data_deleted": false,
+  "new_training_queued": false
+}

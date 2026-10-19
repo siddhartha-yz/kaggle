@@ -1,0 +1,9 @@
+{
+  "status": "not_qualified",
+  "updated_utc": "2026-10-18T23:42:26.947465+00:00",
+  "driver_pid": 3,
+  "parent_only_submitter": true,
+  "actual_top500_verified": false,
+  "stage": "fivefold",
+  "active_training": false
+}

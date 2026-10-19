@@ -1,0 +1,27 @@
+{
+  "completed_utc": "2026-10-17T22:33:06.037130+00:00",
+  "aligned_rows": 139927,
+  "id_target_idx_exact": true,
+  "component_sum_exact": true,
+  "comparison_recomputed": {
+    "baseline_auc": 0.9600030291404525,
+    "candidate_auc": 0.9600245500658627,
+    "delta_auc": 2.1520925410190017e-05,
+    "paired_se": 5.339128852084383e-05,
+    "conditional_95pct_ci": [
+      -8.312600009066389e-05,
+      0.00012616785091104394
+    ],
+    "candidate_logloss": 0.22597820335838725
+  },
+  "actual_epochs": 48,
+  "model_reload_max_diff": 0.0,
+  "training_pool_max_threads": 6,
+  "outer_validation_passed_to_fit": false,
+  "confirmation_started": false,
+  "oof_started": false,
+  "new_csv_created": false,
+  "new_formal_submissions": 0,
+  "estimated_default256_fit_seconds": 2417.2775376106633,
+  "estimated_default256_eight_fit_seconds": 19942.53968528797
+}

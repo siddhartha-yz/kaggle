@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "variant": "uniform",
+  "split": "primary",
+  "vs_v6": {
+    "baseline_auc": 0.9603020930463941,
+    "candidate_auc": 0.9602537124019506,
+    "delta_auc": -4.83806444435686e-05,
+    "paired_se": 3.123196541006158e-05,
+    "conditional_95pct_ci": [
+      -0.00010959529664728929,
+      1.2834007760152092e-05
+    ],
+    "candidate_logloss": 0.2253122383864048
+  },
+  "fold_comparisons": [
+    {
+      "baseline_auc": 0.9603020930463941,
+      "candidate_auc": 0.9602537124019506,
+      "delta_auc": -4.83806444435686e-05,
+      "paired_se": 3.123196541006158e-05,
+      "conditional_95pct_ci": [
+        -0.00010959529664728929,
+        1.2834007760152092e-05
+      ],
+      "candidate_logloss": 0.2253122383864048
+    }
+  ],
+  "eligible_for_next": false,
+  "completed_utc": "2026-10-18T06:12:00.322267+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "frozen_utc": "2026-10-17T20:13:58.529144+00:00",
+  "hypothesis": "Distance-group rating means hide whether the same mean comes from uniformly average ratings or polarized low/high ratings. Add probabilities of each rating0..5, smoothed20 toward outer-training global proportions.",
+  "rating_columns": 13,
+  "expected_new_features": 78,
+  "target_used_to_fit_distributions": false,
+  "test_distribution_fitted": false,
+  "base": "Current v4 original-teacher LightGBM, unchanged639 trees/63leaves and existing features",
+  "screening": "Primary paired delta>=.0001, confirmation lower conditional95% bound>0, then same5fold OOF",
+  "candidate_gate": "Every fold positive, pooled delta>=.0002 vs v4 and lower conditional95% bound>0",
+  "public_feedback_for_parameters": false
+}

@@ -1,0 +1,17 @@
+{
+  "frozen_utc": "2026-10-19T00:58:39.403581+00:00",
+  "main_plan_sha256": "4d23791c46c1e6a46a3f7d38f4cfa87a3cf4bb8a9e5c24ba9378687541700355",
+  "audit_code_sha256": {
+    "research_r60_audit.py": "b005e7b2c9b40d463715f70d09cf27a48083bfd7381165e46a7a8c82f1bd4ce6"
+  },
+  "required_quality": "Original both5and3dualCIgates versusactualv11",
+  "CPU_threads": 6,
+  "execute_only_without_other_model_training": true,
+  "checks": [
+    "Source13 receipt/filehashes and explicit originalSAT conditioning/noofficialSAT parse/excluded21 source duplicates",
+    "65unchanged pretext source hashes and inherited independent audit",
+    "Independent5/3outerfolds and own97fieldmap reconstruction",
+    "Exact84prefix plus13LLRs,8model CPUreplays/639trees/classes",
+    "Unchangedv11NN/treeothercomponents and .46875replacement algebra,bothgates"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-10-18T05:31:28.504925+00:00",
+  "gpu_allocator_cap_bytes": 1073741824,
+  "upper_authorized_cap_bytes": 2147483648,
+  "reason": "OtherGPUmemory increased; confirmation setup refused byheadroomguard before fitting. Previoussamearchitecture peakallocated557MB/reserved614MB supports loweringcap to1GiB. Validate with no-scoreprobe; no model/batch/epochselection/weights/gates changed.",
+  "initial_free_guard": "cap+1.25GiB",
+  "per_epoch_free_guard": "1GiB",
+  "user_other_processes": "Untouched; no drivers/network/desktop changes."
+}

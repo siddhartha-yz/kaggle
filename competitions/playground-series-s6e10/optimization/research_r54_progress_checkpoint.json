@@ -1,0 +1,43 @@
+{
+  "checked_utc": "2026-10-18T23:11:21.871301+00:00",
+  "controller": {
+    "status": "running_context",
+    "updated_utc": "2026-10-18T23:10:21.365058+00:00",
+    "pid": 762869,
+    "actual_top500_verified": false,
+    "parent_only_submitter": true,
+    "stage": "fivefold",
+    "fold": 3,
+    "context": 1,
+    "active_training": true
+  },
+  "latest_query": {
+    "status": "predicting",
+    "stage": "fivefold",
+    "fold": 3,
+    "context": 1,
+    "pid": 795670,
+    "active_training": true,
+    "peak_gpu_process_bytes": 954204160,
+    "done_rows": 32768,
+    "total_rows": 139927,
+    "updated_utc": "2026-10-18T23:11:19.947899+00:00",
+    "context_sha256": "0e55d032e78078cb8160bd0ca9ba7fe0395e96bd180ab050bed5b211d70c69c8",
+    "plan_sha256": "0279cd1d906c445617e0fe5fe67e6a9f3896d0bbc0596260830725d59b7d196a",
+    "prediction_sha256": "57849a0dc6490565cb2d1779df715828172bb88fd4e913d84a788a1aafd1bf0e"
+  },
+  "completed_contexts": 13,
+  "planned_fivefold_contexts": 20,
+  "completed_full_folds": 3,
+  "completed_context_reload_max_error": 0.0,
+  "completed_context_peak_GPU_bytes": 958398464,
+  "completed_context_peak_RSS_bytes": 3174682624,
+  "quality_evaluated": false,
+  "blocked": false,
+  "session": 55173,
+  "new_CSVs": 0,
+  "new_submissions_since_v11": 0,
+  "prepared_audit_and_inference_code_commit": "effba50",
+  "next": "Continue existing driver; no interruption/repeated fits. Fivefold both-gates before fresh3; all audits before finalCSV; parentonlysubmit.",
+  "actual_top500_verified": false
+}

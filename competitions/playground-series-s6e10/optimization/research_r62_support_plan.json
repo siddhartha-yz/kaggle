@@ -1,0 +1,38 @@
+{
+  "frozen_utc": "2026-10-19T01:13:35.858611+00:00",
+  "purpose": "One source-only support diagnostic, not official prediction training or an official model grid",
+  "metadata_classifier_parameters": {
+    "n_estimators": 475,
+    "learning_rate": 0.04,
+    "num_leaves": 63,
+    "min_child_samples": 100,
+    "reg_lambda": 10,
+    "objective": "binary",
+    "n_jobs": 6,
+    "random_state": 20261018,
+    "verbosity": -1,
+    "deterministic": true,
+    "force_col_wise": true
+  },
+  "source_sha256": {
+    "research_r62_source_support.py": "351972cc50b4f5f5d2c7be1790459cedfc1f5e7422d4a85b63d3d9e31c1f1dcd",
+    "research_r60_source_data.py": "ca53eb1198caf76f70162f39b61e57e0a765fc718bf8cb2dccb8546724501734",
+    "research_features.py": "6c029528249d6772a958b29c46f4f095da9f91136c2721eb2a4d268f360fcfe9",
+    "research_r40_worker.py": "64c5ec6fa341341b5a03e087a65bf8a79751730c1c97847d583a5aa24402cf5c"
+  },
+  "artifact_sha256": {
+    "research_r61_result.json": "7e0b03d144dcea9f6da408f989d2eb1e91674ab7394a79c09200a644628a8913",
+    "research_r60_source_plan.json": "880d43fafd425adecaf01728f14fab700b8cbfab72cad06e052e32547a46104f",
+    "research_sources/original_cc0/data.csv": "2ad76465f6115f93d16121891a6b1235acb8007a4ab065cae0dc46b60ad116e3",
+    "research_sources/original_safe_mask.npy": "fcc30179ed4f68ddab8323abe86e953dcaf13374dee46bd3c13abb55dfdbfe51",
+    "research_artifacts/original_teacher_v1/selection_model.txt": "085dc14bc23735318672c412a26cdc0deadd60779517c89fc6296a2479d1daa5",
+    "research_artifacts/original_teacher_v1/original_selection_split.npz": "0fa8b16611aa16523a63e1ee71677f9e25094caaa256e0ad5cc90524cd2c1dd0",
+    "research_artifacts/original_teacher_v1/original_selection_result.json": "fb609a8c365a9e0fcf7e7f5c5651ab0538ec6967eb0bf3683fa5b75a8255bd76",
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "data/test.csv": "ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6"
+  },
+  "official_SAT_values_parsed": false,
+  "CPU_threads": 6,
+  "GPU_used": false,
+  "paid": false
+}

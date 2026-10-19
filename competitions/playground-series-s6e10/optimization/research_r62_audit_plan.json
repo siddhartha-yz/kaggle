@@ -1,0 +1,16 @@
+{
+  "frozen_utc": "2026-10-19T01:21:59.026002+00:00",
+  "main_plan_sha256": "0d6929a7b37f5069252a4b51cec18815ac7c7772a9a8ef5fb34add6820f8d807",
+  "audit_code_sha256": {
+    "research_r62_audit.py": "120e9a1b15639296b938cedb717f25670fc742f5e1a6b7286c70dfcc78a9b068"
+  },
+  "required_quality": "Originalboth5and3dualCIgates vsactualv11",
+  "CPU_threads": 6,
+  "execute_only_without_other_model_training": true,
+  "checks": [
+    "13sourcecontextSAT-conditioned model hashes/priorCPUreplays,allratings excluded,officialSATnotparsed",
+    "65oldauxiliary hashes/priorCPUaudit",
+    "Independent5/3folds and own97fieldmaps,84exactprefix+13cohortclassLLRs",
+    "8student639treeCPUreplays/classes/formula/bothgates"
+  ]
+}

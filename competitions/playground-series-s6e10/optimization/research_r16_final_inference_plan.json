@@ -1,0 +1,16 @@
+{
+  "frozen_utc": "2026-10-18T15:43:58.972630+00:00",
+  "main_plan_sha256": "140835e2d044ca2d66b28e6a5ad05f0ebd0c3472b85de9eb0e13e685aba26cc1",
+  "code_sha256": {
+    "research_r16_audit.py": "a981d5a8a02cdca9df8c8905fdc47d50b04aa16a29389a26cdaafd4ad7157ea6",
+    "research_r16_csv.py": "d80554f6b1356944e4d2605803ec513e28a0bb56184b014055bc55c2407b3f7f"
+  },
+  "gates": "Selectedviewmustpassfixedfivefoldandfreshthreefolddualgates(alpha.0125)vsadmittedv9andofficialv7. Then independent maps/vocab/splits/model/source/CPUreplayaudit; onlythenONEfulltrain813GPUfit.",
+  "formula": "ReplaceCB10.25shareinsidev5; equal-logoddspoolwitholdleanCV40. Samev9geometry, epsilon1e-6. No weightsearch.",
+  "input_width": "57numericdistanceor58withsinglenominaldistance",
+  "test_policy": "No test-fitted maps or test labels; fulltrainmaps only. Source5 inheritedauditedteacher.",
+  "quality_status_at_freeze": "BothGPUviewfivefold runs stillpending; no outerqualityinspected.",
+  "formal_used": 1,
+  "remaining": 1,
+  "parent_only_submitter": true
+}

@@ -1,0 +1,29 @@
+{
+  "frozen_utc": "2026-10-18T16:29:28.333593+00:00",
+  "reason": "No R20 SATquality scored. InitialofficialauxfailedCatBoostinternallearningmemoryquota afterfreeVRAMfellfrom~7.2GiBto~3.8GiB. Resource-onlyfraction.06 boundedbytotalVRAM~734MiBplusobservedcontext; ownprocess1GiBNVMLceilingunchanged. Largest300treemulticlassprobe before anyrestart; no otherprocessesmodified.",
+  "runner_sha256": "1b9f6464e7940ff4923e19d6b1056d8832a36727c8624c8dc04b5474b6805410",
+  "parameters": {
+    "iterations": 300,
+    "learning_rate": 0.1,
+    "depth": 7,
+    "l2_leaf_reg": 5,
+    "loss_function": "MultiClass",
+    "random_seed": 42,
+    "task_type": "GPU",
+    "devices": "0",
+    "gpu_ram_part": 0.06,
+    "thread_count": 6,
+    "border_count": 128,
+    "max_ctr_complexity": 1,
+    "one_hot_max_size": 2,
+    "boosting_type": "Plain",
+    "bootstrap_type": "Bernoulli",
+    "subsample": 0.8,
+    "allow_writing_files": false,
+    "verbose": 100
+  },
+  "data_sha256": {
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "data/test.csv": "ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6"
+  }
+}

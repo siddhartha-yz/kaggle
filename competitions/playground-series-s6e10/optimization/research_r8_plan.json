@@ -1,0 +1,163 @@
+{
+  "frozen_utc": "2026-10-18T13:51:37.530571+00:00",
+  "variants": [
+    "lean",
+    "append"
+  ],
+  "mechanism": "Task-local CPU data/initialization with eight batched CUDA members; lean47 execution control versus raw47 plus13 conditional-response numeric fields60. R7 replaced13 raw numeric channels and failed; preserve them here.",
+  "config": {
+    "device": "cuda:0",
+    "n_threads": 6,
+    "n_cv": 1,
+    "n_refit": 0,
+    "n_repeats": 1,
+    "val_fraction": 0.0,
+    "n_epochs": 3,
+    "batch_size": 256,
+    "use_early_stopping": false,
+    "random_state": 42,
+    "verbosity": 0,
+    "predict_batch_size": 1024,
+    "use_ls": true,
+    "lr": 0.053,
+    "wd": 0.015,
+    "sq_mom": 0.988,
+    "lr_sched": "flat_anneal",
+    "wd_sched": "cos_log_15",
+    "first_layer_lr_factor": 0.25,
+    "embedding_size": 5,
+    "max_one_hot_cat_size": 18,
+    "hidden_sizes": [
+      512,
+      256,
+      128
+    ],
+    "act": "silu",
+    "p_drop": 0.05,
+    "p_drop_sched": "invsqrtp1e-3",
+    "plr_hidden_1": 16,
+    "plr_hidden_2": 8,
+    "plr_act_name": "gelu",
+    "plr_lr_factor": 0.1151,
+    "plr_sigma": 2.33,
+    "ls_eps": 0.01,
+    "ls_eps_sched": "sqrt_cos",
+    "add_front_scale": false,
+    "bias_init_mode": "neg-uniform-dynamic-2",
+    "tfms": [
+      "one_hot",
+      "median_center",
+      "robust_scale",
+      "smooth_clip",
+      "embedding",
+      "l2_normalize"
+    ],
+    "stop_epoch": 3,
+    "n_ens": 8
+  },
+  "allocator_cap_bytes": 778043392,
+  "gpu_process_ceiling_bytes": 1073741824,
+  "cpu_threads": 6,
+  "paid_resources": false,
+  "resource_probe": {
+    "started_utc": "2026-10-18T13:49:29.138756+00:00",
+    "status": "passed_no_quality_score",
+    "no_quality_score": true,
+    "allocator_cap_bytes": 778043392,
+    "gpu_process_ceiling_bytes": 1073741824,
+    "runner_sha256": "2fd57d3f2dbe29a1490126d2299d57388424e86a45b1f3fcce97a2945ebf7fb9",
+    "adapter_sha256": "4ffac94fcc417fa98ddc8237a6721efde5b098287b9b748ed734fe86396c3d44",
+    "train_rows": 559708,
+    "feature_width": 60,
+    "config": {
+      "device": "cuda:0",
+      "n_threads": 6,
+      "n_cv": 1,
+      "n_refit": 0,
+      "n_repeats": 1,
+      "val_fraction": 0.0,
+      "n_epochs": 1,
+      "batch_size": 256,
+      "use_early_stopping": false,
+      "random_state": 42,
+      "verbosity": 0,
+      "predict_batch_size": 1024,
+      "use_ls": true,
+      "lr": 0.053,
+      "wd": 0.015,
+      "sq_mom": 0.988,
+      "lr_sched": "flat_anneal",
+      "wd_sched": "cos_log_15",
+      "first_layer_lr_factor": 0.25,
+      "embedding_size": 5,
+      "max_one_hot_cat_size": 18,
+      "hidden_sizes": [
+        512,
+        256,
+        128
+      ],
+      "act": "silu",
+      "p_drop": 0.05,
+      "p_drop_sched": "invsqrtp1e-3",
+      "plr_hidden_1": 16,
+      "plr_hidden_2": 8,
+      "plr_act_name": "gelu",
+      "plr_lr_factor": 0.1151,
+      "plr_sigma": 2.33,
+      "ls_eps": 0.01,
+      "ls_eps_sched": "sqrt_cos",
+      "add_front_scale": false,
+      "bias_init_mode": "neg-uniform-dynamic-2",
+      "tfms": [
+        "one_hot",
+        "median_center",
+        "robust_scale",
+        "smooth_clip",
+        "embedding",
+        "l2_normalize"
+      ],
+      "stop_epoch": 1,
+      "n_ens": 8
+    },
+    "epochs": [
+      {
+        "epoch": 1,
+        "seconds": 13.449047727990546,
+        "training_parameter_devices": [
+          "cuda:0"
+        ],
+        "backing_data_device": "cpu",
+        "minibatch_devices": [
+          "cuda:0"
+        ]
+      }
+    ],
+    "fit_seconds": 13.50856745299825,
+    "ended_utc": "2026-10-18T13:49:50.839873+00:00",
+    "peak_gpu_process_bytes": 541065216,
+    "peak_allocated_bytes": 294195200,
+    "peak_reserved_bytes": 327155712,
+    "peak_rss_bytes": 3754016768
+  },
+  "execution_caveat": "CPU data-dependent initialization and CPU shuffle RNG differ from old serial8 GPU fits. Eight native ensemble seeds derive from random_state42; both new routes share this execution recipe. No numerical-identity claim for trained weights.",
+  "features": "All counts, vocabularies, and TargetEncoder fits use only each outer-training subset; strict inner5fold training TE. No outer validation supplied to model.fit. Fixed3epochs.",
+  "quality_protocol": "Finish both prespecified fivefold routes before scoring. Each must beat officialv7 and qualified private50/50 control using paired AUC normal97.5% lower plus corrected-resampled-t one-sidedalpha.0125 lower. Highest eligible pooled AUC wins, frozen before fresh-fitting threefold on reused labels. Same dual gates for threefold. If none, no CSV. No fold-positive rule, no arbitrary gain threshold.",
+  "source_sha256": {
+    "research_r8_streaming.py": "4ffac94fcc417fa98ddc8237a6721efde5b098287b9b748ed734fe86396c3d44",
+    "research_r8_worker.py": "4e084ddc438fbf07f2cb0431b70640da6625c5bc723ab078d38a3c7220e3eded",
+    "research_r8_features.py": "10231c587b008e773512506e7d2a5fe8c7d4381e10f7d0f1c18942d37338e1c9",
+    "research_r8_check.py": "16d95dc0c2b1e90f6719d3d0cbddf47f346040dab00e82989f658d92980963d1",
+    "research_r8_driver.py": "e4fe0bc0e73db8dbc6bba8ad95ed9f71b3e79fcb7d2d383c2cc4ccb7811141a4",
+    "research_r8_probe.py": "2fd57d3f2dbe29a1490126d2299d57388424e86a45b1f3fcce97a2945ebf7fb9",
+    "research_r7_loader.py": "8571464e8e4202a3a5a6009bf1a64fd745b5dee76ac1667f8421b0378d52e794",
+    "research_r4_lean_features.py": "cfe6f672865f30622ce8e5cf9149f11e2e6f822f9c1b687f7e7c0431c9218303",
+    "research_r7_response_features.py": "5933367f13b76674b8f8b87b04e2c1e5c61e8ca689f0d83b257f5320cecb36ed"
+  },
+  "final_inference": "If qualified and audited, average five saved outer models each with native eight-member ensemble (40 members total), then fixed .5v5full+.5newNN. Reuse existing tree full predictions only after independent component reconstruction. No full-data NN fit. No formal submission locally.",
+  "limitations": "Validation labels reused across prior/adaptive selection. Conditional intervals and fold diagnostics omit historical selection uncertainty and do not establish leaderboard rank. Officialv7 public.96076; parent last report rank809/2243, rank100.96190; one of two current-round formal slots remains.",
+  "pre_quality_protocol_revision": {
+    "utc": "2026-10-18T13:52:17.763789+00:00",
+    "previous_plan_sha256": "7e31ee185bb2c61bae7595aca691585b1549a4e82a21a5b71d3ea529ae3cfb0a",
+    "reason": "Observe actual first minibatch devices rather than consuming an additional shuffled data-loader iterator in the epoch callback. No quality training or scoring has started."
+  }
+}

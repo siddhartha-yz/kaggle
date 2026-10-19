@@ -1,0 +1,49 @@
+{
+  "frozen_utc": "2026-10-18T21:35:14.514132+00:00",
+  "hypothesis": "Condition each rating on ONLY eight nonrating covariates to measure demographic/travel cohort service-level deviation. Existing successful R21 conditions on other ratings; adding entropy/fullposteriors/PIT from SAME posteriors and moreiterations/seeds/objectives/newpublicteachers all failed. A new conditioning set can retain shared service-level variation that conditioning on twelve other ratings can remove. Utility unknown; no official quality scores for this new pretext.",
+  "route": "ONE cohort-only rating pretext; no source labels, no SAT in pretext, no target/feature/parameter grid",
+  "auxiliary_parameters": {
+    "iterations": 300,
+    "learning_rate": 0.1,
+    "depth": 7,
+    "l2_leaf_reg": 5,
+    "loss_function": "MultiClass",
+    "random_seed": 42,
+    "task_type": "GPU",
+    "devices": "0",
+    "gpu_ram_part": 0.06,
+    "thread_count": 6,
+    "border_count": 128,
+    "max_ctr_complexity": 1,
+    "one_hot_max_size": 2,
+    "boosting_type": "Plain",
+    "bootstrap_type": "Bernoulli",
+    "subsample": 0.8,
+    "allow_writing_files": false,
+    "verbose": 100
+  },
+  "source_sha256": {
+    "research_r46_auxiliary.py": "06198e38938fa54372f12b121d720d868f0ed92d5377316f99c7070052107eb3",
+    "research_r23_guard.py": "13e4de70ccb00335a65bd13c1acdd6b00cf38b7c218a4f9506393258e23ed270",
+    "research_r19_aux_source.py": "0d920e2c8b88ca07a444e7bc72407c19e67ae2d28835768ec43a50a7e4946f56"
+  },
+  "artifact_sha256": {
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "data/test.csv": "ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6"
+  },
+  "gpu_process_ceiling_bytes": 1073741824,
+  "cpu_threads": 6,
+  "serial_fits": true,
+  "paid_resources": false,
+  "hardware_probe": "Wifi six-class target, largest aux fold4 799584 rows,8 covariates,300depth7 GPU. Own NVML<=1GiB,RSS<=8GiB,availableRAM>=2GiB,failclosed. No SAT parsed or quality scored.",
+  "planned_quality": "Onlyhardwarepass then freeze65auxiliaryfits and LGB111 recipe before officialSATquality. Append EV13/S13/meanS27 to existing84,keep639andpoolweights/currentNN74. Finish5 then both original CIgates; onlythenfresh3. No source/weight/seed/iteration grid.",
+  "column_order_guard_fix": {
+    "recorded_utc": "2026-10-18T21:35:41.401852+00:00",
+    "reason": "Header uses numeric predictors before categorical predictors. Correct expected order to observed official header; same set of eight nonrating inputs. Earlier assertion stopped before any fit or quality."
+  },
+  "pre_fit_contract_repairs": {
+    "recorded_utc": "2026-10-18T21:36:39.540359+00:00",
+    "visibility": "Historical RATINGS-module import sets CUDA_VISIBLE_DEVICES empty. Restore authorized GPU0 in main before CatBoost. First sizing attempt failed device discovery before any training.",
+    "class_mapping": "Existing baggage model has classes1..5. Map observed labels via actual sorted classes; never assume six present classes. No parameter or quality changes."
+  }
+}

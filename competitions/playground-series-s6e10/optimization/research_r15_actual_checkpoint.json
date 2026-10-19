@@ -1,0 +1,34 @@
+{
+  "updated_utc": "2026-10-18T15:18:38.509623+00:00",
+  "status": "qualified_v9_backup_delivered_R15_active",
+  "latest_qualified_backup": {
+    "csv": "submission_log_odds_pool_r14_v9.csv",
+    "sha256": "55a1cc1805674a4d1419d1c9ff61b64ee35d61f0117782b6c886dd103f9f57c8",
+    "bytes": 8205510,
+    "rows": 299844,
+    "formula": "sigmoid(.5logit(tree)+.5logit(mean40NN)); family pooling follows model averaging"
+  },
+  "Library_saved_and_download_byte_verified": true,
+  "increment_vs_v8": {
+    "fivefold": 1.3505964776006074e-05,
+    "threefold": 1.9737317715984304e-05
+  },
+  "recommendation": "Hold last official slot; gain remainsfarbelowlastobservedpublicgap. v8/v9 NOT uploadedtoKaggle locally.",
+  "R15": {
+    "driver_pid": 564262,
+    "worker_pid": 564263,
+    "stage": "fivefold",
+    "fold": 1,
+    "completed_epochs": 1,
+    "gpu_process_peak_bytes": 790626304,
+    "log": "research_r15_fivefold.log",
+    "log_updated_utc": "2026-10-18T15:18:31.404953+00:00",
+    "CPU_threads": 6,
+    "GPU_ceiling_bytes": 1073741824,
+    "route": "One crossfitted customer segment prior, comparev9logpool+v7; no restartneeded"
+  },
+  "formal_used": 1,
+  "remaining": 1,
+  "whole_top100_task_completed": false,
+  "actual_top100_verified": false
+}

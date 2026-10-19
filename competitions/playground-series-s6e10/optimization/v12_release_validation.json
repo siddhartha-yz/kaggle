@@ -1,0 +1,46 @@
+{
+  "checked_utc": "2026-10-19T07:38:08.157361+00:00",
+  "source_boundary": "c21f43b164969e25119f9ade1c2c18f42947e67d",
+  "parent_main": "52f8cd1f3039f2ecfca77e1dfef60972d76b05f5",
+  "scope": "Squash v12 research archive; supported read-only artifact verification and exact CSV replay; later R69/R71/R72 research excluded",
+  "tests": {
+    "v12_boundary_and_component_tests": {
+      "passed": 8,
+      "skipped": 0
+    },
+    "baseline_synthetic_tests_in_CPU_venv": {
+      "passed": 19,
+      "skipped": 0
+    },
+    "baseline_stdlib_tests": {
+      "run": 19,
+      "skipped_optional_ML": 2
+    },
+    "python_AST_files": 573,
+    "tracked_JSON_files": 719,
+    "diff_whitespace": "passed",
+    "new_release_markdown_links": "passed",
+    "artifact_extension_large_file_private_cache_scan": "passed",
+    "private_key_token_signed_URL_scan": "passed"
+  },
+  "actual_artifact_replay": {
+    "verified_files": 125,
+    "rows": 299844,
+    "bytes": 8205651,
+    "sha256": "f48276b144e8c9297fb9fec27174044a55a7eb3f2af23dde3f13478a38a4e545",
+    "entire_byte_comparison_with_submitted_original": true,
+    "errors": {
+      "baseline_formula_error": 2.220446049250313e-16,
+      "calibration_error": 0.0,
+      "group_mean_error": 0.0,
+      "independent_formula_error": 4.440892098500626e-16,
+      "CSV_numeric_error": 0.0
+    },
+    "GPU_or_training_or_model_deserialization": false
+  },
+  "limitations": [
+    "Artifact replay requires retained private bundle; no one-command raw-data retraining claim.",
+    "Archived research runners are preserved, not all rerun as part of release validation.",
+    "Leaderboard rank remains historical676/2302, not top500."
+  ]
+}

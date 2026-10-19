@@ -1,0 +1,59 @@
+{
+  "created_utc": "2026-10-17T18:42:59.938687+00:00",
+  "filename": "submission_cb8_lgb63cats_bagged_v2.csv",
+  "sha256": "49ad4d7e282300289c9c9fc263313c6232a674b3846d48caa7f35ae8f89f4766",
+  "bytes": 7984326,
+  "rows": 299844,
+  "columns": [
+    "id",
+    "satisfaction"
+  ],
+  "exact_lexical_id_order": true,
+  "unique_ids": true,
+  "finite_probability_in_range": true,
+  "minimum": 0.0030754709454079284,
+  "maximum": 0.9921488116623383,
+  "mean": 0.4436790288653451,
+  "readback_verified": true,
+  "max_difference_from_saved_full_components": 3.3306690738754696e-16,
+  "full_models_only": true,
+  "actual_trees": [
+    1308,
+    639,
+    639
+  ],
+  "weights": [
+    0.4,
+    0.4,
+    0.2
+  ],
+  "manifest_sha256": "196db3a92e4e19d138dcb9d5ef18f492632ada09b596f62144a312557853cf16",
+  "previous_best_unchanged": true,
+  "formal_submissions_total_before_parent_action": 1,
+  "remaining_submission_maximum": 1,
+  "no_local_login_or_submission": true,
+  "comparisons": {
+    "primary": {
+      "baseline_auc": 0.9581313490780615,
+      "candidate_auc": 0.9582112054287225,
+      "delta_auc": 7.98563506609895e-05,
+      "paired_se": 1.9212933728855375e-05,
+      "conditional_95pct_ci": [
+        4.219900055243297e-05,
+        0.00011751370076954604
+      ],
+      "candidate_logloss": 0.22877432142651963
+    },
+    "confirm": {
+      "baseline_auc": 0.959057856153056,
+      "candidate_auc": 0.9591094233123446,
+      "delta_auc": 5.156715928855693e-05,
+      "paired_se": 1.9462846869545533e-05,
+      "conditional_95pct_ci": [
+        1.3419979424247686e-05,
+        8.971433915286618e-05
+      ],
+      "candidate_logloss": 0.22572991816562482
+    }
+  }
+}

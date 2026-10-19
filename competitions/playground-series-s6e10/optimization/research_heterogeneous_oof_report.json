@@ -1,0 +1,380 @@
+{
+  "component_admission": {
+    "neural_v2": {
+      "admitted": false,
+      "reason": "Frozen confirmation lower confidence bound was not positive"
+    },
+    "residual_prior05": {
+      "admitted": true,
+      "pooled": {
+        "baseline_auc": 0.9605951395132004,
+        "candidate_auc": 0.9607286272659632,
+        "delta_auc": 0.00013348775276278424,
+        "paired_se": 2.2780839174660102e-05,
+        "conditional_95pct_ci": [
+          8.883730798045044e-05,
+          0.00017813819754511803
+        ],
+        "candidate_logloss": 0.22372110709744802
+      },
+      "byfold": [
+        {
+          "baseline_auc": 0.9598799093011321,
+          "candidate_auc": 0.9599768338641166,
+          "delta_auc": 9.692456298449059e-05,
+          "paired_se": 5.098430952176001e-05,
+          "conditional_95pct_ci": [
+            -3.0046836781590216e-06,
+            0.00019685380964714022
+          ],
+          "candidate_logloss": 0.22589064842559486
+        },
+        {
+          "baseline_auc": 0.9607348943533817,
+          "candidate_auc": 0.9608272080960929,
+          "delta_auc": 9.231374271123638e-05,
+          "paired_se": 5.035138308602934e-05,
+          "conditional_95pct_ci": [
+            -6.374968137381126e-06,
+            0.00019100245355985388
+          ],
+          "candidate_logloss": 0.2233714177925422
+        },
+        {
+          "baseline_auc": 0.9611549903661967,
+          "candidate_auc": 0.9613196967019257,
+          "delta_auc": 0.00016470633572907012,
+          "paired_se": 5.0534553861174956e-05,
+          "conditional_95pct_ci": [
+            6.565861016116721e-05,
+            0.000263754061296973
+          ],
+          "candidate_logloss": 0.22194224735944404
+        },
+        {
+          "baseline_auc": 0.9605211783060533,
+          "candidate_auc": 0.9606362733847158,
+          "delta_auc": 0.00011509507866247493,
+          "paired_se": 5.171094167631962e-05,
+          "conditional_95pct_ci": [
+            1.3741632976888463e-05,
+            0.0002164485243480614
+          ],
+          "candidate_logloss": 0.2246451218412716
+        },
+        {
+          "baseline_auc": 0.9607174371190246,
+          "candidate_auc": 0.960909880970785,
+          "delta_auc": 0.00019244385176042655,
+          "paired_se": 5.1148238621484475e-05,
+          "conditional_95pct_ci": [
+            9.219330406231698e-05,
+            0.00029269439945853615
+          ],
+          "candidate_logloss": 0.22275610006838742
+        }
+      ]
+    },
+    "cb_original": {
+      "admitted": true,
+      "pooled": {
+        "baseline_auc": 0.9605951395132004,
+        "candidate_auc": 0.9607730557753742,
+        "delta_auc": 0.00017791626217378287,
+        "paired_se": 1.4942779649941031e-05,
+        "conditional_95pct_ci": [
+          0.00014862841405989844,
+          0.0002072041102876673
+        ],
+        "candidate_logloss": 0.22363988366595441
+      },
+      "byfold": [
+        {
+          "baseline_auc": 0.9598799093011321,
+          "candidate_auc": 0.9600569344469861,
+          "delta_auc": 0.00017702514585404838,
+          "paired_se": 3.489728378774644e-05,
+          "conditional_95pct_ci": [
+            0.00010862646963006537,
+            0.0002454238220780314
+          ],
+          "candidate_logloss": 0.22578681401856784
+        },
+        {
+          "baseline_auc": 0.9607348943533817,
+          "candidate_auc": 0.9608968505896051,
+          "delta_auc": 0.00016195623622339284,
+          "paired_se": 3.275112365799665e-05,
+          "conditional_95pct_ci": [
+            9.776403385371941e-05,
+            0.00022614843859306626
+          ],
+          "candidate_logloss": 0.22323023760174612
+        },
+        {
+          "baseline_auc": 0.9611549903661967,
+          "candidate_auc": 0.9613298538602585,
+          "delta_auc": 0.00017486349406181656,
+          "paired_se": 3.1967094750323765e-05,
+          "conditional_95pct_ci": [
+            0.00011220798835118199,
+            0.00023751899977245112
+          ],
+          "candidate_logloss": 0.22191135309800694
+        },
+        {
+          "baseline_auc": 0.9605211783060533,
+          "candidate_auc": 0.9606705211250174,
+          "delta_auc": 0.00014934281896406,
+          "paired_se": 3.260039577163275e-05,
+          "conditional_95pct_ci": [
+            8.544604325165979e-05,
+            0.0002132395946764602
+          ],
+          "candidate_logloss": 0.2245501145560491
+        },
+        {
+          "baseline_auc": 0.9607174371190246,
+          "candidate_auc": 0.960946161591263,
+          "delta_auc": 0.0002287244722384285,
+          "paired_se": 3.482305947187052e-05,
+          "conditional_95pct_ci": [
+            0.0001604712756735623,
+            0.00029697766880329473
+          ],
+          "candidate_logloss": 0.22272089905540216
+        }
+      ]
+    }
+  },
+  "candidates": {
+    "residual_prior05": {
+      "weights": {
+        "lgb_original": 0.5,
+        "residual_prior05": 0.5
+      },
+      "pooled": {
+        "baseline_auc": 0.9605951395132004,
+        "candidate_auc": 0.9607286272659632,
+        "delta_auc": 0.00013348775276278424,
+        "paired_se": 2.2780839174660102e-05,
+        "conditional_95pct_ci": [
+          8.883730798045044e-05,
+          0.00017813819754511803
+        ],
+        "candidate_logloss": 0.22372110709744802
+      },
+      "byfold": [
+        {
+          "baseline_auc": 0.9598799093011321,
+          "candidate_auc": 0.9599768338641166,
+          "delta_auc": 9.692456298449059e-05,
+          "paired_se": 5.098430952176001e-05,
+          "conditional_95pct_ci": [
+            -3.0046836781590216e-06,
+            0.00019685380964714022
+          ],
+          "candidate_logloss": 0.22589064842559486
+        },
+        {
+          "baseline_auc": 0.9607348943533817,
+          "candidate_auc": 0.9608272080960929,
+          "delta_auc": 9.231374271123638e-05,
+          "paired_se": 5.035138308602934e-05,
+          "conditional_95pct_ci": [
+            -6.374968137381126e-06,
+            0.00019100245355985388
+          ],
+          "candidate_logloss": 0.2233714177925422
+        },
+        {
+          "baseline_auc": 0.9611549903661967,
+          "candidate_auc": 0.9613196967019257,
+          "delta_auc": 0.00016470633572907012,
+          "paired_se": 5.0534553861174956e-05,
+          "conditional_95pct_ci": [
+            6.565861016116721e-05,
+            0.000263754061296973
+          ],
+          "candidate_logloss": 0.22194224735944404
+        },
+        {
+          "baseline_auc": 0.9605211783060533,
+          "candidate_auc": 0.9606362733847158,
+          "delta_auc": 0.00011509507866247493,
+          "paired_se": 5.171094167631962e-05,
+          "conditional_95pct_ci": [
+            1.3741632976888463e-05,
+            0.0002164485243480614
+          ],
+          "candidate_logloss": 0.2246451218412716
+        },
+        {
+          "baseline_auc": 0.9607174371190246,
+          "candidate_auc": 0.960909880970785,
+          "delta_auc": 0.00019244385176042655,
+          "paired_se": 5.1148238621484475e-05,
+          "conditional_95pct_ci": [
+            9.219330406231698e-05,
+            0.00029269439945853615
+          ],
+          "candidate_logloss": 0.22275610006838742
+        }
+      ],
+      "eligible": false
+    },
+    "cb_original": {
+      "weights": {
+        "lgb_original": 0.75,
+        "cb_original": 0.25
+      },
+      "pooled": {
+        "baseline_auc": 0.9605951395132004,
+        "candidate_auc": 0.9607730557753742,
+        "delta_auc": 0.00017791626217378287,
+        "paired_se": 1.4942779649941031e-05,
+        "conditional_95pct_ci": [
+          0.00014862841405989844,
+          0.0002072041102876673
+        ],
+        "candidate_logloss": 0.22363988366595441
+      },
+      "byfold": [
+        {
+          "baseline_auc": 0.9598799093011321,
+          "candidate_auc": 0.9600569344469861,
+          "delta_auc": 0.00017702514585404838,
+          "paired_se": 3.489728378774644e-05,
+          "conditional_95pct_ci": [
+            0.00010862646963006537,
+            0.0002454238220780314
+          ],
+          "candidate_logloss": 0.22578681401856784
+        },
+        {
+          "baseline_auc": 0.9607348943533817,
+          "candidate_auc": 0.9608968505896051,
+          "delta_auc": 0.00016195623622339284,
+          "paired_se": 3.275112365799665e-05,
+          "conditional_95pct_ci": [
+            9.776403385371941e-05,
+            0.00022614843859306626
+          ],
+          "candidate_logloss": 0.22323023760174612
+        },
+        {
+          "baseline_auc": 0.9611549903661967,
+          "candidate_auc": 0.9613298538602585,
+          "delta_auc": 0.00017486349406181656,
+          "paired_se": 3.1967094750323765e-05,
+          "conditional_95pct_ci": [
+            0.00011220798835118199,
+            0.00023751899977245112
+          ],
+          "candidate_logloss": 0.22191135309800694
+        },
+        {
+          "baseline_auc": 0.9605211783060533,
+          "candidate_auc": 0.9606705211250174,
+          "delta_auc": 0.00014934281896406,
+          "paired_se": 3.260039577163275e-05,
+          "conditional_95pct_ci": [
+            8.544604325165979e-05,
+            0.0002132395946764602
+          ],
+          "candidate_logloss": 0.2245501145560491
+        },
+        {
+          "baseline_auc": 0.9607174371190246,
+          "candidate_auc": 0.960946161591263,
+          "delta_auc": 0.0002287244722384285,
+          "paired_se": 3.482305947187052e-05,
+          "conditional_95pct_ci": [
+            0.0001604712756735623,
+            0.00029697766880329473
+          ],
+          "candidate_logloss": 0.22272089905540216
+        }
+      ],
+      "eligible": false
+    },
+    "equal_mean_admitted": {
+      "weights": {
+        "lgb_original": 0.625,
+        "residual_prior05": 0.25,
+        "cb_original": 0.125
+      },
+      "pooled": {
+        "baseline_auc": 0.9605951395132004,
+        "candidate_auc": 0.9607860791046143,
+        "delta_auc": 0.00019093959141391892,
+        "paired_se": 1.580849346451894e-05,
+        "conditional_95pct_ci": [
+          0.0001599549442234618,
+          0.00022192423860437603
+        ],
+        "candidate_logloss": 0.22361726582608604
+      },
+      "byfold": [
+        {
+          "baseline_auc": 0.9598799093011321,
+          "candidate_auc": 0.9600524345328189,
+          "delta_auc": 0.00017252523168675982,
+          "paired_se": 3.5852168256204605e-05,
+          "conditional_95pct_ci": [
+            0.0001022549819045988,
+            0.00024279548146892085
+          ],
+          "candidate_logloss": 0.22577355219555778
+        },
+        {
+          "baseline_auc": 0.9607348943533817,
+          "candidate_auc": 0.9608974345460237,
+          "delta_auc": 0.00016254019264205777,
+          "paired_se": 3.4438047396000866e-05,
+          "conditional_95pct_ci": [
+            9.504161974589607e-05,
+            0.00023003876553821947
+          ],
+          "candidate_logloss": 0.22323915775485575
+        },
+        {
+          "baseline_auc": 0.9611549903661967,
+          "candidate_auc": 0.9613584660693382,
+          "delta_auc": 0.000203475703141498,
+          "paired_se": 3.4817747478454325e-05,
+          "conditional_95pct_ci": [
+            0.00013523291808372753,
+            0.00027171848819926845
+          ],
+          "candidate_logloss": 0.2218645807534452
+        },
+        {
+          "baseline_auc": 0.9605211783060533,
+          "candidate_auc": 0.9606893438903481,
+          "delta_auc": 0.00016816558429477713,
+          "paired_se": 3.5207116735807154e-05,
+          "conditional_95pct_ci": [
+            9.91596354925951e-05,
+            0.00023717153309695915
+          ],
+          "candidate_logloss": 0.2245327484799494
+        },
+        {
+          "baseline_auc": 0.9607174371190246,
+          "candidate_auc": 0.9609638087873469,
+          "delta_auc": 0.0002463716683223094,
+          "paired_se": 3.6435567949041623e-05,
+          "conditional_95pct_ci": [
+            0.0001749579551421878,
+            0.000317785381502431
+          ],
+          "candidate_logloss": 0.22267628994662186
+        }
+      ],
+      "eligible": false
+    }
+  },
+  "chosen": null,
+  "selection_scope": "Only frozen component weights and equal-mean candidate; no public score tuning; intervals conditional and not corrected for development selection."
+}

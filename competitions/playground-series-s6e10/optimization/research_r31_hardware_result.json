@@ -1,0 +1,25 @@
+{
+  "status": "passed_no_quality_score",
+  "completed_utc": "2026-10-18T19:18:46.511498+00:00",
+  "official_SAT_column_loaded": false,
+  "synthetic_labels": true,
+  "rows": 699635,
+  "features": 84,
+  "iterations": 8,
+  "actual_task_type": "GPU",
+  "category_columns": [
+    "f017",
+    "f018",
+    "f019",
+    "f020",
+    "f021",
+    "f022",
+    "f023",
+    "f024"
+  ],
+  "seconds": 17.688315787003376,
+  "peak_gpu_process_bytes": 608174080,
+  "peak_rss_bytes": 2014388224,
+  "reload_error": 0.0,
+  "runner_sha256": "258df7b4c68e1bf2ba058494d6060efd2f8b30793942f4d2e7f0b02a6a7309d5"
+}

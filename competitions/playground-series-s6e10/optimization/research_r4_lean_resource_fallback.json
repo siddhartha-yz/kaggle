@@ -1,0 +1,8 @@
+{
+  "frozen_utc": "2026-10-18T10:58:18.138692+00:00",
+  "attempted": "research_r4_lean.py",
+  "fallback": "research_r4_lean_cpu.py",
+  "reason": "Official PyTabKit currently moves full dataset and static preprocessing to GPU. Source TODO confirms no native CPU-static option. Capped742MiB allocator OOM before epoch1 and before validation prediction; totalprocess920MiB remained under1GiB. Use identical statistical recipe/8members on CPU, device only change,6threads,5GiB processRSS guard,2GiB available guard. No limit increase or global package patch.",
+  "quality_score_observed_before_resource_choice": false,
+  "gpu_attempt_failure": "research_r4_lean_failure.json"
+}

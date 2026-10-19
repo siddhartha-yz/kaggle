@@ -1,0 +1,191 @@
+{
+  "status": "complete",
+  "model": "stats639",
+  "params": {
+    "n_estimators": 639,
+    "learning_rate": 0.04,
+    "num_leaves": 63,
+    "max_depth": -1,
+    "min_child_samples": 150,
+    "reg_lambda": 10,
+    "objective": "binary",
+    "n_jobs": 6,
+    "random_state": 42,
+    "verbosity": -1,
+    "colsample_bytree": 1.0,
+    "subsample": 1.0,
+    "max_bin": 255,
+    "deterministic": true,
+    "force_col_wise": true
+  },
+  "positive_label": true,
+  "external_data_used": false,
+  "train_rows": 699635,
+  "test_rows": 299844,
+  "data_sha256": {
+    "train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "test.csv": "ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6",
+    "sample_submission.csv": "6165ecc5769962253534c2d840f26aab55dc3cc091d256bb3641bf6608194a71"
+  },
+  "oof_comparison": {
+    "pooled": {
+      "baseline_auc": 0.9591859023751204,
+      "candidate_auc": 0.9603367815297761,
+      "delta_auc": 0.0011508791546557262,
+      "paired_se": 8.296008477686927e-05,
+      "conditional_95pct_ci": [
+        0.0009882773884930625,
+        0.00131348092081839
+      ],
+      "candidate_logloss": 0.22530003644026486
+    },
+    "by_fold": [
+      {
+        "baseline_auc": 0.9584132825464239,
+        "candidate_auc": 0.9596921699064124,
+        "delta_auc": 0.0012788873599884898,
+        "paired_se": 0.00018917085694492467,
+        "conditional_95pct_ci": [
+          0.0009081124803764374,
+          0.0016496622396005422
+        ],
+        "candidate_logloss": 0.227358851730655
+      },
+      {
+        "baseline_auc": 0.9592449482780695,
+        "candidate_auc": 0.960474294800054,
+        "delta_auc": 0.0012293465219844757,
+        "paired_se": 0.0001832027750543642,
+        "conditional_95pct_ci": [
+          0.0008702690828779219,
+          0.0015884239610910295
+        ],
+        "candidate_logloss": 0.22492466895368818
+      },
+      {
+        "baseline_auc": 0.9599949905313101,
+        "candidate_auc": 0.9608633876312733,
+        "delta_auc": 0.0008683970999632251,
+        "paired_se": 0.00018268747283792008,
+        "conditional_95pct_ci": [
+          0.0005103296532009017,
+          0.0012264645467255485
+        ],
+        "candidate_logloss": 0.2234725483902178
+      },
+      {
+        "baseline_auc": 0.9589393455915196,
+        "candidate_auc": 0.9600410366951235,
+        "delta_auc": 0.001101691103603919,
+        "paired_se": 0.0001880324941314895,
+        "conditional_95pct_ci": [
+          0.0007331474151061996,
+          0.0014702347921016384
+        ],
+        "candidate_logloss": 0.22639585750658645
+      },
+      {
+        "baseline_auc": 0.9593674220661509,
+        "candidate_auc": 0.9606398502729783,
+        "delta_auc": 0.0012724282068273807,
+        "paired_se": 0.0001845644027240885,
+        "conditional_95pct_ci": [
+          0.0009106819774881672,
+          0.0016341744361665941
+        ],
+        "candidate_logloss": 0.22434825562017693
+      }
+    ],
+    "promote_stats": true,
+    "completed_utc": "2026-10-17T19:40:24.820283+00:00",
+    "report_runner_sha256": "59d90206b1f10db8df83dff1fd369a6b3ec084b6da26167c5e889d97fecda59b"
+  },
+  "runner_sha256": "bcd234ca1f634c8033b053c98630ad414f6d8cc4c6ddce97424975c3e9801354",
+  "feature_code_sha256": "6c029528249d6772a958b29c46f4f095da9f91136c2721eb2a4d268f360fcfe9",
+  "started_utc": "2026-10-17T19:40:26.298906+00:00",
+  "source_to_model_feature_names": {
+    "Age": "f000",
+    "Flight Distance": "f001",
+    "Inflight wifi service": "f002",
+    "Departure/Arrival time convenient": "f003",
+    "Ease of Online booking": "f004",
+    "Gate location": "f005",
+    "Food and drink": "f006",
+    "Online boarding": "f007",
+    "Seat comfort": "f008",
+    "Inflight entertainment": "f009",
+    "On-board service": "f010",
+    "Leg room service": "f011",
+    "Baggage handling": "f012",
+    "Checkin service": "f013",
+    "Cleanliness": "f014",
+    "Departure Delay in Minutes": "f015",
+    "Arrival Delay in Minutes": "f016",
+    "Gender": "f017",
+    "Customer Type": "f018",
+    "Type of Travel": "f019",
+    "Class": "f020",
+    "Inflight wifi service_cat": "f021",
+    "Online boarding_cat": "f022",
+    "Ease of Online booking_cat": "f023",
+    "Gate location_cat": "f024",
+    "distance_count": "f025",
+    "distance_log_count": "f026",
+    "distance_mean_Age": "f027",
+    "distance_mean_Inflight wifi service": "f028",
+    "distance_mean_Departure/Arrival time convenient": "f029",
+    "distance_mean_Ease of Online booking": "f030",
+    "distance_mean_Gate location": "f031",
+    "distance_mean_Food and drink": "f032",
+    "distance_mean_Online boarding": "f033",
+    "distance_mean_Seat comfort": "f034",
+    "distance_mean_Inflight entertainment": "f035",
+    "distance_mean_On-board service": "f036",
+    "distance_mean_Leg room service": "f037",
+    "distance_mean_Baggage handling": "f038",
+    "distance_mean_Checkin service": "f039",
+    "distance_mean_Cleanliness": "f040",
+    "distance_mean_Departure Delay in Minutes": "f041",
+    "distance_mean_Arrival Delay in Minutes": "f042",
+    "distance_prop_Gender_Female": "f043",
+    "distance_prop_Gender_Male": "f044",
+    "distance_prop_Customer Type_Loyal Customer": "f045",
+    "distance_prop_Customer Type_disloyal Customer": "f046",
+    "distance_prop_Type of Travel_Business travel": "f047",
+    "distance_prop_Type of Travel_Personal Travel": "f048",
+    "distance_prop_Class_Business": "f049",
+    "distance_prop_Class_Eco": "f050",
+    "distance_prop_Class_Eco Plus": "f051"
+  },
+  "categorical_features": [
+    "f017",
+    "f018",
+    "f019",
+    "f020",
+    "f021",
+    "f022",
+    "f023",
+    "f024"
+  ],
+  "model_sha256": "ddf61a9be3af34884185036dcbd84232aa016f4a6e3ace45768e8c2001dd0713",
+  "transformer_sha256": "321db78d2238a7c8275959f5aced4a7bdf566647863e7d2e3979d36b857b78b8",
+  "prediction_reload_maxdiff": 0.0,
+  "elapsed_seconds": 24.740412151000328,
+  "ended_utc": "2026-10-17T19:40:50.328599+00:00",
+  "submission": {
+    "path": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/submission_distance_stats_v3.csv",
+    "sha256": "d0982be73739a35c45202ccfe49708931c623445b915e00109eee417b1f3a892",
+    "bytes": 7985121,
+    "rows": 299844,
+    "columns": [
+      "id",
+      "satisfaction"
+    ],
+    "id_order_matches_official_test": true,
+    "min": 0.0027784104224977874,
+    "max": 0.9979704784941311,
+    "mean": 0.4436922614918513,
+    "std": 0.4306720279898595,
+    "csv_readback_verified": true
+  }
+}

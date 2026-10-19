@@ -1,0 +1,23 @@
+{
+  "frozen_utc": "2026-10-18T07:32:08.075040+00:00",
+  "hypothesis": "Extremely randomized unboosted tree averaging with Gini leaf estimation provides a distinct, lower-variance tree family beyond all tested boosted trees and neural models. One fixed classifier and fixed blend only.",
+  "reference": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.ExtraTreesClassifier.html",
+  "params": {
+    "n_estimators": 512,
+    "criterion": "gini",
+    "max_depth": null,
+    "min_samples_leaf": 40,
+    "max_leaf_nodes": 4096,
+    "max_features": 1.0,
+    "bootstrap": false,
+    "n_jobs": 6,
+    "random_state": 20261018,
+    "warm_start": true
+  },
+  "features": "ExistingoutertrainDistanceStats+5auditedsourcefeatures; training-only numeric medians and onehot8categorical columns, unknowns ignored. No target encoding.",
+  "probe": "Fit first64trees only onprimarytraining; no validation score. Continue samewarm_start forest to512 only if projected512fit<=1200seconds and conservative finalRSSbound<=3GiB. Do not change model parameters from validation scores.",
+  "checkpoints": "Grow32trees each CPU6batch, saveevery128; stablefixedRNGschedule. Reuse identical first64fromlabel-blind resourceprobe to avoid duplicate fitting.",
+  "blend": ".75v6+.25ExtraTrees512",
+  "gates": "Existing W3primary+.0001/lower>0,confirm lower>0,OOFallfoldpositive pooled+.0002/lower>0.",
+  "resources": "CPU6serial, noGPU, RSS3GiB+availableRAM2GiB guards; sameW3cutoffs,paid0,parentonlyformal0/2used."
+}

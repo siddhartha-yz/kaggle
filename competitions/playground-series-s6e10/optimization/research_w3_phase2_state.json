@@ -1,0 +1,24 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-18T05:51:27.724107+00:00",
+  "steps": [
+    {
+      "name": "w3_rank_deepfm_primary_b2048",
+      "exit_code": 0,
+      "status": "complete",
+      "ended_utc": "2026-10-18T05:51:46.517115+00:00"
+    },
+    {
+      "name": "w3_cb_values_primary",
+      "exit_code": 0,
+      "status": "complete",
+      "ended_utc": "2026-10-18T05:59:58.311928+00:00"
+    }
+  ],
+  "active": null,
+  "active_log": "research_w3_cb_values_primary.log",
+  "updated_utc": "2026-10-18T05:51:46.693067+00:00",
+  "child_pid": 374291,
+  "outcome": "no_qualified_phase2_route",
+  "completed_utc": "2026-10-18T05:59:58.507281+00:00"
+}

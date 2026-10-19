@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-18T05:32:16.223270+00:00",
+  "steps": [
+    {
+      "name": "w3_tabm_nested_confirm",
+      "exit_code": 0,
+      "status": "complete",
+      "ended_utc": "2026-10-18T05:34:40.391017+00:00"
+    }
+  ],
+  "active": null,
+  "active_log": "research_w3_tabm_nested_confirm.log",
+  "updated_utc": "2026-10-18T05:32:16.224996+00:00",
+  "child_pid": 364643,
+  "outcome": "confirm_rejected",
+  "completed_utc": "2026-10-18T05:34:40.426475+00:00"
+}

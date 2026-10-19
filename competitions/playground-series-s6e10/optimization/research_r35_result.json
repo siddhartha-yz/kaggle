@@ -1,0 +1,23 @@
+{
+  "status": "hardware_blocked_no_quality_evaluation",
+  "completed_utc": "2026-10-18T19:56:05.210474+00:00",
+  "proof": {
+    "status": "allocator_OOM",
+    "pid": 697271,
+    "started_utc": "2026-10-18T19:55:04.402792+00:00",
+    "context_rows": 32768,
+    "query_rows": 512,
+    "no_quality_score": true,
+    "official_SAT_column_loaded": false,
+    "synthetic_labels": true,
+    "plan_sha256": "bffd4b9903b9bfda268398834db0e9c60de159b4d1df98c028eb023914b80178",
+    "completed_utc": "2026-10-18T19:55:08.052673+00:00",
+    "error_type": "OutOfMemoryError",
+    "peak_gpu_process_bytes": 985661440,
+    "peak_rss_bytes": 2994089984
+  },
+  "quality_fits": 0,
+  "new_formal_submissions": 0,
+  "csv_generated": false,
+  "diagnosis": "Allocatorchangealoneinsufficient. Fresh32kadvancedthroughFFNbutfailed32MiBoutputallocation(687.65MiBallocated+36.35reserved). R22FFNretainsallchunkoutputsANDconcatenatedcopy. A preallocatedoutputwithsame4096chunkkernelscanremoveoneentiresequencecopy withoutchanginglearningmath. R35singleattemptclosed."
+}

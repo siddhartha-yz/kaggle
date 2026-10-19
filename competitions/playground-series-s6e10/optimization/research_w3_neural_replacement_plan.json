@@ -1,0 +1,20 @@
+{
+  "frozen_utc": "2026-10-18T07:58:20.870453+00:00",
+  "hypothesis": "Earlier family fusion changes total neural mass from25% tov6.5+newfamily.5 =>62.5% overall neural mass. A controlled replacement inside the existing25% neural component preserves the stronger fixed75% v5 tree mixture. This operator was not tested; use one uniform4family composition without weight search.",
+  "formula": "v6-.25*old_raw_RealMLP2 + .0625*(old_raw_RealMLP2+TabMfamily+DeepFMfamily+FTTransformerfamily)",
+  "tree_mass": 0.75,
+  "neural_mass": 0.25,
+  "family_weights_within_neural_component": {
+    "admitted_raw_RealMLP2": 0.25,
+    "predeclared_TabM_family": 0.25,
+    "predeclared_DeepFM_family": 0.25,
+    "predeclared_FTTransformer_family": 0.25
+  },
+  "new_family_definitions": "Reuse exactly research_w3_family_fusion_plan.json, equalmean2TabMviews, equalmean3DeepFMviews, FTTransformer2members; no view changes. Original admitted NN retained as fourth family.",
+  "primary": "Cached own primary predictions only; exactidx/id/target and baselinecomponent identities. Require delta>=.0001 and conditional lower>0. Stopif fails.",
+  "confirmation": "Onlyifprimarypasses. Cached exactsame family views already complete on confirm. Require conditional lower>0.",
+  "oof": "Onlyifconfirmationpasses. Fresh exact6componentrecipes within eachfixedouterfold, same nestedepochmethods; every aggregatefoldpositive, pooleddelta>=.0002/lower>0.",
+  "full": "Onlyafterallgates, keep cached auditedv5/v6fullcomponents and newlyrefit frozen neural family methods, auditCSV thenparentonlysubmission.",
+  "resources": "No new primary orconfirmfits. LaterCPU6serial/GPU<=1GiB; same W3cutoffs; paid0; parentonlyformal0/2used.",
+  "bias": "Prospectiveonefixedreplacementaftermanyfailedscreens; validationpartitionsreused, conditionalCI excludes adaptive selection uncertainty. No externalpredictions or publicscoreweight tuning."
+}

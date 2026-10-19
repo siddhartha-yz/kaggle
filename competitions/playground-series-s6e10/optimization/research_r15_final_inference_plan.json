@@ -1,0 +1,18 @@
+{
+  "frozen_utc": "2026-10-18T15:21:55.804903+00:00",
+  "main_plan_sha256": "0c5f39282c95a3230577fba02851847041e38ae9a9f7a7d2a34bd669d13ce421",
+  "code_sha256": {
+    "research_r15_audit.py": "fe39416edc15a4079a71e32206a2b2f0480cc8d55677aaedf71cfbf2099cf699",
+    "research_r15_csv.py": "a4f73299e74e865b64029a95e6cbd9b7d3dfc80c1053b4a2691319117563c115"
+  },
+  "quality_status_at_freeze": "Fivefold still training, no outer results inspected.",
+  "gates": "Bothfivefold andfreshthreefold positive paired95% andcorrectedfit lower versus admittedv9 ANDofficialv7; then exact crossfit/table/count/mean/split/source/CPUreplayaudit beforetest inference.",
+  "formula": "Equal-logodds pooling of fullv5 and mean160NN after fold/member averaging. epsilon1e-6 unchanged fromadmittedv9.",
+  "feature_width": 48,
+  "new_fields": 1,
+  "customer_prior": "KFold5shuffle42,targetindependent partitions; smoothing20globalmean; outertrainfullmap atprediction.",
+  "CPU_replay_tolerance": 2e-06,
+  "formal_used": 1,
+  "remaining": 1,
+  "parent_only_submitter": true
+}

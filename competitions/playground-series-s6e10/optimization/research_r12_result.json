@@ -1,0 +1,11 @@
+{
+  "updated_utc": "2026-10-18T14:48:42.307026+00:00",
+  "status": "complete",
+  "last_stage": "fivefold",
+  "eligible_for_candidate": false,
+  "active_training": false,
+  "formal_used": 1,
+  "remaining": 1,
+  "actual_top100_verified": false,
+  "whole_top100_task_completed": false
+}

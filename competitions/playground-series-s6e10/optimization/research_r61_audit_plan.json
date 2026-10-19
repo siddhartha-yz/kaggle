@@ -1,0 +1,17 @@
+{
+  "frozen_utc": "2026-10-19T01:07:26.143359+00:00",
+  "main_plan_sha256": "6060e16529111bba1a26f29d366c4181d9006046a2b605f717f95e5122f5fe6b",
+  "audit_code_sha256": {
+    "research_r61_audit.py": "41caf0c21fa4878edb5e938e36861f55069567e83eba46c9fb9ce0b956597e5d"
+  },
+  "required_quality": "Originalboth5and3dualCIgates vsactualv11",
+  "CPU_threads": 6,
+  "execute_only_without_other_model_training": true,
+  "checks": [
+    "13original source model hashes/prior independentCPU class-hypothesis likelihood replay/scope/globaldedup audit",
+    "65old target-free auxiliary hashes/priorreplay audit",
+    "Independent5/3folds,ownfullencoders/counts/categories,61same inputfields and13sourceLLRs",
+    "8NN32 CPUreplays/classes/3epochs/originalCE/resourcecaps",
+    "Unchangedv11tree and fixed equal clipped logitpool,bothgates"
+  ]
+}

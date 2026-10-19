@@ -1,0 +1,514 @@
+{
+  "status": "completed_diagnostic_only",
+  "checked_utc": "2026-10-18T23:54:36.532326+00:00",
+  "all_fivefolds_complete_before_diagnostics": true,
+  "predefined_group_columns": [
+    "Class",
+    "Type of Travel",
+    "Customer Type"
+  ],
+  "no_new_predictions_models_or_blendweights_fitted": true,
+  "selection_bias_warning": "Historically reused validation labels. Slice findings are hypothesis-generating, not heldout evidence; any next gate must fit only fresh inner heldout predictions inside each outer training split.",
+  "source_sha256": {
+    "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/research_r57_error_analysis.py": "c40427e3cdb35bc4a7931df0d715c30da885bcc4ee03c80c0824e5ba993b9d68",
+    "research_artifacts/r23_conditional_lean_fivefold/oof.npz": "26d8a9a89cfaa3a928300fb0f63f361a50b7c7a2e39dc1c820161b6f33960ea3",
+    "research_artifacts/r21_probability_lgb_officialcb_fivefold/oof.npz": "ff911354393ad4f08c3d7ef7448bc6c64ac1ad17129fcd279aa067f8d09d0938",
+    "research_r54_result.json": "774a36c0932879667429eb2d3b8f30784714f67b41d84337b5e2b20368ba7801",
+    "research_r55_result.json": "bdba4bbb3497d4c8aa25b9881ce649e43ceb3adfbffe5aca4801e917d958bf3a",
+    "research_r56_result.json": "6016ab011b5317dd2228cf6941cb34f9c65791c28377b60d2b1f07461d3c86d7"
+  },
+  "groups": [
+    {
+      "group": "ALL",
+      "rows": 699635,
+      "positive_rate": 0.44357272006117476,
+      "metrics": {
+        "tree": {
+          "auc": 0.9610175406751569,
+          "logloss": 0.22293002322718672
+        },
+        "NN74": {
+          "auc": 0.9614265606636159,
+          "logloss": 0.22162626570079338
+        },
+        "v11": {
+          "auc": 0.9616328660208192,
+          "logloss": 0.2212266891724406
+        },
+        "R54": {
+          "auc": 0.9615600177120874,
+          "logloss": 0.2216126059284245
+        },
+        "R55": {
+          "auc": 0.9616195405736032,
+          "logloss": 0.22129451869351266
+        },
+        "R56": {
+          "auc": 0.9616316888698578,
+          "logloss": 0.2212507356574711
+        }
+      },
+      "NN_minus_tree_auc": 0.0004090199884589918,
+      "NN_minus_tree_byfold": [
+        0.00036400914019363295,
+        0.0006538641965172509,
+        0.0004515797893016593,
+        0.0003558151786891006,
+        0.0002251285464175412
+      ],
+      "logloss_weight_gradient_at_equal_pool": -881.6082444176069,
+      "mean_squared_logit_disagreement": 0.11171556498695952
+    },
+    {
+      "group": "('Business', 'Business travel', 'Loyal Customer')",
+      "rows": 294376,
+      "positive_rate": 0.791752724406881,
+      "metrics": {
+        "tree": {
+          "auc": 0.9217130859145986,
+          "logloss": 0.20576281279548472
+        },
+        "NN74": {
+          "auc": 0.9224484584646352,
+          "logloss": 0.20407556861864745
+        },
+        "v11": {
+          "auc": 0.9230542696067042,
+          "logloss": 0.20365952119608405
+        },
+        "R54": {
+          "auc": 0.9229275974614645,
+          "logloss": 0.20409677835910237
+        },
+        "R55": {
+          "auc": 0.9229984470379412,
+          "logloss": 0.2037726266315855
+        },
+        "R56": {
+          "auc": 0.9230931971063356,
+          "logloss": 0.20371247921600774
+        }
+      },
+      "NN_minus_tree_auc": 0.0007353725500366393,
+      "NN_minus_tree_byfold": [
+        2.2137802489385905e-05,
+        0.001010135785846411,
+        0.0013947231511023395,
+        0.0002399717826367942,
+        0.0010062917112434455
+      ],
+      "logloss_weight_gradient_at_equal_pool": -475.32508472791613,
+      "mean_squared_logit_disagreement": 0.15566333843637364
+    },
+    {
+      "group": "('Business', 'Business travel', 'disloyal Customer')",
+      "rows": 43896,
+      "positive_rate": 0.33479132494988156,
+      "metrics": {
+        "tree": {
+          "auc": 0.9341989689674202,
+          "logloss": 0.2818770678398194
+        },
+        "NN74": {
+          "auc": 0.9352384466745214,
+          "logloss": 0.27903413825810514
+        },
+        "v11": {
+          "auc": 0.9355180004250528,
+          "logloss": 0.27902013743282755
+        },
+        "R54": {
+          "auc": 0.9354076311884325,
+          "logloss": 0.2795933586632345
+        },
+        "R55": {
+          "auc": 0.9354758866451406,
+          "logloss": 0.279220828444433
+        },
+        "R56": {
+          "auc": 0.9354888549488818,
+          "logloss": 0.2790801990414178
+        }
+      },
+      "NN_minus_tree_auc": 0.0010394777071012218,
+      "NN_minus_tree_byfold": [
+        -0.0004339713674538226,
+        0.0003453635552582712,
+        0.0015947066822407097,
+        0.0015747653726589927,
+        0.0021365718044507043
+      ],
+      "logloss_weight_gradient_at_equal_pool": -122.7189649080893,
+      "mean_squared_logit_disagreement": 0.1185358490848772
+    },
+    {
+      "group": "('Business', 'Personal Travel', 'Loyal Customer')",
+      "rows": 3939,
+      "positive_rate": 0.11195734958111196,
+      "metrics": {
+        "tree": {
+          "auc": 0.8296272959345736,
+          "logloss": 0.24259201171223888
+        },
+        "NN74": {
+          "auc": 0.8284785993680872,
+          "logloss": 0.24068613811361117
+        },
+        "v11": {
+          "auc": 0.8314054419175713,
+          "logloss": 0.240699644504699
+        },
+        "R54": {
+          "auc": 0.8305186377962659,
+          "logloss": 0.2413180637935431
+        },
+        "R55": {
+          "auc": 0.8320698967599236,
+          "logloss": 0.24061488812272291
+        },
+        "R56": {
+          "auc": 0.8307299668485653,
+          "logloss": 0.24058153887931685
+        }
+      },
+      "NN_minus_tree_auc": -0.001148696566486418,
+      "NN_minus_tree_byfold": [
+        -0.007628102371344814,
+        0.010218309298063999,
+        -0.005357989568515853,
+        -0.005881751227496013,
+        0.0055725524475525035
+      ],
+      "logloss_weight_gradient_at_equal_pool": -7.393613178205221,
+      "mean_squared_logit_disagreement": 0.08342550776988712
+    },
+    {
+      "group": "('Eco', 'Business travel', 'Loyal Customer')",
+      "rows": 65542,
+      "positive_rate": 0.41272771657868235,
+      "metrics": {
+        "tree": {
+          "auc": 0.9358760498540961,
+          "logloss": 0.3032070691810312
+        },
+        "NN74": {
+          "auc": 0.9369509340821458,
+          "logloss": 0.300869709571876
+        },
+        "v11": {
+          "auc": 0.937342853161621,
+          "logloss": 0.2998777151896767
+        },
+        "R54": {
+          "auc": 0.9371073179333858,
+          "logloss": 0.3005087162096887
+        },
+        "R55": {
+          "auc": 0.9373205389541671,
+          "logloss": 0.2999761049553452
+        },
+        "R56": {
+          "auc": 0.937374467996818,
+          "logloss": 0.2998416397521323
+        }
+      },
+      "NN_minus_tree_auc": 0.0010748842280496884,
+      "NN_minus_tree_byfold": [
+        0.001001092173363638,
+        0.001182786507588296,
+        0.0010395891491701281,
+        0.002225579284456214,
+        -1.598930170365609e-05
+      ],
+      "logloss_weight_gradient_at_equal_pool": -149.20486496099332,
+      "mean_squared_logit_disagreement": 0.14388471526439417
+    },
+    {
+      "group": "('Eco', 'Business travel', 'disloyal Customer')",
+      "rows": 76070,
+      "positive_rate": 0.12846062836860786,
+      "metrics": {
+        "tree": {
+          "auc": 0.8960373223730752,
+          "logloss": 0.2078958509822887
+        },
+        "NN74": {
+          "auc": 0.897253416232124,
+          "logloss": 0.20718258363126807
+        },
+        "v11": {
+          "auc": 0.8976340601306644,
+          "logloss": 0.20689694644534862
+        },
+        "R54": {
+          "auc": 0.8975272244459878,
+          "logloss": 0.20717527318492615
+        },
+        "R55": {
+          "auc": 0.8977014585294418,
+          "logloss": 0.20689044188710737
+        },
+        "R56": {
+          "auc": 0.897524605069308,
+          "logloss": 0.20696998714204404
+        }
+      },
+      "NN_minus_tree_auc": 0.0012160938590487502,
+      "NN_minus_tree_byfold": [
+        0.0011410860064337003,
+        0.0010313129626705608,
+        0.0018434268913808394,
+        0.0018548028277651785,
+        0.00018797312832530277
+      ],
+      "logloss_weight_gradient_at_equal_pool": -53.2914728410506,
+      "mean_squared_logit_disagreement": 0.07496232295991793
+    },
+    {
+      "group": "('Eco', 'Personal Travel', 'Loyal Customer')",
+      "rows": 185691,
+      "positive_rate": 0.09706986337517703,
+      "metrics": {
+        "tree": {
+          "auc": 0.8322516383167361,
+          "logloss": 0.21037083241773227
+        },
+        "NN74": {
+          "auc": 0.8335804042952906,
+          "logloss": 0.21007763907835936
+        },
+        "v11": {
+          "auc": 0.8341068215451719,
+          "logloss": 0.20986897043625322
+        },
+        "R54": {
+          "auc": 0.834061678298972,
+          "logloss": 0.21005612592817954
+        },
+        "R55": {
+          "auc": 0.8341178619212792,
+          "logloss": 0.20986629842142976
+        },
+        "R56": {
+          "auc": 0.8340931760956036,
+          "logloss": 0.20986083978961048
+        }
+      },
+      "NN_minus_tree_auc": 0.0013287659785544692,
+      "NN_minus_tree_byfold": [
+        0.0038569148921981933,
+        0.0037458656577120664,
+        -0.0016871460541407757,
+        0.002081741750035282,
+        -0.0008614217521810685
+      ],
+      "logloss_weight_gradient_at_equal_pool": -54.050882608734774,
+      "mean_squared_logit_disagreement": 0.043748763280161466
+    },
+    {
+      "group": "('Eco', 'Personal Travel', 'disloyal Customer')",
+      "rows": 101,
+      "positive_rate": 0.10891089108910891,
+      "metrics": {
+        "tree": {
+          "auc": 0.6252525252525252,
+          "logloss": 0.2747675931591894
+        },
+        "NN74": {
+          "auc": 0.6333333333333333,
+          "logloss": 0.2944348547214507
+        },
+        "v11": {
+          "auc": 0.6212121212121211,
+          "logloss": 0.28334312446243154
+        },
+        "R54": {
+          "auc": 0.6202020202020201,
+          "logloss": 0.27951452387249975
+        },
+        "R55": {
+          "auc": 0.6191919191919191,
+          "logloss": 0.2820726498193536
+        },
+        "R56": {
+          "auc": 0.6262626262626262,
+          "logloss": 0.27845930758163107
+        }
+      },
+      "NN_minus_tree_auc": 0.008080808080808133,
+      "NN_minus_tree_byfold": [
+        0.0,
+        -0.18181818181818188,
+        0.0,
+        0.05263157894736836,
+        0.02352941176470591
+      ],
+      "logloss_weight_gradient_at_equal_pool": 2.0075160728754344,
+      "mean_squared_logit_disagreement": 0.3819529057107577
+    },
+    {
+      "group": "('Eco Plus', 'Business travel', 'Loyal Customer')",
+      "rows": 14983,
+      "positive_rate": 0.3948474938263365,
+      "metrics": {
+        "tree": {
+          "auc": 0.9409017521354996,
+          "logloss": 0.2900901360721467
+        },
+        "NN74": {
+          "auc": 0.9412336290285236,
+          "logloss": 0.28898067063975397
+        },
+        "v11": {
+          "auc": 0.9420048205482243,
+          "logloss": 0.2873204525251546
+        },
+        "R54": {
+          "auc": 0.9416844461854217,
+          "logloss": 0.28807594473947734
+        },
+        "R55": {
+          "auc": 0.9419841271794311,
+          "logloss": 0.28736459451197993
+        },
+        "R56": {
+          "auc": 0.9420936342499637,
+          "logloss": 0.2870821418601981
+        }
+      },
+      "NN_minus_tree_auc": 0.0003318768930239413,
+      "NN_minus_tree_byfold": [
+        0.0011943375481031637,
+        0.001770051010273055,
+        0.0001678616137477107,
+        -0.0010654841690200811,
+        -0.0002576320812939237
+      ],
+      "logloss_weight_gradient_at_equal_pool": -15.580384354505885,
+      "mean_squared_logit_disagreement": 0.1533684278190762
+    },
+    {
+      "group": "('Eco Plus', 'Business travel', 'disloyal Customer')",
+      "rows": 2574,
+      "positive_rate": 0.0641025641025641,
+      "metrics": {
+        "tree": {
+          "auc": 0.8691699057826081,
+          "logloss": 0.13987225248700494
+        },
+        "NN74": {
+          "auc": 0.8714567845327497,
+          "logloss": 0.1378546442608574
+        },
+        "v11": {
+          "auc": 0.8722241090858774,
+          "logloss": 0.1379200640657368
+        },
+        "R54": {
+          "auc": 0.8725134281796796,
+          "logloss": 0.13824064726377921
+        },
+        "R55": {
+          "auc": 0.8715775438066845,
+          "logloss": 0.13794436770996
+        },
+        "R56": {
+          "auc": 0.8695598576046896,
+          "logloss": 0.13817527812421773
+        }
+      },
+      "NN_minus_tree_auc": 0.002286878750141552,
+      "NN_minus_tree_byfold": [
+        0.02980897068084809,
+        0.007202257202257201,
+        0.019478319783197917,
+        -0.003589121423516306,
+        -0.01984126984126977
+      ],
+      "logloss_weight_gradient_at_equal_pool": -4.77072561086768,
+      "mean_squared_logit_disagreement": 0.180260892124013
+    },
+    {
+      "group": "('Eco Plus', 'Personal Travel', 'Loyal Customer')",
+      "rows": 12459,
+      "positive_rate": 0.09535275704310137,
+      "metrics": {
+        "tree": {
+          "auc": 0.8290935857256503,
+          "logloss": 0.20723698688425773
+        },
+        "NN74": {
+          "auc": 0.8295956414468525,
+          "logloss": 0.20713861990600643
+        },
+        "v11": {
+          "auc": 0.8311658118463192,
+          "logloss": 0.20671299956477798
+        },
+        "R54": {
+          "auc": 0.8312738033037917,
+          "logloss": 0.20708464015962935
+        },
+        "R55": {
+          "auc": 0.8314618548182562,
+          "logloss": 0.20668301759448252
+        },
+        "R56": {
+          "auc": 0.8314590168684748,
+          "logloss": 0.2067749196171089
+        }
+      },
+      "NN_minus_tree_auc": 0.0005020557212022103,
+      "NN_minus_tree_byfold": [
+        0.0101021862195535,
+        0.010594718652842894,
+        -0.0040183561805025025,
+        -0.004128058921359146,
+        -0.008173076923076783
+      ],
+      "logloss_weight_gradient_at_equal_pool": -1.064355088319131,
+      "mean_squared_logit_disagreement": 0.059834550472123306
+    },
+    {
+      "group": "('Eco Plus', 'Personal Travel', 'disloyal Customer')",
+      "rows": 3,
+      "positive_rate": 0.3333333333333333,
+      "metrics": {
+        "tree": {
+          "auc": 1.0,
+          "logloss": 0.5145791699590013
+        },
+        "NN74": {
+          "auc": 1.0,
+          "logloss": 0.45122238190392466
+        },
+        "v11": {
+          "auc": 1.0,
+          "logloss": 0.4813544893185855
+        },
+        "R54": {
+          "auc": 1.0,
+          "logloss": 0.4865458718978719
+        },
+        "R55": {
+          "auc": 1.0,
+          "logloss": 0.48237985827133073
+        },
+        "R56": {
+          "auc": 1.0,
+          "logloss": 0.48586990934783936
+        }
+      },
+      "NN_minus_tree_auc": 0.0,
+      "NN_minus_tree_byfold": [
+        null,
+        null,
+        null,
+        0.0,
+        null
+      ],
+      "logloss_weight_gradient_at_equal_pool": -0.18885821151371182,
+      "mean_squared_logit_disagreement": 0.4825914903721169
+    }
+  ]
+}

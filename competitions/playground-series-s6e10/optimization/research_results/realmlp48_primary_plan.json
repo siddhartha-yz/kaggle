@@ -1,0 +1,145 @@
+{
+  "protocol": {
+    "frozen_utc": "2026-10-17T22:24:47.438037+00:00",
+    "family": "Official pytabkit 1.7.3 RealMLP_TD_Classifier, not sklearn MLP",
+    "reference": "v5 frozen predictions",
+    "config": {
+      "device": "cpu",
+      "n_threads": 6,
+      "n_cv": 1,
+      "n_refit": 0,
+      "n_ens": 1,
+      "n_epochs": 48,
+      "batch_size": 1024,
+      "use_ls": false,
+      "val_fraction": 0.0,
+      "use_early_stopping": false,
+      "random_state": 42,
+      "verbosity": 0,
+      "predict_batch_size": 2048
+    },
+    "resolved_config": {
+      "act": "selu",
+      "act_lr_factor": 0.1,
+      "add_front_scale": true,
+      "batch_size": 1024,
+      "bias_init_mode": "he+5",
+      "bias_lr_factor": 0.1,
+      "bias_wd_factor": 0.0,
+      "block_str": "w-b-a-d",
+      "device": "cpu",
+      "embedding_size": 8,
+      "hidden_sizes": [
+        256,
+        256,
+        256
+      ],
+      "lr": 0.04,
+      "lr_sched": "coslog4",
+      "ls_eps": 0.1,
+      "max_one_hot_cat_size": 9,
+      "n_cv": 1,
+      "n_ens": 1,
+      "n_epochs": 48,
+      "n_refit": 0,
+      "n_repeats": 1,
+      "n_threads": 6,
+      "num_emb_type": "pbld",
+      "opt": "adam",
+      "p_drop": 0.15,
+      "p_drop_sched": "flat_cos",
+      "plr_hidden_1": 16,
+      "plr_hidden_2": 4,
+      "plr_lr_factor": 0.1,
+      "plr_sigma": 0.1,
+      "predict_batch_size": 2048,
+      "random_state": 42,
+      "scale_lr_factor": 6.0,
+      "sq_mom": 0.95,
+      "tfms": [
+        "one_hot",
+        "median_center",
+        "robust_scale",
+        "smooth_clip",
+        "embedding"
+      ],
+      "use_early_stopping": false,
+      "use_ls": false,
+      "use_parametric_act": true,
+      "val_fraction": 0.0,
+      "verbosity": 0,
+      "wd": 0.02,
+      "wd_sched": "flat_cos",
+      "weight_init_mode": "std",
+      "weight_param": "ntk"
+    },
+    "features": "Outer-train Distance statistics + five audited original-only teacher/lookup features; numeric median imputation and missing indicators fitted on outer-train. Native categorical conversion and robust scaling/PBLD embeddings fitted only to training rows passed into model.fit.",
+    "epoch_policy": "Exactly48, selected by no-score runtime feasibility only; no early stopping and no validation rows passed to model.fit. All confirmation/OOF/full fits identical epoch schedule.",
+    "blend_weight": 0.25,
+    "primary_gate": {
+      "minimum_delta_vs_v5": 0.0001,
+      "conditional_lower_bound_positive": true
+    },
+    "confirmation_gate": "conditional lower bound vs v5 positive",
+    "oof_gate": {
+      "minimum_pooled_delta_vs_v5": 0.0002,
+      "all_folds_positive": true,
+      "conditional_lower_bound_positive": true
+    },
+    "limits": {
+      "cpu_training_threads": 6,
+      "torch_interop_threads": 1,
+      "serial": true,
+      "paid_resources": false,
+      "training_start_cutoff_utc": "2026-10-18T00:40:00+00:00",
+      "training_hard_cutoff_utc": "2026-10-18T00:50:00+00:00",
+      "deadline_utc": "2026-10-18T01:02:51+00:00",
+      "remaining_submission_slots": 1
+    },
+    "runtime_probe": {
+      "status": "complete",
+      "rows": 50000,
+      "feature_width": 58,
+      "fit_seconds": 3.8401978879992384,
+      "config": {
+        "device": "cpu",
+        "n_threads": 6,
+        "n_cv": 1,
+        "n_refit": 0,
+        "n_ens": 1,
+        "n_epochs": 3,
+        "batch_size": 1024,
+        "use_ls": false,
+        "val_fraction": 0.0,
+        "use_early_stopping": false,
+        "random_state": 42,
+        "verbosity": 2
+      },
+      "cuda_build": null,
+      "torch_version": "2.9.1+cpu",
+      "torch_threads": 6,
+      "torch_interop_threads": 1,
+      "fit_params": [
+        {
+          "stop_epoch": {
+            "class_error": 0
+          },
+          "best_indiv_stop_epochs": {
+            "class_error": [
+              0
+            ]
+          }
+        }
+      ],
+      "score_evaluated": false
+    },
+    "estimated_primary_fit_seconds": 687.8046334388089,
+    "public_scores_used_for_parameter_selection": false,
+    "source_notebook_executed": false,
+    "limitations": "One shortened CPU recipe, not default256epochs or source-pretrained RealMLP. Reused validation samples; conditional intervals exclude model selection uncertainty."
+  },
+  "runner_sha256": "8cd8144b2005e615a151df8eb7274a93d559e4a968a5da4f35b1fc2d44b03076",
+  "feature_sha256": "f2716860b788dd7f3756cd8d1a7fd2546c4ab259d144dbe9ebaef1d8035b3761",
+  "reference_sha256": "4e53ad7cb682701b07cf361ca37f53fbe612c9dd63278e1cb8f0b53950d33cb0",
+  "external_features_sha256": "0fc3167103ca04ecaac018c622ccca4d8f7e365b46f032ad11f318e409dbfc55"
+}

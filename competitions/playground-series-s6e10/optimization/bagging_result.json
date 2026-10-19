@@ -1,0 +1,68 @@
+{
+  "plan": {
+    "experiment": "lgb63cats_bagging_s20261017",
+    "hypothesis": "Subsampled row/feature training adds genuine seed-dependent diversity to the deterministic full-row/full-feature LightGBM; a small frozen contribution may reduce ensemble variance.",
+    "parameters": {
+      "n_estimators": 639,
+      "learning_rate": 0.04,
+      "num_leaves": 63,
+      "max_depth": -1,
+      "min_child_samples": 150,
+      "reg_lambda": 10,
+      "objective": "binary",
+      "n_jobs": 6,
+      "random_state": 20261017,
+      "bagging_seed": 20261017,
+      "feature_fraction_seed": 20261017,
+      "verbosity": -1,
+      "colsample_bytree": 0.9,
+      "subsample": 0.8,
+      "subsample_freq": 1,
+      "max_bin": 255,
+      "deterministic": true,
+      "force_col_wise": true
+    },
+    "feature_mode": "targeted_categories",
+    "weights": {
+      "cb8": 0.4,
+      "lgb63cats": 0.4,
+      "bagged": 0.2
+    },
+    "acceptance": "Require positive AUC changes on both existing primary and confirmation rows, and strictly positive lower conditional paired 95% bound on confirmation versus the submitted 50/50 ensemble. No early stopping, tree/seed/weight search, or public-score tuning. Otherwise retain submitted best and produce no new CSV.",
+    "training_cutoff_utc": "2026-10-17T18:45:00+00:00",
+    "delivery_cutoff_utc": "2026-10-17T18:46:00+00:00",
+    "hard_deadline_utc": "2026-10-17T18:47:49+00:00",
+    "current_best_sha256": "e5006e109f93ee8263698fecc64881ad8a4311d94daef1055a12a11e9475769f",
+    "total_formal_submissions": 1,
+    "remaining_formal_submissions_maximum": 1,
+    "frozen_utc": "2026-10-17T18:41:18.728543+00:00"
+  },
+  "started_utc": "2026-10-17T18:41:48.633198+00:00",
+  "comparisons": {
+    "primary": {
+      "baseline_auc": 0.9581313490780615,
+      "candidate_auc": 0.9582112054287225,
+      "delta_auc": 7.98563506609895e-05,
+      "paired_se": 1.9212933728855375e-05,
+      "conditional_95pct_ci": [
+        4.219900055243297e-05,
+        0.00011751370076954604
+      ],
+      "candidate_logloss": 0.22877432142651963
+    },
+    "confirm": {
+      "baseline_auc": 0.959057856153056,
+      "candidate_auc": 0.9591094233123446,
+      "delta_auc": 5.156715928855693e-05,
+      "paired_se": 1.9462846869545533e-05,
+      "conditional_95pct_ci": [
+        1.3419979424247686e-05,
+        8.971433915286618e-05
+      ],
+      "candidate_logloss": 0.22572991816562482
+    }
+  },
+  "decision": "eligible_for_full_refit",
+  "ended_utc": "2026-10-17T18:42:11.506021+00:00",
+  "caveat": "Conditional intervals exclude selection uncertainty; confirmation reuses official training samples."
+}

@@ -1,0 +1,51 @@
+{
+  "status": "complete",
+  "fold": 0,
+  "outer_train_rows": 559708,
+  "outer_valid_rows": 139927,
+  "inner_train_rows": 447766,
+  "inner_meta_rows": 111942,
+  "nested_indices_sha256": "55f4550fbd167e2d78659c4e5330fe46c6f483f39c4e1c108aaee61f42f1559a",
+  "outer_valid_excluded_from_all_fitting": true,
+  "started_utc": "2026-10-17T20:49:21.128485+00:00",
+  "model_hashes": {
+    "lgb_original": "2c554f8e410c1fe41ba0a365e07070294f85481ae8ad648d01e0fbf5257797e9",
+    "cb_original": "e676619a3fc18530fc1553158a9bd6b3c43121f022dbe1fa9e0f615ec4075ade",
+    "residual_prior05": "299976df73781c129448ba9589aa17a85f7d17abc34415d24e062a3d9c9591b4"
+  },
+  "methods": {
+    "residual_tree": {
+      "comparison": {
+        "baseline_auc": 0.9605999142343083,
+        "candidate_auc": 0.9607488271562278,
+        "delta_auc": 0.00014891292191943073,
+        "paired_se": 6.718623392191877e-05,
+        "conditional_95pct_ci": [
+          1.722790343246995e-05,
+          0.0002805979404063915
+        ],
+        "candidate_logloss": 0.22308382938081514
+      },
+      "reload_maxdiff": 0.0,
+      "params": {
+        "n_estimators": 200,
+        "learning_rate": 0.02,
+        "num_leaves": 4,
+        "max_depth": 2,
+        "min_child_samples": 2000,
+        "reg_lambda": 100,
+        "objective": "binary",
+        "n_jobs": 6,
+        "random_state": 42,
+        "verbosity": -1,
+        "colsample_bytree": 1.0,
+        "subsample": 1.0,
+        "max_bin": 255,
+        "deterministic": true,
+        "force_col_wise": true
+      }
+    }
+  },
+  "elapsed_seconds": 252.88996650199897,
+  "ended_utc": "2026-10-17T20:53:33.168121+00:00"
+}

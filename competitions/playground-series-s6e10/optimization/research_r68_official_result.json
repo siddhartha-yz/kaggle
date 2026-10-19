@@ -1,0 +1,22 @@
+{
+  "status": "Complete",
+  "source": "Parent authenticated Kaggle cloud browser report",
+  "submitted_utc": "2026-10-19T05:26:14+00:00",
+  "verified_utc": "2026-10-19T05:28:00+00:00",
+  "verified_time_precision": "minute",
+  "candidate": "v12 R68 PureRankNet",
+  "csv_sha256": "f48276b144e8c9297fb9fec27174044a55a7eb3f2af23dde3f13478a38a4e545",
+  "public_auc": 0.96118,
+  "actual_rank": 676,
+  "leaderboard_entries": 2302,
+  "rank_before_submission": 692,
+  "rank500_public_auc": 0.96172,
+  "auc_gap_to500": 0.00054,
+  "remaining_daily_quota_observed": 9,
+  "quota_observation_utc": "2026-10-19T05:28:00+00:00",
+  "actual_top500_verified": false,
+  "do_not_resubmit_same_csv": true,
+  "parent_only_submitter": true,
+  "new_formal_submissions_since_v11": 1,
+  "next": "Evidence-based next iteration under unchanged validation and resource limits. Fresh quota recheck before any next submission."
+}

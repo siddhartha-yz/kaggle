@@ -1,0 +1,12 @@
+{
+  "split": "primary",
+  "methods": [
+    "logistic",
+    "residual_tree"
+  ],
+  "frozen_plan_sha256": "63273e89ead44185d3b94b19ce9c1ac38292787ba14685a70f3b8f0d969e374e",
+  "runner_sha256": "48c5f7ca3db064745074a4d966ae2d371d0f67216388a08a3e9422f0e182bec2",
+  "preprocessing_sha256": "6c029528249d6772a958b29c46f4f095da9f91136c2721eb2a4d268f360fcfe9",
+  "source_features_sha256": "0fc3167103ca04ecaac018c622ccca4d8f7e365b46f032ad11f318e409dbfc55",
+  "frozen_utc": "2026-10-17T20:45:01.017595+00:00"
+}

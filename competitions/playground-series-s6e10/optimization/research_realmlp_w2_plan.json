@@ -1,0 +1,125 @@
+{
+  "frozen_utc": "2026-10-18T02:46:03.923312+00:00",
+  "window": "2026-10-18 six-hour continuation requested by parent; one carried-over submission slot only",
+  "reference": "Frozen v5 predictions, OOF .9608926464364628; public scores are bookkeeping only",
+  "hypothesis": "Official256epoch schedule may improve complementarity beyond shortened48epoch schedule. A fresh seeded fit is required because48epoch cosine schedules already ended. No repeated rejected feature search.",
+  "config": {
+    "device": "cpu",
+    "n_threads": 6,
+    "n_cv": 1,
+    "n_refit": 0,
+    "n_ens": 1,
+    "n_epochs": 256,
+    "batch_size": 1024,
+    "use_ls": false,
+    "val_fraction": 0.0,
+    "use_early_stopping": false,
+    "random_state": 42,
+    "verbosity": 0,
+    "predict_batch_size": 2048
+  },
+  "resolved_config": {
+    "act": "selu",
+    "act_lr_factor": 0.1,
+    "add_front_scale": true,
+    "batch_size": 1024,
+    "bias_init_mode": "he+5",
+    "bias_lr_factor": 0.1,
+    "bias_wd_factor": 0.0,
+    "block_str": "w-b-a-d",
+    "device": "cpu",
+    "embedding_size": 8,
+    "hidden_sizes": [
+      256,
+      256,
+      256
+    ],
+    "lr": 0.04,
+    "lr_sched": "coslog4",
+    "ls_eps": 0.1,
+    "max_one_hot_cat_size": 9,
+    "n_cv": 1,
+    "n_ens": 1,
+    "n_epochs": 256,
+    "n_refit": 0,
+    "n_repeats": 1,
+    "n_threads": 6,
+    "num_emb_type": "pbld",
+    "opt": "adam",
+    "p_drop": 0.15,
+    "p_drop_sched": "flat_cos",
+    "plr_hidden_1": 16,
+    "plr_hidden_2": 4,
+    "plr_lr_factor": 0.1,
+    "plr_sigma": 0.1,
+    "predict_batch_size": 2048,
+    "random_state": 42,
+    "scale_lr_factor": 6.0,
+    "sq_mom": 0.95,
+    "tfms": [
+      "one_hot",
+      "median_center",
+      "robust_scale",
+      "smooth_clip",
+      "embedding"
+    ],
+    "use_early_stopping": false,
+    "use_ls": false,
+    "use_parametric_act": true,
+    "val_fraction": 0.0,
+    "verbosity": 0,
+    "wd": 0.02,
+    "wd_sched": "flat_cos",
+    "weight_init_mode": "std",
+    "weight_param": "ntk"
+  },
+  "features": "Outer-train Distance statistics + five audited original-only teacher/lookup features; numeric median imputation and missing indicators fitted on outer-train. Native categorical conversion and robust scaling/PBLD embeddings fitted only to training rows passed into model.fit.",
+  "feature_code_unchanged": true,
+  "source_pretraining": false,
+  "blend_weight": 0.25,
+  "primary_checkpoints": [
+    128,
+    192
+  ],
+  "futility": {
+    "at_epoch": 192,
+    "delta_below": 5e-05,
+    "gain_since128_at_most": 2e-05,
+    "interpretation": "Budget heuristic: stop low and plateaued primary blend; it is not statistical proof that epoch256 could not improve. Checkpoints cannot trigger early promotion or epoch/weight selection."
+  },
+  "primary_gate": {
+    "minimum_delta_vs_v5": 0.0001,
+    "conditional_lower_bound_positive": true,
+    "requires_full256epochs": true
+  },
+  "confirmation_gate": {
+    "conditional_lower_bound_positive": true,
+    "fixed_epochs": 256
+  },
+  "oof_gate": {
+    "minimum_pooled_delta_vs_v5": 0.0002,
+    "all_folds_positive": true,
+    "conditional_lower_bound_positive": true,
+    "early_reject": "Stop after any nonpositive completed-fold delta; do not run remaining folds or full fit."
+  },
+  "limits": {
+    "cpu_training_threads": 6,
+    "torch_interop_threads": 1,
+    "serial": true,
+    "paid_resources": false,
+    "gpu_requested": false,
+    "training_start_cutoff_utc": "2026-10-18T08:00:00+00:00",
+    "training_hard_cutoff_utc": "2026-10-18T08:30:00+00:00",
+    "candidate_delivery_target_utc": "2026-10-18T08:38:00+00:00",
+    "deadline_utc": "2026-10-18T08:43:36+00:00",
+    "remaining_submission_slots": 1
+  },
+  "runtime_estimate": {
+    "basis": "Measured453.2395seconds/48epochs at same CPU6 recipe, linearly scaled",
+    "primary_seconds": 2417.2775376106633,
+    "all_eight_fits_with_larger_full_fit_seconds": 19942.53968528797,
+    "adaptive_runtime_gate": "Re-estimate from actual epoch times before each fit. Preserve full-fit and delivery time; stop if insufficient."
+  },
+  "public_scores_used_for_parameter_selection": false,
+  "limitations": "Prior primary, confirmation, OOF partitions reused in model selection. Paired conditional intervals exclude selection uncertainty. No pristine independent holdout claim. A single256epoch recipe and fixed blend cannot establish a global ceiling."
+}

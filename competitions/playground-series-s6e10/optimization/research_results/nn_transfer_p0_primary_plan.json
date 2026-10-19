@@ -1,0 +1,73 @@
+{
+  "protocol": {
+    "frozen_utc": "2026-10-17T22:11:31.130946+00:00",
+    "reference": "Frozen v5 candidate, chosen from validation before any v5 public result is used",
+    "reference_oof_auc": 0.9608926464364628,
+    "reason": "The previous synthetic-only MLP showed complementary primary signal but narrowly failed confirmation. Test a distinct original-source pretraining view without source teacher probabilities, and select epochs for the actual fixed final blend rather than standalone NN AUC. Compare one no-pretraining control.",
+    "source": "Same public CC0 original129859 rows, all21 exact synthetic train/test overlaps excluded. No direct label overwrite or source rows appended during synthetic fine-tuning.",
+    "pretrain_epochs": [
+      0,
+      8
+    ],
+    "features": "Existing NeuralFeatures outer-train-only Distance statistics, normal quantiles, imputation and rating/original-category onehots; omit all five original teacher/lookup features. Source data transform with the same outer-train-fitted maps.",
+    "network": {
+      "hidden_layer_sizes": [
+        512,
+        256,
+        128
+      ],
+      "activation": "relu",
+      "solver": "adam",
+      "alpha": 0.1,
+      "batch_size": 2048,
+      "learning_rate_init": 0.0003,
+      "shuffle": true,
+      "max_iter": 1,
+      "early_stopping": false
+    },
+    "seed": 42,
+    "fine_tune_maximum_epochs": 60,
+    "primary_patience": 10,
+    "primary_seconds_cap": 900,
+    "source_epochs_fixed": 8,
+    "blend_weight": 0.25,
+    "primary_selection": "For each of exactly two networks, select epoch by fixed .75v5+.25NN AUC; only highest primary AUC candidate with delta>=.0001 and positive lower conditional bound vs v5 proceeds. Freeze source epochs, fine-tune epochs and weight.",
+    "confirmation": "Fixed selected source/fine-tune epochs, positive lower conditional bound vs v5",
+    "final_gate": "Fixed five-fold OOF, every fold delta vs v5 positive; pooled delta>=.0002 and conditional lower bound>0. Only then full refit/Library delivery.",
+    "limits": {
+      "cpu_threads": 6,
+      "serial": true,
+      "new_dependencies": false,
+      "paid_resources": false,
+      "remaining_submission_slots": 1,
+      "training_start_cutoff_utc": "2026-10-18T00:40:00+00:00",
+      "training_hard_cutoff_utc": "2026-10-18T00:50:00+00:00"
+    },
+    "limitation": "This remains an sklearn MLP, not RealMLP. Development splits are reused; conditional intervals exclude model-selection uncertainty.",
+    "public_scores_used": false
+  },
+  "source_audit": {
+    "source_sha256": "2ad76465f6115f93d16121891a6b1235acb8007a4ab065cae0dc46b60ad116e3",
+    "safe_mask_sha256": "fcc30179ed4f68ddab8323abe86e953dcaf13374dee46bd3c13abb55dfdbfe51",
+    "safe_rows": 129859,
+    "excluded_exact_rows": 21,
+    "near_key_groups": 111199,
+    "near_key_groups_with_conflicting_original_labels": 4475,
+    "original_rows_in_conflicting_near_groups": 10665,
+    "target_provenance": "Only CC0 original labels. No synthetic labels used to fit teacher or lookup. Exact matches to any synthetic train/test vector excluded.",
+    "exact_label_audit": {
+      "checked_utc": "2026-10-17T19:36:06.016304+00:00",
+      "exact_match_pairs_verified_value_by_value": 17,
+      "exact_match_train_label_agreements": 14,
+      "exact_match_train_label_conflicts": 3,
+      "policy": "All 21 original rows matching any train/test feature vector remain excluded, regardless of label agreement."
+    }
+  },
+  "reference_sha256": "4e53ad7cb682701b07cf361ca37f53fbe612c9dd63278e1cb8f0b53950d33cb0",
+  "runner_sha256": "afde630c4d7d1b6cfbd647fe90eab81b732975e9417053e612f9c33b96d41587",
+  "feature_sha256": "6f25479eb9928dc0d3821ccfe816477270cdafd56c90f4b30959420a2d896670",
+  "pretrain_epochs": 0,
+  "fine_tune_epochs": 60,
+  "fixed": false,
+  "started_utc": "2026-10-17T22:15:03.594391+00:00"
+}

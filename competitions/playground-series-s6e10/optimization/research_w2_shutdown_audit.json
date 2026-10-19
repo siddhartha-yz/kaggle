@@ -1,0 +1,25 @@
+{
+  "checked_utc": "2026-10-18T03:54:54.487671+00:00",
+  "matching_project_training_or_queue_processes": [],
+  "stage16_state": {
+    "stage": "complete",
+    "status": "complete",
+    "eligible_for_full": false,
+    "recovered_from_completed_primary": true,
+    "utc": "2026-10-18T03:34:34.717139+00:00"
+  },
+  "stage17_state": {
+    "stage": "complete",
+    "status": "complete",
+    "utc": "2026-10-18T03:49:23.281109+00:00",
+    "eligible_for_full": true
+  },
+  "old_conditional_export_state": {
+    "status": "complete",
+    "utc": "2026-10-18T03:34:38.968741+00:00",
+    "stage": "no_eligible_candidate"
+  },
+  "gpu_probe_completed": true,
+  "gpu_install_completed": true,
+  "data_deleted": false
+}

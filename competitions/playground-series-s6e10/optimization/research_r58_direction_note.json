@@ -1,0 +1,16 @@
+{
+  "status": "standby_draft_not_executed",
+  "noted_utc": "2026-10-19T00:11:25.111679+00:00",
+  "conditional_on": "Only after R57 terminal not_qualified; never interrupt or run concurrently with current fits",
+  "hypothesis": "Current strongest expert NN74 is trained with pointwise CE while the competition evaluates positive-negative ranking. Complete-fold diagnostics show remaining ranking errors throughout the same raw cohorts. One fixed small pairwise logistic auxiliary term may alter finite-network ranking while retaining supervised probability training; no claim that CE is asymptotically AUC-inconsistent.",
+  "method": ".9 original scheduled label-smoothed CE +.1 mean softplus(-(positive_score-negative_score)) within each native minibatch/model; score=class1logit-class0logit, original hard labels recovered from argmax of smoothed labels. All eligible pairs, no hardpair mining/selection. One-class batch ranking term0.",
+  "primary_sources": [
+    "https://www.microsoft.com/en-us/research/wp-content/uploads/2005/08/icml_ranking.pdf",
+    "https://docs.pytorch.org/docs/2.9/generated/torch.nn.functional.softplus.html"
+  ],
+  "source_caveat": "RankNet supplies only the established pairwise logistic loss. Our composite coefficient .1 is one prospectively chosen hypothesis, not a published optimal coefficient or transferred performance result.",
+  "planned_protocol": "Exact old74 features/native32/3epochs/seed42/batch256/predict1024 and actualv11tree equal logitpool; no other recipe changes. First synthetic math tests and fullsynthetic1epoch hardware probe; only then frozen5+3 originaldualCIgates. OOM/cap/gradient/reload failure stops, no fallback or weight grid.",
+  "resources": "CPU6, allocator742MiB/processGPU1GiB, RSS8GiB/available2GiB, serial, no installed file edits or paid resources",
+  "quality_evaluated": false,
+  "training_started": false
+}

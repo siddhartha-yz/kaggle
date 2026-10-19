@@ -1,0 +1,52 @@
+{
+  "frozen_utc": "2026-10-19T03:54:09.846481+00:00",
+  "parameters": {
+    "iterations": 2,
+    "depth": 8,
+    "learning_rate": 0.07,
+    "l2_leaf_reg": 5,
+    "loss_function": "PairLogit",
+    "eval_metric": "AUC",
+    "task_type": "CPU",
+    "thread_count": 6,
+    "random_seed": 42,
+    "allow_writing_files": false,
+    "verbose": 1,
+    "border_count": 128,
+    "max_ctr_complexity": 1,
+    "one_hot_max_size": 2,
+    "boosting_type": "Plain",
+    "bootstrap_type": "Bayesian",
+    "bagging_temperature": 1.0
+  },
+  "source_sha256": {
+    "research_r67_probe.py": "75293b8bf3694d82ef48e91590510f2ac1aa74e21ec2184989a517c429b0375c",
+    "research_r67_pairs.py": "81a11ff1842ef2e3331ef5247c64e184f07df27e57ce8670d0206047e76675e4",
+    "test_research_r67_pairs.py": "38a5842789d4ef4e993ea8028455b6366230741d58ecf6aafd4750aaba7740bf",
+    "research_r40_worker.py": "64c5ec6fa341341b5a03e087a65bf8a79751730c1c97847d583a5aa24402cf5c",
+    "research_r4_common.py": "53eedffd572f6a82b9c3dba70e3315ab1df51dd9242396ab22da7f8dabc52e81",
+    "research_r21_features.py": "8f36832e0e6ba8f04875ef130d8e41fc018cc8c3d644337dc34e9271f3e9c65a",
+    "research_r23_loader.py": "b21b6210be0b72350d63942e7c86b1ad872165d55a4e2c66fcdab3a059a8b64a",
+    "research_external_ablation.py": "08520e678e0886ef2fca3a2658d9df377c9a43896d0305840757fe387b01b9e3",
+    "research_features.py": "6c029528249d6772a958b29c46f4f095da9f91136c2721eb2a4d268f360fcfe9"
+  },
+  "artifact_sha256": {
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "research_artifacts/r21_probability_lgb_officialcb_full/transformer.joblib": "f6b90ad43a7b603b822f291abd4559d88e9480331b0872696067dd3f24f61573",
+    "research_r67_pairs_test.json": "9e51763436c4ff45604fc8a06e686fc6fcbfedd745455e249efc3a0dd0b14a2f",
+    "research_r66_result.json": "33755d33d15ae0457d500582aa87f0e232cbd3c45bc2a457d39418ecee71d2ba",
+    "research_r21_pre_inference_audit.json": "9bf51d44df4a0b2cac2ca32ba6818fa5a59d10de1d5a4cdd754f4ccc6a599db9",
+    "research_artifacts/original_teacher_v1/result.json": "35c20bbd3a2eff503bc64d436dc680cdf66298c807eac521b1d75c0b936be9f2",
+    "research_artifacts/original_teacher_v1/model.txt": "db538bc2303ee5075be4016e0653424ad885d3cd207001dbddb42441e66588e4",
+    "research_artifacts/original_teacher_v1/train_features.npz": "0fc3167103ca04ecaac018c622ccca4d8f7e365b46f032ad11f318e409dbfc55",
+    "research_artifacts/original_teacher_v1/test_features.npz": "ad01c903f7a1ef371c164c9e7e2d850e00825c2e1b7c1d18e683ccc888822d50",
+    "research_artifacts/r20_aux_officialcb/result.json": "b0b8d914a5d37fcf0fb11a31858daae9db86c277baf3bd6fe7525066fa410e2b",
+    "research_artifacts/r20_aux_officialcb/train_features.npz": "453272cc42fda45ad6708b81460fbee023d58372f6c812bebdd0c829f4136651",
+    "research_artifacts/r20_aux_officialcb/test_features.npz": "15f43469d88c0c432b52e2b3a5514ff6db65abc9bc9eb4732271bce15b88b84a",
+    "research_artifacts/r21_conditional_officialcb/result.json": "bdffd97687e51e432355afad14f7320ab8175bb0298ba6d0e84992bb39717ee6",
+    "research_artifacts/r21_conditional_officialcb/train_features.npz": "a84aa864037d83224699765a7b6d69beb2861f9fa16c61b67dc324d71f121a95",
+    "research_artifacts/r21_conditional_officialcb/test_features.npz": "7ecc4ffc7ab935d23194a7b9c18fcfca3fd40c8a34748dfa1ffb55120a7b8bcb"
+  },
+  "target_scope": "Official SAT never parsed; synthetic alternating labels. Existing external sourceSAT teacher features cached from safe original CC0 data; not a global label-free claim.",
+  "purpose": "Full training-group/linear pair-memory/native CPU support proof; no official model validation or quality search."
+}

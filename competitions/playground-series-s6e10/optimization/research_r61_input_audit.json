@@ -1,0 +1,19 @@
+{
+  "status": "passed_synthetic_labels_no_official_SAT_or_quality",
+  "audited_utc": "2026-10-19T01:01:40.137113+00:00",
+  "generator_audit_sha256": "aa016e8a99bccb66f257545587f4217f79196e8df488d338280692af292bc7f3",
+  "proof": {
+    "rows": 2048,
+    "unchanged_fields_exact": 61,
+    "replaced_numeric_fields": 13,
+    "feature_width": 74,
+    "numeric_fields": 52,
+    "nominal_fields": 22,
+    "raw_category_identities_unchanged": true,
+    "old14surprisals_unchanged": true,
+    "original_raw_delay_coordinates_unchanged": true
+  },
+  "official_SAT_values_parsed": false,
+  "labels": "synthetic alternation only",
+  "new_model_fits": 0
+}

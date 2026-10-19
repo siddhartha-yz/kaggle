@@ -1,0 +1,26 @@
+{
+  "audited_utc": "2026-10-18T22:32:55.618038+00:00",
+  "source": "https://huggingface.co/Prior-Labs/TabPFN-v2-clf",
+  "revision": "f851f2a3c941544733b712d8c0f96dfae9b28862",
+  "checkpoint": "tabpfn-v2-classifier-finetuned-zk73skhh.ckpt",
+  "checkpoint_sha256": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49",
+  "bytes": 29009539,
+  "file_last_commit": {
+    "id": "31b19748abacbe8b5b7a20959e23119f25695861",
+    "title": "Upload 2 files",
+    "date": "2025-07-08T11:40:37.000Z"
+  },
+  "checkpoint_predates_competition": true,
+  "base_alias": "tabpfn-v2-classifier-v2_default.ckpt",
+  "base_alias_SHA_identical": true,
+  "first_party_card_statement": "finetuned-* filenames are content-identical aliases of base checkpoints, retained for compatibility.",
+  "model_card_url": "https://huggingface.co/Prior-Labs/TabPFN-v2-clf/blob/f851f2a3c941544733b712d8c0f96dfae9b28862/README.md",
+  "model_card_sha256": "269434f5c1db993269af9218ef0a50016da811ae5b323eea73e06ac9e8fef3e9",
+  "expanded_tree_sha256": "2f42c3319b4022a664a509792aade451b91064fc717bd14a2ca2047f9a4f2e16",
+  "license": "Prior Labs License1.1 (Apache2 derivative + enhanced attribution)",
+  "license_sha256": "08b1851b4b6136b5fb0cb124d3258e0d91e3e1623f1be5904b77e4d270d112d8",
+  "public_OOF_or_test_predictions_imported": false,
+  "training_corpus_independently_inspected": false,
+  "scope": "Verified official artifact identity, release chronology and base-alias claim. No claim that an unknown complete training corpus was independently audited.",
+  "attribution": "Built with PriorLabs-TabPFN"
+}

@@ -1,0 +1,45 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-18T05:31:31.483754+00:00",
+  "hardware": {
+    "initial_gpu_free_bytes": 3389456384,
+    "gpu_name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "cap_bytes": 1073741824
+  },
+  "scores_evaluated": false,
+  "cat_cardinalities": [
+    76,
+    3447,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    6,
+    7,
+    7,
+    159,
+    160,
+    3,
+    3,
+    3,
+    4
+  ],
+  "epochs": [
+    {
+      "epoch": 1,
+      "seconds": 8.274317236006027,
+      "train_loss": 0.24817471654957798,
+      "gpu_free_bytes": 2721579008
+    }
+  ],
+  "fit_seconds": 8.27463930000522,
+  "peak_allocated_bytes": 557395456,
+  "peak_reserved_bytes": 614465536,
+  "completed_utc": "2026-10-18T05:31:45.810767+00:00"
+}

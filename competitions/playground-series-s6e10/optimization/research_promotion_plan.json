@@ -1,0 +1,29 @@
+{
+  "frozen_utc": "2026-10-17T19:14:02.231115+00:00",
+  "reason": "Numeric distance groups materially beat the existing submitted model; first check fixed-tree confirmation, measure incremental inner-OOF TE, then test whether 639 rounds underfit the stronger numeric-group representation. No parameter grid.",
+  "commands": [
+    [
+      "--mode",
+      "distance_stats_numeric",
+      "--split",
+      "confirm",
+      "--tag",
+      "b1"
+    ],
+    [
+      "--mode",
+      "distance_stats_te",
+      "--tag",
+      "c1"
+    ],
+    [
+      "--mode",
+      "distance_stats_numeric",
+      "--tag",
+      "c2",
+      "--trees",
+      "4000",
+      "--early-stop"
+    ]
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-10-18T19:25:39.633355+00:00",
+  "rows": 139927,
+  "prefix_columns": 57,
+  "all_values_and_dtypes_exact_on_identical_query_batch": true,
+  "previous_guard_false_positive": true,
+  "model_recipe_changed": false,
+  "outer_quality_scores_computed": false
+}

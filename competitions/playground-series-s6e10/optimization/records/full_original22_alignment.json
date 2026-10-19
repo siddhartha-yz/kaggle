@@ -1,0 +1,20 @@
+{
+  "status": "aligned",
+  "rows": 129880,
+  "source21_predictor_multiset_identical_to_CC0": true,
+  "source21_plus_true_label_multiset_identical_to_CC0": true,
+  "extra_observed_feature": "Inflight service",
+  "extra_feature_counts": {
+    "4": 47323,
+    "5": 34066,
+    "3": 25316,
+    "2": 14308,
+    "1": 8862,
+    "0": 5
+  },
+  "source_safe_rows": 129859,
+  "globally_excluded_exact_predictor_matches": 21,
+  "source_satisfaction_true_rate": 0.43446258084385586,
+  "license": "Other(specifieddescription),publicsourceattributionTeejMahal20/JohnD;existing21projectionalreadyavailableunderCC0;newattributeprivateanalysis,no rawredistribution",
+  "official_label_or_prediction_data_downloaded": false
+}

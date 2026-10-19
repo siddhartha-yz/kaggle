@@ -1,0 +1,83 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-18T03:46:08.484801+00:00",
+  "epochs": [
+    {
+      "epoch": 1,
+      "seconds": 11.819312718005676,
+      "gpu_free_bytes": 3420061696
+    },
+    {
+      "epoch": 2,
+      "seconds": 7.672623746999307,
+      "gpu_free_bytes": 3420061696
+    },
+    {
+      "epoch": 3,
+      "seconds": 7.665846536001482,
+      "gpu_free_bytes": 3269132288
+    }
+  ],
+  "train_rows": 559708,
+  "valid_rows": 139927,
+  "initial_gpu_free_bytes": 3988389888,
+  "feature_width": 38,
+  "threadpools": [
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 6,
+      "prefix": "libgomp",
+      "filepath": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/.venv-gpu/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+      "version": null
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 6,
+      "prefix": "libscipy_openblas",
+      "filepath": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/.venv-gpu/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-5f890258.so",
+      "version": "0.3.31.dev",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 6,
+      "prefix": "libgomp",
+      "filepath": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/.venv-gpu/lib/python3.12/site-packages/torch/lib/libgomp.so.1",
+      "version": null
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 6,
+      "prefix": "libscipy_openblas",
+      "filepath": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/.venv-gpu/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-fdde5778.so",
+      "version": "0.3.30",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    }
+  ],
+  "fit_seconds": 27.206997932997183,
+  "actual_epochs": 3,
+  "peak_allocated_bytes": 1535387136,
+  "peak_reserved_bytes": 2134900736,
+  "auc": 0.9607661670612833,
+  "vs_v5": {
+    "baseline_auc": 0.9610011563388294,
+    "candidate_auc": 0.9612778335243019,
+    "delta_auc": 0.00027667718547241815,
+    "paired_se": 4.077149457054361e-05,
+    "conditional_95pct_ci": [
+      0.00019676505611415266,
+      0.00035658931483068364
+    ],
+    "candidate_logloss": 0.22225870478588935
+  },
+  "model_reload_max_abs_diff": 0.0,
+  "model_sha256": "1d634ddbfd09f0f82cc4b02dc221ee63be6b57660b02bca341eeeaf76834249b",
+  "elapsed_seconds": 30.94015492300241,
+  "ended_utc": "2026-10-18T03:46:39.424958+00:00"
+}

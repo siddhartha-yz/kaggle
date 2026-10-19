@@ -1,0 +1,22 @@
+{
+  "frozen_utc": "2026-10-18T07:01:00+00:00",
+  "hypothesis": "A public synthetic-pretrained in-context model may add interactions independent of gradient boosting and supervised neural networks. Training-only feature routing supplies locally relevant context within a strict VRAM budget.",
+  "pretrained_model_sha256": "bdc7dbd5e4ff21f8f0456fcf90c6b7cdf72dbea960f2d05b19bec19f9b3d4ed0",
+  "hardware_probe": "research_w3_tabicl_hardware.json",
+  "clusters": 128,
+  "router": "MiniBatchKMeans, n_init=1, batch_size=8192, max_iter=100, max_no_improvement=20, random_state=20261018",
+  "router_inputs": "17 train-only median/quantile-normal numeric features, four train-only one-hot categorical features, train-only standardized source-teacher logit; no id, target or heldout fit",
+  "model_inputs": "raw 21 predictors plus independently trained original-source teacher logit",
+  "context_rows": 1024,
+  "context_selection": "Per route, up to 512 training rows selected uniformly without labels from its local cluster; fill remaining positions uniformly without labels from training rows outside that cluster. Context is unique and disjoint from all heldout queries.",
+  "random_seed": 20261018,
+  "n_estimators": 4,
+  "norm_methods": ["none", "power"],
+  "query_batch_rows": 128,
+  "kv_cache": true,
+  "immutable_weights_reuse": "Probe A-B-A and native reload comparisons both exactly zero; fit resets native encoders, ensemble and KV context each route",
+  "candidate": "0.75 * frozen v6 + 0.25 * routed TabICL",
+  "selection": "Existing W3 primary/confirmation/OOF gates unchanged. No weight search, heldout early stopping or validation-based route/context selection.",
+  "cutoffs": "Existing W3 start 10:10 UTC, hard stop 10:45 UTC, absolute end 11:06 UTC",
+  "no_formal_submission_without_parent": true
+}

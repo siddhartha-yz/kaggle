@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-18T05:20:27.640749+00:00",
+  "error": "New feature module had not been saved when probe interpreter imported it.",
+  "repair": "Saved importable feature module before rerunning same no-score probe.",
+  "training_started_in_failed_attempt": false,
+  "scores_used": false
+}

@@ -1,0 +1,7 @@
+{
+  "recorded_utc": "2026-10-18T07:00:09.208372+00:00",
+  "plan_sha256": "036cfef01d73aa4460df5bc4b617a03a42131168a5d2e30e4fa0053eb2ca3b8c",
+  "correction": "frozen_utc literal 07:01 was a timestamp typo. Preserve the immutable plan and its hash; actual file creation and primary launch occurred before 06:58:57 UTC, before any new validation metric. No algorithm, weight or gate changed.",
+  "observed_file_mtime_utc": "2026-10-18T06:58:48.284655+00:00",
+  "run_start_utc": "2026-10-18T06:58:57.544657+00:00"
+}

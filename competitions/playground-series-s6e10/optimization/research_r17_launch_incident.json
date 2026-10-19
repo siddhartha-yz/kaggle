@@ -1,0 +1,9 @@
+{
+  "incident": "Initial nohup driver583989 and worker583990 disappeared after firstepoch; no Python traceback or NVML ceiling failure record. Exact cause unconfirmed.",
+  "observed_first_epoch_seconds": 21.64011809899239,
+  "observed_first_epoch_gpu_process_peak_bytes": 790626304,
+  "old_processes_confirmed_absent_before_restart": true,
+  "kernel_oom_evidence_found": false,
+  "restart": "Same frozen plan under managed exec foreground session52135; no candidate/config/seed change and no quality scores read.",
+  "submission_effect": "None. v9backup retained, formalused1 remaining1."
+}

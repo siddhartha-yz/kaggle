@@ -1,0 +1,15 @@
+{
+  "python": "Python 3.12.14",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.18.1",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "catboost": "1.2.8",
+    "lightgbm": "4.6.0",
+    "torch": "2.9.1+cu128",
+    "pytabkit": "1.7.3",
+    "cloudpickle": "3.1.2"
+  },
+  "scope": "Recorded v12 model runtime; CLI replay only needs NumPy/SciPy and never imports PyTorch or loads model pickles."
+}

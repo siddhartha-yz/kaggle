@@ -1,0 +1,56 @@
+{
+  "frozen_utc": "2026-10-18T18:48:29.693162+00:00",
+  "stage": "FixedmatchedNN80native32/batch256/predict1024 oneepochhardwareproof beforeanyquality. Ifitfailscancelthisroute; no reducedmember/batch fallback.",
+  "mechanism": "CurrentNN74 hasneverreceivedmissingInflightservicepredictions. PriorW3LGBusedall11sourcefields andfailed; R17originalSATlogitNNfailed. HereappendONLYsixclassprobabilities P(unobservedInflightservice=k|21knownraw) fromcachedsource-only serviceclassifier. ExcludeSATmarginal/lookups/means/entropy. Samecurrent27officialconditionalfields+Lean47=80; all6statesuniformlyincluded beforequality.",
+  "source_teacher": "ExistingLGB475/63source-onlymulticlass, source129859exactnonmatchingrows; currentindependentteacher auditpassed6probCPUreplaysontrain/test2048eacherror0. No originalSAT22model loaded, noofficialSATlabels loadedinaudit, noauxiliaryretraining.",
+  "tree_control": {
+    "fivefold": "research_artifacts/r21_probability_lgb_officialcb_fivefold/oof.npz",
+    "threefold": "research_artifacts/r21_probability_lgb_officialcb_threefold/oof.npz"
+  },
+  "limits": {
+    "cpu_threads": 6,
+    "allocator_bytes": 778043392,
+    "own_GPU_bytes": 1073741824,
+    "RSS_bytes": 8589934592,
+    "available_RAM_min_bytes": 2147483648,
+    "paid_resources": false
+  },
+  "source_sha256": {
+    "research_r29_features.py": "6e05e961ec6c71543ff79936ef898542374cbb326013b42c64e0391ed5de0298",
+    "research_r29_loader.py": "bd67378c528952030ec29be719baa87aa6176b5e77ac23b04c3471e1e7b86063",
+    "research_r29_probe.py": "6541ca16d97cdb8293f17fa8e8396b19ff6f5870dd0c4c2854bdc06f92868e9c",
+    "research_r23_guard.py": "13e4de70ccb00335a65bd13c1acdd6b00cf38b7c218a4f9506393258e23ed270",
+    "research_r23_loader.py": "b21b6210be0b72350d63942e7c86b1ad872165d55a4e2c66fcdab3a059a8b64a",
+    "research_r4_lean_features.py": "cfe6f672865f30622ce8e5cf9149f11e2e6f822f9c1b687f7e7c0431c9218303",
+    "research_features.py": "6c029528249d6772a958b29c46f4f095da9f91136c2721eb2a4d268f360fcfe9",
+    "research_r8_probe.py": "2fd57d3f2dbe29a1490126d2299d57388424e86a45b1f3fcce97a2945ebf7fb9",
+    "research_r8_streaming.py": "4ffac94fcc417fa98ddc8237a6721efde5b098287b9b748ed734fe86396c3d44",
+    "research_r15_loader.py": "00f8cf7e231c496aeadb92af0209f7b288ac6093ade109c6bb61b09155efae36",
+    "research_w3_common.py": "283ac69b13f64b32c1a33cbc41acea1ce2d598a4552391bc3f886aaea6f23a4b"
+  },
+  "artifact_sha256": {
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "data/test.csv": "ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6",
+    "data/sample_submission.csv": "6165ecc5769962253534c2d840f26aab55dc3cc091d256bb3641bf6608194a71",
+    "research_r8_plan.json": "6f5419bf618336ed5d55777f2614172a6e2ea62bc20cb81a223cadcc9121b984",
+    "research_r29_teacher_audit.json": "f63d40755859130f54100cd920ad15e603466e52ecd40c2f16d106ba4f4b148b",
+    "research_r28_result.json": "78c549aa3fed1945ca4be6d43c5e46ccfa0a35162af971ada67d618fedf107ab",
+    "research_v11_official_result.json": "1e0145baf4fb7ba83e294ff2e2e24f2fb7fdbdd9dc2060707e144e567e1b0484",
+    "research_r23_pre_inference_audit.json": "de9218638ad38332b404bf753246739ac4c453ac389b8a1a3959f8a696da190b",
+    "research_artifacts/r20_aux_officialcb/result.json": "b0b8d914a5d37fcf0fb11a31858daae9db86c277baf3bd6fe7525066fa410e2b",
+    "research_artifacts/r20_aux_officialcb/train_features.npz": "453272cc42fda45ad6708b81460fbee023d58372f6c812bebdd0c829f4136651",
+    "research_artifacts/r20_aux_officialcb/test_features.npz": "15f43469d88c0c432b52e2b3a5514ff6db65abc9bc9eb4732271bce15b88b84a",
+    "research_artifacts/r21_conditional_officialcb/result.json": "bdffd97687e51e432355afad14f7320ab8175bb0298ba6d0e84992bb39717ee6",
+    "research_artifacts/r21_conditional_officialcb/train_features.npz": "a84aa864037d83224699765a7b6d69beb2861f9fa16c61b67dc324d71f121a95",
+    "research_artifacts/r21_conditional_officialcb/test_features.npz": "7ecc4ffc7ab935d23194a7b9c18fcfca3fd40c8a34748dfa1ffb55120a7b8bcb",
+    "research_artifacts/w3_service_teacher/result.json": "bff23691e854d472cdf4acc851dcbcfe8da61c595dfc026b25d6fe62788878b1",
+    "research_artifacts/w3_service_teacher/train_features.npz": "431f720763294085e10f5d27f756aa3f4e6938aaa7378c4a772dfca7dca1ce89",
+    "research_artifacts/w3_service_teacher/test_features.npz": "623ad95518417db2ba3b40fb810459a40995fc7bfbceb24bc032b3ec986c9be0",
+    "research_artifacts/w3_service_teacher/service_model.txt": "3aa9c7480b0c003ce5756e3b8f1ad1b783a779b4be45afa6db2b8e2e793636f6",
+    "research_artifacts/w3_service_teacher/transformer.joblib": "03aa41cb3b13d2d1912a8ba1324b49e00129b0b9ff122246bbc39dc4e46727d9",
+    "research_artifacts/r21_probability_lgb_officialcb_fivefold/oof.npz": "ff911354393ad4f08c3d7ef7448bc6c64ac1ad17129fcd279aa067f8d09d0938",
+    "research_artifacts/r23_conditional_lean_fivefold/oof.npz": "26d8a9a89cfaa3a928300fb0f63f361a50b7c7a2e39dc1c820161b6f33960ea3",
+    "research_artifacts/r21_probability_lgb_officialcb_threefold/oof.npz": "bad7accc330405cf8387f6294a992ac6249b72cebf3003948452159efe49a869",
+    "research_artifacts/r23_conditional_lean_threefold/oof.npz": "00d6fa411ee705011260a37daba99b6037dc68ff3cb26e17d57830e3df4872aa"
+  }
+}

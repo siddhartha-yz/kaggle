@@ -1,0 +1,30 @@
+{
+  "status": "complete_no_quality_score",
+  "pid": 630679,
+  "no_quality_score": true,
+  "query_labels_used": false,
+  "allocator_cap_bytes": 778043392,
+  "gpu_process_ceiling_bytes": 1073741824,
+  "attempts": [
+    {
+      "context_rows": 32768,
+      "status": "allocator_OOM",
+      "error_type": "OutOfMemoryError",
+      "seconds": 2.2369647449959302
+    }
+  ],
+  "compatibility": {
+    "same_schedule_native_probability_error": 0.0,
+    "stock_auto_batch_bitwise_equivalence": false,
+    "A_B_A_error": 0.0,
+    "counters": {
+      "staged_cache_entries": 900,
+      "chunked_ff_calls": 0
+    },
+    "cache_devices": [
+      "cpu"
+    ]
+  },
+  "peak_gpu_process_bytes": 983564288,
+  "peak_rss_bytes": 2876690432
+}

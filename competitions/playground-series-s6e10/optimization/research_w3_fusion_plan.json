@@ -1,0 +1,24 @@
+{
+  "frozen_utc": "2026-10-18T05:44:15.921892+00:00",
+  "hypothesis": "Three positivebutindividuallyinsufficient neuralroutes make complementary deviationsfromv6:rawTabMvsvalueTabM correlation.267,rawTabMvsDeepFM.214,computedwithouttargets. Averagingdistinctrepresentations mayreducevarianceenoughforrobustincrement. This is a newcontrolledfusion,notretestingindividualrecipes.",
+  "components": {
+    "raw_tabm16": "exactW3rawTabM20epochrecipe",
+    "nested_value_tabm16": "exactW3training-only10%innerAUCmax20/patience4/freshrefitrecipe",
+    "deepfm4": "exactW3fixed4members3epochrecipe"
+  },
+  "weights": {
+    "v6": 0.5,
+    "raw_tabm": 0.16666666666666666,
+    "nested_tabm": 0.16666666666666666,
+    "deepfm": 0.16666666666666666
+  },
+  "exact_formula": ".5*v6+(raw_tabm+nested_tabm+deepfm)/6",
+  "matched_weight_control": ".5*v6+.5*cached_old_RealMLP2",
+  "primary": "Reuseownsavedprimarypredictions,verifyIDs/targets/idx;oneuniformweightrecipeonly,nosearch. Requireunchangedprimarygateandpositivepointvscontrol.",
+  "confirmation": "Onlyifprimarypasses;reuseownnestedconfirmationalreadycompleted;fitpreviouslyuntestedrawTabM/DeepFMconfirmationcomponentsonceaspartofthisnewfusion;noindividualpromotionrule.",
+  "oof": "Onlyifconfirmationpasses;samefixed5fold;freshthreecomponentfitswithinoutertrain,fusiongateeachfoldpositive;pooleddelta>=.0002andpositivelowerCI. Nestedmethodinneronly;predictionsareaveragedatfixedweights.",
+  "full": "Onlyallgatespass;serialthreefamiliesfullfits,useauditedsavedv6CSVcomponents;checkpointreloadandCSV/source/IDhashaudits;parentonlyformal.",
+  "gates": "UnchangedW3primarydelta>=.0001lower>0;confirmationlower>0;fivefoldeverypositiveandpooleddelta>=.0002lower>0;matchedcontrolpoint>0",
+  "resources": "CPU6serial;GPUallocator1GiBwithinitialcap+1.25GiBguardand1GiBepochheadroom;unchanged10:10start10:45hard11:06deadline",
+  "scope_bias": "Methodsandfamilychosenafterreusedprimary/OOF diagnostics. ControlledweightsfrozenbeforefusionAUC,noexternalpredictions/publicscore/weightgrid. Conditionalintervalsdo notremoveselectionbias."
+}

@@ -1,0 +1,13 @@
+{
+  "updated_utc": "2026-10-18T16:58:54.135752+00:00",
+  "status": "qualified_audited_Library_delivered_unsubmitted",
+  "driver_pid": 619531,
+  "formal_used": 1,
+  "remaining": 1,
+  "whole_top100_task_completed": false,
+  "variant": "officialcb",
+  "stage": "threefold",
+  "active_training": false,
+  "active_work": false,
+  "actual_top100_verified": false
+}

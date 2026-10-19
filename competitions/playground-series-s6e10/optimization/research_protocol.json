@@ -1,0 +1,41 @@
+{
+  "window_deadline_utc": "2026-10-18T01:02:51+00:00",
+  "training_start_cutoff_utc": "2026-10-18T00:40:00+00:00",
+  "training_hard_cutoff_utc": "2026-10-18T00:50:00+00:00",
+  "candidate_delivery_target_utc": "2026-10-18T00:55:00+00:00",
+  "paid_resources": false,
+  "cpu_training_threads": 6,
+  "new_submission_limit": 4,
+  "new_submissions_used": 0,
+  "baseline": {
+    "name": "submitted_40_40_20_bagged_v2",
+    "public_auc_reported": 0.95857,
+    "csv_sha256": "49ad4d7e282300289c9c9fc263313c6232a674b3846d48caa7f35ae8f89f4766"
+  },
+  "development": "Reuse saved seed42 primary split and existing model predictions for low-cost feature ablations; no rerun of identical old fits. Existing seed20261017 confirmation is reused stability evidence, not a clean independent test.",
+  "outer_validation": "For selected new families, use a fixed five-fold stratified split seed20261018, grouping exact predictor duplicates if present. Current audit finds zero exact duplicates. Compare models on identical held-out rows. Fixed iterations selected only on development; OOF folds are scored without early stopping. Final ensemble weights are a small prespecified set or cross-fitted meta-model, never public-score tuned.",
+  "data_leakage": "All frequency/category vocabulary and unsupervised group mappings fit on outer-train only. Target encoding training rows use inner five-fold OOF within outer-train, including inner-fold priors; outer-valid/test mappings fit only on outer-train. No target-based transform is fitted on outer-valid/test. Never train or validate on leaderboard/teacher predictions from unknown provenance.",
+  "initial_ablations": [
+    "distance_category",
+    "distance_frequency",
+    "distance_group_stats"
+  ],
+  "initial_ablation_model": {
+    "kind": "lightgbm",
+    "n_estimators": 639,
+    "learning_rate": 0.04,
+    "num_leaves": 63,
+    "min_child_samples": 150,
+    "reg_lambda": 10,
+    "random_state": 42,
+    "subsample": 1.0,
+    "colsample_bytree": 1.0,
+    "n_jobs": 6
+  },
+  "unsupervised_group_stats": "Distance group count and log count; outer-train group means of all original numeric columns except distance shrunk toward outer-train global means with strength20; conditional proportions of original string categories by distance. No test distribution fitted.",
+  "target_encoding_initial": "Flight Distance only, smoothing strength100, inner five-fold stratification seed20261019. Prespecified extension to distance x Class or Type of Travel only if evidence supports added interaction.",
+  "promotion": "Require material same-row improvement, stable direction on the reused second split, then new fixed-fold OOF comparison before expensive full refits or major submission. Conditional intervals are descriptive and do not include selection uncertainty. Save failures and inconclusive results.",
+  "external_data": "Only public licensed original dataset after verifying license and auditing exact/near feature matches and label conflicts. External teachers fit permitted original data only; exact synthetic-validation matches are excluded or explicitly measured in ablation. No blind original-data append.",
+  "submission": "Only parent cloud browser submits. At most four new submissions for this window. Record public scores; do not select blend weights from small leaderboard changes. Preserve all previous best artifacts.",
+  "frozen_utc": "2026-10-17T19:06:03.654370+00:00"
+}

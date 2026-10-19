@@ -1,0 +1,116 @@
+{
+  "recorded_utc": "2026-10-18T22:14:40.289954+00:00",
+  "public_primary_references": [
+    {
+      "ref": "goodpjw2008/s6e10-two-view-gbdt-realmlp-stack-lb-0-96125",
+      "title": "S6E10 | Two-View GBDT + RealMLP Stack | LB 0.96125",
+      "version": 1,
+      "public": true,
+      "primary_url": "https://www.kaggle.com/code/goodpjw2008/s6e10-two-view-gbdt-realmlp-stack-lb-0-96125",
+      "response_sha256": "a8cf717beef4e30b1a143825fdb250eae5cbb728ef9de9a2af0d4f95a6835e55"
+    },
+    {
+      "ref": "koumeimaki/s6e10-feature-ladder-what-helps-lightgbm",
+      "title": "S6E10 Feature Ladder: What Helps LightGBM?",
+      "version": 3,
+      "public": true,
+      "primary_url": "https://www.kaggle.com/code/koumeimaki/s6e10-feature-ladder-what-helps-lightgbm",
+      "response_sha256": "8637650d4c57a873fe3b4685c6d46053cc52b866000a6bec4532bf4a2780bc1d"
+    },
+    {
+      "ref": "busyaprime/s6e10-route-or-distance-both-lb-0-96169",
+      "title": "S6E10 | Route or distance? Both | LB 0.96169",
+      "version": 1,
+      "public": true,
+      "primary_url": "https://www.kaggle.com/code/busyaprime/s6e10-route-or-distance-both-lb-0-96169",
+      "response_sha256": "07ee13202fafb5921c89f3a2b6a7f9ba44e56690ad11863647249e5dfb427e81"
+    }
+  ],
+  "interpretation": "The busyaprime notebook reports own-five-model public AUC0.96115 and a later0.96169 stack including others public48-member OOF/test library. That motivates family diversity, not a transferable score or verification of rank for us.",
+  "external_OOF_or_test_predictions_imported": false,
+  "external_notebook_code_executed": false,
+  "v2_model": {
+    "downloaded_utc": "2026-10-18T21:59:30.433251+00:00",
+    "repo": "Prior-Labs/TabPFN-v2-clf",
+    "commit": "f851f2a3c941544733b712d8c0f96dfae9b28862",
+    "filename": "tabpfn-v2-classifier-finetuned-zk73skhh.ckpt",
+    "bytes": 29009539,
+    "sha256": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49",
+    "official_LFS": {
+      "type": "file",
+      "oid": "b47280e206e18597b2be09b4177b71c16954904e",
+      "size": 29009539,
+      "lfs": {
+        "oid": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49",
+        "size": 29009539,
+        "pointerSize": 133
+      },
+      "xetHash": "f2fed56341103541dc91be9e33627b98dadd15d4dd8a9404dcefa773cd06ce18",
+      "path": "tabpfn-v2-classifier-finetuned-zk73skhh.ckpt"
+    },
+    "anonymous_public_download": true,
+    "license": "Prior Labs License1.1 (Apache2 derivative + enhanced attribution)",
+    "license_sha256": "08b1851b4b6136b5fb0cb124d3258e0d91e3e1623f1be5904b77e4d270d112d8",
+    "model_version": "v2",
+    "model_choice": "Single library V2 default, not a checkpoint search",
+    "v3_5_weights_downloaded": false,
+    "no_credentials_created_or_used": true
+  },
+  "v3_5": {
+    "used": false,
+    "weights_downloaded": false,
+    "browser_license_acceptance_performed": false,
+    "reason": "Current package requests browser license acceptance for newer models; v3.5 license also has professional-status conditions. Choose the separately licensed V2 instead."
+  },
+  "CPU_API_proof": {
+    "status": "passed_synthetic_only",
+    "official_CSVs_loaded": false,
+    "official_SAT_values_parsed": false,
+    "quality_scores_computed": false,
+    "model_family": "TabPFN-v2",
+    "checkpoint_sha256": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49",
+    "library_version": "9.2.0",
+    "CPU_threads": 6,
+    "preprocessing_jobs": 1,
+    "training_context_rows": 128,
+    "query_rows": 64,
+    "features": 48,
+    "categorical_features_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "repeat_error": 0.0,
+    "reload_error": 0.0,
+    "peak_RSS_bytes": 852361216,
+    "seconds": 1.6156306019984186,
+    "plan_sha256": "7e7644e9bda6f1e65449a28c1e9d050d5c8e5134a96b26d9592c1df2f420d8cf",
+    "attribution": "Built with PriorLabs-TabPFN",
+    "no_network_model_loading": true
+  },
+  "GPU_uncached_proof": {
+    "status": "passed_no_official_SAT_or_quality",
+    "features": 49,
+    "context_rows": 8192,
+    "query_rows": 512,
+    "n_estimators": 1,
+    "official_SAT_values_parsed": false,
+    "synthetic_labels": true,
+    "quality_scores_computed": false,
+    "model_version": "v2",
+    "checkpoint_sha256": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49",
+    "first_query_seconds": 1.8653074530011509,
+    "warm_query_seconds": 1.5666676649998408,
+    "repeat_error": 0.0,
+    "model_reload_error": 0.0,
+    "peak_gpu_process_bytes": 801112064,
+    "peak_allocated_bytes": 546285568,
+    "peak_RSS_bytes": 2304856064,
+    "seconds": 5.707134499985841,
+    "plan_sha256": "c8fe0f43d87ac7ce26d3ff1f8b7e483f664b71fd91356064ab035bac6838cbc1",
+    "attribution": "Built with PriorLabs-TabPFN"
+  },
+  "cached_execution_status": "Stock cached path exceeds742MiB allocator. Process-local batching/CPU-offload adapter failed strict small AMP equivalence; FP32/AMP diagnostic in progress. No SAT quality has been evaluated for this family.",
+  "attribution": "Built with PriorLabs-TabPFN"
+}

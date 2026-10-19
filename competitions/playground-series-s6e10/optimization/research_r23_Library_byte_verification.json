@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-10-18T17:51:58.024612+00:00",
+  "filename": "submission_conditional_neural_r23_v11.csv",
+  "sha256": "cc134eb8d9272cd1fd7085fa7f5a5dc84455eb37270c57332f42014a94af75cf",
+  "bytes": 8205897,
+  "source_and_Library_materialized_bytes_identical": true,
+  "library_version": 0,
+  "local_original_identity_xattrs_applied": true,
+  "official_helper_sha256": "5e1557817be17db06e2375f8c34ed83e948d520242e5ee4cb50a30c7a4c83378",
+  "helper_provenance": "Unchangedcachedofficialhelperfetched16:54:16UTC;currentcloudskillcatalogempty, no freshdownloadclaim. Librarycreateandpreparewerefreshcalls."
+}

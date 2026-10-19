@@ -1,0 +1,115 @@
+{
+  "frozen_utc": "2026-10-17T19:45:34.192745+00:00",
+  "candidate": "submission_distance_original_v4.csv",
+  "model": "Same fixed639 LightGBM63, Distance numeric group stats + original-only teacher probability and four original lookup features",
+  "teacher": "475 trees selected on original-only validation, fit on129859 safe CC0 rows",
+  "evidence": {
+    "status": "complete",
+    "name": "lgb_stats_orig_both_oof",
+    "auc": 0.9605951395132004,
+    "logloss": 0.22405380452220247,
+    "vs_stats": {
+      "baseline_auc": 0.9603367815297761,
+      "candidate_auc": 0.9605951395132004,
+      "delta_auc": 0.0002583579834243288,
+      "paired_se": 6.018706284019439e-05,
+      "conditional_95pct_ci": [
+        0.0001403913402575478,
+        0.0003763246265911098
+      ],
+      "candidate_logloss": 0.22405380452220247
+    },
+    "byfold": [
+      {
+        "baseline_auc": 0.9596921699064124,
+        "candidate_auc": 0.9598799093011321,
+        "delta_auc": 0.00018773939471972145,
+        "paired_se": 0.00013859856794647292,
+        "conditional_95pct_ci": [
+          -8.391379845536549e-05,
+          0.0004593925878948084
+        ],
+        "candidate_logloss": 0.22622722200716822
+      },
+      {
+        "baseline_auc": 0.960474294800054,
+        "candidate_auc": 0.9607348943533817,
+        "delta_auc": 0.00026059955332768947,
+        "paired_se": 0.0001342111026133032,
+        "conditional_95pct_ci": [
+          -2.4542077943848217e-06,
+          0.0005236533144497638
+        ],
+        "candidate_logloss": 0.22358218273313496
+      },
+      {
+        "baseline_auc": 0.9608633876312733,
+        "candidate_auc": 0.9611549903661967,
+        "delta_auc": 0.0002916027349233463,
+        "paired_se": 0.00013240458411005506,
+        "conditional_95pct_ci": [
+          3.2089750067638436e-05,
+          0.0005511157197790542
+        ],
+        "candidate_logloss": 0.22233369263426364
+      },
+      {
+        "baseline_auc": 0.9600410366951235,
+        "candidate_auc": 0.9605211783060533,
+        "delta_auc": 0.00048014161092979624,
+        "paired_se": 0.00013178952635067268,
+        "conditional_95pct_ci": [
+          0.00022183413928247777,
+          0.0007384490825771147
+        ],
+        "candidate_logloss": 0.22500856911696532
+      },
+      {
+        "baseline_auc": 0.9606398502729783,
+        "candidate_auc": 0.9607174371190246,
+        "delta_auc": 7.758684604630695e-05,
+        "paired_se": 0.0001357927502940837,
+        "conditional_95pct_ci": [
+          -0.00018856694453009713,
+          0.000343740636622711
+        ],
+        "candidate_logloss": 0.22311735611948022
+      }
+    ],
+    "completed_utc": "2026-10-17T19:44:28.584460+00:00",
+    "stable_positive_vs_stats": true,
+    "slices": {
+      "near_match": {
+        "rows": 258696,
+        "comparison": {
+          "baseline_auc": 0.9593887634227227,
+          "candidate_auc": 0.9595513714151283,
+          "delta_auc": 0.00016260799240552792,
+          "paired_se": 0.00010090092710645244,
+          "conditional_95pct_ci": [
+            -3.515782472311886e-05,
+            0.0003603738095341747
+          ],
+          "candidate_logloss": 0.22593396717903577
+        }
+      },
+      "no_near_match": {
+        "rows": 440939,
+        "comparison": {
+          "baseline_auc": 0.960839426592213,
+          "candidate_auc": 0.9611571657018749,
+          "delta_auc": 0.00031773910966192975,
+          "paired_se": 7.541732167360782e-05,
+          "conditional_95pct_ci": [
+            0.00016992115918165843,
+            0.0004655570601422011
+          ],
+          "candidate_logloss": 0.2229507255052134
+        }
+      }
+    }
+  },
+  "public_feedback_for_v3_received_at_freeze": false,
+  "hyperparameter_or_weight_changes_from_public_feedback": false,
+  "follow_up_fits": "One fixed1308 CatBoost depth8 with same features, then one depth6 XGBoost CPU primary early-stop selection with max2000. Confirm/OOF only if complementary or improved."
+}

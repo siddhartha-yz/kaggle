@@ -1,0 +1,8 @@
+{
+  "status": "hardware_blocked_no_quality",
+  "recorded_utc": "2026-10-18T22:21:24.854963+00:00",
+  "model": "TabPFN v2 stock cached8192",
+  "failure": "Cached build bypasses ordinary attention batching; attempted216MiB with694.22MiBlive and15.78MiBreserved under742MiB allocator. No SAT quality evaluated.",
+  "plan_sha256": "c7a5d9b81c33037b1064d0b74c5c10996b650dc057afa5e1123bf597eee2d52b",
+  "new_formal_submissions": 0
+}

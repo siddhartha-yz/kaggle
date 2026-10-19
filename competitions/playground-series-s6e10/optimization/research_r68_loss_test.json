@@ -1,0 +1,1 @@
+{"status": "passed_no_official_data", "loss_error": 2.220446049250313e-16, "gradient_error": 2.7755575615628914e-17, "class1_bias_gradient_sum_max": 0.0, "calibrated_origin_invariance_error": 7.771561172376096e-16, "CE_coefficient": 0.0, "pairwise_coefficient": 1.0, "oneclass_loss_and_gradient_zero": true, "smoothed_and_integer_hardlabels_equal": true}

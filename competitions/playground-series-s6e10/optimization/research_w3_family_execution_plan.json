@@ -1,0 +1,14 @@
+{
+  "recorded_utc": "2026-10-18T07:24:05.489314+00:00",
+  "primary_family_plan_sha256": "a63025402feea894807688ddb84577c652be1a42e56f84b171aa56d06313eee2",
+  "scope": "Newrunner fits existing frozen component methods solely for a separately primary-gated family ensemble. Standalone model eligibility guards remain unchanged. No individual component promotion or loss-based component removal. Cached complete records and predictions are preserved.",
+  "promotion": "Only fixed family ensemble confirmation/OOF gates decide progression; nonpositive aggregate OOFfold stopsfurtherfolds.",
+  "numeric_aggregation": "Castcomponentpredictionsfloat64 beforefoldaverages,matchingexistingrootpredictionarrays. No recipe/weight changes.",
+  "gpu": "Allnewcomponentprocesses reducedallocator778043392bytes, defaultoriginal1GiBlimit retained; serial6CPUthreads; original GPUfreeguards; localCUDAcache.",
+  "hard_cutoff": "10:45UTC; controller terminates only its own direct child ifwaitinginterruptedor deadline expires.",
+  "runners": {
+    "research_w3_family_components.py": "bc77a2315aeaa1bdb829ba3a4e463728becb4dbfb5e9501cc6e656017bbe60f8",
+    "research_w3_family_queue.py": "da5cd7f4c31383858161c75af9095075af8cfa20ea8fdc7e86fcab2c15ed9c8a",
+    "research_w3_family_fusion.py": "dc32453a92a4f688309274d0a03c27f1cc70638dbb5ee1af56683ceb9ff370f7"
+  }
+}

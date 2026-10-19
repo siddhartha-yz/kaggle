@@ -1,0 +1,33 @@
+{
+  "status": "complete",
+  "name": "nn_transfer_p0_primary",
+  "auc": 0.9573376778101668,
+  "vs_v5": {
+    "baseline_auc": 0.9600030291404525,
+    "candidate_auc": 0.9600135691192583,
+    "delta_auc": 1.0539978805734762e-05,
+    "paired_se": 6.490641829541974e-05,
+    "conditional_95pct_ci": [
+      -0.00011667660105328792,
+      0.00013775655866475744
+    ],
+    "candidate_logloss": 0.22614150796595048
+  },
+  "selected_epochs": [
+    11
+  ],
+  "fold_comparisons": [
+    {
+      "baseline_auc": 0.9600030291404525,
+      "candidate_auc": 0.9600135691192583,
+      "delta_auc": 1.0539978805734762e-05,
+      "paired_se": 6.490641829541974e-05,
+      "conditional_95pct_ci": [
+        -0.00011667660105328792,
+        0.00013775655866475744
+      ],
+      "candidate_logloss": 0.22614150796595048
+    }
+  ],
+  "completed_utc": "2026-10-17T22:16:56.388621+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "failed",
+  "ended_utc": "2026-10-18T07:10:45.978236+00:00",
+  "argv": [
+    "research_w3_ftt.py",
+    "--split",
+    "probe"
+  ],
+  "error": "AssertionError('Projected primary runtime exceeds20min')"
+}

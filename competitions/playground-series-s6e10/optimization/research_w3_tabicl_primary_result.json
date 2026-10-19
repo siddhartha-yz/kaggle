@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "split": "primary",
+  "plan_sha256": "036cfef01d73aa4460df5bc4b617a03a42131168a5d2e30e4fa0053eb2ca3b8c",
+  "runner_sha256": "cbb06f983f3cc6677a5374b8648e2842a0cfd4407e6cd45b0437a7a9f92457e3",
+  "vs_v6": {
+    "baseline_auc": 0.9603020930463941,
+    "candidate_auc": 0.9599685016308106,
+    "delta_auc": -0.000333591415583534,
+    "paired_se": 5.651425791334502e-05,
+    "conditional_95pct_ci": [
+      -0.00044435936109369023,
+      -0.00022282347007337777
+    ],
+    "candidate_logloss": 0.2261346595410499
+  },
+  "fold_comparisons": [
+    {
+      "baseline_auc": 0.9603020930463941,
+      "candidate_auc": 0.9599685016308106,
+      "delta_auc": -0.000333591415583534,
+      "paired_se": 5.651425791334502e-05,
+      "conditional_95pct_ci": [
+        -0.00044435936109369023,
+        -0.00022282347007337777
+      ],
+      "candidate_logloss": 0.2261346595410499
+    }
+  ],
+  "eligible_for_next": false,
+  "completed_utc": "2026-10-18T07:00:36.963245+00:00"
+}

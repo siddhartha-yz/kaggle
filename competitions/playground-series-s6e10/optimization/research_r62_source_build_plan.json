@@ -1,0 +1,7 @@
+{
+  "frozen_utc": "2026-10-19T01:17:35.908268+00:00",
+  "source_plan_sha256": "0497850508d6c272bf58925a4a8b666783fe97fba3bb1a9def4331a32e63e470",
+  "source_audit_sha256": "dc0218e4c747183aa6987ac03b3b41f0dc33e461531bdc42575e6e35b393769e",
+  "builder_sha256": "6c38c93324f5517882d5317174ae5165399719c31f4be2d7ff90898b6d25a393",
+  "purpose": "13fixed sourcecohort-class densities,exact8nonratingcontext+originalSAT;noofficialSATparse/quality,livecaps,nofallback"
+}

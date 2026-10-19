@@ -1,0 +1,126 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-18T05:16:13.546712+00:00",
+  "hardware": {
+    "initial_gpu_free_bytes": 6566379520,
+    "gpu_name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "cap_bytes": 2147483648
+  },
+  "config": {
+    "device": "cuda:0",
+    "n_threads": 6,
+    "n_cv": 1,
+    "n_refit": 0,
+    "n_repeats": 1,
+    "val_fraction": 0.0,
+    "n_epochs": 8,
+    "batch_size": 256,
+    "use_early_stopping": false,
+    "random_state": 20261018,
+    "verbosity": 0,
+    "predict_batch_size": 1024,
+    "use_ls": true,
+    "lr": 0.053,
+    "wd": 0.0236,
+    "sq_mom": 0.988,
+    "lr_sched": "lin_cos_log_15",
+    "wd_sched": "cos_log_15",
+    "first_layer_lr_factor": 0.25,
+    "embedding_size": 5,
+    "max_one_hot_cat_size": 18,
+    "hidden_sizes": [
+      512,
+      256,
+      128
+    ],
+    "act": "silu",
+    "p_drop": 0.05,
+    "p_drop_sched": "expm4t",
+    "plr_hidden_1": 16,
+    "plr_hidden_2": 8,
+    "plr_act_name": "gelu",
+    "plr_lr_factor": 0.1151,
+    "plr_sigma": 2.33,
+    "ls_eps": 0.01,
+    "ls_eps_sched": "sqrt_cos",
+    "add_front_scale": false,
+    "bias_init_mode": "neg-uniform-dynamic-2",
+    "tfms": [
+      "one_hot",
+      "median_center",
+      "robust_scale",
+      "smooth_clip",
+      "embedding",
+      "l2_normalize"
+    ],
+    "n_ens": 2
+  },
+  "source_audit": {
+    "source_sha256": "2ad76465f6115f93d16121891a6b1235acb8007a4ab065cae0dc46b60ad116e3",
+    "safe_mask_sha256": "fcc30179ed4f68ddab8323abe86e953dcaf13374dee46bd3c13abb55dfdbfe51",
+    "safe_rows": 129859,
+    "excluded_exact_rows": 21,
+    "near_key_groups": 111199,
+    "near_key_groups_with_conflicting_original_labels": 4475,
+    "original_rows_in_conflicting_near_groups": 10665,
+    "target_provenance": "Only CC0 original labels. No synthetic labels used to fit teacher or lookup. Exact matches to any synthetic train/test vector excluded.",
+    "exact_label_audit": {
+      "checked_utc": "2026-10-17T19:36:06.016304+00:00",
+      "exact_match_pairs_verified_value_by_value": 17,
+      "exact_match_train_label_agreements": 14,
+      "exact_match_train_label_conflicts": 3,
+      "policy": "All 21 original rows matching any train/test feature vector remain excluded, regardless of label agreement."
+    }
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "seconds": 3.5571521390011185,
+      "gpu_free_bytes": 6381895680
+    },
+    {
+      "epoch": 2,
+      "seconds": 1.632787148002535,
+      "gpu_free_bytes": 6374948864
+    },
+    {
+      "epoch": 3,
+      "seconds": 1.6246374740003375,
+      "gpu_free_bytes": 6381109248
+    },
+    {
+      "epoch": 4,
+      "seconds": 1.6401153190017794,
+      "gpu_free_bytes": 6381895680
+    },
+    {
+      "epoch": 5,
+      "seconds": 1.6074463879995164,
+      "gpu_free_bytes": 6380847104
+    },
+    {
+      "epoch": 6,
+      "seconds": 1.5978164689950063,
+      "gpu_free_bytes": 6380912640
+    },
+    {
+      "epoch": 7,
+      "seconds": 1.6168613730042125,
+      "gpu_free_bytes": 6381109248
+    },
+    {
+      "epoch": 8,
+      "seconds": 1.5900784080004087,
+      "gpu_free_bytes": 6381109248
+    }
+  ],
+  "fit_seconds": 14.882005284001934,
+  "peak_allocated_bytes": 1072733184,
+  "peak_reserved_bytes": 1730150400,
+  "completed_utc": "2026-10-18T05:16:39.141915+00:00",
+  "model_sha256": "f6db2c88fc266dbd41acd03f3d44371ed79f2e4dfadec4b31952213057e10c62",
+  "synthetic_targets_used_in_teacher": false,
+  "validation_scores_used": false,
+  "train_features_sha256": "f999c62f3b35c4a37a42e23fd76b67f6565bf8d44a33b2418ba8d3349927b2cc",
+  "test_features_sha256": "dd42352b006a5e66b3926486e951c8abd4a0927b0ec42295340968361bc369e4"
+}

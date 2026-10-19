@@ -1,0 +1,29 @@
+{
+  "source_sha256": "2ad76465f6115f93d16121891a6b1235acb8007a4ab065cae0dc46b60ad116e3",
+  "safe_mask_sha256": "fcc30179ed4f68ddab8323abe86e953dcaf13374dee46bd3c13abb55dfdbfe51",
+  "safe_rows": 129859,
+  "excluded_exact_rows": 21,
+  "near_key_groups": 111199,
+  "near_key_groups_with_conflicting_original_labels": 4475,
+  "original_rows_in_conflicting_near_groups": 10665,
+  "target_provenance": "Only CC0 original labels. No synthetic labels used to fit teacher or lookup. Exact matches to any synthetic train/test vector excluded.",
+  "exact_label_audit": {
+    "checked_utc": "2026-10-17T19:36:06.016304+00:00",
+    "exact_match_pairs_verified_value_by_value": 17,
+    "exact_match_train_label_agreements": 14,
+    "exact_match_train_label_conflicts": 3,
+    "policy": "All 21 original rows matching any train/test feature vector remain excluded, regardless of label agreement."
+  },
+  "train_near_key_matched_rows": 258696,
+  "test_near_key_matched_rows": 110883,
+  "status": "complete",
+  "selection": {
+    "auc": 0.9955767900312661,
+    "logloss": 0.0813994340877689,
+    "best_trees": 475
+  },
+  "full_trees": 475,
+  "model_sha256": "db538bc2303ee5075be4016e0653424ad885d3cd207001dbddb42441e66588e4",
+  "elapsed_seconds": 14.466402098999879,
+  "ended_utc": "2026-10-17T19:41:05.603780+00:00"
+}

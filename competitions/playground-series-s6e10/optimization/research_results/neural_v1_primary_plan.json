@@ -1,0 +1,29 @@
+{
+  "name": "neural_v1_primary",
+  "config": {
+    "hidden_layer_sizes": [
+      256,
+      128,
+      64
+    ],
+    "activation": "relu",
+    "solver": "adam",
+    "alpha": 0.001,
+    "batch_size": 2048,
+    "learning_rate_init": 0.001,
+    "max_iter": 1,
+    "shuffle": true,
+    "early_stopping": false
+  },
+  "seed": 42,
+  "maximum_epochs": 40,
+  "fixed_epochs": false,
+  "primary_patience": 7,
+  "primary_time_cap_seconds": 900,
+  "first_epoch_abort_seconds": 180,
+  "cpu_threads": 6,
+  "preprocessing_sha256": "6f25479eb9928dc0d3821ccfe816477270cdafd56c90f4b30959420a2d896670",
+  "runner_sha256": "5c0b558fa34d18eaefec604defbe3d1f1cdc0d1b95d0cb1e3ea7709cc008a269",
+  "external_features_sha256": "0fc3167103ca04ecaac018c622ccca4d8f7e365b46f032ad11f318e409dbfc55",
+  "frozen_utc": "2026-10-17T19:54:38.826829+00:00"
+}

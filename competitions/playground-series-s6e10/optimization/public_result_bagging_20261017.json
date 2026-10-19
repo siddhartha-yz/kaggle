@@ -1,0 +1,20 @@
+{
+  "recorded_utc": "2026-10-17T19:04:37.403494+00:00",
+  "source": "Parent cloud browser confirmed and reported via delegation",
+  "status": "Complete",
+  "filename": "submission_cb8_lgb63cats_bagged_v2.csv",
+  "sha256": "49ad4d7e282300289c9c9fc263313c6232a674b3846d48caa7f35ae8f89f4766",
+  "public_auc": 0.95857,
+  "rank": 1193,
+  "teams": 2179,
+  "previous_public_auc": 0.95855,
+  "historical_baseline_public_auc": 0.95816,
+  "total_historical_submissions": 3,
+  "new_window_submissions_used": 0,
+  "new_window_submissions_limit": 4,
+  "new_window_deadline_utc": "2026-10-18T01:02:51+00:00",
+  "paid_resources_allowed": false,
+  "submission_coordinator": "Parent cloud browser only",
+  "current_top100_display_line_reported": 0.9619,
+  "top100_display_ties_through_rank_reported": 109
+}

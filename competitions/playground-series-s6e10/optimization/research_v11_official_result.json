@@ -1,0 +1,22 @@
+{
+  "source": "ParentauthenticatedKagglebrowserreport",
+  "reported_utc": "2026-10-18T17:58:48.436175+00:00",
+  "submitted_utc": "2026-10-18T17:56:01Z",
+  "rank_observation_time_separately_supplied": false,
+  "status": "Complete",
+  "candidate": "submission_conditional_neural_r23_v11.csv",
+  "sha256": "cc134eb8d9272cd1fd7085fa7f5a5dc84455eb37270c57332f42014a94af75cf",
+  "public_auc": 0.96114,
+  "previous_v10_public_auc": 0.96104,
+  "public_delta": 0.0001,
+  "rank": 681,
+  "ranked_teams": 2279,
+  "rank500_public_auc": 0.96169,
+  "gap_to_rank500": 0.00055,
+  "historical_submissions": 10,
+  "daily_remaining_before_v11": 7,
+  "estimated_daily_remaining_after_v11": 6,
+  "remaining_daily_quota": null,
+  "actual_UI_remaining_after_v11_verified": false,
+  "actual_top500_verified": false
+}

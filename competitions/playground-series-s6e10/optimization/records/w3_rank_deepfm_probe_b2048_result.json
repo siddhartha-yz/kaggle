@@ -1,0 +1,40 @@
+{
+  "status": "complete",
+  "seed": 42,
+  "cat_cardinalities": [
+    76,
+    3447,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    6,
+    7,
+    7,
+    159,
+    160,
+    3,
+    3,
+    3,
+    4
+  ],
+  "epochs": [
+    {
+      "epoch": 1,
+      "seconds": 1.0147990490004304,
+      "train_loss": 0.20835389009456748,
+      "gpu_free_bytes": 5289803776
+    }
+  ],
+  "fit_seconds": 1.015055330004543,
+  "peak_allocated_bytes": 205452800,
+  "peak_reserved_bytes": 232783872,
+  "score_evaluated": false,
+  "completed_utc": "2026-10-18T05:49:15.759941+00:00"
+}

@@ -1,0 +1,76 @@
+{
+  "status": "complete",
+  "fold": 0,
+  "outer_train_rows": 559708,
+  "outer_valid_rows": 139927,
+  "inner_train_rows": 447766,
+  "inner_meta_rows": 111942,
+  "nested_indices_sha256": "fba085592159d8d1fff1228661ae1686fe2a7e86590a3be6383e53be8d258abc",
+  "outer_valid_excluded_from_all_fitting": true,
+  "started_utc": "2026-10-17T20:45:01.865123+00:00",
+  "model_hashes": {
+    "lgb_original": "018af5cbb745ec50420544da60af0aad3f88a48ce8f2167522046e5afa25e755",
+    "cb_original": "db3321dba24774b886fb2b8438e26c9b194d455fd4c0b3adbd14703c57bd7841",
+    "residual_prior05": "27b26bdb9da6449826095bcf7a48348332bc86a27184bc02f55bc186b3a7218c"
+  },
+  "methods": {
+    "logistic": {
+      "comparison": {
+        "baseline_auc": 0.9597883620429111,
+        "candidate_auc": 0.959939140749044,
+        "delta_auc": 0.00015077870613289246,
+        "paired_se": 6.756498695582046e-05,
+        "conditional_95pct_ci": [
+          1.8351331699484368e-05,
+          0.0002832060805663005
+        ],
+        "candidate_logloss": 0.22623603114995544
+      },
+      "reload_maxdiff": 0.0,
+      "standardized_coefficients": [
+        [
+          0.9506096973161131,
+          0.9748128611988817,
+          0.93818665220004,
+          0.16023024463405416
+        ]
+      ],
+      "intercept": [
+        -0.44286054140777303
+      ]
+    },
+    "residual_tree": {
+      "comparison": {
+        "baseline_auc": 0.9597883620429111,
+        "candidate_auc": 0.960004679407086,
+        "delta_auc": 0.00021631736417493386,
+        "paired_se": 5.689681772218269e-05,
+        "conditional_95pct_ci": [
+          0.00010479960143945579,
+          0.00032783512691041193
+        ],
+        "candidate_logloss": 0.22619639316916018
+      },
+      "reload_maxdiff": 0.0,
+      "params": {
+        "n_estimators": 200,
+        "learning_rate": 0.02,
+        "num_leaves": 4,
+        "max_depth": 2,
+        "min_child_samples": 2000,
+        "reg_lambda": 100,
+        "objective": "binary",
+        "n_jobs": 6,
+        "random_state": 42,
+        "verbosity": -1,
+        "colsample_bytree": 1.0,
+        "subsample": 1.0,
+        "max_bin": 255,
+        "deterministic": true,
+        "force_col_wise": true
+      }
+    }
+  },
+  "elapsed_seconds": 257.267994971,
+  "ended_utc": "2026-10-17T20:49:18.285846+00:00"
+}

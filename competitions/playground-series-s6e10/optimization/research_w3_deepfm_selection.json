@@ -1,0 +1,43 @@
+{
+  "eligible_for_full": false,
+  "chosen_variant": "deepfm",
+  "weights": {
+    "v6": 0.75,
+    "new_model": 0.25
+  },
+  "batch_size": 2048,
+  "plan_sha256": "468c2146c6e9c3dedfddcb37d7b0dbc3910e9c805d7e8753eba89982dfe2ed67",
+  "updated_utc": "2026-10-18T05:26:00.906448+00:00",
+  "primary": {
+    "status": "complete",
+    "variant": "deepfm",
+    "split": "primary",
+    "vs_v6": {
+      "baseline_auc": 0.9603020930463941,
+      "candidate_auc": 0.9603403103246053,
+      "delta_auc": 3.821727821118337e-05,
+      "paired_se": 4.6523585257461975e-05,
+      "conditional_95pct_ci": [
+        -5.2968948893442104e-05,
+        0.00012940350531580883
+      ],
+      "candidate_logloss": 0.22523055661776056
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.9603020930463941,
+        "candidate_auc": 0.9603403103246053,
+        "delta_auc": 3.821727821118337e-05,
+        "paired_se": 4.6523585257461975e-05,
+        "conditional_95pct_ci": [
+          -5.2968948893442104e-05,
+          0.00012940350531580883
+        ],
+        "candidate_logloss": 0.22523055661776056
+      }
+    ],
+    "eligible_for_next": false,
+    "completed_utc": "2026-10-18T05:26:17.881976+00:00"
+  },
+  "status": "primary_rejected"
+}

@@ -1,0 +1,554 @@
+{
+  "status": "passed_no_official_SAT_or_quality",
+  "audited_utc": "2026-10-18T23:44:59.505638+00:00",
+  "resource_plan_sha256": "ca59d54df981d484e5f6b8d42b65ed6654ca8e6a7c9d6e91b35f900a9021071f",
+  "cohort_auxiliary": {
+    "verified_models": 65,
+    "inputs": [
+      "Age",
+      "Flight Distance",
+      "Departure Delay in Minutes",
+      "Arrival Delay in Minutes",
+      "Gender",
+      "Customer Type",
+      "Type of Travel",
+      "Class"
+    ],
+    "target_free_transductive": true,
+    "all_rating_inputs_excluded": true,
+    "auxiliary_own_fold_excluded": true,
+    "guarded_loader_reads": [
+      {
+        "file": "train.csv",
+        "header_only": true,
+        "columns": null
+      },
+      {
+        "file": "train.csv",
+        "header_only": false,
+        "columns": [
+          "id",
+          "Age",
+          "Flight Distance",
+          "Inflight wifi service",
+          "Departure/Arrival time convenient",
+          "Ease of Online booking",
+          "Gate location",
+          "Food and drink",
+          "Online boarding",
+          "Seat comfort",
+          "Inflight entertainment",
+          "On-board service",
+          "Leg room service",
+          "Baggage handling",
+          "Checkin service",
+          "Cleanliness",
+          "Departure Delay in Minutes",
+          "Arrival Delay in Minutes",
+          "Gender",
+          "Customer Type",
+          "Type of Travel",
+          "Class"
+        ]
+      },
+      {
+        "file": "test.csv",
+        "header_only": false,
+        "columns": [
+          "id",
+          "Age",
+          "Flight Distance",
+          "Inflight wifi service",
+          "Departure/Arrival time convenient",
+          "Ease of Online booking",
+          "Gate location",
+          "Food and drink",
+          "Online boarding",
+          "Seat comfort",
+          "Inflight entertainment",
+          "On-board service",
+          "Leg room service",
+          "Baggage handling",
+          "Checkin service",
+          "Cleanliness",
+          "Departure Delay in Minutes",
+          "Arrival Delay in Minutes",
+          "Gender",
+          "Customer Type",
+          "Type of Travel",
+          "Class"
+        ]
+      }
+    ],
+    "official_SAT_values_parsed_by_auxiliary_loader": false,
+    "replays": [
+      {
+        "rating_index": 0,
+        "auxiliary_fold": 0,
+        "CPU_probability_error": 2.7107237898782444e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 0,
+        "auxiliary_fold": 1,
+        "CPU_probability_error": 1.4891497923663621e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 0,
+        "auxiliary_fold": 2,
+        "CPU_probability_error": 1.487611717143622e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 0,
+        "auxiliary_fold": 3,
+        "CPU_probability_error": 1.488920170489294e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 0,
+        "auxiliary_fold": 4,
+        "CPU_probability_error": 1.490112166990798e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 1,
+        "auxiliary_fold": 0,
+        "CPU_probability_error": 2.8746353741837538e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 1,
+        "auxiliary_fold": 1,
+        "CPU_probability_error": 2.9712458493591498e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 1,
+        "auxiliary_fold": 2,
+        "CPU_probability_error": 2.90864049512507e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 1,
+        "auxiliary_fold": 3,
+        "CPU_probability_error": 2.945953447852645e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 1,
+        "auxiliary_fold": 4,
+        "CPU_probability_error": 2.7855778683694155e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 2,
+        "auxiliary_fold": 0,
+        "CPU_probability_error": 2.660894748984788e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 2,
+        "auxiliary_fold": 1,
+        "CPU_probability_error": 1.4895699562700315e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 2,
+        "auxiliary_fold": 2,
+        "CPU_probability_error": 2.6577490541690452e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 2,
+        "auxiliary_fold": 3,
+        "CPU_probability_error": 1.4899210198926482e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 2,
+        "auxiliary_fold": 4,
+        "CPU_probability_error": 1.9486395941292756e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 3,
+        "auxiliary_fold": 0,
+        "CPU_probability_error": 2.2908440699964672e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 3,
+        "auxiliary_fold": 1,
+        "CPU_probability_error": 1.533306992484995e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 3,
+        "auxiliary_fold": 2,
+        "CPU_probability_error": 2.2666761800849144e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 3,
+        "auxiliary_fold": 3,
+        "CPU_probability_error": 1.4885075005910409e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 3,
+        "auxiliary_fold": 4,
+        "CPU_probability_error": 1.4896918254514446e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 4,
+        "auxiliary_fold": 0,
+        "CPU_probability_error": 1.4898224653947523e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 4,
+        "auxiliary_fold": 1,
+        "CPU_probability_error": 1.4872602149829106e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 4,
+        "auxiliary_fold": 2,
+        "CPU_probability_error": 1.4878666798612272e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 4,
+        "auxiliary_fold": 3,
+        "CPU_probability_error": 1.4890287725055629e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 4,
+        "auxiliary_fold": 4,
+        "CPU_probability_error": 1.4858348051927095e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 5,
+        "auxiliary_fold": 0,
+        "CPU_probability_error": 1.762899604074164e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 5,
+        "auxiliary_fold": 1,
+        "CPU_probability_error": 1.4894308952850821e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 5,
+        "auxiliary_fold": 2,
+        "CPU_probability_error": 1.4888071275809267e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 5,
+        "auxiliary_fold": 3,
+        "CPU_probability_error": 1.4889837696152597e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 5,
+        "auxiliary_fold": 4,
+        "CPU_probability_error": 2.454132008722354e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 6,
+        "auxiliary_fold": 0,
+        "CPU_probability_error": 2.6842297939921878e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 6,
+        "auxiliary_fold": 1,
+        "CPU_probability_error": 2.9230070586194756e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 6,
+        "auxiliary_fold": 2,
+        "CPU_probability_error": 2.6854248602603548e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 6,
+        "auxiliary_fold": 3,
+        "CPU_probability_error": 2.526881925923874e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 6,
+        "auxiliary_fold": 4,
+        "CPU_probability_error": 2.710127655625172e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 7,
+        "auxiliary_fold": 0,
+        "CPU_probability_error": 1.8908206222967294e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 7,
+        "auxiliary_fold": 1,
+        "CPU_probability_error": 1.4890913890841517e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 7,
+        "auxiliary_fold": 2,
+        "CPU_probability_error": 1.4888927313272404e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 7,
+        "auxiliary_fold": 3,
+        "CPU_probability_error": 1.4896000766206896e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 7,
+        "auxiliary_fold": 4,
+        "CPU_probability_error": 1.4900333300538193e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 8,
+        "auxiliary_fold": 0,
+        "CPU_probability_error": 1.4897383493472915e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 8,
+        "auxiliary_fold": 1,
+        "CPU_probability_error": 1.4896154476584655e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 8,
+        "auxiliary_fold": 2,
+        "CPU_probability_error": 2.8221887049539873e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 8,
+        "auxiliary_fold": 3,
+        "CPU_probability_error": 1.489974210677758e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 8,
+        "auxiliary_fold": 4,
+        "CPU_probability_error": 1.4889245059102052e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 9,
+        "auxiliary_fold": 0,
+        "CPU_probability_error": 1.4892836075475202e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 9,
+        "auxiliary_fold": 1,
+        "CPU_probability_error": 1.4900724210065164e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 9,
+        "auxiliary_fold": 2,
+        "CPU_probability_error": 1.509679470323988e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 9,
+        "auxiliary_fold": 3,
+        "CPU_probability_error": 2.3925861181162134e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 9,
+        "auxiliary_fold": 4,
+        "CPU_probability_error": 1.4893671296256628e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 10,
+        "auxiliary_fold": 0,
+        "CPU_probability_error": 2.7845174610519052e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 10,
+        "auxiliary_fold": 1,
+        "CPU_probability_error": 2.9207253615659567e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 10,
+        "auxiliary_fold": 2,
+        "CPU_probability_error": 2.9745797158753362e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 10,
+        "auxiliary_fold": 3,
+        "CPU_probability_error": 2.5642201029185685e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 10,
+        "auxiliary_fold": 4,
+        "CPU_probability_error": 2.9445930471716508e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 11,
+        "auxiliary_fold": 0,
+        "CPU_probability_error": 1.4897253763912488e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 11,
+        "auxiliary_fold": 1,
+        "CPU_probability_error": 1.4894775357543466e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 11,
+        "auxiliary_fold": 2,
+        "CPU_probability_error": 1.4883757282202481e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 11,
+        "auxiliary_fold": 3,
+        "CPU_probability_error": 1.4899564804160548e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 11,
+        "auxiliary_fold": 4,
+        "CPU_probability_error": 1.4896460898139452e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 12,
+        "auxiliary_fold": 0,
+        "CPU_probability_error": 1.4887543586805663e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 12,
+        "auxiliary_fold": 1,
+        "CPU_probability_error": 1.4898992428680202e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 12,
+        "auxiliary_fold": 2,
+        "CPU_probability_error": 1.4867001130181023e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 12,
+        "auxiliary_fold": 3,
+        "CPU_probability_error": 1.4898749678415868e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      },
+      {
+        "rating_index": 12,
+        "auxiliary_fold": 4,
+        "CPU_probability_error": 1.4895745359400081e-08,
+        "EV_error": 0.0,
+        "surprisal_error": 0.0
+      }
+    ],
+    "manifest_sha256": "5d99dfc9410f4f3ad9f2e6c05f98076ff27a5ebf80f8a29b58b08fdb7ab1f36a"
+  },
+  "semantic_proof": {
+    "rows": 1024,
+    "labels": "synthetic alternation only",
+    "official_SAT_values_parsed": false,
+    "feature_width": 74,
+    "numeric_fields": 52,
+    "nominal_fields": 22,
+    "unchanged_fields_exact": 61,
+    "replaced_fields_exact": 13
+  },
+  "peak_RSS_bytes": 1136259072
+}

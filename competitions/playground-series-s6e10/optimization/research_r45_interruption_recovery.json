@@ -1,0 +1,18 @@
+{
+  "recorded_utc": "2026-10-18T21:33:08.804760+00:00",
+  "status": "recovering_same_frozen_recipe",
+  "controller_and_worker_absent_on_host": true,
+  "prior_exec_session_unavailable": true,
+  "termination_cause": "unknown; no traceback or resource-failure artifact observed",
+  "completed_folds_hash_verified": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "incomplete_fold4_epochs_recorded": 2,
+  "incomplete_fold4_archived": "research_artifacts/r45_interruption_2132/incomplete_fold4",
+  "quality_scores_not_computed": true,
+  "recovery": "Original frozen driver/worker unchanged; completed checkpoints reused by built-in hash checks; only incomplete fold4 refitted at same seed/config before any quality evaluation.",
+  "source_audit_passed": true
+}

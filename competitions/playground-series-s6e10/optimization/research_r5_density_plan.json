@@ -1,0 +1,42 @@
+{
+  "frozen_utc": "2026-10-18T12:46:31.069361+00:00",
+  "route": "source_synthetic_density",
+  "baseline": "v7 fixed public.96076; officialSAT neverusedindomainfitting",
+  "domain_features": [
+    "meanlogit ofbalancedP(synthetic|X) from3crossfitdomainmodels",
+    "mean12originalpairPMI fromsafeoriginalpredictorsonly"
+  ],
+  "domain_training": "Eachoutertrainingpartition splitsunlabelledofficialpredictors KFold3seed20261024. Fitdomainclass0 safeoriginal129859 andclass1 innerofficialtraining. Maintrainrowreceivesscoreonlyfromdomainmodelthatdidnottrainonit. Outervalid/testscoresmean3logits. No outervalidationfeatures or labelsusedinanyfit. SourceoriginalSAT removed.",
+  "domain_params": {
+    "trees": 300,
+    "learning_rate": 0.05,
+    "leaves": 31,
+    "max_depth": 6,
+    "min_child": 200,
+    "lambda": 10,
+    "class_weight": "balanced",
+    "seed": 20261024,
+    "CPU": 6
+  },
+  "pmi": "Fixed12pairsselectedinR4 bysourcecovariatesonly; Laplace1 over6x6 cells andmarginals, logjoint/productmarginals averaged;noSAT",
+  "main_model": "unchangedLGB63963leafminchild150lambda10CPU6;59fields; replacefixed45/128LGBmassinv7",
+  "novelty": "A learnedcovariatelikelihoodfeature andPMIreliabilityview; not previoussourceaugmentationimportanceweights,confidenceexperts,rawpairflags orsourceSATperfieldresponses.",
+  "admission": "Samecomplete5fold+3foldmatchedbaselines andbothpositivepairedconditional95%andcorrectedfoldlower; nointerimscoring orpublicweightsearch.",
+  "selection_bias": "Diagnosticsandpastvalidationreusedofficiallabels. Conditionalintervals andfoldreplications do not eraseadaptiveselection. Coherencebiasdoesnotprovecausality orBayeserror.",
+  "formal_budget": {
+    "used": 1,
+    "limit": 2,
+    "remaining": 1
+  },
+  "resources": {
+    "serial": true,
+    "CPUthreads": 6,
+    "GPUprocesscap": 1073741824,
+    "paid": false
+  },
+  "source": "ExistingauditedCC0safeoriginalcovariatesonly;no newexternaldata,unknownpredictions ordeps",
+  "code_sha256": {
+    "research_r5_density.py": "1c8d9587609b24cf81056d91bf621bb06e3042ccb5f03e19550f74d3406e0d24",
+    "research_r5_density_features.py": "e848dc4d302e68b29ad941fce77f08cdfedf351c341953a98b02948f912711ac"
+  }
+}

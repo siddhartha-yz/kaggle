@@ -1,0 +1,18 @@
+{
+  "frozen_utc": "2026-10-19T00:25:07.194915+00:00",
+  "main_plan_sha256": "2b1cd0704ede20a98874d66409b0bb71530bf85e8ac33b072b52fb983da4c57b",
+  "audit_code_sha256": {
+    "research_r58_audit.py": "67c9b7fc9368ce8a337c05d99fe5db2581673606c6dfbc4dfa6f76e9c2fd5c98"
+  },
+  "required_quality": "Original frozen both5and3dualCIgates vs actualv11",
+  "CPU_threads": 6,
+  "execute_only_without_other_model_training": true,
+  "checks": [
+    "65 unchanged source model hashes and target-free scoped prior audit",
+    "Independent5/3fold membership and exact own encoder/count/category reconstruction",
+    "All74 query fields bitwise identical to formalR23 feature map",
+    "Actual criterion identity, fixed .9CE/.1RankNet coefficients, nonzero training calls, synthetic loss/gradient proof",
+    "8CPU NN32 probability replays,3epochs,Trueclass1,caps",
+    "Unchanged actualv11 tree and fixed equal clipped logit pooling,bothgates"
+  ]
+}

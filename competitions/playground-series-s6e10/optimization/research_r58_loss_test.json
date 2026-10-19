@@ -1,0 +1,15 @@
+{
+  "status": "passed_no_official_data",
+  "checked_utc": "2026-10-19T00:21:26.095410+00:00",
+  "test_code_sha256": "148340a3e6e6c255753203aaaad8646063923f003c276a9cde4962470b7d5f2d",
+  "loss_code_sha256": "8712e96a49247a65cf04f05a339597ef61b7fd227b94f133daf15471b180c097",
+  "loss_error": 0.0,
+  "gradient_error": 0.0,
+  "checks": [
+    "Explicit per-native positive-negative pairs match loss and autograd gradient in float64",
+    "Minibatch permutation and common-logit-offset invariance",
+    "No cross-native model mixing",
+    "Oneclass batch ranking term exactly0",
+    "Hard integer labels and smoothed-label argmax positives exact"
+  ]
+}

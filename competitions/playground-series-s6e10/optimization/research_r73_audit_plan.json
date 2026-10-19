@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-10-19T07:53:49.018082+00:00",
+  "main_plan_sha256": "a8ce5dc007ba83efee9d3202581e0b937a677114913b43a8fae182ea47e1010d",
+  "additional_sha256": {
+    "research_r73_audit.py": "9f19604fb218df77ea7cae3ec116fa9dded20415973ebcf83943231928e21f5e"
+  },
+  "criteria": "Both partitions original dual gates before audit; all8folds/32savedmodels own-training encoder, exact rawfeature/ID/split reconstruction, mean4, savedGPU+independentCPUfirst512replay2e-5; independentBayes2e-6; causalprefix1e-6; GPUrepeatexact0; resourceguards unchanged",
+  "outer_quality_inspected_at_audit_freeze": false
+}

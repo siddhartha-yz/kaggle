@@ -1,0 +1,28 @@
+{
+  "checked_utc": "2026-10-19T10:51:30.193721+00:00",
+  "scope": "Read-only licenses/metadata; no newmodelweights downloaded or code/modelrun",
+  "models": [
+    {
+      "model": "tabpfn_2_5",
+      "revision": "6c45f3a6d0d07c6c5f62572e04a0c2929de91b8b",
+      "license_sha256": "ac1d23429431a622b91c73db741868e69a0140d401ebb20b9e869a835e036e28",
+      "consumer_exclusion": true,
+      "professional_purpose_confirmation": true,
+      "gated": false,
+      "weights_downloaded": false,
+      "terms_accepted": false
+    },
+    {
+      "model": "tabpfn_2_6",
+      "revision": "24148873a9a5992b429833d07363690dcffd02a8",
+      "license_sha256": "430f5c5d7c8caddc0d9d9b04ca4928995ce7616abfc10db847344de187937cfa",
+      "consumer_exclusion": true,
+      "professional_purpose_confirmation": true,
+      "gated": false,
+      "weights_downloaded": false,
+      "terms_accepted": false
+    }
+  ],
+  "route_decision": "Blocked pending factual licensee eligibility: current official2.5/2.6licenses explicitlyallowDataScienceCompetitions butexcludeconsumers andrequireprofessionalpurposeconfirmation; user studentstatusalone doesnotestablishthis. No weights downloaded,noagreementaccepted,noaccountcreated.",
+  "current_EBM_work_unaffected": true
+}

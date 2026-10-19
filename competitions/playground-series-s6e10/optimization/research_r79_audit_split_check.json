@@ -1,0 +1,10 @@
+{
+  "status": "independent_inner_split_matches_current_fold0_no_quality_score",
+  "checked_utc": "2026-10-19T12:40:28.545754+00:00",
+  "inner_train": 558706,
+  "inner_valid": 1002,
+  "no_classifier_refit": true,
+  "audit_source_sha256": "15f7fde5d6c797b1ffc2a61fd5acf778a8221890dab95263f798a2325bae16d3",
+  "full_real_audit_run": false,
+  "both_gates_required": true
+}

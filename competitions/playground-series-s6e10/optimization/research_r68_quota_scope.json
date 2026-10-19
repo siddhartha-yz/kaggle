@@ -1,0 +1,7 @@
+{
+  "recorded_utc": "2026-10-19T05:07:26.652072+00:00",
+  "scope": "Inherited driver field remaining_daily_UI_quota_observed=6 is the LAST Oct18 observation afterv11, not a fresh current quota read. No Kaggle session exists here; current quota unknown and parent must recheck beforeupload.",
+  "new_formal_submissions_since_v11": 0,
+  "parent_only_submitter": true,
+  "quota_recheck_before_upload": true
+}

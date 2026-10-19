@@ -1,0 +1,11 @@
+{
+  "status": "direction_only_not_executed_or_final_recipe",
+  "recorded_utc": "2026-10-19T04:34:24.924041+00:00",
+  "R67_outer_quality_not_yet_computed": true,
+  "possible_route": "Pure RankNet74 neural expert with explicit training-only score-origin calibration",
+  "hypothesis": "R58 mixed .9CE+.1minibatchRankNet retained a probability-classification constraint. A pure positive-negative logistic ranking learner is invariant to score shifts, so a separately specified training-only intercept is needed before combination with actualv11. This changes the estimator/identifiability protocol; no weight grid or promotion of failedR58/R67.",
+  "cautions": "AllhistoricalR58/otherofficiallabels alreadyreused; this draft is adaptive, not an untouched hypothesis. If used, freeze ONE complete recipe before any newouterquality, retain prior failures, samefull5/3dualbounds. No assumed gain.",
+  "implementation_idea": "SamevalidatedNN74/native32/3epoch/R23config/old65aux. Hardlabelpair masks and fullpositive-negative minibatch softplus loss only; no CEterm. Keepprediction/feature geometry, useprocesslocalcriterionpatchonly. RawNNlogit score anchoredbyintercept solving trainingmeanprobability=Trueprevalence, slope1. Frozen.875v11/.125newrankingexpertlogit mixture.",
+  "required_before_launch": "Independent synthetic numerical gradient, bias-shiftinvariance, positiveclass direction and differentiability checks; compare fullparam/activation geometry with passedR58profile, actualcapsGPU1GiB/Torch742MiB/RSS8GiB/CPU6. No newtraining while R67 is active.",
+  "required_after_qualification": "Independent8ownencoder/count/loss/NNCPUreplay/calibrationtrain-only/algebra audit. NoCSV/fulltest/Library beforebothgates. Parent-onlyupload/freshquota/actual500."
+}

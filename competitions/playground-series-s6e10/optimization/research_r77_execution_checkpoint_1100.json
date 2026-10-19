@@ -1,0 +1,46 @@
+{
+  "checked_utc": "2026-10-19T11:01:08.430502+00:00",
+  "kind": "Live execution checkpoint; not finalresult or pause",
+  "frozen_plan_sha256": "eace3a82682b9d40deb42e0daeb55aac3f9e3a49802724932d25a2679d5ac367",
+  "service": {
+    "ActiveState": "active",
+    "SubState": "running",
+    "MainPID": "1160078",
+    "MemoryCurrent": "906272768",
+    "CPUUsageNSec": "8014960871000"
+  },
+  "driver": {
+    "status": "own_training_EBM_fit_and_prediction",
+    "updated_utc": "2026-10-19T10:43:06.728611+00:00",
+    "pid": 1160078,
+    "actual_top500_verified": false,
+    "parent_only_submitter": true,
+    "stage": "fivefold",
+    "fold": 0
+  },
+  "worker": {
+    "status": "own_training_EBM_fit",
+    "updated_utc": "2026-10-19T11:01:07.697869+00:00",
+    "pid": 1160079,
+    "outer_quality_scored": false,
+    "GPU_used": false,
+    "stage": "fivefold",
+    "fold": 0,
+    "seconds": 1080.0909965920146,
+    "process_CPU_seconds": 8009.146013656,
+    "peak_RSS_bytes": 956014592,
+    "outer_bags": 8,
+    "max_rounds": 50000
+  },
+  "completed_fivefold_models": 0,
+  "fivefold_score_computed": false,
+  "threefold_started": false,
+  "model_recipe_unchanged": true,
+  "GPU_used": false,
+  "main_modified": false,
+  "new_CSV": false,
+  "new_formal_submission": false,
+  "actual_top500_verified": false,
+  "next": "Continue original native own-training earlystop; completeallfive then evaluateexact1/16logitpool with originaldualbounds; onlythen conditionalthree.",
+  "other_route_check": "NewTabPFN2.5/2.6metadata/licensesread only;consumerexclusionandprofessionalstatusconfirmationunresolved;noweightsdownloaded,notblockingEBM."
+}

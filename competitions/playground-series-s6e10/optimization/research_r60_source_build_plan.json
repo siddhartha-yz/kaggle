@@ -1,0 +1,7 @@
+{
+  "frozen_utc": "2026-10-19T00:49:49.377923+00:00",
+  "source_plan_sha256": "880d43fafd425adecaf01728f14fab700b8cbfab72cad06e052e32547a46104f",
+  "source_audit_sha256": "8a50989f806f7c2a0bf08c3c7360cd85b94e5aa6a1f9d9b87874363d3de42228",
+  "builder_sha256": "bfa1cd1ff1572bc8c96e206e961c2999623bcf838af8a5e81f91a6026700fe77",
+  "purpose": "13fixed original-only class-conditional rating nodes, no officialSAT parsing or quality scoring; live resource guards, no parameter fallback"
+}

@@ -1,0 +1,13 @@
+{
+  "frozen_utc": "2026-10-19T00:54:26.158123+00:00",
+  "status": "prospective_before_any_official_classification_fit_or_quality",
+  "classification_route": "ONE fixed LGB97 first: retain entire certified84 and append all13 original class-conditional likelihood ratios",
+  "reason": "Source-stage direction note proposed a later NN view but no classification protocol was frozen or scored. Test LGB first to preserve every current84 input instead of discarding13EVs, and because the original-only teacher already benefits the certified tree branch. Source construction/parameters/data unchanged. This choice precedes all official outcome evaluation of these source features.",
+  "model": "Exact certified LGB stats639,CPU6; no earlystopping or new tuning",
+  "formula": "Replace only .46875 LGB84 share of current tree byLGB97; retainCB8/residual/CB10 andNN74, sameequal clipped logitpool",
+  "gates": "Original complete5then3dualCIgates vsactualv11",
+  "source_NN_proposal": "Remains an unexecuted hypothesis; not part of this LGB classifier comparison",
+  "paid": false,
+  "parent_only_submitter": true,
+  "actual_top500_verified": false
+}

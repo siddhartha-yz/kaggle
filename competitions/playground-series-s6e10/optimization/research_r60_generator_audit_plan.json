@@ -1,0 +1,16 @@
+{
+  "frozen_utc": "2026-10-19T00:54:26.158249+00:00",
+  "source_plan_sha256": "880d43fafd425adecaf01728f14fab700b8cbfab72cad06e052e32547a46104f",
+  "input_sha256": {
+    "research_r60_generator_audit.py": "5b1a5e93ad6ef5b849e2d1b0d733c2aa6cb5cb4c5d1f31d1073eac19acedb4ac",
+    "research_r60_features.py": "4223a63ed649e343ea6f29dfbc841c2b8305a3efb40b115b18053493e5644d7f",
+    "research_r60_loader.py": "7932d46b22c037156af3b82b03122d2ad06ae6e8f58c164579fb36f93a85b733",
+    "research_r60_source_result.json": "70c0424aad46792b969e40ce50e3e183838659de0118d0944e45281385aad58b",
+    "research_r60_source_build.py": "bfa1cd1ff1572bc8c96e206e961c2999623bcf838af8a5e81f91a6026700fe77",
+    "research_r60_source_build_plan.json": "a2ffb380b66ef9af0c29efe35fa65f33cea2e41573ff23f71389a141361415f8",
+    "research_r60_source_audit.json": "8a50989f806f7c2a0bf08c3c7360cd85b94e5aa6a1f9d9b87874363d3de42228"
+  },
+  "required_scope": "Only original sourceSAT conditioning, no officialSAT values parsed; all21 exactoverlaps excluded",
+  "verified_models_required": 13,
+  "CPU_threads": 6
+}

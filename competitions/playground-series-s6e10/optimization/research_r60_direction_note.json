@@ -1,0 +1,13 @@
+{
+  "status": "source_feasibility_not_running",
+  "noted_utc": "2026-10-19T00:48:15.467733+00:00",
+  "route": "ONE independent-original class-conditional rating likelihood-ratio view",
+  "hypothesis": "Prior source-only EV rating means omitted original satisfaction, and the one-scalar originalSAT teacher NN route failed. Instead expose13 class-conditional rating contributions: predict each observed rating from other20 source covariates plus ORIGINAL source SAT. At official queries evaluate both SAT hypotheses0/1 and take log P(observedrating|other20,SAT1)-log P(observedrating|other20,SAT0). No official satisfaction values are parsed by any generator. This is a representation hypothesis, not a joint Bayes-posterior identity or causal effect.",
+  "source_scope": "Only129859 audited originalCC0 rows after all21 exact covariate matches against all known official train/testX are removed. OriginalSAT conditioning is explicitly supervised by external source labels, not described as target-free. Own rating,id,officialSAT excluded from predictor inputs.",
+  "prospective_NN_view": "If13 source models and independent CPU replays pass, replace ONLY13oldconditionalEV coordinates by13source-class LLRs, retainLean47+14oldsurprisals=61fields exact, total74/52numeric22nominal. Return to unchanged formalR23 rawdelay inputs and original CE; do not combine failedR58 orR59 modifications.",
+  "prospective_protocol": "Source models fixed existing validatedCB300d7 parameters, no auxiliary selection/source hyperparameter search; CPU6/processGPU1GiB and live guards, zero paid. After source feasibility freeze original32member3epochseed42 fivefold/threefold dualgates vsactualv11, sameequal logitpool. No postscore field,weight,seed,loss or model-grid rescue.",
+  "quality_evaluated": false,
+  "official_classification_training_started": false,
+  "parent_only_submitter": true,
+  "actual_top500_verified": false
+}

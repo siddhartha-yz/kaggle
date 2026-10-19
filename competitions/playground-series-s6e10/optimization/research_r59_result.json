@@ -1,0 +1,181 @@
+{
+  "status": "not_qualified",
+  "stage": "fivefold",
+  "checked_utc": "2026-10-19T00:44:25.844650+00:00",
+  "vs_formal_v11": {
+    "pooled": {
+      "baseline_auc": 0.9616328660208192,
+      "candidate_auc": 0.9616356999122666,
+      "delta_auc": 2.8338914473957644e-06,
+      "paired_se": 3.7760772869122804e-06,
+      "conditional_95pct_ci": [
+        -4.567220034952305e-06,
+        1.0235002929743834e-05
+      ],
+      "candidate_logloss": 0.2212223492038149
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.9608862343189031,
+        "candidate_auc": 0.9608922996635253,
+        "delta_auc": 6.065344622219193e-06,
+        "paired_se": 8.720513738010514e-06,
+        "conditional_95pct_ci": [
+          -1.1026862304281415e-05,
+          2.31575515487198e-05
+        ],
+        "candidate_logloss": 0.2233316582411215
+      },
+      {
+        "baseline_auc": 0.9618421173162851,
+        "candidate_auc": 0.9618411106019062,
+        "delta_auc": -1.0067143788594635e-06,
+        "paired_se": 8.393980482325283e-06,
+        "conditional_95pct_ci": [
+          -1.745891612421702e-05,
+          1.5445487366498093e-05
+        ],
+        "candidate_logloss": 0.22074399855339932
+      },
+      {
+        "baseline_auc": 0.9622169314611875,
+        "candidate_auc": 0.9622285406472276,
+        "delta_auc": 1.1609186040151265e-05,
+        "paired_se": 7.980498000616664e-06,
+        "conditional_95pct_ci": [
+          -4.0325900410573966e-06,
+          2.7250962121359926e-05
+        ],
+        "candidate_logloss": 0.21928474933055336
+      },
+      {
+        "baseline_auc": 0.9614621762740646,
+        "candidate_auc": 0.9614580687138546,
+        "delta_auc": -4.107560209964944e-06,
+        "paired_se": 8.509834498511074e-06,
+        "conditional_95pct_ci": [
+          -2.078683582704665e-05,
+          1.2571715407116762e-05
+        ],
+        "candidate_logloss": 0.22222215993587655
+      },
+      {
+        "baseline_auc": 0.9617929598566762,
+        "candidate_auc": 0.9617974187840014,
+        "delta_auc": 4.458927325146078e-06,
+        "paired_se": 8.565689744823318e-06,
+        "conditional_95pct_ci": [
+          -1.2329824574707624e-05,
+          2.124767922499978e-05
+        ],
+        "candidate_logloss": 0.22052917995812393
+      }
+    ],
+    "corrected_resampled_t": {
+      "mean_delta": 3.4038366797384256e-06,
+      "se": 4.127026449508443e-06,
+      "test_train_ratio": 0.25,
+      "df": 4,
+      "one_sided_alpha": 0.025,
+      "lower_bound": -8.054625705021119e-06
+    },
+    "eligible_for_new_partition_replication": false,
+    "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+  },
+  "vs_prior_v10_diagnostic": {
+    "pooled": {
+      "baseline_auc": 0.9615338914351743,
+      "candidate_auc": 0.9616356999122666,
+      "delta_auc": 0.00010180847709229113,
+      "paired_se": 1.8290293314038266e-05,
+      "conditional_95pct_ci": [
+        6.595950219677612e-05,
+        0.00013765745198780614
+      ],
+      "candidate_logloss": 0.2212223492038149
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.960818384445062,
+        "candidate_auc": 0.9608922996635253,
+        "delta_auc": 7.391521846333848e-05,
+        "paired_se": 4.2035848707886325e-05,
+        "conditional_95pct_ci": [
+          -8.475045004118707e-06,
+          0.00015630548193079567
+        ],
+        "candidate_logloss": 0.2233316582411215
+      },
+      {
+        "baseline_auc": 0.9617131397187628,
+        "candidate_auc": 0.9618411106019062,
+        "delta_auc": 0.00012797088314342453,
+        "paired_se": 3.903699477424942e-05,
+        "conditional_95pct_ci": [
+          5.145837338589567e-05,
+          0.0002044833929009534
+        ],
+        "candidate_logloss": 0.22074399855339932
+      },
+      {
+        "baseline_auc": 0.9620715765969017,
+        "candidate_auc": 0.9622285406472276,
+        "delta_auc": 0.0001569640503259473,
+        "paired_se": 3.9832577938892755e-05,
+        "conditional_95pct_ci": [
+          7.889219756571749e-05,
+          0.0002350359030861771
+        ],
+        "candidate_logloss": 0.21928474933055336
+      },
+      {
+        "baseline_auc": 0.9614292433668903,
+        "candidate_auc": 0.9614580687138546,
+        "delta_auc": 2.8825346964356235e-05,
+        "paired_se": 4.270647618660699e-05,
+        "conditional_95pct_ci": [
+          -5.4879346361393465e-05,
+          0.00011253004029010594
+        ],
+        "candidate_logloss": 0.22222215993587655
+      },
+      {
+        "baseline_auc": 0.9616819435749557,
+        "candidate_auc": 0.9617974187840014,
+        "delta_auc": 0.00011547520904564568,
+        "paired_se": 4.052139224644555e-05,
+        "conditional_95pct_ci": [
+          3.60532802426124e-05,
+          0.00019489713784867895
+        ],
+        "candidate_logloss": 0.22052917995812393
+      }
+    ],
+    "corrected_resampled_t": {
+      "mean_delta": 0.00010063014158854245,
+      "se": 3.355949081283929e-05,
+      "test_train_ratio": 0.25,
+      "df": 4,
+      "one_sided_alpha": 0.025,
+      "lower_bound": 7.454057588304473e-06
+    },
+    "eligible_for_new_partition_replication": true,
+    "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+  },
+  "eligible": false,
+  "oof_sha256": "8cb0a73e81ec822f5e2df19f92df5dbc6e12ef6cfd33cdf25997efd8b6d0c7d0",
+  "plan_sha256": "fe4e2db35fcdc629602141dc6c6c156354c6e5bbefb1ce989d3e119e55ed7811",
+  "complete_outer_folds": 5,
+  "complete_native_members": 160,
+  "threefold_started": false,
+  "independent_student_audit_executed": false,
+  "test_inference_started": false,
+  "CSV_created": false,
+  "new_formal_submissions": 0,
+  "no_transform_seed_epoch_or_blend_rescue": true,
+  "peak_GPU_process_bytes": 964689920,
+  "peak_RSS_bytes": 4251299840,
+  "max_model_reload_error": 0.0,
+  "actual_top500_verified": false,
+  "parent_only_submitter": true
+}

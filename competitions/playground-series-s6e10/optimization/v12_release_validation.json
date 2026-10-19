@@ -1,0 +1,50 @@
+{
+  "checked_utc": "2026-10-19T08:29:37.635575+00:00",
+  "source_boundary": "c21f43b164969e25119f9ade1c2c18f42947e67d",
+  "repair_base": "52f8cd1f3039f2ecfca77e1dfef60972d76b05f5",
+  "replaces_main": "70b2b3f199b6475674b27de8e58ae4a1e847d026",
+  "permanent_backup_ref": "refs/heads/archive/main-before-v12-split-20261019",
+  "backup_restoration_check": "Fresh empty repository fetched the backup; exact commit/tree matched and full git fsck passed.",
+  "scope": "13 changed files for artifact verification, exact CSV replay, tests and concise evidence/docs; 18 total repository files. Historical training and experiments remain on the research branch and permanent backup.",
+  "tests": [
+    {
+      "suite": "baseline",
+      "passed": 19,
+      "skipped": 0
+    },
+    {
+      "suite": "v12",
+      "passed": 8,
+      "skipped": 0
+    }
+  ],
+  "checks": {
+    "stdlib_describe": "passed",
+    "python_AST_files": 4,
+    "JSON_files": 6,
+    "relative_markdown_links": "passed",
+    "artifact_large_file_secret_signature_scan": "passed",
+    "baseline_source_config_requirements_tests_unchanged": true,
+    "seven_core_release_files_identical_to_replaced_main": true
+  },
+  "actual_artifact_replay": {
+    "verified_files": 125,
+    "rows": 299844,
+    "bytes": 8205651,
+    "sha256": "f48276b144e8c9297fb9fec27174044a55a7eb3f2af23dde3f13478a38a4e545",
+    "entire_byte_comparison_with_submitted_original": true,
+    "errors": {
+      "baseline_formula_error": 2.220446049250313e-16,
+      "calibration_error": 0.0,
+      "group_mean_error": 0.0,
+      "independent_formula_error": 4.440892098500626e-16,
+      "CSV_numeric_error": 0.0
+    },
+    "training_GPU_or_model_deserialization": false
+  },
+  "limitations": [
+    "Replay requires the retained private artifact bundle, including archived source files; it does not retrain from raw data.",
+    "Historical model audit proofs were hash-checked and their component algebra replayed; classifier training was not repeated.",
+    "Official ranking remains the historical676/2302 snapshot; top500 not achieved."
+  ]
+}

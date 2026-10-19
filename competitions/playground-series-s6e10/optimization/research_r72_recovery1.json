@@ -1,0 +1,40 @@
+{
+  "status": "completed_checkpoint_verified_before_unchanged_resume",
+  "checked_utc": "2026-10-19T06:16:19.768834+00:00",
+  "original_driver_pid": 993705,
+  "original_session": 49675,
+  "original_driver_exited": true,
+  "completed_contexts": [
+    {
+      "stage": "fivefold",
+      "fold": 0,
+      "context": 0,
+      "rows": 139927,
+      "query_chunks_verified": 274,
+      "validation_sha256": "a77242bb013a8d0761569de4f22c1fbca3adffe1c0e6dd06eddf9236be39b532",
+      "context_sha256": "845deb0f471dc0fb2e9b5a08b57cf20eea330f2478b766981a04bf04a9f5c06d",
+      "repeat_error": 0.0
+    }
+  ],
+  "failed_next_context": {
+    "stage": "fivefold",
+    "fold": 0,
+    "context": 1,
+    "reason": "Combined preflight CUDAavailable/freeGPU>=5GiB/hostavailable>=6GiB assertion failed before model fit. Original log did not record which subcondition; do not infer OOM or network causation.",
+    "original_failure_log_sha256": "7355d9602bf5cfb4aab62a8f5ca5c842b37d231cb1be84fc0be05e0c78655169"
+  },
+  "current_resource_observation": {
+    "CPU_load1": 0.4087,
+    "available_RAM_bytes": 13490720768,
+    "free_GPU_MiB": 6906
+  },
+  "resume": "Same frozen driver/code/plan; completedcontext0 verified and skipped; next context1. No extra scoring, no recipe change, no submission.",
+  "plan_sha256": "2e29b158eddf2f564bf2b4da5b4420a42b645b04f1f327068d2c7342e83d0fc3",
+  "no_AUC_computed": true,
+  "resumed_driver_pid": 1001611,
+  "resumed_managed_session": 15214,
+  "resumed_stage": "fivefold",
+  "resumed_fold": 0,
+  "resumed_context": 1,
+  "resumed_state_verified_utc": "2026-10-19T06:17:12.918394+00:00"
+}

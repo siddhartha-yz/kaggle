@@ -1,0 +1,66 @@
+[
+  {
+    "utc": "2026-10-21T09:37:51.504792+00:00",
+    "GPU_fields": "utilGPU%,utilMem%,usedMiB,freeMiB,powerW,tempC,SMclockMHz,pstate",
+    "GPU_values": "52, 29, 4120, 7631, 112.94, 80, 2430, P0",
+    "returncode": 0,
+    "own_CPU_percent": 112.8,
+    "own_RSS_bytes": 4197085184
+  },
+  {
+    "utc": "2026-10-21T09:37:52.535822+00:00",
+    "GPU_fields": "utilGPU%,utilMem%,usedMiB,freeMiB,powerW,tempC,SMclockMHz,pstate",
+    "GPU_values": "51, 29, 4120, 7631, 111.71, 79, 2437, P0",
+    "returncode": 0,
+    "own_CPU_percent": 99.9,
+    "own_RSS_bytes": 4197085184
+  },
+  {
+    "utc": "2026-10-21T09:37:53.565139+00:00",
+    "GPU_fields": "utilGPU%,utilMem%,usedMiB,freeMiB,powerW,tempC,SMclockMHz,pstate",
+    "GPU_values": "54, 31, 4120, 7631, 110.16, 81, 2422, P0",
+    "returncode": 0,
+    "own_CPU_percent": 100.1,
+    "own_RSS_bytes": 4197085184
+  },
+  {
+    "utc": "2026-10-21T09:37:54.591884+00:00",
+    "GPU_fields": "utilGPU%,utilMem%,usedMiB,freeMiB,powerW,tempC,SMclockMHz,pstate",
+    "GPU_values": "52, 29, 4120, 7631, 110.81, 80, 2422, P0",
+    "returncode": 0,
+    "own_CPU_percent": 101.3,
+    "own_RSS_bytes": 4197085184
+  },
+  {
+    "utc": "2026-10-21T09:37:55.619379+00:00",
+    "GPU_fields": "utilGPU%,utilMem%,usedMiB,freeMiB,powerW,tempC,SMclockMHz,pstate",
+    "GPU_values": "52, 29, 4120, 7631, 96.60, 79, 2422, P0",
+    "returncode": 0,
+    "own_CPU_percent": 99.3,
+    "own_RSS_bytes": 4197085184
+  },
+  {
+    "utc": "2026-10-21T09:37:56.645410+00:00",
+    "GPU_fields": "utilGPU%,utilMem%,usedMiB,freeMiB,powerW,tempC,SMclockMHz,pstate",
+    "GPU_values": "54, 29, 4120, 7631, 110.68, 80, 2422, P0",
+    "returncode": 0,
+    "own_CPU_percent": 100.4,
+    "own_RSS_bytes": 4197085184
+  },
+  {
+    "utc": "2026-10-21T09:37:57.672138+00:00",
+    "GPU_fields": "utilGPU%,utilMem%,usedMiB,freeMiB,powerW,tempC,SMclockMHz,pstate",
+    "GPU_values": "57, 32, 4120, 7631, 112.28, 81, 2422, P0",
+    "returncode": 0,
+    "own_CPU_percent": 100.3,
+    "own_RSS_bytes": 4197085184
+  },
+  {
+    "utc": "2026-10-21T09:37:58.698554+00:00",
+    "GPU_fields": "utilGPU%,utilMem%,usedMiB,freeMiB,powerW,tempC,SMclockMHz,pstate",
+    "GPU_values": "53, 30, 4120, 7631, 112.78, 80, 2430, P0",
+    "returncode": 0,
+    "own_CPU_percent": 100.3,
+    "own_RSS_bytes": 4197085184
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "status": "passed_inner_control_verification",
+  "checked_utc": "2026-10-21T10:30:09.718567+00:00",
+  "main_plan_sha256": "a09084690e42b9e84f1ee2a5903145a3ae0d1f5bf6bb3c8546623320d77fa025",
+  "audit_plan_sha256": "91860cf5a20e5bbae7bb97575b9ce1d1b87d93dcc786cf854912ec9c0dc047ad",
+  "strict_own_inner_indices_exact": true,
+  "own_scalers_quantiles_rebuilt_exact": true,
+  "native_best_adapter_parameters_exact": true,
+  "pretrained_backbone_unchanged": true,
+  "inner_prediction_replay_error": 0.0,
+  "independent_softmax_error": 8.336528822816547e-08,
+  "selected_epoch": 1,
+  "worth_prospective_outer_validation": false,
+  "outer_candidate_qualified": false,
+  "outer_quality_scored": false,
+  "seconds": 12.780229505995521,
+  "peak_GPU_bytes": 486539264,
+  "peak_RSS_bytes": 2102558720,
+  "statistics_limitation": "Onepreviouslyused1002-rowinnerselectionset;morecheckpointchoicesfavoroptimisticbestmetrics. Allofficiallabels/partitionshistoricallyreused;neitherinnergatenorouterconditionalCIestablishesuntouchedholdoutevidence. No claimofhardwareceilingorfamilyfailurefromonepilot."
+}

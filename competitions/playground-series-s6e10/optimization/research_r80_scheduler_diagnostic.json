@@ -1,0 +1,103 @@
+{
+  "checked_utc": "2026-10-21T10:17:39.714090+00:00",
+  "no_data_loaded": true,
+  "classifier_fits": 0,
+  "GPU_tests": 0,
+  "native_epoch_schedule": {
+    "3": [
+      {
+        "epoch": 1,
+        "LR": 0.000843121446451091,
+        "Adam_beta1": 0.8656879181065633,
+        "Adam_beta2": 0.999
+      },
+      {
+        "epoch": 2,
+        "LR": 0.0003019629091399539,
+        "Adam_beta1": 0.9198039883019578,
+        "Adam_beta2": 0.999
+      },
+      {
+        "epoch": 3,
+        "LR": 4e-09,
+        "Adam_beta1": 0.95,
+        "Adam_beta2": 0.999
+      }
+    ],
+    "12": [
+      {
+        "epoch": 1,
+        "LR": 3.9999999999999996e-05,
+        "Adam_beta1": 0.95,
+        "Adam_beta2": 0.999
+      },
+      {
+        "epoch": 2,
+        "LR": 0.0009865224892001707,
+        "Adam_beta1": 0.8513477564710088,
+        "Adam_beta2": 0.999
+      },
+      {
+        "epoch": 3,
+        "LR": 0.0009330129698414117,
+        "Adam_beta1": 0.856698729810778,
+        "Adam_beta2": 0.999
+      },
+      {
+        "epoch": 4,
+        "LR": 0.000843121446451091,
+        "Adam_beta1": 0.8656879181065633,
+        "Adam_beta2": 0.999
+      },
+      {
+        "epoch": 5,
+        "LR": 0.0007244006925018707,
+        "Adam_beta1": 0.8775600409899769,
+        "Adam_beta2": 0.999
+      },
+      {
+        "epoch": 6,
+        "LR": 0.0005868257415371098,
+        "Adam_beta1": 0.8913175911166534,
+        "Adam_beta2": 0.999
+      },
+      {
+        "epoch": 7,
+        "LR": 0.0004419557751232133,
+        "Adam_beta1": 0.9058046457062615,
+        "Adam_beta2": 0.999
+      },
+      {
+        "epoch": 8,
+        "LR": 0.0003019629091399539,
+        "Adam_beta1": 0.9198039883019578,
+        "Adam_beta2": 0.999
+      },
+      {
+        "epoch": 9,
+        "LR": 0.0001786094807319497,
+        "Adam_beta1": 0.932139380484327,
+        "Adam_beta2": 0.999
+      },
+      {
+        "epoch": 10,
+        "LR": 8.225976526915452e-05,
+        "Adam_beta1": 0.9417743905706468,
+        "Adam_beta2": 0.999
+      },
+      {
+        "epoch": 11,
+        "LR": 2.1009159821280178e-05,
+        "Adam_beta1": 0.9478994756157744,
+        "Adam_beta2": 0.999
+      },
+      {
+        "epoch": 12,
+        "LR": 4e-09,
+        "Adam_beta1": 0.95,
+        "Adam_beta2": 0.999
+      }
+    ]
+  },
+  "interpretation": "OneCycleLRdefaultalsocyclesAdambeta1. ChangingnativehorizonchangesLRandmomentumtrajectories;thiscontrolcannotisolatepureepochcountcausality. Nogate/trainingchanges."
+}

@@ -1,0 +1,82 @@
+{
+  "status": "closed_no_outer_validation",
+  "recorded_utc": "2026-10-21T10:32:03.760484+00:00",
+  "completed_utc": "2026-10-21T10:29:19.394963+00:00",
+  "main_plan_sha256": "a09084690e42b9e84f1ee2a5903145a3ae0d1f5bf6bb3c8546623320d77fa025",
+  "result_sha256": "55dfc546bf92b3ad57d0ee3d0c8100d26d6f1a49001d20e0c940f8786875fc8d",
+  "pilot_audit_sha256": "fec88f1966dedf6edfd3c0580da8d65bef12b58ebd0d25510eb5e04e9fe5db50",
+  "learning_curves_sha256": "f0756208887ada8feb96d884407c86e78597ef30f99a5596e7232c9e71e2f0e6",
+  "new_classifier_fits": 1,
+  "existing3_reused_not_refit": true,
+  "all12_epochs_completed": true,
+  "seconds": 3464.921442752995,
+  "optimizer_updates_called": 52380,
+  "optimizer_updates_executed": 52352,
+  "comparison": {
+    "existing3_best_epoch": 2,
+    "existing3_selected_inner": {
+      "rows": 1002,
+      "loss": 0.18343892693519592,
+      "metric": 0.9718173199120489
+    },
+    "new12_best_epoch": 1,
+    "new12_selected_inner": {
+      "rows": 1002,
+      "loss": 0.19072727859020233,
+      "metric": 0.9706392592742018
+    },
+    "last12_inner": {
+      "rows": 1002,
+      "loss": 0.25981056690216064,
+      "metric": 0.9557682609485002
+    },
+    "selected_inner_AUC_delta": -0.0011780606378470893,
+    "selected_inner_loss_delta": 0.007288351655006409,
+    "descriptive_inner_CI": [
+      -0.004688183325481921,
+      0.0023320620497877423
+    ]
+  },
+  "advance_rule_checks": {
+    "best_epoch_after3": false,
+    "selected_inner_AUC_improves": false,
+    "selected_inner_loss_decreases": false
+  },
+  "interpretation": "Completed12nativeepochswithproperlyconfigured12epochcycle,butselectedbestremainedepoch1. Training/innercurvesdeterioratedafterthehigherLRphaseandneverrecoveredtheexisting3epochbest. Noevidencetosupportcostlyouter5/3forTHISrecipe. Notproofthatalllongtrainingorlargermodelsareuseless.",
+  "statistics": "Selected1002rowinnersetandhistoricallyreusedofficiallabels. DescriptivepairedCIcrosseszeroandignorescheckpointselection;DONOTclaimstatisticallysignificantdegradation. Nountouchedholdoutornewouter/publicscore.",
+  "compute_interpretation": "NoOOM,resourceguard,stagebudgetcutofforfitrestart. Hencefailureisnotduetoaninterrupted12epochbudget. ChangingnativeOneCyclehorizonchangesLRandAdammomentum;notapureepochcountcausalexperiment. Short8secondTabSTARsampleGPU51to57percent/CPUaboutonecoredoesnotestablishabottleneck;prior94to96percentwasR78andmustnotbemisattributed.",
+  "space_check": "Initial4.35GiBfree,conservative0.5GiBnew-outputbudget,2GiBdiskfloor. Actualartifacts164223247bytes,rawlog1416732bytes;finaldiskfree4522151936bytes. Nouserfilesdeleted.",
+  "resource_after": {
+    "checked_utc": "2026-10-21T10:30:43.644374+00:00",
+    "GPU": "NVIDIA GeForce RTX 5070 Ti Laptop GPU, 12227 MiB, 8877 MiB, 0 %, 55",
+    "GPU_query_returncode": 0,
+    "service": "ActiveState=inactive\nSubState=dead\nMainPID=0\nExecMainStatus=0",
+    "host_available_bytes": 20411863040,
+    "disk_free_bytes": 4522151936,
+    "artifact_directory_bytes": 164223247,
+    "raw_log_bytes": 1416732,
+    "resource_failures": []
+  },
+  "peak_training_GPU_bytes": 1317011456,
+  "peak_training_RSS_bytes": 4421980160,
+  "verification": {
+    "inner_indices_and_own_preprocessing_exact": true,
+    "best_native_adapter_parameters_exact": true,
+    "backbone_unchanged": true,
+    "all1002_inner_prediction_replay_error": 0.0
+  },
+  "temporary_transport_issue": "Oneread-onlyprocesslaunchfailedwithtransportdisconnected;existingmonitorandlaterfreshreadconfirmedcontinuoussamePIDandnewmicrobatches. NoSIGTERM/restartwasissued.",
+  "outer_quality_queries": 0,
+  "outer_candidate_qualified": false,
+  "threefold_started": false,
+  "test_inference": false,
+  "new_CSV": false,
+  "new_formal_submissions": 0,
+  "browser_used": false,
+  "new_credentials": false,
+  "paid_compute": false,
+  "main_modified": false,
+  "project_goal_not_claimed_complete": true,
+  "current_rank_not_verified": true,
+  "next_check": "R80terminalandserviceexitednormally;nopollingneeded.Nofurthertrainingstarted;newmechanisticproposalrequiresprospectivefrozenprotocolandunchangedoutergates."
+}

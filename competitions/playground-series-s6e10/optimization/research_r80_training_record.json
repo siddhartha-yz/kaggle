@@ -1,0 +1,297 @@
+{
+  "plan_sha256": "a09084690e42b9e84f1ee2a5903145a3ae0d1f5bf6bb3c8546623320d77fa025",
+  "parameters": {
+    "is_paper_version": true,
+    "lora_lr": 0.001,
+    "lora_wd": 0.0,
+    "lora_r": 32,
+    "lora_alpha": 2,
+    "lora_dropout": 0.1,
+    "lora_batch": 64,
+    "global_batch": 128,
+    "max_epochs": 12,
+    "patience": 12,
+    "verbose": false,
+    "random_state": 42,
+    "time_limit": 7200,
+    "pretrain_dataset_or_path": "alana89/TabSTAR",
+    "keep_model": true,
+    "val_batch_size": 64
+  },
+  "pretrained_base_parameters_sha256": "48b64d4f6c8abbe0fe49d6a053903af5d1b63011abd50cb1225d852dcdcff86b",
+  "final_parameters_sha256": "98e105db9fe689610c8b0ac3fb87b77c48e853f758ab62f328a3b82fc0b6103e",
+  "model_sha256": "91bccf50f7b1765b76bfb091ecbab8677330548148131e9c161e8fd87cd3fc13",
+  "best_epoch": 1,
+  "trace": {
+    "epochs": [
+      {
+        "rows": 558706,
+        "microbatches": 8730,
+        "seconds": 212.56987629299692,
+        "optimizer_groups": [
+          {
+            "lr": 3.9999999999999996e-05,
+            "weight_decay": 0.01,
+            "wd_argument": 0.0
+          }
+        ],
+        "training_loss": 0.26882775586759616,
+        "updates_called": 4365,
+        "updates_executed": 4365,
+        "scaler_scale": 262144.0
+      },
+      {
+        "rows": 558706,
+        "microbatches": 8730,
+        "seconds": 260.94427472200186,
+        "optimizer_groups": [
+          {
+            "lr": 0.0009865224892001707,
+            "weight_decay": 0.01,
+            "wd_argument": 0.0
+          }
+        ],
+        "training_loss": 0.2771360299856715,
+        "updates_called": 8730,
+        "updates_executed": 8722,
+        "scaler_scale": 2048.0
+      },
+      {
+        "rows": 558706,
+        "microbatches": 8730,
+        "seconds": 277.68359616700036,
+        "optimizer_groups": [
+          {
+            "lr": 0.0009330129698414117,
+            "weight_decay": 0.01,
+            "wd_argument": 0.0
+          }
+        ],
+        "training_loss": 0.49474332689428585,
+        "updates_called": 13095,
+        "updates_executed": 13084,
+        "scaler_scale": 256.0
+      },
+      {
+        "rows": 558706,
+        "microbatches": 8730,
+        "seconds": 291.31690212199464,
+        "optimizer_groups": [
+          {
+            "lr": 0.000843121446451091,
+            "weight_decay": 0.01,
+            "wd_argument": 0.0
+          }
+        ],
+        "training_loss": 0.42965562189352446,
+        "updates_called": 17460,
+        "updates_executed": 17445,
+        "scaler_scale": 32.0
+      },
+      {
+        "rows": 558706,
+        "microbatches": 8730,
+        "seconds": 294.7222536170011,
+        "optimizer_groups": [
+          {
+            "lr": 0.0007244006925018707,
+            "weight_decay": 0.01,
+            "wd_argument": 0.0
+          }
+        ],
+        "training_loss": 0.39564308193135916,
+        "updates_called": 21825,
+        "updates_executed": 21808,
+        "scaler_scale": 16.0
+      },
+      {
+        "rows": 558706,
+        "microbatches": 8730,
+        "seconds": 299.0525846550008,
+        "optimizer_groups": [
+          {
+            "lr": 0.0005868257415371098,
+            "weight_decay": 0.01,
+            "wd_argument": 0.0
+          }
+        ],
+        "training_loss": 0.3647472055236454,
+        "updates_called": 26190,
+        "updates_executed": 26172,
+        "scaler_scale": 32.0
+      },
+      {
+        "rows": 558706,
+        "microbatches": 8730,
+        "seconds": 306.89535598301154,
+        "optimizer_groups": [
+          {
+            "lr": 0.0004419557751232133,
+            "weight_decay": 0.01,
+            "wd_argument": 0.0
+          }
+        ],
+        "training_loss": 0.3461891641626312,
+        "updates_called": 30555,
+        "updates_executed": 30536,
+        "scaler_scale": 64.0
+      },
+      {
+        "rows": 558706,
+        "microbatches": 8730,
+        "seconds": 303.12316755900974,
+        "optimizer_groups": [
+          {
+            "lr": 0.0003019629091399539,
+            "weight_decay": 0.01,
+            "wd_argument": 0.0
+          }
+        ],
+        "training_loss": 0.3329447205629594,
+        "updates_called": 34920,
+        "updates_executed": 34899,
+        "scaler_scale": 32.0
+      },
+      {
+        "rows": 558706,
+        "microbatches": 8730,
+        "seconds": 291.14944113099773,
+        "optimizer_groups": [
+          {
+            "lr": 0.0001786094807319497,
+            "weight_decay": 0.01,
+            "wd_argument": 0.0
+          }
+        ],
+        "training_loss": 0.32051345626752276,
+        "updates_called": 39285,
+        "updates_executed": 39261,
+        "scaler_scale": 16.0
+      },
+      {
+        "rows": 558706,
+        "microbatches": 8730,
+        "seconds": 286.70519748599327,
+        "optimizer_groups": [
+          {
+            "lr": 8.225976526915452e-05,
+            "weight_decay": 0.01,
+            "wd_argument": 0.0
+          }
+        ],
+        "training_loss": 0.31305070803488627,
+        "updates_called": 43650,
+        "updates_executed": 43625,
+        "scaler_scale": 32.0
+      },
+      {
+        "rows": 558706,
+        "microbatches": 8730,
+        "seconds": 292.88830087700626,
+        "optimizer_groups": [
+          {
+            "lr": 2.1009159821280178e-05,
+            "weight_decay": 0.01,
+            "wd_argument": 0.0
+          }
+        ],
+        "training_loss": 0.30856251769528725,
+        "updates_called": 48015,
+        "updates_executed": 47989,
+        "scaler_scale": 32.0
+      },
+      {
+        "rows": 558706,
+        "microbatches": 8730,
+        "seconds": 298.08856202200695,
+        "optimizer_groups": [
+          {
+            "lr": 4e-09,
+            "weight_decay": 0.01,
+            "wd_argument": 0.0
+          }
+        ],
+        "training_loss": 0.308171873646607,
+        "updates_called": 52380,
+        "updates_executed": 52352,
+        "scaler_scale": 32.0
+      }
+    ],
+    "inner_evaluations": [
+      {
+        "rows": 1002,
+        "loss": 0.19072727859020233,
+        "metric": 0.9706392592742018
+      },
+      {
+        "rows": 1002,
+        "loss": 0.6929700374603271,
+        "metric": 0.7164908317027414
+      },
+      {
+        "rows": 1002,
+        "loss": 0.3625222146511078,
+        "metric": 0.9188388840699575
+      },
+      {
+        "rows": 1002,
+        "loss": 0.31006017327308655,
+        "metric": 0.9372178403566457
+      },
+      {
+        "rows": 1002,
+        "loss": 0.3228587806224823,
+        "metric": 0.9376192685534466
+      },
+      {
+        "rows": 1002,
+        "loss": 0.300694078207016,
+        "metric": 0.9428459040203335
+      },
+      {
+        "rows": 1002,
+        "loss": 0.2962033450603485,
+        "metric": 0.9440703608819316
+      },
+      {
+        "rows": 1002,
+        "loss": 0.2810799479484558,
+        "metric": 0.9520101668246828
+      },
+      {
+        "rows": 1002,
+        "loss": 0.2695413827896118,
+        "metric": 0.9527000584995864
+      },
+      {
+        "rows": 1002,
+        "loss": 0.2665190100669861,
+        "metric": 0.9545014423173906
+      },
+      {
+        "rows": 1002,
+        "loss": 0.2598061263561249,
+        "metric": 0.9557601920400217
+      },
+      {
+        "rows": 1002,
+        "loss": 0.25981056690216064,
+        "metric": 0.9557682609485002
+      }
+    ],
+    "microbatches": 104760,
+    "updates_called": 52380,
+    "updates_executed": 52352,
+    "initial_base_hash": "48b64d4f6c8abbe0fe49d6a053903af5d1b63011abd50cb1225d852dcdcff86b",
+    "trainable_parameters": 1597440,
+    "best_dir": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/research_artifacts/r80_tabstar_3v12_inner_control/native_checkpoints/20261021_173208/best_model"
+  },
+  "preprocessor_exact_vs_3epoch": true,
+  "outer_validation_used": false,
+  "fit_seconds": 3463.3405004789965,
+  "native_best_checkpoint_files": {
+    "native_checkpoints/20261021_173208/best_model/README.md": "ffeb4d90fd2bcf97c14be163777a4164dd5174a8c14cea33752f96f05f01f28a",
+    "native_checkpoints/20261021_173208/best_model/adapter_config.json": "de7a9bdf838e8616fb06dd865df1e0cfb70ee76bb7f7dfc1beb6fda9643144da",
+    "native_checkpoints/20261021_173208/best_model/adapter_model.safetensors": "a9c45a46c1e336111ea843f3dcf3a7e1d5ee0737e3b8aed212fd63f7504120ba"
+  }
+}

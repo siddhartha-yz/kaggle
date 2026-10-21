@@ -1,0 +1,90 @@
+{
+  "source_training_sha256": "2e3fe968395c5170d5428392873b6ff34ad170c84428133a23ece2bcd32b2e0a",
+  "source_model_sha256": "81c680510c2fd73a4dc387d10d3e6ab1cc3fdbe407d9c156e122f253bda24330",
+  "native_best_epoch": 2,
+  "native_inner": {
+    "rows": 1002,
+    "loss": 0.18343892693519592,
+    "metric": 0.9718173199120489
+  },
+  "replayed_inner": {
+    "AUC": 0.9718173199120489,
+    "logloss": 0.18344245124658343
+  },
+  "trace": {
+    "epochs": [
+      {
+        "rows": 558706,
+        "microbatches": 8730,
+        "seconds": 218.2669978269987,
+        "optimizer_groups": [
+          {
+            "lr": 0.000843121446451091,
+            "weight_decay": 0.01,
+            "wd_argument": 0.0
+          }
+        ],
+        "training_loss": 0.24780029152999233,
+        "updates_called": 4365,
+        "updates_executed": 4363,
+        "scaler_scale": 32768.0
+      },
+      {
+        "rows": 558706,
+        "microbatches": 8730,
+        "seconds": 220.1063774170034,
+        "optimizer_groups": [
+          {
+            "lr": 0.0003019629091399539,
+            "weight_decay": 0.01,
+            "wd_argument": 0.0
+          }
+        ],
+        "training_loss": 0.2333706682643442,
+        "updates_called": 8730,
+        "updates_executed": 8728,
+        "scaler_scale": 131072.0
+      },
+      {
+        "rows": 558706,
+        "microbatches": 8730,
+        "seconds": 217.56419291699422,
+        "optimizer_groups": [
+          {
+            "lr": 4e-09,
+            "weight_decay": 0.01,
+            "wd_argument": 0.0
+          }
+        ],
+        "training_loss": 0.23141500219162742,
+        "updates_called": 13095,
+        "updates_executed": 13092,
+        "scaler_scale": 131072.0
+      }
+    ],
+    "inner_evaluations": [
+      {
+        "rows": 1002,
+        "loss": 0.19077561795711517,
+        "metric": 0.9684546023036733
+      },
+      {
+        "rows": 1002,
+        "loss": 0.18343892693519592,
+        "metric": 0.9718173199120489
+      },
+      {
+        "rows": 1002,
+        "loss": 0.18343698978424072,
+        "metric": 0.9718112682306901
+      }
+    ],
+    "microbatches": 26190,
+    "updates_called": 13095,
+    "updates_executed": 13092,
+    "initial_base_hash": "48b64d4f6c8abbe0fe49d6a053903af5d1b63011abd50cb1225d852dcdcff86b",
+    "trainable_parameters": 1597440,
+    "best_dir": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/research_artifacts/r79r2_tabstar_raw21_fivefold/fold0/native_checkpoints/20261021_153436/best_model"
+  },
+  "no_refit": true
+}

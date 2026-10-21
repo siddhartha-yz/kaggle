@@ -1,0 +1,53 @@
+{
+  "status": "complete_inner_control",
+  "completed_utc": "2026-10-21T10:29:19.394963+00:00",
+  "plan_sha256": "a09084690e42b9e84f1ee2a5903145a3ae0d1f5bf6bb3c8546623320d77fa025",
+  "completed_new_fits": 1,
+  "reused_complete_3epoch_fit": true,
+  "epochs_completed": 12,
+  "existing3_native_best_epoch": 2,
+  "new12_native_best_epoch": 1,
+  "existing3_native_inner": {
+    "rows": 1002,
+    "loss": 0.18343892693519592,
+    "metric": 0.9718173199120489
+  },
+  "new12_native_inner": {
+    "rows": 1002,
+    "loss": 0.19072727859020233,
+    "metric": 0.9706392592742018
+  },
+  "inner_selected_AUC_delta": -0.0011780606378470893,
+  "inner_selected_loss_delta": 0.007288351655006409,
+  "inner_prediction_comparison_descriptive_only": {
+    "baseline_auc": 0.9718173199120489,
+    "candidate_auc": 0.9706392592742018,
+    "delta_auc": -0.0011780606378470893,
+    "paired_se": 0.001790878922262669,
+    "conditional_95pct_ci": [
+      -0.004688183325481921,
+      0.0023320620497877423
+    ],
+    "candidate_logloss": 0.19072104713644708
+  },
+  "worth_prospective_outer_validation": false,
+  "mechanism": "Native12epochhorizonand3epochhorizonhavedifferentLRs;testscombinedtrainingbudget/schedulerrecipe,notpureepochcausalattribution",
+  "outer_quality_scored": false,
+  "threefold_started": false,
+  "CSV_created": false,
+  "formal_submissions": 0,
+  "model_reload_error": 0.0,
+  "peak_GPU_bytes": 1317011456,
+  "peak_RSS_bytes": 4421980160,
+  "seconds": 3464.921442752995,
+  "files_sha256": {
+    "model.joblib": "91bccf50f7b1765b76bfb091ecbab8677330548148131e9c161e8fd87cd3fc13",
+    "training.json": "07cb4380fb6e0d258d89dec857dfa269aaa8b141443304192aa21169e75e6747",
+    "preprocessor.json": "7f6a5115762a9220959e5473f762a1bdece28ae54063c7a8b1caaa2e3938b7c0",
+    "indices.npz": "7a2b8817a93d83d18fd4178e6535cdfd472164c252f1a4a12352b6a52fc9a10f",
+    "existing3.json": "d27ed1551be4f0c00a6275a03f308cc40919b49633e4cca06cc2514bd3509416",
+    "existing3_inner.npz": "1c1ec69e7dfc343548452ce9d1fad6a65d34c41630897bcd091b837aab75dbf4",
+    "new12_inner.npz": "087c08bbfb2486e7ac7c758bcf3d60f8b43c557bc15ff0d4dfcdae936b7835b7"
+  },
+  "statistics_limitation": "Onepreviouslyused1002-rowinnerselectionset;morecheckpointchoicesfavoroptimisticbestmetrics. Allofficiallabels/partitionshistoricallyreused;neitherinnergatenorouterconditionalCIestablishesuntouchedholdoutevidence. No claimofhardwareceilingorfamilyfailurefromonepilot."
+}

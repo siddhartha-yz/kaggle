@@ -1,0 +1,10 @@
+{
+  "frozen_utc": "2026-10-21T10:08:01.500162+00:00",
+  "main_plan_sha256": "a09084690e42b9e84f1ee2a5903145a3ae0d1f5bf6bb3c8546623320d77fa025",
+  "audit_source_sha256": "1a47169df11877d8f34834990dc2eb25a555561740a5f087232b026ea791fc69",
+  "additional_sha256": {
+    "research_r79r2_audit.py": "a3a8d7812ec5962d747e2806f31d55bac2f7f9e2a114bc3571554c575fe90f8c"
+  },
+  "scope": "Onecompleted12epochinnerpilotonly;nopublic/outer/testqueries,noclassifierfit. Rebuildowninnerindices/scalers/quantiles;rehashmodels/inputs/nativecode;loadnativebestadapterindependently;all1002innerrowreplayerror<1e-6,manualsoftmaxerror<2e-7;recomputeunchangedpragmaticinnergate. Doesnotreplacefull5/3qualificationaudit.",
+  "resource_limits": "Same3GiBallocator/3.5GiBownGPU/8GiBRSS/4GiBhostreserve/2GiBGPUfree,CPU6"
+}

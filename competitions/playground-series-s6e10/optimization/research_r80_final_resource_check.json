@@ -1,0 +1,11 @@
+{
+  "checked_utc": "2026-10-21T10:30:43.644374+00:00",
+  "GPU": "NVIDIA GeForce RTX 5070 Ti Laptop GPU, 12227 MiB, 8877 MiB, 0 %, 55",
+  "GPU_query_returncode": 0,
+  "service": "ActiveState=inactive\nSubState=dead\nMainPID=0\nExecMainStatus=0",
+  "host_available_bytes": 20411863040,
+  "disk_free_bytes": 4522151936,
+  "artifact_directory_bytes": 164223247,
+  "raw_log_bytes": 1416732,
+  "resource_failures": []
+}

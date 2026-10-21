@@ -1,0 +1,43 @@
+{
+  "status": "passed_existing_covariate_only_information_check",
+  "checked_utc": "2026-10-21T08:49:54.978668+00:00",
+  "train_rows": 699635,
+  "sample_rows": 8192,
+  "official_SAT_column_loaded": false,
+  "new_classifier_fits": 0,
+  "new_auxiliary_fits": 0,
+  "new_validation_quality_queries": 0,
+  "old_27_inputs_exact": true,
+  "full_state_inverse_max_error": 1.1474283689860698e-07,
+  "probabilities_below_floor_fraction": 0.012861202924679488,
+  "ambiguous_summary_example": {
+    "vectors": [
+      [
+        0.1,
+        0.25,
+        0.4,
+        0.05,
+        0.2,
+        0.0
+      ],
+      [
+        0.2,
+        0.05,
+        0.4,
+        0.25,
+        0.1,
+        0.0
+      ]
+    ],
+    "means": [
+      2.0,
+      2.0
+    ],
+    "observed_rating2_probability": [
+      0.4,
+      0.4
+    ],
+    "ILR_distinguishes": 2.4782023355240534
+  },
+  "interpretation": "Fullstateidentitynotidentifiedbymean/Pobserved. Sameunderlyingrawcovariates,notnewindependentdata. Fixedlogratiogeometrymayhelpa finiteneurallearner,butnoeffectivenessclaimfromthisX-onlytest."
+}

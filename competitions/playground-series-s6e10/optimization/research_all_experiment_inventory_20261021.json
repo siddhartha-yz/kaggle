@@ -1,0 +1,1417 @@
+[
+  {
+    "number": 4,
+    "route": "",
+    "plan": "research_r4_plan.json",
+    "results": [
+      {
+        "file": "research_artifacts/r4_lean_gpu_init_oof/result.json",
+        "status": "complete",
+        "sha256": "6df225042939cdcd6549fe3489fe0b57472a66f47e5a728ee2a6d71e693ff041"
+      },
+      {
+        "file": "research_artifacts/r4_lean_gpu_init_replication3/result.json",
+        "status": "complete",
+        "sha256": "7ec4e933469b18e444a71785cfde92f464ed5d325aa21f84c11f9650377cf270"
+      },
+      {
+        "file": "research_artifacts/r4_lean_gpu_init_probe/result.json",
+        "status": "complete_no_quality_score",
+        "sha256": "e7d279f7a0221b4b21eb4184c5364cdf3c24af166232988faf795bc34f2cb125"
+      },
+      {
+        "file": "research_artifacts/r4_baseline_replication3/result.json",
+        "status": "complete",
+        "sha256": "49c73ea0ee37c801471f96b8ec8fa39eeb09d92b62478756f0c97171bd345326"
+      },
+      {
+        "file": "research_artifacts/r4_rating_relations_oof/result.json",
+        "status": "complete",
+        "sha256": "390ec7d96f04a1867fcbeca9714866133293366cdd64031a7454c4c6373c9709"
+      },
+      {
+        "file": "research_artifacts/r4_lean_cv_final/result.json",
+        "status": "complete",
+        "sha256": "a0bd64d4e85b8aef64ef04b8355b3a805a4493e8454b566e3197c7a937ea0270"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "route": "",
+    "plan": "research_r5_plan.json",
+    "results": [
+      {
+        "file": "research_r5_auto_te_result.json",
+        "status": "complete",
+        "sha256": "b3d3eb448e7530da6edddb5d7458bbdfe5f0a005fe7d8b2cdf6024d31cd74b0e"
+      },
+      {
+        "file": "research_r5_density_result.json",
+        "status": "complete",
+        "sha256": "dabec9580c867689cb304cc08ed6307b199af1047cdd3368a9606e8c12134b3b"
+      },
+      {
+        "file": "research_artifacts/r5_auto_te_fivefold/result.json",
+        "status": "complete",
+        "sha256": "317ba5f02bbc8ff77cb868a322f48f9dc63ca8dc725077345e221ff21b54a370"
+      },
+      {
+        "file": "research_artifacts/r5_density_fivefold/result.json",
+        "status": "complete",
+        "sha256": "aa372f0ef3dc9c369dc01ced82ee1519bd87dad43e6ff06ea06162bb62b5ce22"
+      },
+      {
+        "file": "research_artifacts/r5_auto_te_threefold/result.json",
+        "status": "complete",
+        "sha256": "607d8cbd496dda0c25910695409a81338021805a0ac21bc76b0db1c5cb204224"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "route": "The new34conditionalresponseTEs show smallpositivefivefoldsignal but didnotreplicatereliably with LGB639. Test one higher-order interactionlearner withthosesametrain-onlyfeatures; doesnotestablish a noisefloor.",
+    "plan": "research_r6_plan.json",
+    "results": [
+      {
+        "file": "research_r6_half_result.json",
+        "status": "complete",
+        "sha256": "753f63a34e295b828121e14579258331e33f38dfa6ab07baf2fed6d4ce043292"
+      },
+      {
+        "file": "research_r6_result.json",
+        "status": "complete",
+        "sha256": "cf4f93e5cb6449960294bbc52e45cee65356c08f430e6314943f833219333dbe"
+      },
+      {
+        "file": "research_artifacts/r6_xgb_threefold/result.json",
+        "status": "complete",
+        "sha256": "084ddf072401bb941ad5e23e20908b070d717df7939dd7632888995e05d0cc7e"
+      },
+      {
+        "file": "research_artifacts/r6_xgb_fivefold/result.json",
+        "status": "complete",
+        "sha256": "f3aec945d25ec43a81e72aef8d6730f1d64720c4e1f3e79cca5a796c7be203cf"
+      },
+      {
+        "file": "research_artifacts/r6_xgb_probe/result.json",
+        "status": "complete_no_quality_score",
+        "sha256": "1d7f17d119629ed709a96a26a973c75b3717a7957ad56cf1d98f535374265302"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "route": "",
+    "plan": "research_r7_plan.json",
+    "results": [
+      {
+        "file": "research_artifacts/r7_response_probe/result.json",
+        "status": "complete_no_quality_score",
+        "sha256": "d0120966589cb7861a927b43b7519cfc33ea69da78a368bfc42720a9d322acae"
+      },
+      {
+        "file": "research_artifacts/r7_response_fivefold/result.json",
+        "status": "complete",
+        "sha256": "a8f54089e2a479d3c887d392b93a3b80905bb231a45d664a5ddf52b92cff7a9a"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "route": "",
+    "plan": "research_r8_plan.json",
+    "results": [
+      {
+        "file": "research_artifacts/r8_stream_append_fivefold/result.json",
+        "status": null,
+        "sha256": "c4c0868796470a50760137c768fbcfdc87d82d40bb0aafde625411afc0de92e6"
+      },
+      {
+        "file": "research_artifacts/r8_stream_lean_fivefold/result.json",
+        "status": null,
+        "sha256": "f58579915f333f8f65c629b15f9d555411d80695a2e217e3561b53284c9d2c9c"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "route": "",
+    "plan": "research_r9_plan.json",
+    "results": [
+      {
+        "file": "research_r9_result.json",
+        "status": "complete",
+        "sha256": "1d3900f95e12ebe8c63a0ee56ac839863794ec48b50cb4603c140348591397c2"
+      },
+      {
+        "file": "research_artifacts/r9_linkage_fivefold/result.json",
+        "status": "complete",
+        "sha256": "6eef0e5b38b67da6b1280d44ab623482c53b0d2c30306efe1a15d8edbc5d8d1b"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "route": "",
+    "plan": "research_r10_plan.json",
+    "results": [
+      {
+        "file": "research_artifacts/r10_nested_epochs_fivefold/result.json",
+        "status": "complete",
+        "sha256": "4a768a790343b9eb6de0ca5c0eb2d2504ed5c68184d77e5e65dbf539a5460855"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "route": "",
+    "plan": "research_r11_plan.json",
+    "results": [
+      {
+        "file": "research_artifacts/r11_uniform_lean_fivefold/result.json",
+        "status": "complete",
+        "sha256": "f3124f372635006641d646d56f9d15411b9a31d1e2a7441501f835069c8edac3"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "route": "",
+    "plan": "research_r12_plan.json",
+    "results": [
+      {
+        "file": "research_r12_result.json",
+        "status": "complete",
+        "sha256": "69769f1b3f8b3fd786e5bd744178f1a952fcc13fde83f84726c611adc91f4f4d"
+      },
+      {
+        "file": "research_artifacts/r12_population_fivefold/result.json",
+        "status": "complete",
+        "sha256": "1c093fb558024af4898b884defa1be1fc4c61b53648506490a93f192efd4b244"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "route": "",
+    "plan": "research_r13_plan.json",
+    "results": [
+      {
+        "file": "research_artifacts/r13_numeric_lean_fivefold/result.json",
+        "status": "complete",
+        "sha256": "49c7685c519876ff8f54daede2c01b9ca54818dac43f8e7dd2391c0a0c3111df"
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "route": "",
+    "plan": "research_r14_plan.json",
+    "results": [
+      {
+        "file": "research_r14_result.json",
+        "status": "complete",
+        "sha256": "9336d86ad9784e2b04eb1d9e93f7e6a9bf15bef6d4c57a1c694b90ffb66bc80a"
+      },
+      {
+        "file": "research_artifacts/r14_log_pool_fivefold/result.json",
+        "status": null,
+        "sha256": "2a2ff24117a42bf1ed3935b743ada29c519c4b895e1f32f1da99822a2063be43"
+      },
+      {
+        "file": "research_artifacts/r14_log_pool_threefold/result.json",
+        "status": null,
+        "sha256": "e9ba2665a2dfd2533118836b4c66ddef73d1eab8489808bfdeda3e97d92c9121"
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "route": "Append one explicit customer-segment class prior to Lean47 to provide a low-dimensional conditional fastpath under the fixed short neural schedule. New raw information is not claimed: CustomerType already exists. ExistingGender/othercrosses remain.",
+    "plan": "research_r15_plan.json",
+    "results": [
+      {
+        "file": "research_artifacts/r15_segment_lean_fivefold/result.json",
+        "status": "complete",
+        "sha256": "0dab30e876c40a5d63223226a7e4f146e829266ebdf92cfc5fbc49f9782e3a8f"
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "route": "",
+    "plan": "research_r16_plan.json",
+    "results": [
+      {
+        "file": "research_artifacts/r16_gpu_cb_numeric57_fivefold/result.json",
+        "status": "complete",
+        "sha256": "0d3cdbb22bd2e8af12c14bdfd63a92f05ab81657857eebb9491c21b86149b04d"
+      },
+      {
+        "file": "research_artifacts/r16_cb_gpu_probe_04/result.json",
+        "status": "passed_no_quality_score",
+        "sha256": "616fd5c85621cd0a76d44bdf8f98a48dc19c8369cd7876593b0dd04c94c15c1e"
+      },
+      {
+        "file": "research_artifacts/r16_cb_gpu_speed64_04/result.json",
+        "status": "passed_no_quality_score",
+        "sha256": "18fb80302320026f97e6061ee30eb5d073e16bd31ec0e6179c6bf02ba2d05dd8"
+      },
+      {
+        "file": "research_artifacts/r16_gpu_cb_nominal58_fivefold/result.json",
+        "status": "complete",
+        "sha256": "95c2c9ea2dfa1010f809a948166551241753f5e994ccf1d18aca8fbda5f2eafb"
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "route": "Isolate one independent original-source LGB teacher input to Lean47. Existing tree family already benefits from original knowledge; LeanNN has no teacher prediction. Prior context NN simultaneously added multiple profiles/lookups and does not isolate this feature. No teacher retraining or recipe/weight grid.",
+    "plan": "research_r17_plan.json",
+    "results": [
+      {
+        "file": "research_artifacts/r17_teacher_lean_fivefold/result.json",
+        "status": "complete",
+        "sha256": "1f239bde41e171925d39bbc1e0edf18d794110d0d5783ddbe22728135bd2bdf8"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "route": "R16 fixed813 trees inherited CPU-selected count while GPU bootstrap/score algorithm differs. Test a single nested tree-count selection algorithm in the unchanged numeric57 view; no new feature, depth, learning-rate, bootstrap, weight, seed or iteration grid.",
+    "plan": "research_r18_plan.json",
+    "results": [
+      {
+        "file": "research_artifacts/r18_gpu_cb_numeric57_fivefold/result.json",
+        "status": "complete",
+        "sha256": "cf9c51d7589b7b5a1b261b8f05192161d7d2d2880e2da40898be168dd01ba335"
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "route": "Publicindependent feature ladder shows conditional rating-expectation auxiliary features improve tree model afterroute/originalteacher signals. Test this distinct source-only feature reconstruction mechanism; priorW3latentservice inferred an omitted service, and W3sourceaux predictedSAT, neither reconstructed13observedratings.",
+    "plan": "research_r19_plan.json",
+    "results": [
+      {
+        "file": "research_artifacts/r19_aux_lgb_fivefold/result.json",
+        "status": "complete",
+        "sha256": "ed1cf19af8e7a5483976254e7df53f3110f90d2d0e838198d456b100c8c762a0"
+      },
+      {
+        "file": "research_artifacts/r19_original_aux/result.json",
+        "status": "complete",
+        "sha256": "16b50b292e1d144e7bd6a228f343d8b66634e0e273b5b9a982b2b6077d73df16"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "route": "R19original-onlyratingexpectationfeatures improvepooledAUCvsprivatev9butfailedcorrectedfoldbound. Publicladder also reportscompetition-domainlabel-freeauxiliarycrossfit; testdomainmatchwithaGPUauxiliarylearnerthatfitsresourcecap. Source-onlyCBcontrolisolatesauxlearnerchangefrompopulationchange. No individualratingselection, mainlearner/weightsunchanged.",
+    "plan": "research_r20_plan.json",
+    "results": [
+      {
+        "file": "research_artifacts/r20_aux_sourcecb/result.json",
+        "status": "complete",
+        "sha256": "293aff186e179ccf05402582ef54dbac911a008ddb557603958633fb11faa754"
+      },
+      {
+        "file": "research_artifacts/r20_aux_sourcecb_memory04_v1/result.json",
+        "status": "complete",
+        "sha256": "34884ed5707e8c102ad89e0ed8d1d6cc9b06f5d0405157fda3858639a4cf5013"
+      },
+      {
+        "file": "research_artifacts/r20_multiclass_gpu_probe/result.json",
+        "status": "passed_no_satisfaction_read_or_quality_score",
+        "sha256": "6d9e79749f8ecada192beb3c1e9e99bb7b29fd420c1f6f99c76d35b06732b1e3"
+      },
+      {
+        "file": "research_artifacts/r20_aux_lgb_officialcb_fivefold/result.json",
+        "status": "complete",
+        "sha256": "566d60dec3dd8b9f0151efa6eb5041b4e353e5a93d562804df0376ede8b81344"
+      },
+      {
+        "file": "research_artifacts/r20_aux_lgb_sourcecb_fivefold/result.json",
+        "status": "complete",
+        "sha256": "180c7c0766daca0195ec58d05d9af4c265ca4b2c5f3ccb3e9d84797bf3fe942f"
+      },
+      {
+        "file": "research_artifacts/r20_aux_lgb_sourcecb_threefold/result.json",
+        "status": "complete",
+        "sha256": "9953998621a40481828a8eac057d54da80ff7b747a2813e270bb5f70715b43a4"
+      },
+      {
+        "file": "research_artifacts/r20_multiclass_gpu_probe06/result.json",
+        "status": "passed_no_satisfaction_read_or_quality_score",
+        "sha256": "16a2608f56ce0513bf58881d1baecffded12af3c0e9f207d8d981e5ba0da0008"
+      },
+      {
+        "file": "research_artifacts/r20_aux_officialcb/result.json",
+        "status": "complete",
+        "sha256": "b0b8d914a5d37fcf0fb11a31858daae9db86c277baf3bd6fe7525066fa410e2b"
+      },
+      {
+        "file": "research_artifacts/r20_aux_officialcb_memory04_v1/result.json",
+        "status": "training",
+        "sha256": "2da8092a14ee55ce635fd3d38d1f157ece135d64b11fa7de64f8b288f029199c"
+      }
+    ]
+  },
+  {
+    "number": 21,
+    "route": "R20conditionalratingmeans improvedpooledAUC~35ppm inboth5/3partitions butfailed3foldcorrectedbound. E[rating|others] discards multimodality: distributions.5at0/.5at4andallmassat2bothmean2butdifferentP(observed2). Rating0notmonotonicquality. Addlearnedconditionalself-surprisal torepresentpredictability/coherenceofobservedfeatureconfiguration; noSATorunknownlabelsused.",
+    "plan": "research_r21_plan.json",
+    "results": [
+      {
+        "file": "research_artifacts/r21_probability_lgb_officialcb_fivefold/result.json",
+        "status": "complete",
+        "sha256": "a43c68425832b82618a55d80f25771b0af746c37de844385e2d682c309461e9f"
+      },
+      {
+        "file": "research_artifacts/r21_conditional_officialcb/result.json",
+        "status": "complete",
+        "sha256": "bdffd97687e51e432355afad14f7320ab8175bb0298ba6d0e84992bb39717ee6"
+      },
+      {
+        "file": "research_artifacts/r21_probability_lgb_sourcecb_fivefold/result.json",
+        "status": "complete",
+        "sha256": "b20149882ca52da284177524d852a09d4da2409831f99f873caa0c7fe4e5797a"
+      },
+      {
+        "file": "research_artifacts/r21_probability_lgb_officialcb_threefold/result.json",
+        "status": "complete",
+        "sha256": "53ca41e6d15af3a16fd8d8a7ad7e867776b2891e8c5e164f0cef9f0040d3f188"
+      },
+      {
+        "file": "research_artifacts/r21_conditional_sourcecb/result.json",
+        "status": "complete",
+        "sha256": "8125beba455048edc5e5df27889559059af2cbe4199a8fcaf7755e9f4f87a559"
+      },
+      {
+        "file": "research_artifacts/r21_probability_lgb_officialcb_full/result.json",
+        "status": "passed",
+        "sha256": "43da0d131670f8ec933d7198fa958b36658b3703efba599d5d2688daed086825"
+      }
+    ]
+  },
+  {
+    "number": 22,
+    "route": "ONE raw21 global TabICL, fixed pretrained weights,16384 uniform outer-training rows chosen seed20261030+fold (+10000threefold). Native4 feature-permutation estimators normnone/power seed42. No teacher/external/testfeatures, ID excluded. All preprocessfits ONLYcontext.",
+    "plan": "research_r22_plan.json",
+    "results": [
+      {
+        "file": "research_r22_result.json",
+        "status": "complete",
+        "sha256": "b2855dd52907acfb3e413f15e14a9b4575818ee3c5f4eeb7f894b64264dff198"
+      },
+      {
+        "file": "research_artifacts/r22_offload_probe_v4/result.json",
+        "status": "complete_no_quality_score",
+        "sha256": "b133698f7157df5377ed91b23a9d802bc606c0afa1437fa71221b2b0d7f22bb6"
+      },
+      {
+        "file": "research_artifacts/r22_offload_probe_v2/result.json",
+        "status": "complete_no_quality_score",
+        "sha256": "31c27c4f3f154ad63c996adb680599b99157da70b34e4a590f2a3d4d7672b191"
+      },
+      {
+        "file": "research_artifacts/r22_global_tabicl_fivefold/result.json",
+        "status": "complete",
+        "sha256": "9ffabcfdbee93e0c8344ff5b755c63e81fa1ca77720f0acf5d9086551711ce97"
+      },
+      {
+        "file": "research_artifacts/r22_offload_probe/result.json",
+        "status": "running",
+        "sha256": "cdcb4182a308450257a9b1fc54372a9d20df8c2f4823b9ce2f44869b48fa9b5f"
+      },
+      {
+        "file": "research_artifacts/r22_parity_diagnostic/result.json",
+        "status": "complete_no_quality_score",
+        "sha256": "cf5d8c8c3db34257352083de040be54730601610dd1b26ce4189d140791d5c8d"
+      },
+      {
+        "file": "research_artifacts/r22_offload_probe_v3/result.json",
+        "status": "complete_no_quality_score",
+        "sha256": "ed0f46e064e73f4311987d9271c87e44f2d8bacac4174c062462643012dcf2fe"
+      },
+      {
+        "file": "research_artifacts/r22_parity_diagnostic_v2/result.json",
+        "status": "complete_no_quality_score",
+        "sha256": "506b1b06ce8730b2d8f98a3b603681219ac0388715caf4f790c065c178dd28cf"
+      }
+    ]
+  },
+  {
+    "number": 23,
+    "route": "ONE official-covariate-pretext NN74 route",
+    "plan": "research_r23_plan.json",
+    "results": [
+      {
+        "file": "research_artifacts/r23_conditional_lean_fivefold/result.json",
+        "status": "complete",
+        "sha256": "5f249baee5449e87b804335e7a4c50ef8dc75777615292fa603a6c34967dfc81"
+      },
+      {
+        "file": "research_artifacts/r23_conditional_lean_threefold/result.json",
+        "status": "complete",
+        "sha256": "58dba472b551c68e369ecd6d23c2d6c047e56aa14d4a7ba89e136caeb16d811c"
+      },
+      {
+        "file": "research_artifacts/r23_conditional_nn_full/result.json",
+        "status": "passed",
+        "sha256": "39098eefabc21fef939bf42fcd829f099d8b9e7f39b88ed111941d8a984e5667"
+      }
+    ]
+  },
+  {
+    "number": 24,
+    "route": "Currentv11 uses13conditionalmeans and13observed-classsurprisals plusmean. SameexpectedratingandP(observed)canhave differententropy: [.25,0,.5,0,.25] vs[.125,.125,.5,.125,.125] bothmean2/Pobs2=.5 butentropy differs. Highselfsurprisal mayreflect inherentuncertainty ratherthan unusualobservedvalue. Adduncertaintyandcenteredselfsurprisal toexpose that distinction; no SATtarget ornewauxiliaryfits.",
+    "plan": "research_r24_plan.json",
+    "results": [
+      {
+        "file": "research_r24_result.json",
+        "status": "complete",
+        "sha256": "f9afc4b6265dd9536b64862ca80fe56e737810bf8be9842adee6ca8c60b1e33f"
+      },
+      {
+        "file": "research_artifacts/r24_uncertainty_officialcb/result.json",
+        "status": "complete",
+        "sha256": "3f601a2b69f5050f4cd9426c4ebe19b2bd2821cd2fb7173bfb4af17b00e11ea0"
+      },
+      {
+        "file": "research_artifacts/r24_uncertainty_lgb_officialcb_fivefold/result.json",
+        "status": "complete",
+        "sha256": "ccf5d7731d0887734957498715fe03b84e6daca944d4354c011a10bbaf767763"
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "route": "Means/Pobs/entropy discard classidentity. Vectors [.1,.25,.4,.05,.2,0] and [.2,.05,.4,.25,.1,0] bothmean2/Pobs2=.4/sameentropy butdifferentprobabilitiesforrating0/1/3/4. Rating0isnotordinalquality. Addallconditionalstateprobabilitiestoexposepredictedhigh/low/no-service modes; R24scalaruncertaintyfailed andisexcluded. NoSATlabelsornewpretextmodels.",
+    "plan": "research_r25_plan.json",
+    "results": [
+      {
+        "file": "research_r25_result.json",
+        "status": "complete",
+        "sha256": "56aca432bf6daf95c04c17f70d6c98a8dfd5f93bfdc213f3655efbb254778d58"
+      },
+      {
+        "file": "research_artifacts/r25_posterior_lgb_officialcb_fivefold/result.json",
+        "status": "complete",
+        "sha256": "c547e9a77416bd4892d67ba767e5acb8f9a4eb4139525bd75dadb5b95725eab0"
+      },
+      {
+        "file": "research_artifacts/r25_posterior_officialcb/result.json",
+        "status": "complete",
+        "sha256": "78f63710c7f2862001f12e2ace1e5f931f991a467a0ab9d1cc75b8f636ee6166"
+      }
+    ]
+  },
+  {
+    "number": 26,
+    "route": "ONE NN152 fullconditionalstate posterior route",
+    "plan": "research_r26_plan.json",
+    "results": [
+      {
+        "file": "research_r26_result.json",
+        "status": "complete",
+        "sha256": "5644ec306c0adeaf225aa4a375b9b2f3107ee03936ecb39749fe0c6264b626e7"
+      },
+      {
+        "file": "research_artifacts/r26_conditional_lean_fivefold/result.json",
+        "status": "complete",
+        "sha256": "f05b0665f1bfd301bc17ef3697ee518245560e8b0e658361700b558307d6af4b"
+      }
+    ]
+  },
+  {
+    "number": 27,
+    "route": "ONE nestedCPU XGBoost84 maincomponent replacement",
+    "plan": "research_r27_plan.json",
+    "results": [
+      {
+        "file": "research_r27_result.json",
+        "status": "complete",
+        "sha256": "3d87f3227e6e5c1529649dcf90347b86e7d092a112c56495c273a71d01a4869c"
+      },
+      {
+        "file": "research_artifacts/r27_xgb_fivefold/result.json",
+        "status": "complete",
+        "sha256": "c12198409c7a9dcaae2ee898772015d292cd7be74de4686977d3beacefafe722"
+      }
+    ]
+  },
+  {
+    "number": 28,
+    "route": "ONE fixedequal-probability main-booster average",
+    "plan": "research_r28_plan.json",
+    "results": [
+      {
+        "file": "research_r28_result.json",
+        "status": "complete",
+        "sha256": "78c549aa3fed1945ca4be6d43c5e46ccfa0a35162af971ada67d618fedf107ab"
+      },
+      {
+        "file": "research_artifacts/r28_bag_fivefold/result.json",
+        "status": "complete",
+        "sha256": "3823e28891d9584fc179a4bc0a5784c4f494a7d37b3b831a9a5bb5f546887418"
+      },
+      {
+        "file": "research_artifacts/r28_bag_threefold/result.json",
+        "status": "complete",
+        "sha256": "ecc417f803f35eee14ad5d33f29806dd6f8216db53a98daa5d63718d980b5a0b"
+      }
+    ]
+  },
+  {
+    "number": 29,
+    "route": "ONE missing-feature supervision NN80; allhyperparametersmatchedv11NN74",
+    "plan": "research_r29_plan.json",
+    "results": [
+      {
+        "file": "research_r29_result.json",
+        "status": "complete",
+        "sha256": "1bfb250d7430ec7c4d27f527444d2b027a0bfec6abc5b7a4474f673742a70147"
+      },
+      {
+        "file": "research_artifacts/r29_service_lean_fivefold/result.json",
+        "status": "complete",
+        "sha256": "9128803365c7a94f3ba431cceab6ba00db5422cc077c5d274706ef24727ad420"
+      }
+    ]
+  },
+  {
+    "number": 30,
+    "route": "ONE NN74 fixedCOMPLETE6epoch annealing schedule",
+    "plan": "research_r30_plan.json",
+    "results": [
+      {
+        "file": "research_r30_result.json",
+        "status": "complete",
+        "sha256": "546ec9a398e7c0cbdeb97390a86ea1850282dbfe0cabd500231f01b1a6ffa299"
+      },
+      {
+        "file": "research_artifacts/r30_annealed_lean_fivefold/result.json",
+        "status": "complete",
+        "sha256": "e0b4fb04b9ba2094fc3d8bde8ab9cb31495256e0e385fa34c991eef261c2304b"
+      }
+    ]
+  },
+  {
+    "number": 31,
+    "route": "ONE propernestedGPU CB10 withvalidated84fields",
+    "plan": "research_r31_plan.json",
+    "results": [
+      {
+        "file": "research_r31_result.json",
+        "status": "complete",
+        "sha256": "125d8842e8299fc34b9fa850a37c1641a6b0ad5e328f7e0e417cc39a0fe5fe1f"
+      },
+      {
+        "file": "research_artifacts/r31_cb84_fivefold/result.json",
+        "status": "complete",
+        "sha256": "a710861aaed776ae760d9baadcead7f3415629ef7b60d3c607da485fdc5ddb5f"
+      },
+      {
+        "file": "research_artifacts/r31_cb84_hardware/result.json",
+        "status": "passed_no_quality_score",
+        "sha256": "285739a1bf8d3bcc533bb90b42c5a9f2a834094101070a58ee690ad2e9f9c186"
+      }
+    ]
+  },
+  {
+    "number": 32,
+    "route": "ONE nested TabM16 on validatedneural74",
+    "plan": "research_r32_plan.json",
+    "results": [
+      {
+        "file": "research_r32_result.json",
+        "status": "complete",
+        "sha256": "49321db8bc8ad0b3cfe2f399b08f1cee9a596550eeec387b63047cd7126d97c0"
+      },
+      {
+        "file": "research_artifacts/r32_tabm74_fivefold/result.json",
+        "status": "complete",
+        "sha256": "dbf4942b95201b51e039148519f0da16cb900c33a4eba9d0e56dd2b5d37fccf1"
+      },
+      {
+        "file": "research_artifacts/r32_conditional_tabm_hardware/result.json",
+        "status": "passed_no_quality_score",
+        "sha256": "bb336e9e548a234deb13c0d3ea1dbfeb13d71e5179d6944ea4b45a12322801e2"
+      }
+    ]
+  },
+  {
+    "number": 33,
+    "route": "ONE fixed removaloflegacyrawtreefamilies",
+    "plan": "research_r33_plan.json",
+    "results": [
+      {
+        "file": "research_r33_result.json",
+        "status": "complete",
+        "sha256": "d87a6ce3437550a948cdcb453f4dd1f668b1414cb89b1c63e9915f32e2012400"
+      }
+    ]
+  },
+  {
+    "number": 34,
+    "route": "",
+    "plan": null,
+    "results": [
+      {
+        "file": "research_r34_result.json",
+        "status": "hardware_blocked_no_quality_evaluation",
+        "sha256": "45da52fbddcaac4b138e37d10ab26765750e2f0fd7c263c28fcbdf77b6d1808d"
+      },
+      {
+        "file": "research_artifacts/r34_tabicl48_probe_32768/result.json",
+        "status": "allocator_OOM",
+        "sha256": "b60fa0b30f87265146ffbaae40db627084dedaf580c86c5a0cee171809e6867c"
+      },
+      {
+        "file": "research_artifacts/r34_tabicl48_probe_65536/result.json",
+        "status": "allocator_OOM",
+        "sha256": "a2e2a705c2fc7ba429eb633077f5048282d8aa9848961d3337285981fb2c0d65"
+      }
+    ]
+  },
+  {
+    "number": 35,
+    "route": "",
+    "plan": null,
+    "results": [
+      {
+        "file": "research_r35_result.json",
+        "status": "hardware_blocked_no_quality_evaluation",
+        "sha256": "1bca099513f811bc0a78c68fecdfe48354f5c835a2701c887a1e4e321e0a81f6"
+      },
+      {
+        "file": "research_artifacts/r35_tabicl48_probe_32768/result.json",
+        "status": "allocator_OOM",
+        "sha256": "62d3c5549d61b2985b9036214c40fd2ddc04c6b4662ec78e3f4f65e942a449e2"
+      }
+    ]
+  },
+  {
+    "number": 36,
+    "route": "ONE conditionalTabICL48 with4disjoint32768-rowcontexts",
+    "plan": "research_r36_plan.json",
+    "results": [
+      {
+        "file": "research_r36_result.json",
+        "status": "complete",
+        "sha256": "429e4e9336b1e53256c42052cd9520b9c4bdfdf35c50adb0af84df9114c8e8c9"
+      },
+      {
+        "file": "research_artifacts/r36_tabicl48_fivefold/result.json",
+        "status": "complete",
+        "sha256": "a486c89251c3217c52ae84d907156f4d3bab819001cfa320aba75a305c541ce0"
+      },
+      {
+        "file": "research_artifacts/r36_tabicl48_probe_32768/result.json",
+        "status": "passed_no_quality_score",
+        "sha256": "420191c402e7db1bf8fd3ba11b54c03d01bc813e55095dd34e48bd7ff1224462"
+      },
+      {
+        "file": "research_artifacts/r36_memory_parity/result.json",
+        "status": "passed_no_quality_score",
+        "sha256": "582bdfdbdfaca2996c35a31b2cb9739e76368278dff8abcda7fde193639e97b9"
+      }
+    ]
+  },
+  {
+    "number": 37,
+    "route": "ONE lowdimensionalordinalconditionalrankprojection onmainLGB97",
+    "plan": "research_r37_plan.json",
+    "results": [
+      {
+        "file": "research_r37_result.json",
+        "status": "complete",
+        "sha256": "23ccea3b03d8a068e610851c06898d8b6074d93df5b0a4d9aeb8c360b5d01dc7"
+      },
+      {
+        "file": "research_artifacts/r37_rank_lgb_fivefold/result.json",
+        "status": "complete",
+        "sha256": "a5de422b55ef61fa72658578b0f9184aad02387863ed6fa9f3d92d58bca13ce4"
+      },
+      {
+        "file": "research_artifacts/r37_ordinal_ranks/result.json",
+        "status": "complete",
+        "sha256": "bd9d9217b829b9aea23871314126cfab08880064f8e1e36511752f4b62069b82"
+      }
+    ]
+  },
+  {
+    "number": 38,
+    "route": "",
+    "plan": null,
+    "results": [
+      {
+        "file": "research_r38_result.json",
+        "status": "hardware_blocked_no_quality_evaluation",
+        "sha256": "733834767a1d8951a3e705ee796989ac4e92b73acd0ab403b880f77404674f31"
+      }
+    ]
+  },
+  {
+    "number": 39,
+    "route": "ONE matchedexecutionuniformNN74 native32->128 byfourfixedseedblocks",
+    "plan": "research_r39_plan.json",
+    "results": [
+      {
+        "file": "research_r39_variance_result.json",
+        "status": "complete_predictions_only",
+        "sha256": "d69af516015a79e7630973275eafb77ddfd061cef1a12ec73c9b24acd2a5d770"
+      },
+      {
+        "file": "research_r39_result.json",
+        "status": "complete",
+        "sha256": "cc11e78642b5ed70e57941c51806f36119e1394d95923818f25ef3134cddfaa0"
+      },
+      {
+        "file": "research_artifacts/r39_uniform_fivefold/result.json",
+        "status": "complete",
+        "sha256": "55e96ec02f202fe6516d170cf82d9c53d194921e90f0e3e43766fdea09663e29"
+      },
+      {
+        "file": "research_artifacts/r39_uniform_lean_fivefold/result.json",
+        "status": "complete",
+        "sha256": "55e96ec02f202fe6516d170cf82d9c53d194921e90f0e3e43766fdea09663e29"
+      }
+    ]
+  },
+  {
+    "number": 40,
+    "route": "ONE propernestedLGB84iterationselection",
+    "plan": "research_r40_plan.json",
+    "results": [
+      {
+        "file": "research_r40_result.json",
+        "status": "complete",
+        "sha256": "351971516d4126562b1dbb9ca32a245ef1a6245efab122f35069d85e01ea4bdb"
+      },
+      {
+        "file": "research_artifacts/r40_nested_lgb84_fivefold/result.json",
+        "status": "complete",
+        "sha256": "503646ad5382196eb5363d296ee18f42e33a1a78fdaf055a6b72ee6323dde75e"
+      }
+    ]
+  },
+  {
+    "number": 41,
+    "route": "ONE half-feature-per-treeconditionalLGB84withpropernestediterations",
+    "plan": "research_r41_plan.json",
+    "results": [
+      {
+        "file": "research_r41_result.json",
+        "status": "complete",
+        "sha256": "f58c53c404be30162b29ff7ab673ca84d05077699508b47a52c337d35020ee9d"
+      },
+      {
+        "file": "research_artifacts/r41_featurehalf_lgb84_fivefold/result.json",
+        "status": "complete",
+        "sha256": "add5a95ecc92854a6a2c9b55731df035f1a6ea2d2d6a81588058a3947ffa042f"
+      }
+    ]
+  },
+  {
+    "number": 42,
+    "route": "ONE validated27fieldpropagationtoremainingresidualpriorlearner84",
+    "plan": "research_r42_plan.json",
+    "results": [
+      {
+        "file": "research_r42_result.json",
+        "status": "complete",
+        "sha256": "32f50cd845bb29d1a7e60bfc6a7f48d781cc69da9b537a443886dee98d71f176"
+      },
+      {
+        "file": "research_artifacts/r42_residual84_fivefold/result.json",
+        "status": "complete",
+        "sha256": "392b46e415e28e4e9e3a1982a76d06df64e73771525c13812e1e076452eaf4c1"
+      }
+    ]
+  },
+  {
+    "number": 43,
+    "route": "ONE focalgamma1objectiveconditionalLGB84withpropernestediterations",
+    "plan": "research_r43_plan.json",
+    "results": [
+      {
+        "file": "research_r43_result.json",
+        "status": "complete",
+        "sha256": "b124a0ae1ab18a96cb251ccdbea2b056e07d4805bc41de0e173c4db4f8d79c24"
+      },
+      {
+        "file": "research_artifacts/r43_focal_lgb84_fivefold/result.json",
+        "status": "complete",
+        "sha256": "f6781c5a99f6f25ef433c7d9534f43d1cc83fa62ea3fcd1cb79caf841c471d1d"
+      }
+    ]
+  },
+  {
+    "number": 44,
+    "route": "ONE independentCC0Invisticovariantteacherfeature,mainLGB85",
+    "plan": "research_r44_plan.json",
+    "results": [
+      {
+        "file": "research_r44_result.json",
+        "status": "complete",
+        "sha256": "9a572ee571969707ce2899332cccf94a2aa24ede361ff6f4137550a1de517b6f"
+      },
+      {
+        "file": "research_artifacts/r44_newsource_lgb85_fivefold/result.json",
+        "status": "complete",
+        "sha256": "18ce069073589a873b27bf99020a3e275f9cf0578e380e9c7bb3bf08ff1a6f97"
+      },
+      {
+        "file": "research_artifacts/r44_invistico_teacher/result.json",
+        "status": "complete",
+        "sha256": "bc46101e0bf811bc19dace6c0138c786a8fafd420f0d82ead29d197efc230eea"
+      }
+    ]
+  },
+  {
+    "number": 45,
+    "route": "ONE matched32newsourceNN75",
+    "plan": "research_r45_plan.json",
+    "results": [
+      {
+        "file": "research_r45_result.json",
+        "status": "not_qualified",
+        "sha256": "861acb9289748967324162a98bc9562f6d17f5b24b1abfe9465dd1fceab5e12f"
+      },
+      {
+        "file": "research_artifacts/r45_newsource_lean_fivefold/result.json",
+        "status": "complete",
+        "sha256": "b2cf34f877fe35e6832cbe6ebea6deb1883118f148322559aeb9243b550f9c30"
+      }
+    ]
+  },
+  {
+    "number": 46,
+    "route": "ONE cohort-only rating pretext, LGB111",
+    "plan": "research_r46_plan.json",
+    "results": [
+      {
+        "file": "research_r46_result.json",
+        "status": "not_qualified",
+        "sha256": "b27ad39f1ac6c78f4e55fd19d4fbdffe5976bead0f56c35b35943f66889966c0"
+      },
+      {
+        "file": "research_artifacts/r46_cohort_lgb111_fivefold/result.json",
+        "status": "complete",
+        "sha256": "802dc1a404af87d2cbfea4893d4fecff7a6aa9792da05d7ad6f40cf52831fea8"
+      },
+      {
+        "file": "research_artifacts/r46_cohort_lgb111_threefold/result.json",
+        "status": "complete",
+        "sha256": "5a72994d5a9cb568ee42b835f3bd4ba21bc9dba317799364a97cfd163a28c0a1"
+      },
+      {
+        "file": "research_artifacts/r46_cohort_auxiliary/result.json",
+        "status": "complete",
+        "sha256": "5d99dfc9410f4f3ad9f2e6c05f98076ff27a5ebf80f8a29b58b08fdb7ab1f36a"
+      },
+      {
+        "file": "research_artifacts/r46_probe/result.json",
+        "status": "training",
+        "sha256": "75b5eaddb94ac9442b7c4bfcb05613a68f46f4c198a138d5fb7605c580a22596"
+      }
+    ]
+  },
+  {
+    "number": 47,
+    "route": "ONE matched32 rank-coordinateNN74",
+    "plan": "research_r47_plan.json",
+    "results": [
+      {
+        "file": "research_r47_result.json",
+        "status": "not_qualified",
+        "sha256": "b5fb039686df60886b13d7b771f96c08bd10515f8d6dde7ba1cc2c43b10a5bba"
+      },
+      {
+        "file": "research_artifacts/r47_rankcoordinate_lean_fivefold/result.json",
+        "status": "complete",
+        "sha256": "5fde1b442d8ab3b01971a297d1b7cad1b5dfb5e5ad8ff8f3ad836e197fd9cccb"
+      }
+    ]
+  },
+  {
+    "number": 48,
+    "route": "",
+    "plan": null,
+    "results": [
+      {
+        "file": "research_r48_result.json",
+        "status": "hardware_blocked_no_quality",
+        "sha256": "88113399b261cf4012c11bddc2f96c6979d9b11bec646285819176dbfb9e278d"
+      }
+    ]
+  },
+  {
+    "number": 50,
+    "route": "",
+    "plan": null,
+    "results": [
+      {
+        "file": "research_r50_result.json",
+        "status": "hardware_blocked_no_quality",
+        "sha256": "3472d3b525d43e2060083f3d6717511d4c6e7122a51be85ecfbbbbfd1ff16d07"
+      }
+    ]
+  },
+  {
+    "number": 51,
+    "route": "",
+    "plan": null,
+    "results": [
+      {
+        "file": "research_r51_result.json",
+        "status": "strict_AMP_equivalence_failed_no_quality",
+        "sha256": "1b5723be12838b38b1531e6eca044147d25ae85ed4124cb09b56cd674ed1a294"
+      }
+    ]
+  },
+  {
+    "number": 54,
+    "route": "One TabPFN-v2 family, FP32 cached contexts, fixed v11 logit mixture",
+    "plan": "research_r54_plan.json",
+    "results": [
+      {
+        "file": "research_r54_result.json",
+        "status": "not_qualified",
+        "sha256": "774a36c0932879667429eb2d3b8f30784714f67b41d84337b5e2b20368ba7801"
+      },
+      {
+        "file": "research_artifacts/r54_tabpfn_v2_fivefold/result.json",
+        "status": "complete",
+        "sha256": "633b87be25be044a9dc69ab5284669b4222ba5155824613ee576219f919236f2"
+      }
+    ]
+  },
+  {
+    "number": 55,
+    "route": "ONE separately randomized boosted-tree family, published configuration",
+    "plan": "research_r55_plan.json",
+    "results": [
+      {
+        "file": "research_r55_result.json",
+        "status": "not_qualified",
+        "sha256": "bdba4bbb3497d4c8aa25b9881ce649e43ceb3adfbffe5aca4801e917d958bf3a"
+      },
+      {
+        "file": "research_artifacts/r55_randomized_lgb84_fivefold/result.json",
+        "status": "complete",
+        "sha256": "0e4d43f4f9435b538f2ec703089b964b3df71f283e4db20a8cb2d97d7608c08a"
+      }
+    ]
+  },
+  {
+    "number": 56,
+    "route": "ONE matched32 NN74 with two conditioning views",
+    "plan": "research_r56_plan.json",
+    "results": [
+      {
+        "file": "research_r56_result.json",
+        "status": "not_qualified",
+        "sha256": "6016ab011b5317dd2228cf6941cb34f9c65791c28377b60d2b1f07461d3c86d7"
+      },
+      {
+        "file": "research_artifacts/r56_cohortview_lean_fivefold/result.json",
+        "status": "complete",
+        "sha256": "5216832c280fb39ada576ca4e02034cd5282977e6772e58aeeeec0e5864f738c"
+      }
+    ]
+  },
+  {
+    "number": 57,
+    "route": "ONE proper nested cohort-dependent tree/neural opinion pool",
+    "plan": "research_r57_plan.json",
+    "results": [
+      {
+        "file": "research_r57_result.json",
+        "status": "not_qualified",
+        "sha256": "e636229c5977c75db14e2506e6926176a508144e4214dc9c3205235395c6c2ea"
+      },
+      {
+        "file": "research_artifacts/r57_nested_gate_fivefold/result.json",
+        "status": "complete",
+        "sha256": "ed8585153f67468f358af4b2849ec0adf429eac7c7e8e0c411000640e77ad506"
+      }
+    ]
+  },
+  {
+    "number": 58,
+    "route": "ONE matched32 NN74 composite pointwise/pairwise objective",
+    "plan": "research_r58_plan.json",
+    "results": [
+      {
+        "file": "research_r58_result.json",
+        "status": "not_qualified",
+        "sha256": "e9011921256656d8e93135b8735a5df5e059d732115b72c1a10949d1e44e1df0"
+      },
+      {
+        "file": "research_artifacts/r58_ranking_lean_fivefold/result.json",
+        "status": "complete",
+        "sha256": "942582543014654f9c19e74ad08c01037c092fa080d1c8ba53247458f8cd6089"
+      }
+    ]
+  },
+  {
+    "number": 59,
+    "route": "ONE matched32 NN74 two-delay log1p preconditioning",
+    "plan": "research_r59_plan.json",
+    "results": [
+      {
+        "file": "research_r59_result.json",
+        "status": "not_qualified",
+        "sha256": "a563ab55d66de3527f5aeb4d79942971832272c76d068493570fc224e21921f9"
+      },
+      {
+        "file": "research_artifacts/r59_logdelay_lean_fivefold/result.json",
+        "status": "complete",
+        "sha256": "f26360b383bc64cd11398972558dea893a13419c4cf451b4389b4a649b8fbcc1"
+      }
+    ]
+  },
+  {
+    "number": 60,
+    "route": "ONE LGB97 with independent-original class-conditional rating likelihood ratios",
+    "plan": "research_r60_plan.json",
+    "results": [
+      {
+        "file": "research_r60_result.json",
+        "status": "not_qualified",
+        "sha256": "a7d2a26a7169a1ad36a302e0212516e9ac6848450ab48abd4b9e9905e93f9817"
+      },
+      {
+        "file": "research_r60_source_result.json",
+        "status": "complete",
+        "sha256": "70c0424aad46792b969e40ce50e3e183838659de0118d0944e45281385aad58b"
+      },
+      {
+        "file": "research_artifacts/r60_original_classconditional/result.json",
+        "status": "complete",
+        "sha256": "70c0424aad46792b969e40ce50e3e183838659de0118d0944e45281385aad58b"
+      },
+      {
+        "file": "research_artifacts/r60_sourceclass_lgb97_fivefold/result.json",
+        "status": "complete",
+        "sha256": "25f95d8b3ba51370ae3b22f0671b33adcebdd65afbca2567b45a5dc28add2d89"
+      }
+    ]
+  },
+  {
+    "number": 61,
+    "route": "ONE matched32 original class-density neural view",
+    "plan": "research_r61_plan.json",
+    "results": [
+      {
+        "file": "research_r61_result.json",
+        "status": "not_qualified",
+        "sha256": "7e0b03d144dcea9f6da408f989d2eb1e91674ab7394a79c09200a644628a8913"
+      },
+      {
+        "file": "research_artifacts/r61_sourceclass_lean_fivefold/result.json",
+        "status": "complete",
+        "sha256": "af89b8669efc2e1eacf482185e1e66785df856cd9c83108d4407ba61863bb658"
+      }
+    ]
+  },
+  {
+    "number": 62,
+    "route": "ONE LGB97 original-SAT conditional cohort likelihood ratios",
+    "plan": "research_r62_plan.json",
+    "results": [
+      {
+        "file": "research_r62_result.json",
+        "status": "not_qualified",
+        "sha256": "0eef01df801c4a06d9ef95d935a8be0d7798d93183b6f3e15a66177e1b2ad5db"
+      },
+      {
+        "file": "research_r62_source_result.json",
+        "status": "complete",
+        "sha256": "a4fd69619443121793322cc7c629a9a0f04b512a2efc9d3391dd3a02a12f7587"
+      },
+      {
+        "file": "research_artifacts/r62_original_cohortclass/result.json",
+        "status": "complete",
+        "sha256": "a4fd69619443121793322cc7c629a9a0f04b512a2efc9d3391dd3a02a12f7587"
+      },
+      {
+        "file": "research_artifacts/r62_cohortclass_lgb97_fivefold/result.json",
+        "status": "complete",
+        "sha256": "9368eb2c7e73fe7ac36c41b764eab2eff86378863b3e1b05b4eda0e4e3bdc8ea"
+      }
+    ]
+  },
+  {
+    "number": 63,
+    "route": "ONE matched32 original-SAT conditional cohort-density neural view",
+    "plan": "research_r63_plan.json",
+    "results": [
+      {
+        "file": "research_r63_result.json",
+        "status": "not_qualified",
+        "sha256": "8e6bf94514dbd16702adb9b91503958259d0493a1f800d64c2c64604e51e8926"
+      },
+      {
+        "file": "research_artifacts/r63_cohortclass_lean_fivefold/result.json",
+        "status": "complete",
+        "sha256": "6a173bfa75355a38d3e8d64bc4f502f58c0306b2328c965dffddcaf891892007"
+      }
+    ]
+  },
+  {
+    "number": 64,
+    "route": "ONE uniform input-representation bagging algorithm",
+    "plan": "research_r64_plan.json",
+    "results": [
+      {
+        "file": "research_r64_result.json",
+        "status": "not_qualified",
+        "sha256": "ea75959e4fdf3ac47236b343472c3509703406ddedde2c7aedeb40fe9428c91b"
+      },
+      {
+        "file": "research_artifacts/r64_viewbag_threefold/result.json",
+        "status": "complete",
+        "sha256": "facff7901dacea6933e8f08a7a2e9fbacd77a295cc342e6a68a0a5bdb37ccd83"
+      },
+      {
+        "file": "research_artifacts/r64_viewbag_fivefold/result.json",
+        "status": "complete",
+        "sha256": "d8831fbc2fc3750f813347733240c111378fe81b4cda6d2b94eafbec195b7a3c"
+      }
+    ]
+  },
+  {
+    "number": 65,
+    "route": "ONE proper nested three-coefficient confidence-dependent expert gate",
+    "plan": "research_r65_plan.json",
+    "results": [
+      {
+        "file": "research_r65_result.json",
+        "status": "not_qualified",
+        "sha256": "ecf0ef8d7b95767b530b8c221ef085c7c83aedf373424107254f32062d0e1973"
+      },
+      {
+        "file": "research_artifacts/r65_confidence_gate_fivefold/result.json",
+        "status": "complete",
+        "sha256": "544e094ae04a039ddaba74bf0fbad4d17a469f659e0d0a0843a77262547c8595"
+      }
+    ]
+  },
+  {
+    "number": 66,
+    "route": "ONE shallow-forest routed TabPFNv2 family",
+    "plan": "research_r66_plan.json",
+    "results": [
+      {
+        "file": "research_r66_result.json",
+        "status": "not_qualified",
+        "sha256": "33755d33d15ae0457d500582aa87f0e232cbd3c45bc2a457d39418ecee71d2ba"
+      },
+      {
+        "file": "research_artifacts/r66_routed_tabpfn_fivefold/result.json",
+        "status": "complete",
+        "sha256": "0e171c18520cc6b26799bfc3c27959b12916a19def2f5261098152cfed50b39c"
+      }
+    ]
+  },
+  {
+    "number": 67,
+    "route": "ONE global bipartite PairLogit84 ranking expert with proper nested iteration selection",
+    "plan": "research_r67_plan.json",
+    "results": [
+      {
+        "file": "research_r67_probe_result.json",
+        "status": "passed_synthetic_no_official_SAT_or_quality",
+        "sha256": "a108a89e8dbd482d48554f542767336e0b07e236fe7b3f3e9e7240cf21cae445"
+      },
+      {
+        "file": "research_r67_probe_v2_result.json",
+        "status": "passed_synthetic_no_official_SAT_or_quality",
+        "sha256": "4bbca17a33d2d4e319dbf62b41ad60523044213e907170f1fdc301efa29e290e"
+      },
+      {
+        "file": "research_r67_result.json",
+        "status": "not_qualified",
+        "sha256": "7b427c49f9f6ab919dddc08a9bf09ad4baae7e0105aaacd9ffaca7aef4fee8fe"
+      },
+      {
+        "file": "research_artifacts/r67_pairlogit84_fivefold/result.json",
+        "status": "complete",
+        "sha256": "893057b33da0c8c6932fda1a0b987e78082dbf1a97a533449b7d688c90f0b7f3"
+      }
+    ]
+  },
+  {
+    "number": 68,
+    "route": "ONE pureRankNet74 native32 specialist with training-only ensemble-score-origin correction",
+    "plan": "research_r68_plan.json",
+    "results": [
+      {
+        "file": "research_r68_official_result.json",
+        "status": "Complete",
+        "sha256": "95e806d27bdb579bd0a6c1342d060089fbb2ad94126de42ac95c8b0622bbea7a"
+      },
+      {
+        "file": "research_r68_result.json",
+        "status": "qualified_audited_CSV_in_Library_exact_bytes_verified",
+        "sha256": "ebe95baab21569558de3e5be7c8b5e59da926d90eeac354ad39c30d2e0864966"
+      },
+      {
+        "file": "research_artifacts/r68_pure_ranknet_full/result.json",
+        "status": "passed",
+        "sha256": "ea86e7366275a789654fec5f19e3d35d328a74be2de3a5dc8fb43183c07e3454"
+      },
+      {
+        "file": "research_artifacts/r68_pure_ranknet_threefold/result.json",
+        "status": "complete",
+        "sha256": "dc852a371e8c4585f08ee426a5227880a895d5f2e70457fa3ae9d1cb95a2744a"
+      },
+      {
+        "file": "research_artifacts/r68_pure_ranknet_fivefold/result.json",
+        "status": "complete",
+        "sha256": "fd6594656ce962523c29ef9674edadaa5b1e525d041d5ff332e4d2a6755e1642"
+      }
+    ]
+  },
+  {
+    "number": 69,
+    "route": "ONE proper nested scalar global pairwise-logistic expert gate preserving fixed RankNet contribution",
+    "plan": "research_r69_plan.json",
+    "results": [
+      {
+        "file": "research_r69_result.json",
+        "status": "not_qualified",
+        "sha256": "55065eadb86ee51249675ccba0a2eb412c17b1d4cc69945c869cf7aa8d645cae"
+      },
+      {
+        "file": "research_artifacts/r69_rank_gate_fivefold/result.json",
+        "status": "complete",
+        "sha256": "c99b35392d704bdfe9cbf476531c60d5f6a4a5a207db17f0e4585f8715aa9530"
+      }
+    ]
+  },
+  {
+    "number": 72,
+    "route": "ONE larger-coherent-context raw21 TabICL2.2 family under expanded laptop budget",
+    "plan": "research_r72_plan.json",
+    "results": [
+      {
+        "file": "research_r72_result.json",
+        "status": "not_qualified",
+        "sha256": "f7aa527ef8d8c33e82e296e85eb1dd1b4b919000453d0bc2259f8c2b2e687769"
+      },
+      {
+        "file": "research_artifacts/r72_largecontext_raw21_fivefold/result.json",
+        "status": "complete",
+        "sha256": "3323e06a8b43e380b0e89299eb87b0ee835cf6cd6dcc25ef94194191d5df4ec4"
+      },
+      {
+        "file": "research_artifacts/r72_tabicl21_probe_131072/result.json",
+        "status": "passed_no_quality_score",
+        "sha256": "04a80506534b321fce53ea3dda12da474ec51fa5061882f28580420d04df99eb"
+      }
+    ]
+  },
+  {
+    "number": 73,
+    "route": "ONE autoregressive conditional joint-density neural family, new structural alternative after full R72 failure",
+    "plan": "research_r73_plan.json",
+    "results": [
+      {
+        "file": "research_r73_result.json",
+        "status": "not_qualified",
+        "sha256": "27913345062c3119a68b196ad4570a30a2c57b93f9bf283eaa544ad6eb339747"
+      },
+      {
+        "file": "research_artifacts/r73_joint_density_fivefold/result.json",
+        "status": "complete",
+        "sha256": "d7777fa4ba7ec8f9678d3491c4d18ba809f11ad18e5b4428a7421428a6381e52"
+      }
+    ]
+  },
+  {
+    "number": 74,
+    "route": "ONE per-native additive score-origin identification of existing pure-RankNet32 ensembles; inference and own-training calibration only",
+    "plan": "research_r74_plan.json",
+    "results": [
+      {
+        "file": "research_r74_result.json",
+        "status": "not_qualified",
+        "sha256": "0356521338ab79d01177797d60212f2361a17356a8dcecfcbad7d3866da82dfc"
+      },
+      {
+        "file": "research_artifacts/r74_member_origins_fivefold/result.json",
+        "status": "complete",
+        "sha256": "96cfcf286bd672342c15ce1a31a2bbd0b9816f4b9db2380c6ec1f27c8a27610d"
+      }
+    ]
+  },
+  {
+    "number": 75,
+    "route": "ONE new official Apache2 TabDPT1.3 foundation family on raw21, no weight update",
+    "plan": "research_r75_plan.json",
+    "results": [
+      {
+        "file": "research_r75_result.json",
+        "status": "not_qualified",
+        "sha256": "03f00a3cf0e8528251ef13f3f21af268f7d1055c9f6cdaccf32b1eb147798486"
+      },
+      {
+        "file": "research_artifacts/r75_tabdpt_raw21_fivefold/result.json",
+        "status": "complete",
+        "sha256": "19a21ae63b96427b365de33c0d70d7775ff9d60f9c51b4130e3bea8b70ba5cd4"
+      }
+    ]
+  },
+  {
+    "number": 76,
+    "route": "One new Mitra-v2 synthetic-mixed-prior foundation family with fixed full-parameter adaptation on raw21; not more zero-shot/context rescue of R72-R75",
+    "plan": "research_r76_plan.json",
+    "results": [
+      {
+        "file": "research_r76_result.json",
+        "status": "not_qualified",
+        "sha256": "9662c60ff8896a828299d49d84e2481d9c5efc5c237dac0ed9de7792508bd27f"
+      },
+      {
+        "file": "research_artifacts/r76_mitra_v2_fivefold/result.json",
+        "status": "complete",
+        "sha256": "d8d7c18a0d6683a33a22e17099997624fb8fecaba1d1f5b44d0847a5a1b2d3a3"
+      }
+    ]
+  },
+  {
+    "number": 77,
+    "route": "ONE new raw21 low-order smoothed additive/pairwise ExplainableBoosting family; structural diversity rather than repeated native-count/weight/context rescue",
+    "plan": "research_r77_plan.json",
+    "results": [
+      {
+        "file": "research_r77_result.json",
+        "status": "not_qualified",
+        "sha256": "684cf43facd9a6dd13c1adb886391450273827004a9e6e28f2d4562e90e5f86f"
+      },
+      {
+        "file": "research_artifacts/r77_ebm_raw21_fivefold/result.json",
+        "status": "complete",
+        "sha256": "5c9e25cfa10f97104931c6336aab55437e00baa8e39cf341b3d6bb70b04ce4f8"
+      }
+    ]
+  },
+  {
+    "number": 79,
+    "route": "R79 ONE original2025TabSTAR raw21 semantic LoRA family; supervisedadaptationonallowninnertrainingrows",
+    "plan": "research_r79_plan.json",
+    "results": [
+      {
+        "file": "research_r79_result.json",
+        "status": "incomplete_resource_blocked_not_qualified_for_submission",
+        "sha256": "1abed5a25279099e09322cd0803162daef7a45069152034f98cb9c73e92188bb"
+      }
+    ]
+  }
+]

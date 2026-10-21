@@ -1,0 +1,244 @@
+{
+  "checked_utc": "2026-10-21T09:08:31.369633+00:00",
+  "conclusion": "Computelimitsconstrainmethodspace/throughput,notproveddominantcauseofscoreplateau. NoOOMdoesnotproveadequateoptimization;freeVRAMdoesnotprovefreecompute.",
+  "hardware": {
+    "GPU": "RTX5070TiLaptop",
+    "total_VRAM_MiB": 12227,
+    "host_RAM_MiB": 30780
+  },
+  "current_R78_GPU_samples": [
+    {
+      "utc": "2026-10-21T09:07:24.861942+00:00",
+      "values": "94, 68, 4472, 7278, 138.36, 71",
+      "returncode": 0
+    },
+    {
+      "utc": "2026-10-21T09:07:25.890847+00:00",
+      "values": "95, 68, 4472, 7279, 138.65, 70",
+      "returncode": 0
+    },
+    {
+      "utc": "2026-10-21T09:07:26.922976+00:00",
+      "values": "96, 69, 4472, 7279, 138.97, 71",
+      "returncode": 0
+    },
+    {
+      "utc": "2026-10-21T09:07:27.953963+00:00",
+      "values": "94, 69, 4472, 7279, 138.93, 72",
+      "returncode": 0
+    },
+    {
+      "utc": "2026-10-21T09:07:28.985122+00:00",
+      "values": "95, 70, 4472, 7279, 138.89, 72",
+      "returncode": 0
+    },
+    {
+      "utc": "2026-10-21T09:07:30.021686+00:00",
+      "values": "94, 68, 4472, 7279, 138.55, 72",
+      "returncode": 0
+    },
+    {
+      "utc": "2026-10-21T09:07:31.049220+00:00",
+      "values": "96, 68, 4472, 7279, 138.98, 71",
+      "returncode": 0
+    },
+    {
+      "utc": "2026-10-21T09:07:32.077811+00:00",
+      "values": "94, 68, 4472, 7279, 138.30, 72",
+      "returncode": 0
+    },
+    {
+      "utc": "2026-10-21T09:07:33.114938+00:00",
+      "values": "95, 68, 4472, 7279, 138.78, 72",
+      "returncode": 0
+    },
+    {
+      "utc": "2026-10-21T09:07:34.149268+00:00",
+      "values": "94, 67, 4472, 7279, 138.38, 72",
+      "returncode": 0
+    }
+  ],
+  "current_limits": {
+    "torch_allocator_GiB": 3,
+    "own_GPU_GiB": 3.5,
+    "own_RSS_GiB": 8,
+    "host_reserve_GiB": 4,
+    "GPU_free_reserve_GiB": 2,
+    "CPU_threads": 6,
+    "CPU_threads_not_user_hardlimit": true
+  },
+  "current_R78_probe": {
+    "peak_GPU_bytes": 1619001344,
+    "peak_RSS_bytes": 5750005760,
+    "one_epoch_seconds": 53.68548366299365
+  },
+  "TabSTAR_r79r2": {
+    "max_epochs": 3,
+    "origin": "Explicitresource/timeadaptationofthepreviousround,reusedsamefrozenrecipeonrestart.Notnative50epochreproduction.Noresourceinterruptthiscompleted5fold.",
+    "peak_GPU_bytes": 1314914304,
+    "trainable_LoRA_parameters": 1597440,
+    "fold_traces": [
+      {
+        "fold": 0,
+        "best_epoch": 2,
+        "epoch_loss": [
+          0.24780029152999233,
+          0.2333706682643442,
+          0.23141500219162742
+        ],
+        "inner_AUC": [
+          0.9684546023036733,
+          0.9718173199120489,
+          0.9718112682306901
+        ],
+        "epoch_LR": [
+          0.000843121446451091,
+          0.0003019629091399539,
+          4e-09
+        ],
+        "epoch_seconds": [
+          218.2669978269987,
+          220.1063774170034,
+          217.56419291699422
+        ]
+      },
+      {
+        "fold": 1,
+        "best_epoch": 2,
+        "epoch_loss": [
+          0.2499056942382085,
+          0.23590847003217247,
+          0.23506337741962674
+        ],
+        "inner_AUC": [
+          0.9429931616000646,
+          0.9507957960986827,
+          0.950773606600367
+        ],
+        "epoch_LR": [
+          0.000843121446451091,
+          0.0003019629091399539,
+          4e-09
+        ],
+        "epoch_seconds": [
+          217.92383487999905,
+          227.95882260400685,
+          226.49682498000038
+        ]
+      },
+      {
+        "fold": 2,
+        "best_epoch": 2,
+        "epoch_loss": [
+          0.24930244444821856,
+          0.2352442972153929,
+          0.23330694163090726
+        ],
+        "inner_AUC": [
+          0.9640429265931052,
+          0.9647751800375204,
+          0.9647630766748027
+        ],
+        "epoch_LR": [
+          0.000843121446451091,
+          0.0003019629091399539,
+          4e-09
+        ],
+        "epoch_seconds": [
+          222.8572322079999,
+          226.6432869380078,
+          234.78396550899197
+        ]
+      },
+      {
+        "fold": 3,
+        "best_epoch": 1,
+        "epoch_loss": [
+          0.24819438393753163,
+          0.2348465892796046,
+          0.23316185584857857
+        ],
+        "inner_AUC": [
+          0.9608072942932644,
+          0.9579105561495169,
+          0.9579186250579952
+        ],
+        "epoch_LR": [
+          0.000843121446451091,
+          0.0003019629091399539,
+          4e-09
+        ],
+        "epoch_seconds": [
+          234.63916078100738,
+          232.28970635899168,
+          229.54040145600447
+        ]
+      },
+      {
+        "fold": 4,
+        "best_epoch": 3,
+        "epoch_loss": [
+          0.24941184512886608,
+          0.23525957147402562,
+          0.23441448155027447
+        ],
+        "inner_AUC": [
+          0.9530853488794303,
+          0.9563794807657394,
+          0.9563895669013375
+        ],
+        "epoch_LR": [
+          0.000843121446451091,
+          0.0003019629091399539,
+          4e-09
+        ],
+        "epoch_seconds": [
+          229.42220261201146,
+          224.30948461599473,
+          225.87920330901397
+        ]
+      }
+    ],
+    "interpretation": "FinalepochLR4e-9;apparentplateaudoesnotestablishconvergenceunderlongerproperlyschedulledtraining. Nativeinner1002rowsbestselectionnoouterlabels;3epochfixedblendnegativeall5doesnotreject50epochfamily."
+  },
+  "resource_blocked_history": [
+    {
+      "route": "R34/R35TabICL32k/65k",
+      "cause": "Old742MiBallocatorquotaOOM,notphysical12GiBexhaustion",
+      "later": "R36memorypathworked;R72larger131kcontextactuallyevaluatednegative"
+    },
+    {
+      "route": "R38NN87native32",
+      "cause": "Old742MiBallocatorOOM;neverqualityevaluated"
+    },
+    {
+      "route": "R48/R50cachedTabPFNv2",
+      "cause": "Old742MiBallocatorOOM",
+      "later": "R54/R66otherresource-compatibleimplementationsactuallyevaluatednegative"
+    },
+    {
+      "route": "R79Oct19",
+      "cause": "DesktopGPUfreefellto1.39GiB;guardstoppedownworkerdespiteownGPU1.21GiB",
+      "later": "R79r2completed5foldOct21negative"
+    },
+    {
+      "route": "R26NN152",
+      "cause": "Oldcaprequirednative16batch128;qualitynegative;featurevs capacityconfounded",
+      "later": "R71native32batch256capacitypassedwithoutquality;R78currentlytestsnonlinearrepresentationmatchedcapacity"
+    }
+  ],
+  "quality_limits": {
+    "R79r2_AUC_delta": -3.2460970755376906e-05,
+    "R79r2_positive_folds": 0,
+    "R79_native_probability_residual_correlation_v12": 0.9752072578114145,
+    "R30_double_NN_epochs_AUC_delta": -0.00016700077694431492,
+    "R39_more_native_members_AUC_delta": 4.0551268017940956e-06,
+    "R64_threefold_delta": 2.5643260625485276e-05,
+    "R64_threefold_corrected_lower": -2.4853357631231172e-05,
+    "selection_bias": "Allhistoricalofficiallabelsreused;conditionalboundsnotuntouchedholdout"
+  },
+  "minimal_optional_control": "AftercurrentfrozenR78finishes:prospectivecompute-scalingcontrolsameTabSTARbase/raw21/splits/loss/batch/seed/LoRA:3vs12epochswithnativeOneCyclehorizoneachconfiguredinadvance;inner-onlycheckpointselection,logtrain/innerlossAUC/gap/stepcount/walltimeGPUutilization. Firstowninner-foldpilotcanfalsifysimpleundertrainingclaimbutnotnewouterAUCcertificate. Onlyifmechanismimprovesfreezeonecandidate,completeouter5thenconditional3withsamegates. Changedschedulerhorizonincludedininterpretation,notpureepochcountcausalestimate. Suggestiononly;notstarted.",
+  "unchanged_current_experiment": true,
+  "paid_compute_started": false,
+  "browser_touched": false
+}

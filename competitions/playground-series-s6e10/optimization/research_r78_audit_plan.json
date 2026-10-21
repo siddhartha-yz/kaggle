@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-10-21T09:06:23.121658+00:00",
+  "main_plan_sha256": "b53deab24dbf95bf334afa70ec3656971719fb09765a0b53c12d71be25b864c4",
+  "audit_source_sha256": "662920816971ee9dd718c692dd705d30ac8bd79ebc6314094b4e4f4a06259b3c",
+  "protocol": "Only after both gates. Independently regenerate all own-train strictOOF TE, counts, original74inputs, 65fixedcoords; rehash65auxmodels and every serialized artifact; CPUreplay2048perfold8models error<2e-6; recompute exact nested fixed pool/both bounds. No recipe changes and no external actions.",
+  "CPU_threads": 6,
+  "RSS_ceiling_bytes": 8589934592,
+  "host_reserve_bytes": 4294967296
+}

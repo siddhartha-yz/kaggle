@@ -1,0 +1,14 @@
+{
+  "status": "existing_R79_predictions_diagnostic_only_no_weight_search",
+  "native_logit_correlation": 0.9820692233110085,
+  "native_probability_residual_correlation": 0.9752072578114145,
+  "sample_pairs": 1000000,
+  "baseline_wrong": 38506,
+  "baseline_right": 961494,
+  "native_repairs": 9374,
+  "native_ruins": 15613,
+  "frozen_candidate_repairs": 558,
+  "frozen_candidate_ruins": 649,
+  "new_classifier_fits": 0,
+  "new_weights_tested": 0
+}

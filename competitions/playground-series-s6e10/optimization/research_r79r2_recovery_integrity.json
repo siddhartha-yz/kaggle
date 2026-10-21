@@ -1,0 +1,12 @@
+{
+  "checked_utc": "2026-10-21T07:40:01.853494+00:00",
+  "status": "passed_recovery_integrity_and_independent_split",
+  "frozen_source_and_asset_hashes_exact": true,
+  "old_failed_run_files_unchanged": true,
+  "outer_and_inner_indices_equal_original_trial": true,
+  "independent_inner_split_exact": true,
+  "old_calendar_deadline_not_in_live_code": true,
+  "new_classifier_fits": 0,
+  "new_outer_quality_queries": 0,
+  "authentication_availability_not_verified": true
+}

@@ -1,0 +1,55 @@
+{
+  "checked_utc": "2026-10-21T07:47:58.786894+00:00",
+  "status": "one_fold_complete_second_running",
+  "first_fold": {
+    "status": "complete",
+    "stage": "fivefold",
+    "fold": 0,
+    "plan_sha256": "a6f4f28f436c35b74dc513586b39d66fb3b19f0f8a341ca768988cbf24bfe2bc",
+    "runner_sha256": "a6bae94eacc7e7b8b835d082b3cd77538a0e323aa6e8dd89d2716f4f88395802",
+    "files_sha256": {
+      "model.joblib": "81c680510c2fd73a4dc387d10d3e6ab1cc3fdbe407d9c156e122f253bda24330",
+      "training.json": "2e3fe968395c5170d5428392873b6ff34ad170c84428133a23ece2bcd32b2e0a",
+      "preprocessor.json": "7f6a5115762a9220959e5473f762a1bdece28ae54063c7a8b1caaa2e3938b7c0",
+      "indices.npz": "10f9ebc04efd554554ed97a8f66a4d1d4ef2680be2bee378b93cb28baea02e74",
+      "validation.npz": "fef46de8e10fef8f7f4ef55003c555cd78bc72ec291972b66e5908aaff864897"
+    },
+    "reload_error": 0.0,
+    "batch_error": 4.331767559051514e-05,
+    "peak_GPU_bytes": 1302331392,
+    "peak_RSS_bytes": 4302295040,
+    "seconds": 733.3854698420037,
+    "outer_quality_scored": false
+  },
+  "current_worker": {
+    "updated_utc": "2026-10-21T07:47:56.577077+00:00",
+    "PID": 469141,
+    "outer_quality_scored": false,
+    "status": "native_GPU_training",
+    "stage": "fivefold",
+    "fold": 1,
+    "own_train_rows": 558706,
+    "inner_valid_rows": 1002,
+    "max_epochs": 3,
+    "seconds": 90.03680742099823,
+    "CPU_seconds": 94.458277754,
+    "peak_GPU_bytes": 1302331392,
+    "microbatches": 2560,
+    "epochs_completed": 0,
+    "last_training_loss": 0.3012092113494873
+  },
+  "controller": {
+    "status": "native_GPU_fit_and_queries",
+    "updated_utc": "2026-10-21T07:46:17.130208+00:00",
+    "PID": 455460,
+    "parent_only_submitter": true,
+    "actual_top500_verified": false,
+    "stage": "fivefold",
+    "fold": 1
+  },
+  "all_folds_before_quality": true,
+  "new_quality_queries": 0,
+  "authentication_availability_not_verified": true,
+  "forecast": "Fourremainingfolds~50minutesbasedoneobserved12.2minfold;notguaranteed",
+  "no_campaign_calendar_deadline": true
+}

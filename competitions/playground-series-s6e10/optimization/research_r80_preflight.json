@@ -1,0 +1,39 @@
+{
+  "checked_utc": "2026-10-21T09:30:49.339550+00:00",
+  "disk_free_bytes": 4670926848,
+  "existing_single_fold_bytes": 167112667,
+  "new_output_budget_bytes": 536870912,
+  "disk_floor_bytes": 2147483648,
+  "space_sufficient_without_deletion": true,
+  "new_downloads": false,
+  "old3_complete_model_reused": true,
+  "scheduler_horizons": {
+    "3": [
+      0.000843121446451091,
+      0.0003019629091399539,
+      4e-09
+    ],
+    "12": [
+      3.9999999999999996e-05,
+      0.0009865224892001707,
+      0.0009330129698414117,
+      0.000843121446451091,
+      0.0007244006925018707,
+      0.0005868257415371098,
+      0.0004419557751232133,
+      0.0003019629091399539,
+      0.0001786094807319497,
+      8.225976526915452e-05,
+      2.1009159821280178e-05,
+      4e-09
+    ]
+  },
+  "scheduler_steps": "UnchangednativeOneCycleLR,total_steps=number_of_epochs,steponceaftereachepoch;largerhorizonconfiguredbeforefit. Epoch-endfinalLRreboundunused,noextensionof3epochzeroLRschedule.",
+  "native_checkpoint_storage": "is_paper_version=True => cp_average=False;onlyoverwritingbestLoRAadapter~6.4MB;saveonecompletecompressedmodel~152MBafterfit,existingHFcacheoffline",
+  "package_sources_sha256": {
+    ".venv-tabstar-r79/lib/python3.12/site-packages/tabstar/training/optimizer.py": "e55716ff3793cc6e1dd019745362962f0f1bc351ae60083beb607329b2c0b513",
+    ".venv-tabstar-r79/lib/python3.12/site-packages/tabstar/training/trainer.py": "1f4f2f279508aef760b674cee6a9f49a18b06317366f56ee39cbebb6479ea572",
+    ".venv-tabstar-r79/lib/python3.12/site-packages/tabstar/training/checkpoint_averaging.py": "7327bfa78b0ff809a0b92e49a6167348e243b6059a3e6834c548855c1de6a3c6",
+    ".venv-tabstar-r79/lib/python3.12/site-packages/tabstar/tabstar_model.py": "eb558704ac98e4b03861e18b35e52a7ac7816d3681b8260391d94d86ef60eb53"
+  }
+}

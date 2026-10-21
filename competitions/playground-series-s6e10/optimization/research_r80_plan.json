@@ -1,0 +1,109 @@
+{
+  "frozen_utc": "2026-10-21T09:30:49.339998+00:00",
+  "route": "R80 ONE prospective3vs12 TabSTAR inner-only compute control",
+  "hypothesis": "Prior3epochresourceadaptationwasnotfulloptimizationtest. Withsamebase/raw21/owntrainrows/inner1002/LoRA/loss/batch/seed,12epochnativecyclemayimproveinnerfitbeyond3epochwithoutlosinggeneralization. No largerGPUorpaidcomputeassumednecessary.",
+  "existing3": "ReusecompletedR79r2fivefoldfold0checkpointandtrace,no3epochrefit. Rehashmodelandpreprocessor,regenerateexactownsplit;replayonlysame1002innerrows.",
+  "parameters_12": {
+    "is_paper_version": true,
+    "lora_lr": 0.001,
+    "lora_wd": 0.0,
+    "lora_r": 32,
+    "lora_alpha": 2,
+    "lora_dropout": 0.1,
+    "lora_batch": 64,
+    "global_batch": 128,
+    "max_epochs": 12,
+    "patience": 12,
+    "verbose": false,
+    "random_state": 42,
+    "time_limit": 7200,
+    "pretrain_dataset_or_path": "alana89/TabSTAR",
+    "keep_model": true,
+    "val_batch_size": 64
+  },
+  "changed_fields": {
+    "max_epochs": "3to12",
+    "patience": "5to12toobserveall12;bothselectbestnativeinnerAUCcheckpoint. Old3couldnottriggerpatience5. Noadaptivepatience/epochs."
+  },
+  "pretrained_base_parameters_sha256": "48b64d4f6c8abbe0fe49d6a053903af5d1b63011abd50cb1225d852dcdcff86b",
+  "epoch_start_LRs": {
+    "3": [
+      0.000843121446451091,
+      0.0003019629091399539,
+      4e-09
+    ],
+    "12": [
+      3.9999999999999996e-05,
+      0.0009865224892001707,
+      0.0009330129698414117,
+      0.000843121446451091,
+      0.0007244006925018707,
+      0.0005868257415371098,
+      0.0004419557751232133,
+      0.0003019629091399539,
+      0.0001786094807319497,
+      8.225976526915452e-05,
+      2.1009159821280178e-05,
+      4e-09
+    ]
+  },
+  "LR_caveat": "NativeOneCyclehorizonchangesLRvaluesaswellasupdates. Combinedbudget/schedulerrecipecomparison,notpureepochcausalestimate. Installedpackageuntouched;doNOTcontinuefrom3epochnearzeroLRcheckpoint.",
+  "pilot_partition": {
+    "outer_K": 5,
+    "outer_seed": 20261018,
+    "outer_fold": 0,
+    "outer_train_rows": 559708,
+    "inner_train_rows": 558706,
+    "inner_valid_rows": 1002,
+    "inner_seed": 41,
+    "outer_queries": 0
+  },
+  "selection": "UpstreambestinnerAUCcheckpoint,earliestmax,np.argmax;nocheckpointaveraging;all12epochscompletedunlessresource/userstop. Traininglosstraceandinner1002metricsaremechanismdiagnosticsonly.",
+  "advance_rule": "Suggestprospectiveoutervalidationonlyifselectednativebestepoch>3 AND bestnativeinnerAUC12>selected3AUC AND selected12nativeinnerloss<selected3nativeinnerloss. Equalityfails. Thispragmaticinnergateisnotstatisticalproof;pairedinnerCIreportdescriptiveonlybecausecheckpointselection/reusedlabels.",
+  "outer_protocol": "Noouterpredictions/outerAUCinthispilot. Ifworthcontinuing,freezeONE12epochcandidatewithsame1/16TabSTAR+15/16actualv12logitpoolandnestedinnerselection;reuseauditedpilotfold0modelratherthanrefit;complete5beforequality,paired95lower>0 AND correctedresampledtalpha.025lower>0;onlythen3separatepartitionrefitsandindependentaudit/finalaudit. NopublicLBweight/epochtuning.",
+  "resources": {
+    "CPU_threads": 6,
+    "allocator_cap_bytes": 3221225472,
+    "own_GPU_ceiling_bytes": 3758096384,
+    "own_RSS_ceiling_bytes": 8589934592,
+    "host_RAM_reserve_bytes": 4294967296,
+    "GPU_free_reserve_bytes": 2147483648,
+    "disk_reserve_bytes": 2147483648,
+    "own_output_budget_bytes": 536870912,
+    "service_timeout_seconds": 5400,
+    "expected_minutes": "45to50",
+    "new_paid_compute": false,
+    "other_processes_modified": false
+  },
+  "statistics_limitation": "Onepreviouslyused1002-rowinnerselectionset;morecheckpointchoicesfavoroptimisticbestmetrics. Allofficiallabels/partitionshistoricallyreused;neitherinnergatenorouterconditionalCIestablishesuntouchedholdoutevidence. No claimofhardwareceilingorfamilyfailurefromonepilot.",
+  "no_browser": true,
+  "no_credential_creation": true,
+  "goal_actual_public_rank_at_most": 500,
+  "main_untouched": true,
+  "source_sha256": {
+    "research_r80_pilot.py": "2903832e14dbd5dc0eb027b059aad1fe4413a8efbab0be11c39df79597c0cde2",
+    "research_r79r2_model.py": "9cbc7341cc13e270ba27dfef55c019d2c59f8da5ce64e0c2aa824345e7458858",
+    "research_resource_guard_v2.py": "63cf7d694a772fe5f88d1c649517c020e9d4b318db0ea40883dcba0cadba9e7c",
+    "research_resume_policy_20261021.py": "8e8b4d1dabf23ae195d7987dd67fed2b8d6731281462ecc1ec909f4527be88d5",
+    "compare_validation.py": "dddede1ed1f65645a7ac2a912a4ddd1c16f67ec6f73c38663b69532ee8ca838f"
+  },
+  "artifact_sha256": {
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "research_r79r2_plan.json": "a6f4f28f436c35b74dc513586b39d66fb3b19f0f8a341ca768988cbf24bfe2bc",
+    "research_r79r2_run_policy.json": "391423073b83e50478a95f414e02058cec9e215ad191e5bb2b13a469a9ded78a",
+    "research_r79r2_result.json": "27f57bdf8d296574274745e4901ec768057e43977155498d14022a75db00a2d2",
+    "research_r78_result.json": "8b9a2239dcd6ced1740dc5b16969cd9d4891e4c91ca3d985b02faaaeca473305",
+    "research_r80_preflight.json": "77aaa99860660548f353a60cc5255b9a96c488a7507f952678559fece6c73ae0",
+    "research_artifacts/r79r2_tabstar_raw21_fivefold/fold0/result.json": "12c0b9d92cdba61cc5db54aca05a6391ddea9f1c1713d052115d388632cb6421",
+    "research_artifacts/r79r2_tabstar_raw21_fivefold/fold0/training.json": "2e3fe968395c5170d5428392873b6ff34ad170c84428133a23ece2bcd32b2e0a",
+    "research_artifacts/r79r2_tabstar_raw21_fivefold/fold0/preprocessor.json": "7f6a5115762a9220959e5473f762a1bdece28ae54063c7a8b1caaa2e3938b7c0",
+    "research_artifacts/r79r2_tabstar_raw21_fivefold/fold0/indices.npz": "10f9ebc04efd554554ed97a8f66a4d1d4ef2680be2bee378b93cb28baea02e74",
+    "research_artifacts/r79r2_tabstar_raw21_fivefold/fold0/model.joblib": "81c680510c2fd73a4dc387d10d3e6ab1cc3fdbe407d9c156e122f253bda24330"
+  },
+  "native_package_sources_sha256": {
+    ".venv-tabstar-r79/lib/python3.12/site-packages/tabstar/training/optimizer.py": "e55716ff3793cc6e1dd019745362962f0f1bc351ae60083beb607329b2c0b513",
+    ".venv-tabstar-r79/lib/python3.12/site-packages/tabstar/training/trainer.py": "1f4f2f279508aef760b674cee6a9f49a18b06317366f56ee39cbebb6479ea572",
+    ".venv-tabstar-r79/lib/python3.12/site-packages/tabstar/training/checkpoint_averaging.py": "7327bfa78b0ff809a0b92e49a6167348e243b6059a3e6834c548855c1de6a3c6",
+    ".venv-tabstar-r79/lib/python3.12/site-packages/tabstar/tabstar_model.py": "eb558704ac98e4b03861e18b35e52a7ac7816d3681b8260391d94d86ef60eb53"
+  }
+}

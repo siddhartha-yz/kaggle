@@ -1,0 +1,42 @@
+{
+  "checked_utc": "2026-10-21T07:36:22.666570+00:00",
+  "status": "recovered_and_training",
+  "git_start": "72b7832c90b48e969e7dd4662c484b2aff2f0bd5",
+  "recovery_commit": "e68b8fc",
+  "main": "42d905a29ee3c182a5d0ee34aba2fff9b542fdda",
+  "controller": {
+    "status": "native_GPU_fit_and_queries",
+    "updated_utc": "2026-10-21T07:33:58.425052+00:00",
+    "PID": 455460,
+    "parent_only_submitter": true,
+    "actual_top500_verified": false,
+    "stage": "fivefold",
+    "fold": 0
+  },
+  "worker": {
+    "updated_utc": "2026-10-21T07:36:18.595970+00:00",
+    "PID": 455461,
+    "outer_quality_scored": false,
+    "status": "native_GPU_training",
+    "stage": "fivefold",
+    "fold": 0,
+    "own_train_rows": 558706,
+    "inner_valid_rows": 1002,
+    "max_epochs": 3,
+    "seconds": 120.00804942600371,
+    "CPU_seconds": 124.560474689,
+    "peak_GPU_bytes": 1302331392,
+    "microbatches": 4096,
+    "epochs_completed": 0,
+    "last_training_loss": 0.2672308683395386
+  },
+  "plan_sha256": "a6f4f28f436c35b74dc513586b39d66fb3b19f0f8a341ca768988cbf24bfe2bc",
+  "no_old_files_overwritten": true,
+  "old_expired_calendar_deadline_not_used": true,
+  "six_hour_budget_is_single_validation_stage_only": true,
+  "no_campaign_calendar_stop": true,
+  "baseline_or_closed_routes_retrained": false,
+  "submission_authorization_record": "research_r79r2_submission_authorization.json",
+  "new_submissions": 0,
+  "current_rank_not_refreshed": true
+}

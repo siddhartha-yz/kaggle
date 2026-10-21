@@ -1,0 +1,11 @@
+{
+  "verified_utc": "2026-10-21T07:36:22.666570+00:00",
+  "scope": "Existingexplicitauthorizationforreviewednewversionsinsamecompetitionwithinactualdailyquota;oldtwo-submissionconfirmationlimitcanceled",
+  "target": "Stopafterauthenticatedactualpublicrank<=500",
+  "upload_route": "ParentexistingauthenticatedKagglebrowser;no localcredentials/login/terms",
+  "paid": false,
+  "other_competitions": false,
+  "main_or_force_push": false,
+  "source": "Trustedparentprovidedoriginalmessagecontext;no raw transcript or evidence copied into artifacts",
+  "supersedes_only": "Launch-timepending-retrievalstatusinimmutableR79r2policy;notmodelorstatisticalrecipe"
+}

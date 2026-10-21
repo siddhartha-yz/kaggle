@@ -1,0 +1,12 @@
+{
+  "status": "passed_synthetic_only",
+  "completed_utc": "2026-10-21T12:16:07.471808+00:00",
+  "source_sha256": "4f22ce44cba93cdc32aff9657b45011dccb288ca77ac5eee6cb59648a8185486",
+  "installed_LGBM_version": "4.6.0",
+  "official_data_or_labels_used": false,
+  "new_competition_fits": 0,
+  "monotone_vector_in_native_model": true,
+  "minimum_grid_delta": 0.0,
+  "reload_error": 0.0,
+  "method": "InstalledLightGBMdefaultbasic; no methodorpenaltysearch"
+}

@@ -1,0 +1,29 @@
+{
+  "status": "actually_started",
+  "recorded_utc": "2026-10-21T12:22:44.740477+00:00",
+  "started_utc": "2026-10-21T12:21:58.528865+00:00",
+  "controller_pid": 674395,
+  "first_worker_pid": 674406,
+  "service": "codex-kaggle-r86-validation.service",
+  "log": "research_r86_run.log",
+  "result": "research_r86_result.json",
+  "plan_sha256": "6151ade28884cfe397e971280c851a15070ba8a13a340b4bf77ab01a312668f8",
+  "hypothesis": "Thedominantcontinuoussource teacher losesresolutionunder255binhistogram; allowing1023binsONLYonthisfeature maypreserverankinginformationwithsameleafcount/trees/otherfeatures",
+  "budget": {
+    "device": "CPU",
+    "threads": 6,
+    "nice": 10,
+    "host_RAM_reserve_GiB": 4,
+    "own_worker_RSS_ceiling_GiB": 8,
+    "disk_reserve_GiB": 2,
+    "own_outputs_ceiling_MiB": 256,
+    "perfold_checkpoint_seconds": 1200,
+    "estimated_fivefold_minutes": "3-6",
+    "estimated_total_ifpasses_minutes": "10-15",
+    "paid": false
+  },
+  "stages": "Automatic5thenonlyifqualified3;thenauditrequiredbeforetest/CSV",
+  "GPU_used": false,
+  "previous_R85": "closednegative,nothresholdchange,nosubmission",
+  "parent_monitor_hint": "Readexistingstate/logwithshorttimeout;donotrestarthealthyservice"
+}

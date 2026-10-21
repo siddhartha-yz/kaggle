@@ -1,0 +1,20 @@
+{
+  "status": "passed_synthetic_only",
+  "completed_utc": "2026-10-21T12:20:59.118619+00:00",
+  "source_sha256": "153e93bb2bf9ce3545eb62b82faf524d9233efe23e34c6fa993b8fbc2d25ceda",
+  "installed_LGBM_version": "4.6.0",
+  "old_feature_bins": [
+    255,
+    255,
+    4
+  ],
+  "new_feature_bins": [
+    1023,
+    255,
+    4
+  ],
+  "only_teacher_bins_changed": true,
+  "reload_error": 0.0,
+  "official_data_or_labels_used": false,
+  "new_competition_fits": 0
+}

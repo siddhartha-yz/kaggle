@@ -1,0 +1,38 @@
+{
+  "status": "actually_training",
+  "recorded_utc": "2026-10-21T14:09:35.428562+00:00",
+  "started_utc": "2026-10-21T14:08:40.641943+00:00",
+  "controller_pid": 709289,
+  "first_worker_pid": 709297,
+  "service": "codex-kaggle-r87-validation.service",
+  "plan_sha256": "76a2c8689ddbdabb6f34852428387e0b4296462c8608458cf355d21ff0dde8bd",
+  "log": "research_r87_run.log",
+  "result": "research_r87_result.json",
+  "features": 75,
+  "original74_query_inputs_exact": true,
+  "GPU_framework_confirmed": true,
+  "completed_epochs": 2,
+  "budget": {
+    "estimated_fivefold_minutes": "8-12",
+    "conditional_threefold_minutes": "5-8",
+    "audit_test_minutes": "3-5",
+    "perfold_checkpoint_seconds": 1200,
+    "campaign_deadline": null
+  },
+  "resource_limits": {
+    "allocator_cap_bytes": 3221225472,
+    "own_GPU_ceiling_bytes": 3758096384,
+    "own_RSS_ceiling_bytes": 8589934592,
+    "host_RAM_reserve_bytes": 4294967296,
+    "desktop_GPU_free_reserve_bytes": 2147483648,
+    "disk_reserve_bytes": 2147483648,
+    "own_outputs_ceiling_MiB": 768,
+    "cpu_threads": 6,
+    "nice": 10,
+    "paid": false
+  },
+  "next_reasonable_check_utc": "2026-10-21T14:11:00+00:00",
+  "parent_monitor_hint": "Shortreadonly existingPID/logcheck;donotrestarthealthyservice",
+  "R86_closed": true,
+  "actual_top500_verified": false
+}

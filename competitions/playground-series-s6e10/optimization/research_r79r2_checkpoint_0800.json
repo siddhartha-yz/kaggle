@@ -1,0 +1,65 @@
+{
+  "checked_utc": "2026-10-21T08:02:07.710731+00:00",
+  "status": "healthy_training_channel_responsive",
+  "controller": {
+    "status": "native_GPU_fit_and_queries",
+    "updated_utc": "2026-10-21T07:58:54.872142+00:00",
+    "PID": 455460,
+    "parent_only_submitter": true,
+    "actual_top500_verified": false,
+    "stage": "fivefold",
+    "fold": 2
+  },
+  "worker": {
+    "updated_utc": "2026-10-21T08:02:04.570164+00:00",
+    "PID": 482871,
+    "outer_quality_scored": false,
+    "status": "native_GPU_training",
+    "stage": "fivefold",
+    "fold": 2,
+    "own_train_rows": 558706,
+    "inner_valid_rows": 1002,
+    "max_epochs": 3,
+    "seconds": 180.03445076401113,
+    "CPU_seconds": 185.644221462,
+    "peak_GPU_bytes": 1302331392,
+    "microbatches": 5888,
+    "epochs_completed": 0,
+    "last_training_loss": 0.1422557830810547
+  },
+  "processes": [
+    {
+      "PID": 455460,
+      "alive": true,
+      "status": "sleeping",
+      "CPU_seconds": 0.31
+    },
+    {
+      "PID": 482871,
+      "alive": true,
+      "status": "running",
+      "CPU_seconds": 195.13
+    }
+  ],
+  "log_file": "/home/yang-zhi/Documents/Codex/2026-10-18/task-2/migration-20261017-1813/experiment/research_r79r2_fivefold_fold2.log",
+  "log_modified_utc": "2026-10-21T08:02:07.098217+00:00",
+  "completed_folds": [
+    {
+      "fold": 0,
+      "seconds": 733.3854698420037,
+      "reload_error": 0.0,
+      "batch_error": 4.331767559051514e-05
+    },
+    {
+      "fold": 1,
+      "seconds": 753.1060646289989,
+      "reload_error": 0.0,
+      "batch_error": 6.026029586791992e-05
+    }
+  ],
+  "new_AUC_available": false,
+  "forecast_next_fold_complete_utc": "2026-10-21T08:12:00+00:00",
+  "forecast_fivefold_complete_utc": "2026-10-21T08:35:00\u201308:40:00+00:00",
+  "forecast_not_guaranteed": true,
+  "no_restart_or_interruption": true
+}

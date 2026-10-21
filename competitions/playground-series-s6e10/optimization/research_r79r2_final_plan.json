@@ -1,0 +1,26 @@
+{
+  "frozen_utc": "2026-10-21T07:32:46.075182+00:00",
+  "status": "conditional_test_scripts_frozen_before_any_outer_TabSTAR_score",
+  "validation_plan_sha256": "a6f4f28f436c35b74dc513586b39d66fb3b19f0f8a341ca768988cbf24bfe2bc",
+  "baseline_CSV": "submission_pure_ranknet_r68_v12.csv",
+  "output_CSV": "submission_tabstar_r79r2_v13.csv",
+  "requires": "Bothoriginal5/3dualboundgates+independentaudit;boundedfinalizationjobs;noobsoletecalendarcutoff",
+  "formula": "Mean5auditedfoldnativeTruePROBABILITIES,thenexpit(.9375logit(certifiedv12CSVroundtrip)+.0625logit(meanTabSTAR));clipinputs1e-6;float_format%.17g",
+  "schema": "Exactly299844testorderedids;id,satisfaction;Truepositive",
+  "audit": "Independentlyreload5nativebestadaptersandreplayalltestrows,manualtwo-logitsoftmax/pool,andexactCSVbyteshashbeforeLibrarydelivery",
+  "no_automatic_resume": false,
+  "parent_only_submitter": true,
+  "actual_top500_verified": false,
+  "required_sha256": {
+    "research_r79r2_final.py": "3b3b7a92a78164d7ffa55d4bd8cac8bf4fd88ec00d8b686d9fea7538df4fc2a9",
+    "research_r79r2_final_audit.py": "d226244b47a3e83685f053cd4662cb8d2ee1c27b55e0abd2bbdd11ea05b03e54",
+    "research_r79r2_audit.py": "a3a8d7812ec5962d747e2806f31d55bac2f7f9e2a114bc3571554c575fe90f8c",
+    "research_r79r2_model.py": "9cbc7341cc13e270ba27dfef55c019d2c59f8da5ce64e0c2aa824345e7458858",
+    "research_r79r2_plan.json": "a6f4f28f436c35b74dc513586b39d66fb3b19f0f8a341ca768988cbf24bfe2bc",
+    "research_r79r2_run_policy.json": "391423073b83e50478a95f414e02058cec9e215ad191e5bb2b13a469a9ded78a",
+    "submission_pure_ranknet_r68_v12.csv": "f48276b144e8c9297fb9fec27174044a55a7eb3f2af23dde3f13478a38a4e545",
+    "data/test.csv": "ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6",
+    "data/sample_submission.csv": "6165ecc5769962253534c2d840f26aab55dc3cc091d256bb3641bf6608194a71"
+  },
+  "engineering_note": "Pre-qualityauditset-keycomparisoncorrectedfornativehash-randomizeddictionaryinsertionorder;transformsortscolumns. Originalfinalplanretained;officialrecipe/validationplanunchanged."
+}

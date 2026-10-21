@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-10-21T07:31:03.077306+00:00",
+  "reason": "Explicit user-authorized restart of existing project on2026-10-21; old2026-10-19quota stop superseded",
+  "hard_campaign_deadline": null,
+  "campaign_stop_conditions": [
+    "authenticatedpublicrank<=500",
+    "userstop",
+    "actualresourceorpermissionblocker",
+    "evidencethatfurtherworkhasnovalue"
+  ],
+  "stage_budget_seconds": 21600,
+  "per_fold_budget_seconds": 3600,
+  "automatic_service_restart": false,
+  "resource_protection": "Retain3GiBallocator/3.5GiBprocessceiling/2GiBdesktopGPUfree/4GiBhostRAMreserve;chosenCPU6runtimeallocationnotolduserhardlimit",
+  "stop_request_marker": "research_r79r2_stop_requested.json",
+  "old_closed_records_preserved": true,
+  "old_partial_fit_not_promoted": true,
+  "remote_code_push_authorization": "Existingexplicitprojectgrantforresearchcode/smallrecords;nevermain/forcepush",
+  "Kaggle_submission": "Parent-onlyauthenticatedroute;originalautonomoussubmissionauthorizationpendingrawhistoryverification;localpreparationallowed"
+}

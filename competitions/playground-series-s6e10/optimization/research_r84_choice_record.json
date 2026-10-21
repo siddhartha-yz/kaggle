@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-10-21T12:08:21.264178+00:00",
+  "missing_rows": 292,
+  "missing_positive_rows": 106,
+  "any_missing_current_AUC_loss": 2.191346108218253e-05,
+  "interpretation": "Upper bound on recovering currentlywrongpairs onlyifchanging scores ofmissingrows alone; not a bound on globalNNretraining effects; no missingflagtrial run",
+  "chosen": "Isolate13segmentTE from previouslyconfoundedR5; no13standalone oncurrent84 found inplanreview",
+  "source_sha256": {
+    "research_r4_lean_features.py": "cfe6f672865f30622ce8e5cf9149f11e2e6f822f9c1b687f7e7c0431c9218303",
+    "research_r23_features.py": "90eaab4ae13284cb7f097efd865279c51d0d939de7c28883f000be9f39199bd7",
+    "research_r5_plan.json": "9d59a6fcb7c94932276bd353bf882c80a0f28896d9ae9494ca30779ce5d8bd87",
+    "research_r83_result.json": "03c2a0acb3950fab62f5bf6ab5af5820d54de135f8ca807383e9dda8c81a2778",
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "research_artifacts/r68_pure_ranknet_fivefold/oof.npz": "12f4bb293481cfffcd129d9c05e3920b18e9cb2985ca76cc6133fe638382e483"
+  }
+}

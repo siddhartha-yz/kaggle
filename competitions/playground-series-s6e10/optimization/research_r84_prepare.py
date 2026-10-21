@@ -1,0 +1,18 @@
+import json,pandas as pd
+from research_r84_common import ROOT,sha,dump,now,refs
+from research_oof import params
+from research_resume_policy_20261021 import check_training
+from research_r84_features import Segment13TE,RATINGS
+from research_next_auto_te_features import ConditionalAutoTE
+check_training();assert not (ROOT/'research_r84_plan.json').exists()
+f=pd.read_csv(ROOT/'data/train.csv');raw=f.drop(columns=['id','satisfaction'])
+tr=Segment13TE();tr.raw_columns=list(raw);old=ConditionalAutoTE();old.raw_columns=list(raw);old.numeric=raw.select_dtypes(include='number').columns.tolist()
+pd.testing.assert_frame_equal(tr.keys(raw),old.keys(raw).iloc[:,21:].reset_index(drop=True),check_exact=True);assert raw[RATINGS].notna().all().all()
+files=['research_r84_features.py','research_r84_common.py','research_r84_worker.py','research_r84_driver.py','research_r84_prepare.py','research_r84_choice_record.json','research_r21_features.py','research_features.py','research_r23_loader.py','research_external_ablation.py','research_oof.py','research_r4_common.py','compare_validation.py','data/train.csv']
+for stage,K in [('fivefold',5),('threefold',3)]:
+ z=refs(stage);assert len(set(z[0]['fold']))==K
+ files.extend(f'research_artifacts/{n}_{stage}/oof.npz' for n in ['r21_probability_lgb_officialcb','r23_conditional_lean','r68_pure_ranknet'])
+ files.extend(f'research_artifacts/r21_probability_lgb_officialcb_{stage}/fold{k}/transformer.joblib' for k in range(K))
+for name in ['original_teacher_v1','r20_aux_officialcb','r21_conditional_officialcb']:files.extend([f'research_artifacts/{name}/result.json',f'research_artifacts/{name}/train_features.npz'])
+p=dict(experiment='R84_segment13_TE_only_on_current_LGB84',frozen_utc=now(),hypothesis='Within fixed Class/TravelType/CustomerType segment, the target association of each ordinalrating complements nativeLGB splits and rating-target auxiliaryfeatures',prior='R5 raw21+segment13 wasbundled and failed3; R83 raw21alonefailed5correctedt. No claimthat13mustwork or derivationofeffect bysubtracting experiments.',feature_width=97,te=dict(columns='13 fixed Class×TypeofTravel×CustomerType×rating stringkeys; exactlysame asR5; no21rawTE',cv=5,shuffle=True,seed=20261022,smooth='auto',training_encoding='inner_cross_fit ownoutertrainonly'),learner_parameters=params('stats639'),fusion='tree_new=tree_v12+.46875*(LGB97-LGB84); v11=.5logit(tree)+.5logit(CE74); v12=.875logit(v11)+.125logit(calibratedRank74); nestedclip1e-6',fixed_evaluation='Finishall5 then pairedDeLong95lower>0 AND correctedresampled-talpha.025lower>0; onlyifpass3separatelyfittedpartitionssamegate; auditbeforefullfit/test',falsification='Either gate fails close recipe; no thresholds/weights/seeds/features rescue',selection_warning='Existinglabelsreusedextensively; chosenafterR83 and prioraudit; intervalsconditionalwithoutglobalhistoryselectioncorrection;3foldnotuntouchedholdout',resources=dict(device='CPU',threads=6,nice=10,host_RAM_reserve_GiB=4,own_worker_RSS_ceiling_GiB=8,disk_reserve_GiB=2,own_outputs_ceiling_MiB=256,perfold_checkpoint_seconds=1200,estimated_fivefold_minutes='3-6',estimated_total_ifpasses_minutes='10-15',paid=False),raw13_keys_equal_existing_R5_allrows=True,preflight_correction='Before anytraining/freeze, preserved pandasstringdtype to matchexistingR5 exactly; firstpreflight caught object/string mismatch',no_partial_quality=True,no_LB_tuning=True,authorization='Userresumecontinuingbackgrounditeration;researchbranchonly;no localKagglelogin;parentqualifieduploadwithactualquota',frozen_sha256={n:sha(ROOT/n) for n in files})
+dump(ROOT/'research_r84_plan.json',p);print(json.dumps(dict(plan_sha256=sha(ROOT/'research_r84_plan.json'),frozen_utc=p['frozen_utc'],input_files=len(files))))

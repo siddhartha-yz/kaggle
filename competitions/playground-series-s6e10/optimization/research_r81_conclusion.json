@@ -1,0 +1,105 @@
+{
+  "status": "completed_no_new_model_justified",
+  "result_sha256": "c7379ad4f5c3e54ac5d23e9b856768275c7966b2cb0b8b1a1226bb9fd3a403c6",
+  "plan_sha256": "aba9a8432272edc3f4f972a0ddd08f4d79df1a1b829461b560b697a771c13aa0",
+  "implementation_correction_sha256": "db38d642ac41472f8f006e1722ce03f855a49102fe255433ec76af61bf733adf",
+  "bucket_summary": [
+    {
+      "bucket": "confident_agree",
+      "rows": 592216,
+      "row_fraction": 0.8464642277759117,
+      "near6_fraction": 0.36994441217393653,
+      "half_endpoint_loss_fraction": 0.3253457308137179,
+      "pair_endpoint_mass": 0.8493424773987502
+    },
+    {
+      "bucket": "confident_conflict",
+      "rows": 30831,
+      "row_fraction": 0.04406726364461469,
+      "near6_fraction": 0.37053614868152185,
+      "half_endpoint_loss_fraction": 0.4873088424635821,
+      "pair_endpoint_mass": 0.04398531241344623
+    },
+    {
+      "bucket": "uncertain",
+      "rows": 76588,
+      "row_fraction": 0.10946850857947359,
+      "near6_fraction": 0.3680080430354625,
+      "half_endpoint_loss_fraction": 0.18734542672270002,
+      "pair_endpoint_mass": 0.10667221018780355
+    }
+  ],
+  "all_loss_fraction_involving_conflict_endpoint": 0.9242651931397341,
+  "uncertain_uncertain_fraction_of_all_loss": 0.06890918098085176,
+  "v12_vs_v11_gain_decomposition": {
+    "conflict_involving_AUC_gain": 2.965892171476127e-05,
+    "other_AUC_gain": -1.5233003562813997e-05,
+    "total_AUC_gain": 1.4425918151947273e-05
+  },
+  "existing_view_summary": {
+    "v12": {
+      "AUC": 0.9616472919389711,
+      "loss": 0.03835270806102883,
+      "conflict_involving_loss_contribution": 0.03544807312345865
+    },
+    "v11": {
+      "AUC": 0.9616328660208192,
+      "loss": 0.038367133979180776,
+      "conflict_involving_loss_contribution": 0.03547773204517341
+    },
+    "tree_component": {
+      "AUC": 0.9610175406751569,
+      "loss": 0.03898245932484309,
+      "conflict_involving_loss_contribution": 0.0360677324135673
+    },
+    "CE_NN74_component": {
+      "AUC": 0.9614265606636159,
+      "loss": 0.03857343933638418,
+      "conflict_involving_loss_contribution": 0.03543728580246871
+    },
+    "RankNet74_component": {
+      "AUC": 0.9612963694235555,
+      "loss": 0.03870363057644458,
+      "conflict_involving_loss_contribution": 0.03551469153190001
+    },
+    "original_teacher": {
+      "AUC": 0.9535325595563703,
+      "loss": 0.04646744044362971,
+      "conflict_involving_loss_contribution": 0.043392979292832326
+    }
+  },
+  "strict_near_summary": {
+    "rows": 168,
+    "row_fraction": 0.00024012520814424665,
+    "half_endpoint_loss_contribution": 9.8192729154451e-06,
+    "half_endpoint_fraction_of_all_loss": 0.00025602554322422716,
+    "upper_bound_fraction_of_all_loss_with_any_strict_row_endpoint": 0.0005120510864484543,
+    "bound_caveat": "Observedv12pairlossinvolvingtheserows,notcounterfactualtrainingbenefitofpurgingoriginalrows;strictstandardrestrictedtoNEAR6"
+  },
+  "assessment": [
+    "Highconflictlabelbucketconcentratesloss,butmembershipuseslabelandthisconcentrationdoesnotestablishrecoverablefeaturestructureorlabelnoise.",
+    "CoarseNEAR6matchratesnearlyequalacrossbuckets;strict20withinNEAR6fewrowsandtinyobservedpairlossfootprint. No evidencethatnear-exactsourcecopyingdominatesv12error.",
+    "Manyoriginalsourcerowssharecoarsekeyswithbothoutertrain/valid;onlyexposurecounts,notproofsourcelabelleakageorremovingeffect.",
+    "ExistingRankNetadditionrepairsconflict-involvingpairswhileharmingothers;do not rescaleitsweightbasedonthesedescriptions.",
+    "Boundednoise-factor/sourceconditioningroutesalreadyfailedhistorically;thisdiagnosticisnotindependentnewvalidationevidencetorevivethem."
+  ],
+  "most_supported_next_hypothesis": {
+    "hypothesis": "Amongteacher-confidentrows,lowrating-reconstructionself-consistency(high existingmeanrating-surprisal)mayidentifycovariate-observablesystematicteachermismatchandremainingrankingloss.Thiswouldbeadiagnosticofexistingfeatureuse,NOTanewfeature/modelclaim.",
+    "basis": "Teacher-conflict-involvingpairsdominatecurrentloss;NEAR6doesnotenrichconflicts.Thevalidatedpipelinealreadycontains27target-freeratingfieldsincludingmeansurprisal,soproxyisavailablewithoutexpensiveinference,butresidualvalueisunknown.",
+    "status": "Proposednextreadonlydiagnosticonly;NOTexecutedandNOTevidencethatanewmodelwillhelp",
+    "predefined_future_check": "Ifcontinued,freezeONEcheck:q<=.1orq>=.9andmeansurprisalabovetheown-outer-training90thpercentile(label-freecutpoint),thenreviewheldoutconflictrateandglobal-pairlossendpointconcentrationineachof5folds.Compareagainstrestofteacher-confidentrows,nothreshold/cohortgrid.",
+    "falsification_conditions": [
+      "RejectifrequiresknowingSATagreementatpredictiontime;onlyqandpretextsurprisalareobservableproxies.",
+      "Rejectthisproxyrouteifheldoutconflictrateratioandpair-mass-normalizedlossconcentrationdonotbothpointabove1inallfivefolds;doNOTretunethepercentileorchooseselectedratingsafterfailure.",
+      "Evenifdescriptiveenrichmentexists,itdoesnotshowincrementalmodelvaluebecausecurrentNN74/LGB84alreadycontainthesefields. No traininguntilaseparatefrozenmechanismisjustified;anyfuturecandidatekeepsoriginal5/3duallowerboundsandaudits.",
+      "No result here establisheslabelnoise,anAUCceiling,orbenefitfromremoving/relabelingrows."
+    ]
+  },
+  "recommendation": "Nofurthertrainingnow. Preservev12andrecords. Do not relabel/deleteconflictrows,purgeallNEAR6sources,searchweightsorclaimanAUCceiling.",
+  "runtime_seconds": 4.443156765992171,
+  "peak_RSS_bytes": 770867200,
+  "new_classifier_fits": 0,
+  "new_model_inference": 0,
+  "new_submissions": 0,
+  "synthetic_implementation_checks": "Exact3x3pair/tiecountsbruteforceandsummedendpointattributionpassed;officialv12AUCmatchessealedreportwithin1e-12"
+}

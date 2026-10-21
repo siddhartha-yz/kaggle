@@ -1,0 +1,54 @@
+{
+  "frozen_utc": "2026-10-21T11:20:45.157360+00:00",
+  "scope": "ONEdescriptivev12diagnostic;allinputsownexistingpredictions;noinference/fits/newcandidate/weightsearch",
+  "buckets": {
+    "confident_agree": "q<=.1orq>=.9,hardclass(q>=.5)==knownSAT",
+    "confident_conflict": "q<=.1orq>=.9,hardclass(q>=.5)!=knownSAT",
+    "uncertain": ".1<q<.9"
+  },
+  "ranking": "Exactallpositive-negativepairs,directional3x3positivebucketxnegativebucket;wrong1,tie.5;globalpairdenominatorandhalf-endpointattribution. No randomsampling,CItests,newrankinghypothesisselectionorwithin-bucketAUCsubstitutedforcrossbucketloss.",
+  "existing_score_views": [
+    "v12",
+    "v11",
+    "certifiedtree",
+    "CE_NN74",
+    "calibratedRankNet74",
+    "originalteacher"
+  ],
+  "comparisons": "Descriptiveexistingcomponentsonly;v12global+perfold;v11->v12gainbysame3x3cells. No changedfusionrecipes.",
+  "source_near": {
+    "pool": "Same129859originalsaferowsafterglobal21exactexclusions",
+    "primary_NEAR6": [
+      "Flight Distance",
+      "Age",
+      "Gender",
+      "Class",
+      "Customer Type",
+      "Type of Travel"
+    ],
+    "strict_secondary": "NEAR6equalANDatleast20of21rawpredictorfieldsexactlyequal;NaN==NaN. Thusatmostoneother15fielddiffers. DoesNOTcoverglobal20/21pairswhosecore6fielddiffers. No distance/numerictolerancegrid.",
+    "outputs": "Heldoutofficialrows,candidatepairs,uniquesourcerowsandrowsalso matchedbyoutertrainingforeachfixed5fold;labeldefinedbucketcross-tabdiagnosticonly"
+  },
+  "resources": "CPU4,serial,50kquerychunks/100kpairchunks,noGPU/modelimports;aggregatemetadataonly;existingdesktopanddiskpreserved",
+  "limitations": [
+    "Agreement/conflictusesknownSATandisunavailableatpredictiontime;notatraining/routing/deletionrule.",
+    "Teacherisnotgroundtruth;hardbuckets/correlatederrorsdonotproveirreduciblenoiseorAUCceiling.",
+    "NEAR6iscoarsehistoricalproxy,notproofsameperson/copying/leakage;strictsecondaryrestrictedtothatproxy.",
+    "Alllabelshistoricallyreused;thisisadaptivedescriptivehypothesisgeneration,notnewvalidationevidence.",
+    "Fold-sourceoverlapcountsareexposure/sensitivitycounts,notcausaleffectofremovingsourcerows.",
+    "Existingcomponentcomparisonsarenotacandidate/weightsearch;norescuesofclosedroutes."
+  ],
+  "diagnostic_source_sha256": "5a3a2512d1cadc5e69c1d7feba4e99e2da3d6635cfa8bc4683ced34c67cc7099",
+  "input_sha256": {
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "research_artifacts/r68_pure_ranknet_fivefold/oof.npz": "12f4bb293481cfffcd129d9c05e3920b18e9cb2985ca76cc6133fe638382e483",
+    "research_artifacts/r23_conditional_lean_fivefold/oof.npz": "26d8a9a89cfaa3a928300fb0f63f361a50b7c7a2e39dc1c820161b6f33960ea3",
+    "research_artifacts/r21_probability_lgb_officialcb_fivefold/oof.npz": "ff911354393ad4f08c3d7ef7448bc6c64ac1ad17129fcd279aa067f8d09d0938",
+    "research_artifacts/original_teacher_v1/train_features.npz": "0fc3167103ca04ecaac018c622ccca4d8f7e365b46f032ad11f318e409dbfc55",
+    "research_artifacts/original_teacher_v1/result.json": "35c20bbd3a2eff503bc64d436dc680cdf66298c807eac521b1d75c0b936be9f2",
+    "research_sources/original_cc0/data.csv": "2ad76465f6115f93d16121891a6b1235acb8007a4ab065cae0dc46b60ad116e3",
+    "research_sources/original_safe_mask.npy": "fcc30179ed4f68ddab8323abe86e953dcaf13374dee46bd3c13abb55dfdbfe51",
+    "original_overlap_audit.json": "92a93151ea4d6775333695c0cc5ee39267ca7ac2a4df6568e66f27b65bc1fbbd",
+    "research_r68_result.json": "ebe95baab21569558de3e5be7c8b5e59da926d90eeac354ad39c30d2e0864966"
+  }
+}

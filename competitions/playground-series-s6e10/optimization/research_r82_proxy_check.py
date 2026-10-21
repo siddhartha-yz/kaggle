@@ -1,0 +1,22 @@
+"""One prescribed cached-feature check; no fit, inference, candidate or threshold search."""
+import os
+for k in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS']:os.environ[k]='4'
+from pathlib import Path
+from datetime import datetime,timezone
+import hashlib,json,time,resource
+import numpy as np
+ROOT=Path(__file__).resolve().parent
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def endpoint(y,p):
+ m=int(y.sum());n=len(y)-m;den=m*n;pos=np.sort(p[y==1]);neg=np.sort(p[y==0]);loss=np.empty(len(y));mass=np.where(y==1,1/(2*m),1/(2*n));a=p[y==1];lo=np.searchsorted(neg,a,'left');hi=np.searchsorted(neg,a,'right');loss[y==1]=(n-hi+.5*(hi-lo))/(2*den);a=p[y==0];lo=np.searchsorted(pos,a,'left');hi=np.searchsorted(pos,a,'right');loss[y==0]=(lo+.5*(hi-lo))/(2*den);assert abs(mass.sum()-1)<1e-12;return loss,mass
+def main():
+ tick=time.monotonic();p=json.loads((ROOT/'research_r82_plan.json').read_text());ph=sha(ROOT/'research_r82_plan.json');assert sha(__file__)==p['check_source_sha256'];assert not (ROOT/'research_r82_result.json').exists()
+ for n,h in p['input_sha256'].items():assert sha(ROOT/n)==h,n
+ z=np.load(ROOT/'research_artifacts/r68_pure_ranknet_fivefold/oof.npz');t=np.load(ROOT/'research_artifacts/original_teacher_v1/train_features.npz');a=np.load(ROOT/'research_artifacts/r21_conditional_officialcb/train_features.npz');manifest=json.loads((ROOT/'research_artifacts/r21_conditional_officialcb/result.json').read_text());assert manifest['status']=='complete' and not manifest['satisfaction_loaded'] and manifest['train_features_sha256']==sha(ROOT/'research_artifacts/r21_conditional_officialcb/train_features.npz');assert np.array_equal(z['id'],t['id']) and np.array_equal(z['id'],a['id']);y=z['target'];fold=z['fold'];score=z['candidate'];q=t['values'][:,list(t['columns']).index('orig_teacher_lgb')];s=a['values'][:,list(a['columns']).index('mean_rating_surprisal')].astype('float64');assert np.isfinite(s).all() and (s>=0).all();confident=(q<=.1)|(q>=.9);conflict=(q>=.5)!=y;old=json.loads((ROOT/'research_r81_result.json').read_text());records=[]
+ for k in range(5):
+  it=fold!=k;iv=fold==k;cut=float(np.quantile(s[it],.9,method='linear'));c=confident[iv];high=c&(s[iv]>cut);rest=c&~high;loss,mass=endpoint(y[iv],score[iv]);assert abs(loss.sum()-old['fold_v12_ranking_matrices'][str(k)]['AUC_loss'])<1e-12
+  def desc(mask):
+   n=int(mask.sum());return dict(rows=n,positive_rows=int(y[iv][mask].sum()),conflicts=int(conflict[iv][mask].sum()),conflict_rate=float(conflict[iv][mask].mean()) if n else None,half_endpoint_AUC_loss=float(loss[mask].sum()),pair_endpoint_mass=float(mass[mask].sum()))
+  H=desc(high);R=desc(rest);C=desc(c);assert H['rows']>0 and R['rows']>0 and R['conflict_rate']>0 and H['pair_endpoint_mass']>0 and R['pair_endpoint_mass']>0 and C['half_endpoint_AUC_loss']>0;rr=H['conflict_rate']/R['conflict_rate'];ls=H['half_endpoint_AUC_loss']/C['half_endpoint_AUC_loss'];ms=H['pair_endpoint_mass']/C['pair_endpoint_mass'];concentration=ls/ms;density=(H['half_endpoint_AUC_loss']/H['pair_endpoint_mass'])/(R['half_endpoint_AUC_loss']/R['pair_endpoint_mass']);assert (concentration>1)==(density>1);records.append(dict(fold=k,outer_train_rows=int(it.sum()),validation_rows=int(iv.sum()),all_outer_train_90th_percentile=cut,high=H,confident_rest=R,all_confident=C,conflict_risk_ratio=rr,high_loss_share_within_confident=ls,high_pair_mass_share_within_confident=ms,pair_mass_normalized_loss_concentration=concentration,loss_density_ratio_high_vs_confident_rest=density,both_predetermined_directions_above1=bool(rr>1 and concentration>1)))
+ passed=all(x['both_predetermined_directions_above1'] for x in records);result=dict(status='complete_single_descriptive_proxy_check',completed_utc=datetime.now(timezone.utc).isoformat(),plan_sha256=ph,folds=records,predefined_direction_check_passed=passed,incremental_predictive_value_demonstrated=False,new_model_justified_by_this_check=False,thresholds_changed=False,thresholds_or_cohorts_searched=0,classifier_fits=0,new_model_inference=0,new_candidates=0,labels_changed=False,new_submissions=0,no_more_automatic_diagnostics=True,seconds=time.monotonic()-tick,peak_RSS_bytes=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024,limitations=p['limitations']);(ROOT/'research_r82_result.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2),flush=True)
+if __name__=='__main__':main()

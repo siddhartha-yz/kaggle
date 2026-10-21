@@ -1,0 +1,398 @@
+{
+  "status": "completed_readonly_project_evidence_audit",
+  "created_utc": "2026-10-21T11:13:02.412556+00:00",
+  "scope": "Existinglocalcode/manifests/results;sourceequivalenceandcovariatecountsrechecked;noInternetresearchduplicated,noqualitymetricrecomputed,noclassifierfit",
+  "sections": [
+    {
+      "topic": "v12实际构成",
+      "status": "confirmed",
+      "facts": [
+        "树概率算术混合T=.46875 LGB84+.09375 CB8+.1875 residualLGB581+.25 CB10。残差LGB的init_score=.5*logit(原始数据teacher概率)。",
+        "v11=expit(.5logit(clip(T))+.5logit(clip(CE-NN74)))；v12=expit(.875logit(clip(v11))+.125logit(clip(已校准pureRankNet74)))，clip=1e-6。不能把这些当原始概率的相同权重。",
+        "两种NN测试均使用五个保存外折、每折32 native成员；RankNet先对每折32概率均值拟合训练集截距，再平均五折。v12没有XGB或TabSTAR。"
+      ],
+      "evidence": [
+        {
+          "file": "research_r21_csv.py",
+          "line": 51
+        },
+        {
+          "file": "research_cb_deep_full.py",
+          "line": 58
+        },
+        {
+          "file": "research_r23_csv.py",
+          "line": 43
+        },
+        {
+          "file": "research_r68_csv.py",
+          "line": 35
+        }
+      ],
+      "concerns": [
+        "RankNet截距只拟合本模型训练样本上的分数，不是独立校准集；OOF单组32成员与测试五组平均的方差不同。均已在原计划中披露，不能宣传为独立概率校准。"
+      ]
+    },
+    {
+      "topic": "原始外部数据与规则依据",
+      "status": "confirmed_with_rule_source_attribution",
+      "facts": [
+        "主源确为官方指定arseniyshutko/binary-aviation-satisfaction-129k，CC0，129880行；CSV SHA256=2ad76465f6115f93d16121891a6b1235acb8007a4ab065cae0dc46b60ad116e3，本次重算与清单一致。",
+        "原始标签用于source-only LGB teacher、四个lookup统计及残差先验；并非没用原始数据，也并非只试过追加行。",
+        "全量teejmahal20原始train/test已缓存；历史alignment且本次只读重核验：规范化后21共同特征及True标签多重集与官方CC0源一致，129880行。额外Inflight service只用于另行失败辅助路线。不能说不同URL造成原始信息遗漏。",
+        "父线程本轮已读取官方/data指定该源及/rules §2.6公开同等可得条件。本地有CC0元数据和来源/哈希证据，但未找到当时保存的规则正文快照；许可依据不能只由CC0推导。"
+      ],
+      "evidence": [
+        {
+          "file": "original_overlap_audit.json",
+          "line": 3
+        },
+        {
+          "file": "original_dataset_public_metadata.json"
+        },
+        {
+          "file": "research_original.py",
+          "line": 23
+        },
+        {
+          "file": "research_sources/full_original22/alignment.json"
+        },
+        {
+          "file": "research_w3_service_source.py",
+          "line": 5
+        }
+      ],
+      "concerns": [
+        "teejmahal额外字段的元数据许可是Other(specifieddescription)，不能把官方21列CC0许可证直接扩大到额外字段；该分支不在现役v12。"
+      ]
+    },
+    {
+      "topic": "原始数据污染与近重复边界",
+      "status": "partial",
+      "facts": [
+        "原始样本与全部官方train/test的21特征精确重复全局排除21行，保留129859。17个训练精确匹配中14同标签、3冲突；都排除，没有按标签一致性筛保留。",
+        "已报告NEAR六键匹配：train258766行、test110926行；原始近键4475组存在标签冲突，涉及10665原始行。近键匹配不能当独立真标签。",
+        "直接追加也试过：uniform权重.25和covshift平均.25，source新增行的teacher/lookup使用源内OOF；二者primary对v6均负，未晋级。不是博客等权1.0追加的同一方案。"
+      ],
+      "evidence": [
+        {
+          "file": "original_overlap_audit.json"
+        },
+        {
+          "file": "original_exact_label_audit.json"
+        },
+        {
+          "file": "research_original.py",
+          "line": 27
+        },
+        {
+          "file": "research_w3_augmentation_plan.json"
+        },
+        {
+          "file": "research_w3_augmentation_selection.json"
+        }
+      ],
+      "not_found": [
+        "未找到每个SAT外折都从原始池排除近似该验证折的样本、再以相同池配对teacher与追加行的实验。现役teacher固定使用全局safe pool。"
+      ],
+      "concerns": [
+        "这属于尚未测过的近重复/共享组敏感性，不是已证明的直接验证标签泄漏或比赛规则违规。"
+      ]
+    },
+    {
+      "topic": "类别、有序评分、0及NaN",
+      "status": "partial_with_specific_encoding_loss",
+      "facts": [
+        "LGB的DistanceFeatures保留原数值，并为4个评分添加类别副本；NN Lean47将17数值保留float并各加整数值字符串副本，4原类别用缺失哨兵。0没有被整列删掉或统一转NaN。",
+        "源文档明确wifi的0=Not Applicable；其他0语义未见逐列正式编码审计，不能一概称最低满意或缺失。实际12个评分有0，Baggage handling范围1..5。",
+        "现役Lean47数值fillna(0)且值类别也fillna(0)；到NN74两列原始视图时，ArrivalDelay的NaN与真0被合并。本次协变量只读确认train292/test130个NaN；真0分别640415/274440行。辅助评分特征可能间接保留missing信号，不能说整个系统信息全失。",
+        "早期RealMLPFeatures曾用训练中位数+missing指示；现役Lean74没有该指示。R29是原始额外service的六个概率，不是ArrivalDelay missing指示器消融。"
+      ],
+      "evidence": [
+        {
+          "file": "research_features.py",
+          "line": 26
+        },
+        {
+          "file": "research_r4_lean_features.py",
+          "line": 9
+        },
+        {
+          "file": "research_realmlp_features.py",
+          "line": 7
+        },
+        {
+          "file": "research_r29_features.py",
+          "line": 1
+        },
+        {
+          "file": "research_feature_semantics_readonly_audit_20261021.json"
+        },
+        {
+          "file": "research_sources/full_original22/public_metadata.json"
+        }
+      ],
+      "concerns": [
+        "需要将早期处理与现役处理区分；没有证明这292个缺失就是分数瓶颈，也不能据失败的复杂特征组合宣称零/缺失处理已经穷尽。"
+      ]
+    },
+    {
+      "topic": "划分、漂移及泄漏排查",
+      "status": "implemented_label_boundaries_but_incomplete_stress_tests",
+      "facts": [
+        "五折Stratified seed20261018、三折seed20261022；早期primary seed42和confirm seed20261017同样重复使用。audit发现train内部及train/test全特征精确重复为0。",
+        "Main模型特征counts/vocab/TE拟合各自外训练；TE训练行用内五折fit_transform；id及satisfaction不作输入。source teacher用独立原始标签。",
+        "R20 selected officialcb在train+test共999479行协变量上作13个rating预测的五折交叉拟合，65个CB，不加载SAT。auxiliary折与SAT外折不同，且本行aux目标评分预测排本行aux折。这是已声明的transductive特征，不是纯归纳outer-train-only。",
+        "已有source-versus-synthetic域分类/密度比和近重复结构诊断，但它们不等于competition train-versus-test漂移审计；test新FlightDistance仅61行是已有覆盖事实。"
+      ],
+      "evidence": [
+        {
+          "file": "research_protocol.json"
+        },
+        {
+          "file": "research_oof.py",
+          "line": 37
+        },
+        {
+          "file": "research_r4_lean_features.py",
+          "line": 19
+        },
+        {
+          "file": "research_r20_auxiliary.py",
+          "line": 26
+        },
+        {
+          "file": "research_r21_pre_inference_audit.json"
+        },
+        {
+          "file": "research_r5_density_features.py",
+          "line": 17
+        },
+        {
+          "file": "research_data_audit.json"
+        }
+      ],
+      "not_found": [
+        "未找到完整的official train/test adversarial或PSI/KS报告。",
+        "未找到Group/时间/近来源分组外折压力验证。"
+      ],
+      "concerns": [
+        "全流程若仍以最早protocol的全部无监督变换outer-train-only描述，会遗漏后来明确的transductive例外。没有发现读取SAT外验证标签拟合主模型的证据，但不能把输入审计当泛化或反选择偏差证明。"
+      ]
+    },
+    {
+      "topic": "特征与强单模预算/消融归因",
+      "status": "many_ablations_done_but_often_bundled",
+      "facts": [
+        "21列原值数值float64->string、其余类别string、inner5 smooth=auto TargetEncoder已在R5做过，附加13个rating×Class/Travel/Customer编码，共34个新增TE，57->91。五折融合Δ+.000049555通过；三折Δ+.000036353、paired下界-.000003789、修正t下界-.000132429未通过。不是21列TE单独消融。",
+        "R6计划直接引用alvis1111同一仓库的independent_repro/xgb_deep_repro.py，CPU适配max6000/lr.03而非作者12000/.02，91字段，内层迭代选择；已到三折并失败。Distance精确值counts/均值/类别比例、原始teacher与lookup已在现役树中。",
+        "GBDT并非没加强：有R6深XGB、R16/18/31 CB视图、R40 inner早停选择主LGB84树数、R41特征半采样、R43 focal、R55随机化等。",
+        "近期R79r2五折63.8分钟+R80单控制57.7分钟无新合格候选；下游R21五折fit记录约121.7秒，R23约372.2秒，R68约553.4秒，均不含历史辅助训练成本，不能据此直接作跨硬件效率排行。",
+        "未找到统一的当前v12特征重要性/逐项leave-one-group-out消融台账；大量试验一次增加一组字段或换架构。"
+      ],
+      "evidence": [
+        {
+          "file": "research_next_auto_te_features.py",
+          "line": 7
+        },
+        {
+          "file": "research_r5_plan.json"
+        },
+        {
+          "file": "research_artifacts/r5_auto_te_fivefold/result.json"
+        },
+        {
+          "file": "research_artifacts/r5_auto_te_threefold/result.json"
+        },
+        {
+          "file": "research_r6_plan.json",
+          "line": 22
+        },
+        {
+          "file": "research_r40_plan.json",
+          "line": 4
+        },
+        {
+          "file": "research_r79r2_result.json"
+        },
+        {
+          "file": "research_r80_result.json"
+        }
+      ],
+      "concerns": [
+        "主要归因错误风险：把打包特征失败扩大解释为每个基础特征都无效；把固定单配置失败扩大为模型家族无效；把多版累计public跳分全归给最后一项改动。后期架构轮换占据较多预算，但没有完整成本账本能定量断言GBDT投入不足。"
+      ]
+    },
+    {
+      "topic": "多轮五折/三折选择自由度",
+      "status": "confirmed_reuse_not_independent_tests",
+      "facts": [
+        "本次只读扫描现有一层artifact/result.json：五折69目录、按记录OOF SHA去重68文件；三折11目录、11文件。R39两目录为同一hash别名。",
+        "这是产物数量，不是独立统计试验数；不含更早primary/confirm、多个权重/公式比较及R80内层选checkpoint，不能当全局尝试次数上限。",
+        "paired DeLong与修正resampled-t门槛真实实施；R5、R64均在三折拒绝，未追随最高CV。R68小增益两阶段均通过。",
+        "同一699635标签反复参与假设、诊断、筛选；各轮alpha.025与声明conditional不构成全项目multiplicity/sequential error控制。三折重划分不是untouched holdout。"
+      ],
+      "evidence": [
+        {
+          "file": "research_existing_validation_inventory_20261021.json"
+        },
+        {
+          "file": "research_r4_common.py",
+          "line": 15
+        },
+        {
+          "file": "research_r5_plan.json"
+        },
+        {
+          "file": "research_r64_result.json"
+        },
+        {
+          "file": "research_r68_result.json"
+        }
+      ],
+      "concerns": [
+        "这是与大量OOF选择经验最相似的实质流程风险；承认选择偏差不等于消除它。不能再用增加随机划分、反复权重搜索、缩小显示CI来声称独立确认。"
+      ]
+    },
+    {
+      "topic": "相关性、排序互补与融合收益",
+      "status": "measured_but_some_evidence_stale",
+      "facts": [
+        "W3旧v6的树/NN残差矩阵已做：v5 tree与RealMLP mean相关.988716，初期加入NN的v6五折比v5提高约.000242816。不能说NN无用或从未测互补。",
+        "对当前v12的R72-77已做100万固定种子正负pair修复/破坏与残差相关：相关范围.965764到.997789；各冻结融合多为破坏超过修复。R79另有同样审阅。低相关不自动等于有用融合。",
+        "R68加入pureRankNet的五折Δ+.000014426、三折+.000012086，两门槛均通过；public v11->v12 .96114->.96118是已记录真实提交变化。",
+        "现役v12树/BCE74/RankNet74三大组件的更新版完整pair贡献/相关矩阵未找到；旧v6矩阵不能直接当当前三家族的证明。"
+      ],
+      "evidence": [
+        {
+          "file": "research_w3_error_analysis.json"
+        },
+        {
+          "file": "research_recent_complementarity_review.json"
+        },
+        {
+          "file": "research_r78_predecessor_error_review.json"
+        },
+        {
+          "file": "research_r68_result.json"
+        },
+        {
+          "file": "research_v11_official_result.json"
+        },
+        {
+          "file": "research_r68_official_result.json"
+        }
+      ],
+      "concerns": [
+        "我们已有实际融合检验，不应只照搬“增加多样性”。后期新架构若没有对现役排序错误的净修复机制，换模型本身不是足够理由。"
+      ]
+    },
+    {
+      "topic": "teacher置信/一致/冲突三桶与噪声结论",
+      "status": "partial_old_diagnostic_not_current_full_decomposition",
+      "facts": [
+        "W3旧v6曾分析高置信错误25242行(3.6079%)，其中source teacher阈值.5也错比例99.996%；有按Class/Travel/Customer等切片的AUC排序贡献。",
+        "曾基于该诊断做bounded noise-factor NN，但plan明确这不证明labelnoise，primary融合Δ-.000014749并拒绝。",
+        "未找到按原始teacher确信且同意/确信但冲突/不确定三桶，对当前v12进行完整含跨桶正负pair的排序损失分解。"
+      ],
+      "evidence": [
+        {
+          "file": "research_w3_error_analysis.py",
+          "line": 41
+        },
+        {
+          "file": "research_w3_error_analysis.json"
+        },
+        {
+          "file": "research_w3_noise_factor_plan.json"
+        },
+        {
+          "file": "research_artifacts/w3_noise_factor_primary_b2048/result.json"
+        }
+      ],
+      "concerns": [
+        "共同模型错误/原始标签冲突不能推成不可约噪声、3.8%官方噪声率或.9613真实天花板。三桶仅作诊断，不把teacher当真值据此删/改官方标签。"
+      ]
+    }
+  ],
+  "priorities": [
+    "先补一份现役v12排序错误/原始teacher置信三桶诊断，必须含跨桶pair贡献；同时只读统计各外折近验证组的原始样本重叠规模。此处仅识别缺口，未运行这些新诊断或重训teacher。",
+    "把21rawTE与额外13交互的试验结论分开；未来若有充分机制再预先冻结单一最小对照，不能直接把作者分数或旧失败当新证据。",
+    "保留严格门槛且明确全历史选择偏差；停止无证据的架构/权重扩张。修订最早outer-train-only表述以反映已声明的label-free transductive辅助特征。"
+  ],
+  "new_classifier_fits": 0,
+  "new_model_inference": 0,
+  "new_validation_quality_queries": 0,
+  "new_Kaggle_submissions": 0,
+  "main_modified": false,
+  "user_files_deleted": false,
+  "new_external_downloads": false,
+  "current_goal_complete": false,
+  "evidence_sha256": {
+    "original_dataset_public_metadata.json": "a215f482a678709335e847d68dbfa6b79266999db2ed3d015e602d26d8265a75",
+    "original_exact_label_audit.json": "92c5228abd706ee5a71143b27830c3219b0d8abaad166bc0747a451da5b8fdde",
+    "original_overlap_audit.json": "92a93151ea4d6775333695c0cc5ee39267ca7ac2a4df6568e66f27b65bc1fbbd",
+    "research_artifacts/r5_auto_te_fivefold/result.json": "317ba5f02bbc8ff77cb868a322f48f9dc63ca8dc725077345e221ff21b54a370",
+    "research_artifacts/r5_auto_te_threefold/result.json": "607d8cbd496dda0c25910695409a81338021805a0ac21bc76b0db1c5cb204224",
+    "research_artifacts/w3_noise_factor_primary_b2048/result.json": "8b44c67e52cfad56378dcc05399dd8ce94543ea74e67ae6588bf8623d000b598",
+    "research_cb_deep_full.py": "b95d24ca026715cb4a54bdf0843a9e152579ae9eb5edd7e750ab2a12ff33e5cb",
+    "research_data_audit.json": "3d31a9c00ff57e9757259ec96fbdf3c7765bb01357ac718096c0fbfaf15bc367",
+    "research_existing_validation_inventory_20261021.json": "de444f28e12bb64742f95248f5d6f21482d2fa7f29ca4ececdb06522a15245ef",
+    "research_feature_semantics_readonly_audit_20261021.json": "5afb90b30fbac3e04a7c125a60105ef4add644570c7e1f60209a5c1be46dc818",
+    "research_features.py": "6c029528249d6772a958b29c46f4f095da9f91136c2721eb2a4d268f360fcfe9",
+    "research_next_auto_te_features.py": "53c8c9015a11bde7da4570d5b7c79aca21d725ce84ff79e3db77eb939d3031e8",
+    "research_oof.py": "59d90206b1f10db8df83dff1fd369a6b3ec084b6da26167c5e889d97fecda59b",
+    "research_original.py": "be823bb28166f943ca247ece8616c1b11fad15da96978006869b29e359df1e3e",
+    "research_protocol.json": "5346786fe58a6dcbd6c0fcf7053c7d7618768242583b9e96b6a9f9939c711250",
+    "research_r20_auxiliary.py": "f8cc7efa685b4e86c6ed2d71a6a881ed27b2c66a0115def563757192cd5f0d80",
+    "research_r21_csv.py": "2c828fc16108c7c4cb7510f9bd56344112f9e43fc71da0a8782e31f36676c60f",
+    "research_r21_pre_inference_audit.json": "9bf51d44df4a0b2cac2ca32ba6818fa5a59d10de1d5a4cdd754f4ccc6a599db9",
+    "research_r23_csv.py": "0bdd36e83212b900a8bbb39ee8f02c3f2f6fc688614741bdf68cc3204c69698a",
+    "research_r29_features.py": "6e05e961ec6c71543ff79936ef898542374cbb326013b42c64e0391ed5de0298",
+    "research_r40_plan.json": "49c25e667d7064a88ca607f2663c9d0cc1407cb7c4c0bf2df8747653a836930f",
+    "research_r4_common.py": "53eedffd572f6a82b9c3dba70e3315ab1df51dd9242396ab22da7f8dabc52e81",
+    "research_r4_lean_features.py": "cfe6f672865f30622ce8e5cf9149f11e2e6f822f9c1b687f7e7c0431c9218303",
+    "research_r5_density_features.py": "e848dc4d302e68b29ad941fce77f08cdfedf351c341953a98b02948f912711ac",
+    "research_r5_plan.json": "9d59a6fcb7c94932276bd353bf882c80a0f28896d9ae9494ca30779ce5d8bd87",
+    "research_r64_result.json": "ea75959e4fdf3ac47236b343472c3509703406ddedde2c7aedeb40fe9428c91b",
+    "research_r68_csv.py": "be3ae295e22fd2d0b63a79241170baf8293ceec817a3f60dee639209dfcf1031",
+    "research_r68_official_result.json": "95e806d27bdb579bd0a6c1342d060089fbb2ad94126de42ac95c8b0622bbea7a",
+    "research_r68_result.json": "ebe95baab21569558de3e5be7c8b5e59da926d90eeac354ad39c30d2e0864966",
+    "research_r6_plan.json": "3138630c0adbdc21b97ab6ca695f707214d070dcc48dc15756d17ecff822926e",
+    "research_r78_predecessor_error_review.json": "1621b6c66c3c9c4edb17a822981d6025fa8d96c561eb7e145acf4648566d46a4",
+    "research_r79r2_result.json": "27f57bdf8d296574274745e4901ec768057e43977155498d14022a75db00a2d2",
+    "research_r80_result.json": "55dfc546bf92b3ad57d0ee3d0c8100d26d6f1a49001d20e0c940f8786875fc8d",
+    "research_realmlp_features.py": "f2716860b788dd7f3756cd8d1a7fd2546c4ab259d144dbe9ebaef1d8035b3761",
+    "research_recent_complementarity_review.json": "56ba5915462c96cd9d3542b7916b4058b3822f763b92a0563ef01560d196bbdf",
+    "research_sources/full_original22/alignment.json": "a07a879dfbbc286fd26e6e0e321fa8254d5cc75e1053c8ef9b3602a535c18a72",
+    "research_sources/full_original22/public_metadata.json": "7ace22d854d0c40ec62630d728f94238d6c89510481ae88ce404b5fa2aac1cfe",
+    "research_v11_official_result.json": "1e0145baf4fb7ba83e294ff2e2e24f2fb7fdbdd9dc2060707e144e567e1b0484",
+    "research_w3_augmentation_plan.json": "4e0253f674aa72369e76eb5fa9988aff29cbdb122104e30dd9e8fde44ecf57e7",
+    "research_w3_augmentation_selection.json": "8c2afbd16c38bfb7ce93029245cf3990c8ad92f7a3b4b79963d5e311fccb299a",
+    "research_w3_error_analysis.json": "66450b0348431a3ec0293143a6e242b42817592d942fb94393f464cf1ed4bcc1",
+    "research_w3_error_analysis.py": "5e228a74b170ac3167d29f8094793c73e63a018061c3fa96e0214f9e56ebad8d",
+    "research_w3_noise_factor_plan.json": "0789ef4dfbd237f1b288e596340d7052c7e72d37f995f08ab075bc93b61c4b23",
+    "research_w3_service_source.py": "7891537b46c7f1cf7fb4a033985403d5cc6b203b9de0b8d9bba9ebb626710a46"
+  },
+  "later_diagnostic_resolution": {
+    "result": "research_r81_result.json",
+    "conclusion": "research_r81_conclusion.json",
+    "near_count_scope_correction": "Original_overlap_audit258766/110926isfull129880pool;actualteacher-safe129859pool258696/110883. Do not mix scopes.",
+    "near_validation_counts": [
+      51837,
+      51615,
+      51759,
+      51884,
+      51601
+    ],
+    "strict_within_NEAR6_counts": [
+      29,
+      39,
+      34,
+      31,
+      35
+    ],
+    "source_exposure_counts_are_not_counterfactual_purge_effects": true,
+    "current_v12_conflict_decomposition_completed": true
+  }
+}

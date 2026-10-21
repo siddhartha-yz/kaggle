@@ -1,0 +1,19 @@
+{
+  "status": "verified_descriptive_diagnostic",
+  "verified_utc": "2026-10-21T11:29:08.628366+00:00",
+  "original_frozen_plan_sha256": "aba9a8432272edc3f4f972a0ddd08f4d79df1a1b829461b560b697a771c13aa0",
+  "original_source_sha256": "5a3a2512d1cadc5e69c1d7feba4e99e2da3d6635cfa8bc4683ced34c67cc7099",
+  "corrected_source_sha256": "3b929f393be236daabad5c70fb88031e72a6fbe1b823fd84b5a76038adb026e1",
+  "correction_sha256": "db38d642ac41472f8f006e1722ce03f855a49102fe255433ec76af61bf733adf",
+  "result_sha256": "c7379ad4f5c3e54ac5d23e9b856768275c7966b2cb0b8b1a1226bb9fd3a403c6",
+  "conclusion_sha256": "6f4d837da860e078d4e3680a0c04fcde10cfb8e132d26f199a21e6af14ace3f1",
+  "exact_global_pair_AUC_matches_sealed_v12": true,
+  "all_crossbucket_and_endpoint_losses_sum_exact": true,
+  "synthetic_bruteforce_tie_tests_passed": true,
+  "source_pool_manifest_agrees": 258696,
+  "buckets_thresholds_and_near_standards_unchanged": true,
+  "no_new_models_or_inference": true,
+  "peak_RSS_GiB": 0.717926025390625,
+  "runtime_seconds": 4.443156765992171,
+  "disk_free_GiB": 4.203968048095703
+}

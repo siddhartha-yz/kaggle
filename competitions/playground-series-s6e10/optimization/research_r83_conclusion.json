@@ -1,0 +1,140 @@
+{
+  "status": "completed_closed_recipe",
+  "experiment": "R83_raw21_TE_only_on_current_LGB84",
+  "completed_utc": "2026-10-21T12:04:37.618836+00:00",
+  "first_real_start_utc": "2026-10-21T12:00:11.454899+00:00",
+  "fivefold_completed_utc": "2026-10-21T12:03:36.533282+00:00",
+  "controller_pid": 664730,
+  "first_worker_pid": 664737,
+  "service": "codex-kaggle-r83-validation.service",
+  "plan_sha256": "e651e47b0aee2a2713f05a47b4a35b7decbe445af43b50e2846196b1994a5d82",
+  "result_sha256": "03c2a0acb3950fab62f5bf6ab5af5820d54de135f8ca807383e9dda8c81a2778",
+  "oof_sha256": "20be06584c14890f7629eb9f6171598ead91144219aee5d65e46a35d4d95692a",
+  "validation": {
+    "pooled": {
+      "baseline_auc": 0.9616472919389712,
+      "candidate_auc": 0.9616760647031374,
+      "delta_auc": 2.8772764166129505e-05,
+      "paired_se": 9.768652997691847e-06,
+      "conditional_95pct_ci": [
+        9.626204290653485e-06,
+        4.7919324041605526e-05
+      ],
+      "candidate_logloss": 0.22118305829108315
+    },
+    "fold_comparisons": [
+      {
+        "baseline_auc": 0.9609020905877792,
+        "candidate_auc": 0.9608943253077719,
+        "delta_auc": -7.765280007343556e-06,
+        "paired_se": 2.1834595829575407e-05,
+        "conditional_95pct_ci": [
+          -5.0561087833311356e-05,
+          3.5030527818624245e-05
+        ],
+        "candidate_logloss": 0.22329385065117333
+      },
+      {
+        "baseline_auc": 0.9618718198394576,
+        "candidate_auc": 0.9619104621518587,
+        "delta_auc": 3.8642312401138135e-05,
+        "paired_se": 2.1323676202213356e-05,
+        "conditional_95pct_ci": [
+          -3.152092955200042e-06,
+          8.043671775747631e-05
+        ],
+        "candidate_logloss": 0.22069320942424117
+      },
+      {
+        "baseline_auc": 0.9622391658811874,
+        "candidate_auc": 0.9622786427422196,
+        "delta_auc": 3.947686103222825e-05,
+        "paired_se": 2.1990087404278162e-05,
+        "conditional_95pct_ci": [
+          -3.6237102801569448e-06,
+          8.257743234461344e-05
+        ],
+        "candidate_logloss": 0.21925203852212632
+      },
+      {
+        "baseline_auc": 0.9614770425380746,
+        "candidate_auc": 0.9615290920511592,
+        "delta_auc": 5.2049513084573285e-05,
+        "paired_se": 2.2092498778689454e-05,
+        "conditional_95pct_ci": [
+          8.748215478341955e-06,
+          9.535081069080462e-05
+        ],
+        "candidate_logloss": 0.222139991943978
+      },
+      {
+        "baseline_auc": 0.9617989521351932,
+        "candidate_auc": 0.9618226923846966,
+        "delta_auc": 2.374024950346776e-05,
+        "paired_se": 2.2024846024647157e-05,
+        "conditional_95pct_ci": [
+          -1.942844870484067e-05,
+          6.690894771177618e-05
+        ],
+        "candidate_logloss": 0.22053620091389706
+      }
+    ],
+    "corrected_resampled_t": {
+      "mean_delta": 2.9228731202812774e-05,
+      "se": 1.54183221063801e-05,
+      "test_train_ratio": 0.25,
+      "df": 4,
+      "one_sided_alpha": 0.025,
+      "lower_bound": -1.3579393739809183e-05
+    },
+    "eligible_for_new_partition_replication": false,
+    "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+  },
+  "positive_folds": 4,
+  "models": [
+    {
+      "fold": 0,
+      "seconds": 36.33367365700542,
+      "peak_rss_bytes": 2418307072,
+      "model_sha256": "02f14a1b0418164826a2d2ae6ee783d172761697adcf46368c681f44f60027df"
+    },
+    {
+      "fold": 1,
+      "seconds": 36.00047349699889,
+      "peak_rss_bytes": 2419077120,
+      "model_sha256": "5c17a3cea15d12ac9987219b2c10e8b6a7fd192a5a92145251447acb0ecebcf2"
+    },
+    {
+      "fold": 2,
+      "seconds": 36.15405818998988,
+      "peak_rss_bytes": 2419617792,
+      "model_sha256": "7837d316cbcefc9f88f2c34876b55c95a6afa6b6569ebadc801d652831705d1c"
+    },
+    {
+      "fold": 3,
+      "seconds": 37.720604856003774,
+      "peak_rss_bytes": 2418487296,
+      "model_sha256": "01cfa696ebffdf7a281b050439f93a0fc2f38ca2bfdfb1f3552fad610f92c305"
+    },
+    {
+      "fold": 4,
+      "seconds": 36.383370720010134,
+      "peak_rss_bytes": 2418114560,
+      "model_sha256": "edb40982531b97f6bc5fd2f2fbe8d1e13b696897dbf91813fb9dedae4ac47fa8"
+    }
+  ],
+  "independent_integrity_check": "All identity,sourcehashes,modelartifacts,OOFcoverage,sklearnAUCandcorrectedtformula verified",
+  "interpretation": "Small positive pooled AUC but insufficient crossfold stability under frozen correctedtgate. Reject this fixed recipe; not evidence that every target encoding variant is useless. No rescue tuning.",
+  "threefold_run": false,
+  "full_refit": false,
+  "CSV_generated": false,
+  "new_formal_submissions": 0,
+  "weight_search": false,
+  "GPU_used": false,
+  "own_output_bytes": 56218721,
+  "disk_available_bytes": 4453498880,
+  "resource_interruption": false,
+  "project_goal": "Actualpublicrank<=500,notachieved;currentparentverifiedrank760score.96118at2026-10-21~10:42UTC",
+  "campaign_still_authorized": true,
+  "next_stage": "Return completed paired experiment evidence to parent for next single-hypothesis iteration; no recipe adjustments within R83"
+}

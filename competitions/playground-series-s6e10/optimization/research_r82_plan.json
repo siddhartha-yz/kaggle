@@ -1,0 +1,27 @@
+{
+  "frozen_utc": "2026-10-21T11:32:58.089052+00:00",
+  "scope": "TheONEalreadyproposedproxycheck;cachedfeature/predictionsonly;noautomaticdiagnosticchain",
+  "confidence": "q<=.1orq>=.9,hardteacher=(q>=.5);conflictwithknownSATisdescriptiveoutcomeonly",
+  "threshold": "For each fixed outerfold, compute LINEAR90thpercentile of mean_rating_surprisal over ALL outer-training rows,notonlyteacher-confidentrows;noSATused. Restrictvalidationcomparison to teacher-confident rows. High means STRICTLY >cut;tiesgo to rest.",
+  "risk_ratio": "P(SAT!=hardteacher|highconfident)/P(SAT!=hardteacher|restconfident)",
+  "pair_loss": "Within each fixed validationfold, allpositive-negativepairs;wrong1/tie.5. Eachendpointhalfpairloss. Includeoppositeendpointsevenifteacheruncertain.",
+  "pair_mass": "ForendpointsubsetG: .5*(positiveG/positiveAll+negativeG/negativeAll). Concentration=(Lhigh/Lconfident)/(Mhigh/Mconfident). Reportdensityratiohigh/restalso;its>1directionalgebraicallyequivalent,notanalternativeselectioncriterion.",
+  "decision": "Proxy-directioncheckpassonlyifconflictriskratio>1ANDconcentration>1ineveryoneofthe5folds. Otherwisefalsifythisproxyroute,noretuning. PassingisNOTpermission/modelpromotionorincrementalvalueproof.",
+  "resources": "CPU4,noGPUimports,onlysmallaggregateresult,oneboundedrun",
+  "limitations": [
+    "Labels/partitionshavebeenreusedhistorically;thisisdescriptiveposthypothesisanalysis,notfreshindependentconfirmation.",
+    "Themean-surprisalfeaturealreadyexistsinNN74/LGB84;enrichmentdoesnotshowadditionalpredictiveinformationormodelgain.",
+    "Quantileusesownoutertrainingrowsbutcachedauxiliaryfeaturesarepreviouslydeclaredlabel-freetransductive;notpureinductivefeaturelearning.",
+    "Disagreementuseslabelsandcannotbeusedtodrop/relabelorrouteunseenrows. qandmean-surprisalaloneareobservable.",
+    "No threshold/cohort/featuresearchorconfidenceinterval-basedpromotion. Finishwithoneexplicitconclusionandstopdiagnosticchain."
+  ],
+  "check_source_sha256": "00c94f8a5237ad89eceb91143edc73524df7b771db7c3a046052d308db2f40d7",
+  "input_sha256": {
+    "research_artifacts/r68_pure_ranknet_fivefold/oof.npz": "12f4bb293481cfffcd129d9c05e3920b18e9cb2985ca76cc6133fe638382e483",
+    "research_artifacts/original_teacher_v1/train_features.npz": "0fc3167103ca04ecaac018c622ccca4d8f7e365b46f032ad11f318e409dbfc55",
+    "research_artifacts/r21_conditional_officialcb/train_features.npz": "a84aa864037d83224699765a7b6d69beb2861f9fa16c61b67dc324d71f121a95",
+    "research_artifacts/r21_conditional_officialcb/result.json": "bdffd97687e51e432355afad14f7320ab8175bb0298ba6d0e84992bb39717ee6",
+    "research_r81_result.json": "c7379ad4f5c3e54ac5d23e9b856768275c7966b2cb0b8b1a1226bb9fd3a403c6",
+    "research_r81_conclusion.json": "6f4d837da860e078d4e3680a0c04fcde10cfb8e132d26f199a21e6af14ace3f1"
+  }
+}

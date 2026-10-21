@@ -1,0 +1,29 @@
+{
+  "recorded_utc": "2026-10-21T10:45:31.186663+00:00",
+  "verified_utc": "2026-10-21T10:44:00+00:00",
+  "verified_time_precision": "approximate_minute",
+  "source": "Parent cloud browser public leaderboard observation; no duplicate local lookup",
+  "source_url": "https://www.kaggle.com/competitions/playground-series-s6e10/leaderboard",
+  "own": {
+    "display_name": "siddhartha-yz",
+    "profile": "/siddharthayz",
+    "actual_rank": 760,
+    "public_auc": 0.96118
+  },
+  "rank500": {
+    "display_name": "Daniel Peng",
+    "profile": "/codewithdaniel1",
+    "public_auc": 0.96177,
+    "Entries_display": 3,
+    "Last_display": "4d"
+  },
+  "ranks501_to504_displayed_public_auc": 0.96177,
+  "displayed_auc_gap": 0.00059,
+  "gap_precision": "Difference of displayed five-decimal scores; not a guaranteed required gain or hidden full-precision difference",
+  "tie_warning": "Matching0.96177doesnotguaranteerank<=500;501to504displaythesamescore. Stoponlyafteractualrank<=500verified.",
+  "global_rank_lookup_resolved_by_parent": true,
+  "actual_top500_verified": false,
+  "project_goal_complete": false,
+  "new_training": false,
+  "new_submission": false
+}

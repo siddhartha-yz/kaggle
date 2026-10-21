@@ -1,0 +1,21 @@
+{
+  "recorded_utc": "2026-10-21T10:44:14.429924+00:00",
+  "verified_utc": "2026-10-21T10:42:00+00:00",
+  "verified_time_precision": "approximate_minute",
+  "source": "Parent cloud browser observed public leaderboard search; not independently re-read locally",
+  "source_url": "https://www.kaggle.com/competitions/playground-series-s6e10/leaderboard?search=siddhartha",
+  "display_name": "siddhartha-yz",
+  "profile_url": "https://www.kaggle.com/siddharthayz",
+  "actual_rank": 760,
+  "public_auc": 0.96118,
+  "Entries_display": 11,
+  "Last_display": "2d",
+  "ranked_team_count": null,
+  "rank500_public_auc": null,
+  "remaining_daily_quota": null,
+  "authentication_not_assumed": true,
+  "actual_top500_verified": false,
+  "new_submission": false,
+  "old_20261019_official_record_preserved": true,
+  "local_browser_diagnostics_closed": true
+}

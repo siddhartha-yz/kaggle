@@ -1,0 +1,10 @@
+{
+  "recorded_utc": "2026-10-21T11:22:28.480635+00:00",
+  "original_plan_sha256": "aba9a8432272edc3f4f972a0ddd08f4d79df1a1b829461b560b697a771c13aa0",
+  "original_source_sha256": "5a3a2512d1cadc5e69c1d7feba4e99e2da3d6635cfa8bc4683ced34c67cc7099",
+  "corrected_source_sha256": "3b929f393be236daabad5c70fb88031e72a6fbe1b823fd84b5a76038adb026e1",
+  "correction": "Onlyhistoricalcountconsistencyassertion:original_overlap258766usesfull129880sourcepool;actualsealedteacher129859safepoolmanifesthas258696. Usepinnedteacherresultinstead. Addexplicitcorrectedsourcehashbinding. No bucket,threshold,feature,matchingorlosschanges.",
+  "first_attempt": "Completedcomputationsbutassertfailedbeforeresultwritten;noresultaccepted/no quality-basedchange",
+  "unchanged_frozen_definitions": true,
+  "expected_safe_pool_matched_rows": 258696
+}

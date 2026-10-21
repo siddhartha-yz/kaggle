@@ -1,0 +1,1746 @@
+{
+  "status": "completed_descriptive_existing_predictions_only",
+  "completed_utc": "2026-10-21T11:22:44.022850+00:00",
+  "plan_sha256": "aba9a8432272edc3f4f972a0ddd08f4d79df1a1b829461b560b697a771c13aa0",
+  "bucket_definitions": {
+    "confident_agree": "q<=.1orq>=.9,hardclass(q>=.5)==knownSAT",
+    "confident_conflict": "q<=.1orq>=.9,hardclass(q>=.5)!=knownSAT",
+    "uncertain": ".1<q<.9"
+  },
+  "buckets": [
+    {
+      "bucket": "confident_agree",
+      "rows": 592216,
+      "positive_rows": 271499,
+      "positive_rate": 0.4584459048725465,
+      "teacher_probability_quantiles": [
+        9.730281317451076e-06,
+        0.000216664539940072,
+        0.03902661710552269,
+        0.9998216878445632,
+        0.9999700758441143
+      ],
+      "v12_mean_probability": 0.45462693223128325,
+      "global_AUC_loss_endpoint_contribution": 0.012477889832800593
+    },
+    {
+      "bucket": "confident_conflict",
+      "rows": 30831,
+      "positive_rows": 13425,
+      "positive_rate": 0.4354383574973241,
+      "teacher_probability_quantiles": [
+        1.3931291629953568e-05,
+        0.0002774816512325372,
+        0.9751183210784007,
+        0.9998239050754185,
+        0.9999652879202239
+      ],
+      "v12_mean_probability": 0.5087090251766474,
+      "global_AUC_loss_endpoint_contribution": 0.018689613770563652
+    },
+    {
+      "bucket": "uncertain",
+      "rows": 76588,
+      "positive_rows": 25415,
+      "positive_rate": 0.3318404972058286,
+      "teacher_probability_quantiles": [
+        0.10000334967073886,
+        0.14149660756000237,
+        0.34303927857043365,
+        0.7596373532414299,
+        0.8999923730156049
+      ],
+      "v12_mean_probability": 0.3313239232551206,
+      "global_AUC_loss_endpoint_contribution": 0.007185204457664581
+    }
+  ],
+  "ranking_matrices": {
+    "v12": {
+      "AUC": 0.9616472919389711,
+      "AUC_loss": 0.03835270806102883,
+      "positive_rows": 310339,
+      "negative_rows": 389296,
+      "total_pairs": 120813731344,
+      "loss_pair_equivalents": 4633533768.0,
+      "cells": [
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_agree",
+          "pairs": 87074344783,
+          "discordant_pairs": 184407,
+          "ties": 0,
+          "loss_pair_equivalents": 184407.0,
+          "cell_error_rate": 2.11781094028976e-06,
+          "global_AUC_loss_contribution": 1.5263745101533796e-06,
+          "fraction_of_all_loss": 3.979835029444421e-05
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_conflict",
+          "pairs": 4725711594,
+          "discordant_pairs": 1424820335,
+          "ties": 0,
+          "loss_pair_equivalents": 1424820335.0,
+          "cell_error_rate": 0.3015038701915333,
+          "global_AUC_loss_contribution": 0.011793529751539796,
+          "fraction_of_all_loss": 0.3075018779058135
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "uncertain",
+          "pairs": 13893418327,
+          "discordant_pairs": 13721713,
+          "ties": 0,
+          "loss_pair_equivalents": 13721713.0,
+          "cell_error_rate": 0.0009876412468869296,
+          "global_AUC_loss_contribution": 0.0001135774290500917,
+          "fraction_of_all_loss": 0.0029613926836499103
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_agree",
+          "pairs": 4305625725,
+          "discordant_pairs": 1558369350,
+          "ties": 0,
+          "loss_pair_equivalents": 1558369350.0,
+          "cell_error_rate": 0.3619379503777003,
+          "global_AUC_loss_contribution": 0.012898942302864265,
+          "fraction_of_all_loss": 0.33632415949191374
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_conflict",
+          "pairs": 233675550,
+          "discordant_pairs": 233309971,
+          "ties": 0,
+          "loss_pair_equivalents": 233309971.0,
+          "cell_error_rate": 0.9984355273797365,
+          "global_AUC_loss_contribution": 0.001931154417668658,
+          "fraction_of_all_loss": 0.05035249178743009
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "uncertain",
+          "pairs": 686997525,
+          "discordant_pairs": 659750662,
+          "ties": 0,
+          "loss_pair_equivalents": 659750662.0,
+          "cell_error_rate": 0.9603392122846439,
+          "global_AUC_loss_contribution": 0.005460891362766153,
+          "fraction_of_all_loss": 0.14238606968969433
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_agree",
+          "pairs": 8151022555,
+          "discordant_pairs": 17720648,
+          "ties": 0,
+          "loss_pair_equivalents": 17720648.0,
+          "cell_error_rate": 0.0021740398680567753,
+          "global_AUC_loss_contribution": 0.00014667743312672766,
+          "fraction_of_all_loss": 0.0038244348454697613
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_conflict",
+          "pairs": 442373490,
+          "discordant_pairs": 406363665,
+          "ties": 0,
+          "loss_pair_equivalents": 406363665.0,
+          "cell_error_rate": 0.9185985918821673,
+          "global_AUC_loss_contribution": 0.003363555288619776,
+          "fraction_of_all_loss": 0.08770059426488246
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "uncertain",
+          "pairs": 1300561795,
+          "discordant_pairs": 319293017,
+          "ties": 0,
+          "loss_pair_equivalents": 319293017.0,
+          "cell_error_rate": 0.24550391855851803,
+          "global_AUC_loss_contribution": 0.002642853700883208,
+          "fraction_of_all_loss": 0.06890918098085176
+        }
+      ],
+      "half_endpoint_attribution": [
+        {
+          "bucket": "confident_agree",
+          "pair_mass_fraction": 0.8493424773987502,
+          "global_AUC_loss_contribution": 0.012477889832800595,
+          "fraction_of_all_loss": 0.3253457308137179
+        },
+        {
+          "bucket": "confident_conflict",
+          "pair_mass_fraction": 0.04398531241344623,
+          "global_AUC_loss_contribution": 0.018689613770563652,
+          "fraction_of_all_loss": 0.4873088424635821
+        },
+        {
+          "bucket": "uncertain",
+          "pair_mass_fraction": 0.10667221018780355,
+          "global_AUC_loss_contribution": 0.007185204457664582,
+          "fraction_of_all_loss": 0.18734542672270002
+        }
+      ]
+    },
+    "v11": {
+      "AUC": 0.9616328660208192,
+      "AUC_loss": 0.038367133979180776,
+      "positive_rows": 310339,
+      "negative_rows": 389296,
+      "total_pairs": 120813731344,
+      "loss_pair_equivalents": 4635276617.0,
+      "cells": [
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_agree",
+          "pairs": 87074344783,
+          "discordant_pairs": 155519,
+          "ties": 0,
+          "loss_pair_equivalents": 155519.0,
+          "cell_error_rate": 1.786048466831103e-06,
+          "global_AUC_loss_contribution": 1.287262617170408e-06,
+          "fraction_of_all_loss": 3.355117997265361e-05
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_conflict",
+          "pairs": 4725711594,
+          "discordant_pairs": 1425164995,
+          "ties": 0,
+          "loss_pair_equivalents": 1425164995.0,
+          "cell_error_rate": 0.3015768031230388,
+          "global_AUC_loss_contribution": 0.011796382572954761,
+          "fraction_of_all_loss": 0.3074606140598318
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "uncertain",
+          "pairs": 13893418327,
+          "discordant_pairs": 13054504,
+          "ties": 0,
+          "loss_pair_equivalents": 13054504.0,
+          "cell_error_rate": 0.0009396178602518804,
+          "global_AUC_loss_contribution": 0.0001080548034960459,
+          "fraction_of_all_loss": 0.0028163376382160797
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_agree",
+          "pairs": 4305625725,
+          "discordant_pairs": 1559215567,
+          "ties": 0,
+          "loss_pair_equivalents": 1559215567.0,
+          "cell_error_rate": 0.3621344878972266,
+          "global_AUC_loss_contribution": 0.012905946614299614,
+          "fraction_of_all_loss": 0.33638026289122325
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_conflict",
+          "pairs": 233675550,
+          "discordant_pairs": 233351264,
+          "ties": 0,
+          "loss_pair_equivalents": 233351264.0,
+          "cell_error_rate": 0.9986122382080624,
+          "global_AUC_loss_contribution": 0.0019314962082874942,
+          "fraction_of_all_loss": 0.05034246783550696
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "uncertain",
+          "pairs": 686997525,
+          "discordant_pairs": 661181100,
+          "ties": 0,
+          "loss_pair_equivalents": 661181100.0,
+          "cell_error_rate": 0.9624213711686953,
+          "global_AUC_loss_contribution": 0.005472731391081535,
+          "fraction_of_all_loss": 0.14264113118408095
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_agree",
+          "pairs": 8151022555,
+          "discordant_pairs": 16362877,
+          "ties": 0,
+          "loss_pair_equivalents": 16362877.0,
+          "cell_error_rate": 0.0020074630992111147,
+          "global_AUC_loss_contribution": 0.0001354388844543591,
+          "fraction_of_all_loss": 0.0035300756248265127
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_conflict",
+          "pairs": 442373490,
+          "discordant_pairs": 407284262,
+          "ties": 0,
+          "loss_pair_equivalents": 407284262.0,
+          "cell_error_rate": 0.920679632045763,
+          "global_AUC_loss_contribution": 0.0033711752585500044,
+          "fraction_of_all_loss": 0.08786622582701412
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "uncertain",
+          "pairs": 1300561795,
+          "discordant_pairs": 319506529,
+          "ties": 0,
+          "loss_pair_equivalents": 319506529.0,
+          "cell_error_rate": 0.24566808761286119,
+          "global_AUC_loss_contribution": 0.0026446209834397913,
+          "fraction_of_all_loss": 0.06892933375932761
+        }
+      ],
+      "half_endpoint_attribution": [
+        {
+          "bucket": "confident_agree",
+          "pair_mass_fraction": 0.8493424773987502,
+          "global_AUC_loss_contribution": 0.01247419870021956,
+          "fraction_of_all_loss": 0.32512719628702147
+        },
+        {
+          "bucket": "confident_conflict",
+          "pair_mass_fraction": 0.04398531241344623,
+          "global_AUC_loss_contribution": 0.01870461412673045,
+          "fraction_of_all_loss": 0.487516584816582
+        },
+        {
+          "bucket": "uncertain",
+          "pair_mass_fraction": 0.10667221018780355,
+          "global_AUC_loss_contribution": 0.007188321152230764,
+          "fraction_of_all_loss": 0.18735621889639645
+        }
+      ]
+    },
+    "tree_component": {
+      "AUC": 0.9610175406751569,
+      "AUC_loss": 0.03898245932484309,
+      "positive_rows": 310339,
+      "negative_rows": 389296,
+      "total_pairs": 120813731344,
+      "loss_pair_equivalents": 4709616368.0,
+      "cells": [
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_agree",
+          "pairs": 87074344783,
+          "discordant_pairs": 73490,
+          "ties": 0,
+          "loss_pair_equivalents": 73490.0,
+          "cell_error_rate": 8.439914211602296e-07,
+          "global_AUC_loss_contribution": 6.082917825851072e-07,
+          "fraction_of_all_loss": 1.5604243373055986e-05
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_conflict",
+          "pairs": 4725711594,
+          "discordant_pairs": 1452075139,
+          "ties": 0,
+          "loss_pair_equivalents": 1452075139.0,
+          "cell_error_rate": 0.307271214105327,
+          "global_AUC_loss_contribution": 0.012019123346711489,
+          "fraction_of_all_loss": 0.3083213207908572
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "uncertain",
+          "pairs": 13893418327,
+          "discordant_pairs": 10397279,
+          "ties": 0,
+          "loss_pair_equivalents": 10397279.0,
+          "cell_error_rate": 0.0007483600331672357,
+          "global_AUC_loss_contribution": 8.606040790508506e-05,
+          "fraction_of_all_loss": 0.002207670049442974
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_agree",
+          "pairs": 4305625725,
+          "discordant_pairs": 1588665872,
+          "ties": 0,
+          "loss_pair_equivalents": 1588665872.0,
+          "cell_error_rate": 0.36897444726225015,
+          "global_AUC_loss_contribution": 0.013149712820941677,
+          "fraction_of_all_loss": 0.337323838687661
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_conflict",
+          "pairs": 233675550,
+          "discordant_pairs": 233537897,
+          "ties": 0,
+          "loss_pair_equivalents": 233537897.0,
+          "cell_error_rate": 0.9994109225376809,
+          "global_AUC_loss_contribution": 0.001933041007855588,
+          "fraction_of_all_loss": 0.04958745654673672
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "uncertain",
+          "pairs": 686997525,
+          "discordant_pairs": 669306449,
+          "ties": 0,
+          "loss_pair_equivalents": 669306449.0,
+          "cell_error_rate": 0.9742487048989005,
+          "global_AUC_loss_contribution": 0.005539986569028686,
+          "fraction_of_all_loss": 0.14211485537286547
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_agree",
+          "pairs": 8151022555,
+          "discordant_pairs": 11192139,
+          "ties": 0,
+          "loss_pair_equivalents": 11192139.0,
+          "cell_error_rate": 0.0013730963108591226,
+          "global_AUC_loss_contribution": 9.263962693223974e-05,
+          "fraction_of_all_loss": 0.0023764438810868344
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_conflict",
+          "pairs": 442373490,
+          "discordant_pairs": 413891977,
+          "ties": 0,
+          "loss_pair_equivalents": 413891977.0,
+          "cell_error_rate": 0.9356165917627659,
+          "global_AUC_loss_contribution": 0.003425868669029857,
+          "fraction_of_all_loss": 0.08788231241343435
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "uncertain",
+          "pairs": 1300561795,
+          "discordant_pairs": 330476126,
+          "ties": 0,
+          "loss_pair_equivalents": 330476126.0,
+          "cell_error_rate": 0.25410259417931,
+          "global_AUC_loss_contribution": 0.0027354185846558783,
+          "fraction_of_all_loss": 0.07017049801454232
+        }
+      ],
+      "half_endpoint_attribution": [
+        {
+          "bucket": "confident_agree",
+          "pair_mass_fraction": 0.8493424773987502,
+          "global_AUC_loss_contribution": 0.01267437639302783,
+          "fraction_of_all_loss": 0.32513024094789705
+        },
+        {
+          "bucket": "confident_conflict",
+          "pair_mass_fraction": 0.04398531241344623,
+          "global_AUC_loss_contribution": 0.019000386710711442,
+          "fraction_of_all_loss": 0.4874086201791457
+        },
+        {
+          "bucket": "uncertain",
+          "pair_mass_fraction": 0.10667221018780355,
+          "global_AUC_loss_contribution": 0.007307696221103813,
+          "fraction_of_all_loss": 0.18746113887295715
+        }
+      ]
+    },
+    "CE_NN74_component": {
+      "AUC": 0.9614265606636159,
+      "AUC_loss": 0.03857343933638418,
+      "positive_rows": 310339,
+      "negative_rows": 389296,
+      "total_pairs": 120813731344,
+      "loss_pair_equivalents": 4660201137.0,
+      "cells": [
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_agree",
+          "pairs": 87074344783,
+          "discordant_pairs": 863855,
+          "ties": 2,
+          "loss_pair_equivalents": 863856.0,
+          "cell_error_rate": 9.920901525619695e-06,
+          "global_AUC_loss_contribution": 7.150313051256503e-06,
+          "fraction_of_all_loss": 0.000185368823062454
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_conflict",
+          "pairs": 4725711594,
+          "discordant_pairs": 1434859377,
+          "ties": 4312,
+          "loss_pair_equivalents": 1434861533.0,
+          "cell_error_rate": 0.303628671462256,
+          "global_AUC_loss_contribution": 0.011876642804073611,
+          "fraction_of_all_loss": 0.30789691063070523
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "uncertain",
+          "pairs": 13893418327,
+          "discordant_pairs": 22145859,
+          "ties": 14,
+          "loss_pair_equivalents": 22145866.0,
+          "cell_error_rate": 0.0015939825231464076,
+          "global_AUC_loss_contribution": 0.00018330586890775503,
+          "fraction_of_all_loss": 0.004752126646245226
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_agree",
+          "pairs": 4305625725,
+          "discordant_pairs": 1569064666,
+          "ties": 624,
+          "loss_pair_equivalents": 1569064978.0,
+          "cell_error_rate": 0.36442205575125786,
+          "global_AUC_loss_contribution": 0.012987472206551668,
+          "fraction_of_all_loss": 0.33669469018027925
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_conflict",
+          "pairs": 233675550,
+          "discordant_pairs": 232713615,
+          "ties": 2,
+          "loss_pair_equivalents": 232713616.0,
+          "cell_error_rate": 0.9958834632035743,
+          "global_AUC_loss_contribution": 0.0019262182651852786,
+          "fraction_of_all_loss": 0.04993638882930473
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "uncertain",
+          "pairs": 686997525,
+          "discordant_pairs": 646249396,
+          "ties": 16,
+          "loss_pair_equivalents": 646249404.0,
+          "cell_error_rate": 0.9406866553121862,
+          "global_AUC_loss_contribution": 0.005349138684905744,
+          "fraction_of_all_loss": 0.13867414409842885
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_agree",
+          "pairs": 8151022555,
+          "discordant_pairs": 34001059,
+          "ties": 15,
+          "loss_pair_equivalents": 34001066.5,
+          "cell_error_rate": 0.004171386629171216,
+          "global_AUC_loss_contribution": 0.0002814337916870291,
+          "fraction_of_all_loss": 0.007296051286294513
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_conflict",
+          "pairs": 442373490,
+          "discordant_pairs": 398421188,
+          "ties": 15,
+          "loss_pair_equivalents": 398421195.5,
+          "cell_error_rate": 0.9006443751862255,
+          "global_AUC_loss_contribution": 0.0032978138417524084,
+          "fraction_of_all_loss": 0.0854944204739805
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "uncertain",
+          "pairs": 1300561795,
+          "discordant_pairs": 321879593,
+          "ties": 58,
+          "loss_pair_equivalents": 321879622.0,
+          "cell_error_rate": 0.24749275523659373,
+          "global_AUC_loss_contribution": 0.002664263560269431,
+          "fraction_of_all_loss": 0.06906989903169924
+        }
+      ],
+      "half_endpoint_attribution": [
+        {
+          "bucket": "confident_agree",
+          "pair_mass_fraction": 0.8493424773987502,
+          "global_AUC_loss_contribution": 0.01267157764866129,
+          "fraction_of_all_loss": 0.3285052581948246
+        },
+        {
+          "bucket": "confident_conflict",
+          "pair_mass_fraction": 0.04398531241344623,
+          "global_AUC_loss_contribution": 0.018681752033826993,
+          "fraction_of_all_loss": 0.48431647152100166
+        },
+        {
+          "bucket": "uncertain",
+          "pair_mass_fraction": 0.10667221018780355,
+          "global_AUC_loss_contribution": 0.0072201096538959,
+          "fraction_of_all_loss": 0.1871782702841738
+        }
+      ]
+    },
+    "RankNet74_component": {
+      "AUC": 0.9612963694235555,
+      "AUC_loss": 0.03870363057644458,
+      "positive_rows": 310339,
+      "negative_rows": 389296,
+      "total_pairs": 120813731344,
+      "loss_pair_equivalents": 4675930026.5,
+      "cells": [
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_agree",
+          "pairs": 87074344783,
+          "discordant_pairs": 1161773,
+          "ties": 0,
+          "loss_pair_equivalents": 1161773.0,
+          "cell_error_rate": 1.3342311135332474e-05,
+          "global_AUC_loss_contribution": 9.616233081089234e-06,
+          "fraction_of_all_loss": 0.00024845816627191996
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_conflict",
+          "pairs": 4725711594,
+          "discordant_pairs": 1440935700,
+          "ties": 1506,
+          "loss_pair_equivalents": 1440936453.0,
+          "cell_error_rate": 0.30491417521743924,
+          "global_AUC_loss_contribution": 0.011926926161208757,
+          "fraction_of_all_loss": 0.30816039693360453
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "uncertain",
+          "pairs": 13893418327,
+          "discordant_pairs": 23591107,
+          "ties": 12,
+          "loss_pair_equivalents": 23591113.0,
+          "cell_error_rate": 0.001698006382932689,
+          "global_AUC_loss_contribution": 0.00019526847434939035,
+          "fraction_of_all_loss": 0.005045223702301269
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_agree",
+          "pairs": 4305625725,
+          "discordant_pairs": 1574256913,
+          "ties": 112,
+          "loss_pair_equivalents": 1574256969.0,
+          "cell_error_rate": 0.36562791787946225,
+          "global_AUC_loss_contribution": 0.01303044737950793,
+          "fraction_of_all_loss": 0.33667248228227953
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_conflict",
+          "pairs": 233675550,
+          "discordant_pairs": 232651884,
+          "ties": 0,
+          "loss_pair_equivalents": 232651884.0,
+          "cell_error_rate": 0.9956192849444454,
+          "global_AUC_loss_contribution": 0.0019257072967770253,
+          "fraction_of_all_loss": 0.04975521076694624
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "uncertain",
+          "pairs": 686997525,
+          "discordant_pairs": 644714103,
+          "ties": 7,
+          "loss_pair_equivalents": 644714106.5,
+          "cell_error_rate": 0.9384518619626759,
+          "global_AUC_loss_contribution": 0.00533643071303102,
+          "fraction_of_all_loss": 0.1378793315653138
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_agree",
+          "pairs": 8151022555,
+          "discordant_pairs": 37012649,
+          "ties": 2,
+          "loss_pair_equivalents": 37012650.0,
+          "cell_error_rate": 0.004540859720391241,
+          "global_AUC_loss_contribution": 0.00030636128516394975,
+          "fraction_of_all_loss": 0.007915569692069257
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_conflict",
+          "pairs": 442373490,
+          "discordant_pairs": 398102983,
+          "ties": 12,
+          "loss_pair_equivalents": 398102989.0,
+          "cell_error_rate": 0.8999250588004267,
+          "global_AUC_loss_contribution": 0.00329517998137528,
+          "fraction_of_all_loss": 0.0851387823906308
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "uncertain",
+          "pairs": 1300561795,
+          "discordant_pairs": 323502079,
+          "ties": 20,
+          "loss_pair_equivalents": 323502089.0,
+          "cell_error_rate": 0.24874026766256038,
+          "global_AUC_loss_contribution": 0.002677693051950143,
+          "fraction_of_all_loss": 0.06918454450058267
+        }
+      ],
+      "half_endpoint_attribution": [
+        {
+          "bucket": "confident_agree",
+          "pair_mass_fraction": 0.8493424773987502,
+          "global_AUC_loss_contribution": 0.012739117883196103,
+          "fraction_of_all_loss": 0.32914529447139923
+        },
+        {
+          "bucket": "confident_conflict",
+          "pair_mass_fraction": 0.04398531241344623,
+          "global_AUC_loss_contribution": 0.01872019941433852,
+          "fraction_of_all_loss": 0.4836807073528607
+        },
+        {
+          "bucket": "uncertain",
+          "pair_mass_fraction": 0.10667221018780355,
+          "global_AUC_loss_contribution": 0.007244313278909963,
+          "fraction_of_all_loss": 0.18717399817574026
+        }
+      ]
+    },
+    "original_teacher": {
+      "AUC": 0.9535325595563703,
+      "AUC_loss": 0.04646744044362971,
+      "positive_rows": 310339,
+      "negative_rows": 389296,
+      "total_pairs": 120813731344,
+      "loss_pair_equivalents": 5613904866.0,
+      "cells": [
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_agree",
+          "pairs": 87074344783,
+          "discordant_pairs": 0,
+          "ties": 0,
+          "loss_pair_equivalents": 0.0,
+          "cell_error_rate": 0.0,
+          "global_AUC_loss_contribution": 0.0,
+          "fraction_of_all_loss": 0.0
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_conflict",
+          "pairs": 4725711594,
+          "discordant_pairs": 1962226551,
+          "ties": 633,
+          "loss_pair_equivalents": 1962226867.5,
+          "cell_error_rate": 0.4152235760623525,
+          "global_AUC_loss_contribution": 0.01624175369530502,
+          "fraction_of_all_loss": 0.3495297683763778
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "uncertain",
+          "pairs": 13893418327,
+          "discordant_pairs": 0,
+          "ties": 0,
+          "loss_pair_equivalents": 0.0,
+          "cell_error_rate": 0.0,
+          "global_AUC_loss_contribution": 0.0,
+          "fraction_of_all_loss": 0.0
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_agree",
+          "pairs": 4305625725,
+          "discordant_pairs": 1917194292,
+          "ties": 36,
+          "loss_pair_equivalents": 1917194310.0,
+          "cell_error_rate": 0.44527658288273536,
+          "global_AUC_loss_contribution": 0.01586900999308647,
+          "fraction_of_all_loss": 0.3415081580044716
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_conflict",
+          "pairs": 233675550,
+          "discordant_pairs": 233675550,
+          "ties": 0,
+          "loss_pair_equivalents": 233675550.0,
+          "cell_error_rate": 1.0,
+          "global_AUC_loss_contribution": 0.001934180389931356,
+          "fraction_of_all_loss": 0.041624422853196244
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "uncertain",
+          "pairs": 686997525,
+          "discordant_pairs": 686997525,
+          "ties": 0,
+          "loss_pair_equivalents": 686997525.0,
+          "cell_error_rate": 1.0,
+          "global_AUC_loss_contribution": 0.0056864192286543306,
+          "fraction_of_all_loss": 0.1223742727028962
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_agree",
+          "pairs": 8151022555,
+          "discordant_pairs": 0,
+          "ties": 0,
+          "loss_pair_equivalents": 0.0,
+          "cell_error_rate": 0.0,
+          "global_AUC_loss_contribution": 0.0,
+          "fraction_of_all_loss": 0.0
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_conflict",
+          "pairs": 442373490,
+          "discordant_pairs": 442373490,
+          "ties": 0,
+          "loss_pair_equivalents": 442373490.0,
+          "cell_error_rate": 1.0,
+          "global_AUC_loss_contribution": 0.003661615985855152,
+          "fraction_of_all_loss": 0.07879960572171192
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "uncertain",
+          "pairs": 1300561795,
+          "discordant_pairs": 371437114,
+          "ties": 19,
+          "loss_pair_equivalents": 371437123.5,
+          "cell_error_rate": 0.285597443295649,
+          "global_AUC_loss_contribution": 0.003074461150797382,
+          "fraction_of_all_loss": 0.06616377234134627
+        }
+      ],
+      "half_endpoint_attribution": [
+        {
+          "bucket": "confident_agree",
+          "pair_mass_fraction": 0.8493424773987502,
+          "global_AUC_loss_contribution": 0.016055381844195745,
+          "fraction_of_all_loss": 0.3455189631904247
+        },
+        {
+          "bucket": "confident_conflict",
+          "pair_mass_fraction": 0.04398531241344623,
+          "global_AUC_loss_contribution": 0.022663579841381846,
+          "fraction_of_all_loss": 0.4877303252559251
+        },
+        {
+          "bucket": "uncertain",
+          "pair_mass_fraction": 0.10667221018780355,
+          "global_AUC_loss_contribution": 0.007748478758052123,
+          "fraction_of_all_loss": 0.16675071155365034
+        }
+      ]
+    }
+  },
+  "fold_v12_ranking_matrices": {
+    "0": {
+      "AUC": 0.9609020905877791,
+      "AUC_loss": 0.03909790941222086,
+      "positive_rows": 62067,
+      "negative_rows": 77860,
+      "total_pairs": 4832536620,
+      "loss_pair_equivalents": 188942079.0,
+      "cells": [
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_agree",
+          "pairs": 3480115055,
+          "discordant_pairs": 10306,
+          "ties": 0,
+          "loss_pair_equivalents": 10306.0,
+          "cell_error_rate": 2.961396343834385e-06,
+          "global_AUC_loss_contribution": 2.132627398486222e-06,
+          "fraction_of_all_loss": 5.4545816657389486e-05
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_conflict",
+          "pairs": 190917525,
+          "discordant_pairs": 58447665,
+          "ties": 0,
+          "loss_pair_equivalents": 58447665.0,
+          "cell_error_rate": 0.30614091084618866,
+          "global_AUC_loss_contribution": 0.012094613987632855,
+          "fraction_of_all_loss": 0.3093417057192432
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "uncertain",
+          "pairs": 545942880,
+          "discordant_pairs": 603506,
+          "ties": 0,
+          "loss_pair_equivalents": 603506.0,
+          "cell_error_rate": 0.0011054379901428515,
+          "global_AUC_loss_contribution": 0.00012488389586171413,
+          "fraction_of_all_loss": 0.0031941323139563845
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_agree",
+          "pairs": 177536565,
+          "discordant_pairs": 63708678,
+          "ties": 0,
+          "loss_pair_equivalents": 63708678.0,
+          "cell_error_rate": 0.3588482068468543,
+          "global_AUC_loss_contribution": 0.013183278888427751,
+          "fraction_of_all_loss": 0.3371862865973863
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_conflict",
+          "pairs": 9739575,
+          "discordant_pairs": 9724165,
+          "ties": 0,
+          "loss_pair_equivalents": 9724165.0,
+          "cell_error_rate": 0.9984177954376859,
+          "global_AUC_loss_contribution": 0.0020122278969921183,
+          "fraction_of_all_loss": 0.05146638086902812
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "uncertain",
+          "pairs": 27851040,
+          "discordant_pairs": 26713002,
+          "ties": 0,
+          "loss_pair_equivalents": 26713002.0,
+          "cell_error_rate": 0.9591384020129948,
+          "global_AUC_loss_contribution": 0.005527739177277047,
+          "fraction_of_all_loss": 0.14138196288186286
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_agree",
+          "pairs": 330463465,
+          "discordant_pairs": 706463,
+          "ties": 0,
+          "loss_pair_equivalents": 706463.0,
+          "cell_error_rate": 0.0021377945667912187,
+          "global_AUC_loss_contribution": 0.00014618885598843118,
+          "fraction_of_all_loss": 0.003739045339921342
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_conflict",
+          "pairs": 18129075,
+          "discordant_pairs": 16639213,
+          "ties": 0,
+          "loss_pair_equivalents": 16639213.0,
+          "cell_error_rate": 0.9178191937536803,
+          "global_AUC_loss_contribution": 0.0034431633546524476,
+          "fraction_of_all_loss": 0.08806515249575506
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "uncertain",
+          "pairs": 51841440,
+          "discordant_pairs": 12389081,
+          "ties": 0,
+          "loss_pair_equivalents": 12389081.0,
+          "cell_error_rate": 0.23898026366551547,
+          "global_AUC_loss_contribution": 0.002563680727990014,
+          "fraction_of_all_loss": 0.06557078796618937
+        }
+      ],
+      "half_endpoint_attribution": [
+        {
+          "bucket": "confident_agree",
+          "pair_mass_fraction": 0.8489424074969555,
+          "global_AUC_loss_contribution": 0.012776615441353861,
+          "fraction_of_all_loss": 0.326785130801911
+        },
+        {
+          "bucket": "confident_conflict",
+          "pair_mass_fraction": 0.04489498881438378,
+          "global_AUC_loss_contribution": 0.019136625600987167,
+          "fraction_of_all_loss": 0.48945393471615184
+        },
+        {
+          "bucket": "uncertain",
+          "pair_mass_fraction": 0.1061626036886607,
+          "global_AUC_loss_contribution": 0.007184668369879834,
+          "fraction_of_all_loss": 0.18376093448193723
+        }
+      ]
+    },
+    "1": {
+      "AUC": 0.9618718198394576,
+      "AUC_loss": 0.03812818016054246,
+      "positive_rows": 62068,
+      "negative_rows": 77859,
+      "total_pairs": 4832552412,
+      "loss_pair_equivalents": 184256429.0,
+      "cells": [
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_agree",
+          "pairs": 3484767300,
+          "discordant_pairs": 5893,
+          "ties": 0,
+          "loss_pair_equivalents": 5893.0,
+          "cell_error_rate": 1.6910741787550635e-06,
+          "global_AUC_loss_contribution": 1.219438403889162e-06,
+          "fraction_of_all_loss": 3.1982601811956314e-05
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_conflict",
+          "pairs": 190201830,
+          "discordant_pairs": 57274048,
+          "ties": 0,
+          "loss_pair_equivalents": 57274048.0,
+          "cell_error_rate": 0.3011224865712386,
+          "global_AUC_loss_contribution": 0.011851717915729042,
+          "fraction_of_all_loss": 0.31083880389324164
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "uncertain",
+          "pairs": 559781880,
+          "discordant_pairs": 504234,
+          "ties": 0,
+          "loss_pair_equivalents": 504234.0,
+          "cell_error_rate": 0.00090076870655406,
+          "global_AUC_loss_contribution": 0.00010434113425193411,
+          "fraction_of_all_loss": 0.002736588366205664
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_agree",
+          "pairs": 171130970,
+          "discordant_pairs": 61334607,
+          "ties": 0,
+          "loss_pair_equivalents": 61334607.0,
+          "cell_error_rate": 0.3584074057430984,
+          "global_AUC_loss_contribution": 0.012691969330264554,
+          "fraction_of_all_loss": 0.3328763470174492
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_conflict",
+          "pairs": 9340487,
+          "discordant_pairs": 9325702,
+          "ties": 0,
+          "loss_pair_equivalents": 9325702.0,
+          "cell_error_rate": 0.9984171060887939,
+          "global_AUC_loss_contribution": 0.0019297673785891678,
+          "fraction_of_all_loss": 0.050612627470382594
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "uncertain",
+          "pairs": 27489932,
+          "discordant_pairs": 26408247,
+          "ties": 0,
+          "loss_pair_equivalents": 26408247.0,
+          "cell_error_rate": 0.9606515941909205,
+          "global_AUC_loss_contribution": 0.005464658165822289,
+          "fraction_of_all_loss": 0.1433233409728135
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_agree",
+          "pairs": 320798490,
+          "discordant_pairs": 726502,
+          "ties": 0,
+          "loss_pair_equivalents": 726502.0,
+          "cell_error_rate": 0.0022646677669835667,
+          "global_AUC_loss_contribution": 0.00015033504824406651,
+          "fraction_of_all_loss": 0.003942885488136753
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_conflict",
+          "pairs": 17509479,
+          "discordant_pairs": 16078296,
+          "ties": 0,
+          "loss_pair_equivalents": 16078296.0,
+          "cell_error_rate": 0.9182623880470687,
+          "global_AUC_loss_contribution": 0.0033270815563376036,
+          "fraction_of_all_loss": 0.08726043420715594
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "uncertain",
+          "pairs": 51532044,
+          "discordant_pairs": 12598900,
+          "ties": 0,
+          "loss_pair_equivalents": 12598900.0,
+          "cell_error_rate": 0.24448671199613195,
+          "global_AUC_loss_contribution": 0.002607090192899909,
+          "fraction_of_all_loss": 0.06837698998280271
+        }
+      ],
+      "half_endpoint_attribution": [
+        {
+          "bucket": "confident_agree",
+          "pair_mass_fraction": 0.8495973835285948,
+          "global_AUC_loss_contribution": 0.012400401152648687,
+          "fraction_of_all_loss": 0.32522929498432857
+        },
+        {
+          "bucket": "confident_conflict",
+          "pair_mass_fraction": 0.04397398608079493,
+          "global_AUC_loss_contribution": 0.018597480862665914,
+          "fraction_of_all_loss": 0.48776209051571273
+        },
+        {
+          "bucket": "uncertain",
+          "pair_mass_fraction": 0.10642863039061023,
+          "global_AUC_loss_contribution": 0.007130298145227856,
+          "fraction_of_all_loss": 0.18700861449995865
+        }
+      ]
+    },
+    "2": {
+      "AUC": 0.9622391658811873,
+      "AUC_loss": 0.037760834118812654,
+      "positive_rows": 62068,
+      "negative_rows": 77859,
+      "total_pairs": 4832552412,
+      "loss_pair_equivalents": 182481210.0,
+      "cells": [
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_agree",
+          "pairs": 3481655170,
+          "discordant_pairs": 9269,
+          "ties": 0,
+          "loss_pair_equivalents": 9269.0,
+          "cell_error_rate": 2.6622395232782342e-06,
+          "global_AUC_loss_contribution": 1.9180340345577196e-06,
+          "fraction_of_all_loss": 5.0794270818348916e-05
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_conflict",
+          "pairs": 187416040,
+          "discordant_pairs": 55713937,
+          "ties": 0,
+          "loss_pair_equivalents": 55713937.0,
+          "cell_error_rate": 0.2972741127173533,
+          "global_AUC_loss_contribution": 0.011528884169296,
+          "fraction_of_all_loss": 0.30531328129619484
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "uncertain",
+          "pairs": 562954735,
+          "discordant_pairs": 548928,
+          "ties": 0,
+          "loss_pair_equivalents": 548928.0,
+          "cell_error_rate": 0.0009750837249819028,
+          "global_AUC_loss_contribution": 0.00011358966301884778,
+          "fraction_of_all_loss": 0.0030081343717525766
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_agree",
+          "pairs": 168526074,
+          "discordant_pairs": 61411079,
+          "ties": 0,
+          "loss_pair_equivalents": 61411079.0,
+          "cell_error_rate": 0.36440105404698386,
+          "global_AUC_loss_contribution": 0.012707793680107117,
+          "fraction_of_all_loss": 0.3365337121558981
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_conflict",
+          "pairs": 9071688,
+          "discordant_pairs": 9058791,
+          "ties": 0,
+          "loss_pair_equivalents": 9058791.0,
+          "cell_error_rate": 0.9985783241222582,
+          "global_AUC_loss_contribution": 0.0018745354892593766,
+          "fraction_of_all_loss": 0.04964232207798271
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "uncertain",
+          "pairs": 27249267,
+          "discordant_pairs": 26156760,
+          "ties": 0,
+          "loss_pair_equivalents": 26156760.0,
+          "cell_error_rate": 0.9599069215329719,
+          "global_AUC_loss_contribution": 0.0054126179645871166,
+          "fraction_of_all_loss": 0.14333947040355552
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_agree",
+          "pairs": 325522428,
+          "discordant_pairs": 577118,
+          "ties": 0,
+          "loss_pair_equivalents": 577118.0,
+          "cell_error_rate": 0.0017728978108998376,
+          "global_AUC_loss_contribution": 0.00011942301930692438,
+          "fraction_of_all_loss": 0.0031626160304395177
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_conflict",
+          "pairs": 17522736,
+          "discordant_pairs": 16043987,
+          "ties": 0,
+          "loss_pair_equivalents": 16043987.0,
+          "cell_error_rate": 0.9156096970244829,
+          "global_AUC_loss_contribution": 0.00331998199546894,
+          "fraction_of_all_loss": 0.0879213098159531
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "uncertain",
+          "pairs": 52634274,
+          "discordant_pairs": 12961341,
+          "ties": 0,
+          "loss_pair_equivalents": 12961341.0,
+          "cell_error_rate": 0.24625286937557075,
+          "global_AUC_loss_contribution": 0.0026820901037337783,
+          "fraction_of_all_loss": 0.07102835957740526
+        }
+      ],
+      "half_endpoint_attribution": [
+        {
+          "bucket": "confident_agree",
+          "pair_mass_fraction": 0.8492126848556155,
+          "global_AUC_loss_contribution": 0.012236763299899003,
+          "fraction_of_all_loss": 0.32405966619796095
+        },
+        {
+          "bucket": "confident_conflict",
+          "pair_mass_fraction": 0.04333708745298963,
+          "global_AUC_loss_contribution": 0.018359174393988965,
+          "fraction_of_all_loss": 0.4861962089137836
+        },
+        {
+          "bucket": "uncertain",
+          "pair_mass_fraction": 0.10745022769139498,
+          "global_AUC_loss_contribution": 0.007164896424924693,
+          "fraction_of_all_loss": 0.18974412488825565
+        }
+      ]
+    },
+    "3": {
+      "AUC": 0.9614770425380748,
+      "AUC_loss": 0.038522957461925196,
+      "positive_rows": 62068,
+      "negative_rows": 77859,
+      "total_pairs": 4832552412,
+      "loss_pair_equivalents": 186164211.0,
+      "cells": [
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_agree",
+          "pairs": 3478736274,
+          "discordant_pairs": 3080,
+          "ties": 0,
+          "loss_pair_equivalents": 3080.0,
+          "cell_error_rate": 8.853789874845799e-07,
+          "global_AUC_loss_contribution": 6.373443549938264e-07,
+          "fraction_of_all_loss": 1.6544533363611977e-05
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_conflict",
+          "pairs": 191923159,
+          "discordant_pairs": 57951737,
+          "ties": 0,
+          "loss_pair_equivalents": 57951737.0,
+          "cell_error_rate": 0.3019528091448307,
+          "global_AUC_loss_contribution": 0.011991952090596385,
+          "fraction_of_all_loss": 0.31129365138823595
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "uncertain",
+          "pairs": 558875024,
+          "discordant_pairs": 514413,
+          "ties": 0,
+          "loss_pair_equivalents": 514413.0,
+          "cell_error_rate": 0.000920443709075108,
+          "global_AUC_loss_contribution": 0.00010644747457319455,
+          "fraction_of_all_loss": 0.002763221766615496
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_agree",
+          "pairs": 170597232,
+          "discordant_pairs": 61668035,
+          "ties": 0,
+          "loss_pair_equivalents": 61668035.0,
+          "cell_error_rate": 0.3614832097627469,
+          "global_AUC_loss_contribution": 0.012760965581432374,
+          "fraction_of_all_loss": 0.3312561241967179
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_conflict",
+          "pairs": 9411912,
+          "discordant_pairs": 9397253,
+          "ties": 0,
+          "loss_pair_equivalents": 9397253.0,
+          "cell_error_rate": 0.998442505624787,
+          "global_AUC_loss_contribution": 0.0019445734259736364,
+          "fraction_of_all_loss": 0.05047830057948141
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "uncertain",
+          "pairs": 27407232,
+          "discordant_pairs": 26302637,
+          "ties": 0,
+          "loss_pair_equivalents": 26302637.0,
+          "cell_error_rate": 0.9596969515199492,
+          "global_AUC_loss_contribution": 0.0054428042900655045,
+          "fraction_of_all_loss": 0.14128729071346588
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_agree",
+          "pairs": 325377078,
+          "discordant_pairs": 766560,
+          "ties": 0,
+          "loss_pair_equivalents": 766560.0,
+          "cell_error_rate": 0.0023559127296606925,
+          "global_AUC_loss_contribution": 0.00015862424959872323,
+          "fraction_of_all_loss": 0.004117655030912467
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_conflict",
+          "pairs": 17951173,
+          "discordant_pairs": 16545841,
+          "ties": 0,
+          "loss_pair_equivalents": 16545841.0,
+          "cell_error_rate": 0.9217136395487916,
+          "global_AUC_loss_contribution": 0.003423830636355652,
+          "fraction_of_all_loss": 0.0888776683290646
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "uncertain",
+          "pairs": 52273328,
+          "discordant_pairs": 13014655,
+          "ties": 0,
+          "loss_pair_equivalents": 13014655.0,
+          "cell_error_rate": 0.24897314745294197,
+          "global_AUC_loss_contribution": 0.002693122368974733,
+          "fraction_of_all_loss": 0.06990954346214268
+        }
+      ],
+      "half_endpoint_attribution": [
+        {
+          "bucket": "confident_agree",
+          "pair_mass_fraction": 0.8488521532252343,
+          "global_AUC_loss_contribution": 0.012509632042455332,
+          "fraction_of_all_loss": 0.3247318707246045
+        },
+        {
+          "bucket": "confident_conflict",
+          "pair_mass_fraction": 0.044148783460726586,
+          "global_AUC_loss_contribution": 0.018754349725198592,
+          "fraction_of_all_loss": 0.4868356678932235
+        },
+        {
+          "bucket": "uncertain",
+          "pair_mass_fraction": 0.10699906331403902,
+          "global_AUC_loss_contribution": 0.007258975694271271,
+          "fraction_of_all_loss": 0.1884324613821719
+        }
+      ]
+    },
+    "4": {
+      "AUC": 0.9617989521351931,
+      "AUC_loss": 0.038201047864806895,
+      "positive_rows": 62068,
+      "negative_rows": 77859,
+      "total_pairs": 4832552412,
+      "loss_pair_equivalents": 184608566.0,
+      "cells": [
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_agree",
+          "pairs": 3489561000,
+          "discordant_pairs": 7875,
+          "ties": 0,
+          "loss_pair_equivalents": 7875.0,
+          "cell_error_rate": 2.256730860987958e-06,
+          "global_AUC_loss_contribution": 1.629573634927397e-06,
+          "fraction_of_all_loss": 4.2657825531237806e-05
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "confident_conflict",
+          "pairs": 184680810,
+          "discordant_pairs": 55421346,
+          "ties": 0,
+          "loss_pair_equivalents": 55421346.0,
+          "cell_error_rate": 0.30009260843072977,
+          "global_AUC_loss_contribution": 0.011468338317941454,
+          "fraction_of_all_loss": 0.3002100455078558
+        },
+        {
+          "positive_bucket": "confident_agree",
+          "negative_bucket": "uncertain",
+          "pairs": 551166120,
+          "discordant_pairs": 567874,
+          "ties": 0,
+          "loss_pair_equivalents": 567874.0,
+          "cell_error_rate": 0.0010303136919954368,
+          "global_AUC_loss_contribution": 0.00011751015852200136,
+          "fraction_of_all_loss": 0.0030760977797747477
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_agree",
+          "pairs": 173352800,
+          "discordant_pairs": 63489974,
+          "ties": 0,
+          "loss_pair_equivalents": 63489974.0,
+          "cell_error_rate": 0.36624717916295557,
+          "global_AUC_loss_contribution": 0.013137979392079483,
+          "fraction_of_all_loss": 0.34391672811108887
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "confident_conflict",
+          "pairs": 9174488,
+          "discordant_pairs": 9159233,
+          "ties": 0,
+          "loss_pair_equivalents": 9159233.0,
+          "cell_error_rate": 0.9983372369117491,
+          "global_AUC_loss_contribution": 0.0018953199508516783,
+          "fraction_of_all_loss": 0.04961434454780392
+        },
+        {
+          "positive_bucket": "confident_conflict",
+          "negative_bucket": "uncertain",
+          "pairs": 27380576,
+          "discordant_pairs": 26346103,
+          "ties": 0,
+          "loss_pair_equivalents": 26346103.0,
+          "cell_error_rate": 0.9622187276118661,
+          "global_AUC_loss_contribution": 0.005451798708810362,
+          "fraction_of_all_loss": 0.14271332891454236
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_agree",
+          "pairs": 328058600,
+          "discordant_pairs": 766269,
+          "ties": 0,
+          "loss_pair_equivalents": 766269.0,
+          "cell_error_rate": 0.0023357686705972654,
+          "global_AUC_loss_contribution": 0.00015856403297297543,
+          "fraction_of_all_loss": 0.004150777055491564
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "confident_conflict",
+          "pairs": 17362106,
+          "discordant_pairs": 15964540,
+          "ties": 0,
+          "loss_pair_equivalents": 15964540.0,
+          "cell_error_rate": 0.9195048112250899,
+          "global_AUC_loss_contribution": 0.003303542028919851,
+          "fraction_of_all_loss": 0.08647778565161489
+        },
+        {
+          "positive_bucket": "uncertain",
+          "negative_bucket": "uncertain",
+          "pairs": 51815912,
+          "discordant_pairs": 12885352,
+          "ties": 0,
+          "loss_pair_equivalents": 12885352.0,
+          "cell_error_rate": 0.24867558058227365,
+          "global_AUC_loss_contribution": 0.002666365701074159,
+          "fraction_of_all_loss": 0.06979823460629665
+        }
+      ],
+      "half_endpoint_attribution": [
+        {
+          "bucket": "confident_agree",
+          "pair_mass_fraction": 0.8501077308129565,
+          "global_AUC_loss_contribution": 0.012442825524392883,
+          "fraction_of_all_loss": 0.3257194820526366
+        },
+        {
+          "bucket": "confident_conflict",
+          "pair_mass_fraction": 0.04357172277679583,
+          "global_AUC_loss_contribution": 0.018576149174727254,
+          "fraction_of_all_loss": 0.48627328864035485
+        },
+        {
+          "bucket": "uncertain",
+          "pair_mass_fraction": 0.10632054641024762,
+          "global_AUC_loss_contribution": 0.007182073165686754,
+          "fraction_of_all_loss": 0.18800722930700842
+        }
+      ]
+    }
+  },
+  "v12_minus_v11_gain_decomposition": [
+    {
+      "positive_bucket": "confident_agree",
+      "negative_bucket": "confident_agree",
+      "AUC_gain_v12_minus_v11": -2.391118929829717e-07
+    },
+    {
+      "positive_bucket": "confident_agree",
+      "negative_bucket": "confident_conflict",
+      "AUC_gain_v12_minus_v11": 2.852821414964929e-06
+    },
+    {
+      "positive_bucket": "confident_agree",
+      "negative_bucket": "uncertain",
+      "AUC_gain_v12_minus_v11": -5.522625554045811e-06
+    },
+    {
+      "positive_bucket": "confident_conflict",
+      "negative_bucket": "confident_agree",
+      "AUC_gain_v12_minus_v11": 7.004311435349422e-06
+    },
+    {
+      "positive_bucket": "confident_conflict",
+      "negative_bucket": "confident_conflict",
+      "AUC_gain_v12_minus_v11": 3.41790618836298e-07
+    },
+    {
+      "positive_bucket": "confident_conflict",
+      "negative_bucket": "uncertain",
+      "AUC_gain_v12_minus_v11": 1.1840028315382098e-05
+    },
+    {
+      "positive_bucket": "uncertain",
+      "negative_bucket": "confident_agree",
+      "AUC_gain_v12_minus_v11": -1.1238548672368555e-05
+    },
+    {
+      "positive_bucket": "uncertain",
+      "negative_bucket": "confident_conflict",
+      "AUC_gain_v12_minus_v11": 7.6199699302285234e-06
+    },
+    {
+      "positive_bucket": "uncertain",
+      "negative_bucket": "uncertain",
+      "AUC_gain_v12_minus_v11": 1.7672825565833404e-06
+    }
+  ],
+  "source_near_definitions": {
+    "pool": "Same129859originalsaferowsafterglobal21exactexclusions",
+    "primary_NEAR6": [
+      "Flight Distance",
+      "Age",
+      "Gender",
+      "Class",
+      "Customer Type",
+      "Type of Travel"
+    ],
+    "strict_secondary": "NEAR6equalANDatleast20of21rawpredictorfieldsexactlyequal;NaN==NaN. Thusatmostoneother15fielddiffers. DoesNOTcoverglobal20/21pairswhosecore6fielddiffers. No distance/numerictolerancegrid.",
+    "outputs": "Heldoutofficialrows,candidatepairs,uniquesourcerowsandrowsalso matchedbyoutertrainingforeachfixed5fold;labeldefinedbucketcross-tabdiagnosticonly"
+  },
+  "source_near_by_outer_fold": [
+    {
+      "fold": 0,
+      "validation_rows": 139927,
+      "source_pool_rows": 129859,
+      "near6_validation_rows": 51837,
+      "near6_validation_fraction": 0.37045745281468195,
+      "near6_candidate_pairs": 78742,
+      "near6_distinct_validation_keys": 26758,
+      "source_rows_near6_any_validation_row": 36022,
+      "source_rows_near6_both_validation_and_outertrain": 31439,
+      "tight20_within_near6_validation_rows": 29,
+      "tight20_candidate_pairs": 29,
+      "source_rows_tight20_any_validation_row": 29,
+      "source_rows_tight20_both_validation_and_outertrain": 1,
+      "remaining_full21_exact_pairs": 0
+    },
+    {
+      "fold": 1,
+      "validation_rows": 139927,
+      "source_pool_rows": 129859,
+      "near6_validation_rows": 51615,
+      "near6_validation_fraction": 0.36887091126087174,
+      "near6_candidate_pairs": 78221,
+      "near6_distinct_validation_keys": 26640,
+      "source_rows_near6_any_validation_row": 35931,
+      "source_rows_near6_both_validation_and_outertrain": 31430,
+      "tight20_within_near6_validation_rows": 39,
+      "tight20_candidate_pairs": 39,
+      "source_rows_tight20_any_validation_row": 39,
+      "source_rows_tight20_both_validation_and_outertrain": 1,
+      "remaining_full21_exact_pairs": 0
+    },
+    {
+      "fold": 2,
+      "validation_rows": 139927,
+      "source_pool_rows": 129859,
+      "near6_validation_rows": 51759,
+      "near6_validation_fraction": 0.36990001929577565,
+      "near6_candidate_pairs": 78914,
+      "near6_distinct_validation_keys": 26767,
+      "source_rows_near6_any_validation_row": 36135,
+      "source_rows_near6_both_validation_and_outertrain": 31466,
+      "tight20_within_near6_validation_rows": 34,
+      "tight20_candidate_pairs": 34,
+      "source_rows_tight20_any_validation_row": 34,
+      "source_rows_tight20_both_validation_and_outertrain": 1,
+      "remaining_full21_exact_pairs": 0
+    },
+    {
+      "fold": 3,
+      "validation_rows": 139927,
+      "source_pool_rows": 129859,
+      "near6_validation_rows": 51884,
+      "near6_validation_fraction": 0.37079334224274085,
+      "near6_candidate_pairs": 79164,
+      "near6_distinct_validation_keys": 26737,
+      "source_rows_near6_any_validation_row": 36102,
+      "source_rows_near6_both_validation_and_outertrain": 31653,
+      "tight20_within_near6_validation_rows": 31,
+      "tight20_candidate_pairs": 31,
+      "source_rows_tight20_any_validation_row": 31,
+      "source_rows_tight20_both_validation_and_outertrain": 0,
+      "remaining_full21_exact_pairs": 0
+    },
+    {
+      "fold": 4,
+      "validation_rows": 139927,
+      "source_pool_rows": 129859,
+      "near6_validation_rows": 51601,
+      "near6_validation_fraction": 0.36877085909081164,
+      "near6_candidate_pairs": 78859,
+      "near6_distinct_validation_keys": 26606,
+      "source_rows_near6_any_validation_row": 35948,
+      "source_rows_near6_both_validation_and_outertrain": 31428,
+      "tight20_within_near6_validation_rows": 35,
+      "tight20_candidate_pairs": 35,
+      "source_rows_tight20_any_validation_row": 35,
+      "source_rows_tight20_both_validation_and_outertrain": 1,
+      "remaining_full21_exact_pairs": 0
+    }
+  ],
+  "source_near_by_label_defined_bucket": [
+    {
+      "bucket": "confident_agree",
+      "standard": "near6",
+      "matched": false,
+      "rows": 373129,
+      "global_AUC_loss_endpoint_contribution": 0.007723327337214471,
+      "fraction_of_v12_all_loss": 0.2013763232813889
+    },
+    {
+      "bucket": "confident_agree",
+      "standard": "near6",
+      "matched": true,
+      "rows": 219087,
+      "global_AUC_loss_endpoint_contribution": 0.004754562495586123,
+      "fraction_of_v12_all_loss": 0.12396940753232902
+    },
+    {
+      "bucket": "confident_agree",
+      "standard": "tight20_within_near6",
+      "matched": false,
+      "rows": 592069,
+      "global_AUC_loss_endpoint_contribution": 0.01247447877186062,
+      "fraction_of_v12_all_loss": 0.32525679156764054
+    },
+    {
+      "bucket": "confident_agree",
+      "standard": "tight20_within_near6",
+      "matched": true,
+      "rows": 147,
+      "global_AUC_loss_endpoint_contribution": 3.411060939973744e-06,
+      "fraction_of_v12_all_loss": 8.893924607737962e-05
+    },
+    {
+      "bucket": "confident_conflict",
+      "standard": "near6",
+      "matched": false,
+      "rows": 19407,
+      "global_AUC_loss_endpoint_contribution": 0.011747047353077902,
+      "fraction_of_v12_all_loss": 0.30628990616217733
+    },
+    {
+      "bucket": "confident_conflict",
+      "standard": "near6",
+      "matched": true,
+      "rows": 11424,
+      "global_AUC_loss_endpoint_contribution": 0.006942566417485751,
+      "fraction_of_v12_all_loss": 0.18101893630140478
+    },
+    {
+      "bucket": "confident_conflict",
+      "standard": "tight20_within_near6",
+      "matched": false,
+      "rows": 30820,
+      "global_AUC_loss_endpoint_contribution": 0.018684261030500037,
+      "fraction_of_v12_all_loss": 0.48716927630686907
+    },
+    {
+      "bucket": "confident_conflict",
+      "standard": "tight20_within_near6",
+      "matched": true,
+      "rows": 11,
+      "global_AUC_loss_endpoint_contribution": 5.352740063616258e-06,
+      "fraction_of_v12_all_loss": 0.00013956615671307222
+    },
+    {
+      "bucket": "uncertain",
+      "standard": "near6",
+      "matched": false,
+      "rows": 48403,
+      "global_AUC_loss_endpoint_contribution": 0.004518951686422802,
+      "fraction_of_v12_all_loss": 0.11782614357327807
+    },
+    {
+      "bucket": "uncertain",
+      "standard": "near6",
+      "matched": true,
+      "rows": 28185,
+      "global_AUC_loss_endpoint_contribution": 0.0026662527712417805,
+      "fraction_of_v12_all_loss": 0.06951928314942195
+    },
+    {
+      "bucket": "uncertain",
+      "standard": "tight20_within_near6",
+      "matched": false,
+      "rows": 76578,
+      "global_AUC_loss_endpoint_contribution": 0.007184148985752726,
+      "fraction_of_v12_all_loss": 0.1873179065822662
+    },
+    {
+      "bucket": "uncertain",
+      "standard": "tight20_within_near6",
+      "matched": true,
+      "rows": 10,
+      "global_AUC_loss_endpoint_contribution": 1.0554719118550992e-06,
+      "fraction_of_v12_all_loss": 2.7520140433775297e-05
+    }
+  ],
+  "source_summary": {
+    "safe_rows": 129859,
+    "near6_official_train_rows": 258696,
+    "near6_source_pairs": 393900,
+    "source_rows_near6_any_official_train_row": 69177,
+    "tight20_within_near6_official_train_rows": 168,
+    "tight20_source_pairs": 168,
+    "remaining_full21_exact_pairs": 0
+  },
+  "new_classifier_fits": 0,
+  "new_model_inference": 0,
+  "new_candidates_evaluated": 0,
+  "new_weights_or_thresholds_searched": 0,
+  "official_labels_used_for_description": true,
+  "labels_changed": false,
+  "raw_row_predictions_saved": false,
+  "seconds": 4.443156765992171,
+  "peak_RSS_bytes": 770867200,
+  "limitations": [
+    "Agreement/conflictusesknownSATandisunavailableatpredictiontime;notatraining/routing/deletionrule.",
+    "Teacherisnotgroundtruth;hardbuckets/correlatederrorsdonotproveirreduciblenoiseorAUCceiling.",
+    "NEAR6iscoarsehistoricalproxy,notproofsameperson/copying/leakage;strictsecondaryrestrictedtothatproxy.",
+    "Alllabelshistoricallyreused;thisisadaptivedescriptivehypothesisgeneration,notnewvalidationevidence.",
+    "Fold-sourceoverlapcountsareexposure/sensitivitycounts,notcausaleffectofremovingsourcerows.",
+    "Existingcomponentcomparisonsarenotacandidate/weightsearch;norescuesofclosedroutes."
+  ]
+}

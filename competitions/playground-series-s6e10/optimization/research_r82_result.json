@@ -1,0 +1,207 @@
+{
+  "status": "complete_single_descriptive_proxy_check",
+  "completed_utc": "2026-10-21T11:33:11.051435+00:00",
+  "plan_sha256": "70a17c9448bc7e57910a04c687dbea5f5d7d93cfd49be18ace564326c09ec0e1",
+  "folds": [
+    {
+      "fold": 0,
+      "outer_train_rows": 559708,
+      "validation_rows": 139927,
+      "all_outer_train_90th_percentile": 1.018623983860016,
+      "high": {
+        "rows": 11950,
+        "positive_rows": 3801,
+        "conflicts": 812,
+        "conflict_rate": 0.06794979079497908,
+        "half_endpoint_AUC_loss": 0.0034208735080418283,
+        "pair_endpoint_mass": 0.08295124341965152
+      },
+      "confident_rest": {
+        "rows": 112754,
+        "positive_rows": 53123,
+        "conflicts": 5476,
+        "conflict_rate": 0.048565904535537545,
+        "half_endpoint_AUC_loss": 0.028492367534299203,
+        "pair_endpoint_mass": 0.8108861528916878
+      },
+      "all_confident": {
+        "rows": 124704,
+        "positive_rows": 56924,
+        "conflicts": 6288,
+        "conflict_rate": 0.050423402617398,
+        "half_endpoint_AUC_loss": 0.03191324104234103,
+        "pair_endpoint_mass": 0.8938373963113393
+      },
+      "conflict_risk_ratio": 1.3991254038161196,
+      "high_loss_share_within_confident": 0.10719292044023888,
+      "high_pair_mass_share_within_confident": 0.0928035051587371,
+      "pair_mass_normalized_loss_concentration": 1.1550524978220293,
+      "loss_density_ratio_high_vs_confident_rest": 1.1736685353105454,
+      "both_predetermined_directions_above1": true
+    },
+    {
+      "fold": 1,
+      "outer_train_rows": 559708,
+      "validation_rows": 139927,
+      "all_outer_train_90th_percentile": 1.0186378955841064,
+      "high": {
+        "rows": 11889,
+        "positive_rows": 3770,
+        "conflicts": 737,
+        "conflict_rate": 0.06199007485911347,
+        "half_endpoint_AUC_loss": 0.0031331038360603715,
+        "pair_endpoint_mass": 0.08250904015234092
+      },
+      "confident_rest": {
+        "rows": 112739,
+        "positive_rows": 53291,
+        "conflicts": 5431,
+        "conflict_rate": 0.04817321423819619,
+        "half_endpoint_AUC_loss": 0.02786477817925423,
+        "pair_endpoint_mass": 0.8110623294570487
+      },
+      "all_confident": {
+        "rows": 124628,
+        "positive_rows": 57061,
+        "conflicts": 6168,
+        "conflict_rate": 0.049491286067336396,
+        "half_endpoint_AUC_loss": 0.0309978820153146,
+        "pair_endpoint_mass": 0.8935713696093897
+      },
+      "conflict_risk_ratio": 1.2868162492251138,
+      "high_loss_share_within_confident": 0.10107477131864853,
+      "high_pair_mass_share_within_confident": 0.09233626205862933,
+      "pair_mass_normalized_loss_concentration": 1.094637892689122,
+      "loss_density_ratio_high_vs_confident_rest": 1.1052789371903022,
+      "both_predetermined_directions_above1": true
+    },
+    {
+      "fold": 2,
+      "outer_train_rows": 559708,
+      "validation_rows": 139927,
+      "all_outer_train_90th_percentile": 1.0192367076873778,
+      "high": {
+        "rows": 11658,
+        "positive_rows": 3725,
+        "conflicts": 740,
+        "conflict_rate": 0.06347572482415509,
+        "half_endpoint_AUC_loss": 0.0030867177897459293,
+        "pair_endpoint_mass": 0.08095206759239179
+      },
+      "confident_rest": {
+        "rows": 112830,
+        "positive_rows": 53261,
+        "conflicts": 5339,
+        "conflict_rate": 0.047318975449791724,
+        "half_endpoint_AUC_loss": 0.027509219904142033,
+        "pair_endpoint_mass": 0.8115977047162132
+      },
+      "all_confident": {
+        "rows": 124488,
+        "positive_rows": 56986,
+        "conflicts": 6079,
+        "conflict_rate": 0.048832015937279094,
+        "half_endpoint_AUC_loss": 0.030595937693887965,
+        "pair_endpoint_mass": 0.8925497723086049
+      },
+      "conflict_risk_ratio": 1.3414433474263754,
+      "high_loss_share_within_confident": 0.10088652358455258,
+      "high_pair_mass_share_within_confident": 0.09069753878599622,
+      "pair_mass_normalized_loss_concentration": 1.1123402568023109,
+      "loss_density_ratio_high_vs_confident_rest": 1.124945582230827,
+      "both_predetermined_directions_above1": true
+    },
+    {
+      "fold": 3,
+      "outer_train_rows": 559708,
+      "validation_rows": 139927,
+      "all_outer_train_90th_percentile": 1.018530285358429,
+      "high": {
+        "rows": 11929,
+        "positive_rows": 3839,
+        "conflicts": 752,
+        "conflict_rate": 0.06303965127001425,
+        "half_endpoint_AUC_loss": 0.0031645027712531304,
+        "pair_endpoint_mass": 0.08287864804227602
+      },
+      "confident_rest": {
+        "rows": 112629,
+        "positive_rows": 53148,
+        "conflicts": 5445,
+        "conflict_rate": 0.04834456489891591,
+        "half_endpoint_AUC_loss": 0.028099478996400792,
+        "pair_endpoint_mass": 0.8101222886436849
+      },
+      "all_confident": {
+        "rows": 124558,
+        "positive_rows": 56987,
+        "conflicts": 6197,
+        "conflict_rate": 0.04975192279901733,
+        "half_endpoint_AUC_loss": 0.03126398176765392,
+        "pair_endpoint_mass": 0.8930009366859609
+      },
+      "conflict_risk_ratio": 1.3039656350579312,
+      "high_loss_share_within_confident": 0.10121880171153252,
+      "high_pair_mass_share_within_confident": 0.09280913898013268,
+      "pair_mass_normalized_loss_concentration": 1.0906124420915064,
+      "loss_density_ratio_high_vs_confident_rest": 1.1008170200534433,
+      "both_predetermined_directions_above1": true
+    },
+    {
+      "fold": 4,
+      "outer_train_rows": 559708,
+      "validation_rows": 139927,
+      "all_outer_train_90th_percentile": 1.0182870149612426,
+      "high": {
+        "rows": 11913,
+        "positive_rows": 3852,
+        "conflicts": 763,
+        "conflict_rate": 0.06404767900612776,
+        "half_endpoint_AUC_loss": 0.0032660807694101838,
+        "pair_endpoint_mass": 0.08279713780370686
+      },
+      "confident_rest": {
+        "rows": 112756,
+        "positive_rows": 53114,
+        "conflicts": 5336,
+        "conflict_rate": 0.047323424030650256,
+        "half_endpoint_AUC_loss": 0.027752893929709956,
+        "pair_endpoint_mass": 0.8108823157860454
+      },
+      "all_confident": {
+        "rows": 124669,
+        "positive_rows": 56966,
+        "conflicts": 6099,
+        "conflict_rate": 0.048921544249171806,
+        "half_endpoint_AUC_loss": 0.03101897469912014,
+        "pair_endpoint_mass": 0.8936794535897523
+      },
+      "conflict_risk_ratio": 1.3534033159698167,
+      "high_loss_share_within_confident": 0.10529299569346587,
+      "high_pair_mass_share_within_confident": 0.09264746713279062,
+      "pair_mass_normalized_loss_concentration": 1.1364908178498885,
+      "loss_density_ratio_high_vs_confident_rest": 1.1525536485049417,
+      "both_predetermined_directions_above1": true
+    }
+  ],
+  "predefined_direction_check_passed": true,
+  "incremental_predictive_value_demonstrated": false,
+  "new_model_justified_by_this_check": false,
+  "thresholds_changed": false,
+  "thresholds_or_cohorts_searched": 0,
+  "classifier_fits": 0,
+  "new_model_inference": 0,
+  "new_candidates": 0,
+  "labels_changed": false,
+  "new_submissions": 0,
+  "no_more_automatic_diagnostics": true,
+  "seconds": 0.5851003209972987,
+  "peak_RSS_bytes": 113946624,
+  "limitations": [
+    "Labels/partitionshavebeenreusedhistorically;thisisdescriptiveposthypothesisanalysis,notfreshindependentconfirmation.",
+    "Themean-surprisalfeaturealreadyexistsinNN74/LGB84;enrichmentdoesnotshowadditionalpredictiveinformationormodelgain.",
+    "Quantileusesownoutertrainingrowsbutcachedauxiliaryfeaturesarepreviouslydeclaredlabel-freetransductive;notpureinductivefeaturelearning.",
+    "Disagreementuseslabelsandcannotbeusedtodrop/relabelorrouteunseenrows. qandmean-surprisalaloneareobservable.",
+    "No threshold/cohort/featuresearchorconfidenceinterval-basedpromotion. Finishwithoneexplicitconclusionandstopdiagnosticchain."
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "status": "learning_reflection_and_prespecified_diagnostics_complete_no_experiment_justified",
+  "closed_utc": "2026-10-21T11:35:15.335008+00:00",
+  "explicit_conclusion": "Thepredefinedproxyisadescriptivestablehardnessindicator,butcurrentevidencedoesNOTjustifyaspecificnewmodelexperiment. mean_rating_surprisalisalreadyusedbyNN74/LGB84;thischeckdoesnotshowremainingpredictableresidualorincrementalOOFgain. Stopthisdiagnosticchainandkeepv12.",
+  "proxy_check": {
+    "quantile_population": "ALLownouter-trainingrows,90thpercentilelinear;STRICTLYabove;teacher-confidentheldoutrowsonlycomparison",
+    "teacher_confidence": "q<=.1orq>=.9",
+    "all_five_directions_passed": true,
+    "fold_summary": [
+      {
+        "fold": 0,
+        "cut": 1.018623983860016,
+        "high_rows": 11950,
+        "risk_ratio": 1.3991254038161196,
+        "loss_concentration_within_confident": 1.1550524978220293
+      },
+      {
+        "fold": 1,
+        "cut": 1.0186378955841064,
+        "high_rows": 11889,
+        "risk_ratio": 1.2868162492251138,
+        "loss_concentration_within_confident": 1.094637892689122
+      },
+      {
+        "fold": 2,
+        "cut": 1.0192367076873778,
+        "high_rows": 11658,
+        "risk_ratio": 1.3414433474263754,
+        "loss_concentration_within_confident": 1.1123402568023109
+      },
+      {
+        "fold": 3,
+        "cut": 1.018530285358429,
+        "high_rows": 11929,
+        "risk_ratio": 1.3039656350579312,
+        "loss_concentration_within_confident": 1.0906124420915064
+      },
+      {
+        "fold": 4,
+        "cut": 1.0182870149612426,
+        "high_rows": 11913,
+        "risk_ratio": 1.3534033159698167,
+        "loss_concentration_within_confident": 1.1364908178498885
+      }
+    ],
+    "total_high_confident_rows": 59339,
+    "total_confident_rest_rows": 563708,
+    "total_high_conflicts": 3804,
+    "total_rest_conflicts": 27027,
+    "new_model_value_proved": false
+  },
+  "learning_synthesis": [
+    {
+      "lesson": "Followcompetition-specificexperiencewithoutforgettingexistingwork",
+      "project_evidence": "Officialoriginalsourcealreadyused;teejmahal21+SATprojectionverifiedequivalent;all21rawTE+13interactionsanddeepXGBfromsamealvisrepositoryalreadytested. Do not rerunblogideasasnovel.",
+      "action": "Recordcoverageandavoidrepeats."
+    },
+    {
+      "lesson": "Complexityneedsincrementalcomplementarity",
+      "project_evidence": "NN74/RankNetrealgainsandauditedfusionexist;latermanyfamiliesandTabSTARbudgetextensionsfailed. NNequivalenttoallbadisunsupported.",
+      "action": "Do not addfamiliesormemberswithoutnewmechanisticincrementalevidence."
+    },
+    {
+      "lesson": "SelectionbiasisnotrepairedbyconditionalCI",
+      "project_evidence": "68differentrecordedfivefoldOOFartifactsand11threefoldartifacts,reusedlabels;all-stagesgatespreventedR5/R64promotionbutglobaladaptivityremains.",
+      "action": "Do not use newdiagnosticpositiveassuccessfulmodelreplication."
+    },
+    {
+      "lesson": "Diagnosetheactualremainingerror",
+      "project_evidence": "R81teacher-conflict4.41percentrowsinvolve92.43percentremainingloss;NEAR6notconflict-enriched;strict20withinNEAR6only168rows. Neitherlabelnoiseceilingnorcontaminationcausalityestablished.",
+      "action": "No relabeling,deletion,bulknear-sourcepurgeorAUC-ceilingclaim."
+    },
+    {
+      "lesson": "Prespecifyandstop",
+      "project_evidence": "R82onlyone90thpercentileproxy,all5directionspositive,butfieldalreadyinthemodelandnoincrementalsignaltest.",
+      "action": "Closecurrentchainwithoutmorethresholds/cohorts/newmodels."
+    }
+  ],
+  "limitations": [
+    "Teacheragreement/conflictislabel-definedoutcome;onlyqandsurprisalareobservablefeatures.",
+    "Owntrainingthresholdavoidsthresholdfittoheldoutlabels,butnotallhistoricaladaptivity;sameofficiallabelswereusedinmanypriorchoices.",
+    "Lossconcentrationreferenceisteacher-confidentpopulation,endpointsweightedbyallwithin-validationfoldpositive-negativepairs;notrows-onlyaverageornewindependentAUCgain.",
+    "Cachedratingfeaturesaredeclaredlabel-freetransductive;notapureinductiveevaluation.",
+    "R81strictnearmatchstandardonlycoversNEAR6equalpairs;notallglobal20/21pairs. Exposurecountsnotcausalpurgeeffects."
+  ],
+  "actions": {
+    "new_classifier_fits": 0,
+    "new_model_inference": 0,
+    "new_model_candidates": 0,
+    "weights_searched": 0,
+    "thresholds_retuned": 0,
+    "labels_modified": false,
+    "data_deleted": false,
+    "main_modified": false,
+    "Kaggle_submissions": 0,
+    "paid_compute": false,
+    "no_more_automatic_diagnostics": true
+  },
+  "current_best": "v12unchanged",
+  "actual_goal_verified_complete": false,
+  "diagnostic_seconds": 0.5851003209972987,
+  "peak_RSS_GiB": 0.10612106323242188,
+  "disk_free_GiB": 4.2009429931640625,
+  "evidence_sha256": {
+    "research_r82_plan.json": "70a17c9448bc7e57910a04c687dbea5f5d7d93cfd49be18ace564326c09ec0e1",
+    "research_r82_proxy_check.py": "00c94f8a5237ad89eceb91143edc73524df7b771db7c3a046052d308db2f40d7",
+    "research_r82_result.json": "5da42e57f79b2971eb8ec46cdc611dd7116898d7ee57adfbd9aa3394e1623d4c",
+    "research_r81_plan.json": "aba9a8432272edc3f4f972a0ddd08f4d79df1a1b829461b560b697a771c13aa0",
+    "research_r81_result.json": "c7379ad4f5c3e54ac5d23e9b856768275c7966b2cb0b8b1a1226bb9fd3a403c6",
+    "research_r81_conclusion.json": "6f4d837da860e078d4e3680a0c04fcde10cfb8e132d26f199a21e6af14ace3f1",
+    "research_r81_integrity.json": "fa04f83fe36dd651fe1ab314f895dac9dcc179604af2ba2e3d0f04064182574d",
+    "research_pipeline_evidence_audit_20261021.json": "7c9bbd179fa01ef4b3a5e8664e576a01ffa3e3dcd174c64b741bfcac55d1d900"
+  }
+}

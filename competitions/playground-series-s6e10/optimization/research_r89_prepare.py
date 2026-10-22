@@ -1,0 +1,22 @@
+import json,joblib,pandas as pd,numpy as np
+from research_r89_common import ROOT,sha,dump,now,refs
+from research_r89_features import DropRatingMeans,REMOVED
+from research_external_ablation import external
+from research_r23_loader import auxiliary
+from research_oof import params
+from research_resume_policy_20261021 import check_training
+check_training();assert not (ROOT/'research_r89_plan.json').exists() and not (ROOT/'research_artifacts/r89_drop_rating_means').exists()
+f=pd.read_csv(ROOT/'data/train.csv');raw=f.drop(columns=['id','satisfaction']);ext,_=external('both',f.id);aux=auxiliary(f.id);z=refs('fivefold');vi=np.flatnonzero(z[0]['fold']==0)
+control=joblib.load(ROOT/'research_artifacts/r21_probability_lgb_officialcb_fivefold/fold0/transformer.joblib');tr=DropRatingMeans();tr.base=control;tr.columns=[c for c in control.columns if c not in REMOVED]
+q=raw.iloc[vi].reset_index(drop=True);e=ext.iloc[vi].reset_index(drop=True);a=aux.iloc[vi].reset_index(drop=True);V=tr.transform(q,e,a);C=control.transform(q,e,a).drop(columns=REMOVED);pd.testing.assert_frame_equal(V,C,check_exact=True)
+assert len(tr.columns)==71 and 'orig_teacher_lgb' in tr.columns and 'mean_rating_surprisal' in tr.columns and all(f'rating_surprisal_{j}' in tr.columns for j in range(13))
+old=json.loads((ROOT/'research_artifacts/r21_probability_lgb_officialcb_fivefold/fold0/result.json').read_text());assert old['parameters']==params('stats639')
+files=['research_r89_features.py','research_r89_common.py','research_r89_worker.py','research_r89_driver.py','research_r89_prepare.py','research_r21_features.py','research_features.py','research_r23_loader.py','research_external_ablation.py','research_oof.py','research_r4_common.py','compare_validation.py','research_r20_plan.json','research_r21_plan.json','data/train.csv']
+for stage,K in [('fivefold',5),('threefold',3)]:
+ z=refs(stage);assert len(set(z[0]['fold']))==K
+ files.extend(f'research_artifacts/{n}_{stage}/oof.npz' for n in ['r21_probability_lgb_officialcb','r23_conditional_lean','r68_pure_ranknet'])
+ for k in range(K):
+  name=f'research_artifacts/r21_probability_lgb_officialcb_{stage}/fold{k}/transformer.joblib';files.append(name);t=joblib.load(ROOT/name);assert [c for c in t.columns if c not in REMOVED]==tr.columns
+for name in ['original_teacher_v1','r20_aux_officialcb','r21_conditional_officialcb']:files.extend([f'research_artifacts/{name}/result.json',f'research_artifacts/{name}/train_features.npz'])
+p=dict(experiment='R89_drop_only13_expected_rating_means_from_current_LGB84',frozen_utc=now(),hypothesis='Expectedratingmeans compressmultimodal/nonordinal0states; once rawratings andobservedclasssurprisals arepresent,the13means mayaddredundant/unstablepartitioning. Removeonlythisprespecifiedgroup andtestwholepipelineeffect.',prior='R20E-onlypassed5butfailed3correctedt;R21E+Surprisalpassed. NeitherisolatescurrentSurprisalwithoutE. Fullposterior/entropyadditionfailuresdonotprovemeansnecessary. Noprevious13E-removalcontrolfoundinrecordedplans.',feature_columns=tr.columns,removed_columns=REMOVED,feature_width=71,unchanged='Ownouterbase57andall14surprisalsincludingmean_surprisalexact;no newfeature/sourcefit. Rawratingsandteacherremain. No changeinoldNN/RankNet.',ordinality_limit='Atleastwifi0isN/A;donotclaimall0statesofall13ratingssharesemantics. Meansmaystillbeuseful;thisisfalsifiableablation.',learner_parameters=params('stats639'),fusion='Tnew=T_v12+.46875*(newLGB71-oldLGB84); nested.5tree/.5CE74logitpoolthen.875v11/.125Rank74;clip1e-6;weightsfixed',fixed_evaluation='All5beforequality;pairedDeLong95lower>0 ANDcorrectedresampledtalpha.025lower>0;onlyifpass3separatelyrefittedpartitionssamegate;independentauditbeforefullLGBfit/testCSV',falsification='Eithergatefailsclose;no partialgroup/weight/tree/seedrescuewithinR89',selection_warning='Allofficiallabelsreusedextensively;new3partitionnotuntouchedholdout;conditionalintervalsomithistoricalselection',resources=dict(device='CPU',threads=6,nice=10,host_RAM_reserve_GiB=4,own_worker_RSS_ceiling_GiB=8,disk_reserve_GiB=2,own_outputs_ceiling_MiB=256,perfold_checkpoint_seconds=1200,estimated_fivefold_minutes='3-6',estimated_total_ifpasses_minutes='10-15',paid=False),preflight_remaining71_entirefold0_query_exact=True,no_partial_quality=True,no_LB_tuning=True,parent_only_submitter=True,actual_top500_verified=False,frozen_sha256={n:sha(ROOT/n) for n in files})
+dump(ROOT/'research_r89_plan.json',p);print(json.dumps(dict(plan_sha256=sha(ROOT/'research_r89_plan.json'),frozen_utc=p['frozen_utc'],input_files=len(files),width=71)))

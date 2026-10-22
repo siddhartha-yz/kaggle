@@ -1,0 +1,75 @@
+{
+  "status": "resource_probe_complete_full_training_not_started",
+  "created_utc": "2026-10-22T09:44:26.736584+00:00",
+  "design_sha256": "b255bd009069c47cec03aa34c50b1053ab6f1776aa067d8bd905b60d4fdc70da",
+  "probe_result_sha256": "e666c99c31424ddb991c86d3834de00f8d8ded073a41d61f296c0cad60bbb186",
+  "stages": [
+    {
+      "folds": 5,
+      "approx_inner_train_rows_per_fold": 503738,
+      "steps_per_epoch_per_fold": 984,
+      "RTD_epochs": 5,
+      "supervised_epochs_each_arm": 20,
+      "paired_optimizer_updates": 221400,
+      "measured_throughput_training_seconds": 1230.7109019537677,
+      "estimated_inner_plus_outer_forward_seconds": 30.116332896999438,
+      "measurement_scope": "8192row GPU-resident pool and 64timed512rowsteps; full CPU sampling/transfers/checkpointing not measured"
+    },
+    {
+      "folds": 3,
+      "approx_inner_train_rows_per_fold": 419781,
+      "steps_per_epoch_per_fold": 820,
+      "RTD_epochs": 5,
+      "supervised_epochs_each_arm": 20,
+      "paired_optimizer_updates": 110700,
+      "measured_throughput_training_seconds": 615.3554509768838,
+      "estimated_inner_plus_outer_forward_seconds": 16.76970905372127,
+      "measurement_scope": "8192row GPU-resident pool and 64timed512rowsteps; full CPU sampling/transfers/checkpointing not measured"
+    }
+  ],
+  "nominal_total_fit_minutes": 30.767772548844196,
+  "planning_full_pair_minutes_range": [
+    60,
+    90
+  ],
+  "planning_fivefold_minutes_range": [
+    30,
+    45
+  ],
+  "conditional_threefold_extra_minutes_range": [
+    25,
+    40
+  ],
+  "timing_caveat": "Planning estimates, not promises. Include~2x measured training time plus data, checkpoint, implementation audit and telemetry margin. Threefold runs only on frozen fivefold quality success. No full-training wall-clock authority granted by this report.",
+  "artifact_estimate": {
+    "saved_best_models_16_bytes": 26332720,
+    "retained_optimizer_resume_16_approx_bytes": 78998160,
+    "uncompressed_two_arms_two_partitions_OOF_values_bytes": 22388320,
+    "row_ID_target_fold_one_per_partition_approx_bytes": 13992700,
+    "preprocess_logs_and_audit_reserve_bytes": 8388608,
+    "planned_artifact_cap_bytes": 201326592,
+    "probe_artifact_bytes": 1647563,
+    "estimated_total_before_compression_bytes": 150100508
+  },
+  "disk_free_now_bytes": 3367374848,
+  "disk_after_full_cap_bytes": 3166048256,
+  "disk_required_reserve_bytes": 2147483648,
+  "GPU_measured": {
+    "allocated_bytes": 207299072,
+    "reserved_bytes": 316669952,
+    "process_bytes": 532676608
+  },
+  "full_GPU_pool_estimate_bytes": 50373800,
+  "own_GPU_allocator_cap_bytes": 3221225472,
+  "own_process_ceiling_bytes": 3758096384,
+  "no_new_software": true,
+  "no_weight_download": true,
+  "no_SAT_quality_observed": true,
+  "decision": "Technically feasible within measured hardware and disk headroom. Ready for review of the frozen paired design; do not start complete fits from this probe.",
+  "limitations": [
+    "This is a self-designed RTD test, not a Q-FT reproduction.",
+    "A small-model resource probe says nothing about satisfaction AUC or whether5pretrain epochs suffice.",
+    "Historical validation reuse remains; threefold is a replication partition, not untouched data.",
+    "Numerical preprocessing/scalers and replacement donors for every complete arm must use only its own inner training set."
+  ]
+}

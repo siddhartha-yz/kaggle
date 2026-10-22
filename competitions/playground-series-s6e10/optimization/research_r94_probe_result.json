@@ -1,0 +1,55 @@
+{
+  "status": "passed_resource_probe_no_SAT_or_outer_quality",
+  "plan_sha256": "b255bd009069c47cec03aa34c50b1053ab6f1776aa067d8bd905b60d4fdc70da",
+  "PID": 87030,
+  "subset_rows": 8192,
+  "subset_index_sha256": "4fe2425fe03d47025daf56f435a038e18e44875d28bc4349a9fe47d35f5ec38a",
+  "subset_disjoint_from_outer_valid": true,
+  "official_SAT_loaded": false,
+  "test_data_loaded": false,
+  "architecture": {
+    "width": 128,
+    "layers": 3,
+    "heads": 4,
+    "feedforward": 256,
+    "dropout": 0.1
+  },
+  "parameters": 407298,
+  "records": [
+    {
+      "mode": "RTD",
+      "warmup_steps": 8,
+      "timed_steps": 64,
+      "batch_rows": 512,
+      "median_step_seconds": 0.0058162390005236375,
+      "mean_step_seconds": 0.005829114578176586,
+      "p90_step_seconds": 0.0060233560992855924,
+      "last_synthetic_or_RTD_loss": 0.28144609928131104,
+      "actual_changed_fraction": 0.1004580557346344,
+      "official_SAT_targets_used": false
+    },
+    {
+      "mode": "classification_synthetic_targets",
+      "warmup_steps": 8,
+      "timed_steps": 64,
+      "batch_rows": 512,
+      "median_step_seconds": 0.005488404000061564,
+      "mean_step_seconds": 0.0055249729844035755,
+      "p90_step_seconds": 0.005641213600029005,
+      "last_synthetic_or_RTD_loss": 0.6993904113769531,
+      "actual_changed_fraction": null,
+      "official_SAT_targets_used": false
+    }
+  ],
+  "inference_seconds_per_512": 0.001217313374979767,
+  "checkpoint_bytes": 1645795,
+  "checkpoint_sha256": "a239748f685218f9e7306320c022cd4fa24fca81d056d7791f039d1393b982d4",
+  "save_reload_max_error": 0.0,
+  "peak_allocated_GPU_bytes": 207299072,
+  "peak_reserved_GPU_bytes": 316669952,
+  "peak_process_GPU_bytes": 532676608,
+  "peak_RSS_bytes": 1769672704,
+  "total_seconds": 2.6755074709999462,
+  "disk_free_bytes": 3367854080,
+  "full_pair_training_started": false
+}

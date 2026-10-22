@@ -1,0 +1,18 @@
+{
+  "status": "passed_synthetic_only",
+  "replacement_cell_checks": 84,
+  "selected_same_value_is_negative": true,
+  "missingness_replaced_atomically": true,
+  "no_external_side_features": true,
+  "token_permutation_error": 4.76837158203125e-07,
+  "CLS_permutation_error": 4.470348358154297e-07,
+  "batch_independence_error": 1.1920928955078125e-07,
+  "RTD_encoder_gradient_nonzero": true,
+  "official_data_loaded": false,
+  "outer_quality_scored": false,
+  "seconds": 0.03982433200144442,
+  "source_sha256": {
+    "research_r94_model.py": "5cc04a6b4b2440570cd68826d8254344be76d275f8e44c7b154f7e308560ef53",
+    "test_research_r94_semantics.py": "4e988a56426f7be5fb857c6d82035fabda3e8efeeb00822cc5a39979325e19d4"
+  }
+}

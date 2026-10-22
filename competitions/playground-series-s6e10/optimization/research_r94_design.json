@@ -1,0 +1,92 @@
+{
+  "status": "frozen_design_and_probe_only_no_full_training_authorized",
+  "frozen_utc": "2026-10-22T09:42:27.959788+00:00",
+  "route": "Own RTD mechanism experiment; not a reproduction of Q-FT and no author score adopted",
+  "hypothesis": "Within-column marginal-preserving replacement detection may train jointly useful conditional representations beyond the same randomly initialized supervised encoder. Existing conditional-rating pretext features do not test this shared-encoder RTD mechanism.",
+  "architecture": {
+    "features": "Raw21 only:17numeric+4nominal; no ID, SAT feature, TE, teacher, or original-source predictions",
+    "width": 128,
+    "layers": 3,
+    "heads": 4,
+    "feedforward": 256,
+    "dropout": 0.1,
+    "normalization": "Pre-LN",
+    "attention": "Full noncausal within-row attention only; no positions, RoPE, local masks, or cross-row attention",
+    "column_identity": "Learned column embedding travels with each token; numeric affine value/missing embedding or nominal category embedding; learned CLS token",
+    "missing": "Numeric missing flag is inside token and follows donated value; category missing1 and unknown0",
+    "RTD_head": "Shared linear head on contextualized column tokens; no original/unreplaced side input",
+    "supervised_head": "CLS binary logit"
+  },
+  "corruption": {
+    "cell_selection_probability": 0.15,
+    "donor": "Independent uniform own-pretraining-row donor for every selected cell, same column, with replacement; self-donor allowed",
+    "target": "Actual changed value, not selection bit. NaN-to-NaN, same categorical value, and signed-zero pairs are negatives.",
+    "loss": "Unweighted BCE averaged over all21 positions, including unselected and selected-unchanged negatives",
+    "side_features": "No donor index, selection bit, clean features, clean missing indicators, or clean numeric residual enters model",
+    "resampled": "New corruption each batch; donor pool and preprocessing fitted only to own inner training rows"
+  },
+  "initialization_seed": 2026102201,
+  "subset_seed": 2026102202,
+  "semantics_result_sha256": "06e47d7d445b091f34a629c612b39bd92c737e14fb0301919d427e027f72c3f2",
+  "existing_indices": "research_artifacts/r79r2_tabstar_raw21_fivefold/fold0/indices.npz",
+  "existing_indices_sha256": "10f9ebc04efd554554ed97a8f66a4d1d4ef2680be2bee378b93cb28baea02e74",
+  "probe": {
+    "pool_rows": 8192,
+    "batch_rows": 512,
+    "warmup_steps_per_mode": 8,
+    "timed_steps_per_mode": 64,
+    "modes": [
+      "RTD",
+      "BCE with synthetic random targets"
+    ],
+    "SAT_loaded": false,
+    "test_loaded": false,
+    "outer_quality_scored": false,
+    "architecture_selection_using_quality": false,
+    "full_training": false,
+    "maximum_seconds": 180,
+    "artifact_cap_bytes": 16777216
+  },
+  "proposed_full_pair_not_started": {
+    "outer": "Existing fivefold StratifiedKFold(seed20261018); conditional3fold(seed20261022) only after complete fivefold gates. Both reused label partitions, not independent holdouts.",
+    "inner": "Stratified10% of own outer training, seed2026102203+fold(+100threefold); preprocessing, donors and pretraining exclude inner/outer validation and test.",
+    "arms": [
+      "Identical random initial encoder and classifier, no RTD",
+      "Same initial encoder and classifier,5epochs RTD before identical supervised phase"
+    ],
+    "RTD_epochs": 5,
+    "supervised_epochs_per_arm": 20,
+    "batch_rows": 512,
+    "optimizer": "AdamW lr1e-3 weight_decay1e-4 gradnorm1; separate cosine schedule down to1e-5 for pretrain and finetune, optimizer reset before finetune",
+    "checkpoint": "RTD final epoch5 only; supervised best inner logloss from20fixedepochs, first wins exact ties, no outer selection",
+    "paired_randomness": "Same initial state, same supervised data-order and dropout seeds per corresponding epoch; separate corruption generator",
+    "fusion": "Each arm fixed .875logit(v12)+.125logit(arm),clip1e-6; no weight search",
+    "gates": "After all5folds: both original DeLong95lower>0 and corrected-resampled-t one-sidedalpha.025lower>0 for RTD blend vs v12 AND RTD blend vs scratch blend; same requirements on conditional3fold, then independent implementation audit. No partial-fold selection or rescue.",
+    "quality_not_yet_observed": true
+  },
+  "resources": {
+    "CPU_threads": 6,
+    "nice": 10,
+    "allocator_cap_bytes": 3221225472,
+    "own_GPU_ceiling_bytes": 3758096384,
+    "host_RAM_reserve_bytes": 4294967296,
+    "GPU_free_reserve_bytes": 2147483648,
+    "disk_reserve_bytes": 2147483648,
+    "proposed_full_artifact_cap_bytes": 201326592,
+    "no_new_dependencies": true,
+    "no_weight_download": true,
+    "paid": false
+  },
+  "limitations": [
+    "Repeated historical SAT validation selection; fold seeds do not create untouched holdouts.",
+    "Small self-designed model is not the authors unspecified full Q-FT recipe.",
+    "Resource probe measures throughput/correctness, not evidence of satisfaction improvement."
+  ],
+  "source_sha256": {
+    "research_r94_model.py": "5cc04a6b4b2440570cd68826d8254344be76d275f8e44c7b154f7e308560ef53",
+    "research_r94_probe.py": "86a785a2d3f4ec2c720dfed09e791e4aa33142e8644b7dd045477fbcd81e18f2",
+    "test_research_r94_semantics.py": "4e988a56426f7be5fb857c6d82035fabda3e8efeeb00822cc5a39979325e19d4",
+    "research_resource_guard_v2.py": "63cf7d694a772fe5f88d1c649517c020e9d4b318db0ea40883dcba0cadba9e7c",
+    "research_resume_policy_20261021.py": "8e8b4d1dabf23ae195d7987dd67fed2b8d6731281462ecc1ec909f4527be88d5"
+  }
+}

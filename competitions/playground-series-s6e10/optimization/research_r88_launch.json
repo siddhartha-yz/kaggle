@@ -1,0 +1,67 @@
+{
+  "status": "actually_training",
+  "recorded_utc": "2026-10-22T06:08:58.129460+00:00",
+  "started_utc": "2026-10-22T06:07:52.114641+00:00",
+  "controller_pid": 31934,
+  "first_worker_pid": 31938,
+  "service": "codex-kaggle-r88-validation.service",
+  "log": "research_r88_run.log",
+  "result": "research_r88_result.json",
+  "plan_sha256": "a1c294d585b309161d24912e6512819316de544859c45ccf6623c117510420ec",
+  "features": 74,
+  "only_missing_value_category_repaired": true,
+  "observed_epochs": [
+    {
+      "epoch": 1,
+      "seconds": 28.185834108999643,
+      "training_parameter_devices": [
+        "cuda:0"
+      ],
+      "backing_data_device": "cpu",
+      "peak_GPU_bytes": 1056964608,
+      "peak_allocated_bytes": 630118400
+    },
+    {
+      "epoch": 2,
+      "seconds": 18.388785337000172,
+      "training_parameter_devices": [
+        "cuda:0"
+      ],
+      "backing_data_device": "cpu",
+      "peak_GPU_bytes": 1056964608,
+      "peak_allocated_bytes": 630118400
+    },
+    {
+      "epoch": 3,
+      "seconds": 18.45394179699997,
+      "training_parameter_devices": [
+        "cuda:0"
+      ],
+      "backing_data_device": "cpu",
+      "peak_GPU_bytes": 1056964608,
+      "peak_allocated_bytes": 630118400
+    }
+  ],
+  "resource_limits": {
+    "allocator_cap_bytes": 3221225472,
+    "own_GPU_ceiling_bytes": 3758096384,
+    "own_RSS_ceiling_bytes": 8589934592,
+    "host_RAM_reserve_bytes": 4294967296,
+    "desktop_GPU_free_reserve_bytes": 2147483648,
+    "disk_reserve_bytes": 2147483648,
+    "own_outputs_ceiling_MiB": 768,
+    "cpu_threads": 6,
+    "nice": 10,
+    "paid": false
+  },
+  "budget": {
+    "estimated_fivefold_minutes": "7-10",
+    "conditional_threefold_minutes": "5-7",
+    "audit_test_minutes": "3-5",
+    "perfold_checkpoint_seconds": 1200,
+    "campaign_deadline": null
+  },
+  "next_reasonable_check_utc": "2026-10-22T06:11:00+00:00",
+  "parent_monitor_hint": "Shortreadonly existingPID/logcheck;donotrestarthealthyservice",
+  "actual_top500_verified": false
+}

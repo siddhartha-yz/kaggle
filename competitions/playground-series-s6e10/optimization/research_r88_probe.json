@@ -1,0 +1,11 @@
+{
+  "status": "passed_no_quality_score",
+  "created_utc": "2026-10-22T06:07:12.727549+00:00",
+  "kind": "Existingmatched74layoutresourceproofreused; no newfit",
+  "source": "research_r23_probe_n32.json",
+  "source_sha256": "922e83fbdd3a6e09abfabfed4730fa45017249077edc2bdf8e7086f408817266",
+  "reason": "Same74/52numeric22categorical/native32/batch256/config;onlyoneadditionalArrivalDelaycategory; sameembeddingoutputsize, negligibleadditionalembeddingrowstorageunder3GiBcapvsold1GiBpass",
+  "prior_peak_GPU_bytes": 964689920,
+  "prior_peak_RSS_bytes": 3989725184,
+  "new_classifier_fits": 0
+}

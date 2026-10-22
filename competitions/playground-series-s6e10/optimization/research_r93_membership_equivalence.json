@@ -1,0 +1,12 @@
+{
+  "status": "passed_synthetic_only",
+  "completed_utc": "2026-10-22T08:12:29.813632+00:00",
+  "source_sha256": "d5c6c1a26fe7374905f6cddf8c2c12dbb196201cf71c3b98ce972458af6ef61c",
+  "optimized_helper_sha256": "7f365aa3e07ee965c540d8521fd4952fc5debe00217ec8299a615ee2edd88dd3",
+  "cases": 124,
+  "equivalence": "Exactall6supportfieldsforcanonicalstrings;uniqueorderingnotusedinthemetrics",
+  "no_official_data_loaded": true,
+  "no_models_fitted": true,
+  "no_thresholds_or_splits_changed": true,
+  "seconds": 0.04890621099912096
+}

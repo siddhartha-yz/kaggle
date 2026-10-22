@@ -1,0 +1,231 @@
+{
+  "status": "closed_diagnostic_no_SAT_experiment_supported",
+  "completed_utc": "2026-10-22T08:25:01.101100+00:00",
+  "plan_sha256": "b035cb0b08c8f6a3cf142bf1614cf1780236cc05f9e48bc22212472938bc1f4b",
+  "repair_sha256": "1226d96833b31c3a493d59c91a1f9333462c0e926b99af2d927e69551addf026",
+  "result_sha256": "6212cd865bea387613329ea2f9734c23c5fdc3408a5a3fe4fa0b0afc9995b277",
+  "evidence_sha256": {
+    "basic.json": "805d873cab98f4752f9e1d9cb387870545f595470f7de7c797748f617f75feaf",
+    "adversarial.json": "6c8dc3b1e4f41284394237b3298934536677d6ed11d510174383e7ab78e0c89d",
+    "integrity.json": "e1cea19a5f8076e0bf5b3a5352180c910e3f184e93b131aa77f7e8a4536ae2d9"
+  },
+  "initial_failure_preserved": "research_r93_initial_attempt.json",
+  "implementation_repair": {
+    "change": "Replace quadratic object-array membership with hashed canonical-string membership; incremental atomic checkpoints and reusable fit/prediction receipts.",
+    "synthetic_equivalence": {
+      "status": "passed_synthetic_only",
+      "completed_utc": "2026-10-22T08:12:29.813632+00:00",
+      "source_sha256": "d5c6c1a26fe7374905f6cddf8c2c12dbb196201cf71c3b98ce972458af6ef61c",
+      "optimized_helper_sha256": "7f365aa3e07ee965c540d8521fd4952fc5debe00217ec8299a615ee2edd88dd3",
+      "cases": 124,
+      "equivalence": "Exactall6supportfieldsforcanonicalstrings;uniqueorderingnotusedinthemetrics",
+      "no_official_data_loaded": true,
+      "no_models_fitted": true,
+      "no_thresholds_or_splits_changed": true,
+      "seconds": 0.04890621099912096
+    },
+    "scientific_settings_and_operation_budgets_unchanged": true,
+    "original_failed_180_seconds_not_erased": true
+  },
+  "official_covariates_only": {
+    "rows_train": 699635,
+    "rows_test": 299844,
+    "feature_count": 21,
+    "SAT_labels_loaded": false,
+    "ID_excluded_from_domain_models": true,
+    "flagged_features": [],
+    "maximum_univariate_TV": {
+      "feature": "Flight Distance",
+      "value": 0.0031342519306329746
+    },
+    "maximum_univariate_PSI": {
+      "feature": "Arrival Delay in Minutes",
+      "value": 6.178927565482564e-05
+    },
+    "maximum_continuous_KS": {
+      "feature": "Age",
+      "value": 0.0011609640177397962
+    },
+    "missing": [
+      {
+        "feature": "Arrival Delay in Minutes",
+        "missing_train": 292,
+        "missing_test": 130,
+        "missing_rate_train": 0.000417360480822143,
+        "missing_rate_test": 0.00043355878390096184,
+        "missing_rate_abs_difference": 1.619830307881886e-05
+      }
+    ],
+    "support_comparison": [
+      {
+        "fields": [
+          "Flight Distance"
+        ],
+        "full_train_unique": 3474,
+        "full_test_unique": 3317,
+        "full_test_rows_unseen_train": 61,
+        "equal_size": 299844,
+        "equal_train_rows_unseen_test": 222,
+        "equal_test_rows_unseen_train": 211,
+        "caveat": "HighdimensionalunseensupportcanariseunderIID;notproofshift"
+      },
+      {
+        "fields": [
+          "Class",
+          "Type of Travel",
+          "Customer Type"
+        ],
+        "full_train_unique": 12,
+        "full_test_unique": 10,
+        "full_test_rows_unseen_train": 0,
+        "equal_size": 299844,
+        "equal_train_rows_unseen_test": 1,
+        "equal_test_rows_unseen_train": 0,
+        "caveat": "HighdimensionalunseensupportcanariseunderIID;notproofshift"
+      },
+      {
+        "fields": [
+          "Gender",
+          "Customer Type",
+          "Type of Travel",
+          "Class"
+        ],
+        "full_train_unique": 22,
+        "full_test_unique": 20,
+        "full_test_rows_unseen_train": 0,
+        "equal_size": 299844,
+        "equal_train_rows_unseen_test": 1,
+        "equal_test_rows_unseen_train": 0,
+        "caveat": "HighdimensionalunseensupportcanariseunderIID;notproofshift"
+      },
+      {
+        "fields": [
+          "Flight Distance",
+          "Age",
+          "Gender",
+          "Class",
+          "Customer Type",
+          "Type of Travel"
+        ],
+        "full_train_unique": 256134,
+        "full_test_unique": 157161,
+        "full_test_rows_unseen_train": 57492,
+        "equal_size": 299844,
+        "equal_train_rows_unseen_test": 99583,
+        "equal_test_rows_unseen_train": 99316,
+        "caveat": "HighdimensionalunseensupportcanariseunderIID;notproofshift"
+      }
+    ],
+    "duplicates": {
+      "train_excess": 0,
+      "test_excess": 0,
+      "combined_excess": 0,
+      "cross_distinct_exact_vectors": 0,
+      "test_rows_with_train_fingerprint": 0,
+      "ID_excluded": true
+    },
+    "IDs": {
+      "train_unique": true,
+      "test_unique": true,
+      "cross_overlap": 0,
+      "train_range": [
+        0,
+        699634
+      ],
+      "test_range": [
+        699635,
+        999478
+      ],
+      "note": "DisjointsequentialIDrangesareexpectedbyconstruction,notdistributionevidence;notmodelinputs"
+    },
+    "maximum_joint_TV": {
+      "fields": [
+        "Departure Delay in Minutes",
+        "Arrival Delay in Minutes"
+      ],
+      "TV": 0.004310916700089085,
+      "PSI": 0.001628500006700989
+    },
+    "maximum_ID_segment_TV": {
+      "source": "test",
+      "segment": 2,
+      "feature": "Flight Distance",
+      "missing_rate": 0.0,
+      "TV_to_source": 0.007635788827380235,
+      "numeric_mean": 1362.8406676783004
+    },
+    "maximum_boundary_TV": {
+      "feature": "Cleanliness",
+      "TV": 0.00753720480585865,
+      "PSI": 0.0002447467872014207
+    }
+  },
+  "fixed_domain_models": {
+    "real_holdout": {
+      "AUC": 0.5015797582003588,
+      "conditional_95pct_CI": [
+        0.499324498124997,
+        0.5038350182757206
+      ],
+      "SE": 0.001150642895592749,
+      "domain_logloss": 0.6103616284971581
+    },
+    "permuted_fit_label_negative_control": {
+      "AUC": 0.4981442300114584,
+      "conditional_95pct_CI": [
+        0.4958901058951222,
+        0.5003983541277947
+      ],
+      "SE": 0.0011500633246613256,
+      "domain_logloss": 0.610469301868588
+    },
+    "fit_class_counts": [
+      489140,
+      209931
+    ],
+    "holdout_class_counts": [
+      210495,
+      89913
+    ],
+    "negative_control_passed": true,
+    "material_generalizable_distinguishability": false,
+    "prespecified_investment_screen": "real95lower>.55 andabs(nullAUC-.5)<=.01; practicalscreeningline,notuniversaldefinitionofshift",
+    "saved_model_replay_max_errors": [
+      0.0,
+      0.0
+    ],
+    "exactly_two_domain_fits": true,
+    "new_SAT_fits": 0,
+    "group_permutations_not_run_because_screen_failed": true
+  },
+  "decision": {
+    "next_SAT_experiment_supported": false,
+    "candidate": "Domain probability reweighting of satisfaction training",
+    "reason": "No material heldout domain discrimination under the prespecified model, and no practical univariate flags. Do not invent domain weights from near-random scores.",
+    "no_threshold_model_or_fusion_search": true,
+    "public_leaderboard_not_used": true,
+    "missing_new_information": "A distinct, falsifiable mechanism or evidence unavailable to this covariate-only audit; no evidence here to justify another drift-driven SAT fit.",
+    "limitations": [
+      "A fixed finite model and selected marginals cannot prove identical distributions or exclude weaker/higher-order covariate shift.",
+      "No test satisfaction labels were loaded; P(Y|X) shift is not identified.",
+      "High-dimensional unseen keys occur under finite sampling; equal-sized six-key unseen counts are nearly symmetric and do not establish shift.",
+      "Domain AUC confidence intervals are conditional on the frozen split/model; they are not universal absence-of-drift bounds.",
+      "Historical satisfaction validation labels have been repeatedly reused; a different fold seed would not create an untouched holdout."
+    ]
+  },
+  "resource_record": {
+    "basic_seconds": 13.892313135000222,
+    "domain_stage_seconds": 7.2704932399992686,
+    "basic_peak_RSS_bytes": 1662197760,
+    "domain_peak_RSS_bytes": 1022996480,
+    "artifact_bytes_at_controller_completion": 11478318,
+    "artifact_cap_bytes": 33554432,
+    "disk_free_bytes_at_close": 3369500672,
+    "disk_reserve_bytes": 2147483648,
+    "GPU_used": false
+  },
+  "no_new_submissions": true,
+  "no_deletions": true,
+  "main_unchanged": true,
+  "project_top500_goal_completed": false
+}

@@ -1,0 +1,17 @@
+{
+  "initial_state": {
+    "status": "basic_covariate_audit",
+    "started_utc": "2026-10-22T07:56:01.228219+00:00",
+    "pid": 64173,
+    "plan_sha256": "b035cb0b08c8f6a3cf142bf1614cf1780236cc05f9e48bc22212472938bc1f4b",
+    "new_SAT_classifier_fits": 0,
+    "new_submissions": 0
+  },
+  "initial_failure": {
+    "status": "stopped_for_assessment",
+    "utc": "2026-10-22T07:59:01.440588+00:00",
+    "error": "AssertionError('Diagnosticoperationbudgetcheckpoint')"
+  },
+  "initial_state_sha256": "571e824c2b1d347ad5970e3d9ce2f5fffd4a4bfe13dbb3bd49d53b5951b159ea",
+  "initial_failure_sha256": "1a6a7910ff092f8fa44f92b2e1b248d0dcf872055dad3897931d14b0419675e8"
+}

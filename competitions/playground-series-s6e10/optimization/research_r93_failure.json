@@ -1,0 +1,5 @@
+{
+  "status": "stopped_for_assessment",
+  "utc": "2026-10-22T07:59:01.440588+00:00",
+  "error": "AssertionError('Diagnosticoperationbudgetcheckpoint')"
+}

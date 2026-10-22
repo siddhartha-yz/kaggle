@@ -1,0 +1,308 @@
+{
+  "experiment": "R93_official_train_test_covariate_and_frozen_domain_audit",
+  "frozen_utc": "2026-10-22T07:55:05.052937+00:00",
+  "hypothesis": "OfficialtestP(X)maydifferfromofficialtrainP(X)inwaysrandomSATvalidationdoesnotrepresent;testmarginal/support/IDsegment/jointmembershipdifferencesbeforeanytargetmodelaction.",
+  "input_policy": {
+    "features": [
+      "Age",
+      "Flight Distance",
+      "Inflight wifi service",
+      "Departure/Arrival time convenient",
+      "Ease of Online booking",
+      "Gate location",
+      "Food and drink",
+      "Online boarding",
+      "Seat comfort",
+      "Inflight entertainment",
+      "On-board service",
+      "Leg room service",
+      "Baggage handling",
+      "Checkin service",
+      "Cleanliness",
+      "Departure Delay in Minutes",
+      "Arrival Delay in Minutes",
+      "Gender",
+      "Customer Type",
+      "Type of Travel",
+      "Class"
+    ],
+    "numeric": [
+      "Age",
+      "Flight Distance",
+      "Inflight wifi service",
+      "Departure/Arrival time convenient",
+      "Ease of Online booking",
+      "Gate location",
+      "Food and drink",
+      "Online boarding",
+      "Seat comfort",
+      "Inflight entertainment",
+      "On-board service",
+      "Leg room service",
+      "Baggage handling",
+      "Checkin service",
+      "Cleanliness",
+      "Departure Delay in Minutes",
+      "Arrival Delay in Minutes"
+    ],
+    "categorical": [
+      "Gender",
+      "Customer Type",
+      "Type of Travel",
+      "Class"
+    ],
+    "ratings": [
+      "Inflight wifi service",
+      "Departure/Arrival time convenient",
+      "Ease of Online booking",
+      "Gate location",
+      "Food and drink",
+      "Online boarding",
+      "Seat comfort",
+      "Inflight entertainment",
+      "On-board service",
+      "Leg room service",
+      "Baggage handling",
+      "Checkin service",
+      "Cleanliness"
+    ],
+    "continuous": [
+      "Age",
+      "Flight Distance",
+      "Departure Delay in Minutes",
+      "Arrival Delay in Minutes"
+    ],
+    "loaded_columns": [
+      "id",
+      "Age",
+      "Flight Distance",
+      "Inflight wifi service",
+      "Departure/Arrival time convenient",
+      "Ease of Online booking",
+      "Gate location",
+      "Food and drink",
+      "Online boarding",
+      "Seat comfort",
+      "Inflight entertainment",
+      "On-board service",
+      "Leg room service",
+      "Baggage handling",
+      "Checkin service",
+      "Cleanliness",
+      "Departure Delay in Minutes",
+      "Arrival Delay in Minutes",
+      "Gender",
+      "Customer Type",
+      "Type of Travel",
+      "Class"
+    ],
+    "SAT_labels_loaded": false,
+    "ID_use": "Descriptivewithin-sourcequintilesonly;neverfeature",
+    "no_previous_model_or_teacher_scores": true,
+    "dtype_canonicalization": "All17numericfloat64,all4nominalstring,canonical+0;numericNaNpreserved;no domain/csvdtype/indexfeatures"
+  },
+  "basic": {
+    "missing_and_zero_rates": true,
+    "exact_per_feature_support": true,
+    "duplicates": "Fullraw21withintrain/testandcross;fingerprintcollisioncheck",
+    "continuous_binning": "20trainquantilebins;delaysseparatezero/missing/negativeand20positivequantilebins;no targetfitting",
+    "distribution_metrics": [
+      "TV",
+      "PSI with0.5 countpseudocount",
+      "continuousKS statistic",
+      "standardizedmean difference",
+      "fixedquantiles"
+    ],
+    "practical_effect_flags": {
+      "TV": 0.02,
+      "PSI": 0.1,
+      "missing_rate_absolute_difference": 0.001,
+      "KS": 0.02
+    },
+    "support_keys": [
+      [
+        "Flight Distance"
+      ],
+      [
+        "Class",
+        "Type of Travel",
+        "Customer Type"
+      ],
+      [
+        "Gender",
+        "Customer Type",
+        "Type of Travel",
+        "Class"
+      ],
+      [
+        "Flight Distance",
+        "Age",
+        "Gender",
+        "Class",
+        "Customer Type",
+        "Type of Travel"
+      ]
+    ],
+    "equal_size_support_train_sample_seed": 20261024,
+    "joint_pairs": [
+      [
+        "Class",
+        "Type of Travel"
+      ],
+      [
+        "Class",
+        "Customer Type"
+      ],
+      [
+        "Type of Travel",
+        "Customer Type"
+      ],
+      [
+        "Inflight wifi service",
+        "Ease of Online booking"
+      ],
+      [
+        "Food and drink",
+        "Cleanliness"
+      ],
+      [
+        "Seat comfort",
+        "Inflight entertainment"
+      ],
+      [
+        "Online boarding",
+        "Ease of Online booking"
+      ],
+      [
+        "On-board service",
+        "Leg room service"
+      ],
+      [
+        "Departure Delay in Minutes",
+        "Arrival Delay in Minutes"
+      ]
+    ],
+    "ID_segments_per_source": 5,
+    "ID_boundary": "lasttrainquintilevsfirsttestquintile,descriptiveonly"
+  },
+  "adversarial": {
+    "reason": "Univariatemarginals/supportdonotexcludejointshift;oneboundedjointdetectabilitytestneeded",
+    "maximum_fits": 2,
+    "parameters": {
+      "n_estimators": 150,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "max_depth": -1,
+      "min_child_samples": 500,
+      "reg_lambda": 10,
+      "objective": "binary",
+      "n_jobs": 6,
+      "random_state": 20261022,
+      "verbosity": -1,
+      "colsample_bytree": 1.0,
+      "subsample": 1.0,
+      "max_bin": 255,
+      "deterministic": true,
+      "force_col_wise": true,
+      "device_type": "cpu"
+    },
+    "positive_domain": "Officialtest=1;officialtrain=0",
+    "split": "Exactraw21fingerprintindependentofID/domain,splitmix64salt20261022;hashmod10<3heldout;identicalcovariatesalwayssamegroup",
+    "hash_key": "kaggle-s6e10-av1",
+    "fit_row_shuffle_seed": 20261025,
+    "fit_label_permutation_seed": 20261023,
+    "holdout_labels_never_used_for_fit_or_earlystop": true,
+    "no_eval_set": true,
+    "no_score_orientation_flip": true,
+    "negative_control_pass": "abs(heldoutAUC-.5)<=.01;CIreportednotretuned",
+    "material_screen": "realconditional95lower>.55 ANDnegativecontrolpass;prespecifiedpracticalinvestmentline,notuniversalshiftdefinition",
+    "group_permutation_only_if_material": {
+      "groups": {
+        "demographic_travel": [
+          "Age",
+          "Gender",
+          "Customer Type",
+          "Type of Travel",
+          "Class"
+        ],
+        "distance": [
+          "Flight Distance"
+        ],
+        "ratings": [
+          "Inflight wifi service",
+          "Departure/Arrival time convenient",
+          "Ease of Online booking",
+          "Gate location",
+          "Food and drink",
+          "Online boarding",
+          "Seat comfort",
+          "Inflight entertainment",
+          "On-board service",
+          "Leg room service",
+          "Baggage handling",
+          "Checkin service",
+          "Cleanliness"
+        ],
+        "delays": [
+          "Departure Delay in Minutes",
+          "Arrival Delay in Minutes"
+        ]
+      },
+      "seeds": [
+        20261026,
+        20261027,
+        20261028,
+        20261029
+      ],
+      "repetitions": 1,
+      "new_fits": 0
+    }
+  },
+  "interpretation": {
+    "do_not_equate_distinguishability_with_concept_shift": true,
+    "low_AUC_does_not_prove_IID": true,
+    "PSI_KS_flags_are_descriptive_not_campaign_pvalues": true,
+    "no_SAT_candidate_before_complete_diagnostic": true,
+    "no_test_labels_or_public_scores": true,
+    "next_action": "Ifnomaterialgeneralizableshiftandnocoherentpracticaleffects,do notinventdensityweightingtrial. Ifmaterial,reportlocalizedevidenceandonefalsifiablefuturereweightinghypothesisonly;neverautotrainSATmodelhere."
+  },
+  "resources": {
+    "CPU_threads": 6,
+    "nice": 10,
+    "GPU_used": false,
+    "own_RSS_cap_bytes": 6442450944,
+    "host_RAM_reserve_bytes": 4294967296,
+    "disk_reserve_bytes": 2147483648,
+    "total_artifact_cap_MiB": 32,
+    "preflight_disk_available_bytes": 3384418304,
+    "planned_max_writes_MiB": {
+      "tables": 4,
+      "each_domain_model": 4,
+      "heldout_predictions": 12,
+      "metadata": 2
+    },
+    "operation_checkpoint_seconds": {
+      "basic": 180,
+      "domain_fits_and_inference": 300,
+      "integrity": 120
+    },
+    "paid": false,
+    "no_files_deleted": true
+  },
+  "new_SAT_classifier_fits": 0,
+  "new_Kaggle_submissions": 0,
+  "source_sha256": {
+    "research_r93_common.py": "41736c531707506945684470bb9bc30a6f64028caed18f5e961ba6f84132147d",
+    "research_r93_basic.py": "c8a404562cc253fd77fb98ce80d80c53cbf5b32c1f7d866f67b75abfce98d018",
+    "research_r93_av.py": "73a8e72cd93bf778e3898522e4b83bb90ccc1558e79d79290fa5f982486e602b",
+    "research_r93_verify.py": "474412ed6b450632744cde7d22a08247acda7c650d4752b04a6dc55f49e353a4",
+    "research_r93_driver.py": "70329645404bcfe52a767e0f8c984de67a48d665fd751c8a672e1df0c1e77859",
+    "research_r93_prepare.py": "3d1e9bda4d612d1f40dd7c0becddf52c20f916ac0ac86b911f4798bdc80aa4c2",
+    "compare_validation.py": "dddede1ed1f65645a7ac2a912a4ddd1c16f67ec6f73c38663b69532ee8ca838f",
+    "research_resume_policy_20261021.py": "8e8b4d1dabf23ae195d7987dd67fed2b8d6731281462ecc1ec909f4527be88d5"
+  },
+  "input_sha256": {
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "data/test.csv": "ff7932747f27c5274de904194ac38b4d088ea4f9bb005ae74f0d619fb893a9b6"
+  }
+}

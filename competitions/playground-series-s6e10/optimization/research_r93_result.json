@@ -1,0 +1,16 @@
+{
+  "status": "completed_diagnostic_pending_interpretation",
+  "started_utc": "2026-10-22T08:18:47.050922+00:00",
+  "pid": 69364,
+  "plan_sha256": "b035cb0b08c8f6a3cf142bf1614cf1780236cc05f9e48bc22212472938bc1f4b",
+  "repair_sha256": "1226d96833b31c3a493d59c91a1f9333462c0e926b99af2d927e69551addf026",
+  "new_SAT_classifier_fits": 0,
+  "new_submissions": 0,
+  "original_failure_preserved": "research_r93_initial_attempt.json",
+  "updated_utc": "2026-10-22T08:19:13.085969+00:00",
+  "completed_utc": "2026-10-22T08:19:17.094001+00:00",
+  "basic_sha256": "805d873cab98f4752f9e1d9cb387870545f595470f7de7c797748f617f75feaf",
+  "adversarial_sha256": "6c8dc3b1e4f41284394237b3298934536677d6ed11d510174383e7ab78e0c89d",
+  "integrity_sha256": "e1cea19a5f8076e0bf5b3a5352180c910e3f184e93b131aa77f7e8a4536ae2d9",
+  "artifact_bytes": 11478318
+}

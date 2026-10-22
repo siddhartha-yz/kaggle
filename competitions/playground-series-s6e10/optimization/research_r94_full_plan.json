@@ -1,0 +1,111 @@
+{
+  "status": "frozen_authorized_full_paired_experiment",
+  "frozen_utc": "2026-10-22T09:53:05.534694+00:00",
+  "original_design_sha256": "b255bd009069c47cec03aa34c50b1053ab6f1776aa067d8bd905b60d4fdc70da",
+  "original_design_preserved": true,
+  "mechanism": "Own RTD shared representation; not Q-FT reproduction",
+  "initialization_seed": 2026102201,
+  "fold_seed_offset": "fivefold+k;threefold+100+k",
+  "features": "Original raw21 only;17numeric4nominal; immutable architecture from original design",
+  "train_boundary": "Feature encoding/scalers/vocab and RTD donors fit only own90percent inner training;10percent inner labels for checkpoint only; outer data rows skipped before SAT parser reads them. Outer features are queries only. No test covariates or external data.",
+  "outer_splits": "Exact hash-frozen R68/v12 fivefold and threefold fixtures; no regeneration/selection. Threefold only if fivefold complete and gates pass.",
+  "inner_split": "StratifiedShuffleSplit(test_size=.1,random_state=2026102203+fold+(100threefold)),local to each outer training pool",
+  "arms": [
+    "same-architecture scratch supervised20epochs",
+    "same initialization RTD5epochs then reset optimizer and supervised20epochs"
+  ],
+  "optimizer": {
+    "kind": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "clip_global_gradient_norm": 1.0,
+    "batch_rows": 512,
+    "precision": "bfloat16 autocast;float32 BCE logits and parameters;TF32disabled"
+  },
+  "schedule": "Separate CosineAnnealingLR per phase,T_max=5or20,eta_min=1e-5,step after each completed epoch. No earlystop.",
+  "supervised_schedule_epoch_start_LRs": [
+    0.001,
+    0.0009939057285945933,
+    0.0009757729755661012,
+    0.0009460482294732422,
+    0.0009054634122155991,
+    0.0008550178566873411,
+    0.0007959536998847743,
+    0.0007297252973710758,
+    0.0006579634122155991,
+    0.0005824350601949144,
+    0.0005050000000000001,
+    0.000427564939805086,
+    0.0003520365877844012,
+    0.00028027470262892445,
+    0.0002140463001152259,
+    0.00015498214331265904,
+    0.00010453658778440108,
+    6.395177052675796e-05,
+    3.422702443389901e-05,
+    1.6094271405406862e-05
+  ],
+  "epoch_randomness": "Seed init+10000+epoch0;pretrain add1000. Independent CUDA generators for order(+100000) and corruption(+200000); reset supervised dropout seed each epoch identically across arms.",
+  "corruption": "Original15percent per-cell same-column donors; actual-changed targets, selected same values negatives. No clean side features. Donors only inner training.",
+  "checkpoint": "RTDfinalepoch5. Each arm20fixedsupervisedepochs; best inner validation logloss with clip1e-7; first epoch wins exact tie. Never choose using outer AUC. Retain best weights plus final resumable epoch state.",
+  "final_scoring": {
+    "labels": "All completed-fivefold pairs required before target labels are accessed for OOF evaluation; likewise3fold",
+    "probabilities": "Sigmoid(bfloat16-forward float32 classifier logits) saved float32; positive labelTrue. Model.eval,512rowbatches.",
+    "fusion": "sigmoid(.875*logit(clip(v12,1e-6,1-1e-6))+.125*logit(clip(arm,1e-6,1-1e-6))) for BOTH arms",
+    "mechanism_effect": "Raw RTD AUC minus same-architecture scratch AUC with paired DeLong and corrected-fold statistics, reported separately.",
+    "complementarity": "Fixed RTD blend versus v12; also fixed RTD blend versus scratch blend to measure added blend utility of pretraining.",
+    "admission": "Unchanged original design: paired95percent lower>0 AND corrected-resampled-t one-sidedalpha.025lower>0 for RTDblend-v12 AND RTDblend-scratchblend. Full5fold then full3fold. Standalone raw effect descriptive, no additional selected gate.",
+    "no_threshold_weight_seed_architecture_search": true,
+    "independent_audit_required_before_test_or_submission": true
+  },
+  "resources": {
+    "CPU_threads": 6,
+    "nice": 10,
+    "GPU_allocator_cap_bytes": 3221225472,
+    "own_GPU_process_ceiling_bytes": 3758096384,
+    "GPU_free_reserve_bytes": 2147483648,
+    "host_RAM_reserve_bytes": 4294967296,
+    "own_RSS_cap_bytes": 8589934592,
+    "disk_reserve_bytes": 2147483648,
+    "total_R94_artifact_cap_bytes": 201326592,
+    "experiment_wall_seconds": 5400,
+    "paired_fold_max_seconds": 900,
+    "quality_check_max_seconds": 180,
+    "stage_budget_not_campaign_deadline": true,
+    "planning_total_minutes": [
+      60,
+      90
+    ],
+    "no_new_software": true,
+    "no_weight_download": true,
+    "paid": false
+  },
+  "persistence": "Atomic per-arm best+resume, per-epoch progress. Completed arms and pairs reused after exact hashes; incomplete epoch may be replayed, completed fits never retrained. Single-controller advisory lock. No user files deleted.",
+  "limitations": [
+    "Official labels repeatedly reused;95percent intervals conditional on fixed predictions and do not include adaptive history.",
+    "Threefold replication is not untouched data.",
+    "This small architecture and5epoch RTD do not establish any universal RTD result."
+  ],
+  "source_sha256": {
+    "research_r94_model.py": "5cc04a6b4b2440570cd68826d8254344be76d275f8e44c7b154f7e308560ef53",
+    "research_r94_common.py": "4fbd4ec15fc513957f23e7870a09490f0ab1c649ae1024f19bab011e7dfbae10",
+    "research_r94_worker.py": "e3facbcc08e08f6edee7dd5e1fcdd0c33d65bd61157495300e54a357dd93d5dc",
+    "research_r94_check.py": "fcf5d2ade5ba6464c1ee05b1ed389c8f7b453cb9a5617fca16a0b16a54ad1918",
+    "research_r94_driver.py": "1316f9ad33929e07b6de06548411bb15b3bc1c0950a57755e3b97b5c82360519",
+    "test_research_r94_full_protocol.py": "bb4c4a84954b4af3b5589faad0db2fb50741b55ec644aafb92652e163b7d697f",
+    "research_resource_guard_v2.py": "63cf7d694a772fe5f88d1c649517c020e9d4b318db0ea40883dcba0cadba9e7c",
+    "research_resume_policy_20261021.py": "8e8b4d1dabf23ae195d7987dd67fed2b8d6731281462ecc1ec909f4527be88d5",
+    "research_r4_common.py": "53eedffd572f6a82b9c3dba70e3315ab1df51dd9242396ab22da7f8dabc52e81",
+    "research_w3_common.py": "283ac69b13f64b32c1a33cbc41acea1ce2d598a4552391bc3f886aaea6f23a4b",
+    "compare_validation.py": "dddede1ed1f65645a7ac2a912a4ddd1c16f67ec6f73c38663b69532ee8ca838f"
+  },
+  "input_sha256": {
+    "data/train.csv": "2313b65c74e6994f01c2628aae82d2f97aa6f74a81950172ff83864837c98b36",
+    "research_artifacts/r68_pure_ranknet_fivefold/oof.npz": "12f4bb293481cfffcd129d9c05e3920b18e9cb2985ca76cc6133fe638382e483",
+    "research_artifacts/r68_pure_ranknet_threefold/oof.npz": "b344a27fcc1ee5952a99746de47093fbc9ab00a810935a965706eca0d2810d5c",
+    "research_r94_design.json": "b255bd009069c47cec03aa34c50b1053ab6f1776aa067d8bd905b60d4fdc70da",
+    "research_r94_probe_result.json": "e666c99c31424ddb991c86d3834de00f8d8ded073a41d61f296c0cad60bbb186",
+    "research_r94_semantics.json": "06e47d7d445b091f34a629c612b39bd92c737e14fb0301919d427e027f72c3f2",
+    "research_r94_protocol_test.json": "9510f7ad4112e97a80c87f192e0c6ddda455e137dfb93cd9e15e27fe2697bf2c"
+  }
+}

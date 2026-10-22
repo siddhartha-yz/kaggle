@@ -1,0 +1,23 @@
+{
+  "status": "background_paired_training_started",
+  "recorded_utc": "2026-10-22T09:54:36.352871+00:00",
+  "service": "codex-kaggle-r94-paired.service",
+  "controller_PID": 89602,
+  "initial_worker_PID": 89603,
+  "started_utc": "2026-10-22T09:53:40Z",
+  "frozen_plan_sha256": "938782df3a094bcd8c4c836a9234b629fd50c15db3ec3fd60cf8f3db0dcf41db",
+  "first_epoch_observed_UTC": "2026-10-22T09:53:49.873389+00:00",
+  "first_epoch_seconds": 5.693859055998473,
+  "first_GPU_process_peak_bytes": 614465536,
+  "first_inner_logloss": 0.24003510492304894,
+  "outer_quality_scored": false,
+  "next_check_window_UTC": "2026-10-22 10:00\u201310:05",
+  "planning_total_minutes": [
+    60,
+    90
+  ],
+  "controller_log": "research_r94_controller.log",
+  "worker_log": "research_r94_fivefold_0_research_r94_worker.log",
+  "fivefold_then_conditional_threefold": true,
+  "no_submission_or_full_test_training": true
+}

@@ -1,0 +1,186 @@
+{
+  "status": "closed_fivefold_not_qualified_no_threefold_or_submission",
+  "closed_utc": "2026-10-22T10:25:40.008637+00:00",
+  "full_plan_sha256": "938782df3a094bcd8c4c836a9234b629fd50c15db3ec3fd60cf8f3db0dcf41db",
+  "result_sha256": "832c25f7d68cd3d24408bb2b2a56818992db95bcb052450a44a2d0ee143d841b",
+  "OOF_sha256": "1a687de048565cfd9b4f372cb601c693c63fa831d25d02bb404c0cb07c6b9d67",
+  "driver_state_sha256": "4b20fe25880e66884c04f0c1b3f97497ba61025b73498b208300b145efc64a01",
+  "completed_pairs": 5,
+  "OOF_rows": 699635,
+  "AUC": {
+    "v12": 0.9616472919389712,
+    "scratch_raw": 0.9578605987757794,
+    "RTD_raw": 0.9581423508508236,
+    "scratch_blend": 0.9616340908070944,
+    "RTD_blend": 0.9616511031696555
+  },
+  "comparisons": {
+    "raw_RTD_vs_same_architecture_scratch": {
+      "delta_AUC": 0.00028175207504410604,
+      "paired_95pct_CI": [
+        0.0001539197721557612,
+        0.0004095843779324509
+      ],
+      "corrected_resampled_t_lower": -2.8874696869667462e-05,
+      "fold_deltas": [
+        0.0002487405879190163,
+        0.00023407412968567964,
+        0.0004907854685880508,
+        0.00033321345796499813,
+        4.816616151359643e-05
+      ],
+      "dual_gates_pass": false
+    },
+    "RTD_blend_vs_v12": {
+      "delta_AUC": 3.8112306842696952e-06,
+      "paired_95pct_CI": [
+        -1.321388426516291e-05,
+        2.08363456337023e-05
+      ],
+      "corrected_resampled_t_lower": -2.2687830868853484e-05,
+      "fold_deltas": [
+        -5.3340516642519376e-06,
+        -1.3965704713791993e-06,
+        2.5959780526774168e-05,
+        1.1695682775592076e-06,
+        -7.73587057378844e-06
+      ],
+      "dual_gates_pass": false
+    },
+    "RTD_blend_vs_scratch_blend": {
+      "delta_AUC": 1.70123625611307e-05,
+      "paired_95pct_CI": [
+        4.707228650169142e-06,
+        2.931749647209226e-05
+      ],
+      "corrected_resampled_t_lower": -1.4620177206481848e-05,
+      "fold_deltas": [
+        1.3799998891728116e-05,
+        2.176758595295869e-05,
+        3.43319608056003e-05,
+        1.9187375965068476e-05,
+        -1.0123635675096665e-05
+      ],
+      "dual_gates_pass": false
+    },
+    "scratch_blend_vs_v12_descriptive": {
+      "delta_AUC": -1.3201131876861005e-05,
+      "paired_95pct_CI": [
+        -3.0148654722996863e-05,
+        3.746390969274853e-06
+      ],
+      "corrected_resampled_t_lower": -3.2435132465360225e-05,
+      "fold_deltas": [
+        -1.9134050555980053e-05,
+        -2.316415642433789e-05,
+        -8.372180278826136e-06,
+        -1.801780768750927e-05,
+        2.3877651013082257e-06
+      ],
+      "dual_gates_pass": false
+    }
+  },
+  "fixed_logit_mix": {
+    "v12": 0.875,
+    "new_model": 0.125,
+    "clip": 1e-06
+  },
+  "all_pairs_before_scoring": true,
+  "checkpoint_selection": [
+    {
+      "fold": 0,
+      "arm": "scratch",
+      "best_epoch": 17,
+      "inner_logloss": 0.23037375897415363
+    },
+    {
+      "fold": 0,
+      "arm": "rtd",
+      "best_epoch": 17,
+      "inner_logloss": 0.22940569621103182
+    },
+    {
+      "fold": 1,
+      "arm": "scratch",
+      "best_epoch": 18,
+      "inner_logloss": 0.22662127900839282
+    },
+    {
+      "fold": 1,
+      "arm": "rtd",
+      "best_epoch": 16,
+      "inner_logloss": 0.2258080260756553
+    },
+    {
+      "fold": 2,
+      "arm": "scratch",
+      "best_epoch": 20,
+      "inner_logloss": 0.22779700059438363
+    },
+    {
+      "fold": 2,
+      "arm": "rtd",
+      "best_epoch": 20,
+      "inner_logloss": 0.22691930945839275
+    },
+    {
+      "fold": 3,
+      "arm": "scratch",
+      "best_epoch": 18,
+      "inner_logloss": 0.22717230062782923
+    },
+    {
+      "fold": 3,
+      "arm": "rtd",
+      "best_epoch": 18,
+      "inner_logloss": 0.22666430224111866
+    },
+    {
+      "fold": 4,
+      "arm": "scratch",
+      "best_epoch": 16,
+      "inner_logloss": 0.23040931420009111
+    },
+    {
+      "fold": 4,
+      "arm": "rtd",
+      "best_epoch": 20,
+      "inner_logloss": 0.23004819645341443
+    }
+  ],
+  "interpretation": {
+    "mechanism": "Raw RTD improves pooled AUC by0.00028175 over the paired same-architecture supervised control, with all5fold deltas positive. Paired pooled CI excludes0 but corrected-fold lower is negative; do not claim robust replication.",
+    "complementarity": "Fixed RTD/v12 blend gains only0.000003811 over v12,2/5folds positive; both admission bounds fail. Better standalone quality is not sufficient incremental ensemble value.",
+    "paired_blend": "RTD blend exceeds scratch blend by0.000017012, but corrected-fold bound fails. Neither required comparison passes both frozen gates.",
+    "decision": "Close this exact recipe; no threefold, promotion audit, test prediction, full-data fit, new submission, weight rescue, or derived seed/epoch/architecture variants."
+  },
+  "integrity": {
+    "status": "passed_closeout_integrity_not_promotion_audit",
+    "all_source_and_input_hashes_verified": true,
+    "all_five_pair_artifact_hashes_verified": true,
+    "paired_initial_states_and_supervised_epoch_seeds_equal": true,
+    "inner_only_checkpoint_selection_verified": true,
+    "outer_labels_excluded_by_worker_parser": true,
+    "original_v12_CSV_sha256": "f48276b144e8c9297fb9fec27174044a55a7eb3f2af23dde3f13478a38a4e545",
+    "new_fits_for_closeout": 0
+  },
+  "resources": {
+    "controller_elapsed_seconds": 1672.9931518250014,
+    "maximum_worker_GPU_process_bytes": 622854144,
+    "maximum_worker_RSS_bytes": 1941233664,
+    "artifact_bytes_before_closeout": 76196987,
+    "artifact_cap_bytes": 201326592,
+    "disk_free_bytes": 3295260672,
+    "disk_reserve_bytes": 2147483648,
+    "own_resource_failure_files": []
+  },
+  "limitations": [
+    "Historically reused official labels; conditional intervals omit adaptive search history.",
+    "No untouched-holdout or actual ranking improvement claim.",
+    "Result concerns one fixed small RTD implementation and budget, not all RTD mechanisms."
+  ],
+  "new_submissions": 0,
+  "new_test_predictions": false,
+  "main_unchanged": true,
+  "project_top500_goal_completed": false
+}

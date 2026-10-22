@@ -1,0 +1,39 @@
+{
+  "status": "actually_started",
+  "recorded_utc": "2026-10-22T06:37:33.875816+00:00",
+  "started_utc": "2026-10-22T06:36:21.287411+00:00",
+  "controller_pid": 44013,
+  "first_worker_pid": 44019,
+  "firstfold_status": "complete",
+  "firstfold_seconds": 24.55843761899996,
+  "service": "codex-kaggle-r91-validation.service",
+  "log": "research_r91_run.log",
+  "result": "research_r91_result.json",
+  "plan_sha256": "479c39f9713040c5cb7daa0974be9c898149327131adeffa100f721d19645821",
+  "features": 85,
+  "new_feature": "max_rating_surprisal",
+  "GPU_used": false,
+  "resources": {
+    "device": "CPU",
+    "threads": 6,
+    "nice": 10,
+    "host_RAM_reserve_GiB": 4,
+    "own_worker_RSS_ceiling_GiB": 8,
+    "disk_reserve_GiB": 2,
+    "own_outputs_ceiling_MiB": 256,
+    "preflight_disk_available_bytes": 3478503424,
+    "estimated_actual_all_stages_MiB": "100-160",
+    "write_reservation_MiB": {
+      "perfold": 32,
+      "OOF": 96,
+      "fullfit_and_CSV": 64
+    },
+    "perfold_checkpoint_seconds": 1200,
+    "estimated_fivefold_minutes": "3-6",
+    "estimated_total_ifpasses_minutes": "10-15",
+    "paid": false
+  },
+  "next_reasonable_check_utc": "2026-10-22T06:40:00+00:00",
+  "parent_monitor_hint": "ShortreadonlyexistingPID/logcheck;donotrestarthealthyservice",
+  "actual_top500_verified": false
+}

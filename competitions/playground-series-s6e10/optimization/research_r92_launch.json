@@ -1,0 +1,39 @@
+{
+  "status": "probe_passed_formal_inference_started",
+  "recorded_utc": "2026-10-22T07:24:51.661071+00:00",
+  "controller_pid": 54345,
+  "first_worker_pid": 54527,
+  "service": "codex-kaggle-r92-validation.service",
+  "plan_sha256": "0c02cda22657f8967bbd38407466e8428ad3d7ed4880b0eb546bfe9150e4b44a",
+  "probe_sha256": "f5d96770c77fdf219f8fe0b7605fc2c25147776d5d08f113953f72b552f90d6a",
+  "current_stage": "fivefold",
+  "current_fold": 2,
+  "log": "research_r92_run.log",
+  "result": "research_r92_result.json",
+  "new_neural_fits": 0,
+  "estimated_fivefold_seconds": 440.07163836537103,
+  "next_reasonable_check_utc": "2026-10-22T07:26:00+00:00",
+  "resources": {
+    "CPU_threads": 6,
+    "nice": 10,
+    "GPU_allocator_cap_bytes": 3221225472,
+    "GPU_process_ceiling_bytes": 3758096384,
+    "GPU_free_reserve_bytes": 2147483648,
+    "RSS_ceiling_bytes": 8589934592,
+    "host_RAM_reserve_bytes": 4294967296,
+    "disk_reserve_bytes": 2147483648,
+    "total_artifact_cap_MiB": 128,
+    "preflight_disk_free_bytes": 3424903168,
+    "max_train_native_margin_MiB": 136.6474609375,
+    "persist_native_full_matrices": false,
+    "copy_or_save_new_models": false,
+    "write_reservation_MiB": {
+      "fold": 12,
+      "OOF": 40,
+      "metadata": 1
+    },
+    "paid": false
+  },
+  "parent_monitor_hint": "ShortreadonlyexistingPID/progress/resultcheck;donotrestarthealthyservice",
+  "actual_top500_verified": false
+}

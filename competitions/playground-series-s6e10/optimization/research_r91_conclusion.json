@@ -1,0 +1,153 @@
+{
+  "status": "completed_closed_recipe",
+  "experiment": "R91_one_max_observed_rating_surprisal_on_current_LGB84",
+  "completed_utc": "2026-10-22T06:47:04.892332+00:00",
+  "first_real_start_utc": "2026-10-22T06:36:21.287411+00:00",
+  "controller_pid": 44013,
+  "first_worker_pid": 44019,
+  "service": "codex-kaggle-r91-validation.service",
+  "plan_sha256": "479c39f9713040c5cb7daa0974be9c898149327131adeffa100f721d19645821",
+  "result_sha256": "42167316925d7134250510786e87c296c330ef277dc1137b91bc6718e10132db",
+  "stage_integrity": {
+    "fivefold": {
+      "AUC": 0.9616610484133513,
+      "delta_AUC": 1.3756474380066663e-05,
+      "positive_folds": 5,
+      "folds": 5,
+      "correctedt_lower": -3.9307755125820707e-07,
+      "oof_sha256": "231025dd275db62b2b488c69dfddbd209293a41ae7e90236d4453a4589c3cf1b"
+    }
+  },
+  "validation": {
+    "fivefold": {
+      "pooled": {
+        "baseline_auc": 0.9616472919389712,
+        "candidate_auc": 0.9616610484133513,
+        "delta_auc": 1.3756474380066663e-05,
+        "paired_se": 6.9723929738924205e-06,
+        "conditional_95pct_ci": [
+          9.058415123751929e-08,
+          2.7422364608895806e-05
+        ],
+        "candidate_logloss": 0.22119993850494288
+      },
+      "fold_comparisons": [
+        {
+          "baseline_auc": 0.9609020905877792,
+          "candidate_auc": 0.9609210590938057,
+          "delta_auc": 1.896850602645106e-05,
+          "paired_se": 1.5841781924882444e-05,
+          "conditional_95pct_ci": [
+            -1.2081386546318529e-05,
+            5.001839859922065e-05
+          ],
+          "candidate_logloss": 0.22325400711352597
+        },
+        {
+          "baseline_auc": 0.9618718198394576,
+          "candidate_auc": 0.9618858850774943,
+          "delta_auc": 1.4065238036709005e-05,
+          "paired_se": 1.607916494599143e-05,
+          "conditional_95pct_ci": [
+            -1.7449925257434196e-05,
+            4.5580401330852205e-05
+          ],
+          "candidate_logloss": 0.2207313605117616
+        },
+        {
+          "baseline_auc": 0.9622391658811874,
+          "candidate_auc": 0.9622499107206787,
+          "delta_auc": 1.074483949126126e-05,
+          "paired_se": 1.5610854742849166e-05,
+          "conditional_95pct_ci": [
+            -1.9852435804723105e-05,
+            4.1342114787245625e-05
+          ],
+          "candidate_logloss": 0.219289049503995
+        },
+        {
+          "baseline_auc": 0.9614770425380746,
+          "candidate_auc": 0.9614804455016845,
+          "delta_auc": 3.4029636098997784e-06,
+          "paired_se": 1.5177417372790524e-05,
+          "conditional_95pct_ci": [
+            -2.6344774440769648e-05,
+            3.3150701660569205e-05
+          ],
+          "candidate_logloss": 0.22217847735076657
+        },
+        {
+          "baseline_auc": 0.9617989521351932,
+          "candidate_auc": 0.9618229115235511,
+          "delta_auc": 2.395938835797473e-05,
+          "paired_se": 1.5300998868487664e-05,
+          "conditional_95pct_ci": [
+            -6.0305694242610915e-06,
+            5.394934614021055e-05
+          ],
+          "candidate_logloss": 0.22054679804466518
+        }
+      ],
+      "corrected_resampled_t": {
+        "mean_delta": 1.4228187104459167e-05,
+        "se": 5.266181790644753e-06,
+        "test_train_ratio": 0.25,
+        "df": 4,
+        "one_sided_alpha": 0.025,
+        "lower_bound": -3.9307755125820707e-07
+      },
+      "eligible_for_new_partition_replication": false,
+      "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+    }
+  },
+  "models": [
+    {
+      "stage": "fivefold",
+      "fold": 0,
+      "seconds": 24.55843761899996,
+      "peak_rss_bytes": 2143125504,
+      "model_sha256": "6153f1c7abbdcfbe2d5e4e5cc981cca194cf2c7bbcb93c23ce712ccdba679cc0"
+    },
+    {
+      "stage": "fivefold",
+      "fold": 1,
+      "seconds": 24.391876716999832,
+      "peak_rss_bytes": 2142986240,
+      "model_sha256": "2d101bc310f8c4c7e96562c45103314b96efb14b39353a26761d0b72358ba6db"
+    },
+    {
+      "stage": "fivefold",
+      "fold": 2,
+      "seconds": 24.432963887999904,
+      "peak_rss_bytes": 2143703040,
+      "model_sha256": "18ab03ef0b0ead01e6fc525b7b64a68b315ceeca37879704157f83d4a2c7545c"
+    },
+    {
+      "stage": "fivefold",
+      "fold": 3,
+      "seconds": 24.565087976000086,
+      "peak_rss_bytes": 2143084544,
+      "model_sha256": "993c514601074e823cb29292b6652f479f2b0d204fe478133acc254ed40d37d3"
+    },
+    {
+      "stage": "fivefold",
+      "fold": 4,
+      "seconds": 24.69647321900038,
+      "peak_rss_bytes": 2143842304,
+      "model_sha256": "c517893db95bb4d1220fba3d86dafa296b63675b7e9ee28058575f031bd7b786"
+    }
+  ],
+  "independent_integrity_check": "Allidentity/sourcehashes/modelartifacts/OOFcoverage/sklearnAUC/correctedtformula/ownouterencodermean verified",
+  "interpretation": "Frozen minimum-change recipe didnotmeet gate; close without rescue tuning. MaxsurprisalpairedCIbarelypositivebutcorrectedtnegative;notqualified.Norounding/topk/std/thresholdrescue;retainv12.",
+  "full_refit": false,
+  "CSV_generated": false,
+  "new_formal_submissions": 0,
+  "weight_search": false,
+  "GPU_used": false,
+  "own_output_bytes": 56022982,
+  "disk_available_bytes": 3431571456,
+  "resource_interruption": false,
+  "limitation": "Historicallyreusedlabels,includingchosenafterR83; no untouchedholdout or selectioncorrection",
+  "campaign_still_authorized": true,
+  "goal": "Actualpublicrank<=500 remainsunachieved; thisisonecompletedrecipe,notprojectcompletion"
+}

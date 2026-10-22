@@ -1,0 +1,100 @@
+{
+  "status": "closed_negative",
+  "started_utc": "2026-10-22T06:36:18.982593+00:00",
+  "pid": 44013,
+  "plan_sha256": "479c39f9713040c5cb7daa0974be9c898149327131adeffa100f721d19645821",
+  "stages": {
+    "fivefold": {
+      "completed_utc": "2026-10-22T06:38:52.133881+00:00",
+      "all_folds_complete": true,
+      "paired_evidence": {
+        "pooled": {
+          "baseline_auc": 0.9616472919389712,
+          "candidate_auc": 0.9616610484133513,
+          "delta_auc": 1.3756474380066663e-05,
+          "paired_se": 6.9723929738924205e-06,
+          "conditional_95pct_ci": [
+            9.058415123751929e-08,
+            2.7422364608895806e-05
+          ],
+          "candidate_logloss": 0.22119993850494288
+        },
+        "fold_comparisons": [
+          {
+            "baseline_auc": 0.9609020905877792,
+            "candidate_auc": 0.9609210590938057,
+            "delta_auc": 1.896850602645106e-05,
+            "paired_se": 1.5841781924882444e-05,
+            "conditional_95pct_ci": [
+              -1.2081386546318529e-05,
+              5.001839859922065e-05
+            ],
+            "candidate_logloss": 0.22325400711352597
+          },
+          {
+            "baseline_auc": 0.9618718198394576,
+            "candidate_auc": 0.9618858850774943,
+            "delta_auc": 1.4065238036709005e-05,
+            "paired_se": 1.607916494599143e-05,
+            "conditional_95pct_ci": [
+              -1.7449925257434196e-05,
+              4.5580401330852205e-05
+            ],
+            "candidate_logloss": 0.2207313605117616
+          },
+          {
+            "baseline_auc": 0.9622391658811874,
+            "candidate_auc": 0.9622499107206787,
+            "delta_auc": 1.074483949126126e-05,
+            "paired_se": 1.5610854742849166e-05,
+            "conditional_95pct_ci": [
+              -1.9852435804723105e-05,
+              4.1342114787245625e-05
+            ],
+            "candidate_logloss": 0.219289049503995
+          },
+          {
+            "baseline_auc": 0.9614770425380746,
+            "candidate_auc": 0.9614804455016845,
+            "delta_auc": 3.4029636098997784e-06,
+            "paired_se": 1.5177417372790524e-05,
+            "conditional_95pct_ci": [
+              -2.6344774440769648e-05,
+              3.3150701660569205e-05
+            ],
+            "candidate_logloss": 0.22217847735076657
+          },
+          {
+            "baseline_auc": 0.9617989521351932,
+            "candidate_auc": 0.9618229115235511,
+            "delta_auc": 2.395938835797473e-05,
+            "paired_se": 1.5300998868487664e-05,
+            "conditional_95pct_ci": [
+              -6.0305694242610915e-06,
+              5.394934614021055e-05
+            ],
+            "candidate_logloss": 0.22054679804466518
+          }
+        ],
+        "corrected_resampled_t": {
+          "mean_delta": 1.4228187104459167e-05,
+          "se": 5.266181790644753e-06,
+          "test_train_ratio": 0.25,
+          "df": 4,
+          "one_sided_alpha": 0.025,
+          "lower_bound": -3.9307755125820707e-07
+        },
+        "eligible_for_new_partition_replication": false,
+        "selection_bias_warning": "Reused labels; intervals conditional on frozen recipes and predictions. No untouched holdout claim."
+      },
+      "passed": false,
+      "oof_sha256": "231025dd275db62b2b488c69dfddbd209293a41ae7e90236d4453a4589c3cf1b",
+      "peak_worker_rss_bytes": 1701945344
+    }
+  },
+  "actual_top500_verified": false,
+  "completed_utc": "2026-10-22T06:38:52.146013+00:00",
+  "reason": "fivefoldfailed frozen gate; no rescue or further stage",
+  "new_formal_submissions": 0,
+  "new_test_inference": false
+}
